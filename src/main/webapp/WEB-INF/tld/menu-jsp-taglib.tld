@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+        "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+    <tlibversion>1.0</tlibversion>
+    <jspversion>1.1</jspversion>
+    <shortname>menu-tags</shortname>
+    <info>A menu tag library.</info>
+    <tag>
+        <name>testsTag</name>
+        <tagclass>tags.menu.MenuTestsTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Menu Test Tag.</info>
+    </tag>
+    <tag>
+        <name>questionsTag</name>
+        <tagclass>tags.menu.MenuQuestionsTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Menu Questions Tag.</info>
+    </tag>
+    <tag>
+        <name>tasksTag</name>
+        <tagclass>tags.menu.MenuTaskTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Menu Tasks Tag.</info>
+    </tag>
+    <tag>
+        <name>articlesTag</name>
+        <tagclass>tags.menu.MenuArticleTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Menu Articles Tag.</info>
+    </tag>
+    <tag>
+        <name>privacyTag</name>
+        <tagclass>tags.menu.MenuPrivacyTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Menu Privacy Tag.</info>
+    </tag>
+    <tag>
+        <name>homeTag</name>
+        <tagclass>tags.menu.MenuHomeTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Menu Home Tag.</info>
+    </tag>
+    <tag>
+        <name>languageEnTag</name>
+        <tagclass>tags.menu.MenuLanguageEn</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Language English Tag.</info>
+    </tag>
+    <tag>
+        <name>languageRuTag</name>
+        <tagclass>tags.menu.MenuLanguageRu</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Language Russian Tag.</info>
+    </tag>
+</taglib>

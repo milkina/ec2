@@ -1,0 +1,36 @@
+/*
+|--------------------------------------------------------------------------
+| UItoTop jQuery Plugin 1.2
+| http://www.mattvarone.com/web-design/uitotop-jquery-plugin/
+|--------------------------------------------------------------------------
+*/
+
+#toTop {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:60px;
+	right:10px;
+	overflow:hidden;
+	width:51px;
+	height:51px;
+	border:none;
+	text-indent:100%;
+	background:url(https://storage.googleapis.com/www.examclouds.com/general/sprites.webp) no-repeat -286px -2px
+}
+
+#toTopHover {
+	background:url(https://storage.googleapis.com/www.examclouds.com/general/sprites.webp) no-repeat -286px -53px;
+	width:51px;
+	height:51px;
+	display:block;
+	overflow:hidden;
+	float:left;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0)
+}
+
+#toTop:active, #toTop:focus {
+	outline:none
+}

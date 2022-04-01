@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+    <rule>
+        <name>Domain Name Check</name>
+        <condition name="host" operator="notequal">www.examclouds.com</condition>
+        <condition name="host" operator="notequal">localhost</condition>
+        <condition type="scheme" operator="notequal">https</condition>
+        <from>^/(.*)</from>
+        <to type="permanent-redirect">https://www.examclouds.com/$1</to>
+    </rule>
+    <rule>
+        <from>^/?(index.html|index.php)$</from>
+        <to type="permanent-redirect">https://www.examclouds.com</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/resource-references-12-04-2017$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/resource-references-9-06-2017$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/resource-references-JV-17-05$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/JV-17-06$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/JV-17-07$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/JV-18-01$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/JV-18-02$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/JV-18-03$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/JV-18-04$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/JV-18-05$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/jv-19-01$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/publications/groups$</from>
+        <to type="redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/dateformat$</from>
+        <to type="permanent-redirect">/publications/dateformat</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/regex$</from>
+        <to type="permanent-redirect">/exam/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/strings$</from>
+        <to type="permanent-redirect">/exam/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson9$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson7</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson8$</from>
+        <to type="permanent-redirect">/java/java-core-russian/class-object</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson2$</from>
+        <to type="permanent-redirect">/java/java-core-russian/sozdanie-zapusk-java-prilogenija</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson3$</from>
+        <to type="permanent-redirect">/java/java-core-russian/sozdanie-zapusk-java-prilogenija</to>
+    </rule>
+    <rule>
+        <from>^/ocpjp8-update-from-java6$</from>
+        <to type="permanent-redirect">/exam/ocpjp8-update-from-java6</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/sql -operator-select$</from>
+        <to type="permanent-redirect">/java/java-core-russian/sql-operator-select</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/calendar-date$</from>
+        <to type="permanent-redirect">/publications/calendar-date</to>
+    </rule>
+    <rule>
+        <from>^/java/web-services/wsimport_wsgen_tools$</from>
+        <to type="permanent-redirect">/java/web-services/wsimport-wsgen</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/dostup-class$</from>
+        <to type="permanent-redirect">/java/java-core-russian/upravlenie-dostupom</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/keyword-protected$</from>
+        <to type="permanent-redirect">/java/java-core-russian/upravlenie-dostupom</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson24-tasks$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson23-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson13$</from>
+        <to type="permanent-redirect">/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/treads-russian$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson23</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/development$</from>
+        <to type="permanent-redirect">/exam/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/jdbc$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson22</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/assignments$</from>
+        <to type="permanent-redirect">/exam/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/identifiers-javabeans$</from>
+        <to type="permanent-redirect">/java/ocajp8/identifiers-javabeans</to>
+    </rule>
+    <rule>
+        <from>^/java/ocajp7/identifiers-javabeans$</from>
+        <to type="permanent-redirect">/java/ocajp8/identifiers-javabeans</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/flow-control$</from>
+        <to type="permanent-redirect">/exam/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/recomendacii-proektirovanie-klassov$</from>
+        <to type="permanent-redirect">/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/arrays$</from>
+        <to type="permanent-redirect">/exam/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson22-23-tasks$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson23-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/nasledovanie2$</from>
+        <to type="permanent-redirect">/java/java-core-russian/nasledovanie</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/collections2$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson16</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/spec-functional-interfaces$</from>
+        <to type="permanent-redirect">/java/java-core-russian/functional-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/vidi-collections$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson16</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp7/overloading-overriding$</from>
+        <to type="permanent-redirect">/java/ocajp8/overloading-overriding</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/overloading-overriding$</from>
+        <to type="permanent-redirect">/java/ocajp8/overloading-overriding</to>
+    </rule>
+    <rule>
+        <from>^/ru/index.jsp$</from>
+        <to type="permanent-redirect">/ru/</to>
+    </rule>
+    <rule>
+        <from>^/index.jsp$</from>
+        <to type="permanent-redirect">/</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/file-navigation-io$</from>
+        <to type="permanent-redirect">/exam/ocpjp8</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/char-streams$</from>
+        <to type="permanent-redirect">/java/java-core-russian/char-io-streams</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson3-tasks$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson4-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/threads$</from>
+        <to type="permanent-redirect">/exam/ocpjp8</to>
+    </rule>
+    <rule>
+        <from>^/articles/javaOneRussia2013.jsp$</from>
+        <to type="permanent-redirect">/show-all-articles</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/oop-klassi-metodi2$</from>
+        <to type="permanent-redirect">/java/java-core-russian/oop-klassi-metodi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/regex2$</from>
+        <to type="permanent-redirect">/java/java-core-russian/regex-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/regex$</from>
+        <to type="permanent-redirect">/java/java-core-russian/regex-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operazija -prisvaivanija$</from>
+        <to type="permanent-redirect">/java/java-core-russian/operazija-prisvaivanija</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson5-tasks$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesso5-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/treads1-russian$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson23</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/resource-references$</from>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/keyword-finally$</from>
+        <to type="permanent-redirect">/java/java-core-russian/keyword-catch</to>
+    </rule>
+    <rule>
+        <from>^/java/ocajp7/overloading-overriding$</from>
+        <to type="permanent-redirect">/java/ocajp8/overloading-overriding</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/enum$</from>
+        <to type="permanent-redirect">/java/java-core-russian/perechisleniya</to>
+    </rule>
+    <rule>
+        <from>^/java/ocajp7/if-else-statement$</from>
+        <to type="permanent-redirect">/java/ocajp8/if-else-statement</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson8-tasks$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson7-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson6-tasks$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson7-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/garbage-collection$</from>
+        <to type="permanent-redirect">/exam/ocpjp8</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/object-oriented-programming-concepts$</from>
+        <to type="permanent-redirect">/java/ocajp8/object-oriented-programming-concepts</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/literals$</from>
+        <to type="permanent-redirect">/java/ocajp8/literals</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/try-catch$</from>
+        <to type="permanent-redirect">/java/ocajp8/try-catch</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/groups$</from>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/groups$</from>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/ocjp/inner-classes$</from>
+        <to type="permanent-redirect">/java/ocpjp8/inner-classes</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/treads2-russian$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson23</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson9-tasks$</from>
+        <to type="permanent-redirect">/java/java-core-russian/lesson7-tasks</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/literature$</from>
+        <to type="permanent-redirect">/ru/publications/java-resources</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/literature$</from>
+        <to type="permanent-redirect">/ru/publications/java-resources</to>
+    </rule>
+
+    <rule>
+        <from>^/ru/java/java-core-russian/checklist$</from>
+        <to type="permanent-redirect">/ru/publications/checklist</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/checklist$</from>
+        <to type="permanent-redirect">/ru/publications/checklist</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/dopolnitelnie-materiali$</from>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/dopolnitelnie-materiali$</from>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+    </rule>
+
+    <rule>
+        <from>^/java/ocajp7/try-catch$</from>
+        <to type="permanent-redirect">/java/ocajp8/try-catch</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/klass-arraylist$</from>
+        <to type="permanent-redirect">/java/java-core-russian/interface-list</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/klass-arraylist$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interface-list</to>
+    </rule>
+    <rule>
+        <from>^/questions/java/Web_Services/Support_for_Media_Type_in_Jersey$</from>
+        <to type="permanent-redirect">/java/web-services/jersey-json</to>
+    </rule>
+
+    <rule>
+        <from>^/java/java-core-russian/klass-hashset$</from>
+        <to type="permanent-redirect">/java/java-core-russian/interface-set</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/klass-hashset$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interface-set</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/klass-linkedhashset$</from>
+        <to type="permanent-redirect">/java/java-core-russian/interface-set</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/klass-linkedhashset$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interface-set</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/sozdanie-zapusk-java$</from>
+        <to type="permanent-redirect">/java/java-core-russian/sozdanie-zapusk-java-prilogenija</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/unaryoperator-interface-russian.$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/unaryoperator-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/klass-treeset$</from>
+        <to type="permanent-redirect">/java/java-core-russian/interface-sortedset</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/klass-treeset$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interface-sortedset</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/interface-comparator$</from>
+        <to type="permanent-redirect">/java/java-core-russian/interface-comparable</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/interface-comparator$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interface-comparable</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/interface-comparable.$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interface-comparable</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/struktura$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/struktura-pamyati</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/interface-sortedset.$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interface-sortedset</to>
+    </rule>
+
+    <rule>
+        <from>^/ru/java/java-core-russian/klass-period.$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/klass-period</to>
+    </rule>
+
+    <rule>
+        <from>^/java/(.*)/(.*)$</from>
+        <to type="passthrough">/show-category?CATEGORY_PATH=$2&amp;TEST_PATH=$1</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/(.*)/(.*)$</from>
+        <to type="passthrough">/show-category?CATEGORY_PATH=$2&amp;TEST_PATH=$1</to>
+    </rule>
+
+    <rule>
+        <from>^/publications/oracle-java-certifications$</from>
+        <to type="permanent-redirect">/</to>
+    </rule>
+    <rule>
+        <from>^/publications/restful-deployment$</from>
+        <to type="permanent-redirect">/java/web-services/restful-deployment</to>
+    </rule>
+    <rule>
+        <from>^/publications/(.*)$</from>
+        <to type="passthrough">/show-article?URL_PARAM=$1</to>
+    </rule>
+    <rule>
+        <from>^/ru/publications/(.*)$</from>
+        <to type="passthrough">/show-article?URL_PARAM=$1</to>
+    </rule>
+    <rule>
+        <from>^/ocjp$</from>
+        <to type="permanent-redirect">/publications/ocjp</to>
+    </rule>
+    <rule>
+        <from>^/exam/ocajp7$</from>
+        <to type="permanent-redirect">/publications/ocjp</to>
+    </rule>
+    <rule>
+        <from>^/exam/ocpjp7$</from>
+        <to type="permanent-redirect">/publications/ocjp</to>
+    </rule>
+    <rule>
+        <from>^/jpa$</from>
+        <to type="passthrough">/show-course?TEST_PATH=jpa</to>
+    </rule>
+    <rule>
+        <from>^/ru/jpa$</from>
+        <to type="passthrough">/show-course?TEST_PATH=jpa</to>
+    </rule>
+    <rule>
+        <from>^/web-services$</from>
+        <to type="passthrough">/show-course?TEST_PATH=web-services</to>
+    </rule>
+    <rule>
+        <from>^/ru/web-services$</from>
+        <to type="passthrough">/show-course?TEST_PATH=web-services</to>
+    </rule>
+    <rule>
+        <from>^/exam/web-services$</from>
+        <to type="permanent-redirect">/web-services</to>
+    </rule>
+    <rule>
+        <from>^/exam/(.*)$</from>
+        <to type="passthrough">/show-course?TEST_PATH=$1</to>
+    </rule>
+    <rule>
+        <from>^/ru/exam/(.*)$</from>
+        <to type="passthrough">/show-course?TEST_PATH=$1</to>
+    </rule>
+    <rule>
+        <from>^/ocjp-ocpjp.jsp$</from>
+        <to type="permanent-redirect">/publications/ocjp-ocpjp</to>
+    </rule>
+    <rule>
+        <from>^/articles.jsp$</from>
+        <to type="permanent-redirect">/show-all-articles</to>
+    </rule>
+    <rule>
+        <from>^/articles/Oce6Jpa.jsp$</from>
+        <to type="permanent-redirect">/publications/ocjp</to>
+    </rule>
+    <rule>
+        <from>^/start-quiz.jsp(.*)$</from>
+        <to type="permanent-redirect">/ru/tests</to>
+    </rule>
+    <rule>
+        <from>^/comment.jsp$</from>
+        <to type="permanent-redirect">/</to>
+    </rule>
+
+</urlrewrite>
+
