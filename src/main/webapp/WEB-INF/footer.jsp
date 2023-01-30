@@ -26,7 +26,7 @@
              <div class="patreon-class"><a href="https://www.patreon.com/bePatron?u=71601793" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></div>
           </div>
           <div class="col-xs-12 col-md-4 col-md-pull-8 copyright footerItem">
-              <p>Copyright &#169; 2012-2022 ExamClouds</p>
+              <p>Copyright &#169; 2012-2023 ExamClouds</p>
               <p><a href="<menu:privacyTag/>"><spring:message code="privacy"/></a></p>
           </div>
        </footer>
