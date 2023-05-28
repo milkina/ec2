@@ -16,7 +16,7 @@
           <%@ include file="/administration/test.jsp" %>
           <a href="${pageContext.request.contextPath}/show-questions?TYPE=NOT_APPROVED" id="viewNotApprovedQuestions">
           <spring:message	code="view.not.approved.questions"/></a>
-          <%@ include file="/administration/users.jsp" %>
+     <%--     <%@ include file="/administration/users.jsp" %>--%>
           <%@ include file="/administration/comments/comments.jsp" %>
           <%@ include file="/administration/articles.jsp" %>
           <a href="${pageContext.request.contextPath}/add-question" id="addQuestion">

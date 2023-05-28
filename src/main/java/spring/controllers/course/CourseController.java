@@ -26,12 +26,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
-import static util.AllConstants.QUESTIONS_PAGE;
-import static util.AllConstants.QUESTIONS_RU_PAGE;
-import static util.AllConstants.SPRING_MESSAGE_PAGE;
-import static util.AllConstants.TASKS_PAGE;
-import static util.AllConstants.TESTS_PAGE;
-import static util.AllConstants.TESTS_RU_PAGE;
+import static util.AllConstants.*;
 import static util.AllConstantsAttribute.MESSAGE_ATTRIBUTE;
 import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
 import static util.AllConstantsAttribute.TESTS;
@@ -68,6 +63,10 @@ public class CourseController {
     @RequestMapping(value = {"/practicheskie-zadachi", "ru/practicheskie-zadachi"})
     public String showTasks() {
         return TASKS_PAGE;
+    }
+    @RequestMapping(value = {"/video-java-uroki", "ru/video-java-uroki"})
+    public String showVideo() {
+        return VIDEO_LIST;
     }
 
     @RequestMapping(value = "/show-add-course")
