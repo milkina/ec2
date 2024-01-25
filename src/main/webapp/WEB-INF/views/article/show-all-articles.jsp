@@ -29,8 +29,7 @@
     <main>
      <%@ include file="/WEB-INF/breadCrumbs/publicationsBreadCrumbs2.jsp"%>
      <h1 class="article-head"><spring:message code="articles"/></h1>
-     <input type="button" class="styled-button add-article-btn" value="<spring:message code="add.article"/>" id="addArticle"
-      onclick="window.location.href='${pageContext.request.contextPath}/add-article';">
+
       <ul class="article-list">
         <c:forEach var="article" items="${ARTICLES}">
          <li>
