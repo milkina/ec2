@@ -84,7 +84,7 @@ h4, .header4{
 }
 .computer-img{
   background:#a1d6f7 url('../images/general/index-image.webp') no-repeat;
-  transform:translate(84px,-32px);
+  transform:translate(64px,-32px);
   background-size: contain;
   height:417px;
 }
@@ -771,16 +771,25 @@ input[type="checkbox"].test-checkbox:checked+label:after{
 }
 #categories{
    counter-reset: lesson;
-   overflow: hidden
+   overflow: hidden;
+   display: flex;
+   flex-wrap: wrap
 }
 #categories li{
   counter-increment: lesson;
   list-style:none;
   padding: 0 60px 0 60px;
+  width: 50%; /* Две колонки по 50% */
+  box-sizing: border-box
 }
 #categories li h2{
   min-height: 70px;
   margin:0;
+}
+@media (max-width: 768px) { /* Если экран меньше 768px */
+  #categories li {
+    width: 100%; /* Одна колонка на всю ширину */
+  }
 }
 .category-href,.category-sub-href,.read-questions-href,.article-url{
     border-bottom: 2px solid rgba(76, 130, 190, 0.28);
