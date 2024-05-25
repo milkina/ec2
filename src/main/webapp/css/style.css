@@ -786,6 +786,9 @@ input[type="checkbox"].test-checkbox:checked+label:after{
   min-height: 70px;
   margin:0;
 }
+#categories .category-desc {
+  margin-bottom: 20px
+}
 @media (max-width: 768px) { /* Если экран меньше 768px */
   #categories li {
     width: 100%; /* Одна колонка на всю ширину */
@@ -820,6 +823,10 @@ input[type="checkbox"].test-checkbox:checked+label:after{
   color:#2f3748;
   margin: 0 80px 40px;
   overflow-wrap:break-word
+}
+.course-desc iframe {
+  border: 2px solid #ccc;
+  border-radius: 5px
 }
 .dropdown-menu{
   min-width:290px;
