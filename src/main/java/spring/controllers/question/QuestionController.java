@@ -205,7 +205,8 @@ public class QuestionController {
         String oldCategoryPath = request.getParameter(OLD_CATEGORY_PATH);
         Category oldCategory = categoryService.getCategory(oldCategoryPath);
         long oldCategoryQuestionsNumber =
-                questionService.getAllQuestions(oldCategory).size();
+                questionService.getAllQuestions(oldCategory).size() +
+                        questionService.getAllTestQuestions(oldCategory).size();
 
         Integer from = GeneralUtility.getIntegerValue(request, FROM_NUMBER);
         Integer to = GeneralUtility.getIntegerValue(request, TO_NUMBER);
