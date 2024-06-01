@@ -4,12 +4,15 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="/WEB-INF/tld/menu-jsp-taglib.tld" prefix="menu"%>
 <!DOCTYPE html>
-<html <jsp:invoke fragment="language"/>>
+<%
+    String lang = (String) session.getAttribute("pageLanguage");
+%>
+<html lang="<%= lang %>">
         <head>
             <%@ include file="/WEB-INF/head_common.jsp"%>
             <jsp:invoke fragment="header"/>
         </head>
-        <body itemscope itemtype="http://schema.org/WebPage" class="scroll-style">
+        <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMPGXK7"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

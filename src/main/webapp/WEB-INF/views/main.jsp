@@ -8,8 +8,8 @@
 <html lang="en">
   <head>
         <%@ include file="/WEB-INF/head_common.jsp"%>
-        <meta name="Description" content="【Tutorial Java】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature/Tests, ✅Learn Java">
-        <title>Free Java Tutorial on ExamClouds</title>
+        <meta name="description" content="【Tutorial Java】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature/Tests, ✅Learn Java">
+        <title>Online Courses and Tests for Programming Exam Preparation | ExamClouds</title>
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
@@ -24,8 +24,8 @@
         <meta property="twitter:card" content="summary">
         <meta property="twitter:description" content="【Tutorial Java】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature/Tests, ✅Learn Java">
         <meta property="twitter:site" content="@ExamClouds">
-        <meta property="og:image" content="/images/general/logo.webp">
-        <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp">
+        <meta property="og:image" content="/images/general/logo.svg">
+        <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
         <style>
               .lessons-list>li>h3:before{
                 content:'<spring:message code="lesson"/> ' counter(lesson) ' - ';
@@ -33,7 +33,7 @@
         </style>
         <meta name="google-site-verification" content="WTpUYaoC4-6-_VPl3kwMu6auSphdQoEI6K1gvJ2Vp3o"/>
   </head>
-    <body itemscope itemtype="http://schema.org/WebPage" class="scroll-style">
+    <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
     <cache:cacheTag/>
          <div class="container-fluid menu indexMenu round-border-bottom">
           <%@ include file="/menu.jsp" %>
@@ -68,21 +68,6 @@
                     <div class="index-items-text">Articles to learn Web Services and Java Persistence API.</div>
                   </li>
                 </ul>
-                <div class="lessons-list scroll-style">
-                   <c:set var="count" value="${1}"/>
-                   <c:forEach var="category" items="${TESTS['ocpjp8'].categories}">
-                      <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
-                        <div>
-                           <a href="${pageContext.request.contextPath}/java/ocpjp8/${category.value.pathName}"
-                            class="lesson-icon${count%3}"></a>
-                           <h5>${category.value.name}</h5>
-                           <c:set var="count" value="${count+1}"/>
-                           <div>${category.value.article.description}</div>
-                           <a href="${pageContext.request.contextPath}/java/ocpjp8/${category.value.pathName}">Full lesson</a>
-                        </div>
-                      </c:if>
-                   </c:forEach>
-                </div>
                 <div class="row learn-java">
                   <h3 class="col-xs-12">Why should I learn Java?</h3>
                   <p class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 learn-java-text">Java has a rich API, which allows to solve different problems, but still is easy in learning. It has a lot of forums, resources and still is growing.</p>

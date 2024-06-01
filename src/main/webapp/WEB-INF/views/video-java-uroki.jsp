@@ -6,8 +6,8 @@
 <t:wrapper>
     <jsp:attribute name="language">lang="ru"</jsp:attribute>
     <jsp:attribute name="header">
-        <meta name="Keywords" content="Java видео уроки">
-        <meta name="Description" content="【Видео Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Видео/уроки, ✅Java">
+        <meta name="keywords" content="Java видео уроки">
+        <meta name="description" content="【Видео Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Видео/уроки, ✅Java">
         <title>Видео уроки по Java для начинающих</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
 
@@ -21,15 +21,15 @@
       <meta property="twitter:card" content="summary"/>
       <meta property="twitter:description" content="【Видео Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Видео/уроки, ✅Java"/>
       <meta property="twitter:site" content="@ExamClouds">
-      <meta property="og:image" content="/images/general/logo.webp"/>
-      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+      <meta property="og:image" content="/images/general/logo.svg"/>
+      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
 
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache" %>
         <cache:cacheTag/>
         <div class="breadCrumbs">
-            <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                 <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp" %>
                 <li>Видео Java Уроки</li>
             </ol>

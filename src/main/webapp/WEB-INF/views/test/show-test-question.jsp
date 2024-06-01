@@ -21,10 +21,10 @@
 </jsp:attribute>
 <jsp:body>
      <div class="breadCrumbs">
-       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+       <ol itemscope itemtype="https://schema.org/BreadcrumbList">
            <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
            <li itemprop="itemListElement" itemscope
-                                    itemtype="http://schema.org/ListItem">
+                                    itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="<menu:testsTag/>">
                  <span itemprop="name"><spring:message code="tests"/>
                  </span>

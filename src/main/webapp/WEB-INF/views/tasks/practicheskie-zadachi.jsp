@@ -4,34 +4,33 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper>
-    <jsp:attribute name="language">lang="<spring:message code='lang'/>"</jsp:attribute>
     <jsp:attribute name="header">
-        <meta name="Keywords" content="задания java, задачи java">
-        <meta name="Description" content="【Практические задачи】 - ☜ⒿⒶⓋⒶ☞ для начинающих 💥Бесплатно. Решайте увлекательные задачи по программированию Java и развивайте свои навыки. Практика для успешного старта в мире Java.">
+        <meta name="keywords" content="задания java, задачи java">
+        <meta name="description" content="【Практические задачи】 - ☜ⒿⒶⓋⒶ☞ для начинающих 💥Бесплатно. Решайте увлекательные задачи по программированию Java и развивайте свои навыки. Практика для успешного старта в мире Java.">
         <title>Практические задачи по программированию Java для начинающих</title>
         <link rel="canonical" href="https://www.examclouds.com/ru/practicheskie-zadachi">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/practicheskie-zadachi">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/practicheskie-zadachi">
-        <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/practicheskie-zadachi">
+        <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/ru/practicheskie-zadachi">
 
      <meta property="og:title" content="Практические задачи по программированию Java для начинающих"/>
      <meta property="og:type" content="article"/>
      <meta property="og:description" content="【Практические задачи】 - ☜ⒿⒶⓋⒶ☞ для начинающих 💥Бесплатно"/>
      <meta property="og:site_name" content="ExamClouds">
-     <meta property="og:url" content="https://www.examclouds.com/ru/practicheskie-zadaniya">
+     <meta property="og:url" content="https://www.examclouds.com/ru/practicheskie-zadachi">
 
      <meta property="twitter:title" content="Практические задачи по программированию Java для начинающих"/>
      <meta property="twitter:card" content="summary"/>
      <meta property="twitter:description" content="【Практические задачи】 - ☜ⒿⒶⓋⒶ☞ для начинающих 💥Бесплатно"/>
      <meta property="twitter:site" content="@ExamClouds">
-     <meta property="og:image" content="/images/general/logo.webp"/>
-     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+     <meta property="og:image" content="/images/general/logo.svg"/>
+     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
         <cache:cacheTag/>
         <div class="breadCrumbs">
-            <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                 <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
                 <li><spring:message code="menu.tasks.label"/></li>
             </ol>

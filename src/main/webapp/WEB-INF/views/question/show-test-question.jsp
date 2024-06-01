@@ -10,14 +10,14 @@
 <jsp:attribute name="language">lang="${TESTS[param.TEST_PATH].language.code}"</jsp:attribute>
 <jsp:attribute name="header">
     <title>${QUESTION_ENTRY_ATTRIBUTE.category.parentCategory.name} ${QUESTION_ENTRY_ATTRIBUTE.category.name} - ${TESTS[TEST_PATH].name}</title>
-    <meta name="Description" content="${QUESTION_ENTRY_ATTRIBUTE.category.article.description}">
+    <meta name="description" content="${QUESTION_ENTRY_ATTRIBUTE.category.article.description}">
     <script async src="${pageContext.request.contextPath}/js/show_questions.js?v=4"></script>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <link rel="canonical" href="<ca:canonicalTag/>">
 </jsp:attribute>
 <jsp:body>
    <div class="breadCrumbs">
-     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+     <ol itemscope itemtype="https://schema.org/BreadcrumbList">
        <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
        <li><a href="<menu:testsTag/>"><spring:message code="tests.questions"/></a><meta itemprop="position" content="2"/></li>
        <li><span>${TESTS[param.TEST_PATH].name}</span><meta itemprop="position" content="3"/></li>

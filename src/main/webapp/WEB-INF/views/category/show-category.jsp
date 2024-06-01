@@ -5,7 +5,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper>
-    <jsp:attribute name="language">lang="<spring:message code='lang'/>"</jsp:attribute>
     <jsp:attribute name="header">
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name} | ExamClouds"/>
     <c:set var="header1" value="${CATEGORY_ATTRIBUTE.name}"/>
@@ -14,19 +13,19 @@
        <c:set var="header1" value="${CATEGORY_ATTRIBUTE.parentCategory.name}. ${CATEGORY_ATTRIBUTE.name}"/>
     </c:if>
     <title><c:out value="${titleName}"/></title>
-    <meta name="Keywords" content="${CATEGORY_ATTRIBUTE.article.keywords}">
-    <meta name="Description" content="${CATEGORY_ATTRIBUTE.article.description}">
+    <meta name="keywords" content="${CATEGORY_ATTRIBUTE.article.keywords}">
+    <meta name="description" content="${CATEGORY_ATTRIBUTE.article.description}">
     <%@ include file="/edit/categoryOL.jsp"%>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
        <c:choose>
        <c:when test="${DUPLICATE_CATEGORIES[CATEGORY_ATTRIBUTE.pathName]!=null}">
          <link rel="canonical"
-         href="https://www.examclouds.com/${TESTS[param.TEST_PATH].language.code.path}java/${DUPLICATE_CATEGORIES[CATEGORY_ATTRIBUTE.pathName].tests[0].pathName}/${CATEGORY_ATTRIBUTE.pathName}" />
-         <meta property="og:url" content="https://www.examclouds.com/${TESTS[param.TEST_PATH].language.code.path}java/${DUPLICATE_CATEGORIES[CATEGORY_ATTRIBUTE.pathName].tests[0].pathName}/${CATEGORY_ATTRIBUTE.pathName}">
+         href="https://www.examclouds.com/${pathLanguage}java/${DUPLICATE_CATEGORIES[CATEGORY_ATTRIBUTE.pathName].tests[0].pathName}/${CATEGORY_ATTRIBUTE.pathName}" />
+         <meta property="og:url" content="https://www.examclouds.com/${pathLanguage}java/${DUPLICATE_CATEGORIES[CATEGORY_ATTRIBUTE.pathName].tests[0].pathName}/${CATEGORY_ATTRIBUTE.pathName}">
        </c:when>
        <c:otherwise>
            <link rel="canonical"
-             href="https://www.examclouds.com/${TESTS[param.TEST_PATH].language.code.path}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}"/>
+             href="https://www.examclouds.com/${pathLanguage}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}"/>
            <meta property="og:url" content="https://www.examclouds.com/${TESTS[param.TEST_PATH].language.code.path}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
        </c:otherwise>
        </c:choose>
@@ -50,7 +49,7 @@
          <div class="category-article">
             <c:if test="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}">
                   <iframe width="100%" height="315" src="${fn:replace(CATEGORY_ATTRIBUTE.videoPath, "youtu.be", "www.youtube.com/embed")}"
-                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                      frameborder="0" name="youtubeVideo" title="<c:out value="${titleName}"/>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                   </iframe>
             </c:if>
             ${CATEGORY_ATTRIBUTE.article.text}

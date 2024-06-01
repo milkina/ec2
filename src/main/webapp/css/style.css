@@ -35,11 +35,13 @@ body{
   box-sizing:border-box
 }
 a,span.external-reference{
-  color:#4c82be
+  color:#4c82be;
+  font:700 19px proxima
 }
 code{
  color: #4c82be;
- background-color: rgb(244, 249, 253)
+ background-color: rgb(244, 249, 253);
+ font:700 19px proxima;
 }
 .indexH1, indexColumn h3, .indexColumn ,.coloredHeader{
    margin:10px;
@@ -290,8 +292,7 @@ h4, .header4{
 	background-color: #4c82be;
 }
 .learn-java{
-  text-align: center;
-  padding-top: 170px
+  text-align: center
 }
 .learn-java h3,.reasons{
    font:700 28px Montserrat;

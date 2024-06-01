@@ -4,12 +4,11 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <t:wrapper>
- <jsp:attribute name="language">lang="<spring:message code='lang'/>"</jsp:attribute>
  <jsp:attribute name="header">
-     <meta name="Keywords" content="${TESTS[param.TEST_PATH].article.keywords}">
-     <meta name="Description" content="${TESTS[param.TEST_PATH].article.description}">
+     <meta name="keywords" content="${TESTS[param.TEST_PATH].article.keywords}">
+     <meta name="description" content="${TESTS[param.TEST_PATH].article.description}">
      <title>${TESTS[param.TEST_PATH].article.title}</title>
-     <link rel="canonical" href="https://www.examclouds.com/${TESTS[param.TEST_PATH].language.code.path}${TESTS[param.TEST_PATH].fullPathName}">
+     <link rel="canonical" href="https://www.examclouds.com/${pathLanguage}${TESTS[param.TEST_PATH].fullPathName}">
      <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/${TESTS[param.TEST_PATH].fullPathName}">
      <link rel="alternate" hreflang="en" href="https://www.examclouds.com/${TESTS[param.TEST_PATH].fullPathName}">
      <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/${TESTS[param.TEST_PATH].fullPathName}">
@@ -17,9 +16,9 @@
      <meta property="og:type" content="article"/>
      <meta property="og:description" content="${TESTS[param.TEST_PATH].article.description}"/>
      <meta property="og:site_name" content="ExamClouds">
-     <meta property="og:url" content="https://www.examclouds.com/${TESTS[param.TEST_PATH].language.code.path}${TESTS[param.TEST_PATH].fullPathName}">
-     <meta property="og:image" content="/images/general/logo.webp"/>
-     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+     <meta property="og:url" content="https://www.examclouds.com/${pathLanguage}${TESTS[param.TEST_PATH].fullPathName}">
+     <meta property="og:image" content="/images/general/logo.svg"/>
+     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
      <meta property="twitter:title" content="${TESTS[param.TEST_PATH].article.title}"/>
      <meta property="twitter:card" content="summary"/>
      <meta property="twitter:description" content="${TESTS[param.TEST_PATH].article.description}"/>
@@ -39,7 +38,7 @@
  </jsp:attribute>
  <jsp:body>
     <div class="breadCrumbs">
-      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
         <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
         <li>${TESTS[param.TEST_PATH].name}</li>
       </ol>

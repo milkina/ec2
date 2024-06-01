@@ -9,7 +9,7 @@
 <head>
     <%@ include file="/WEB-INF/head_common.jsp"%>
 	<title>Бесплатные курсы Java, курсы программирования Java онлайн, Java для начинающих с нуля</title>
-	<meta name="Description" content="【Курсы Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература/тесты/вопросы, ✅Изучаем Java">
+	<meta name="description" content="【Курсы Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература/тесты/вопросы, ✅Изучаем Java">
 	<link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
@@ -20,12 +20,12 @@
         <meta property="og:site_name" content="ExamClouds">
         <meta property="og:url" content="https://www.examclouds.com/ru/">
 
-        <meta property="twitter:title" content="Бесплатные курсы Java, курсы программирования Java онлайн, Java для начинающих с нуля"/>
-        <meta property="twitter:card" content="summary"/>
-        <meta property="twitter:description" content="【Курсы Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература/тесты/вопросы, ✅Изучаем Java"/>
-        <meta property="twitter:site" content="@ExamClouds">
-    <meta property="og:image" content="/images/general/logo.webp"/>
-    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+        <meta name="twitter:title" content="Бесплатные курсы Java, курсы программирования Java онлайн, Java для начинающих с нуля"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:description" content="【Курсы Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература/тесты/вопросы, ✅Изучаем Java"/>
+        <meta name="twitter:site" content="@ExamClouds">
+    <meta property="og:image" content="/images/general/logo.svg"/>
+    <meta name="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
     <style>
       .lessons-list>li>h3:before{
         content:'<spring:message code="lesson"/> ' counter(lesson) ' - ';
@@ -33,7 +33,7 @@
     </style>
     <meta name="google-site-verification" content="WTpUYaoC4-6-_VPl3kwMu6auSphdQoEI6K1gvJ2Vp3o"/>
 </head>
-<body itemscope itemtype="http://schema.org/WebPage" class="scroll-style">
+<body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
 <cache:cacheTag/>
      <div class="container-fluid menu indexMenu round-border-bottom">
       <%@ include file="/menu.jsp"%>
@@ -54,22 +54,6 @@
      	     <p class="index-items-text">Решили получить современную профессию? Хотите много зарабатывать? Увлекает кодирование и создание
      	     программных продуктов? Мы предлагаем <strong>лучший курс Java Junior</strong> для тех, кто совсем не знаком с
      	     программированием.</p>
-                <h2><a href="${pageContext.request.contextPath}/ru/exam/java-core-russian">Программа базового курса по Java Core</a>:</h2>
-                <div class="lessons-list scroll-style">
-                    <c:set var="count" value="${1}"/>
-                    <c:forEach var="category" items="${TESTS['java-core-russian'].categories}">
-                        <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
-                            <div>
-                                <a href="${pageContext.request.contextPath}/java/java-core-russian/${category.value.pathName}"
-                                   class="lesson-icon${count%3}"></a>
-                                <h5>${category.value.name}</h5>
-                                <c:set var="count" value="${count+1}"/>
-                                <div>${category.value.article.description}</div>
-                                <a href="${pageContext.request.contextPath}/java/java-core-russian/${category.value.pathName}">Полный урок</a>
-                            </div>
-                        </c:if>
-                    </c:forEach>
-                </div>
              <p class="index-items-text">Современное образование — это получение актуальных знаний в комфортной обстановке в удобное для
              вас время. Теория подкрепляется практикой, которой уделяют максимум времени. При этом,
              уроки увлекают, побуждая узнавать все больше информации. В итоге, полученная профессия должна

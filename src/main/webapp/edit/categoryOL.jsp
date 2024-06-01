@@ -11,8 +11,8 @@
     <meta property="twitter:image" content="${CATEGORY_ATTRIBUTE.article.image}"/>
  </c:when>
  <c:otherwise>
-   <meta property="og:image" content="/images/general/logo.webp"/>
-   <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+   <meta property="og:image" content="/images/general/logo.svg"/>
+   <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
  </c:otherwise>
 </c:choose>
 <meta property="twitter:description" content="${CATEGORY_ATTRIBUTE.article.description}"/>

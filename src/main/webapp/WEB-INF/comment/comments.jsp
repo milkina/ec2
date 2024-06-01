@@ -22,8 +22,9 @@
          <textarea class="commentTextArea" name="commentText" id="commentText"
          placeholder="<spring:message code="leave.comment"/>"></textarea>
         </div>
-        <div class="col-xs-1 comment-icon">
-            <a href="#addComment" id="addComment" onclick="addUserComment('<%=request.getContextPath()%>')"></a>
+        <div class="col-xs-2 comment-icon">
+          <input type="button" value="<spring:message code="add.comment"/>" name="Save" id="save"
+          onclick="addUserComment('<%=request.getContextPath()%>')" class="styled-button"><br>
         </div>
       </div>
    </form>

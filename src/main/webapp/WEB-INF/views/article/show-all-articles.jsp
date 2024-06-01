@@ -6,9 +6,9 @@
 <t:wrapper>
   <jsp:attribute name="language">lang="<spring:message code='lang'/>"</jsp:attribute>
   <jsp:attribute name="header">
-    <meta name="Description" content="<spring:message code='show-all-articles.description'/>">
+    <meta name="description" content="<spring:message code='show-all-articles.description'/>">
     <title><spring:message code="show-all-articles.title"/></title>
-    <link rel="canonical" href="https://www.examclouds.com/show-all-articles">
+    <link rel="canonical" href="https://www.examclouds.com/${pathLanguage}show-all-articles">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/show-all-articles">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/show-all-articles">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/show-all-articles">
@@ -16,13 +16,13 @@
     <meta property="og:type" content="article"/>
     <meta property="og:description" content="<spring:message code='show-all-articles.description'/>"/>
     <meta property="og:site_name" content="ExamClouds">
-    <meta property="og:url" content="https://www.examclouds.com/show-all-articles">
+    <meta property="og:url" content="https://www.examclouds.com/${pathLanguage}show-all-articles">
     <meta property="twitter:title" content="<spring:message code="articles"/>"/>
     <meta property="twitter:card" content="summary"/>
     <meta property="twitter:description" content="<spring:message code='show-all-articles.description'/>"/>
     <meta property="twitter:site" content="@ExamClouds">
-    <meta property="og:image" content="/images/general/logo.webp"/>
-    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+    <meta property="og:image" content="/images/general/logo.svg"/>
+    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
 
   </jsp:attribute>
   <jsp:body>

@@ -5,7 +5,7 @@
 <jsp:attribute name="language">lang="<spring:message code='lang'/>"</jsp:attribute>
  <jsp:attribute name="header">
     <title>ExamClouds</title>
-    <meta name="Description" content="${message} ${param.message} - ExamClouds">
+    <meta name="description" content="${message} ${param.message} - ExamClouds">
  </jsp:attribute>
  <jsp:body>
  <h1>ExamClouds</h1>

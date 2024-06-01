@@ -4,10 +4,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper>
-    <jsp:attribute name="language">lang="<spring:message code='lang'/>"</jsp:attribute>
     <jsp:attribute name="header">
-        <meta name="Keywords" content="Java вопросы на собеседовании">
-        <meta name="Description" content="【Вопросы и ответы】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература, ✅Подготовка к сертификациям">
+        <meta name="keywords" content="Java вопросы на собеседовании">
+        <meta name="description" content="【Вопросы и ответы】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература, ✅Подготовка к сертификациям">
         <title>Вопросы на собеседовании Java, вопросы по собеседованию для Java, ответы на вопросы для собеседования по Java</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
         <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
@@ -31,15 +30,15 @@
       <meta property="twitter:card" content="summary"/>
       <meta property="twitter:description" content="【Вопросы и ответы】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература, ✅Подготовка к сертификациям"/>
       <meta property="twitter:site" content="@ExamClouds">
-      <meta property="og:image" content="/images/general/logo.webp"/>
-      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+      <meta property="og:image" content="/images/general/logo.svg"/>
+      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
 
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
         <cache:cacheTag/>
         <div class="breadCrumbs">
-            <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                 <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
                 <li>Вопросы собеседований</li>
             </ol>

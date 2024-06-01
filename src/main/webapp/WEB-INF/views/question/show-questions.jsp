@@ -10,7 +10,7 @@
     <jsp:attribute name="header">
         <meta name="robots" content="noindex">
         <title><spring:message code="questions"/> <category:name/> - ${TESTS[param.TEST_PATH].name}</title>
-        <meta name="Description" content="<category:description/>">
+        <meta name="description" content="<category:description/>">
         <script async src="${pageContext.request.contextPath}/js/show_questions.js"></script>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css">
         <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>

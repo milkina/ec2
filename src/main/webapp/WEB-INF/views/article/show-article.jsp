@@ -8,10 +8,10 @@
 <t:wrapper>
   <jsp:attribute name="language">lang="${ARTICLE_ATTRIBUTE.language.code}"</jsp:attribute>
   <jsp:attribute name="header">
-    <meta name="Keywords" content="${ARTICLE_ATTRIBUTE.keywords}">
-    <meta name="Description" content="${ARTICLE_ATTRIBUTE.description}">
+    <meta name="keywords" content="${ARTICLE_ATTRIBUTE.keywords}">
+    <meta name="description" content="${ARTICLE_ATTRIBUTE.description}">
     <title>${ARTICLE_ATTRIBUTE.title} | ExamClouds</title>
-       <link rel="canonical" href="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.language.code.path}${ARTICLE_ATTRIBUTE.url}"/>
+       <link rel="canonical" href="https://www.examclouds.com/${pathLanguage}${ARTICLE_ATTRIBUTE.url}"/>
        <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/${ARTICLE_ATTRIBUTE.url}">
        <link rel="alternate" hreflang="en" href="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.url}">
        <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.url}">
@@ -25,13 +25,13 @@
               <meta property="twitter:image" content="${ARTICLE_ATTRIBUTE.image}"/>
         </c:when>
         <c:otherwise>
-              <meta property="og:image" content="https://www.examclouds.com/images/general/logo.webp"/>
-              <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.webp"/>
+              <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
+              <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
         </c:otherwise>
     </c:choose>
     <meta property="og:description" content="${ARTICLE_ATTRIBUTE.description}"/>
     <meta property="twitter:description" content="${ARTICLE_ATTRIBUTE.description}"/>
-    <meta property="og:url" content="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.language.code.path}${ARTICLE_ATTRIBUTE.url}">
+    <meta property="og:url" content="https://www.examclouds.com/${pathLanguage}${ARTICLE_ATTRIBUTE.url}">
     <meta property="og:site_name" content="ExamClouds">
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <c:if test="${!ARTICLE_ATTRIBUTE.indexStatus}">
@@ -40,10 +40,10 @@
  </jsp:attribute>
  <jsp:body>
     <div class="breadCrumbs">
-      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
         <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp" %>
         <li itemprop="itemListElement" itemscope
-          itemtype="http://schema.org/ListItem">
+          itemtype="https://schema.org/ListItem">
            <span itemprop="name"><a itemprop="item" href="<menu:articlesTag/>"><spring:message code="articles"/>
            </a></span><meta itemprop="position" content="2"/>
         </li>

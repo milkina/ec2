@@ -12,7 +12,8 @@
            </span>
         </button>
         <a href="<menu:homeTag/>" id="home" class="logo">
-          <img src="${pageContext.request.contextPath}/images/general/logo.webp" alt="ExamClouds">
+          <img src="${pageContext.request.contextPath}/images/general/logo.svg" alt="<spring:message code="welcome.on"/> ExamClouds"
+          width="122px" height="49px" title="<spring:message code="welcome.on"/> ExamClouds" loading="lazy">
         </a>
      </div>
      <div class="collapse navbar-collapse navbar-nav" id="bs-example-navbar-collapse-1">

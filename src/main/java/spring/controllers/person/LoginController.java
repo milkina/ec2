@@ -55,8 +55,17 @@ public class LoginController {
             }
             cookie.setMaxAge(60 * 60 * 24 * 365);
             cookie.setPath("/");
+
+            StringBuilder cookieHeader = new StringBuilder();
+            cookieHeader.append(cookie.getName()).append("=").append(cookie.getValue()).append("; ");
+            cookieHeader.append("Max-Age=").append(cookie.getMaxAge()).append("; ");
+            cookieHeader.append("Path=").append(cookie.getPath()).append("; ");
+            cookieHeader.append("SameSite=None; Secure; HttpOnly; Partitioned");
+
             HttpServletResponse response = GeneralUtility.getResponse();
-            response.addCookie(cookie);
+
+            // Set the cookie header manually
+            response.setHeader("Set-Cookie", cookieHeader.toString());
             HttpSession session = GeneralUtility.getSession(true);
 
             session.setAttribute(PERSON_ATTRIBUTE, person);

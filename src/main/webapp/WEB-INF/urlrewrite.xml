@@ -4,7 +4,7 @@
     <rule>
         <name>Domain Name Check</name>
         <condition name="host" operator="notequal">www.examclouds.com</condition>
-        <!--<condition name="host" operator="notequal">localhost</condition>-->
+        <condition name="host" operator="notequal">localhost</condition>
         <condition type="scheme" operator="notequal">https</condition>
         <from>^/(.*)</from>
         <to type="permanent-redirect">https://www.examclouds.com/$1</to>
@@ -67,6 +67,10 @@
     </rule>
     <rule>
         <from>^/java/ocjp/regex$</from>
+        <to type="permanent-redirect">/exam/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/exam/exam/ocajp8$</from>
         <to type="permanent-redirect">/exam/ocajp8</to>
     </rule>
     <rule>
@@ -325,6 +329,18 @@
     <rule>
         <from>^/java/java-core-russian/checklist$</from>
         <to type="permanent-redirect">/ru/publications/checklist</to>
+    </rule>
+    <rule>
+        <from>^/ru/publications/publications/java-knigi$</from>
+        <to type="permanent-redirect">/ru/publications/java-knigi</to>
+    </rule>
+    <rule>
+        <from>^/publications/publications/java-knigi$</from>
+        <to type="permanent-redirect">/publications/java-knigi</to>
+    </rule>
+    <rule>
+        <from>^/publications/publications/rabota-it$</from>
+        <to type="permanent-redirect">/publications/rabota-it</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/dopolnitelnie-materiali$</from>
