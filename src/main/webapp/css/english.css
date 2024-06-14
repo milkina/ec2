@@ -1,0 +1,17 @@
+.test_header>a:before{
+     content:"Select categories";
+}
+.lessons-list>li>h3:before{
+     content:'Lesson ' counter(lesson) ' - ';
+}
+.test_header>a:before{
+              content:"Select categories";
+          }
+.read-answer.collapsed:after{
+         content:'Read Answer';
+         font:700 19px proxima;
+      }
+      .read-answer:after{
+         content:'Hide Answer';
+         font:700 19px proxima;
+      }

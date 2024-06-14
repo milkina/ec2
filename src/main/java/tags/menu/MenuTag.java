@@ -11,7 +11,7 @@ import static util.GeneralUtility.getResourceValue;
 public class MenuTag extends TagSupport {
 
     public String getHref(String currentPage, String path) {
-        String href = "#";
+        String href = "/";
         HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
         String localAddress = request.getRequestURI();
         if (!localAddress.contains(currentPage)) {

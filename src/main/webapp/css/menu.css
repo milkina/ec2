@@ -1,5 +1,5 @@
 .menu{
-    background: #a1d6f7;
+    background: #333333;
     color: #282e3e;
 }
 .topMenu{
@@ -27,9 +27,6 @@
   -webkit-box-shadow:none;
   float:none;
 }
-.indexMenu{
-  min-height: 685px;
- }
 .round-border-bottom{
   border-radius: 0 0 28px 28px;
 }
@@ -43,9 +40,6 @@
 nav{
  width: 511px;
  padding-left:250px
-}
-nav>ul>li:last-child{
-  padding-right: 110px
 }
 .menuItem,.menuItemWithSub{
   position: relative;
@@ -86,10 +80,9 @@ nav>ul>li:last-child{
 	  background-color:#4c82be;
 }
 .menuItemWithSub a,.menuItem a, a.menuItem,.my-profile{
-	color: #282e3e;
-    font: 700 18px proxima;
-    text-decoration: none;
-    border-bottom: 2px solid #282e3e;
+	color: white;
+    font: 700 19px proxima;
+    text-decoration: none
 }
 .menuItemWithSub ul li a{
    border-bottom: 2px solid rgba(107, 107, 107,0.1);
@@ -125,21 +118,11 @@ nav>ul>li:last-child{
 .contactUsEmail a{
      font: 400 21px proxima;
      color:white;
-     border-bottom: 2px solid #282e3e;
      text-decoration: none;
 }
 .contactUsEmail a:hover{
-  color:#2f3748;
+  color:#6b6b6b;
   text-decoration: none;
-}
-.socialIcon {
-    background-image: url('../images/general/sprites.webp');
-    background-size: auto;
-    cursor: pointer;
-    width: 26px;
-    height: 26px;
-    transition: all .5s ease;
-    margin-right: 45px;
 }
 .footer-bottom {
     border-top: 1px solid #777;
@@ -216,29 +199,6 @@ nav>ul>li:last-child{
   display:inline-block;
   padding-right:45px;
 }
-#sprite-icon_facebook {
-    background-position: -28px -6px;
- }
-#sprite-icon_facebook:hover {
-   background-position: -28px -33px;
-}
-#sprite-icon_twitter {
-    background-position: -57px -6px;
-}
-#sprite-icon_twitter:hover {
-    background-position: -57px -33px;
-}
-#sprite-icon_vkontakte {
-    background-position: 0 -6px;
-}
-#sprite-icon_vkontakte:hover {
-    background-position: 0 -33px;
-}
-/* Hover effects */
-.socialIcon:hover {
-    transform: scale(1.1);
-    background-color: #e0e0e0; /* Adjust as needed */
-}
 .my-profile{
    margin: 33px 0 10px;
 }
@@ -252,8 +212,9 @@ nav>ul>li:last-child{
     display:inline-block;
     width: 27px;
     height: 18px;
-    font: 700 18px proxima;
-    background-color: #a1d6f7
+    font: 700 19px proxima;
+    background-color: #333;
+    color:white;
  }
 .logo{
    padding-top: 13px;
@@ -294,6 +255,9 @@ nav>ul>li:last-child{
   background:none;
   border-color: #6b6b6b;
 }
+.navbar a{
+  text-decoration: none
+ }
 @media (min-width: 778px) {
 .nav .open>a:hover{
   background-color:white;
@@ -327,4 +291,7 @@ nav>ul>li:last-child{
 }
 .lesson-icon0 {
     background-position: -407px -3px
+}
+.glyphicon-user{
+color:white
 }

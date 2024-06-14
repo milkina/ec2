@@ -1,0 +1,9 @@
+.test_header>a:before{
+   content:"Выбрать категории";
+}
+.lessons-list>li>h3:before{
+        content:'Урок ' counter(lesson) ' - ';
+}
+.test_header>a:before{
+                content:"Выбрать категории";
+            }

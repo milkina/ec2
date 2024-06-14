@@ -7,11 +7,11 @@
 <meta property="twitter:card" content="summary"/>
 <c:choose>
  <c:when test="${CATEGORY_ATTRIBUTE.article.image != null &&  not empty CATEGORY_ATTRIBUTE.article.image}">
-    <meta property="og:image" content="${CATEGORY_ATTRIBUTE.article.image}"/>
+    <meta property="og:image" content="https://www.examclouds.com/${CATEGORY_ATTRIBUTE.article.image}"/>
     <meta property="twitter:image" content="${CATEGORY_ATTRIBUTE.article.image}"/>
  </c:when>
  <c:otherwise>
-   <meta property="og:image" content="/images/general/logo.svg"/>
+   <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
  </c:otherwise>
 </c:choose>

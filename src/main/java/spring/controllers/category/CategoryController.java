@@ -211,17 +211,17 @@ public class CategoryController {
         Map<String, Category> categories = test.getCategories();
         Category category = categories.get(categoryPath);
         ModelAndView modelAndView = new ModelAndView(SPRING_MESSAGE_PAGE);
-        if (!category.getSubCategories().isEmpty()) {
+      /*  if (!category.getSubCategories().isEmpty()) {
             modelAndView.addObject(MESSAGE_ATTRIBUTE,
                     getResourceValue(locale, "category.not.removed2", "messages"));
-        } else {
-            courseService.removeCategoryFromCourse(test, category);
+        } else {*/
+        courseService.removeCategoryFromCourse(test, category);
 
-            TestUtility.loadTestsToServletContext(request.getServletContext());
-            CategoryUtility.setDuplicateCategories(request.getServletContext());
-            modelAndView.addObject(MESSAGE_ATTRIBUTE,
-                    getResourceValue(locale, "category.removed.from.course", "messages"));
-        }
+        TestUtility.loadTestsToServletContext(request.getServletContext());
+        CategoryUtility.setDuplicateCategories(request.getServletContext());
+        modelAndView.addObject(MESSAGE_ATTRIBUTE,
+                getResourceValue(locale, "category.removed.from.course", "messages"));
+        //  }
 
         return modelAndView;
     }

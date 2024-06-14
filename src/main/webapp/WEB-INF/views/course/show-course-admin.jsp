@@ -60,17 +60,8 @@
                         </tr>
                 </c:forEach>
         </table><br>
-        <script>
-        $(document).ready(function() {
-           $("#table-1").tableDnD({
-              onDrop: function(table, row) {
-                  var previousCategoryElement = row.previousElementSibling;
-                  moveCategoryUp(row.id, previousCategoryElement.id, '${pageContext.request.contextPath}','${param.TEST_PATH}');
-              }
-           });
-        });
-        </script>
-        <a href="${pageContext.request.contextPath}/show-create-category?TEST_PATH=${param.TEST_PATH}" id="createCategory">
+        <script src="${pageContext.request.contextPath}/js/moveTestUp.js" async></script>
+         <a href="${pageContext.request.contextPath}/show-create-category?TEST_PATH=${param.TEST_PATH}" id="createCategory">
           <spring:message	code="create.category"/>
         </a><br>
         <a href="${pageContext.request.contextPath}/show-add-category?TEST_PATH=${param.TEST_PATH}" id="addCategory">

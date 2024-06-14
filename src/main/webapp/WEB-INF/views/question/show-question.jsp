@@ -14,16 +14,7 @@
     <script async src="${pageContext.request.contextPath}/js/show_questions.js?v=4"></script>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <link rel="canonical" href="<ca:canonicalTag/>">
-    <style>
-      .read-answer.collapsed:after{
-         content:'<spring:message code="read.answer"/>';
-         font:700 19px proxima;
-      }
-      .read-answer:after{
-         content:'<spring:message code="hide.answer"/>';
-         font:700 19px proxima;
-      }
-    </style>
+    <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
 </jsp:attribute>
 <jsp:body>
   <div class="breadCrumbs">

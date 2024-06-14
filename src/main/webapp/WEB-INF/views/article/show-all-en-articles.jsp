@@ -5,20 +5,20 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <t:wrapper>
   <jsp:attribute name="header">
-    <meta name="description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
-    <title>Статьи из IT сферы на ExamClouds</title>
-    <link rel="canonical" href="https://www.examclouds.com/ru/show-all-articles">
+    <meta name="description" content="Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them.">
+    <title>IT Articles on ExamClouds</title>
+    <link rel="canonical" href="https://www.examclouds.com/show-all-articles">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/show-all-articles">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/show-all-articles">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/show-all-articles">
-    <meta property="og:title" content="Статьи из IT сферы на ExamClouds"/>
+    <meta property="og:title" content="IT Articles on ExamClouds"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT."/>
+    <meta property="og:description" content="Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them."/>
     <meta property="og:site_name" content="ExamClouds">
-    <meta property="og:url" content="https://www.examclouds.com/ru/show-all-articles">
-    <meta property="twitter:title" content="Статьи из IT сферы на ExamClouds"/>
+    <meta property="og:url" content="https://www.examclouds.com/show-all-articles">
+    <meta property="twitter:title" content="IT Articles on ExamClouds"/>
     <meta property="twitter:card" content="summary"/>
-    <meta property="twitter:description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT."/>
+    <meta property="twitter:description" content="Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them."/>
     <meta property="twitter:site" content="@ExamClouds">
     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
@@ -29,7 +29,7 @@
      <h1 class="article-head"><spring:message code="articles"/></h1>
       <ul class="article-list">
         <c:forEach var="article" items="${ARTICLES}">
-        <c:if test="${article.language.code=='ru'}">
+        <c:if test="${article.language.code=='en'}">
          <li>
            <div class="row article-head-date">
              <h2 class="article-head col-xs-12 col-sm-9">${article.title}</h2>

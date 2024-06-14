@@ -14,19 +14,7 @@
     <script async src="${pageContext.request.contextPath}/js/show_questions.js"></script>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <link rel="canonical" href="<ca:examCanonicalTag/>">
-    <style>
-      .questionText:before{
-        content:"<exam:number/>";
-      }
-      .read-answer.collapsed:after{
-        content:'<spring:message code="read.answer"/>';
-        font:700 19px proxima;
-      }
-      .read-answer:after{
-        content:'<spring:message code="hide.answer"/>';
-        font:700 19px proxima;
-      }
-    </style>
+    <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
 </jsp:attribute>
 <jsp:body>
   <div class="breadCrumbs">
@@ -52,7 +40,7 @@
          <exam:checkbox/>
        </div>
        <div class="questionEntryBody">
-         <div class="questionText">${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.question.text}</div>
+         <div class="questionText"><exam:number/>&nbsp;${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.question.text}</div>
          <a class="read-answer collapsed" role="button" data-toggle="collapse" id="a1"
           href="#answer1" aria-expanded="false" aria-controls="answer1">
               <spring:message code="read.answer"/>

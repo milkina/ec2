@@ -58,10 +58,17 @@ public class ArticleController {
         return modelAndView;
     }
 
-    @RequestMapping(value = {"{langid}/show-all-articles", "/show-all-articles"})
+    @RequestMapping(value = {"{langid}/show-all-articles"})
     public ModelAndView showAllArticles() {
         List<Article> articleList = articleService.getArticles();
         ModelAndView modelAndView = new ModelAndView("article/show-all-articles");
+        modelAndView.addObject(ARTICLES, articleList);
+        return modelAndView;
+    }
+    @RequestMapping(value = {"{langid}/show-all-en-articles", "/show-all-en-articles", "/show-all-articles"})
+    public ModelAndView showAllEnArticles() {
+        List<Article> articleList = articleService.getArticles();
+        ModelAndView modelAndView = new ModelAndView("article/show-all-en-articles");
         modelAndView.addObject(ARTICLES, articleList);
         return modelAndView;
     }

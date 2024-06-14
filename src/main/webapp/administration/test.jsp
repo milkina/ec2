@@ -25,16 +25,6 @@
           </tr>
          </c:forEach>
       </table><BR>
-       <script>
-              $(document).ready(function() {
-                 $("#table-1").tableDnD({
-                    onDrop: function(table, row) {
-                        var previousTestElement = row.previousElementSibling;
-                        moveTestUp(row.id, previousTestElement.id,
-                        '${pageContext.request.contextPath}');
-                    }
-                 });
-              });
-              </script>
+      <script src="${pageContext.request.contextPath}/js/moveTestUp.js" async></script>
       <a href="${pageContext.request.contextPath}/show-add-course" id="addTest"><spring:message	code="add.course"/></a>
       </div>

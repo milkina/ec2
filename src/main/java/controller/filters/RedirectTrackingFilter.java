@@ -19,9 +19,6 @@ public class RedirectTrackingFilter implements Filter {
             HttpSession session = httpRequest.getSession();
             String language = httpRequest.getRequestURI().contains("/ru/") ? "ru" : "en";
             session.setAttribute("pageLanguage", language);
-
-            String path = httpRequest.getRequestURI().contains("/ru/") ? "ru/" : "";
-            session.setAttribute("pathLanguage", path);
         }
         chain.doFilter(request, response);
     }

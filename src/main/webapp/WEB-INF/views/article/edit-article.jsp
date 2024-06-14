@@ -16,7 +16,7 @@
             <span class="adminLabel"><spring:message code="url"/>:<span class="wrongMessage">*</span></span>
             <input type="text" name="URL_PARAM" maxlength="70" required value="${ARTICLE_ATTRIBUTE.url}" size="70"><BR>
             <span class="adminLabel"><spring:message code="title"/>:<span class="wrongMessage">*</span></span>
-            <input type="text" name="TITLE" maxlength="120" required value="${ARTICLE_ATTRIBUTE.title}" size="70"><BR>
+            <input type="text" name="TITLE" maxlength="70" required value="${ARTICLE_ATTRIBUTE.title}" size="70"><BR>
             <span class="adminLabel"><spring:message code="image.url"/>:</span>
             <input type="text" name="ARTICLE_IMAGE" maxlength="70" value="${ARTICLE_ATTRIBUTE.image}"><BR>
                        <strong class="adminLabel"><spring:message	code="language"/>:</strong>
@@ -33,9 +33,9 @@
               <c:if test="${ARTICLE_ATTRIBUTE==null || ARTICLE_ATTRIBUTE.indexStatus}">checked</c:if>>
             <BR>
              <span class="adminLabel"><spring:message code="keywords"/>:<span class="wrongMessage">*</span></span>
-            <textarea rows="4" cols="40" maxlength="260" name="keywords" required id="keywords">${ARTICLE_ATTRIBUTE.keywords}</textarea>  <BR>
+            <textarea rows="7" cols="40" maxlength="160" name="keywords" required id="keywords">${ARTICLE_ATTRIBUTE.keywords}</textarea>  <BR>
             <span class="adminLabel"><spring:message code="meta.description"/>:<span class="wrongMessage">*</span></span>
-            <textarea rows="4" cols="40" maxlength="260" name="description" required id="description">${ARTICLE_ATTRIBUTE.description}</textarea>  <BR>
+            <textarea rows="7" cols="40" maxlength="160" name="description" required id="description">${ARTICLE_ATTRIBUTE.description}</textarea>  <BR>
             <span class="adminLabel"><spring:message code="text"/>:<span class="wrongMessage">*</span></span>
             <textarea rows="25" cols="80" name="article.text" id="ARTICLE_TEXT">${ARTICLE_ATTRIBUTE.text}</textarea> <BR>
             <input type="submit" value="<spring:message code="save.button"/>" name="Save" id="save"><br>

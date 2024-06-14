@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div class="container-fluid footer menu round-border-top">
   	<div class="container">
        <footer class="footer">
@@ -11,18 +12,23 @@
                    <ul>
                        <li><a href="<menu:homeTag/>"><spring:message code="home"/></a></li>
                        <li><a href="<menu:privacyTag/>"><spring:message code="privacy"/></a></li>
+                       <c:forEach var="test" items="${TESTS}">
+                         <c:if test="${test.value.language.code==pageLanguage}">
+                            <li><a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>${test.value.fullPathName}">
+                                ${test.value.name}</a></li>
+                         </c:if>
+                       </c:forEach>
                    </ul>
                </div>
                <div class="footer-section social">
                    <h2><spring:message code="follow.us"/></h2>
-                   <div class="social-icons">
-                       <div id="sprite-icon_vkontakte" class="socialIcon" onclick="window.location.href='http://vk.com/club44323672'"></div>
-                       <div id="sprite-icon_twitter" class="socialIcon" onclick="window.location.href='http://twitter.com/ExamClouds'"></div>
-                       <div id="sprite-icon_facebook" class="socialIcon" onclick="window.location.href='http://www.facebook.com/Examclouds'"></div>
-                   </div>
-                   <div class="patreon-class">
-                      <a href="https://www.patreon.com/bePatron?u=71601793" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-                   </div>
+                   <ul class="social-icons">
+                           <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow"><i class="fab fa-patreon"></i> Patreon</a></li>
+                           <li><a href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i> YouTube</a></li>
+                           <li><a href="http://vk.com/club44323672" target="_blank" rel="nofollow"><i class="fab fa-vk"></i> VKontakte</a></li>
+                           <li><a href="http://www.facebook.com/Examclouds" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i> Facebook</a></li>
+                           <li><a href="http://twitter.com/ExamClouds" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    </ul>
                     <div class="contactUsEmail footerItem">
                                 <address class="glyphicon glyphicon-envelope">
                        		  <a href="mailto:tatyana.milkina@gmail.com">tatyana.milkina@gmail.com</a>
@@ -36,10 +42,4 @@
        </footer>
     </div>
 </div>
-<script>
-+function($){
-  $(document).ready(function(){
-    $('.external-reference').replaceWith (function (){return'<a onclick="return !window.open(this.href)" href="'+$(this).data('link')+'" title="'+$(this).text()+'" >'+$(this).html()+'</a>';});
-  });
-}(jQuery);
-</script>
+

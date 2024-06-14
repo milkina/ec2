@@ -13,11 +13,6 @@
     <title>${TESTS[param.TEST_PATH].name}&nbsp;<spring:message code="tests"/></title>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <link rel="canonical" href="<ca:examCanonicalTag/>">
-    <style>
-      .questionText:before{
-          content:"<exam:number/>";
-      }
-    </style>
 </jsp:attribute>
 <jsp:body>
      <div class="breadCrumbs">
@@ -47,7 +42,7 @@
         <form ACTION="${pageContext.request.contextPath}/add-person-answer?TEST_PATH=${param.TEST_PATH}"
               method="POST">
          <div class="questionEntryDiv">
-           <div class="questionText">${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.question.text}</div>
+           <div class="questionText"><exam:number/>&nbsp;${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.question.text}</div>
            <c:set var="count" value="${0}"/>
            <ul id="answersDiv">
              <c:forEach var="answer" items="${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.userAnswers}">

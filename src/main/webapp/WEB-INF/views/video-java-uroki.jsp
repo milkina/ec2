@@ -10,18 +10,16 @@
         <meta name="description" content="【Видео Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Видео/уроки, ✅Java">
         <title>Видео уроки по Java для начинающих</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
-
       <meta property="og:title" content="Видео уроки по Java для начинающих"/>
       <meta property="og:type" content="article"/>
       <meta property="og:description" content="【Видео Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Видео/уроки, ✅Java"/>
       <meta property="og:site_name" content="ExamClouds">
       <meta property="og:url" content="https://www.examclouds.com/video-java-uroki">
-
       <meta property="twitter:title" content="Видео уроки по Java для начинающих"/>
       <meta property="twitter:card" content="summary"/>
       <meta property="twitter:description" content="【Видео Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Видео/уроки, ✅Java"/>
       <meta property="twitter:site" content="@ExamClouds">
-      <meta property="og:image" content="/images/general/logo.svg"/>
+      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
       <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
 
      </jsp:attribute>

@@ -10,27 +10,21 @@
         <title>Preparation to Oracle Java Certification, Interview Questions and Answers</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
         <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
-        <style>
-          .test_header>a:before{
-              content:"Select categories";
-          }
-        </style>
+        <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
         <link rel="canonical" href="https://www.examclouds.com/questions">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/questions">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/questions">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/questions">
-
       <meta property="og:title" content="Preparation to Oracle Java Certification, Interview Questions and Answers"/>
       <meta property="og:type" content="article"/>
       <meta property="og:description" content="【Questions and Answers】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature, ✅Preparation to Oracle Certifications"/>
       <meta property="og:site_name" content="ExamClouds">
       <meta property="og:url" content="https://www.examclouds.com/questions">
-
       <meta property="twitter:title" content="Preparation to Oracle Java Certification, Interview Questions and Answers"/>
       <meta property="twitter:card" content="summary"/>
       <meta property="twitter:description" content="【Questions and Answers】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature, ✅Preparation to Oracle Certifications"/>
       <meta property="twitter:site" content="@ExamClouds">
-      <meta property="og:image" content="/images/general/logo.svg"/>
+      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
       <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
      </jsp:attribute>
      <jsp:body>
@@ -47,6 +41,7 @@
             <h1 class="all-questions-header">Java Interview Questions</h1>
             <ul class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
              <c:forEach var="test" items="${COURSES_WITH_QUESTIONS}">
+              <c:if test="${test.language.code==pageLanguage}">
               <li class="panel select-category-li">
                 <div class="panel-heading" role="tab" id="heading_q_${test.pathName}">
                   <h2 class="panel-title test_header">
@@ -59,19 +54,12 @@
                   </div>
                   <%@include file="/WEB-INF/views/test/start-course-quiz.jsp"%>
               </li>
+            </c:if>
             </c:forEach>
           </ul>
           </div>
          </main>
-         <script>
-           $('select[multiple]').multiselect({
-               columns: 2,
-               placeholder: 'Select categories',
-               selectAll : true,
-               selectGroup:true,
-               search:true
-            });
-         </script>
+         <script src="${pageContext.request.contextPath}/js/selectCategories.js" async></script>
          <%@ include file="/WEB-INF/socialButtons.jsp"%>
  </jsp:body>
 </t:wrapper>

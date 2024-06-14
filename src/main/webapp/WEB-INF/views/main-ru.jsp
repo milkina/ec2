@@ -8,49 +8,65 @@
 <html lang="ru">
 <head>
     <%@ include file="/WEB-INF/head_common.jsp"%>
-	<title>Бесплатные курсы Java, курсы программирования Java онлайн, Java для начинающих с нуля</title>
+	<title>Бесплатные онлайн курсы Java программирования для начинающих</title>
 	<meta name="description" content="【Курсы Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература/тесты/вопросы, ✅Изучаем Java">
 	<link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
     <link rel="canonical" href="https://www.examclouds.com/ru/">
-        <meta property="og:title" content="Бесплатные курсы Java, курсы программирования Java онлайн, Java для начинающих с нуля"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta property="og:title" content="Бесплатные онлайн курсы Java программирования для начинающих"/>
         <meta property="og:type" content="article"/>
         <meta property="og:description" content="【Курсы Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература/тесты/вопросы, ✅Изучаем Java"/>
         <meta property="og:site_name" content="ExamClouds">
         <meta property="og:url" content="https://www.examclouds.com/ru/">
-
-        <meta name="twitter:title" content="Бесплатные курсы Java, курсы программирования Java онлайн, Java для начинающих с нуля"/>
+        <meta name="twitter:title" content="Бесплатные онлайн курсы Java программирования для начинающих"/>
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:description" content="【Курсы Java】  - ☜ⒿⒶⓋⒶ☞ 💥Бесплатно, ‼Статьи/литература/тесты/вопросы, ✅Изучаем Java"/>
         <meta name="twitter:site" content="@ExamClouds">
-    <meta property="og:image" content="/images/general/logo.svg"/>
+    <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
     <meta name="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
-    <style>
-      .lessons-list>li>h3:before{
-        content:'<spring:message code="lesson"/> ' counter(lesson) ' - ';
-      }
-    </style>
+    <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet">
     <meta name="google-site-verification" content="WTpUYaoC4-6-_VPl3kwMu6auSphdQoEI6K1gvJ2Vp3o"/>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
 <cache:cacheTag/>
-     <div class="container-fluid menu indexMenu round-border-bottom">
+     <div class="container-fluid menu round-border-bottom">
       <%@ include file="/menu.jsp"%>
       <div class="container">
-         <div class="row-no-gutters index-img-div">
+         <div class="index-img-div">
              <div class="col-xs-12 col-md-4">
                 <h1>Онлайн-курсы Java для начинающих</h1>
                  <c:if test="${param.param != null || person == null}">
                    <a class="start-learning" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">Начать обучение</a>
                  </c:if>
              </div>
-             <div class="hidden-xs hidden-sm col-md-8 computer-img"></div>
+             <div class="hidden-xs hidden-sm col-md-8">
+             <img src="${pageContext.request.contextPath}/images/general/index-image.svg" alt="Изучаем Java"
+                       width="750px" height="400px" title="Изучаем Java" loading="lazy">
+             </div>
          </div>
       </div>
     </div>
     <div class="container about-items">
      	    <main>
+     	  <!--  <div class="row">
+                    <div class="col-md-4">
+                        <i class="fas fa-book fa-3x"></i>
+                        <h3>Широкий выбор курсов</h3>
+                        <p>Мы предлагаем курсы по самым разным предметам.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                        <h3>Опытные преподаватели</h3>
+                        <p>Наши преподаватели – эксперты в своей области.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-certificate fa-3x"></i>
+                        <h3>Сертификаты</h3>
+                        <p>Получайте сертификаты по завершении курсов.</p>
+                    </div>
+                </div>-->
      	     <p class="index-items-text">Решили получить современную профессию? Хотите много зарабатывать? Увлекает кодирование и создание
      	     программных продуктов? Мы предлагаем <strong>лучший курс Java Junior</strong> для тех, кто совсем не знаком с
      	     программированием.</p>
@@ -60,16 +76,43 @@
              будет приносить не только удовлетворение, но и хорошую прибыль. Именно по этим концепциям была
               разработана <strong>бесплатная обучающая программа, чтобы стать
               специалистом</strong> Junior Java Developer смог каждый желающий.</p>
-              <p  class="index-items-text">Каждый урок содержит:</p>
-                <ul>
-                    <li>лекции</li>
-                    <li>видео</li>
-                    <li>домашние задания</li>
-                    <li>тесты</li>
-                    <li>вопросы по пройденным темам</li>
-                    <li>слайды</li>
-                </ul>
-                <p>Подписывайтесь на наш&nbsp;<span class="external-reference" data-link="https://www.youtube.com/c/tatyanamilkina">канал</span>&nbsp;на youtube и смотрите видео к урокам.</p>
+                 <div class="row learn-java">
+                             <h2 class="reasons">Почему выбирают курсы Java от ExamClouds</h2>
+                          </div>
+              <div class="row">
+                 <div class="col-md-4">
+                   <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                   <h3>Уроки</h3>
+                   <p>Мы предлагаем <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian">уроки по Java программированию</a>, чтобы помочь вам освоить этот популярный язык программирования.</p>
+                 </div>
+                 <div class="col-md-4">
+                   <i class="fab fa-youtube fa-3x"></i>
+                   <h3>Видео</h3>
+                   <p><strong>Бесплатные интернет видео уроки по Java</strong>. Подписывайтесь на наш&nbsp;<span class="external-reference" data-link="https://www.youtube.com/c/tatyanamilkina">канал&nbsp;на YouTube </span>и смотрите видео к урокам.</p>
+                 </div>
+                 <div class="col-md-4">
+                    <i class="fas fa-tasks fa-3x"></i>
+                    <h3>Тесты</h3>
+                    <p>Пройдите наши <a href="${pageContext.request.contextPath}/ru/tests">тесты Java Core для подготовки к собеседованию</a>, чтобы проверить и улучшить свои знания по Java.</p>
+                 </div>
+              </div>
+              <div class="row">
+                 <div class="col-md-4">
+                    <i class="fas fa-question-circle fa-3x"></i>
+                    <h3>Вопросы</h3>
+                    <p><a href="${pageContext.request.contextPath}/ru/questions">Вопросы на собеседовании по Java</a> помогут подготовиться к собеседованию.</p>
+                 </div>
+                 <div class="col-md-4">
+                    <i class="fas fa-laptop-code fa-3x"></i>
+                    <h3>Практика</h3>
+                    <p>Много <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">практических заданий</a>, благодаря которой вы сможете решать вполне конкретные задачи.</p>
+                 </div>
+                 <div class="col-md-4">
+                     <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                     <h3>Слайды</h3>
+                     <p>Слайды Power Point из презентации могут помочь закрепить пройденный материал.</p>
+                 </div>
+              </div>
               <h2 class="reasons">5 причин выбрать курсы Java-программирования</h2>
               <ol class="index-items-text">
               <li>Java — один из самых популярных языков программирования. Он был изобретен более 20 лет назад и останется востребованным еще долгие годы.</li>
@@ -107,16 +150,6 @@
             <p class="index-items-text">Более подробную информацию можно получить на странице плана курса Java программирование.</p>
             <p class="index-items-text">Специалисты считают Java одним их дружественных, доступных для обучения языков программирования. Каждый урок курса включает в себя вопросы, тесты и домашние задания, что гарантирует 100% усвоение материалы. Пройдя тест, вы увидите, какие темы необходимо повторить и чему уделить больше внимания.</p>
             <p class="index-items-text">Пройденные видеоуроки по Java для начинающих станут первой ступенью для дальнейшего обучения программированию. Вы можете выбрать одно из следующих направлений для дальнейшего обучения: мобильные приложения на Android, корпоративные и клиентские приложения, автоматизация тестирования и тех.поддержка. Можете выбрать направление веб-разработки, начинающееся с небольших коммерческих проектов и заканчивающееся масштабными международными порталами и государственными ресурсами. Еще одна интересная сфера — разработка игр. Например, на языке Java написан Minecraft.</p>
-            <div class="row learn-java">
-               <h2 class="reasons">Почему выбирают курсы Java от ExamClouds</h2>
-            </div>
-            <ul class="pig-globe row">
-              <li class="learn-java-item index-image-pig col-xs-12 col-md-4">Полностью <strong>бесплатные интернет видео уроки по Java</strong>. Актуальность информации, постоянное обновление материалов.</li>
-              <li class="learn-java-item index-image-flags col-xs-12 col-md-4">Много практики, благодаря которой вы сможете решать вполне конкретные задачи.
-              <a href="${pageContext.request.contextPath}/ru/tests">Тесты Java Core для подготовки к собеседованию.</a></li>
-              <li class="learn-java-item index-image-globe col-xs-12 col-md-4">Доступное изложение материала, дающее отличный старт в новой профессии.
-              <a href="${pageContext.request.contextPath}/ru/questions">Вопросы на собеседовании по Java.</a></li>
-            </ul>
             <p class="index-items-text">На курсе <strong>программирования на Java для чайников с
             заданиями</strong> вы изучите основы языка, а также рекомендации по оформлению кода, выбору программного обеспечения и дополнительных источников для дальнейшего обучения.</p>
             <h2 class="reasons">Курсы программирования на Java в Украине</h2>

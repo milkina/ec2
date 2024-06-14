@@ -4,19 +4,30 @@
 <t:wrapper>
     <jsp:attribute name="language">lang="en"</jsp:attribute>
     <jsp:attribute name="header">
-    <title>Privacy Policy for ExamClouds</title>
+    <title>Privacy Policy Regarding Personal Data Processing for ExamClouds</title>
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/privacy">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/privacy">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/privacy">
     <link rel="canonical" href="https://www.examclouds.com/privacy">
-    <meta name="description" content="Description of Privacy Policy for ExamClouds">
+    <meta name="description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have.">
+    <meta property="og:title" content="Privacy Policy for ExamClouds"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have."/>
+    <meta property="og:site_name" content="ExamClouds">
+    <meta property="og:url" content="https://www.examclouds.com/privacy">
+    <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
+    <meta property="twitter:title" content="Privacy Policy for ExamClouds">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have.">
+    <meta property="twitter:site" content="@ExamClouds">
+    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
  </jsp:attribute>
     <jsp:body>
         <h1>Privacy Policy Regarding Personal Data Processing</h1>
         <div>
             <div>
                 <h2>1. General Provisions</h2>
-                <div>This personal data processing policy defines the procedure for processing personal data and measures to ensure the security of personal data undertaken by <span id="genName" data-scroll-to="#privacyName" class="link mark">ExamClouds</span> (hereinafter referred to as the Operator).</div>
+                <div>This personal <strong>data processing policy</strong> defines the procedure for processing personal data and measures to ensure the security of personal data undertaken by <span id="genName" data-scroll-to="#privacyName" class="link mark">ExamClouds</span> (hereinafter referred to as the Operator).</div>
                 <div>
                     <div>1.1. The Operator sets its primary goal and condition for its activities as ensuring the protection of human and civil rights and freedoms when processing their personal data, including the protection of the right to privacy, personal and family secrets.</div>
                     <div>1.2. This policy of the Operator regarding the processing of personal data (hereinafter referred to as the Policy) applies to all information that the Operator can obtain about visitors to the website <span data-scroll-to="#prefixURL" class="link mark">https://www.examclouds.com</span>.</div>

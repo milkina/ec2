@@ -8,8 +8,19 @@
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/privacy">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/privacy">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/privacy">
-    <link rel="canonical" href="https://www.examclouds.com/privacy">
-    <meta name="description" content="Описание политики конфиденциальности - ExamClouds">
+    <link rel="canonical" href="https://www.examclouds.com/ru/privacy">
+    <meta name="description" content="На этой странице описана политика конфиденциальности сайта ExamClouds. Здесь вы найдете информацию о том, какие данные собираются, как они используются.">
+    <meta property="og:title" content="Политика конфиденциальности - ExamClouds"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:description" content="На этой странице описана политика конфиденциальности сайта ExamClouds. Здесь вы найдете информацию о том, какие данные собираются, как они используются."/>
+    <meta property="og:site_name" content="ExamClouds">
+    <meta property="og:url" content="https://www.examclouds.com/ru/privacy">
+    <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
+    <meta property="twitter:title" content="Политика конфиденциальности - ExamClouds">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:description" content="На этой странице описана политика конфиденциальности сайта ExamClouds. Здесь вы найдете информацию о том, какие данные собираются, как они используются.">
+    <meta property="twitter:site" content="@ExamClouds">
+    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
  </jsp:attribute>
     <jsp:body>
         <h1>Политика в отношении обработки персональных данных</h1>
