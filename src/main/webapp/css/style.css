@@ -65,14 +65,9 @@ h4, .header4{
      border-color: #a1d6f7;
 }
 .index-img-div h1{
-  font:700 47px/67px Montserrat;
+  font:400 47px/67px Montserrat;
   color:#282e3e;
   width: 330px;
-}
-@media (min-width: 435px) {
- .index-img-div h1{
-   font:700 61px/67px Montserrat;
-  }
 }
 .index-img-div h2{
   font:700 22px/34px proxima;
@@ -284,7 +279,7 @@ h4, .header4{
 .learn-java{
   text-align: center
 }
-.learn-java h3,.reasons{
+.learn-java h3,.main-page-header{
    font:700 28px Montserrat;
    color: #2f3748;
    text-align: center
@@ -787,9 +782,6 @@ input[type="checkbox"].test-checkbox:checked+label:after{
 .category-href:hover,.category-sub-href:hover,.read-questions-href:hover,.article-url:hover{
    text-decoration:none
 }
-.category-href{
-  padding-bottom: 6px;
-}
 .category-desc{
   margin-bottom: 91px;
   padding-top:18px;
@@ -1124,22 +1116,54 @@ input[type="checkbox"].test-checkbox:checked+label:after{
     vertical-align: middle;
     padding-right: 5px;
 }
-social-icons {
-            list-style-type: none;
-            padding: 0;
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        .video-section {
+            margin: 20px 0;
         }
 
-        .social-icons li {
-            display: inline;
-            margin: 0 10px;
+        .video-section h3 {
+            margin-bottom: 10px;
+            color: #555;
         }
 
-        .social-icons a {
-            color: #000;
-            text-decoration: none;
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .social-icons a:hover {
-            color: #007bff;
+        .video-item {
+            flex: 1 1 300px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .video-description {
+            padding: 15px;
+        }
+
+        .video-description h4 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #333;
         }
 
