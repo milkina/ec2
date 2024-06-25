@@ -46,7 +46,7 @@
         <li itemprop="itemListElement" itemscope
           itemtype="https://schema.org/ListItem">
            <span itemprop="name"><a itemprop="item" href="<menu:articlesTag/>"><spring:message code="articles"/>
-           </a></span><meta itemprop="position" content="2"/>
+           </a></span><meta itemprop="position" content="2">
         </li>
         <li>${ARTICLE_ATTRIBUTE.title}</li>
        </ol>

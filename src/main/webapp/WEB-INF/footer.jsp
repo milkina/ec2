@@ -12,12 +12,6 @@
                    <ul>
                        <li><a href="<menu:homeTag/>"><spring:message code="home"/></a></li>
                        <li><a href="<menu:privacyTag/>"><spring:message code="privacy"/></a></li>
-                       <c:forEach var="test" items="${TESTS}">
-                         <c:if test="${test.value.language.code==pageLanguage}">
-                            <li><a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>${test.value.fullPathName}">
-                                ${test.value.name}</a></li>
-                         </c:if>
-                       </c:forEach>
                    </ul>
                </div>
                <div class="footer-section social">
@@ -25,7 +19,6 @@
                    <ul class="social-icons">
                            <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow"><i class="fab fa-patreon"></i> Patreon</a></li>
                            <li><a href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i> YouTube</a></li>
-                           <li><a href="http://vk.com/club44323672" target="_blank" rel="nofollow"><i class="fab fa-vk"></i> VKontakte</a></li>
                            <li><a href="http://www.facebook.com/Examclouds" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i> Facebook</a></li>
                            <li><a href="http://twitter.com/ExamClouds" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i> Twitter</a></li>
                     </ul>

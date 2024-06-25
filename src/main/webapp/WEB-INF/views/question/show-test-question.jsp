@@ -19,8 +19,8 @@
    <div class="breadCrumbs">
      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
        <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
-       <li><a href="<menu:testsTag/>"><spring:message code="tests.questions"/></a><meta itemprop="position" content="2"/></li>
-       <li><span>${TESTS[param.TEST_PATH].name}</span><meta itemprop="position" content="3"/></li>
+       <li><a href="<menu:testsTag/>"><spring:message code="tests.questions"/></a><meta itemprop="position" content="2"></li>
+       <li><span>${TESTS[param.TEST_PATH].name}</span><meta itemprop="position" content="3"></li>
      </ol>
    </div>
    <c:if test="${QUESTION_ENTRY_ATTRIBUTE.category.parentCategory!=null}">

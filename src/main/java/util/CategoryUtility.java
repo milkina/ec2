@@ -19,13 +19,7 @@ import java.util.function.Predicate;
 import static util.AllConstantsAttribute.DUPLICATE_CATEGORIES;
 import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
 import static util.AllConstantsAttribute.TESTS;
-import static util.AllConstantsParam.CATEGORY_HIDDEN;
-import static util.AllConstantsParam.CATEGORY_NAME;
-import static util.AllConstantsParam.CATEGORY_PARENT;
-import static util.AllConstantsParam.CATEGORY_PATH;
-import static util.AllConstantsParam.CATEGORY_PATH_NAME;
-import static util.AllConstantsParam.CATEGORY_VIDEO_PATH;
-import static util.AllConstantsParam.TEST_PATH;
+import static util.AllConstantsParam.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -65,6 +59,7 @@ public class CategoryUtility extends SpringUtility {
         String categoryParentId = request.getParameter(CATEGORY_PARENT);
         String categoryHidden = request.getParameter(CATEGORY_HIDDEN);
         String videoPath = request.getParameter(CATEGORY_VIDEO_PATH);
+        String title = GeneralUtility.decodeRussianCharacters(request.getParameter(CATEGORY_TITLE));
 
         Category parent = null;
         if (!categoryParentId.isEmpty()) {
@@ -76,6 +71,7 @@ public class CategoryUtility extends SpringUtility {
         category.setParentCategory(parent);
         category.setHidden("on".equals(categoryHidden));
         category.setVideoPath(videoPath.trim());
+        category.setTitle(title);
     }
 
     public static Category getCategoryByPath(HttpServletRequest request) {

@@ -1,6 +1,9 @@
 <span class="adminLabel"><spring:message code="category.name"/>:<span class="wrongMessage">*</span></span>
 <input type="text" name="categoryName" maxlength="70" required value="${CATEGORY_ATTRIBUTE.name}" size="70"/>
 <BR>
+<span class="adminLabel">Title (optional):</span>
+<input type="text" name="categoryTitle" maxlength="70" value="${CATEGORY_ATTRIBUTE.title}" size="70"/>
+<BR>
 <span class="adminLabel"><spring:message code="category.path"/>:<span class="wrongMessage">*</span></span>
 <input type="text" name="categoryPathName" maxlength="70" required value="${param.CATEGORY_PATH}" size="70"/>
 <BR>

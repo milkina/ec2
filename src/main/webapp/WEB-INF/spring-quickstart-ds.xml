@@ -26,12 +26,12 @@
     <datasource jndi-name="java:jboss/datasources/MySQLDS"
                 pool-name="kitchensink-quickstart" enabled="true"
                 use-java-context="true">
-        <!--<connection-url>jdbc:mysql://127.0.0.1:3306/jpa?useSSL=false</connection-url>
+        <connection-url>jdbc:mysql://127.0.0.1:3306/jpa_new?useSSL=false</connection-url>
         <driver>mysql</driver>
         <security>
             <user-name>root</user-name>
             <password>root</password>
-        </security>-->
+        </security>
 
       <!-- <connection-url>jdbc:mysql://10.17.3.23:3306/jpa</connection-url>
         <driver>mysql</driver>
@@ -40,13 +40,12 @@
             <password>CTPaiy35727</password>
         </security>-->
 
-        <connection-url>jdbc:mysql://10.2.12.40:3306/jpa</connection-url>
+        <!--<connection-url>jdbc:mysql://10.2.12.40:3306/jpa_new</connection-url>
         <driver>mysql</driver>
         <security>
             <user-name>root</user-name>
             <password>QQFdaz06314</password>
-        </security>
-
+        </security>-->
     </datasource>
 </datasources>
 

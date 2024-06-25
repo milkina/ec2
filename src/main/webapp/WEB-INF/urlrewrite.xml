@@ -15,51 +15,51 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/resource-references-12-04-2017$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/resource-references-9-06-2017$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/resource-references-JV-17-05$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/JV-17-06$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/JV-17-07$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/JV-18-01$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/JV-18-02$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/JV-18-03$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/JV-18-04$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/JV-18-05$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/jv-19-01$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/publications/groups$</from>
-        <to type="redirect">/ru/exam/java-core-russian</to>
+        <to type="redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/dateformat$</from>
@@ -119,7 +119,7 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/lesson13$</from>
-        <to type="permanent-redirect">/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru/#start-course</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/treads-russian$</from>
@@ -155,7 +155,7 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/recomendacii-proektirovanie-klassov$</from>
-        <to type="permanent-redirect">/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru/#start-course</to>
     </rule>
     <rule>
         <from>^/java/ocjp/arrays$</from>
@@ -243,7 +243,7 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/resource-references$</from>
-        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/keyword-finally$</from>
@@ -291,11 +291,11 @@
     </rule>
     <rule>
         <from>^/ru/java/java-core-russian/groups$</from>
-        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/groups$</from>
-        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru</to>
     </rule>
     <rule>
         <from>^/java/ocjp/inner-classes$</from>
@@ -348,11 +348,19 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/dopolnitelnie-materiali$</from>
-        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru</to>
     </rule>
     <rule>
         <from>^/ru/java/java-core-russian/dopolnitelnie-materiali$</from>
-        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru</to>
+    </rule>
+    <rule>
+        <from>^/ru/exam/java-core-russian$</from>
+        <to type="permanent-redirect">/ru/#start-course</to>
+    </rule>
+    <rule>
+        <from>^/exam/java-core-russian$</from>
+        <to type="permanent-redirect">/ru/#start-course</to>
     </rule>
 
     <rule>

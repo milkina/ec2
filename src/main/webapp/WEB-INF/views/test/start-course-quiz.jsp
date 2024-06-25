@@ -1,4 +1,4 @@
-<div id="collapse_q_${test.pathName}" class="panel-collapse collapse"
+<div id="collapse_q_${test.pathName}" class="panel-collapse collapse in"
       role="tabpanel" aria-labelledby="heading_q_${test.pathName}">
        <div class="panel-body">
         <form action="${pageContext.request.contextPath}/see-questions?TEST_PATH=${test.pathName}" method="post">

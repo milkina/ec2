@@ -23,7 +23,7 @@
                 <a itemprop="item" href="<menu:testsTag/>">
                  <span itemprop="name"><spring:message code="tests"/>
                  </span>
-                 </a><meta itemprop="position" content="2"/></li>
+                 </a><meta itemprop="position" content="2"></li>
            <li>${TESTS[param.TEST_PATH].name}</li>
        </ol>
      </div>

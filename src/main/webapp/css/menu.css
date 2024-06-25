@@ -52,7 +52,7 @@ nav{
 	position: absolute;
 	background-color: white;
 	width:170%;
-	left:-25px;
+	left:-50px;
 	top:46px;
     overflow: hidden;
     border-radius:12px;
@@ -180,6 +180,9 @@ nav{
     justify-content: center;
     gap: 15px;
 }
+.social-icons a:hover {
+    color: #007bff;
+}
 .copyright{
    font: 300 16px proxima;
    color: #2f3748;
@@ -294,4 +297,7 @@ nav{
 }
 .glyphicon-user{
 color:white
+}
+.main-page-menu{
+  width:100%
 }

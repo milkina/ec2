@@ -23,6 +23,7 @@
     <mvc:resources mapping="/fonts/**" location="/fonts/" cache-period="1209600"/>
     <mvc:resources mapping="/robots.txt" location="/robots.txt"/>
     <mvc:resources mapping="/ads.txt" location="/ads.txt"/>
+    <mvc:resources mapping="/google313763c8f6b63479.html" location="/google313763c8f6b63479.html"/>
     <mvc:resources mapping="/a2be586d7b1f047bb146c04c6476d7a2.html" location="/a2be586d7b1f047bb146c04c6476d7a2.html"/>
     <mvc:resources mapping="/.well-known/pki-validation/**" location="/.well-known/pki-validation/"/>
 

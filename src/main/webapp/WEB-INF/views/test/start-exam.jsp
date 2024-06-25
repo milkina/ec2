@@ -1,4 +1,4 @@
-<div id="collapse_${test.pathName}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_${test.pathName}">
+<div id="collapse_${test.pathName}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_${test.pathName}">
    <div class="panel-body">
      <form action="${pageContext.request.contextPath}/start-test?TEST_PATH=${test.pathName}"  method="post">
        <select name="CATEGORY_PATH" id="CATEGORY_PATH_test_${test.pathName}" multiple="multiple"
@@ -25,7 +25,7 @@
    <div class="inc-div">
      <span class="number-questions"><spring:message code="number.questions.label"/></span>
      <div class="dec button">-</div>
-     <input type="number" value="25" name="NUMBER_OF_QUESTIONS" class="number-questions-input">
+     <input type="number" value="25" name="NUMBER_OF_QUESTIONS" class="number-questions-input" label="<spring:message code='number.questions.label'/>">
      <div class="inc button">+</div>
    </div>
    <div>

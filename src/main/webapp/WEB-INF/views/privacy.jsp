@@ -10,9 +10,9 @@
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/privacy">
     <link rel="canonical" href="https://www.examclouds.com/privacy">
     <meta name="description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have.">
-    <meta property="og:title" content="Privacy Policy for ExamClouds"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have."/>
+    <meta property="og:title" content="Privacy Policy for ExamClouds">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have.">
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com/privacy">
     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
@@ -47,7 +47,7 @@
                     <div>2.7. Operator – a state body, municipal body, legal or natural person, independently or jointly with other persons organizing and (or) carrying out the processing of personal data, as well as determining the purposes of personal data processing, the composition of personal data to be processed, actions (operations) performed with personal data.</div>
                     <div>2.8. Personal data – any information relating directly or indirectly to a specific or identifiable User of the website <span data-scroll-to="#prefixURL" class="link mark">https://www.examclouds.com</span>.</div>
                     <div>2.9. Personal data allowed by the subject of personal data for dissemination – personal data to which access is provided to an unlimited number of persons by the subject of personal data by giving consent to the processing of personal data allowed by the subject of personal data for dissemination in the manner prescribed by the Personal Data Law (hereinafter - personal data allowed for dissemination).</div>
-                    <div>2.10. User – any visitor to the website <span data-scroll-to="#prefixURL" class="link mark">https://www.examclouds.com</span>.</div>
+                    <div>2.10. User – any visitor to the website <strong>https://www.examclouds.com</strong>.</div>
                     <div>2.11. Provision of personal data – actions aimed at disclosing personal data to a specific person or a specific group of persons.</div>
                     <div>2.12. Dissemination of personal data – any actions aimed at disclosing personal data to an indefinite group of persons (transfer of personal data) or at familiarizing an unlimited group of persons with personal data, including publication of personal data in the media, placement in information and telecommunication networks, or providing access to personal data in any other way.</div>
                     <div>2.13. Cross-border transfer of personal data – transfer of personal data to the territory of a foreign state to a foreign government body, a foreign natural or foreign legal person.</div>
@@ -151,7 +151,7 @@
         <div>
             <div>14.1. The User can obtain any explanations on issues of interest related to the processing of their personal data by contacting the Operator via email at <span data-scroll-to="#privacyEmail" class="link mark">tatyana.milkina@gmail.com</span>.</div>
             <div>14.2. Any changes to the policy for processing personal data by the Operator will be reflected in this document. The Policy is valid indefinitely until replaced by a new version.</div>
-            <div>14.3. The current version of the Policy is freely available on the Internet at <span id="genURLLink" data-scroll-to="#prefixURLLink" class="link mark">httpsː//www.examclouds.com/ru/privacy/</span>.</div>
+            <div>14.3. The current version of the Policy is freely available on the Internet at <strong>httpsː//www.examclouds.com/ru/privacy/</strong>.</div>
         </div>
     </jsp:body>
 </t:wrapper>

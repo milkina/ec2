@@ -10,14 +10,13 @@
         <%@ include file="/WEB-INF/head_common.jsp"%>
         <meta name="description" content="【Tutorial Java】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature/Tests, ✅Learn Java">
         <title>Online Courses and Tests for Programming Exam Preparation | ExamClouds</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
         <link rel="canonical" href="https://www.examclouds.com">
-        <meta property="og:title" content="Free Java Tutorial on ExamClouds"/>
-        <meta property="og:type" content="article"/>
-        <meta property="og:description" content="【Tutorial Java】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature/Tests, ✅Learn Java"/>
+        <meta property="og:title" content="Free Java Tutorial on ExamClouds">
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="【Tutorial Java】  - ☜ⒿⒶⓋⒶ☞ 💥Free, ‼Articles/Literature/Tests, ✅Learn Java">
         <meta property="og:site_name" content="ExamClouds">
         <meta property="og:url" content="https://www.examclouds.com">
         <meta property="twitter:title" content="Free Java Tutorial on ExamClouds">
@@ -26,8 +25,7 @@
         <meta property="twitter:site" content="@ExamClouds">
         <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
         <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
-        <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
-        <meta name="google-site-verification" content="WTpUYaoC4-6-_VPl3kwMu6auSphdQoEI6K1gvJ2Vp3o"/>
+        <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet" media="print" onload="this.media='all'">
   </head>
     <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
     <cache:cacheTag/>
@@ -41,7 +39,7 @@
                  </div>
                  <div class="hidden-xs hidden-sm col-md-8">
                               <img src="${pageContext.request.contextPath}/images/general/index-image.svg" alt="Start learning Java? Welcome to ExamClouds"
-                                        width="750px" height="400px" title="Start learning Java? Welcome to ExamClouds" loading="lazy">
+                                        width="750" height="400" title="Start learning Java? Welcome to ExamClouds" loading="lazy">
                  </div>
              </div>
           </div>

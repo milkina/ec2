@@ -41,6 +41,8 @@ public class Category implements Serializable, Comparable<Category> {
 
     private String name;
 
+    private String title;
+
     // @Column(unique = true)
     private String pathName;
 
@@ -114,6 +116,14 @@ public class Category implements Serializable, Comparable<Category> {
 
     public void setVideoPath(String videoPath) {
         this.videoPath = videoPath;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public List<AbstractQuestionEntry> getQuestionEntries() {

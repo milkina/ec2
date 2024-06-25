@@ -8,24 +8,23 @@
         <meta name="keywords" content="тесты java">
         <meta name="description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
         <title>Бесплатные тесты Java: уровень знаний и подготовка к интервью</title>
-        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
-        <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet">
-        <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
+        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">
+        <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet" media="print" onload="this.media='all'">
         <link rel="canonical" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tests">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tests">
-     <meta property="og:title" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью"/>
-     <meta property="og:type" content="article"/>
-     <meta property="og:description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования."/>
+     <meta property="og:title" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью">
+     <meta property="og:type" content="article">
+     <meta property="og:description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/ru/tests">
-     <meta property="twitter:title" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью"/>
-     <meta property="twitter:card" content="summary"/>
-     <meta property="twitter:description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования."/>
+     <meta property="twitter:title" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью">
+     <meta property="twitter:card" content="summary">
+     <meta property="twitter:description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
      <meta property="twitter:site" content="@ExamClouds">
-     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
-     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
+     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
+     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
@@ -44,20 +43,14 @@
                     <c:if test="${test.language.code==pageLanguage}">
                         <li class="apanel select-category-li">
                             <div class="panel-heading" role="tab" id="heading_${test.pathName}">
-                                <h2 class="panel-title test_header">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                       href="#collapse_${test.pathName}" class="collapsed"
-                                       aria-expanded="false" aria-controls="collapse_${test.pathName}">
-                                            ${test.name}
-                                    </a>
-                                </h2>
+                                <h2>${test.name}</h2>
                             </div>
                             <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
                         </li>
                         </c:if>
                     </c:forEach>
                 </ul>
-                <p>Изучаете Java программирование? ExamClouds подготовил для вас бесплатные тесты по Java программированию. Пройдя тестирование,
+                <p class="index-items-text">Изучаете Java программирование? ExamClouds подготовил для вас <strong>бесплатные тесты по Java программированию</strong>. Пройдя тестирование,
                 вы узнаете свой уровень подготовки и выявите темы, которые необходимо повторить.</p>
                 <h2 class="header2">Как подготовиться к тестам по Java:</h2>
                                <ol>
@@ -65,26 +58,27 @@
                                    <li>Задайте количество вопросов.</li>
                                    <li>Приступите к тестированию, нажав кнопку «Пройти тест».</li>
                                </ol>
-                <p>После завершения теста вы увидите свой результат в процентном и количественном выражении. Вам будут представлены
+                <p class="index-items-text">После завершения теста вы увидите свой результат в процентном и количественном выражении. Вам будут представлены
                 все заданные вопросы, ваши и правильные ответы. При неудовлетворительном результате рекомендуем пройти бесплатный
-                <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian">курс обучения</a> на нашем сайте полностью или изучить отдельные уроки по Java Core.</p>
-                <p>Большинство тестов включают практические задания. В некоторых из них вам нужно будет найти ошибку, в других — подставить
+                <a href="${pageContext.request.contextPath}/ru/#start-course">курс обучения</a> на нашем сайте полностью или изучить отдельные уроки по Java Core.</p>
+                <p class="index-items-text">Большинство тестов включают практические задания. В некоторых из них вам нужно будет найти ошибку, в других — подставить
                 пропущенные части или ответить на вопрос: 'Откомпилируется ли код?'. Если вы успешно проходите наши тесты, вы готовы к
                 стажировке или работе на позиции Junior. Рекомендуем регулярно проходить тестирование не только перед интервью, но и в
                 процессе обучения.</p>
-                 <p>Также используйте наши <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">Практические задания</a> и <a href="${pageContext.request.contextPath}/ru/questions">Вопросы собеседований</a>
+                 <p class="index-items-text">Также используйте наши <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">Практические задания</a>, <a href="${pageContext.request.contextPath}/ru/video-java-uroki">Видео уроки</a> и <a href="${pageContext.request.contextPath}/ru/questions">Вопросы собеседований</a>
                  для повышения своих навыков.</p>
                 <h2 class="header2">Преимущества наших тестов по Java:</h2>
-                <ul>
-                  <li>✅Бесплатные тесты по Java онлайн: Пройдите тестирование в любое время и в любом месте.</li>
-                  <li>✅Фундаментальные тесты по Java: Оцените свои знания в основных концепциях Java программирования.</li>
-                  <li>✅Подготовка к интервью: Наши тесты помогут вам подготовиться к собеседованию на позиции Junior и выше.</li>
-                  <li>✅Оценка уровня знаний: Узнайте свой текущий уровень подготовки по Java и определите области, требующие улучшения.</li>
-                  <li>✅Практические задания: Выполняйте практические тесты, чтобы улучшить свои навыки программирования на Java.</li>
+                <ul class="index-items-text">
+                  <li>✅<strong>Бесплатные тесты по Java онлайн</strong>: Пройдите тестирование в любое время и в любом месте.</li>
+                  <li>✅<strong>Фундаментальные тесты по Java</strong>: Оцените свои знания в основных концепциях Java программирования.</li>
+                  <li>✅<strong>Подготовка к интервью</strong>: Наши тесты помогут вам подготовиться к собеседованию на позиции Junior и выше.</li>
+                  <li>✅<strong>Оценка уровня знаний</strong>: Узнайте свой текущий уровень подготовки по Java и определите области, требующие улучшения.</li>
+                  <li>✅<strong>Практические задания</strong>: Выполняйте практические тесты, чтобы улучшить свои навыки программирования на Java.</li>
                 </ul>
-                <p>Пройдите бесплатные тесты по Java программированию на ExamClouds и улучшите свои навыки уже сегодня!</p>
+                <p class="index-items-text">Пройдите бесплатные тесты по Java программированию на ExamClouds и улучшите свои навыки уже сегодня!</p>
             </div>
         </main>
+         <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
          <script src="${pageContext.request.contextPath}/js/selectCategoriesRu.js" async></script>
         <%@ include file="/WEB-INF/socialButtons.jsp"%>
     </jsp:body>

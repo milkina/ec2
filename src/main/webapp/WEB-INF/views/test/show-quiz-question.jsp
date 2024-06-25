@@ -23,7 +23,7 @@
       <li itemprop="itemListElement" itemscope
                                itemtype="https://schema.org/ListItem"><a itemprop="item" href="<menu:questionsTag/>">
          <span itemprop="name"><spring:message code="questions.interviews"/></span></a>
-         <meta itemprop="position" content="2"/></li>
+         <meta itemprop="position" content="2"></li>
       <li>${TESTS[param.TEST_PATH].name}</li>
     </ol>
   </div>
