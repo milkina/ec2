@@ -25,6 +25,7 @@
       <meta property="twitter:site" content="@ExamClouds">
       <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
       <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+      <meta property="twitter:image:alt" content="Вопросы для собеседования по Java | Подготовка и интервью вопросы">
     </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>

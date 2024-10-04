@@ -20,6 +20,7 @@
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+     <meta property="twitter:image:alt" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>

@@ -80,13 +80,15 @@ public class SiteMapUtility {
     }
 
     private void setTestLink(Test test) {
+
         Language language = test.getLanguage();
         String languageCode = language != null ? language.getCode().getPath() : "";
         String testPathName = SITE_NAME + languageCode + test.getFullPathName();
-        UrlEntity urlEntity =
-                createUrlEntity(testPathName, HIGH_PRIORITY, "weekly");
-
-        links.addUrlEntity(urlEntity);
+        if (!test.getPathName().equals("java-core-russian")) {
+            UrlEntity urlEntity =
+                    createUrlEntity(testPathName, HIGH_PRIORITY, "weekly");
+            links.addUrlEntity(urlEntity);
+        }
         setCategoryLinks(test, languageCode);
     }
 

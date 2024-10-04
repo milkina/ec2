@@ -178,6 +178,10 @@
         <to type="permanent-redirect">/java/java-core-russian/functional-interface-russian</to>
     </rule>
     <rule>
+        <from>^/java/java-core-russian/compilator-interpretator$</from>
+        <to type="permanent-redirect">/java/java-core-russian/byte-code</to>
+    </rule>
+    <rule>
         <from>^/java/java-core-russian/vidi-collections$</from>
         <to type="permanent-redirect">/java/java-core-russian/lesson16</to>
     </rule>

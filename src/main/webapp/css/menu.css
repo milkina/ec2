@@ -158,9 +158,12 @@ nav{
     line-height: 1.5;
 }
 
-.footer-section ul {
+.footer-section ul, .author ul {
     list-style: none;
     padding: 0;
+}
+.author-social-icons{
+  display:inline-block;
 }
 
 .footer-section ul li {
@@ -174,6 +177,15 @@ nav{
 
 .footer-section ul li a:hover {
     text-decoration: underline;
+}
+.author{
+  font-size:16px;
+  text-align:right;
+}
+.social-icons-author{
+   gap: 5px;
+ display: flex;
+ justify-content: center;
 }
 .social-icons {
     display: flex;

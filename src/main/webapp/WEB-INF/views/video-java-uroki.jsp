@@ -23,6 +23,7 @@
       <meta property="twitter:site" content="@ExamClouds">
       <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
       <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+      <meta property="twitter:image:alt" content="Видео уроки по Java | Лучшие видео курсы и обучение программированию">
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache" %>
@@ -35,14 +36,14 @@
         </div>
         <main>
             <div class="category-article">
-                <h1 class="all-questions-header">Видео Java Уроки</h1>
+                <h1 class="all-questions-header">Видео уроки по Java для начинающих</h1>
                 <h2>Изучайте Java с нашими видео уроками и курсами</h2>
                 <p class="index-items-text">Добро пожаловать на страницу видео уроков по Java на ExamClouds! Здесь вы найдете лучшие видео курсы
                 и уроки для изучения программирования на Java. Наши материалы подходят как для начинающих, так и для
                 опытных программистов, желающих улучшить свои навыки.</p>
                 <h2>Что вы найдете на этой странице:</h2>
                 <ul class="index-items-text">
-                  <li><strong>Видео уроки по Java:</strong> Мы предлагаем обширную коллекцию видео уроков, охватывающих все аспекты программирования на Java.</li>
+                  <li><strong>Java видео уроки:</strong> Мы предлагаем обширную коллекцию видео уроков, охватывающих все аспекты программирования на Java.</li>
                   <li><strong>Java видео курсы:</strong> Полные курсы, разработанные для систематического изучения языка Java.</li>
                   <li><strong>Обучение Java по видео:</strong> Изучайте Java в удобном для вас формате — смотрите видео уроки в любое время и в любом месте.</li>
                   <li><strong>Уроки Java для начинающих:</strong> Наши уроки подходят для тех, кто только начинает свое знакомство с Java, с акцентом на основные концепции и практические примеры.</li>

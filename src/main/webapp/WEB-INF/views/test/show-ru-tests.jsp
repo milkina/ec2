@@ -25,6 +25,7 @@
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+     <meta property="twitter:image:alt" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью">
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
@@ -61,7 +62,7 @@
                 <p class="index-items-text">После завершения теста вы увидите свой результат в процентном и количественном выражении. Вам будут представлены
                 все заданные вопросы, ваши и правильные ответы. При неудовлетворительном результате рекомендуем пройти бесплатный
                 <a href="${pageContext.request.contextPath}/ru/#start-course">курс обучения</a> на нашем сайте полностью или изучить отдельные уроки по Java Core.</p>
-                <p class="index-items-text">Большинство тестов включают практические задания. В некоторых из них вам нужно будет найти ошибку, в других — подставить
+                <p class="index-items-text">Большинство Java test включают практические задания. В некоторых из них вам нужно будет найти ошибку, в других — подставить
                 пропущенные части или ответить на вопрос: 'Откомпилируется ли код?'. Если вы успешно проходите наши тесты, вы готовы к
                 стажировке или работе на позиции Junior. Рекомендуем регулярно проходить тестирование не только перед интервью, но и в
                 процессе обучения.</p>

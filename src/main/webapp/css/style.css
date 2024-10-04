@@ -1166,4 +1166,7 @@ input[type="checkbox"].test-checkbox:checked+label:after{
             font-size: 1.1em;
             color: #333;
         }
-
+.iframe-main-page{
+  width: 100%;
+  height: 400px;
+}

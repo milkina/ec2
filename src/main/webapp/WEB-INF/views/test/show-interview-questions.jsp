@@ -26,6 +26,7 @@
       <meta property="twitter:site" content="@ExamClouds">
       <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
       <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+      <meta property="twitter:image:alt" content="Java Interview Preparation: Key Questions and Answers for Success">
      </jsp:attribute>
      <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
@@ -39,7 +40,7 @@
         <main>
           <div>
             <h1 class="all-questions-header">Java Interview Questions</h1>
-            <ul class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+            <ul class="panel-group" id="accordоion1" role="tablist" aria-multiselectable="true">
              <c:forEach var="test" items="${COURSES_WITH_QUESTIONS}">
               <c:if test="${test.language.code==pageLanguage}">
               <li class="panel select-category-li">

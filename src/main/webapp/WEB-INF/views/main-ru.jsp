@@ -17,15 +17,16 @@
     <meta property="og:title" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
     <meta property="og:type" content="article">
     <meta property="og:description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
-        <meta property="og:site_name" content="ExamClouds">
-        <meta property="og:url" content="https://www.examclouds.com/ru/">
-        <meta name="twitter:title" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
-        <meta name="twitter:site" content="@ExamClouds">
+    <meta property="og:site_name" content="ExamClouds">
+    <meta property="og:url" content="https://www.examclouds.com/ru/">
+    <meta name="twitter:title" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+    <meta name="twitter:site" content="@ExamClouds">
     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
     <meta name="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
-    <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
+    <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet">
     <style>
           .category-href:before{
             content:"<spring:message code="lesson"/> " counter(lesson)" - ";
@@ -52,7 +53,7 @@
       <div class="container">
          <div class="index-img-div">
              <div class="col-xs-12 col-md-4">
-                <h1>Бесплатные курсы Java для начинающих</h1>
+                <h1>Бесплатные курсы Java online для начинающих</h1>
                  <c:if test="${param.param != null || person == null}">
                    <a class="start-learning" href="#start-course">Начать обучение</a>
                  </c:if>
@@ -80,7 +81,7 @@
              </section>
              <section>
               <h2 class="main-page-header" id="course-content">Что включает наш курс</h2>
-              <p class="index-items-text">Наш курс Java состоит из следующих разделов:</p>
+              <p class="index-items-text"><strong>Курсы по джаве</strong> состоят из следующих разделов:</p>
               <ul class="index-items-text">
                           <li><strong>Основы Java программирования</strong>: Введение в Java, основные синтаксические конструкции</li>
                           <li><strong>Java core</strong>: Классы и объекты, наследование и полиморфизм, исключения и их обработка</li>
@@ -141,7 +142,7 @@
                    <div class="icon-container">
                       <h3>Практика</h3>
                    </div>
-                    <p>Много <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">практических заданий</a>, для закрепления теории на практике.</p>
+                    <p>Джава обучение включает множество <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">практических заданий</a>, для закрепления теории на практике.</p>
                  </div>
                  <div class="col-md-4">
                    <div class="icon-container">
@@ -160,10 +161,11 @@
               <p class="index-items-text">Для тех, кто стремится получить сертификат, рекомендуем обратить внимание на наш <span class="external-reference" data-link="https://www.udemy.com/course/java-bup/">курс на Udemy</span>.
               Там вы сможете не только закрепить свои знания, но и получить официальный документ, подтверждающий ваше обучение.
               </p>
+               <p class="index-items-text"><i class="fas fa-graduation-cap"></i>В октябре продолжаем <strong>бесплатную</strong> регистрацию на наш курс Java на Udemy. Просто переходите по <a href="https://www.udemy.com/course/java-bup/?couponCode=8CCF0C48B12D0FEFE818">ссылке</a> и регистрируйтесь.<p>
               </section>
               <section>
             <h2 class="main-page-header" id="start-course">Начните обучение сегодня</h2>
-            <p class="index-items-text">Изучайте Java программирование с нуля и продвигайтесь в программировании вместе с ExamClouds! Наши курсы разработаны для начинающих и предоставляют все необходимые материалы для успешного освоения Java.</p>
+            <p class="index-items-text">Изучайте Java программирование с нуля и продвигайтесь в программировании вместе с ExamClouds! Наш <strong>джава курс</strong> разработан для начинающих и предоставляет все необходимые материалы для успешного обучения Java.</p>
             <p><iframe title="Бесплатные Онлайн-Уроки Программирования на Java с Заданиями для Начинающих"
             src="https://www.youtube.com/embed/Ir6KjeOhbGk" name="youtubeVideo" class="iframe-main-page" loading="lazy" allowfullscreen="">
                </iframe></p>
@@ -186,7 +188,7 @@
            </main>
            <%@ include file="/WEB-INF/socialButtons.jsp"%>
            <jsp:include page="/WEB-INF/comment/comments.jsp">
-                <jsp:param name="referenceId" value="1"/>
+                <jsp:param name="referenceId" value="1153"/>
                 <jsp:param name="commentType" value="ARTICLE"/>
            </jsp:include>
      </div>

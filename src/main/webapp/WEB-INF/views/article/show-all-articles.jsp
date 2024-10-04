@@ -22,11 +22,12 @@
     <meta property="twitter:site" content="@ExamClouds">
     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+    <meta property="twitter:image:alt" content="Статьи из IT сферы на ExamClouds">
   </jsp:attribute>
   <jsp:body>
     <main>
      <%@ include file="/WEB-INF/breadCrumbs/publicationsBreadCrumbs2.jsp"%>
-     <h1 class="article-head"><spring:message code="articles"/></h1>
+     <h1 class="article-head">Статьи из IT сферы</h1>
      <p class="index-items-text">Добро пожаловать на нашу страницу, на которой вы найдёте обширную подборку материалов, охватывающих самые разные
      аспекты информационных технологий. Наши статьи предлагают глубокие знания и практические советы по <strong>программированию</strong>,
      <strong>сетевым технологиям</strong>, <strong>безопасности</strong>, развитию <strong>веб-приложений</strong> и многим другим

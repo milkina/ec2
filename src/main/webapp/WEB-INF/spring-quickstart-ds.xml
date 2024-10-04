@@ -40,7 +40,7 @@
             <password>CTPaiy35727</password>
         </security>-->
 
-        <!--<connection-url>jdbc:mysql://10.2.12.40:3306/jpa_new</connection-url>
+       <!-- <connection-url>jdbc:mysql://10.2.12.40:3306/jpa_new</connection-url>
         <driver>mysql</driver>
         <security>
             <user-name>root</user-name>

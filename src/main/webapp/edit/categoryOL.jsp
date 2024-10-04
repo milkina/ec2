@@ -14,5 +14,6 @@
    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
  </c:otherwise>
 </c:choose>
+<meta property="twitter:image:alt" content="<c:out value="${titleName}"/>">
 <meta property="twitter:description" content="${CATEGORY_ATTRIBUTE.article.description}">
 <meta property="twitter:site" content="@ExamClouds">

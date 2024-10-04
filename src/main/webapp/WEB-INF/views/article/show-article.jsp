@@ -11,28 +11,27 @@
     <meta name="keywords" content="${ARTICLE_ATTRIBUTE.keywords}">
     <meta name="description" content="${ARTICLE_ATTRIBUTE.description}">
     <title>${ARTICLE_ATTRIBUTE.title}</title>
-    <c:set var="languagePath" value="${'ru/'}"/>
-    <c:if test="${ARTICLE_ATTRIBUTE.language.code=='en'}">
-       <c:set var="languagePath" value="${''}"/>
-    </c:if>
-    <link rel="canonical" href="https://www.examclouds.com/${languagePath}${ARTICLE_ATTRIBUTE.url}"/>
+    <link rel="canonical" href="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}"/>
     <meta property="og:title" content="${ARTICLE_ATTRIBUTE.title}"/>
     <meta property="twitter:title" content="${ARTICLE_ATTRIBUTE.title}"/>
     <meta property="og:type" content="article"/>
     <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="@ExamClouds">
     <c:choose>
        <c:when test="${ARTICLE_ATTRIBUTE.image != null &&  not empty ARTICLE_ATTRIBUTE.image}">
-              <meta property="og:image" content="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.image}"/>
-              <meta property="twitter:image" content="${ARTICLE_ATTRIBUTE.image}"/>
+              <meta property="og:image" content="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.image}">
+              <meta property="twitter:image" content="${ARTICLE_ATTRIBUTE.image}">
+              <meta property="twitter:image:alt" content="${ARTICLE_ATTRIBUTE.title}">
         </c:when>
         <c:otherwise>
-              <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
-              <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg"/>
+              <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
+              <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+              <meta property="twitter:image:alt" content="<spring:message code="welcome.on"/> ExamClouds">
         </c:otherwise>
     </c:choose>
-    <meta property="og:description" content="${ARTICLE_ATTRIBUTE.description}"/>
-    <meta property="twitter:description" content="${ARTICLE_ATTRIBUTE.description}"/>
-    <meta property="og:url" content="https://www.examclouds.com/${languagePath}${ARTICLE_ATTRIBUTE.url}">
+    <meta property="og:description" content="${ARTICLE_ATTRIBUTE.description}">
+    <meta property="twitter:description" content="${ARTICLE_ATTRIBUTE.description}">
+    <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}">
     <meta property="og:site_name" content="ExamClouds">
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <c:if test="${!ARTICLE_ATTRIBUTE.indexStatus}">

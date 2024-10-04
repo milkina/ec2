@@ -21,6 +21,7 @@
     <meta property="twitter:description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have.">
     <meta property="twitter:site" content="@ExamClouds">
     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+    <meta property="twitter:image:alt" content="Privacy Policy for ExamClouds">
  </jsp:attribute>
     <jsp:body>
         <h1>Privacy Policy Regarding Personal Data Processing</h1>

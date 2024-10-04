@@ -25,6 +25,7 @@
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+     <meta property="twitter:image:alt" content="Задачи по java, тесты java, онлайн задачи по программированию java для начинающих, практические тестовые задачи с ответами по Java программированию">
      </jsp:attribute>
      <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
@@ -37,7 +38,7 @@
         </div>
         <main>
           <div>
-            <h1 class="all-tests-header">Java Tests</h1>
+            <h1 class="all-tests-header">Tests Java Core Online</h1>
             <ul class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <c:forEach var="test" items="${TESTS_WITH_TESTS}">
                  <c:if test="${test.language.code==pageLanguage}">

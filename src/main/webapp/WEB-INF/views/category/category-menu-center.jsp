@@ -7,7 +7,7 @@
     <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
       <li class="col-xs-12 col-sm-6 col-lg-6">
         <div>
-          <a href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${category.value.pathName}"
+          <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${category.value.pathName}"
           id="categoryItem${category.value.pathName}" class="category-href">
              ${category.value.name}
           </a>

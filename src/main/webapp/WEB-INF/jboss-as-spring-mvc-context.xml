@@ -25,6 +25,9 @@
     <mvc:resources mapping="/ads.txt" location="/ads.txt"/>
     <mvc:resources mapping="/google313763c8f6b63479.html" location="/google313763c8f6b63479.html"/>
     <mvc:resources mapping="/a2be586d7b1f047bb146c04c6476d7a2.html" location="/a2be586d7b1f047bb146c04c6476d7a2.html"/>
+    <mvc:resources mapping="/ak4jrpnp3gw9w1ukeg57epu3bxcb7x56.txt" location="/ak4jrpnp3gw9w1ukeg57epu3bxcb7x56.txt"/>
+    <mvc:resources mapping="/Tev568HbFv246op.txt" location="/Tev568HbFv246op.txt"/>
+    <mvc:resources mapping="/textru.txt" location="/textru.txt"/>
     <mvc:resources mapping="/.well-known/pki-validation/**" location="/.well-known/pki-validation/"/>
 
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
@@ -37,17 +40,12 @@
         <property name="defaultEncoding" value="UTF-8" />
     </bean>
 
-    <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
-        <property name="paramName" value="lang" />
-    </bean>
-
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
         <property name="cookieName" value="myAppLocaleCookie"/>
         <property name="cookieMaxAge" value="3600"/>
         <property name="defaultLocale" value="ru"/>
     </bean>
 
-    <!-- Добавьте следующую конфигурацию для регистрации перехватчика -->
     <mvc:interceptors>
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
             <property name="paramName" value="lang" />
