@@ -5,6 +5,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper>
     <jsp:attribute name="header">
+      <meta charset="UTF-8">
       <meta name="keywords" content="Java вопросы на собеседовании">
       <meta name="description" content="Подготовьтесь к собеседованию по Java с нашими вопросами и ответами. Узнайте ключевые Java Core вопросы, технические вопросы и вопросы по API Java.">
       <title>Вопросы для собеседования по Java | Подготовка и интервью вопросы</title>

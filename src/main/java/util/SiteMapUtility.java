@@ -1,7 +1,7 @@
 package util;
 
 import model.Category;
-import model.Language;
+import model.LanguageCode;
 import model.Test;
 import model.article.Article;
 import model.sitemap.UrlEntity;
@@ -65,10 +65,12 @@ public class SiteMapUtility {
                 if (article.getUrl().trim().isEmpty()) {
                     priority = 1;
                 }
-                Language language = article.getLanguage();
-                String languageCode = language != null ? language.getCode().getPath() : "";
-                UrlEntity urlEntity = createUrlEntity(SITE_NAME + languageCode + article.getUrl(), priority, "monthly");
+                UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.ru.getPath() + article.getUrl(), priority, "monthly");
                 links.addUrlEntity(urlEntity);
+                if (!article.getUrl().equals("video-java-uroki") && !article.getUrl().equals("practicheskie-zadachi")) {
+                    urlEntity = createUrlEntity(SITE_NAME + LanguageCode.en.getPath() + article.getUrl(), priority, "monthly");
+                    links.addUrlEntity(urlEntity);
+                }
             }
         }
     }
@@ -80,9 +82,11 @@ public class SiteMapUtility {
     }
 
     private void setTestLink(Test test) {
+        setTestLink(test, LanguageCode.en.getPath());
+        setTestLink(test, LanguageCode.ru.getPath());
+    }
 
-        Language language = test.getLanguage();
-        String languageCode = language != null ? language.getCode().getPath() : "";
+    private void setTestLink(Test test, String languageCode) {
         String testPathName = SITE_NAME + languageCode + test.getFullPathName();
         if (!test.getPathName().equals("java-core-russian")) {
             UrlEntity urlEntity =

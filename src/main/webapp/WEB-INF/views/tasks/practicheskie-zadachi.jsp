@@ -5,6 +5,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper>
     <jsp:attribute name="header">
+     <meta charset="UTF-8">
      <meta name="keywords" content="Практические задачи по Java,Задачи для программирования на Java,Java практические задания,Java задачи с решениями,Задачи для подготовки к собеседованию Java,Java практические упражнения,Java задачи для начинающих,Java задачи и решения,Практика программирования на Java">
      <meta name="description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
      <title>Практические задачи по Java | Учебные задачи и тренировки | ExamClouds</title>

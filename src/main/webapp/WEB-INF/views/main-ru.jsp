@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
     <%@ include file="/WEB-INF/head_common.jsp"%>
 	<title>Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля</title>
 	<meta name="description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
@@ -19,14 +20,25 @@
     <meta property="og:description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com/ru/">
+    <meta property="og:published_time" content="2017-10-08T12:00:00Z">
+    <meta property="og:modified_time" content="2024-10-08T12:00:00Z">
+    <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
+    <meta property="og:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
     <meta name="twitter:title" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <meta name="twitter:site" content="@ExamClouds">
-    <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
     <meta name="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
     <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
     <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet">
+     <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "url": "https://www.examclouds.com/ru/",
+          "@type": "Article",
+          "headline": "Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля"
+        }
+     </script>
     <style>
           .category-href:before{
             content:"<spring:message code="lesson"/> " counter(lesson)" - ";
@@ -59,7 +71,7 @@
                  </c:if>
              </div>
              <div class="hidden-xs hidden-sm col-md-8">
-             <img src="${pageContext.request.contextPath}/images/general/index-image.svg" alt="Изучаем Java"
+             <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Изучаем Java"
                        width="750" height="400" title="Изучаем Java" loading="lazy">
              </div>
          </div>

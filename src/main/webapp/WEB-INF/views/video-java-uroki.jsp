@@ -7,9 +7,10 @@
 <t:wrapper>
     <jsp:attribute name="language">lang="ru"</jsp:attribute>
     <jsp:attribute name="header">
+        <meta charset="UTF-8">
         <meta name="keywords" content="Видео уроки по Java,Java видео курсы,Обучение Java по видео,Java программирование видео уроки,Видео обучение Java,Уроки Java для начинающих видео,Видео туториалы по Java,Изучение Java по видео,Основы Java видео уроки,Java видео лекции,Практические уроки Java видео,Java для начинающих видео курсы,Лучшие видео уроки по Java">
-        <meta name="description" content="Изучайте Java с помощью лучших видео уроков и курсов. Подходит для начинающих и опытных программистов. Обучение основам Java.">
-        <title>Видео уроки по Java | Лучшие видео курсы и обучение программированию</title>
+        <meta name="description" content="Изучайте Java с помощью видео уроков и курсов. Подходит для начинающих и опытных программистов. Обучение основам Java.">
+        <title>Видео уроки по Java | Видео курсы и обучение программированию</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
         <link rel="canonical" href="https://www.examclouds.com/ru/video-java-uroki">
       <meta property="og:title" content="Видео уроки по Java | Лучшие видео курсы и обучение программированию">
@@ -63,17 +64,18 @@
                      <ol>
                                          <LI>Введение в Java
                                              <ol>
-                                                 <li><a href="https://www.youtube.com/embed/PSArrvnl_Ak" target="_self">Особенности языка Java</a></li>
-                                                 <li><a href="https://www.youtube.com/embed/61T3kISDoGU" target="_self">История развития языка</a></li>
-                                                 <li><a href="https://www.youtube.com/embed/XTyt3iaIDuw" target="_self">Java SE/EE/ME</a></li>
-                                                 <li><a href="https://youtu.be/O2h6SU53Lq4" target="_self">Что такое транслятор, компилятор, интерпретатор и байт-код</a></li>
+                                                 <li><a href="https://youtu.be/7MsX-Wy00vg" target="_self">Особенности языка Java</a></li>
+                                                 <li><a href="https://youtu.be/PA-4DfFKdTo" target="_self">История развития языка</a></li>
+                                                 <li><a href="https://youtu.be/WKKjQ0jON58" target="_self">Java SE/EE/ME</a></li>
+                                                 <li><a href="https://youtu.be/JU2DwSa_E_k" target="_self">Разбираем Термины: JVM, JRE и JDK</a></li>
+                                                 <li><a href="https://youtu.be/YCz_oC3geA4" target="_self">Что такое транслятор, компилятор, интерпретатор и байт-код</a></li>
                                               </ol>
                                          </LI>
                                          <LI>Создание и запуск первого Java-приложения
                                              <ol>
-                                                 <li><a href="https://youtu.be/DOmcxcYqM44" target="_self">Создание первого приложения</a></li>
-                                                 <li><a href="https://youtu.be/vxGvpGi3FCs" target="_self">Установка JDK</a></li>
-                                                 <li><a href="https://youtu.be/OM70L2O0I-A" target="_self">Компиляция и запуск приложения из командной строки</a></li>
+                                                 <li><a href="https://youtu.be/nQsriEscrm0" target="_self">Пошаговое руководство по установке Java - JDK</a></li>
+                                                 <li><a href="https://youtu.be/CaOdc23rAAs" target="_self">Создание первого приложения</a></li>
+                                                 <li><a href="https://youtu.be/xiiVM27tzJw" target="_self">Компиляция и запуск Java приложения из командной строки. Использование ключа '-d'</a></li>
                                                  <li><a href="https://youtu.be/ij1tndVoLbw" target="_self">Пакеты</a></li>
                                                  <li><a href="https://youtu.be/Qg6MPtD10tM" target="_self">Компиляция с помощью -sourcepath</a></li>
                                                  <li><a href="https://youtu.be/ukXdou9_acw" target="_self">Classpath</a></li>
@@ -279,6 +281,7 @@
                              <li><a href="https://youtu.be/e3mFcGs_YiE" target="_self">Класс PriorityQueue</a></li>
                              <li><a href="https://youtu.be/KOFWqjyWrEI" target="_self">Принцип PECS</a></li>
                              <li><a href="https://youtu.be/N9_xWJXO5d4" target="_self">Интерфейс Iterator</a></li>
+                             <li><a href="https://youtu.be/IOvjv4wwEw4" target="_self">Интерфейс Map и его реализации - классы HashMap, TreeMap и LinkedHashMap</a></li>
                                              </ol>
                                          </LI>
                                      </ol>

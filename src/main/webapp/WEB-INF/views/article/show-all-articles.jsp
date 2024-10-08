@@ -5,6 +5,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <t:wrapper>
   <jsp:attribute name="header">
+    <meta charset="UTF-8">
     <meta name="description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
     <title>Статьи из IT сферы на ExamClouds</title>
     <link rel="canonical" href="https://www.examclouds.com/ru/show-all-articles">

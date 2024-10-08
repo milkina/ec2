@@ -5,6 +5,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper>
     <jsp:attribute name="header">
+        <meta charset="UTF-8">
         <meta name="keywords" content="тесты java">
         <meta name="description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
         <title>Бесплатные тесты Java: уровень знаний и подготовка к интервью</title>

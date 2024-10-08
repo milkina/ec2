@@ -6,6 +6,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper>
     <jsp:attribute name="header">
+    <meta charset="UTF-8">
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>
@@ -24,20 +25,30 @@
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
     <link rel="canonical" href="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
-    <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
-    <c:if test="${CATEGORY_ATTRIBUTE.hidden || !CATEGORY_ATTRIBUTE.article.indexStatus}">
+    <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
+    <link rel="alternate" hreflang="en" href="https://www.examclouds.com/java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
+    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
+   <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
+   <c:if test="${CATEGORY_ATTRIBUTE.hidden || !CATEGORY_ATTRIBUTE.article.indexStatus}">
           <meta name="robots" content="noindex">
     </c:if>
+    <script type="application/ld+json">{
+         @context": "https://schema.org",
+         "url": "https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}",
+         "@type": "Article",
+         "headline": "<c:out value="${titleName}"/>"
+    }
+    </script>
     </jsp:attribute>
     <jsp:body>
       <jsp:include page="/WEB-INF/breadCrumbs/breadCrumbs3.jsp"/>
       <main class="container">
         <article>
+         <h1 class="show-category-header">${header1}</h1>
          <c:if test="${CATEGORY_ATTRIBUTE.article.image != null &&  not empty CATEGORY_ATTRIBUTE.article.image}">
            <img class="categoryImage" src="${CATEGORY_ATTRIBUTE.article.image}" loading="lazy"
              alt="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>" title="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>">
          </c:if>
-         <h1 class="show-category-header">${header1}</h1>
          <div class="category-article">
             <div class="author">Author: Tatyana Milkina
               <div class="author-social-icons"><ul class="social-icons-author">
@@ -51,7 +62,8 @@
               </div>
             <c:if test="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}">
                   <iframe width="100%" height="315" src="${fn:replace(CATEGORY_ATTRIBUTE.videoPath, "youtu.be", "www.youtube.com/embed")}"
-                      frameborder="0" name="youtubeVideo" title="<c:out value="${titleName}"/>" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                      frameborder="0" name="youtubeVideo" title="<c:out value="${titleName}"/>" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      class="iframe-category" allowfullscreen>
                   </iframe>
             </c:if>
             ${CATEGORY_ATTRIBUTE.article.text}

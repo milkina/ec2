@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+        <meta charset="UTF-8">
         <%@ include file="/WEB-INF/head_common.jsp"%>
         <meta name="description" content="Explore free Java Core tutorials. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources.">
         <title>Free Java Core Courses | Learn Java Programming Online</title>
@@ -19,14 +20,24 @@
         <meta property="og:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
         <meta property="og:site_name" content="ExamClouds">
         <meta property="og:url" content="https://www.examclouds.com">
+        <meta property="og:published_time" content="2017-10-08T12:00:00Z">
+        <meta property="og:modified_time" content="2024-10-08T12:00:00Z">
         <meta property="twitter:title" content="Free Java Core Courses | Learn Java Programming Online">
         <meta property="twitter:card" content="summary">
         <meta property="twitter:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
         <meta property="twitter:site" content="@ExamClouds">
         <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
+        <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
         <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
         <meta property="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
         <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
+        <script type="application/ld+json">{
+                  "@context": "https://schema.org",
+                  "url": "https://www.examclouds.com",
+                  "@type": "Article",
+                  "headline": "Free Java Core Courses | Learn Java Programming Online"
+        }
+        </script>
   </head>
     <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
     <cache:cacheTag/>
@@ -39,7 +50,7 @@
                     <h2>Start learning Java? Welcome to ExamClouds</h2>
                  </div>
                  <div class="hidden-xs hidden-sm col-md-8">
-                              <img src="${pageContext.request.contextPath}/images/general/index-image.svg" alt="Start learning Java? Welcome to ExamClouds"
+                              <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Start learning Java? Welcome to ExamClouds"
                                         width="750" height="400" title="Start learning Java? Welcome to ExamClouds" loading="lazy">
                  </div>
              </div>
@@ -121,6 +132,12 @@
                </div>
                </div>
                </section>
+                <section>
+                  <h2 class="main-page-header">Why Learning Java is Essential for Your Career?</h2>
+                  <p class="index-items-text">Java is one of the most popular programming languages in the world, and for good reason. It's used by millions of developers and companies across various industries to build everything from mobile apps to large-scale enterprise systems. Whether it's Android development, web applications, or cloud computing, Java is everywhere.</p>
+                  <p class="index-items-text">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p>
+                  <p class="index-items-text">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p>
+                </section>
             </main>
                <%@ include file="/WEB-INF/socialButtons.jsp"%>
                <jsp:include page="/WEB-INF/comment/comments.jsp">
