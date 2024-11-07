@@ -6,35 +6,35 @@
 <t:wrapper>
     <jsp:attribute name="header">
         <meta charset="UTF-8">
-        <meta name="keywords" content="тесты java">
+        <meta name="keywords" content="тесты по java">
         <meta name="description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
-        <title>Бесплатные тесты Java: уровень знаний и подготовка к интервью</title>
+        <title>Бесплатные тесты по Java: уровень знаний и подготовка к интервью</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">
         <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet" media="print" onload="this.media='all'">
         <link rel="canonical" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tests">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tests">
-     <meta property="og:title" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью">
+     <meta property="og:title" content="Бесплатные тесты по Java: уровень знаний и подготовка к интервью">
      <meta property="og:type" content="article">
      <meta property="og:description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/ru/tests">
-     <meta property="twitter:title" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью">
+     <meta property="twitter:title" content="Бесплатные тесты по Java: уровень знаний и подготовка к интервью">
      <meta property="twitter:card" content="summary">
      <meta property="twitter:description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
-     <meta property="twitter:image:alt" content="Бесплатные тесты Java: уровень знаний и подготовка к интервью">
+     <meta property="twitter:image:alt" content="Бесплатные тесты по Java: уровень знаний и подготовка к интервью">
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
         <cache:cacheTag/>
         <div class="breadCrumbs">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <ol>
                 <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
-                <li>Тесты</li>
+                <li>Тесты по Java</li>
             </ol>
         </div>
         <main>
@@ -76,8 +76,11 @@
                   <li>✅<strong>Подготовка к интервью</strong>: Наши тесты помогут вам подготовиться к собеседованию на позиции Junior и выше.</li>
                   <li>✅<strong>Оценка уровня знаний</strong>: Узнайте свой текущий уровень подготовки по Java и определите области, требующие улучшения.</li>
                   <li>✅<strong>Практические задания</strong>: Выполняйте практические тесты, чтобы улучшить свои навыки программирования на Java.</li>
+                  <li>✅<strong>Актуальные вопросы</strong>: Мы регулярно обновляем нашу базу тестов, чтобы вы могли быть уверены, что отвечаете на актуальные и важные вопросы.</li>
+                  <li>✅<strong>Разнообразие тем</strong>: Тесты охватывают широкий спектр тем, включая базовые и продвинутые концепции Java, а также вопросы по другим языкам программирования и технологиям.</li>
+                  <li>✅<strong>Обратная связь</strong>: После завершения теста вы получите подробный отчет с ответами и объяснениями, что поможет вам лучше понять изучаемый материал.</li>
                 </ul>
-                <p class="index-items-text">Пройдите бесплатные тесты по Java программированию на ExamClouds и улучшите свои навыки уже сегодня!</p>
+                <p class="index-items-text">Пройдите тесты прямо сейчас и проверьте, насколько хорошо вы знаете язык Java и другие технологии!</p>
             </div>
         </main>
          <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>

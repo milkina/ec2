@@ -1,5 +1,6 @@
 package controller.test;
 
+import util.OtherLanguageUtility;
 import util.CategoryUtility;
 import util.LanguageUtility;
 import util.TestUtility;
@@ -17,6 +18,7 @@ public class LoadTestServlet implements ServletContextListener {
         ServletContext servletContext = event.getServletContext();
         TestUtility.loadTestsToServletContext(servletContext);
         CategoryUtility.setDuplicateCategories(servletContext);
+        OtherLanguageUtility.loadOtherLanguagesUrls(servletContext);
         LanguageUtility.loadLanguages(servletContext);
         TestUtility.loadCoursesForTests(servletContext);
         TestUtility.loadCoursesForQuestions(servletContext);

@@ -1,7 +1,9 @@
 package controller.filters;
 
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.support.RequestContextUtils;
+import tags.menu.MenuUtility;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -11,9 +13,13 @@ import java.io.IOException;
 import java.util.Locale;
 
 public class RedirectTrackingFilter implements Filter {
+    private LocaleResolver localeResolver;
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        // Initialization code, if needed
+        WebApplicationContext context = WebApplicationContextUtils
+                .getWebApplicationContext(filterConfig.getServletContext());
+        this.localeResolver = context.getBean("localeResolver", LocaleResolver.class);
     }
 
     @Override
@@ -23,6 +29,12 @@ public class RedirectTrackingFilter implements Filter {
             HttpSession session = httpRequest.getSession();
             String language = httpRequest.getRequestURI().contains("/ru/") ? "ru" : "en";
             session.setAttribute("pageLanguage", language);
+
+            Locale newLocale = new Locale(language);
+            localeResolver.setLocale(httpRequest, (HttpServletResponse) response, newLocale);
+
+            httpRequest.setAttribute("ruUrl", MenuUtility.createRuUrl(httpRequest));
+            httpRequest.setAttribute("enUrl", MenuUtility.createEnUrl(httpRequest));
         }
         chain.doFilter(request, response);
     }

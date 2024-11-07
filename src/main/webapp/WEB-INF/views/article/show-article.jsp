@@ -41,15 +41,35 @@
     <c:if test="${!ARTICLE_ATTRIBUTE.indexStatus}">
         <meta name="robots" content="noindex">
     </c:if>
+    <script type="application/ld+json">{
+       "@context": "https://schema.org",
+       "@type": "BreadcrumbList",
+       "itemListElement": [
+         {
+           "@type": "ListItem",
+           "position": 1,
+           "name": "<spring:message code="home"/>",
+           "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+         },
+         {
+           "@type": "ListItem",
+           "position": 2,
+           "name": "<spring:message code="articles"/>",
+           "item": "https://www.examclouds.com<menu:articlesTag/>"
+         }
+       ]
+     }</script>
  </jsp:attribute>
  <jsp:body>
     <div class="breadCrumbs">
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp" %>
-        <li itemprop="itemListElement" itemscope
-          itemtype="https://schema.org/ListItem">
-           <span itemprop="name"><a itemprop="item" href="<menu:articlesTag/>"><spring:message code="articles"/>
-           </a></span><meta itemprop="position" content="2">
+      <ol>
+        <li>
+          <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>">
+               <span><spring:message code="home"/></span></a>
+        </li>
+        <li>
+           <span><a href="<menu:articlesTag/>"><spring:message code="articles"/>
+           </a></span>
         </li>
         <li>${ARTICLE_ATTRIBUTE.title}</li>
        </ol>

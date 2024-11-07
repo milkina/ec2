@@ -79,9 +79,6 @@
              </li>
         </c:forEach>
         </ol>
-        <BR><a href="${pageContext.request.contextPath}/add-article" id="addArticle">
-                      <spring:message code="add.article"/>
-             </a>
     </div>
     <BR>
  </jsp:body>

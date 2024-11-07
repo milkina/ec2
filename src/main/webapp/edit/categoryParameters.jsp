@@ -10,6 +10,20 @@
 <span class="adminLabel"><spring:message code="category.videoPath"/>:</span>
 <input type="text" name="categoryVideoPath" maxlength="70" value="${CATEGORY_ATTRIBUTE.videoPath}" size="70"/>
 <BR>
+<c:forEach items="${CATEGORY_ATTRIBUTE.canonicalUrls}" var="entry">
+     <c:if test="${entry.key == 1}">
+        <c:set var="ruCanonicalUrl" value="${entry.value.url}" />
+    </c:if>
+     <c:if test="${entry.key == 2}">
+            <c:set var="enCanonicalUrl" value="${entry.value.url}" />
+        </c:if>
+</c:forEach>
+<span class="adminLabel">Russian Version:</span>
+<input type="text" name="ruVersion" maxlength="70" value="${ruCanonicalUrl}" size="70"/>
+<BR>
+<span class="adminLabel">English Version:</span>
+<input type="text" name="enVersion" maxlength="70" value="${enCanonicalUrl}" size="70"/>
+<BR>
 <span class="adminLabel"><spring:message code="category.parent"/>:</span>
 <select name="categoryParent">
    <option value="" <c:if test="${CATEGORY_ATTRIBUTE.parentCategory==null}">

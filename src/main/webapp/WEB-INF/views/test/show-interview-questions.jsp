@@ -33,7 +33,7 @@
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
         <cache:cacheTag/>
         <div class="breadCrumbs">
-          <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <ol>
             <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
             <li>Interview Questions</li>
           </ol>

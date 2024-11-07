@@ -10,6 +10,8 @@
      <meta name="description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
      <title>Практические задачи по Java | Учебные задачи и тренировки | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/ru/practicheskie-zadachi">
+     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/practicheskie-zadachi">
+     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/ru/practicheskie-zadachi">
      <meta property="og:title" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
      <meta property="og:type" content="article">
      <meta property="og:description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
@@ -27,7 +29,7 @@
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
         <cache:cacheTag/>
         <div class="breadCrumbs">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <ol>
                 <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
                 <li><spring:message code="menu.tasks.label"/></li>
             </ol>

@@ -20,14 +20,14 @@
 	    <div class="col-xs-3 col-sm-2 col-lg-1 flags navbar-right">
            <ul>
              <li>
-                 <form method="post" action="<menu:languageRuTag/>">
+                 <form method="post" action="${ruUrl}">
                    <input type="hidden" name="lang" value="ru">
                    <input type="hidden" name="pageLanguage" value="ru">
                    <button type="submit"><spring:message code="language.ru"/></button>
                  </form>
              </li>
              <li>
-                 <form method="post" action="<menu:languageEnTag/>">
+                 <form method="post" action="${enUrl}">
                     <input type="hidden" name="lang" value="en">
                     <input type="hidden" name="pageLanguage" value="en">
                     <button type="submit"><spring:message code="language.en"/></button>

@@ -1,8 +1,6 @@
 package util;
 
-import model.AbstractQuestionEntry;
-import model.Category;
-import model.Test;
+import model.*;
 import model.article.Article;
 import model.person.Person;
 import spring.services.category.CategoryService;
@@ -12,13 +10,10 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-import static util.AllConstantsAttribute.DUPLICATE_CATEGORIES;
-import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
-import static util.AllConstantsAttribute.TESTS;
+import static util.AllConstantsAttribute.*;
 import static util.AllConstantsParam.*;
 
 /**
@@ -74,6 +69,57 @@ public class CategoryUtility extends SpringUtility {
         category.setTitle(title);
     }
 
+    private static void setCanonicalUrls(HttpServletRequest request, Category category) {
+        String categoryPathName = category.getPathName();
+        String testPath = request.getParameter(TEST_PATH);
+        String originalPage = "/java/" + testPath + "/" + categoryPathName;
+
+        String ruVersion = request.getParameter("ruVersion");
+        String enVersion = request.getParameter("enVersion");
+
+        Map<Integer, OtherLanguage> canonicalUrls = category.getCanonicalUrls();
+        ServletContext servletContext = request.getServletContext();
+        int categoryId = category.getId();
+
+        setCanonicalUrl(canonicalUrls, ruVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.ru.name()), categoryId, servletContext, originalPage);
+        setCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), categoryId, servletContext, originalPage);
+    }
+
+    private static void setCanonicalUrl(Map<Integer, OtherLanguage> canonicalUrls,
+                                        String version,
+                                        Language language,
+                                        int categoryId,
+                                        ServletContext servletContext,
+                                        String originalPage) {
+        OtherLanguage otherLanguage = canonicalUrls.get(language.getId());
+        if (otherLanguage == null) {
+            if (version != null && !version.isEmpty()) {
+                otherLanguage = new OtherLanguage();
+                otherLanguage.setLanguage(language);
+                otherLanguage.setCategoryId(categoryId);
+                otherLanguage.setOriginal(originalPage);
+                otherLanguage.setUrl(version);
+                otherLanguage = SpringUtility.getCanonicalUrlService(servletContext).createOtherLanguages(otherLanguage);
+                canonicalUrls.put(language.getId(), otherLanguage);
+                updateHrefLanguage(version, language, servletContext, originalPage);
+            }
+        } else {
+            if (version != null && !version.isEmpty()) {
+                otherLanguage.setUrl(version);
+                otherLanguage = SpringUtility.getCanonicalUrlService(servletContext).createOtherLanguages(otherLanguage);
+                updateHrefLanguage(version, language, servletContext, originalPage);
+            }
+        }
+    }
+
+    private static void updateHrefLanguage(String version, Language language, ServletContext servletContext, String originalPage) {
+        Map<LanguageCode, Map<String, String>> map = (Map<LanguageCode, Map<String, String>>) servletContext.getAttribute(ALL_OTHER_LANGUAGES_URLS);
+        Map<String, String> m = map.get(language.getCode());
+        if (m != null) {
+            m.put(originalPage, version);
+        }
+    }
+
     public static Category getCategoryByPath(HttpServletRequest request) {
         CategoryService categoryService = getCategoryService(request.getServletContext());
         return categoryService.getCategory(request.getParameter(CATEGORY_PATH));
@@ -89,6 +135,7 @@ public class CategoryUtility extends SpringUtility {
                                       Category category) {
         setCategoryData(request, category);
         setCategoryArticle(request, category);
+        setCanonicalUrls(request, category);
         updateCategory(category, request.getServletContext());
         TestUtility.loadTestsToServletContext(request.getServletContext());
     }

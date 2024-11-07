@@ -7,6 +7,7 @@ import model.article.Article;
 import model.sitemap.UrlEntity;
 import model.sitemap.UrlSet;
 
+import javax.servlet.http.HttpServletRequest;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -14,6 +15,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import static tags.menu.MenuUtility.getHrefLangUrl;
+import static tags.menu.MenuUtility.hasHrefLangUrl;
 import static util.AllConstants.SITE_NAME;
 
 /**
@@ -52,8 +55,8 @@ public class SiteMapUtility {
         this.links = links;
     }
 
-    public UrlSet buildLinks() {
-        setTestLinks();
+    public UrlSet buildLinks(HttpServletRequest request) {
+        setTestLinks(request);
         setArticleLinks();
         return links;
     }
@@ -75,15 +78,18 @@ public class SiteMapUtility {
         }
     }
 
-    private void setTestLinks() {
+    private void setTestLinks(HttpServletRequest request) {
         for (Test test : testMap.values()) {
-            setTestLink(test);
+            setTestLink(test, request);
         }
     }
 
-    private void setTestLink(Test test) {
+    private void setTestLink(Test test, HttpServletRequest request) {
         setTestLink(test, LanguageCode.en.getPath());
-        setTestLink(test, LanguageCode.ru.getPath());
+        if (!test.getPathName().equals("ocpjp8")) {
+            setTestLink(test, LanguageCode.ru.getPath());
+        }
+        setCategoryLinks(test, request);
     }
 
     private void setTestLink(Test test, String languageCode) {
@@ -93,7 +99,6 @@ public class SiteMapUtility {
                     createUrlEntity(testPathName, HIGH_PRIORITY, "weekly");
             links.addUrlEntity(urlEntity);
         }
-        setCategoryLinks(test, languageCode);
     }
 
     private UrlEntity createUrlEntity(String testPathName,
@@ -110,19 +115,32 @@ public class SiteMapUtility {
         return urlEntity;
     }
 
-    private void setCategoryLinks(Test test, String language) {
+    private void setCategoryLinks(Test test, HttpServletRequest request) {
         for (Category category : test.getCategories().values()) {
-            setCategoryLink(test, category, language);
+            setCategoryLink(test, category, request);
         }
     }
 
-    private void setCategoryLink(Test test, Category category, String language) {
+    private void setCategoryLink(Test test, Category category, HttpServletRequest request) {
         if (isCategoryLinkable(test, category)) {
-            UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + "java/"
-                    + test.getPathName() + "/"
-                    + category.getPathName(), NORM_PRIORITY, "weekly");
-            links.addUrlEntity(urlEntity);
+            String localAddress = "java/" + test.getPathName() + "/" + category.getPathName();
+            if (test.getLanguage().getCode().equals(LanguageCode.ru)) {
+                setCategoryLink(localAddress, LanguageCode.ru.getPath());
+                if (!hasHrefLangUrl(request, "/" + localAddress, LanguageCode.en)) {
+                    setCategoryLink(localAddress, LanguageCode.en.getPath());
+                }
+            } else if (test.getLanguage().getCode().equals(LanguageCode.en)) {
+                setCategoryLink(localAddress, LanguageCode.en.getPath());
+                if (!hasHrefLangUrl(request, "/" + localAddress, LanguageCode.ru)) {
+                    setCategoryLink(localAddress, LanguageCode.ru.getPath());
+                }
+            }
         }
+    }
+
+    private void setCategoryLink(String path, String language) {
+        UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + path, NORM_PRIORITY, "weekly");
+        links.addUrlEntity(urlEntity);
     }
 
     private boolean isCategoryLinkable(Test test, Category category) {

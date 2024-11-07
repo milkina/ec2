@@ -41,7 +41,7 @@ public class SiteMapController {
         SiteMapUtility siteMapUtility = new SiteMapUtility(duplicateCategories,
                 testMap, articles);
 
-        return siteMapUtility.buildLinks();
+        return siteMapUtility.buildLinks(request);
     }
 }
 

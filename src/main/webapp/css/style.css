@@ -65,9 +65,15 @@ h4, .header4{
      border-color: #a1d6f7;
 }
 .index-img-div h1{
-  font:400 47px/67px Montserrat;
+  font:400 36px/67px Montserrat;
   color:#282e3e;
   width: 330px;
+}
+@media (max-width: 778px){
+.index-img-div h1{
+  font:400 26px/67px Montserrat;
+  color:#282e3e;
+}
 }
 .index-img-div h2{
   font:700 22px/34px proxima;
@@ -212,9 +218,14 @@ h4, .header4{
 }
 .categoryImage{
   float: left;
-  margin: 0px 30px 15px 100px;
+  margin: 0px 30px 15px 0px;
   width:280px;
   height:200px
+}
+@media (min-width: 992px) {
+ .categoryImage{
+   margin: 0px 30px 15px 30px;
+ }
 }
 .lessons-list{
   font-size: 0;

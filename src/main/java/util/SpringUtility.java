@@ -3,6 +3,7 @@ package util;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import spring.services.article.ArticleService;
+import spring.services.canonical.OtherLanguageService;
 import spring.services.category.CategoryService;
 import spring.services.course.CourseService;
 import spring.services.exam.ExamService;
@@ -20,6 +21,7 @@ public class SpringUtility {
     private static LanguageService languageService;
     private static ExamService examService;
     private static QuestionService questionService;
+    private static OtherLanguageService canonicalUrlService;
 
     public static <T> T getService(ServletContext servletContext, Class service) {
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContext);
@@ -45,6 +47,13 @@ public class SpringUtility {
             articleService = SpringUtility.getService(servletContext, ArticleService.class);
         }
         return articleService;
+    }
+
+    protected static OtherLanguageService getCanonicalUrlService(ServletContext servletContext) {
+        if (canonicalUrlService == null) {
+            canonicalUrlService = SpringUtility.getService(servletContext, OtherLanguageService.class);
+        }
+        return canonicalUrlService;
     }
 
     protected static PersonService getPersonService(ServletContext servletContext) {

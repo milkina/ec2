@@ -126,6 +126,96 @@
         <to type="permanent-redirect">/java/java-core-russian/lesson23</to>
     </rule>
     <rule>
+        <from>^/ru/java/java-core-russian/compile-sourcepath$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/classpath-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/compile-sourcepath$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/classpath-russian</to>
+    </rule>
+
+    <rule>
+        <from>^/ru/java/java-core-russian/probeli$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/probeli$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/identifikatori</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/identifikatori</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/kommentarii</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/kommentarii</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/razdeliteli</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/razdeliteli</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/kluchevie-slova-java</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/kluchevie-slova-java</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/char-type</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/char-type</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/integer-types</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/integer-types</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/float-double-type</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/float-double-type</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/boolean-type</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/boolean-type</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/literals-russian</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/literals-russian</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+
+    <rule>
         <from>^/java/ocjp/development$</from>
         <to type="permanent-redirect">/publications/ocajp8</to>
     </rule>
@@ -179,6 +269,10 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/compilator-interpretator$</from>
+        <to type="permanent-redirect">/java/java-core-russian/byte-code</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/compilator-interpretator$</from>
         <to type="permanent-redirect">/java/java-core-russian/byte-code</to>
     </rule>
     <rule>
@@ -682,6 +776,10 @@
         <to type="permanent-redirect">/java/ocpjp8/java-util-function-predicate</to>
     </rule>
     <rule>
+        <from>^/ru/java/ocpjp8-update-from-java6/java-util-function-predicate</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-predicate</to>
+    </rule>
+    <rule>
         <from>^/java/ocpjp8-update-from-java6/java-util-function-supplier</from>
         <to type="permanent-redirect">/java/ocpjp8/java-util-function-supplier</to>
     </rule>
@@ -692,6 +790,22 @@
     <rule>
         <from>^/java/ocajp8/try-catch</from>
         <to type="permanent-redirect">/java/ocpjp8/try-catch</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/ru/java/java-core-russian/intellij-idea</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/ru/java/java-core-russian/intellij-idea</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/java/java-core-russian/intellij-idea</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/java/java-core-russian/intellij-idea</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
     </rule>
     <rule>
         <from>^/ru/java/ocpjp8-update-from-java6/try-catch</from>
@@ -814,12 +928,20 @@
         <to type="permanent-redirect">/java/ocpjp8/java-util-function-unaryoperator</to>
     </rule>
     <rule>
+        <from>^/ru/java/ocpjp8-update-from-java6/java-util-function-unaryoperator</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-unaryoperator</to>
+    </rule>
+    <rule>
         <from>^/java/ocpjp8-update-from-java7/java-util-function-unaryoperator</from>
         <to type="permanent-redirect">/java/ocpjp8/java-util-function-unaryoperator</to>
     </rule>
     <rule>
         <from>^/java/ocajp8/if-else-statement</from>
         <to type="permanent-redirect">/java/ocpjp8/if-else-statement</to>
+    </rule>
+    <rule>
+        <from>^/ru/exam/ocpjp8</from>
+        <to type="permanent-redirect">/ru/</to>
     </rule>
 
     <rule>

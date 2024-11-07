@@ -9,28 +9,30 @@
     <jsp:attribute name="header">
         <meta charset="UTF-8">
         <meta name="keywords" content="Видео уроки по Java,Java видео курсы,Обучение Java по видео,Java программирование видео уроки,Видео обучение Java,Уроки Java для начинающих видео,Видео туториалы по Java,Изучение Java по видео,Основы Java видео уроки,Java видео лекции,Практические уроки Java видео,Java для начинающих видео курсы,Лучшие видео уроки по Java">
-        <meta name="description" content="Изучайте Java с помощью видео уроков и курсов. Подходит для начинающих и опытных программистов. Обучение основам Java.">
-        <title>Видео уроки по Java | Видео курсы и обучение программированию</title>
+        <meta name="description" content="Изучайте Java с нашими видео уроками для начинающих! Пошаговые руководства, практические примеры и советы от экспертов помогут вам быстро освоить основы программирования на Java. Начните свой путь к успешной карьере разработчика уже сегодня!">
+        <title>Видео уроки по Java для начинающих | Видеокурс и обучение программированию</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
         <link rel="canonical" href="https://www.examclouds.com/ru/video-java-uroki">
-      <meta property="og:title" content="Видео уроки по Java | Лучшие видео курсы и обучение программированию">
+        <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/video-java-uroki">
+        <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/ru/video-java-uroki">
+      <meta property="og:title" content="Видео уроки по Java для начинающих | Видеокурс и обучение программированию">
       <meta property="og:type" content="article">
-      <meta property="og:description" content="Изучайте Java с помощью лучших видео уроков и курсов. Подходит для начинающих и опытных программистов. Обучение основам Java.">
+      <meta property="og:description" content="Изучайте Java с нашими видео уроками для начинающих! Пошаговые руководства, практические примеры и советы от экспертов помогут вам быстро освоить основы программирования на Java. Начните свой путь к успешной карьере разработчика уже сегодня!">
       <meta property="og:site_name" content="ExamClouds">
       <meta property="og:url" content="https://www.examclouds.com/ru/video-java-uroki">
-      <meta property="twitter:title" content="Видео уроки по Java | Лучшие видео курсы и обучение программированию">
+      <meta property="twitter:title" content="Видео уроки по Java для начинающих | Видеокурс и обучение программированию">
       <meta property="twitter:card" content="summary">
-      <meta property="twitter:description" content="Изучайте Java с помощью лучших видео уроков и курсов. Подходит для начинающих и опытных программистов. Обучение основам Java.">
+      <meta property="twitter:description" content="Изучайте Java с нашими видео уроками для начинающих! Пошаговые руководства, практические примеры и советы от экспертов помогут вам быстро освоить основы программирования на Java. Начните свой путь к успешной карьере разработчика уже сегодня!">
       <meta property="twitter:site" content="@ExamClouds">
       <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
       <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
-      <meta property="twitter:image:alt" content="Видео уроки по Java | Лучшие видео курсы и обучение программированию">
+      <meta property="twitter:image:alt" content="Видео уроки по Java | Видеокурс и обучение программированию">
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache" %>
         <cache:cacheTag/>
         <div class="breadCrumbs">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <ol>
                 <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp" %>
                 <li>Видео Java Уроки</li>
             </ol>
@@ -38,14 +40,14 @@
         <main>
             <div class="category-article">
                 <h1 class="all-questions-header">Видео уроки по Java для начинающих</h1>
-                <h2>Изучайте Java с нашими видео уроками и курсами</h2>
+                <h2>Изучайте Java с нашими видео уроками и видеокурсами</h2>
                 <p class="index-items-text">Добро пожаловать на страницу видео уроков по Java на ExamClouds! Здесь вы найдете лучшие видео курсы
                 и уроки для изучения программирования на Java. Наши материалы подходят как для начинающих, так и для
                 опытных программистов, желающих улучшить свои навыки.</p>
                 <h2>Что вы найдете на этой странице:</h2>
                 <ul class="index-items-text">
                   <li><strong>Java видео уроки:</strong> Мы предлагаем обширную коллекцию видео уроков, охватывающих все аспекты программирования на Java.</li>
-                  <li><strong>Java видео курсы:</strong> Полные курсы, разработанные для систематического изучения языка Java.</li>
+                  <li><strong>Java видеокурс:</strong> Полные курсы, разработанные для систематического изучения языка Java.</li>
                   <li><strong>Обучение Java по видео:</strong> Изучайте Java в удобном для вас формате — смотрите видео уроки в любое время и в любом месте.</li>
                   <li><strong>Уроки Java для начинающих:</strong> Наши уроки подходят для тех, кто только начинает свое знакомство с Java, с акцентом на основные концепции и практические примеры.</li>
                   <li><strong>Практические уроки:</strong> Видео с практическими задачами и примерами кода помогут вам лучше понять, как применять теорию на практике.</li>
@@ -58,7 +60,7 @@
                   <li><strong>Практическая направленность:</strong> Уроки включают множество примеров и практических задач, которые помогут вам закрепить полученные знания.</li>
                 </ol>
                 <p class="index-items-text">Начните изучение Java уже сегодня с нашими видео уроками и курсами. Улучшайте свои навыки программирования и достигайте новых высот в карьере разработчика!</p>
-                <p class="index-items-text">Изучайте полный курс <a href="${pageContext.request.contextPath}/ru/#start-course">Java программирования</a>. А
+                <p class="index-items-text">Изучайте полный Java курс <a href="${pageContext.request.contextPath}/ru/#start-course">Java программирования</a>. А
                 также практикуйте <a href="${pageContext.request.contextPath}/ru/tests">тесты</a>, <a href="${pageContext.request.contextPath}/ru/questions">вопросы собеседований</a>
                 и <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">решение практических тестовых заданий</a>.</p>
                      <ol>
@@ -75,12 +77,14 @@
                                              <ol>
                                                  <li><a href="https://youtu.be/nQsriEscrm0" target="_self">Пошаговое руководство по установке Java - JDK</a></li>
                                                  <li><a href="https://youtu.be/CaOdc23rAAs" target="_self">Создание первого приложения</a></li>
-                                                 <li><a href="https://youtu.be/xiiVM27tzJw" target="_self">Компиляция и запуск Java приложения из командной строки. Использование ключа '-d'</a></li>
-                                                 <li><a href="https://youtu.be/ij1tndVoLbw" target="_self">Пакеты</a></li>
-                                                 <li><a href="https://youtu.be/Qg6MPtD10tM" target="_self">Компиляция с помощью -sourcepath</a></li>
+                                                 <li><a href="https://youtu.be/1H2m_0CX1Iw" target="_self">Компиляция и запуск Java приложения из командной строки. Использование ключа '-d'</a></li>
+                                                 <li><a href="https://youtu.be/w7WALQHVETs" target="_self">Пакеты</a></li>
+                                                 <li><a href="https://youtu.be/QZUbMNe-WY0" target="_self">Компиляция с помощью -sourcepath</a></li>
                                                  <li><a href="https://youtu.be/ukXdou9_acw" target="_self">Classpath</a></li>
-                                                 <li><a href="https://youtu.be/THTjy3HefEo" target="_self">JAR-Файлы</a></li>
-                                                 <li><a href="https://youtu.be/Ur2oXDhX5Nk" target="_self">Аргументы командной строки</a></li>
+                                                 <li><a href="https://youtu.be/50Gc0wcjiPQ" target="_self">JAR-Файлы</a></li>
+                                                 <li><a href="https://youtu.be/jeuCXiQMIJw" target="_self">Аргументы командной строки</a></li>
+                                                 <li><a href="https://youtu.be/2MA0Arorwo0" target="_self">Использование bat/sh файлов</a></li>
+                                                 <li><a href="https://youtu.be/WrMD9YCaRt4" target="_self">Установка IntelliJ IDEA</a></li>
                                                  <li><a href="https://youtu.be/mg5o7d8PSbY" target="_self">Создание проекта в IntelliJ IDEA</a></li>
                                               </ol>
                                          </LI>
@@ -178,7 +182,7 @@
                                                  <li><a href="https://youtu.be/BMKlEH0PjP8" target="_self">Рекурсия</a></li>
                                                  <li><a href="https://youtu.be/ZxIP2tA5kq4" target="_self">Сборщик мусора и метод finalize</a></li>
                                                  <li><a href="https://youtu.be/9eaw9ylG5uo" target="_self">Наследование</a></li>
-                                                 <li><a href="https://youtu.be/NCMzCQ1PGEk" target="_self">Ключевое слово super</a></li>
+                                                 <li><a href="https://youtu.be/IxDSeA9cspw" target="_self">Ключевое слово super</a></li>
                                                  <li><a href="https://youtu.be/LSPghXPDIaU" target="_self">Модификаторы доступа</a></li>
                                                  <li><a href="https://youtu.be/d76FCObYi6U" target="_self">Геттеры и сеттеры</a></li>
                                                  <li><a href="https://youtu.be/kox_L8I0BQI" target="_self">Переопределение методов</a></li>
@@ -206,7 +210,7 @@
                                          <LI>Интерфейсы и перечисления
                                              <ol>
                                                  <li><a href="https://youtu.be/YQAY9HDdezs" target="_self">Интерфейс</a></li>
-                                                 <li><a href="https://youtu.be/HyJtdT5X03E" target="_self">Отношения между классами</a></li>
+                                                 <li><a href="https://youtu.be/LKtLeic1OQQ" target="_self">Ассоциация, агрегация и композиция</a></li>
                                                  <li><a href="https://youtu.be/D_P6iHPHL_0" target="_self">Приведение ссылочных типов</a></li>
                                                  <li><a href="https://youtu.be/A2srF9Ivcvg" target="_self">Перечисления</a></li>
                                              </ol>

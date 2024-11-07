@@ -4,6 +4,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="/WEB-INF/tld/menu-jsp-taglib.tld" prefix="menu"%>
 <t:wrapper>
     <jsp:attribute name="header">
     <meta charset="UTF-8">
@@ -25,15 +26,15 @@
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
     <link rel="canonical" href="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
-    <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
-    <link rel="alternate" hreflang="en" href="https://www.examclouds.com/java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
-    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
+    <link rel="alternate" hreflang="ru" href="https://www.examclouds.com${ruUrl}">
+    <link rel="alternate" hreflang="en" href="https://www.examclouds.com${enUrl}">
+    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com${enUrl}">
    <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
    <c:if test="${CATEGORY_ATTRIBUTE.hidden || !CATEGORY_ATTRIBUTE.article.indexStatus}">
           <meta name="robots" content="noindex">
     </c:if>
     <script type="application/ld+json">{
-         @context": "https://schema.org",
+         "@context": "https://schema.org",
          "url": "https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}",
          "@type": "Article",
          "headline": "<c:out value="${titleName}"/>"
@@ -45,11 +46,11 @@
       <main class="container">
         <article>
          <h1 class="show-category-header">${header1}</h1>
-         <c:if test="${CATEGORY_ATTRIBUTE.article.image != null &&  not empty CATEGORY_ATTRIBUTE.article.image}">
-           <img class="categoryImage" src="${CATEGORY_ATTRIBUTE.article.image}" loading="lazy"
-             alt="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>" title="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>">
-         </c:if>
          <div class="category-article">
+                     <c:if test="${CATEGORY_ATTRIBUTE.article.image != null &&  not empty CATEGORY_ATTRIBUTE.article.image}">
+                       <img class="categoryImage" src="${CATEGORY_ATTRIBUTE.article.image}" loading="lazy"
+                         width ="280" height="200" alt="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>" title="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>">
+                     </c:if>
             <div class="author">Author: Tatyana Milkina
               <div class="author-social-icons"><ul class="social-icons-author">
                                        <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow"><i class="fab fa-patreon"></i></a></li>

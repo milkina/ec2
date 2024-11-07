@@ -52,7 +52,10 @@
       },
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "Ukraine"
+        "addressCountry": {
+           "@type": "Country",
+           "name": "UA"
+         }
       }
     }
 </script>

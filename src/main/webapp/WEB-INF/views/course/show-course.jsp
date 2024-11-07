@@ -47,7 +47,7 @@
  </jsp:attribute>
  <jsp:body>
     <div class="breadCrumbs">
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <ol>
         <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
         <li>${TESTS[param.TEST_PATH].name}</li>
       </ol>

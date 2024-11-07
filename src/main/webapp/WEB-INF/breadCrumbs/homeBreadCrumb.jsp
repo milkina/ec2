@@ -1,6 +1,17 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-    <a itemprop="item" href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>">
-         <span itemprop="name"><spring:message code="home"/></span></a>
-    <meta itemprop="position" content="1">
+<li>
+    <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>">
+         <span><spring:message code="home"/></span></a>
 </li>
+<script type="application/ld+json">{
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "<spring:message code="home"/>",
+       "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+     }
+   ]
+ }</script>

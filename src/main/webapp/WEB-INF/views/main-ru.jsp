@@ -9,24 +9,24 @@
 <head>
     <meta charset="UTF-8">
     <%@ include file="/WEB-INF/head_common.jsp"%>
-	<title>Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля</title>
-	<meta name="description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+	<title>Бесплатные курсы Java программирования с нуля</title>
+	<meta name="description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
 	<link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
     <link rel="canonical" href="https://www.examclouds.com/ru/">
-    <meta property="og:title" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
+    <meta property="og:title" content="Бесплатные курсы Java программирования с нуля">
     <meta property="og:type" content="article">
-    <meta property="og:description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+    <meta property="og:description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com/ru/">
     <meta property="og:published_time" content="2017-10-08T12:00:00Z">
     <meta property="og:modified_time" content="2024-10-08T12:00:00Z">
     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
     <meta property="og:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
-    <meta name="twitter:title" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
+    <meta name="twitter:title" content="Бесплатные курсы Java программирования с нуля">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:description" content="Изучайте Java программирование бесплатно! Основы Java, Java core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+    <meta name="twitter:description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <meta name="twitter:site" content="@ExamClouds">
     <meta name="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
     <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
@@ -36,7 +36,7 @@
           "@context": "https://schema.org",
           "url": "https://www.examclouds.com/ru/",
           "@type": "Article",
-          "headline": "Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля"
+          "headline": "Бесплатные курсы Java программирования с нуля"
         }
      </script>
     <style>
@@ -65,14 +65,14 @@
       <div class="container">
          <div class="index-img-div">
              <div class="col-xs-12 col-md-4">
-                <h1>Бесплатные курсы Java online для начинающих</h1>
+                <h1>Бесплатные курсы программирования Java для начинающих</h1>
                  <c:if test="${param.param != null || person == null}">
                    <a class="start-learning" href="#start-course">Начать обучение</a>
                  </c:if>
              </div>
              <div class="hidden-xs hidden-sm col-md-8">
-             <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Изучаем Java"
-                       width="750" height="400" title="Изучаем Java" loading="lazy">
+             <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Курсы программирования Java"
+                       width="750" height="400" title="Курсы программирования Java" loading="lazy">
              </div>
          </div>
       </div>
@@ -82,18 +82,18 @@
      	    <section>
      	     <h2 class="main-page-header" id="about-course">О курсе</h2>
      	     <p class="index-items-text">Решили получить современную профессию? Хотите много зарабатывать? Увлекает кодирование и создание
-     	     программных продуктов? Мы предлагаем <strong>лучший курс Java</strong> для тех, кто совсем не знаком с
+     	     программных продуктов? Мы предлагаем <strong>курсы программирования Java</strong> для тех, кто совсем не знаком с
      	     программированием.</p>
              <p class="index-items-text">Современное образование — это получение актуальных знаний в комфортной обстановке в удобное для
              вас время. Теория подкрепляется практикой, которой уделяют максимум времени. При этом,
              уроки увлекают, побуждая узнавать все больше информации. В итоге, полученная профессия должна
-             будет приносить не только удовлетворение, но и хорошую прибыль. Именно по этим концепциям была
-              разработана <strong>бесплатная обучающая программа, чтобы стать
-              специалистом</strong> Junior Java Developer смог каждый желающий.</p>
+             будет приносить не только удовлетворение, но и хорошую прибыль. Именно по этим концепциям был
+              разработан <strong>бесплатный курс программирования на Java</strong>, чтобы стать специалистом</strong>
+              Junior Java Junior Java Developer смог каждый желающий.</p>
              </section>
              <section>
-              <h2 class="main-page-header" id="course-content">Что включает наш курс</h2>
-              <p class="index-items-text"><strong>Курсы по джаве</strong> состоят из следующих разделов:</p>
+              <h2 class="main-page-header" id="course-content">Что включают наши курсы программирования Java</h2>
+              <p class="index-items-text"><strong>Курсы джава программирования</strong> состоят из следующих разделов:</p>
               <ul class="index-items-text">
                           <li><strong>Основы Java программирования</strong>: Введение в Java, основные синтаксические конструкции</li>
                           <li><strong>Java core</strong>: Классы и объекты, наследование и полиморфизм, исключения и их обработка</li>
@@ -178,7 +178,7 @@
               <section>
             <h2 class="main-page-header" id="start-course">Начните обучение сегодня</h2>
             <p class="index-items-text">Изучайте Java программирование с нуля и продвигайтесь в программировании вместе с ExamClouds! Наш <strong>джава курс</strong> разработан для начинающих и предоставляет все необходимые материалы для успешного обучения Java.</p>
-            <p><iframe title="Бесплатные Онлайн-Уроки Программирования на Java с Заданиями для Начинающих"
+            <p><iframe title="Бесплатные Онлайн-Курсы Программирования на Java с Заданиями для Начинающих"
             src="https://www.youtube.com/embed/Ir6KjeOhbGk" name="youtubeVideo" class="iframe-main-page" loading="lazy" allowfullscreen="">
                </iframe></p>
             <ul id="categories">

@@ -12,7 +12,7 @@
             <%@ include file="/WEB-INF/head_common.jsp"%>
             <jsp:invoke fragment="header"/>
         </head>
-        <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
+        <body class="scroll-style">
            <header>
              <div class="container-fluid menu top round-border-bottom">
                <jsp:include page="/menu.jsp"/>
