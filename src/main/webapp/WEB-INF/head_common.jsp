@@ -10,8 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/general/fav.ico" type="image/x-icon">
 <meta name="msvalidate.01" content="1EA6E20A8E37F3439A3AB653B71B0EF9">
-<!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7148099013705432"
-        crossorigin="anonymous"></script>-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7148099013705432"
+        crossorigin="anonymous"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35384009-1"></script>
 <!-- TrustBox script -->

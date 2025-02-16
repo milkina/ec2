@@ -106,6 +106,10 @@
         <to type="permanent-redirect">/java/web-services/wsimport-wsgen</to>
     </rule>
     <rule>
+        <from>^/publications/wsimport_wsgen_tools$</from>
+        <to type="permanent-redirect">/java/web-services/wsimport-wsgen</to>
+    </rule>
+    <rule>
         <from>^/java/java-core-russian/dostup-class$</from>
         <to type="permanent-redirect">/java/java-core-russian/upravlenie-dostupom</to>
     </rule>
@@ -240,6 +244,22 @@
         <to type="permanent-redirect">/java/ocpjp8/identifiers-javabeans</to>
     </rule>
     <rule>
+        <from>^/publications/identifiers-javabeans$</from>
+        <to type="permanent-redirect">/java/ocpjp8/identifiers-javabeans</to>
+    </rule>
+    <rule>
+        <from>^/en/publications/ssl-in-soap-web-service.jsp$</from>
+        <to type="permanent-redirect">/publications/ssl-in-soap-web-service.jsp</to>
+    </rule>
+    <rule>
+        <from>^/en/publications/create-soap-rpc-web-service-in-servlet-container.jsp$</from>
+        <to type="permanent-redirect">/publications/create-soap-rpc-web-service-in-servlet-container.jsp</to>
+    </rule>
+    <rule>
+        <from>^/en/publications/basic-authentication-in-soap-web-service.jsp$</from>
+        <to type="permanent-redirect">/publications/basic-authentication-in-soap-web-service.jsp</to>
+    </rule>
+    <rule>
         <from>^/java/ocjp/flow-control$</from>
         <to type="permanent-redirect">/publications/ocajp8</to>
     </rule>
@@ -250,6 +270,14 @@
     <rule>
         <from>^/java/ocjp/arrays$</from>
         <to type="permanent-redirect">/publications/ocajp8</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/arrays$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/massivi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/arrays$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/massivi</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/lesson22-23-tasks$</from>
@@ -356,6 +384,10 @@
         <to type="permanent-redirect">/java/java-core-russian/perechisleniya</to>
     </rule>
     <rule>
+        <from>^/ru/java/ocjp/enum$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/perechisleniya</to>
+    </rule>
+    <rule>
         <from>^/java/ocajp7/if-else-statement$</from>
         <to type="permanent-redirect">/java/ocpjp8/if-else-statement</to>
     </rule>
@@ -380,7 +412,19 @@
         <to type="permanent-redirect">/java/ocpjp8/literals</to>
     </rule>
     <rule>
+        <from>^/publications/literals$</from>
+        <to type="permanent-redirect">/java/ocpjp8/literals</to>
+    </rule>
+    <rule>
+        <from>^/publications/soap-handler$</from>
+        <to type="permanent-redirect">/java/web-services/soap-handler</to>
+    </rule>
+    <rule>
         <from>^/java/ocpjp8-update-from-java6/functional-interface$</from>
+        <to type="permanent-redirect">/java/ocpjp8/functional-interface</to>
+    </rule>
+    <rule>
+        <from>^/publications/functional-interface$</from>
         <to type="permanent-redirect">/java/ocpjp8/functional-interface</to>
     </rule>
     <rule>
@@ -398,6 +442,10 @@
     <rule>
         <from>^/java/ocjp/inner-classes$</from>
         <to type="permanent-redirect">/java/ocpjp8/inner-classes</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocjp/inner-classes$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/inner-classes-russian</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/treads2-russian$</from>
@@ -464,6 +512,14 @@
     <rule>
         <from>^/java/ocajp7/try-catch$</from>
         <to type="permanent-redirect">/java/ocpjp8/try-catch</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocajp7/try-catch$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/keyword-catch</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian./jar-files$</from>
+        <to type="permanent-redirect">/java/java-core-russian/jar-files</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/klass-arraylist$</from>
@@ -683,6 +739,176 @@
         <from>^/ru/java/java-core-russian/generics-slides</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/lesson14</to>
     </rule>
+
+    <rule>
+        <from>^/java/java-core-russian/lesson1$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-introduction</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/java-main-features</from>
+        <to type="permanent-redirect">/java/ocpjp8/features-java-language</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/java-history</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-version-history</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/jav-se-ee-me</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-editions-se-ee-me-comparison</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/jdk-jre-jvm</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-jvm-jre-jdk-explained</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/byte-code</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-compilers-interpreters-bytecode-explained</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/ustanovka-jdk</from>
+        <to type="permanent-redirect">/java/ocpjp8/install-jdk-guide</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/sozdanie-zapusk-java-prilogenija</from>
+        <to type="permanent-redirect">/java/ocpjp8/create-run-java-application</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/first-application</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-first-app-guide</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operator-if$</from>
+        <to type="permanent-redirect">/java/ocpjp8/if-else-statement</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/if-else-statement$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operator-if</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/switch-statement$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/switch-operator-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/switch-operator-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/switch-statement</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/keyword-catch$</from>
+        <to type="permanent-redirect">/java/ocpjp8/try-catch</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/try-catch$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/keyword-catch</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/inner-classes$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/inner-classes-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/inner-classes-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/inner-classes</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson15$</from>
+        <to type="permanent-redirect">/java/ocpjp8/lambda</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/lambda$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson15</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/functional-interface$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/functional-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/functional-interface-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/functional-interface</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/lambda-expression$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lambda-russian</to>
+    </rule>
+    <rule>
+        <from>^/publications/lambda-expression$</from>
+        <to type="permanent-redirect">/java/ocpjp8/lambda-expression</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lambda-russian</from>
+        <to type="permanent-redirect">/java/ocpjp8/lambda-expression</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/method-references$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/method-references-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/method-references-russian</from>
+        <to type="permanent-redirect">/java/ocpjp8/method-references</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-util-function-package$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/functional-interface-specializations</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/functional-interface-specializations$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-package</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-util-function-function$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/function-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/function-interface-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-function</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-util-function-consumer$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/consumer-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/consumer-interface-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-consumer</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8-update-from-java7/java-util-function-consumer$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-consumer</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-util-function-supplier$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/supplier-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/supplier-interface-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-supplier</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-util-function-predicate$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/predicate-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/predicate-interface-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-predicate</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-util-function-unaryoperator$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/unaryoperator-interface-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/unaryoperator-interface-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-unaryoperator</to>
+    </rule>
+    <rule>
+        <from>^/publications/java-util-function-unaryoperator$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-unaryoperator</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/object-oriented-programming-concepts$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/object-oriented-programming-concepts-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/object-oriented-programming-concepts-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/object-oriented-programming-concepts</to>
+    </rule>
+
     <rule>
         <from>^/java/java-core-russian/generics-slides</from>
         <to type="permanent-redirect">/java/java-core-russian/lesson14</to>
@@ -744,6 +970,38 @@
         <to type="permanent-redirect">/publications/ocpjp8-update-from-java7</to>
     </rule>
     <rule>
+        <from>^/java/java-core-russian/cmd-windows$</from>
+        <to type="permanent-redirect">/java/ocpjp8/command-line-guide</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/command-line-guide$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/cmd-windows</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/compile-run-java-command-line$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/java-javac</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/java-javac$</from>
+        <to type="permanent-redirect">/java/ocpjp8/compile-run-java-command-line</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/compilation-sourcepath-classpath$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/classpath-russian</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/classpath-russian$</from>
+        <to type="permanent-redirect">/java/ocpjp8/compilation-sourcepath-classpath</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/packages$</from>
+        <to type="permanent-redirect">/java/ocpjp8/packages-guide</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/packages-guide$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/packages</to>
+    </rule>
+    <rule>
         <from>^/exam/ocajp8</from>
         <to type="permanent-redirect">/publications/ocajp8</to>
     </rule>
@@ -762,6 +1020,10 @@
     <rule>
         <from>^/java/ocajp8/identifiers-javabeans</from>
         <to type="permanent-redirect">/java/ocpjp8/identifiers-javabeans</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocjp/identifiers-javabeans</from>
+        <to type="permanent-redirect">/ru/java/ocpjp8/identifiers-javabeans</to>
     </rule>
     <rule>
         <from>^/java/ocpjp8-update-from-java6/java-util-function-consumer</from>
@@ -785,6 +1047,10 @@
     </rule>
     <rule>
         <from>^/ru/java/ocpjp8-update-from-java6/java-util-function-supplier</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-supplier</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8-update-from-java7/java-util-function-supplier</from>
         <to type="permanent-redirect">/java/ocpjp8/java-util-function-supplier</to>
     </rule>
     <rule>
@@ -820,6 +1086,30 @@
         <to type="permanent-redirect">/java/ocpjp8/java-util-function-package</to>
     </rule>
     <rule>
+        <from>^/ru/java/ocpjp8-update-from-java7/java-util-function-package</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-package</to>
+    </rule>
+    <rule>
+        <from>^/publications/java-util-function-package$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-package</to>
+    </rule>
+    <rule>
+        <from>^/ru/publications/java-util-function-package$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-util-function-package</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8-update-from-java7/method-references</from>
+        <to type="permanent-redirect">/ru/java/ocpjp8/method-references</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8-update-from-java7/java-util-function-predicate</from>
+        <to type="permanent-redirect">/ru/java/ocpjp8/java-util-function-predicate</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8-update-from-java7/java-util-function-consumer</from>
+        <to type="permanent-redirect">/ru/java/ocpjp8/java-util-function-consumer</to>
+    </rule>
+    <rule>
         <from>^/java/ocpjp8-update-from-java6/java-util-function-package</from>
         <to type="permanent-redirect">/java/ocpjp8/java-util-function-package</to>
     </rule>
@@ -848,6 +1138,10 @@
         <to type="permanent-redirect">/java/ocpjp8/literals</to>
     </rule>
     <rule>
+        <from>^/publications/literals</from>
+        <to type="permanent-redirect">/java/ocpjp8/literals</to>
+    </rule>
+    <rule>
         <from>^/ru/java/ocpjp8-update-from-java6/literals</from>
         <to type="permanent-redirect">/java/ocpjp8/literals</to>
     </rule>
@@ -856,11 +1150,15 @@
         <to type="permanent-redirect">/java/ocpjp8/literals</to>
     </rule>
     <rule>
-        <from>^/java/ocajp8/operators</from>
+        <from>^/java/ocajp8/operators$</from>
         <to type="permanent-redirect">/java/ocpjp8/operators</to>
     </rule>
     <rule>
-        <from>^/ru/java/ocajp8/operators</from>
+        <from>^/ru/java/ocajp8/operators$</from>
+        <to type="permanent-redirect">/java/ocpjp8/operators</to>
+    </rule>
+    <rule>
+        <from>^/publications/operators$</from>
         <to type="permanent-redirect">/java/ocpjp8/operators</to>
     </rule>
     <rule>
@@ -904,8 +1202,20 @@
         <to type="permanent-redirect">/java/ocpjp8/inner-classes</to>
     </rule>
     <rule>
+        <from>^/ru/java/java-core-russian/lesson5-tasks</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesso5-tasks</to>
+    </rule>
+    <rule>
         <from>^/ru/java/ocajp8/overloading-overriding</from>
         <to type="permanent-redirect">/java/ocpjp8/overloading-overriding</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocjp</from>
+        <to type="permanent-redirect">/ru/java/ocpjp8</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8-update-from-java7</from>
+        <to type="permanent-redirect">/ru/java/ocpjp8</to>
     </rule>
     <rule>
         <from>^/java/ocajp8/overloading-overriding</from>

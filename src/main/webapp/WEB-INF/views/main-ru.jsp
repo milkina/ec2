@@ -173,7 +173,6 @@
               <p class="index-items-text">Для тех, кто стремится получить сертификат, рекомендуем обратить внимание на наш <span class="external-reference" data-link="https://www.udemy.com/course/java-bup/">курс на Udemy</span>.
               Там вы сможете не только закрепить свои знания, но и получить официальный документ, подтверждающий ваше обучение.
               </p>
-               <p class="index-items-text"><i class="fas fa-graduation-cap"></i>В октябре продолжаем <strong>бесплатную</strong> регистрацию на наш курс Java на Udemy. Просто переходите по <a href="https://www.udemy.com/course/java-bup/?couponCode=8CCF0C48B12D0FEFE818">ссылке</a> и регистрируйтесь.<p>
               </section>
               <section>
             <h2 class="main-page-header" id="start-course">Начните обучение сегодня</h2>

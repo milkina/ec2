@@ -30,6 +30,10 @@
             <input type="button" value="<spring:message code="change.password.button"/>" name="ChangePassword"
                    id="ChangePassword" onclick="openChangePasswordWindow('${pageContext.request.contextPath}')">
         </form:form>
+        <form:form action="${pageContext.request.contextPath}/delete-person" id="DeleteForm" method="POST">
+             <input type="hidden" value="${person.id}" name="USER_ID" id="USER_ID">
+             <input type="submit" value="<spring:message code="delete.account.button"/>" name="Delete" id="Delete">
+        </form:form>
         <h2 class="header2"><spring:message code="history.label"/></h2>
         <table style="width:100%">
         <tr>

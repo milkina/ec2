@@ -85,21 +85,14 @@
                                                  <li><a href="https://youtu.be/jeuCXiQMIJw" target="_self">Аргументы командной строки</a></li>
                                                  <li><a href="https://youtu.be/2MA0Arorwo0" target="_self">Использование bat/sh файлов</a></li>
                                                  <li><a href="https://youtu.be/WrMD9YCaRt4" target="_self">Установка IntelliJ IDEA</a></li>
-                                                 <li><a href="https://youtu.be/mg5o7d8PSbY" target="_self">Создание проекта в IntelliJ IDEA</a></li>
+                                                 <li><a href="https://youtu.be/ioygrxZyPN4" target="_self">Создание проекта в IntelliJ IDEA</a></li>
                                               </ol>
                                          </LI>
                                          <LI>Лексика языка
                                              <ol>
-                                                 <li><a href="https://youtu.be/sLDJmOTSMNY" target="_self">Пробелы</a></li>
-                                                 <li><a href="https://youtu.be/iEYi2R_cik8" target="_self">Идентификаторы</a></li>
-                                                 <li><a href="https://youtu.be/S_Y5nyGeXcU" target="_self">Правила именования переменных</a></li>
-                                                 <li><a href="https://youtu.be/3iVJUwksTIg" target="_self">Комментарии</a></li>
-                                                 <li><a href="https://youtu.be/MTLa9Lwk8n4" target="_self">Ключевые слова</a></li>
-                                                 <li><a href="https://youtu.be/bsovM4AmXZY" target="_self">Примитивные типы данных</a></li>
-                                                 <li><a href="https://youtu.be/JiZ9buiGUCQ" target="_self">Тип данных char</a></li>
-                                                 <li><a href="https://youtu.be/UEBYGNi4WLM" target="_self">Типы byte, short, int, long</a></li>
-                                                 <li><a href="https://youtu.be/KCisyDiwpdM" target="_self">Числа с плавающей точкой</a></li>
-                                                 <li><a href="https://youtu.be/gfaZoUyG61s" target="_self">Литералы</a></li>
+                                                 <li><a href="https://youtu.be/dJ3OEIWuA6A" target="_self">Лексика языка Java</a></li>
+                                                 <li><a href="https://youtu.be/b1ioA0UpKFc" target="_self">Правила именования идентификаторов</a></li>
+                                                 <li><a href="https://youtu.be/cAsf2SGJuhk" target="_self">Примитивные типы данных и литералы</a></li>
                                                  <li><a href="https://youtu.be/R0SblwFGeLU" target="_self">Методы</a></li>
                                                  <li><a href="https://youtu.be/Ah0e8Z-MbqU" target="_self">Переменные</a></li>
                                                  <li><a href="https://youtu.be/kHn24KETXg0" target="_self">Прямой код и дополнительный код</a></li>
@@ -123,7 +116,7 @@
                                          <LI>Операторы
                                              <ol>
                                                  <li><a href="https://youtu.be/knx3SPj8QRQ" target="_self">Условный оператор If</a></li>
-                                                 <li><a href="https://youtu.be/MjIUVposZdQ" target="_self">Оператор switch</a></li>
+                                                 <li><a href="https://youtu.be/xwTTGoq71wc" target="_self">Оператор switch в Java 14</a></li>
                                                  <li><a href="https://youtu.be/toqty18pb7w" target="_self">Циклы Java</a></li>
                                                  <li><a href="https://youtu.be/9kIrpoSJTcY" target="_self">Цикл while</a></li>
                                                  <li><a href="https://youtu.be/yt9pHkkUJks" target="_self">Цикл do-while</a></li>

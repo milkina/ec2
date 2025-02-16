@@ -68,6 +68,9 @@
                   </iframe>
             </c:if>
             ${CATEGORY_ATTRIBUTE.article.text}
+            <span class="external-reference" data-link="https://www.udemy.com/course/java-bup/"><img class="img-responsive" src="https://storage.googleapis.com/www.examclouds.com/ad1.png" loading="lazy"
+                                     width ="546" height="475" alt="Курс 'Java для начинающих' на Udemy" title="Курс 'Java для начинающих' на Udemy"></span>
+             <span class="external-reference" data-link="https://www.udemy.com/course/java-bup/">Курс 'Java для начинающих' на Udemy</span>
          </div>
            <c:if test="${not empty CATEGORY_ATTRIBUTE.subCategories}">
             <ol class="category-list">

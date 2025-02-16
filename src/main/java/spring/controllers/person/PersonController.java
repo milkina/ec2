@@ -114,7 +114,6 @@ public class PersonController {
     @RequestMapping(value = "/delete-person")
     public ModelAndView deletePerson(@RequestParam(USER_ID) Integer userId, Locale locale) {
         String result = getResourceValue(locale, "person.not.removed", "messages");
-        ;
         if (userId != null) {
             List<AbstractQuestionEntry> questionEntries = questionService.getPersonQuestions(userId);
             if (questionEntries.size() == 0) {
