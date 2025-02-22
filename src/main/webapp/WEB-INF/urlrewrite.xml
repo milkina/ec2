@@ -124,11 +124,11 @@
     <rule>
         <from>^/java/web-services/wsimport_wsgen_tools$</from>
         <to type="permanent-redirect">/java/web-services/wsimport-wsgen</to>
-    </rule><!--
+    </rule>
     <rule>
         <from>^/ru/java/web-services/wsimport_wsgen_tools$</from>
         <to type="permanent-redirect">/java/web-services/wsimport-wsgen</to>
-    </rule>-->
+    </rule>
     <rule>
         <from>^/publications/wsimport_wsgen_tools$</from>
         <to type="permanent-redirect">/java/web-services/wsimport-wsgen</to>
@@ -673,7 +673,7 @@
     <rule>
         <from>^/ru/java/java-core-russian/klass-treeset$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/interface-sortedset</to>
-    </rule><!--
+    </rule>
     <rule>
         <from>^/java/java-core-russian/interface-sortedset.$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/interface-sortedset</to>
@@ -681,11 +681,11 @@
     <rule>
         <from>^/ru/publications/kvartiry-v-dubae$</from>
         <to type="permanent-redirect">/ru/</to>
-    </rule>
+    </rule><!--
     <rule>
         <from>^/ru/java/java-core-russian./jar-files$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/jar-files</to>
-    </rule>
+    </rule>-->
     <rule>
         <from>^/ru/java/java-core-russian/metodiki-$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/metodiki-programmirovanija</to>
@@ -693,7 +693,7 @@
     <rule>
         <from>^/ru/publications/semeyniy-psiholog-v-moskve$</from>
         <to type="permanent-redirect">/ru/</to>
-    </rule>-->
+    </rule>
     <rule>
         <from>^/java/java-core-russian/interface-comparator$</from>
         <to type="permanent-redirect">/java/java-core-russian/interface-comparable</to>
@@ -1011,7 +1011,7 @@
     <rule>
         <from>^/ru/java/java-core-russian)$</from>
         <to type="permanent-redirect">/ru/</to>
-    </rule>
+    </rule>-->
     <rule>
         <from>^/ru/java/java-core-$</from>
         <to type="permanent-redirect">/ru/</to>
@@ -1019,7 +1019,7 @@
     <rule>
         <from>^/ru/java$</from>
         <to type="permanent-redirect">/ru/</to>
-    </rule>-->
+    </rule>
     <rule>
         <from>^/ru/java/ocpjp8/java-util-function-consumer$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/consumer-interface-russian</to>
