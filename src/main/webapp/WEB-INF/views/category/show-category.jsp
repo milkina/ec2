@@ -59,6 +59,8 @@
                                        <li><a href="http://twitter.com/ExamClouds" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></li>
                                        <li><a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow"><i class="fab fa-linkedin"></i></a></li>
                                        <li><a href="https://t.me/examclouds/" target="_blank" rel="nofollow"><i class="fab fa-telegram"></i></a></li>
+                                       <li><a href="https://ko-fi.com/examclouds" target="_blank" rel="nofollow"><i class="fas fa-coffee"></i></a></li>
+                                       <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow"><i class="fas fa-graduation-cap"></i></a></li>
               </ul></div>
               </div>
             <c:if test="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}">

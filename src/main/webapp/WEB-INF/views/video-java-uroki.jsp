@@ -93,10 +93,10 @@
                                                  <li><a href="https://youtu.be/dJ3OEIWuA6A" target="_self">Лексика языка Java</a></li>
                                                  <li><a href="https://youtu.be/b1ioA0UpKFc" target="_self">Правила именования идентификаторов</a></li>
                                                  <li><a href="https://youtu.be/cAsf2SGJuhk" target="_self">Примитивные типы данных и литералы</a></li>
-                                                 <li><a href="https://youtu.be/R0SblwFGeLU" target="_self">Методы</a></li>
-                                                 <li><a href="https://youtu.be/Ah0e8Z-MbqU" target="_self">Переменные</a></li>
-                                                 <li><a href="https://youtu.be/kHn24KETXg0" target="_self">Прямой код и дополнительный код</a></li>
-                                                 <li><a href="https://youtu.be/pwQ8465nR0w" target="_self">Преобразование и приведение примитивных типов</a></li>
+                                                 <li><a href="https://youtu.be/phdgiU8u0-0" target="_self">Методы</a></li>
+                                                 <li><a href="https://youtu.be/zEz9D4Q00VQ" target="_self">Переменные</a></li>
+                                                 <li><a href="https://youtu.be/D8RFZ8oECNY" target="_self">Прямой код и дополнительный код</a></li>
+                                                 <li><a href="https://youtu.be/5SB7GZfIVvA" target="_self">Преобразование и приведение примитивных типов</a></li>
                                                  <li><a href="https://youtu.be/OvgtsmlpNHA" target="_self">Ввод с клавиатуры</a></li>
                                              </ol>
                                          </LI>
