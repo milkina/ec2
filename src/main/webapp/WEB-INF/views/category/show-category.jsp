@@ -12,11 +12,11 @@
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>
     </c:if>
-    <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null && CATEGORY_ATTRIBUTE.name.equals('Задания') && (CATEGORY_ATTRIBUTE.title==null || CATEGORY_ATTRIBUTE.title.trim().equals(''))}">
+    <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null && (CATEGORY_ATTRIBUTE.name.equals('Задания') || CATEGORY_ATTRIBUTE.name.equals('Tasks')) && (CATEGORY_ATTRIBUTE.title==null || CATEGORY_ATTRIBUTE.title.trim().equals(''))}">
        <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.parentCategory.name}. ${titleName}"/>
     </c:if>
     <c:set var="header1" value="${CATEGORY_ATTRIBUTE.name}"/>
-    <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null && CATEGORY_ATTRIBUTE.name.equals('Задания')}">
+    <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null && (CATEGORY_ATTRIBUTE.name.equals('Задания') || CATEGORY_ATTRIBUTE.name.equals('Tasks'))}">
        <c:set var="header1" value="${CATEGORY_ATTRIBUTE.parentCategory.name}. ${CATEGORY_ATTRIBUTE.name}"/>
     </c:if>
     <title><c:out value="${titleName}"/></title>

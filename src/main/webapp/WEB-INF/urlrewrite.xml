@@ -681,11 +681,11 @@
     <rule>
         <from>^/ru/publications/kvartiry-v-dubae$</from>
         <to type="permanent-redirect">/ru/</to>
-    </rule><!--
+    </rule>
     <rule>
         <from>^/ru/java/java-core-russian./jar-files$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/jar-files</to>
-    </rule>-->
+    </rule>
     <rule>
         <from>^/ru/java/java-core-russian/metodiki-$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/metodiki-programmirovanija</to>
@@ -868,7 +868,7 @@
         <to type="permanent-redirect">/ru/java/java-core-russian/lesson14</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/generics-</from>
+        <from>^/ru/java/java-core-russian/generics-$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/lesson14</to>
     </rule>
 
@@ -1189,6 +1189,30 @@
         <from>^/java/java-core-russian/ustanovka-intellij-idea$</from>
         <to type="permanent-redirect">/java/ocpjp8/install-intellij-idea</to>
     </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/create-project-intellij-idea$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/intellij-idea$</from>
+        <to type="permanent-redirect">/java/ocpjp8/create-project-intellij-idea</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/first-java-application-tasks$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson1-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson1-tasks$</from>
+        <to type="permanent-redirect">/java/ocpjp8/first-java-application-tasks</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/language-lexicon$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java$</from>
+        <to type="permanent-redirect">/java/ocpjp8/language-lexicon</to>
+    </rule>
 
     <rule>
         <from>^/java/java-core-russian/packages$</from>
@@ -1255,11 +1279,11 @@
         <to type="permanent-redirect">/java/ocpjp8/try-catch</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/ru/java/java-core-russian/intellij-idea</from>
+        <from>^/ru/java/java-core-russian/ru/java/java-core-russian/intellij-idea$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
     </rule>
     <rule>
-        <from>^/java/java-core-russian/ru/java/java-core-russian/intellij-idea</from>
+        <from>^/java/java-core-russian/ru/java/java-core-russian/intellij-idea$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
     </rule>
     <rule>
@@ -1267,11 +1291,11 @@
         <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/java/java-core-russian/intellij-idea</from>
+        <from>^/ru/java/java-core-russian/java/java-core-russian/intellij-idea$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
     </rule>
     <rule>
-        <from>^/java/java-core-russian/java/java-core-russian/intellij-idea</from>
+        <from>^/java/java-core-russian/java/java-core-russian/intellij-idea$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/intellij-idea</to>
     </rule>
     <rule>

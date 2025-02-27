@@ -19,10 +19,10 @@
         </c:if>
 </c:forEach>
 <span class="adminLabel">Russian Version:</span>
-<input type="text" name="ruVersion" maxlength="70" value="${ruCanonicalUrl}" size="70"/>
+<input type="text" name="ruVersion" maxlength="80" value="${ruCanonicalUrl}" size="80"/>
 <BR>
 <span class="adminLabel">English Version:</span>
-<input type="text" name="enVersion" maxlength="70" value="${enCanonicalUrl}" size="70"/>
+<input type="text" name="enVersion" maxlength="80" value="${enCanonicalUrl}" size="80"/>
 <BR>
 <span class="adminLabel"><spring:message code="category.parent"/>:</span>
 <select name="categoryParent">
