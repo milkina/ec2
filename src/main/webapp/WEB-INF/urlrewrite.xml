@@ -14,6 +14,10 @@
         <to type="permanent-redirect">https://www.examclouds.com</to>
     </rule>
     <rule>
+        <from>^/ru/ru/(.*)$</from>
+        <to type="permanent-redirect">/ru/$1</to>
+    </rule>
+    <rule>
         <from>^/java/java-core-russian/resource-references-12-04-2017$</from>
         <to type="redirect">/ru/</to>
     </rule>
@@ -1212,6 +1216,110 @@
     <rule>
         <from>^/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java$</from>
         <to type="permanent-redirect">/java/ocpjp8/language-lexicon</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-lexicon$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/leksika-java</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/leksika-java$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-lexicon</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/identifier-naming$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/recomendacii-imenovanie-identificators</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/recomendacii-imenovanie-identificators$</from>
+        <to type="permanent-redirect">/java/ocpjp8/identifier-naming</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/literals$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/primitive-types</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/primitive-types$</from>
+        <to type="permanent-redirect">/java/ocpjp8/literals</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-methods$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/metodi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/metodi$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-methods</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-variables$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/variables</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/variables$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-variables</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/binary-number-representation$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/hranenie-chiesel</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/hranenie-chiesel$</from>
+        <to type="permanent-redirect">/java/ocpjp8/binary-number-representation</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/primitive-type-conversion$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/preobrazovanie-privedenie-tipov</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/preobrazovanie-privedenie-tipov$</from>
+        <to type="permanent-redirect">/java/ocpjp8/primitive-type-conversion</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-user-input-system-in-scanner$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/console-vvod-vivod</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/console-vvod-vivod$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-user-input-system-in-scanner</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/lexicon-tasks$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson2-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson2-tasks$</from>
+        <to type="permanent-redirect">/java/ocpjp8/lexicon-tasks</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/operators$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson4</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson4$</from>
+        <to type="permanent-redirect">/java/ocpjp8/operators</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/arithmetic-operators-and-compound-assignment$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operazii</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operazii$</from>
+        <to type="permanent-redirect">/java/ocpjp8/arithmetic-operators-and-compound-assignment</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/increment-decrement-operators$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/increment-decrement</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/increment-decrement$</from>
+        <to type="permanent-redirect">/java/ocpjp8/increment-decrement-operators</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-comparison-operators$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operazii-sravneniya</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operazii-sravneniya$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-comparison-operators</to>
     </rule>
 
     <rule>
