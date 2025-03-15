@@ -4,7 +4,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" async integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14">
 <!-- Google Tag Manager -->
-<script src="${pageContext.request.contextPath}/js/googleTagManager.js" async></script>
+<script src="${pageContext.request.contextPath}/googleTagManager.html" async></script>
 <!-- End Google Tag Manager -->
 <script src="${pageContext.request.contextPath}/js/general.js" async></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">

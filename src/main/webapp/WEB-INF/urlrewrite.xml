@@ -1321,6 +1321,14 @@
         <from>^/java/java-core-russian/operazii-sravneniya$</from>
         <to type="permanent-redirect">/java/ocpjp8/java-comparison-operators</to>
     </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/logical-operators$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/logical-operazii</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/logical-operazii$</from>
+        <to type="permanent-redirect">/java/ocpjp8/logical-operators</to>
+    </rule>
 
     <rule>
         <from>^/java/java-core-russian/packages$</from>
