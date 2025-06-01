@@ -1329,6 +1329,30 @@
         <from>^/java/java-core-russian/logical-operazii$</from>
         <to type="permanent-redirect">/java/ocpjp8/logical-operators</to>
     </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-operator-precedence-table-and-examples$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/prioritet-operazii</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/prioritet-operazii$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-operator-precedence-table-and-examples</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/string-concatenation-examples$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/concatenation</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/concatenation$</from>
+        <to type="permanent-redirect">/java/ocpjp8/string-concatenation-examples</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/bitwise-shift-operators-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/pobitovie-operacii</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/pobitovie-operacii$</from>
+        <to type="permanent-redirect">/java/ocpjp8/bitwise-shift-operators-java</to>
+    </rule>
 
     <rule>
         <from>^/java/java-core-russian/packages$</from>
