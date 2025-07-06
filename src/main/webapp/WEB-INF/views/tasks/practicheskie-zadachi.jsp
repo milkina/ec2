@@ -11,7 +11,8 @@
      <title>Практические задачи по Java | Учебные задачи и тренировки | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/ru/practicheskie-zadachi">
      <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/practicheskie-zadachi">
-     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/ru/practicheskie-zadachi">
+     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/practical-java-tasks">
+     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/practical-java-tasks">
      <meta property="og:title" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
      <meta property="og:type" content="article">
      <meta property="og:description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
@@ -24,6 +25,27 @@
      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
      <meta property="twitter:image:alt" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Практические задачи по Java",
+  "description": "Изучайте и решайте практические задачи по Java для улучшения навыков программирования.",
+  "author": {
+    "@type": "Organization",
+    "name": "ExamClouds"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExamClouds",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.examclouds.com/images/general/logo.svg"
+    }
+  },
+  "mainEntityOfPage": "https://www.examclouds.com/ru/practicheskie-zadachi"
+}
+</script>
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>

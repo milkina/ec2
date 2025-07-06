@@ -68,10 +68,13 @@ public class SiteMapUtility {
                 if (article.getUrl().trim().isEmpty()) {
                     priority = 1;
                 }
-                UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.ru.getPath() + article.getUrl(), priority, "monthly");
-                links.addUrlEntity(urlEntity);
+                if (!article.getUrl().equals("practical-java-tasks")) {
+                    UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.ru.getPath() + article.getUrl(), priority, "monthly");
+                    links.addUrlEntity(urlEntity);
+                }
+
                 if (!article.getUrl().equals("video-java-uroki") && !article.getUrl().equals("practicheskie-zadachi")) {
-                    urlEntity = createUrlEntity(SITE_NAME + LanguageCode.en.getPath() + article.getUrl(), priority, "monthly");
+                    UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.en.getPath() + article.getUrl(), priority, "monthly");
                     links.addUrlEntity(urlEntity);
                 }
             }

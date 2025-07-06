@@ -177,6 +177,14 @@
         <from>^/java/java-core-russian/compile-sourcepath$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/classpath-russian</to>
     </rule>
+    <rule>
+        <from>^/practicheskie-zadachi$</from>
+        <to type="permanent-redirect">/practical-java-tasks</to>
+    </rule>
+    <rule>
+        <from>^/ru/practical-java-tasks$</from>
+        <to type="permanent-redirect">/practicheskie-zadachi</to>
+    </rule>
 
     <rule>
         <from>^/ru/java/java-core-russian/probeli$</from>
@@ -1352,6 +1360,263 @@
     <rule>
         <from>^/java/java-core-russian/pobitovie-operacii$</from>
         <to type="permanent-redirect">/java/ocpjp8/bitwise-shift-operators-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/operators-in-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson5</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson5$</from>
+        <to type="permanent-redirect">/java/ocpjp8/operators-in-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-loops$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/for-cycle</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/for-cycle$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-loops</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operatori-cicla$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-loops</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/operatori-cicla$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/for-cycle</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/while-cycle$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/for-cycle</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/while-cycle$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-loops</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/do-while-cycle$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/for-cycle</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/do-while-cycle$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-loops</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/for-each-cycle$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/for-cycle</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/for-each-cycle$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-loops</to>
+    </rule>
+
+    <rule>
+        <from>^/ru/java/ocpjp8/beginner-java-operations-tasks$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson4-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson4-tasks$</from>
+        <to type="permanent-redirect">/java/ocpjp8/beginner-java-operations-tasks</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-break-statement$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operatori-perexoda</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operatori-perexoda$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-break-statement</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/continue-statement$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operator-continue</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operator-continue$</from>
+        <to type="permanent-redirect">/java/ocpjp8/continue-statement</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/return-statement$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operator-return</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/operator-return$</from>
+        <to type="permanent-redirect">/java/ocpjp8/return-statement</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/system-exit-method$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/system-exit</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/system-exit$</from>
+        <to type="permanent-redirect">/java/ocpjp8/system-exit-method</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-exercises-if-switch-loops$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesso5-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesso5-tasks$</from>
+        <to type="permanent-redirect">/java/ocpjp8/java-exercises-if-switch-loops</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/array-declaration-initialization$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/odnomernie-massivi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/odnomernie-massivi$</from>
+        <to type="permanent-redirect">/java/ocpjp8/array-declaration-initialization</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/what-is-array-in-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/massivi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/massivi$</from>
+        <to type="permanent-redirect">/java/ocpjp8/what-is-array-in-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/multidimensional-arrays$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/mnogomernie-massivi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/mnogomernie-massivi$</from>
+        <to type="permanent-redirect">/java/ocpjp8/multidimensional-arrays</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/array-length-en$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/array-length</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/array-length$</from>
+        <to type="permanent-redirect">/java/ocpjp8/array-length-en</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/arrays-to-string-method$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/arrays-tostring</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/arrays-tostring$</from>
+        <to type="permanent-redirect">/java/ocpjp8/arrays-to-string-method</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/arrays-deeptostring-multidimensional$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/arrays-deeptostring</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/arrays-deeptostring$</from>
+        <to type="permanent-redirect">/java/ocpjp8/arrays-deeptostring-multidimensional</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/arrays-sort-method-example$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/arrays-sort</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/arrays-sort$</from>
+        <to type="permanent-redirect">/java/ocpjp8/arrays-sort-method-example</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/arrays-binarysearch-method-example$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/arrays-binarysearch</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/arrays-binarysearch$</from>
+        <to type="permanent-redirect">/java/ocpjp8/arrays-binarysearch-method-example</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/system-arraycopy-example$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/system-arraycopy</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/system-arraycopy$</from>
+        <to type="permanent-redirect">/java/ocpjp8/system-arraycopy-example</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/array-exercises-beginners$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/massivi-zadaniya</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/massivi-zadaniya$</from>
+        <to type="permanent-redirect">/java/ocpjp8/array-exercises-beginners</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/sorting-algorithms-overview$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/sorting-algoritms</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/sorting-algoritms$</from>
+        <to type="permanent-redirect">/java/ocpjp8/sorting-algorithms-overview</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/array-average-example$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/srednee-arifmeticheskoye</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/srednee-arifmeticheskoye$</from>
+        <to type="permanent-redirect">/java/ocpjp8/array-average-example</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/fibonacci-recursion-vs-iteration$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/chisla-fibonacchi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/chisla-fibonacchi$</from>
+        <to type="permanent-redirect">/java/ocpjp8/fibonacci-recursion-vs-iteration</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/algorithm-complexity-big-o$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/slognost-algoritma</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/slognost-algoritma$</from>
+        <to type="permanent-redirect">/java/ocpjp8/algorithm-complexity-big-o</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/variable-swap-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/metod-swap</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/metod-swap$</from>
+        <to type="permanent-redirect">/java/ocpjp8/variable-swap-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/how-to-reverse-array$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/invert-massiv</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/invert-massiv$</from>
+        <to type="permanent-redirect">/java/ocpjp8/how-to-reverse-array</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/bubble-sort-example$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/sortirovka-bubble</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/sortirovka-bubble$</from>
+        <to type="permanent-redirect">/java/ocpjp8/bubble-sort-example</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/selection-sort-example$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/sortirovka-viborom</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/sortirovka-bubble$</from>
+        <to type="permanent-redirect">/java/ocpjp8/sortirovka-viborom</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/search-element-in-array$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/algoritm-poisk-elementa</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/algoritm-poisk-elementa$</from>
+        <to type="permanent-redirect">/java/ocpjp8/search-element-in-array</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/debug-bubble-selection-sort$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/massivi-algoritmi-tasks</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/massivi-algoritmi-tasks$</from>
+        <to type="permanent-redirect">/java/ocpjp8/debug-bubble-selection-sort</to>
     </rule>
 
     <rule>

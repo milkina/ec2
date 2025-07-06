@@ -64,6 +64,11 @@ public class CourseController {
     public String showTasks() {
         return TASKS_PAGE;
     }
+
+    @RequestMapping(value = {"/practical-java-tasks","/ru/practical-java-tasks"})
+    public String showTasksEn() {
+        return TASKS_PAGE_EN;
+    }
     @RequestMapping(value = {"/video-java-uroki", "ru/video-java-uroki"})
     public String showVideo() {
         return VIDEO_LIST;
