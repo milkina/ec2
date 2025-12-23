@@ -44,7 +44,9 @@
          <div class="container-fluid menu round-border-bottom">
           <%@ include file="/menu.jsp" %>
           <div class="container">
-             <div class="index-img-div">
+          <div class="row">
+            <div class="col-xs-12">
+             <div class="index-img-div clearfix">
                  <div class="col-xs-12 col-md-4">
                     <h1>Free Java Core Courses - Master Java Programming</h1>
                     <h2>Start learning Java? Welcome to ExamClouds</h2>
@@ -53,6 +55,8 @@
                               <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Start learning Java? Welcome to ExamClouds"
                                         width="750" height="400" title="Start learning Java? Welcome to ExamClouds" loading="lazy">
                  </div>
+                           </div>
+                           </div>
              </div>
           </div>
         </div>

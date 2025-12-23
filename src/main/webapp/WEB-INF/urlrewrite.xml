@@ -183,7 +183,7 @@
     </rule>
     <rule>
         <from>^/ru/practical-java-tasks$</from>
-        <to type="permanent-redirect">/practicheskie-zadachi</to>
+        <to type="permanent-redirect">/ru/practicheskie-zadachi</to>
     </rule>
 
     <rule>
@@ -809,7 +809,7 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/vcs-slides$</from>
-        <to type="permanent-redirect">/java/java-core-russian/lesson6</to>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson6</to>
     </rule>
     <rule>
         <from>^/ru/java/java-core-russian/oop-slides</from>
@@ -889,24 +889,48 @@
         <to type="permanent-redirect">/java/ocpjp8/java-introduction</to>
     </rule>
     <rule>
+        <from>^/ru/java/ocpjp8/java-introduction$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson1</to>
+    </rule>
+    <rule>
         <from>^/java/java-core-russian/java-main-features</from>
         <to type="permanent-redirect">/java/ocpjp8/features-java-language</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/features-java-language</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/java-main-features</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/java-history</from>
         <to type="permanent-redirect">/java/ocpjp8/java-version-history</to>
     </rule>
     <rule>
+        <from>^/ru/java/ocpjp8/java-version-history</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/java-history</to>
+    </rule>
+    <rule>
         <from>^/java/java-core-russian/jav-se-ee-me</from>
         <to type="permanent-redirect">/java/ocpjp8/java-editions-se-ee-me-comparison</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-editions-se-ee-me-comparison</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/jav-se-ee-me</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/jdk-jre-jvm</from>
         <to type="permanent-redirect">/java/ocpjp8/java-jvm-jre-jdk-explained</to>
     </rule>
     <rule>
+        <from>^/ru/java/ocpjp8/java-jvm-jre-jdk-explained</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/jdk-jre-jvm</to>
+    </rule>
+    <rule>
         <from>^/java/java-core-russian/byte-code</from>
         <to type="permanent-redirect">/java/ocpjp8/java-compilers-interpreters-bytecode-explained</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/java-compilers-interpreters-bytecode-explained</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/byte-code</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/ustanovka-jdk</from>
@@ -915,6 +939,10 @@
     <rule>
         <from>^/java/java-core-russian/sozdanie-zapusk-java-prilogenija</from>
         <to type="permanent-redirect">/java/ocpjp8/create-run-java-application</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/create-run-java-application</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/sozdanie-zapusk-java-prilogenija</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/first-application</from>
@@ -936,6 +964,23 @@
         <from>^/java/java-core-russian/switch-operator-russian$</from>
         <to type="permanent-redirect">/java/ocpjp8/switch-statement</to>
     </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/procedural-vs-object-oriented-programming$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/metodiki-programmirovanija</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/metodiki-programmirovanija$</from>
+        <to type="permanent-redirect">/java/ocpjp8/procedural-vs-object-oriented-programming</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/learning-object-oriented-programming$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson7</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson7$</from>
+        <to type="permanent-redirect">/java/ocpjp8/learning-object-oriented-programming</to>
+    </rule>
+
     <rule>
         <from>^/java/java-core-russian/keyword-catch$</from>
         <to type="permanent-redirect">/java/ocpjp8/try-catch</to>
@@ -1617,6 +1662,62 @@
     <rule>
         <from>^/java/java-core-russian/massivi-algoritmi-tasks$</from>
         <to type="permanent-redirect">/java/ocpjp8/debug-bubble-selection-sort</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/git-version-control-introduction$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lesson6</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/lesson6$</from>
+        <to type="permanent-redirect">/java/ocpjp8/git-version-control-introduction</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/version-control-system$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/vcs</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/vcs$</from>
+        <to type="permanent-redirect">/java/ocpjp8/version-control-system</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/git-vs-github$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/github</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/github$</from>
+        <to type="permanent-redirect">/java/ocpjp8/git-vs-github</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/setup-git-github-intellij$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/clone-from-github</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/clone-from-github$</from>
+        <to type="permanent-redirect">/java/ocpjp8/setup-git-github-intellij</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/stream-api-en$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/stream-api</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/stream-api$</from>
+        <to type="permanent-redirect">/java/ocpjp8/stream-api-en</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/convert-int-array-to-list$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/array-to-list-and-back</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/array-to-list-and-back$</from>
+        <to type="permanent-redirect">/java/ocpjp8/convert-int-array-to-list</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/create-stream-api$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/chto-takoe-stream-api</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/chto-takoe-stream-api$</from>
+        <to type="permanent-redirect">/java/ocpjp8/create-stream-api</to>
     </rule>
 
     <rule>

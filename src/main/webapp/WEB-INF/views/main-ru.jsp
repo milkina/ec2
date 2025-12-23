@@ -63,17 +63,21 @@
         </div>
       </div>
       <div class="container">
-         <div class="index-img-div">
-             <div class="col-xs-12 col-md-4">
+         <div class="row">
+         <div class="col-xs-12">
+            <div class="index-img-div clearfix">
+              <div class="col-xs-12 col-md-4">
                 <h1>Бесплатные курсы программирования Java для начинающих</h1>
                  <c:if test="${param.param != null || person == null}">
                    <a class="start-learning" href="#start-course">Начать обучение</a>
                  </c:if>
-             </div>
-             <div class="hidden-xs hidden-sm col-md-8">
-             <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Курсы программирования Java"
+              </div>
+              <div class="hidden-xs hidden-sm col-md-8">
+              <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Курсы программирования Java"
                        width="750" height="400" title="Курсы программирования Java" loading="lazy">
-             </div>
+            </div>
+          </div>
+          </div>
          </div>
       </div>
     </div>

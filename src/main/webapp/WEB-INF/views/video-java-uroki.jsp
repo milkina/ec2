@@ -279,6 +279,7 @@
                              <li><a href="https://youtu.be/KOFWqjyWrEI" target="_self">Принцип PECS</a></li>
                              <li><a href="https://youtu.be/N9_xWJXO5d4" target="_self">Интерфейс Iterator</a></li>
                              <li><a href="https://youtu.be/IOvjv4wwEw4" target="_self">Интерфейс Map и его реализации - классы HashMap, TreeMap и LinkedHashMap</a></li>
+                             <li><a href="https://youtu.be/5xltFdBslO8" target="_self">Backed Collections и Array-backed списки в Java</a></li>
                                              </ol>
                                          </LI>
                                      </ol>
