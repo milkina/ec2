@@ -980,6 +980,78 @@
         <from>^/java/java-core-russian/lesson7$</from>
         <to type="permanent-redirect">/java/ocpjp8/learning-object-oriented-programming</to>
     </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/classes-and-objects-guide$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/oop-klassi-metodi</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/oop-klassi-metodi$</from>
+        <to type="permanent-redirect">/java/ocpjp8/classes-and-objects-guide</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/constructors-default-parameterized-initialization$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/konstruktori</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/konstruktori$</from>
+        <to type="permanent-redirect">/java/ocpjp8/constructors-default-parameterized-initialization</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/keyword-this-guide-constructor-chaining$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/keyword-this</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/keyword-this$</from>
+        <to type="permanent-redirect">/java/ocpjp8/keyword-this-guide-constructor-chaining</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/method-constructor-overloading-guide$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/peregruzka</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/peregruzka$</from>
+        <to type="permanent-redirect">/java/ocpjp8/method-constructor-overloading-guide</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/memory-structure-stack-heap-guide$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/struktura-pamyati</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/struktura-pamyati$</from>
+        <to type="permanent-redirect">/java/ocpjp8/memory-structure-stack-heap-guide</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/passing-objects-to-methods-guide$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/objekt-parametr-metoda</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/objekt-parametr-metoda$</from>
+        <to type="permanent-redirect">/java/ocpjp8/passing-objects-to-methods-guide</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/varargs-variable-length-arguments$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/var-args</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/var-args$</from>
+        <to type="permanent-redirect">/java/ocpjp8/varargs-variable-length-arguments</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/recursion-in-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/recursion</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/recursion$</from>
+        <to type="permanent-redirect">/java/ocpjp8/recursion-in-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/garbage-collection$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/metod-finalize</to>
+    </rule>
+    <rule>
+        <from>^/java/java-core-russian/metod-finalize$</from>
+        <to type="permanent-redirect">/java/ocpjp8/garbage-collection</to>
+    </rule>
 
     <rule>
         <from>^/java/java-core-russian/keyword-catch$</from>
