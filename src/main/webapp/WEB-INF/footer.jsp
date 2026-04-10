@@ -35,7 +35,7 @@
                </div>
            </div>
            <div class="footer-bottom">
-               &copy; 2025 ExamClouds. All Rights Reserved.
+               &copy; 2026 ExamClouds. All Rights Reserved.
            </div>
        </footer>
     </div>
