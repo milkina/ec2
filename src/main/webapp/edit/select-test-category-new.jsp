@@ -1,4 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/selectTestCategory.js" async></script>
 <%@ taglib uri="/WEB-INF/tld/select-test-category-tagjsp-taglib.tld" prefix="select"%>
 <strong class="adminLabel"><spring:message code="course"/>:</strong>
