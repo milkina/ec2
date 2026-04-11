@@ -1,7 +1,4 @@
-<!-- Preconnect to critical CDN origins to establish connections early -->
-<link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
-<link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<!-- Preconnect to critical CDN origins (limited to most important) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
