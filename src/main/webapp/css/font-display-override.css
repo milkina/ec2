@@ -1,0 +1,37 @@
+/* Font Display Optimization - Override external CDN fonts to use font-display: swap */
+
+/* FontAwesome Brands Font */
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.eot');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.eot?#iefix') format('embedded-opentype'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.woff2') format('woff2'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.woff') format('woff'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.svg#fontawesome') format('svg');
+    font-display: swap;
+}
+
+/* FontAwesome Solid Font */
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.eot');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff2') format('woff2'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff') format('woff'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.svg#fontawesome') format('svg');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* Bootstrap Glyphicons Font */
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.eot');
+    src: url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+         url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+         url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff') format('woff'),
+         url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+         url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+    font-display: swap;
+}
+

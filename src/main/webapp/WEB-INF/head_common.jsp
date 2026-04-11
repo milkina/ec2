@@ -1,6 +1,14 @@
+<!-- Preload font files with highest priority -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style">
 <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" as="style">
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" as="style">
+
+<!-- Font Display Override - Adds font-display:swap to external CDN fonts -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-display-override.css">
 
 <!-- Async load non-critical CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
