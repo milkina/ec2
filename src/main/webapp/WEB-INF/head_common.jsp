@@ -1,12 +1,30 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" async defer></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" async defer integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14">
-<!-- Google Tag Manager -->
-<script src="${pageContext.request.contextPath}/js/googleTagManager.js" async></script>
-<!-- End Google Tag Manager -->
-<script src="${pageContext.request.contextPath}/js/general.js" async></script>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style">
+<link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&subset=cyrillic,cyrillic-ext,latin-ext" as="style">
+
+<!-- Async load non-critical CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></noscript>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&subset=cyrillic,cyrillic-ext,latin-ext" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&subset=cyrillic,cyrillic-ext,latin-ext"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/hamburgers.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/hamburgers.css"></noscript>
+
+<!-- JavaScript (keep async/defer for non-blocking, but ensure order for jQuery/Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" async defer></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/general/fav.ico" type="image/x-icon">
 <meta name="msvalidate.01" content="1EA6E20A8E37F3439A3AB653B71B0EF9">
