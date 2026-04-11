@@ -30,7 +30,6 @@
     <meta name="twitter:site" content="@ExamClouds">
     <meta name="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
     <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
-    <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet">
      <script type="application/ld+json">
         {
           "@context": "https://schema.org",

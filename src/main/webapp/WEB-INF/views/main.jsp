@@ -30,7 +30,8 @@
         <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
         <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
         <meta property="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
-        <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css"></noscript>
         <script type="application/ld+json">{
                   "@context": "https://schema.org",
                   "url": "https://www.examclouds.com",

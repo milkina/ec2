@@ -38,12 +38,11 @@
         <c:if test="${article.language.code=='en'}">
          <li>
            <div class="row article-head-date">
-             <h2 class="article-head col-xs-12 col-sm-9">${article.title}</h2>
+             <h2 class="article-head col-xs-12 col-sm-9"><a href="${pageContext.request.contextPath}/${article.url}" class="article-url">${article.title}</a></h2>
              <div class="col-xs-12 col-sm-3 article-date">${article.formattedDate}</div>
            </div>
            <div class="article-author">${article.author.login}</div>
            <div class="article-desc">${article.description}</div>
-           <a href="${pageContext.request.contextPath}/${article.url}" class="article-url"><spring:message code="read.more"/></a>
          </li>
          </c:if>
         </c:forEach>
