@@ -1,3 +1,19 @@
+<!-- Preconnect to critical CDN origins to establish connections early -->
+<link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- DNS-prefetch fallback for older browsers -->
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+
 <!-- Preload font files with highest priority -->
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -8,7 +24,8 @@
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" as="style">
 
 <!-- Font Display Override - Adds font-display:swap to external CDN fonts -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-display-override.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-display-override.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-display-override.css"></noscript>
 
 <!-- Async load non-critical CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
@@ -28,10 +45,10 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/hamburgers.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/hamburgers.css"></noscript>
 
-<!-- JavaScript (keep async/defer for non-blocking, but ensure order for jQuery/Bootstrap) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" async defer></script>
+<!-- JavaScript (deferred for non-blocking, maintains order: jQuery first, then Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/general/fav.ico" type="image/x-icon">
