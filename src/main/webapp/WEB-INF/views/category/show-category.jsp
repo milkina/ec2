@@ -123,13 +123,15 @@
            <div>
              <spring:message code="read.also"/>:
               <ul>
-                  <c:forEach var="subCategory" items="${CATEGORY_ATTRIBUTE.parentCategory.subCategories}">
-                   <c:if test="${subCategory!=CATEGORY_ATTRIBUTE}">
-                     <li><a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${subCategory.pathName}">${subCategory.name}
-                         </a>
-                     </li>
-                   </c:if>
-                  </c:forEach>
+                <c:set var="liCount" value="0" />
+                <c:forEach var="subCategory" items="${CATEGORY_ATTRIBUTE.parentCategory.subCategories}">
+                  <c:if test="${subCategory!=CATEGORY_ATTRIBUTE && liCount < 5}">
+                    <li><a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${subCategory.pathName}">${subCategory.name}
+                        </a>
+                    </li>
+                    <c:set var="liCount" value="${liCount + 1}" />
+                  </c:if>
+                </c:forEach>
               </ul>
            </div>
          </c:if>
