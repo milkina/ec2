@@ -4,13 +4,14 @@
 @import url(menu.css);
 @import url(ui.totop.css) screen,projection;
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800&subset=cyrillic,cyrillic-ext,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
 @font-face {
     font-family: 'proxima';
     src: url('../fonts/proxima/ProximaNova-Regular.eot');
     src: url('../fonts/proxima/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
          url('../fonts/proxima/ProximaNova-Regular.woff') format('woff'),
          url('../fonts/proxima/ProximaNova-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: 'proxima-semibold';
@@ -18,6 +19,7 @@
     src: url('../fonts/proxima/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
          url('../fonts/proxima/ProximaNova-Semibold.woff') format('woff'),
          url('../fonts/proxima/ProximaNova-Semibold.ttf') format('truetype');
+    font-display: swap;
 }
 .clearfix:after{
   content: "";

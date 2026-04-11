@@ -1,14 +1,14 @@
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style">
 <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" as="style">
-<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&subset=cyrillic,cyrillic-ext,latin-ext" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" as="style">
 
 <!-- Async load non-critical CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></noscript>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&subset=cyrillic,cyrillic-ext,latin-ext" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&subset=cyrillic,cyrillic-ext,latin-ext"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"></noscript>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14"></noscript>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css" media="print" onload="this.media='all'">
