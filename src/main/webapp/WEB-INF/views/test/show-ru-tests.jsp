@@ -24,8 +24,8 @@
      <meta property="twitter:card" content="summary">
      <meta property="twitter:description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
      <meta property="twitter:site" content="@ExamClouds">
-     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
-     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+     <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+     <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
      <meta property="twitter:image:alt" content="Бесплатные тесты по Java: уровень знаний и подготовка к интервью">
      </jsp:attribute>
     <jsp:body>

@@ -31,16 +31,16 @@
 <noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></noscript>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"></noscript>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14"></noscript>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css"></noscript>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css"></noscript>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css"></noscript>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/hamburgers.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/hamburgers.css"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14"></noscript>
 
 <!-- JavaScript (deferred for non-blocking, maintains order: jQuery first, then Bootstrap) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
@@ -48,7 +48,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/images/general/fav.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://img.examclouds.com/general/fav.ico" type="image/x-icon">
 <meta name="msvalidate.01" content="1EA6E20A8E37F3439A3AB653B71B0EF9">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7148099013705432"
         crossorigin="anonymous"></script>
@@ -64,7 +64,7 @@
       "@type": "EducationalOrganization",
       "name": "ExamClouds",
       "url": "https://www.examclouds.com",
-      "logo": "https://www.examclouds.com/logo.png",
+       "logo": "https://img.examclouds.com/general/logo.svg",
       "sameAs": [
         "https://www.facebook.com/examclouds",
         "https://www.twitter.com/examclouds",

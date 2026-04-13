@@ -12,7 +12,7 @@
            </span>
         </button>
         <div id="home" class="logo">
-          <img src="${pageContext.request.contextPath}/images/general/logo.svg" alt="<spring:message code="welcome.on"/> ExamClouds"
+          <img src="https://img.examclouds.com/general/logo.svg" alt="<spring:message code="welcome.on"/> ExamClouds"
           width="122" height="49" title="<spring:message code="welcome.on"/> ExamClouds" loading="lazy">
         </div>
      </div>

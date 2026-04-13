@@ -24,8 +24,8 @@
       <meta property="twitter:card" content="summary">
       <meta property="twitter:description" content="Подготовьтесь к собеседованию по Java с нашими вопросами и ответами. Узнайте ключевые Java Core вопросы, технические вопросы и вопросы по API Java.">
       <meta property="twitter:site" content="@ExamClouds">
-      <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
-      <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+      <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+      <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
       <meta property="twitter:image:alt" content="Вопросы для собеседования по Java | Подготовка и интервью вопросы">
     </jsp:attribute>
     <jsp:body>

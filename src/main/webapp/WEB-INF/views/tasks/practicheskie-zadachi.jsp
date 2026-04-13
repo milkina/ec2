@@ -22,8 +22,8 @@
      <meta property="twitter:card" content="summary">
      <meta property="twitter:description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
      <meta property="twitter:site" content="@ExamClouds">
-     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
-     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+     <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+     <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
      <meta property="twitter:image:alt" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
 <script type="application/ld+json">
 {
@@ -40,7 +40,7 @@
     "name": "ExamClouds",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.examclouds.com/images/general/logo.svg"
+      "url": "https://img.examclouds.com/general/logo.svg"
     }
   },
   "mainEntityOfPage": "https://www.examclouds.com/ru/practicheskie-zadachi"

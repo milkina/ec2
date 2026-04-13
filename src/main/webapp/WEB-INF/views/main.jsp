@@ -26,9 +26,9 @@
         <meta property="twitter:card" content="summary">
         <meta property="twitter:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
         <meta property="twitter:site" content="@ExamClouds">
-        <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
+        <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
         <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
-        <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+        <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
         <meta property="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css" media="print" onload="this.media='all'">
         <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css"></noscript>
@@ -53,7 +53,7 @@
                     <h2>Start learning Java? Welcome to ExamClouds</h2>
                  </div>
                  <div class="hidden-xs hidden-sm col-md-8">
-                              <img src="${pageContext.request.contextPath}/images/general/index-image.webp" alt="Start learning Java? Welcome to ExamClouds"
+                              <img src="https://img.examclouds.com/general/index-image.webp" alt="Start learning Java? Welcome to ExamClouds"
                                         width="750" height="400" title="Start learning Java? Welcome to ExamClouds" loading="lazy">
                  </div>
                            </div>

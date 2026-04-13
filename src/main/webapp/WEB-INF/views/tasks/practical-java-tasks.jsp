@@ -22,8 +22,8 @@
      <meta property="twitter:card" content="summary">
      <meta property="twitter:description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
      <meta property="twitter:site" content="@ExamClouds">
-     <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
-     <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+     <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+     <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
      <meta property="twitter:image:alt" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
 <script type="application/ld+json">
 {
@@ -40,7 +40,7 @@
     "name": "ExamClouds",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.examclouds.com/images/general/logo.svg"
+      "url": "https://img.examclouds.com/general/logo.svg"
     }
   },
   "mainEntityOfPage": "https://www.examclouds.com/practical-java-tasks"

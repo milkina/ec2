@@ -10,8 +10,8 @@
     <meta property="twitter:image" content="${CATEGORY_ATTRIBUTE.article.image}">
  </c:when>
  <c:otherwise>
-   <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
-   <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+   <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+   <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
  </c:otherwise>
 </c:choose>
 <meta property="twitter:image:alt" content="<c:out value="${titleName}"/>">

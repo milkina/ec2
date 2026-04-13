@@ -11,4 +11,5 @@ Disallow: /start-quiz
 Disallow: /see-questions
 Disallow: /finish-exam
 Disallow: /*?lang=
+Disallow: /cdn-cgi/
 Sitemap: https://www.examclouds.com/sitemap.xml

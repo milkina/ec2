@@ -28,8 +28,8 @@
               <meta property="twitter:image:alt" content="${ARTICLE_ATTRIBUTE.title}">
         </c:when>
         <c:otherwise>
-              <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
-              <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+              <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+              <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
               <meta property="twitter:image:alt" content="<spring:message code="welcome.on"/> ExamClouds">
         </c:otherwise>
     </c:choose>

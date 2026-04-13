@@ -21,8 +21,8 @@
     <meta property="twitter:card" content="summary">
     <meta property="twitter:description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
     <meta property="twitter:site" content="@ExamClouds">
-    <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg">
-    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+    <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+    <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
     <meta property="twitter:image:alt" content="Статьи из IT сферы на ExamClouds">
   </jsp:attribute>
   <jsp:body>

@@ -179,7 +179,7 @@ h4, .header4{
    width: 29px;
    height: 23px;
    display: inline-block;
-   background: url('../images/general/sprites.webp') -97px -13px
+   background: url('https://img.examclouds.com/general/sprites.webp') -97px -13px
 }
 .comment-user{
     font:700 21px proxima;
@@ -307,7 +307,7 @@ h4, .header4{
 .all-tests-header:before{
     content:"";
     display:block;
-    background: url('../images/general/sprites.webp') 6px -99px;
+    background: url('https://img.examclouds.com/general/sprites.webp') 6px -99px;
     width:101px;
     height:110px;
     margin: 15px auto
@@ -321,7 +321,7 @@ h4, .header4{
 .all-questions-header:before{
    content:"";
    display:block;
-   background: url('../images/general/sprites.webp') 6px -230px;
+   background: url('https://img.examclouds.com/general/sprites.webp') 6px -230px;
    width:121px;
    height:111px;
    margin: 15px auto
@@ -376,7 +376,7 @@ h4, .header4{
 .index-image-pig:before,.index-image-globe:before,.index-image-flags:before{
     content:"";
     display:block;
-    background: url('../images/general/sprites.webp');
+    background: url('https://img.examclouds.com/general/sprites.webp');
     height:228px;
 }
 .index-item1:before,.index-item2:before,.index-item3:before,.index-item4:before{
@@ -756,7 +756,7 @@ input[type="checkbox"].test-checkbox:checked+label:after{
 .show-course-header:before{
   margin: 0 auto 27px;
   content:'';
-  background: url('../images/courses/javaacup.png') no-repeat;
+  background: url('https://img.examclouds.com/courses/javaacup.png') no-repeat;
   width: 87px;
   height: 156px;
   display:block;
@@ -847,7 +847,7 @@ input[type="checkbox"].test-checkbox:checked+label:after{
 }
 #addComment{
   display:block;
-  background: url('../images/general/sprites.webp') -216px -2px;
+  background: url('https://img.examclouds.com/general/sprites.webp') -216px -2px;
   padding: 1px;
   width: 27px;
   height: 27px

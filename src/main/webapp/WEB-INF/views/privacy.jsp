@@ -15,12 +15,12 @@
     <meta property="og:description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have.">
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com/privacy">
-    <meta property="og:image" content="https://www.examclouds.com/images/general/logo.svg"/>
+    <meta property="og:image" content="https://img.examclouds.com/general/logo.svg"/>
     <meta property="twitter:title" content="Privacy Policy for ExamClouds">
     <meta property="twitter:card" content="summary">
     <meta property="twitter:description" content="This page outlines the privacy policy of ExamClouds. It details the types of data collected, how it is used and protected, and the rights users have.">
     <meta property="twitter:site" content="@ExamClouds">
-    <meta property="twitter:image" content="https://www.examclouds.com/images/general/logo.svg">
+    <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
     <meta property="twitter:image:alt" content="Privacy Policy for ExamClouds">
  </jsp:attribute>
     <jsp:body>
