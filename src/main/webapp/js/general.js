@@ -214,8 +214,3 @@ $(function() {
   });
 
 });
-+function($){
-  $(document).ready(function(){
-    $('.external-reference').replaceWith (function (){return'<a onclick="return !window.open(this.href)" href="'+$(this).data('link')+'" title="'+$(this).text()+'" >'+$(this).html()+'</a>';});
-  });
-}(jQuery);

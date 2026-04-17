@@ -128,7 +128,7 @@
                     <h3>Видеоуроки</h3>
                    </div>
                    <p><a href="${pageContext.request.contextPath}/ru/video-java-uroki">Бесплатные интернет видео уроки по Java</a> улучшают понимание материала.
-                   Подписывайтесь на наш&nbsp;<span class="external-reference" data-link="https://www.youtube.com/c/tatyanamilkina">канал&nbsp;на YouTube </span>и смотрите видео к урокам.</p>
+                   Подписывайтесь на наш&nbsp;<a href="https://www.youtube.com/c/tatyanamilkina"  rel="nofollow noopener noreferrer" target="_blank">канал&nbsp;на YouTube </a>и смотрите видео к урокам.</p>
                  </div>
                  <div class="col-md-4">
                    <div class="icon-container">
@@ -173,7 +173,7 @@
               </section>
               <section>
               <h2 class="main-page-header" id="certificate">Сертификат</h2>
-              <p class="index-items-text">Для тех, кто стремится получить сертификат, рекомендуем обратить внимание на наш <span class="external-reference" data-link="https://www.udemy.com/course/java-bup/">курс на Udemy</span>.
+              <p class="index-items-text">Для тех, кто стремится получить сертификат, рекомендуем обратить внимание на наш <a href="https://www.udemy.com/course/java-bup/" rel="nofollow sponsored" target="_blank">курс на Udemy</a>.
               Там вы сможете не только закрепить свои знания, но и получить официальный документ, подтверждающий ваше обучение.
               </p>
               </section>

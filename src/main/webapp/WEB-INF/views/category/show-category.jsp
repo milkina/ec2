@@ -53,14 +53,14 @@
                      </c:if>
             <div class="author">Author: Tatyana Milkina
               <div class="author-social-icons"><ul class="social-icons-author">
-                                       <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow"><i class="fab fa-patreon"></i></a></li>
+                                       <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow sponsored"><i class="fab fa-patreon"></i></a></li>
                                        <li><a href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
                                        <li><a href="http://www.facebook.com/Examclouds" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></li>
                                        <li><a href="http://twitter.com/ExamClouds" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></li>
                                        <li><a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow"><i class="fab fa-linkedin"></i></a></li>
                                        <li><a href="https://t.me/examclouds/" target="_blank" rel="nofollow"><i class="fab fa-telegram"></i></a></li>
-                                       <li><a href="https://ko-fi.com/examclouds" target="_blank" rel="nofollow"><i class="fas fa-coffee"></i></a></li>
-                                       <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow"><i class="fas fa-graduation-cap"></i></a></li>
+                                       <li><a href="https://ko-fi.com/examclouds" target="_blank" rel="nofollow sponsored"><i class="fas fa-coffee"></i></a></li>
+                                       <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored"><i class="fas fa-graduation-cap"></i></a></li>
               </ul></div>
               </div>
             <c:if test="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}">
@@ -71,9 +71,9 @@
             </c:if>
             ${CATEGORY_ATTRIBUTE.article.text}
              <c:if test="${pageLanguage=='ru'}">
-                <span class="external-reference" data-link="https://www.udemy.com/course/java-bup/"><img class="img-responsive" src="https://img.examclouds.com/ad1.png" loading="lazy"
-                                     width ="546" height="475" alt="Курс 'Java для начинающих' на Udemy" title="Курс 'Java для начинающих' на Udemy"></span>
-                <span class="external-reference" data-link="https://www.udemy.com/course/java-bup/">Курс 'Java для начинающих' на Udemy</span>
+                <a href="https://www.udemy.com/course/java-bup/"><img class="img-responsive" src="https://img.examclouds.com/ad1.png" loading="lazy"
+                                     width ="546" height="475" rel="nofollow sponsored" target="_blank" alt="Курс 'Java для начинающих' на Udemy" title="Курс 'Java для начинающих' на Udemy"></a>
+                <a href="https://www.udemy.com/course/java-bup/" rel="nofollow sponsored" target="_blank">Курс 'Java для начинающих' на Udemy</a>
             </c:if>
          </div>
            <c:if test="${not empty CATEGORY_ATTRIBUTE.subCategories}">

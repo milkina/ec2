@@ -36,7 +36,7 @@ body{
   min-height:100vh;
   box-sizing:border-box
 }
-a,span.external-reference{
+a{
   color:#4c82be;
   font:700 19px proxima
 }
