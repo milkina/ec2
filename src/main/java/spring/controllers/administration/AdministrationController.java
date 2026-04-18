@@ -53,4 +53,14 @@ public class AdministrationController {
     public String showPrivacyRu() {
         return "privacy-ru";
     }
+
+    @RequestMapping(value = "/ru/tatyana-milkina")
+    public String showAuthorRu() {
+        return "author/tatyana-milkina-ru";
+    }
+
+    @RequestMapping(value = "/tatyana-milkina")
+    public String showAuthor() {
+        return "author/tatyana-milkina";
+    }
 }

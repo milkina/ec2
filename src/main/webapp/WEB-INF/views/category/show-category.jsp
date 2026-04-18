@@ -51,18 +51,10 @@
                        <img class="categoryImage" src="${CATEGORY_ATTRIBUTE.article.image}" loading="lazy"
                          width ="280" height="200" alt="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>" title="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>">
                      </c:if>
-            <div class="author">Author: Tatyana Milkina
-              <div class="author-social-icons"><ul class="social-icons-author">
-                                       <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow sponsored"><i class="fab fa-patreon"></i></a></li>
-                                       <li><a href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-                                       <li><a href="http://www.facebook.com/Examclouds" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></li>
-                                       <li><a href="http://twitter.com/ExamClouds" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></li>
-                                       <li><a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow"><i class="fab fa-linkedin"></i></a></li>
-                                       <li><a href="https://t.me/examclouds/" target="_blank" rel="nofollow"><i class="fab fa-telegram"></i></a></li>
-                                       <li><a href="https://ko-fi.com/examclouds" target="_blank" rel="nofollow sponsored"><i class="fas fa-coffee"></i></a></li>
-                                       <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored"><i class="fas fa-graduation-cap"></i></a></li>
-              </ul></div>
-              </div>
+            <div class="author">
+            <img src="https://img.examclouds.com/general/tatyana-milkina-small.jpg" alt="Tatyana Milkina" class="author-img-small"/>
+            Author: <a href="${pageContext.request.contextPath}/${pathLanguage}tatyana-milkina">Tatyana Milkina</a>
+                            </div>
             <c:if test="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}">
                   <iframe width="100%" height="315" src="${fn:replace(CATEGORY_ATTRIBUTE.videoPath, "youtu.be", "www.youtube.com/embed")}"
                       frameborder="0" name="youtubeVideo" title="<c:out value="${titleName}"/>" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

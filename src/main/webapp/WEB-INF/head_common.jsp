@@ -20,11 +20,6 @@
 <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" as="style">
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" as="style">
 
-<!-- Preload Montserrat font weights from Google Fonts with highest priority -->
-<link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v48/JTUSjIg1_i6t8kCHKm459WlhzWTh89ZNpQ.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v48/JTUSjIg1_i6t8kCHHm459WlhzWTh89ZNpQ.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v48/JTUSjIg1_i6t8kCHCm459WlhzWTh89ZNpQ.woff2" as="font" type="font/woff2" crossorigin>
-
 <!-- Font Display Override - Adds font-display:swap to external CDN fonts -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-display-override.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-display-override.css"></noscript>
@@ -44,8 +39,8 @@
 <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css"></noscript>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css"></noscript>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=14"></noscript>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=16" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=16"></noscript>
 
 <!-- JavaScript (deferred for non-blocking, maintains order: jQuery first, then Bootstrap) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
