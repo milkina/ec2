@@ -51,10 +51,19 @@
                        <img class="categoryImage" src="${CATEGORY_ATTRIBUTE.article.image}" loading="lazy"
                          width ="280" height="200" alt="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>" title="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>">
                      </c:if>
-            <div class="author">
-            <img src="https://img.examclouds.com/general/tatyana-milkina-small.jpg" alt="Tatyana Milkina" class="author-img-small"/>
-            Author: <a href="${pageContext.request.contextPath}/${pathLanguage}tatyana-milkina">Tatyana Milkina</a>
-                            </div>
+            <div class="author-category">
+              <img src="https://img.examclouds.com/general/tatyana-milkina-small.jpg"
+                   alt="Tatyana Milkina"
+                   class="author-img-small"
+                   width="50"
+                   height="50"
+                   loading="lazy"/>
+              <div class="author-info">
+                <span class="author-label"><spring:message code="author"/>:</span>
+                <a href="${pageContext.request.contextPath}/${pathLanguage}tatyana-milkina"
+                   class="author-link">Tatyana Milkina</a>
+              </div>
+            </div>
             <c:if test="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}">
                   <iframe width="100%" height="315" src="${fn:replace(CATEGORY_ATTRIBUTE.videoPath, "youtu.be", "www.youtube.com/embed")}"
                       frameborder="0" name="youtubeVideo" title="<c:out value="${titleName}"/>" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

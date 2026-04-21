@@ -7,6 +7,27 @@
 <t:wrapper>
   <jsp:attribute name="header">
     <title>Tatyana Milkina | ExamClouds</title>
+    <meta name="description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
+     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tatyana-milkina">
+     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tatyana-milkina">
+     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tatyana-milkina">
+     <link rel="canonical" href="https://www.examclouds.com/tatyana-milkina">
+     <meta property="og:title" content="Tatyana Milkina | ExamClouds">
+             <meta property="og:type" content="article">
+             <meta property="og:description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
+             <meta property="og:site_name" content="ExamClouds">
+             <meta property="og:url" content="https://www.examclouds.com/tatyana-milkina">
+             <meta property="og:published_time" content="2026-22-04T12:00:00Z">
+             <meta property="og:modified_time" content="2026-22-04T12:00:00Z">
+             <meta property="og:image" content="https://img.examclouds.com/general/tatyana-milkina-small.jpg">
+             <meta property="og:image:alt" content="Tatyana Milkina | ExamClouds">
+     <meta name="twitter:title" content="Tatyana Milkina | ExamClouds">
+         <meta name="twitter:card" content="summary">
+         <meta name="twitter:description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
+         <meta name="twitter:site" content="@ExamClouds">
+         <meta name="twitter:image" content="https://img.examclouds.com/general/tatyana-milkina-small.jpg">
+         <meta name="twitter:image:alt" content="Tatyana Milkina | ExamClouds">
+
  </jsp:attribute>
  <jsp:body>
     <div class="mainArea">
@@ -26,19 +47,22 @@
           <h2>Tatyana Milkina</h2>
           <p><strong>Senior Java Developer & Java Instructor</strong></p>
           <p>
-              I am a Java developer with over 10 years of experience in software engineering and education.
-              I have worked on enterprise systems in healthcare, telecom, and HR domains using Java, Spring Framework and Hibernate.
-          </p>
+             I am an experienced Java developer, instructor, and the author of the ExamClouds project.</p>
+             <p>With over 14 years of experience in IT, I develop enterprise web applications using Java, Spring, and Hibernate, and teaches programming from scratch to a confident mid-level developer standard.</p>
+             <p>I have worked on international projects in healthcare, HR, and telecommunications, focusing on building complex business solutions and integrations.</p>
+             <p>As a Java instructor, I have helped hundreds of students understand key programming concepts, including OOP, collections, multithreading, DB.</p>
+             <p>On ExamClouds, I share structured learning materials, tests, and practical examples, helping developers learn Java systematically and prepare for job interviews. </p>
           <h3>Experience</h3>
           <ul>
-              <li>10+ years in software development</li>
-              <li>7 years as Java Developer</li>
-              <li>3+ years teaching Java Core and OOP</li>
+              <li>14+ years in software development</li>
+              <li>8 years as Java Developer</li>
+              <li>5+ years teaching Java Core and OOP</li>
           </ul>
           <h3>Topics I write about</h3>
           <ul>
               <li>Java Core</li>
               <li>OOP Principles</li>
+              <li>DB</li>
           </ul>
       </div>
  </jsp:body>
