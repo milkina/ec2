@@ -317,6 +317,7 @@
     </profile>
     </profiles>
     <build>
+        <finalName>ROOT</finalName>
         <plugins>
             <!-- Part of Maven - specified version explicitly for compatibility
                  with the maven-project-info-reports-plugin 3.0.0-->
