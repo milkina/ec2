@@ -6,13 +6,13 @@
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <t:wrapper>
   <jsp:attribute name="header">
-    <title>Татьяна Милькина | ExamClouds</title>
+    <title>Татьяна Милькина — Java-разработчик и автор | ExamClouds</title>
     <meta name="description" content="Татьяна Милькина — Java-разработчик и автор ExamClouds. Курсы, практика и обучение Java с нуля до уверенного уровня разработчика.">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tatyana-milkina">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tatyana-milkina">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tatyana-milkina">
     <link rel="canonical" href="https://www.examclouds.com/ru/tatyana-milkina">
-    <meta property="og:title" content="Татьяна Милькина | ExamClouds">
+    <meta property="og:title" content="Татьяна Милькина — Java-разработчик и автор | ExamClouds">
         <meta property="og:type" content="article">
         <meta property="og:description" content="Татьяна Милькина — Java-разработчик и автор ExamClouds. Курсы, практика и обучение Java с нуля до уверенного уровня разработчика.">
         <meta property="og:site_name" content="ExamClouds">
@@ -20,13 +20,13 @@
         <meta property="og:published_time" content="2026-22-04T12:00:00Z">
         <meta property="og:modified_time" content="2026-22-04T12:00:00Z">
         <meta property="og:image" content="https://img.examclouds.com/general/tatyana-milkina-small.jpg">
-        <meta property="og:image:alt" content="Татьяна Милькина | ExamClouds">
-<meta name="twitter:title" content="Татьяна Милькина | ExamClouds">
+        <meta property="og:image:alt" content="Татьяна Милькина — Java-разработчик и автор | ExamClouds">
+<meta name="twitter:title" content="Татьяна Милькина — Java-разработчик и автор | ExamClouds">
          <meta name="twitter:card" content="summary">
          <meta name="twitter:description" content="Татьяна Милькина — Java-разработчик и автор ExamClouds. Курсы, практика и обучение Java с нуля до уверенного уровня разработчика.">
          <meta name="twitter:site" content="@ExamClouds">
          <meta name="twitter:image" content="https://img.examclouds.com/general/tatyana-milkina-small.jpg">
-         <meta name="twitter:image:alt" content="Татьяна Милькина | ExamClouds">
+         <meta name="twitter:image:alt" content="Татьяна Милькина — Java-разработчик и автор | ExamClouds">
  </jsp:attribute>
  <jsp:body>
     <div class="mainArea">
@@ -47,7 +47,7 @@
           <p><strong>Senior Java Developer & Java Instructor</strong></p>
           <p>
              Я опытный Java-разработчик, преподаватель и автор проекта ExamClouds.</p>
-              <p>Имея более 14 лет опыта в IT, a разрабатываю корпоративные веб-приложения с использованием Java, Spring и Hibernate, а также обучаю программированию с нуля до уровня уверенного middle-разработчика.</p>
+              <p>Имея более 14 лет опыта в IT, я разрабатываю корпоративные веб-приложения с использованием Java, Spring и Hibernate, а также обучаю программированию с нуля до уровня уверенного middle-разработчика.</p>
               <p>Работала в международных проектах в сферах healthcare, HR и телекоммуникаций, где занималась разработкой сложных бизнес-решений и интеграций.</p>
               <p>Как преподаватель Java, я помогла сотням студентов разобраться в ключевых концепциях программирования, включая ООП, коллекции, многопоточность.</p>
               <p>На сайте ExamClouds я делюсь структурированными учебными материалами, тестами и практическими примерами, помогая разработчикам системно изучать Java и готовиться к собеседованиям.

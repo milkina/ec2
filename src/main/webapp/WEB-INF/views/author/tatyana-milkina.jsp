@@ -6,13 +6,13 @@
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <t:wrapper>
   <jsp:attribute name="header">
-    <title>Tatyana Milkina | ExamClouds</title>
+    <title>Tatyana Milkina - Java developer and the author| ExamClouds</title>
     <meta name="description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
      <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tatyana-milkina">
      <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tatyana-milkina">
      <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tatyana-milkina">
      <link rel="canonical" href="https://www.examclouds.com/tatyana-milkina">
-     <meta property="og:title" content="Tatyana Milkina | ExamClouds">
+     <meta property="og:title" content="Tatyana Milkina - Java developer and the author | ExamClouds">
              <meta property="og:type" content="article">
              <meta property="og:description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
              <meta property="og:site_name" content="ExamClouds">
@@ -20,14 +20,13 @@
              <meta property="og:published_time" content="2026-22-04T12:00:00Z">
              <meta property="og:modified_time" content="2026-22-04T12:00:00Z">
              <meta property="og:image" content="https://img.examclouds.com/general/tatyana-milkina-small.jpg">
-             <meta property="og:image:alt" content="Tatyana Milkina | ExamClouds">
-     <meta name="twitter:title" content="Tatyana Milkina | ExamClouds">
+             <meta property="og:image:alt" content="Tatyana Milkina - Java developer and the author | ExamClouds">
+     <meta name="twitter:title" content="Tatyana Milkina - Java developer and the author | ExamClouds">
          <meta name="twitter:card" content="summary">
          <meta name="twitter:description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
          <meta name="twitter:site" content="@ExamClouds">
          <meta name="twitter:image" content="https://img.examclouds.com/general/tatyana-milkina-small.jpg">
-         <meta name="twitter:image:alt" content="Tatyana Milkina | ExamClouds">
-
+         <meta name="twitter:image:alt" content="Tatyana Milkina - Java developer and the author | ExamClouds">
  </jsp:attribute>
  <jsp:body>
     <div class="mainArea">
