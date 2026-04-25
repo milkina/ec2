@@ -34,14 +34,14 @@
       <div class="author">
           <img src="https://img.examclouds.com/general/tatyana-milkina.jpg" class="author-img" alt="Tatyana Milkina Java Developer" />
           <div class="author-social-icons"><ul class="social-icons-author">
-                                                 <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow sponsored"><i class="fab fa-patreon"></i></a></li>
-                                                 <li><a href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-                                                 <li><a href="http://www.facebook.com/Examclouds" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></li>
-                                                 <li><a href="http://twitter.com/ExamClouds" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></li>
-                                                 <li><a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow"><i class="fab fa-linkedin"></i></a></li>
-                                                 <li><a href="https://t.me/examclouds/" target="_blank" rel="nofollow"><i class="fab fa-telegram"></i></a></li>
-                                                 <li><a href="https://ko-fi.com/examclouds" target="_blank" rel="nofollow sponsored"><i class="fas fa-coffee"></i></a></li>
-                                                 <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored"><i class="fas fa-graduation-cap"></i></a></li>
+                                                 <li><a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="nofollow sponsored noopener"><i class="fab fa-patreon"></i></a></li>
+                                                 <li><a href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="nofollow noopener"><i class="fab fa-youtube"></i></a></li>
+                                                 <li><a href="http://www.facebook.com/Examclouds" target="_blank" rel="nofollow noopener"><i class="fab fa-facebook"></i></a></li>
+                                                 <li><a href="http://twitter.com/ExamClouds" target="_blank" rel="nofollow noopener"><i class="fab fa-twitter"></i></a></li>
+                                                 <li><a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow noopener"><i class="fab fa-linkedin"></i></a></li>
+                                                 <li><a href="https://t.me/examclouds/" target="_blank" rel="nofollow noopener"><i class="fab fa-telegram"></i></a></li>
+                                                 <li><a href="https://ko-fi.com/examclouds" target="_blank" rel="nofollow sponsored noopener"><i class="fas fa-coffee"></i></a></li>
+                                                 <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored noopener"><i class="fas fa-graduation-cap"></i></a></li>
                         </ul></div></div>
           <h2>Tatyana Milkina</h2>
           <p><strong>Senior Java Developer & Java Instructor</strong></p>

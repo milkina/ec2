@@ -72,9 +72,9 @@
             </c:if>
             ${CATEGORY_ATTRIBUTE.article.text}
              <c:if test="${pageLanguage=='ru'}">
-                <a href="https://www.udemy.com/course/java-bup/"><img class="img-responsive" src="https://img.examclouds.com/ad1.png" loading="lazy"
-                                     width ="546" height="475" rel="nofollow sponsored" target="_blank" alt="Курс 'Java для начинающих' на Udemy" title="Курс 'Java для начинающих' на Udemy"></a>
-                <a href="https://www.udemy.com/course/java-bup/" rel="nofollow sponsored" target="_blank">Курс 'Java для начинающих' на Udemy</a>
+                <a href="https://www.udemy.com/course/java-bup/" rel="noopener nofollow sponsored" target="_blank"><img class="img-responsive" src="https://img.examclouds.com/ad1.png" loading="lazy"
+                                     width ="546" height="475" alt="Курс 'Java для начинающих' на Udemy" title="Курс 'Java для начинающих' на Udemy"></a>
+                <a href="https://www.udemy.com/course/java-bup/" rel="nofollow sponsored noopener" target="_blank">Курс 'Java для начинающих' на Udemy</a>
             </c:if>
          </div>
            <c:if test="${not empty CATEGORY_ATTRIBUTE.subCategories}">
