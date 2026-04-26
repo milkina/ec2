@@ -163,7 +163,7 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/lesson13$</from>
-        <to type="permanent-redirect">/ru/#start-course</to>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/treads-russian$</from>
@@ -321,7 +321,7 @@
     </rule>
     <rule>
         <from>^/java/java-core-russian/recomendacii-proektirovanie-klassov$</from>
-        <to type="permanent-redirect">/ru/#start-course</to>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
     </rule>
     <rule>
         <from>^/java/ocjp/arrays$</from>
@@ -620,13 +620,13 @@
         <from>^/java/java-core-russian/groups$</from>
         <to type="permanent-redirect">/ru/</to>
     </rule>
-    <rule>
+<!--    <rule>
         <from>^/ru/exam/java-core-russian$</from>
         <to type="permanent-redirect">/ru/#start-course</to>
-    </rule>
+    </rule>-->
     <rule>
         <from>^/exam/java-core-russian$</from>
-        <to type="permanent-redirect">/ru/#start-course</to>
+        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
     </rule>
 
     <rule>

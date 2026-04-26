@@ -97,11 +97,9 @@ public class SiteMapUtility {
 
     private void setTestLink(Test test, String languageCode) {
         String testPathName = SITE_NAME + languageCode + test.getFullPathName();
-        if (!test.getPathName().equals("java-core-russian")) {
             UrlEntity urlEntity =
                     createUrlEntity(testPathName, HIGH_PRIORITY, "weekly");
             links.addUrlEntity(urlEntity);
-        }
     }
 
     private UrlEntity createUrlEntity(String testPathName,

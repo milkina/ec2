@@ -33,8 +33,16 @@
            width: 164px
          }
       </c:if>
-      .category-href:before{
+      .category-name:before{
         content:"<spring:message code="lesson"/> " counter(lesson)" - ";
+      }
+      #categories li:hover::before {
+        content: "<spring:message code="open"/> →";
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        color: #4DA3FF;
+        font-size: 13px;
       }
      </style>
      <script type="application/ld+json">{
