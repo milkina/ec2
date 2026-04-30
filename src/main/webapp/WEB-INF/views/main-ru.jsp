@@ -8,7 +8,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <%@ include file="/WEB-INF/head_common.jsp"%>
+  <%@ include file="/WEB-INF/head-common-without-bootstrap.jsp"%>
   <title>Бесплатные курсы Java программирования с нуля</title>
   <meta name="description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
   <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
@@ -30,10 +30,10 @@
   <meta name="twitter:site" content="@ExamClouds">
   <meta name="twitter:image" content="https://img.examclouds.com/general/logo.svg">
   <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
-  <script src="${pageContext.request.contextPath}/js/main.js?v=1"></script>
+  <script src="${pageContext.request.contextPath}/js/main.js?v=3"></script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
-  <div class="container-fluid menu round-border-bottom">
+  <div class="container-fluid menu top round-border-bottom">
     <%@ include file="/menu.jsp"%>
     <!-- HERO -->
     <div class="container mt-3">
@@ -48,12 +48,14 @@
             Более 50 000 студентов уже начали обучение
           </p>
           <div class="mt-2">
-            <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn btn-primary">🚀 Начать обучение</a>
+            <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn btn-outline">🚀 Начать обучение</a>
             <a href="${pageContext.request.contextPath}/ru/tests" class="btn btn-outline">📊 Пройти тест</a>
           </div>
         </div>
-        <div class="hidden-xs hidden-sm col-md-8">
-          <img src="https://img.examclouds.com/general/index-image.webp" alt="Курсы программирования Java" width="470" loading="eager" fetchpriority="high">
+        <div class="custom-layout">
+          <div class="hide-mobile-item">
+            <img src="https://img.examclouds.com/general/index-image.webp" alt="Курсы программирования Java" width="470" loading="eager" fetchpriority="high">
+          </div>
         </div>
       </div>
     </div>
@@ -158,8 +160,9 @@
       </div>
 
       <div class="text-center mt-3">
-        <button class="btn btn-outline" onclick="toggleRoadmap()">
-          Показать полный курс (29 тем)
+       <c:set var="str" value="Показать полный курс (${i-1} тем)" />
+        <button class="btn btn-outline" onclick="toggleRoadmap('${str}','Скрыть')">
+          ${str}
         </button>
       </div>
     </div>
@@ -231,7 +234,7 @@
       <div class="card text-center">
         <h2 class="h2">Начни обучение прямо сейчас</h2>
         <p class="text mt-2">Сделай первый шаг к карьере разработчика</p>
-        <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn btn-primary mt-3">
+        <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn btn-outline mt-3">
           Начать обучение →
         </a>
       </div>

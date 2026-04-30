@@ -8,7 +8,7 @@
 <html lang="en">
   <head>
         <meta charset="UTF-8">
-        <%@ include file="/WEB-INF/head_common.jsp"%>
+        <%@ include file="/WEB-INF/head-common-without-bootstrap.jsp"%>
         <meta name="description" content="Explore free Java Core tutorials. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources.">
         <title>Free Java Core Courses | Learn Java Programming Online</title>
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
@@ -30,126 +30,225 @@
         <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
         <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
         <meta property="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css"></noscript>
-        <script type="application/ld+json">{
-                  "@context": "https://schema.org",
-                  "url": "https://www.examclouds.com",
-                  "@type": "Article",
-                  "headline": "Free Java Core Courses | Learn Java Programming Online"
-        }
-        </script>
+        <script src="${pageContext.request.contextPath}/js/main.js?v=3"></script>
   </head>
-    <body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
-    <cache:cacheTag/>
-         <div class="container-fluid menu round-border-bottom">
-          <%@ include file="/menu.jsp" %>
-          <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-             <div class="index-img-div clearfix">
-                 <div class="col-xs-12 col-md-4">
-                    <h1>Free Java Core Courses - Master Java Programming</h1>
-                    <h2>Start learning Java? Welcome to ExamClouds</h2>
-                 </div>
-                 <div class="hidden-xs hidden-sm col-md-8">
-                              <img src="https://img.examclouds.com/general/index-image.webp" alt="Start learning Java? Welcome to ExamClouds"
-                                        width="750" height="400" title="Start learning Java? Welcome to ExamClouds" loading="lazy">
-                 </div>
-                           </div>
-                           </div>
-             </div>
+<body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
+  <div class="container-fluid menu top round-border-bottom">
+    <%@ include file="/menu.jsp"%>
+    <!-- HERO -->
+    <div class="container mt-3">
+      <div class="hero">
+        <div>
+          <h1>Master Java Programming</h1>
+          <p>Free lessons, tasks and tests</p>
+          <p class="hero-sub">
+            100+ lessons • Tasks • Tests • Free
+          </p>
+          <p class="hero-trust">
+            50 000 students
+          </p>
+          <div class="mt-2">
+            <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-outline">🚀 Start learning</a>
+            <a href="${pageContext.request.contextPath}/tests" class="btn btn-outline">📊 Take a test</a>
           </div>
         </div>
-        <div class="container about-items">
- <main>
-      	    <section>
-      	     <h2 class="main-page-header" id="about-course">About us</h2>
-      	     <p class="index-items-text">Decided to pursue a modern profession? Want to earn a lot? Passionate about coding and creating software products? We offer the <strong>best Java course</strong> for those who are completely new to programming.</p>
-              <p class="index-items-text">Modern education means acquiring up-to-date knowledge in a comfortable setting at your convenience. Theory is reinforced with ample practical work, making lessons engaging and encouraging continuous learning. Ultimately, your chosen profession should be both satisfying and lucrative. This philosophy underpins our <strong>free training program</strong>, designed to enable anyone to become a Junior Java Developer.</p>
-              </section>
-              <section>
-               <h2 class="main-page-header" id="course-content">What Courses Do We Offer?</h2>
-                <div class="row learn-java index-items-text">
-                               <div class="row">
-                                 <div class="col-md-4">
-                                   <div class="icon-container">
-                                     <i class="fab fa-java fa-3x"></i>
-                                   </div>
-                                   <div class="icon-container">
-                                     <h3>Java Core</h3>
-                                   </div>
-                                   <p><a href="${pageContext.request.contextPath}/exam/ocpjp8">Java Core</a> comprehensive course is designed to help you get started with Java.</p>
-                                 </div>
-                                 <div class="col-md-4">
-                                  <div class="icon-container">
-                                    <i class="fas fa-cloud fa-3x"></i>
-                                  </div>
-                                  <div class="icon-container">
-                                    <h3>Web Services</h3>
-                                   </div>
-                                   <p>Gain the knowledge and skills with our <a href="${pageContext.request.contextPath}/web-services">Web service tutorial</a> to design, build, and consume web services.</p>
-                                 </div>
-                                 <div class="col-md-4">
-                                   <div class="icon-container">
-                                      <i class="fas fa-database fa-3x"></i>
-                                   </div>
-                                   <div class="icon-container">
-                                       <h3>Java Persistence API</h3>
-                                   </div>
-                                    <p>Learn <a href="${pageContext.request.contextPath}/jpa">JPA</a> with our Tests and Quizzes.</p>
-                                 </div>
-                              </div>
-                              </div>
-               </section>
-               <section>
-               <h2 class="main-page-header" id="formats">Learning Formats</h2>
-               <p class="index-items-text">Our course offers various learning formats:</p>
-               <div class="row learn-java index-items-text">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="icon-container">
-                      <i class="fas fa-chalkboard-teacher fa-3x"></i>
-                    </div>
-                    <div class="icon-container">
-                      <h3>Lectures</h3>
-                    </div>
-                    <p>Theoretical materials of explaining the basics and advanced topics of Java.</p>
-                  </div>
-                  <div class="col-md-4">
-                   <div class="icon-container">
-                     <i class="fas fa-question-circle fa-3x"></i>
-                   </div>
-                   <div class="icon-container">
-                     <h3>Quizzes</h3>
-                    </div>
-                    <p>Our <a href="${pageContext.request.contextPath}/questions">Quizzes</a> help to revise your knowledge.</p>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="icon-container">
-                       <i class="fas fa-tasks fa-3x"></i>
-                    </div>
-                    <div class="icon-container">
-                        <h3>Tests</h3>
-                    </div>
-                     <p>Take our <a href="${pageContext.request.contextPath}/tests">Test</a> for interview preparation to check and improve your Java knowledge.</p>
-                  </div>
-               </div>
-               </div>
-               </section>
-                <section>
-                  <h2 class="main-page-header">Why Learning Java is Essential for Your Career?</h2>
-                  <p class="index-items-text">Java is one of the most popular programming languages in the world, and for good reason. It's used by millions of developers and companies across various industries to build everything from mobile apps to large-scale enterprise systems. Whether it's Android development, web applications, or cloud computing, Java is everywhere.</p>
-                  <p class="index-items-text">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p>
-                  <p class="index-items-text">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p>
-                </section>
-            </main>
-               <%@ include file="/WEB-INF/socialButtons.jsp"%>
-               <jsp:include page="/WEB-INF/comment/comments.jsp">
-                    <jsp:param name="referenceId" value="1152"/>
-                    <jsp:param name="commentType" value="ARTICLE"/>
-               </jsp:include>
-         </div>
-        <%@include file="/WEB-INF/footer.jsp"%>
-    </body>
-    </html>
+        <div class="custom-layout">
+          <div class="hide-mobile-item">
+            <img src="https://img.examclouds.com/general/index-image.webp" alt="Java Programming Course" width="470" loading="eager" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <!-- FEATURES -->
+    <div class="container mt-4">
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-gift feature-icon free"></i>
+          <span class="feature-text">Free</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-route feature-icon learning"></i>
+          <span class="feature-text">Step by step learning</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-tasks feature-icon practice"></i>
+          <span class="feature-text">Tasks and tests</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-user-graduate feature-icon beginner"></i>
+          <span class="feature-text">Suitable for beginners</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-play-circle feature-icon video"></i>
+          <span class="feature-text">Video</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHERE TO START -->
+    <div class="container mt-4">
+      <div class="card">
+        <h2 class="h2">Where to start?</h2>
+      </div>
+    </div>
+
+    <!-- START BLOCK -->
+    <div class="container mt-4">
+    <div class="mt-3 grid grid-3">
+      <div class="card card-horizontal">
+        <div class="card-icon-circle">
+          <i class="fas fa-chalkboard-teacher fa-2x"></i>
+        </div>
+        <div class="card-horizontal-content">
+          <h3 class="h3">Beginner in Java?</h3>
+          <p class="text mt-1">Start with Java basics and learn step by step</p>
+          <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-outline mt-2">Start course →</a>
+        </div>
+      </div>
+
+      <div class="card card-horizontal">
+        <div class="card-icon-circle">
+          <i class="fas fa-laptop-code fa-2x"></i>
+        </div>
+        <div class="card-horizontal-content">
+          <h3 class="h3">Do you want practice?</h3>
+          <p class="text mt-1">Solve tasks and improve your skills</p>
+          <a href="${pageContext.request.contextPath}/practical-java-tasks" class="btn btn-outline mt-2">Solve taks →</a>
+        </div>
+      </div>
+
+      <div class="card card-horizontal">
+        <div class="card-icon-circle">
+          <i class="fas fa-tasks fa-2x"></i>
+        </div>
+        <div class="card-horizontal-content">
+          <h3 class="h3">Verify your knowledge</h3>
+          <p class="text mt-1">Pass a test ans access your level</p>
+          <a href="${pageContext.request.contextPath}/tests" class="btn btn-outline mt-2">Pass test →</a>
+        </div>
+      </div>
+     </div>
+    </div>
+
+    <!-- ROADMAP -->
+    <div class="container mt-4">
+    <div class="mt-3 grid">
+      <div class="card">
+        <h2 class="h2">Java developer roadmap</h2>
+        <p class="text mt-1">Follow learning steps</p>
+
+        <c:set var="i" value="1" />
+        <c:forEach var="category" items="${TESTS['ocpjp8'].categories}">
+          <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
+            <c:if test="${i==1}"><div class="grid grid-6 mt-3"></c:if>
+            <c:if test="${i==7}"></div></c:if>
+            <c:if test="${i==7}"><div class="roadmap-hidden grid grid-6 mt-3"></c:if>
+            <div class="roadmap-step">
+              ${i}<span>
+                <a href="${pageContext.request.contextPath}/java/ocpjp8/${category.value.pathName}"
+                   id="categoryItem${category.value.pathName}" class="category-href-main">
+                  ${category.value.name}
+                </a>
+              </span>
+            </div>
+            <c:set var="i" value="${i + 1}" />
+          </c:if>
+        </c:forEach>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <c:set var="str" value="Show all course (${i-1} topics)" />
+        <button class="btn btn-outline" onclick="toggleRoadmap('${str}', 'Hide')">
+          ${str}
+        </button>
+      </div>
+    </div>
+    </div>
+
+    <!-- POPULAR -->
+    <div class="container mt-4">
+      <h2 class="h2">Popular topics</h2>
+      <div class="grid grid-3 mt-3">
+        <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="card c1">
+          <h3 class="h3">Java Core</h3>
+          <p class="text">Full Java Course</p>
+        </a>
+        <a href="${pageContext.request.contextPath}/tests" class="card c1">
+          <h3 class="h3">Tests</h3>
+          <p class="text">Test your knowledge</p>
+        </a>
+        <a href="${pageContext.request.contextPath}/practical-java-tasks" class="card c1">
+          <h3 class="h3">Tasks</h3>
+          <p class="text">Tasks of different levels</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- LESSONS -->
+    <div class="container mt-4">
+      <div class="grid grid-3 mt-3">
+        <a href="https://www.youtube.com/c/tatyanamilkina" rel="nofollow noopener noreferrer" target="_blank" class="card c1">
+          <h3 class="h3">Video</h3>
+          <p class="text-sm">Subscribe to our YouTube channel</p>
+        </a>
+        <a href="${pageContext.request.contextPath}/show-all-articles" class="card c1">
+          <h3 class="h3">Blog</h3>
+          <p class="text-sm">IT news</p>
+        </a>
+        <a href="${pageContext.request.contextPath}/questions" class="card c1">
+          <h3 class="h3">Quizzes</h3>
+          <p class="text-sm">Our Quizzes help to revise your knowledge</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="container mt-4">
+        <div class="mt-3 grid">
+      <div class="card">
+        <h2 class="h2">Why ExamClouds?</h2>
+        <div class="grid grid-3 mt-3">
+          <div>
+            <h3 class="h3">Free</h3>
+            <p class="text">All materials are available for free</p>
+          </div>
+          <div>
+            <h3 class="h3">Structure</h3>
+            <p class="text">Step by step learning</p>
+          </div>
+          <div>
+            <h3 class="h3">Tasks</h3>
+            <p class="text">Force your knowledge with tasks</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="container mt-4">
+     <div class="mt-3 grid">
+      <div class="card text-center">
+        <h2 class="h2">Start learning right now</h2>
+        <p class="text mt-2">Make your first step to Java Developer</p>
+        <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-outline mt-3">
+          Start learning →
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+<section class="seo-text container mt-5">
+  <h2>Why Learning Java is Essential for Your Career?</h2>
+
+   <p class="index-items-text">Java is one of the most popular programming languages in the world, and for good reason. It's used by millions of developers and companies across various industries to build everything from mobile apps to large-scale enterprise systems. Whether it's Android development, web applications, or cloud computing, Java is everywhere.</p>
+                    <p class="index-items-text">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p>
+                    <p class="index-items-text">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p>
+
+</section>
+  <%@include file="/WEB-INF/footer.jsp"%>
+</body>
+</html>
