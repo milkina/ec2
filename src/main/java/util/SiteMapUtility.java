@@ -1,6 +1,7 @@
 package util;
 
 import model.Category;
+import model.Language;
 import model.LanguageCode;
 import model.Test;
 import model.article.Article;
@@ -68,12 +69,10 @@ public class SiteMapUtility {
                 if (article.getUrl().trim().isEmpty()) {
                     priority = 1;
                 }
-                if (!article.getUrl().equals("practical-java-tasks")) {
+                if (article.getLanguage().getCode().equals(LanguageCode.ru)) {
                     UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.ru.getPath() + article.getUrl(), priority, "monthly");
                     links.addUrlEntity(urlEntity);
-                }
-
-                if (!article.getUrl().equals("video-java-uroki") && !article.getUrl().equals("practicheskie-zadachi")) {
+                } else {
                     UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.en.getPath() + article.getUrl(), priority, "monthly");
                     links.addUrlEntity(urlEntity);
                 }
@@ -88,18 +87,19 @@ public class SiteMapUtility {
     }
 
     private void setTestLink(Test test, HttpServletRequest request) {
-        setTestLink(test, LanguageCode.en.getPath());
-        if (!test.getPathName().equals("ocpjp8")) {
+        if (test.getPathName().equals("java-core-russian")) {
             setTestLink(test, LanguageCode.ru.getPath());
+        } else {
+            setTestLink(test, LanguageCode.en.getPath());
         }
         setCategoryLinks(test, request);
     }
 
     private void setTestLink(Test test, String languageCode) {
         String testPathName = SITE_NAME + languageCode + test.getFullPathName();
-            UrlEntity urlEntity =
-                    createUrlEntity(testPathName, HIGH_PRIORITY, "weekly");
-            links.addUrlEntity(urlEntity);
+        UrlEntity urlEntity =
+                createUrlEntity(testPathName, HIGH_PRIORITY, "weekly");
+        links.addUrlEntity(urlEntity);
     }
 
     private UrlEntity createUrlEntity(String testPathName,
@@ -127,14 +127,8 @@ public class SiteMapUtility {
             String localAddress = "java/" + test.getPathName() + "/" + category.getPathName();
             if (test.getLanguage().getCode().equals(LanguageCode.ru)) {
                 setCategoryLink(localAddress, LanguageCode.ru.getPath());
-                if (!hasHrefLangUrl(request, "/" + localAddress, LanguageCode.en)) {
-                    setCategoryLink(localAddress, LanguageCode.en.getPath());
-                }
             } else if (test.getLanguage().getCode().equals(LanguageCode.en)) {
                 setCategoryLink(localAddress, LanguageCode.en.getPath());
-                if (!hasHrefLangUrl(request, "/" + localAddress, LanguageCode.ru)) {
-                    setCategoryLink(localAddress, LanguageCode.ru.getPath());
-                }
             }
         }
     }
