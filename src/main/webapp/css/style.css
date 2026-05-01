@@ -1109,14 +1109,14 @@ input[type="checkbox"].test-checkbox:checked+label:after{
 .answerBlockDiv{
     width:100%
 }
-.glyphicon-envelope{
+/*.glyphicon-envelope{
  vertical-align:middle
 }
 .glyphicon-facetime-video:before {
     color: #4c82be;
     vertical-align: middle;
     padding-right: 5px;
-}
+}*/
 .icon-container{
     display: flex;
     justify-content: center;
