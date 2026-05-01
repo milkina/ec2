@@ -16,11 +16,11 @@ public class MenuUtility {
             if (collection != null) {
                 String url = collection.get(localAddress);
                 if (url != null && !url.isEmpty()) {
-                    localAddress = url;
+                    return url;
                 }
             }
         }
-        return localAddress;
+        return null;
     }
 
     public static boolean hasHrefLangUrl(HttpServletRequest request, String localAddress, LanguageCode languageCode) {
@@ -37,7 +37,9 @@ public class MenuUtility {
     public static String createRuUrl(HttpServletRequest request) {
         String contextPath = request.getServletContext().getContextPath();
         String localAddress = createUrl(request, LanguageCode.ru);
-
+        if (localAddress == null) {
+            return null;
+        }
         return contextPath + "/ru" + localAddress;
     }
 
@@ -53,7 +55,9 @@ public class MenuUtility {
     public static String createEnUrl(HttpServletRequest request) {
         String localAddress = createUrl(request, LanguageCode.en);
         String contextPath = request.getServletContext().getContextPath();
-
+        if (localAddress == null) {
+            return null;
+        }
         return contextPath + localAddress;
     }
 }

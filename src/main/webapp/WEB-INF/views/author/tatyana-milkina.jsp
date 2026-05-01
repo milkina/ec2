@@ -6,7 +6,7 @@
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <t:wrapper>
   <jsp:attribute name="header">
-    <title>Tatyana Milkina - Java developer and the author| ExamClouds</title>
+    <title>Tatyana Milkina - Java developer and the author | ExamClouds</title>
     <meta name="description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
      <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tatyana-milkina">
      <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tatyana-milkina">

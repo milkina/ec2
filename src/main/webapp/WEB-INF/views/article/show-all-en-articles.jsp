@@ -35,7 +35,7 @@
      other topics. Regardless of your skill level, you are sure to find something useful and interesting. Discover the world of IT with us and continuously improve your skills and knowledge.</p>
       <ul class="article-list">
         <c:forEach var="article" items="${ARTICLES}">
-        <c:if test="${article.language.code=='en'}">
+        <c:if test="${article.language.code=='en' && not empty article.text}">
          <li>
            <div class="row article-head-date">
              <h2 class="article-head col-xs-12 col-sm-9"><a href="${pageContext.request.contextPath}/${article.url}" class="article-url">${article.title}</a></h2>

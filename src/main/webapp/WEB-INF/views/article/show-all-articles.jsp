@@ -36,7 +36,7 @@
      с нами и постоянно улучшайте свои навыки и знания.</p>
       <ul class="article-list">
         <c:forEach var="article" items="${ARTICLES}">
-        <c:if test="${article.language.code=='ru'}">
+        <c:if test="${article.language.code=='ru' && not empty article.text}">
          <li>
            <div class="row article-head-date">
              <h2 class="article-head col-xs-12 col-sm-9"><a href="${pageContext.request.contextPath}/ru/${article.url}" class="article-url">${article.title}</a></h2>
