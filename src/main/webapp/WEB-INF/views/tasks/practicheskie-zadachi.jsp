@@ -46,6 +46,19 @@
   "mainEntityOfPage": "https://www.examclouds.com/ru/practicheskie-zadachi"
 }
 </script>
+ <style>
+      .category-name:before{
+        content:"<spring:message code="lesson"/> " counter(lesson)" - ";
+      }
+      #categories li:hover::before {
+        content: "<spring:message code="open"/> →";
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        color: #4DA3FF;
+        font-size: 13px;
+      }
+     </style>
      </jsp:attribute>
     <jsp:body>
         <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
@@ -78,13 +91,10 @@
                     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
                     <c:forEach var="category" items="${TESTS['java-core-russian'].categories}">
                         <c:if test="${category.value.hidden==false && category.value.name.equals('Задания')}">
-                            <li class="col-xs-12 col-sm-6 col-lg-6">
-                                <div>
-                                    <a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'java-core-russian'}/${category.value.pathName}"
-                                       id="categoryItem${category.value.pathName}" class="category-href">
-                                            ${category.value.parentCategory.name}
-                                    </a>
-                                </div>
+                        <li class="category-li"
+                                  onclick="window.location.href='${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'java-core-russian'}/${category.value.pathName}'">
+                                <span class="lesson-badge">${TESTS['java-core-russian'].name}</span>
+                                <div class="category-name">${category.value.parentCategory.name}</div>
                                 <div class="category-desc">${category.value.article.description}</div>
                             </li>
                         </c:if>

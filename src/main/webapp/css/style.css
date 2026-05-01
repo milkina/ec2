@@ -773,11 +773,7 @@ input[type="checkbox"].test-checkbox:checked+label:after{
 #categories .category-desc {
   margin-bottom: 20px
 }
-@media (max-width: 768px) { /* Если экран меньше 768px */
-  #categories li {
-    width: 100%; /* Одна колонка на всю ширину */
-  }
-}
+
 .category-href,.category-sub-href,.read-questions-href,.article-url{
     border-bottom: 2px solid rgba(76, 130, 190, 0.28);
     color:#4c82be;
@@ -1394,8 +1390,13 @@ footer p {
   }
 
   .btn {
-    display: block;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
+  }
+  
+  .btn-outline {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
   }
 
 }
@@ -1419,7 +1420,6 @@ footer p {
   padding: 10px 24px;
   font-weight: 600;
   text-decoration: none;
-  margin-right: 8px;
   transition: background 0.2s, color 0.2s;
 }
 .btn-outline:hover {
@@ -1610,6 +1610,7 @@ footer p {
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 999px;
+  line-height: 16px;
 }
 .category-li {
   cursor: pointer;

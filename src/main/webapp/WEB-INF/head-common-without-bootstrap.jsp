@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=37">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=46">
 <script src="${pageContext.request.contextPath}/js/general.js" async></script>
 <!-- Google Tag Manager -->
 <script src="${pageContext.request.contextPath}/js/googleTagManager.js" async></script>
