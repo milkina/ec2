@@ -25,17 +25,21 @@
     <%@ include file="/edit/categoryOL.jsp"%>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
-    <link rel="canonical" href="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
-    <link rel="alternate" hreflang="ru" href="https://www.examclouds.com${ruUrl}">
-    <link rel="alternate" hreflang="en" href="https://www.examclouds.com${enUrl}">
-    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com${enUrl}">
-   <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}">
+    <c:set var="canonicalUrl" value="https://www.examclouds.com/${pathLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}"/>
+    <link rel="canonical" href="${canonicalUrl}">
+    <c:if test="${pathLanguage=='ru' && pageLanguage=='ru'}">
+       <link rel="alternate" hreflang="ru" href="${canonicalUrl}">
+    </c:if>
+    <c:if test="${pathLanguage!='ru' && pageLanguage!='ru'}">
+       <link rel="alternate" hreflang="en" href="${canonicalUrl}">
+    </c:if>
+   <meta property="og:url" content="${canonicalUrl}">
    <c:if test="${CATEGORY_ATTRIBUTE.hidden || !CATEGORY_ATTRIBUTE.article.indexStatus}">
           <meta name="robots" content="noindex">
     </c:if>
     <script type="application/ld+json">{
          "@context": "https://schema.org",
-         "url": "https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}",
+         "url": "${canonicalUrl}",
          "@type": "Article",
          "headline": "<c:out value="${titleName}"/>"
     }
@@ -60,7 +64,7 @@
                    loading="lazy"/>
               <div class="author-info">
                 <span class="author-label"><spring:message code="author"/>:</span>
-                <a href="${pageContext.request.contextPath}/${pathLanguage}tatyana-milkina"
+                <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}tatyana-milkina"
                    class="author-link">Tatyana Milkina</a>
               </div>
             </div>
