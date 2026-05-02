@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 import static util.AllConstantsAttribute.CATEGORIES;
+import static util.AllConstantsAttribute.CATEGORY_LISTS;
 import static util.AllConstantsAttribute.COURSES_WITH_QUESTIONS;
 import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
 import static util.AllConstantsAttribute.TESTS;
@@ -109,7 +110,9 @@ public class TestUtility extends SpringUtility {
     public static void loadTestsToServletContext(
             ServletContext servletContext) {
         Map<String, Test> testMap = getCourseService(servletContext).getAllCoursesWithPath();
+        CategoryUtility.compressArticleTexts(testMap);
         servletContext.setAttribute(TESTS, testMap);
+        servletContext.setAttribute(CATEGORY_LISTS, CategoryUtility.buildCategoryLists(testMap));
     }
 
     public static Test getTestFromServletContext(HttpServletRequest request) {

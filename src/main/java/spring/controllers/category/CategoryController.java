@@ -1,6 +1,5 @@
 package spring.controllers.category;
 
-import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
 import model.Category;
 import model.Test;
 import model.article.Article;
@@ -18,7 +17,6 @@ import util.TestUtility;
 import util.article.ArticleUtility;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
@@ -47,7 +45,6 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
-    private HtmlCompressor compressor = new HtmlCompressor();
 
     @RequestMapping(value = {"/show-category", "{langid}/show-category"})
     public ModelAndView showCategory(@RequestParam(CATEGORY_PATH) String categoryPath,
@@ -58,14 +55,10 @@ public class CategoryController {
         Category category = categoryMap.get(categoryPath);
         Article article = category.getArticle();
 
-        String text = article.getText();
-        String compressedText = compressor.compress(text);
-        article.setText(compressedText);
-
         model.addAttribute(CATEGORY_ATTRIBUTE, category);
         model.addAttribute(ARTICLE_ATTRIBUTE, article);
-        List<Category> list = new ArrayList<>(categoryMap.values());
-        int index = list.indexOf(category);
+        List<Category> list = CategoryUtility.getCategoryListFromServletContext(request);
+        int index = indexOfById(list, category.getId());
 
         Category nextCategory = getNextCategory(index, list);
         Category previousCategory = getPreviousCategory(index, list);
@@ -75,6 +68,19 @@ public class CategoryController {
             return new ModelAndView("forward:" + getResourceValue(locale, "menu.home", "label"));
         }
         return new ModelAndView("category/show-category");
+    }
+
+    private int indexOfById(List<Category> list, Integer id) {
+        if (id == null) {
+            return -1;
+        }
+        for (int i = 0; i < list.size(); i++) {
+            Category c = list.get(i);
+            if (c != null && id.equals(c.getId())) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     private Category getNextCategory(int index, List<Category> list) {

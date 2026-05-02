@@ -1,5 +1,6 @@
 package util;
 
+import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
 import model.*;
 import model.article.Article;
 import model.person.Person;
@@ -9,7 +10,11 @@ import util.article.ArticleUtility;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
@@ -24,6 +29,78 @@ import static util.AllConstantsParam.*;
  * To change this template use File | Settings | File Templates.
  */
 public class CategoryUtility extends SpringUtility {
+
+    private static final HtmlCompressor HTML_COMPRESSOR = new HtmlCompressor();
+
+    /**
+     * Compresses the HTML text of every cached category's article exactly once at
+     * cache-load time, so request handlers don't pay the compression cost per request.
+     * HtmlCompressor.compress is idempotent for already-minified input, so it is safe
+     * to call after a cache reload even if some Article instances were reused.
+     */
+    public static void compressArticleTexts(Map<String, Test> testMap) {
+        if (testMap == null) {
+            return;
+        }
+        for (Test test : testMap.values()) {
+            if (test == null) {
+                continue;
+            }
+            Map<String, Category> categories = test.getCategories();
+            if (categories == null) {
+                continue;
+            }
+            for (Category category : categories.values()) {
+                compressArticleText(category);
+            }
+        }
+    }
+
+    /**
+     * Builds an immutable ordered List&lt;Category&gt; per testPath from the cached test map,
+     * so request handlers can read the list without rebuilding it on every call. The order
+     * matches the iteration order of {@link Test#getCategories()} (insertion order from JPA).
+     */
+    public static Map<String, List<Category>> buildCategoryLists(Map<String, Test> testMap) {
+        if (testMap == null) {
+            return Collections.emptyMap();
+        }
+        Map<String, List<Category>> result = new HashMap<>(testMap.size() * 2);
+        for (Map.Entry<String, Test> e : testMap.entrySet()) {
+            Test test = e.getValue();
+            if (test == null) {
+                continue;
+            }
+            Map<String, Category> categories = test.getCategories();
+            List<Category> list = categories == null
+                    ? Collections.<Category>emptyList()
+                    : Collections.unmodifiableList(new ArrayList<>(categories.values()));
+            result.put(e.getKey(), list);
+        }
+        return Collections.unmodifiableMap(result);
+    }
+
+    public static List<Category> getCategoryListFromServletContext(ServletRequest request) {
+        Map<String, List<Category>> lists = (Map<String, List<Category>>)
+                request.getServletContext().getAttribute(CATEGORY_LISTS);
+        if (lists == null) {
+            return Collections.emptyList();
+        }
+        String testPath = request.getParameter(TEST_PATH);
+        List<Category> list = lists.get(testPath);
+        return list != null ? list : Collections.<Category>emptyList();
+    }
+
+    private static void compressArticleText(Category category) {
+        if (category == null) {
+            return;
+        }
+        Article article = category.getArticle();
+        if (article != null && article.getText() != null) {
+            article.setText(HTML_COMPRESSOR.compress(article.getText()));
+        }
+    }
+
     public static String getDescription(Category category) {
         if (category != null && category.getArticle() != null
                 && category.getArticle().getDescription() != null) {
