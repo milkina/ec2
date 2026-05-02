@@ -1300,7 +1300,38 @@ header .nav a {
 }
 
 .btn-primary {
+  display: inline-block;
+  color: #fff;
+  background: #1E2A78;
+  border: 2px solid #1E2A78;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  text-decoration: none;
   box-shadow: 0 4px 14px rgba(30,42,120,0.3);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  background: #15205c;
+  border-color: #15205c;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(30,42,120,0.4);
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: #1E2A78;
+  background: #fff;
+  border: 2px solid #1E2A78;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-secondary:hover {
+  background: #1E2A78;
+  color: #fff;
 }
 
 /* ========================
@@ -1486,8 +1517,11 @@ footer p {
   gap: 20px;
 }
 .card-icon-circle {
+  width: 56px;
+  height: 56px;
   min-width: 56px;
   min-height: 56px;
+  flex-shrink: 0;
   background: #4DA3FF;
   border-radius: 50%;
   display: flex;
@@ -1630,6 +1664,9 @@ footer p {
   color: inherit;          /* убрать синий цвет */
   cursor: pointer;
   outline: none;           /* убрать черную рамку при клике */
+}
+.c1.card-horizontal {
+  display: flex;
 }
 .c1:hover {
   text-decoration: none; /* добавить подчеркивание при наведении */

@@ -48,8 +48,8 @@
             50 000 students
           </p>
           <div class="mt-2">
-            <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-outline">🚀 Start learning</a>
-            <a href="${pageContext.request.contextPath}/tests" class="btn btn-outline">📊 Take a test</a>
+            <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-primary">🚀 Start learning</a>
+            <a href="${pageContext.request.contextPath}/tests" class="btn btn-secondary">📊 Take a test</a>
           </div>
         </div>
         <div class="custom-layout">
@@ -60,7 +60,7 @@
       </div>
     </div>
   </div>
-  <div>
+  <main>
     <!-- FEATURES -->
     <div class="container mt-4">
       <div class="features-grid">
@@ -91,6 +91,9 @@
     <div class="container mt-4">
       <div class="card">
         <h2 class="h2">Where to start?</h2>
+        <p class="text">
+          Select path depending on your level
+        </p>
       </div>
     </div>
 
@@ -172,17 +175,32 @@
     <div class="container mt-4">
       <h2 class="h2">Popular topics</h2>
       <div class="grid grid-3 mt-3">
-        <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="card c1">
-          <h3 class="h3">Java Core</h3>
-          <p class="text">Full Java Course</p>
+        <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-code fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Java Core</h3>
+            <p class="text mt-1">Full Java Course</p>
+          </div>
         </a>
-        <a href="${pageContext.request.contextPath}/tests" class="card c1">
-          <h3 class="h3">Tests</h3>
-          <p class="text">Test your knowledge</p>
+        <a href="${pageContext.request.contextPath}/tests" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-check-circle fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Tests</h3>
+            <p class="text mt-1">Test your knowledge</p>
+          </div>
         </a>
-        <a href="${pageContext.request.contextPath}/practical-java-tasks" class="card c1">
-          <h3 class="h3">Tasks</h3>
-          <p class="text">Tasks of different levels</p>
+        <a href="${pageContext.request.contextPath}/practical-java-tasks" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-laptop-code fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Tasks</h3>
+            <p class="text mt-1">Tasks of different levels</p>
+          </div>
         </a>
       </div>
     </div>
@@ -190,17 +208,32 @@
     <!-- LESSONS -->
     <div class="container mt-4">
       <div class="grid grid-3 mt-3">
-        <a href="https://www.youtube.com/c/tatyanamilkina" rel="nofollow noopener noreferrer" target="_blank" class="card c1">
-          <h3 class="h3">Video</h3>
-          <p class="text-sm">Subscribe to our YouTube channel</p>
+        <a href="https://www.youtube.com/c/tatyanamilkina" rel="nofollow noopener noreferrer" target="_blank" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fab fa-youtube fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Video</h3>
+            <p class="text mt-1">Subscribe to our YouTube channel</p>
+          </div>
         </a>
-        <a href="${pageContext.request.contextPath}/show-all-articles" class="card c1">
-          <h3 class="h3">Blog</h3>
-          <p class="text-sm">IT news</p>
+        <a href="${pageContext.request.contextPath}/show-all-articles" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-newspaper fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Blog</h3>
+            <p class="text mt-1">IT news</p>
+          </div>
         </a>
-        <a href="${pageContext.request.contextPath}/questions" class="card c1">
-          <h3 class="h3">Quizzes</h3>
-          <p class="text-sm">Our Quizzes help to revise your knowledge</p>
+        <a href="${pageContext.request.contextPath}/questions" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-question-circle fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Quizzes</h3>
+            <p class="text mt-1">Our Quizzes help to revise your knowledge</p>
+          </div>
         </a>
       </div>
     </div>
@@ -240,7 +273,7 @@
       </div>
     </div>
     </div>
-  </div>
+  </main>
 <section class="seo-text container mt-5">
   <h2>Learning Java Core</h2>
   <h3>Why Learning Java is Essential for Your Career?</h3>

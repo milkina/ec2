@@ -48,8 +48,8 @@
             Более 50 000 студентов уже начали обучение
           </p>
           <div class="mt-2">
-            <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn btn-outline">🚀 Начать обучение</a>
-            <a href="${pageContext.request.contextPath}/ru/tests" class="btn btn-outline">📊 Пройти тест</a>
+            <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn btn-primary">🚀 Начать обучение</a>
+            <a href="${pageContext.request.contextPath}/ru/tests" class="btn btn-secondary">📊 Пройти тест</a>
           </div>
         </div>
         <div class="custom-layout">
@@ -60,7 +60,7 @@
       </div>
     </div>
   </div>
-  <div>
+  <main>
     <!-- FEATURES -->
     <div class="container mt-4">
       <div class="features-grid">
@@ -91,6 +91,9 @@
     <div class="container mt-4">
       <div class="card">
         <h2 class="h2">С чего начать?</h2>
+        <p>
+          Выберите путь в зависимости от вашего уровня
+        </p>
       </div>
     </div>
 
@@ -172,17 +175,32 @@
     <div class="container mt-4">
       <h2 class="h2">Популярные разделы</h2>
       <div class="grid grid-3 mt-3">
-        <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="card c1">
-          <h3 class="h3">Java Core</h3>
-          <p class="text">Полный курс Java</p>
+        <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-code fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Java Core</h3>
+            <p class="text mt-1">Полный курс Java</p>
+          </div>
         </a>
-        <a href="${pageContext.request.contextPath}/ru/tests" class="card c1">
-          <h3 class="h3">Тесты</h3>
-          <p class="text">Проверь знания</p>
+        <a href="${pageContext.request.contextPath}/ru/tests" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-check-circle fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Тесты</h3>
+            <p class="text mt-1">Проверь знания</p>
+          </div>
         </a>
-        <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi" class="card c1">
-          <h3 class="h3">Практика</h3>
-          <p class="text">Задачи разного уровня</p>
+        <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-laptop-code fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Практика</h3>
+            <p class="text mt-1">Задачи разного уровня</p>
+          </div>
         </a>
       </div>
     </div>
@@ -190,17 +208,32 @@
     <!-- LESSONS -->
     <div class="container mt-4">
       <div class="grid grid-3 mt-3">
-        <a href="https://www.youtube.com/c/tatyanamilkina" rel="nofollow noopener noreferrer" target="_blank" class="card c1">
-          <h3 class="h3">Видео</h3>
-          <p class="text-sm">Подписывайтесь на наш канал на YouTube</p>
+        <a href="https://www.youtube.com/c/tatyanamilkina" rel="nofollow noopener noreferrer" target="_blank" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fab fa-youtube fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Видео</h3>
+            <p class="text mt-1">Подписывайтесь на наш канал на YouTube</p>
+          </div>
         </a>
-        <a href="${pageContext.request.contextPath}/ru/show-all-articles" class="card c1">
-          <h3 class="h3">Блог</h3>
-          <p class="text-sm">Новости IT</p>
+        <a href="${pageContext.request.contextPath}/ru/show-all-articles" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-newspaper fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Блог</h3>
+            <p class="text mt-1">Новости IT</p>
+          </div>
         </a>
-        <a href="https://www.udemy.com/course/java-bup/" rel="nofollow sponsored noopener" target="_blank" class="card c1">
-          <h3 class="h3">Сертификат</h3>
-          <p class="text-sm">Курс на Udemy</p>
+        <a href="https://www.udemy.com/course/java-bup/" rel="nofollow sponsored noopener" target="_blank" class="card card-horizontal c1">
+          <div class="card-icon-circle">
+            <i class="fas fa-certificate fa-2x"></i>
+          </div>
+          <div class="card-horizontal-content">
+            <h3 class="h3">Сертификат</h3>
+            <p class="text mt-1">Курс на Udemy</p>
+          </div>
         </a>
       </div>
     </div>
@@ -240,7 +273,7 @@
       </div>
     </div>
     </div>
-  </div>
+  </main>
 <section class="seo-text container mt-5">
   <h2>Курсы Java программирования с нуля</h2>
   <h3>Почему стоит изучать Java?</h3>
