@@ -28,8 +28,8 @@
                            <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored noopener"><i class="fas fa-graduation-cap"></i> Udemy</a></li>
                     </ul>
                     <div class="contactUsEmail footerItem">
-                                <address class="glyphicon glyphicon-envelope">
-                       		  <a href="mailto:tatyana.milkina@gmail.com">tatyana.milkina@gmail.com</a>
+                                <address>
+                       		  <a href="mailto:tatyana.milkina@gmail.com"><i class="fas fa-envelope"></i> tatyana.milkina@gmail.com</a>
                        		 </address>
                     </div>
                </div>

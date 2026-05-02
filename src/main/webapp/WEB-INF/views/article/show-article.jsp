@@ -12,10 +12,15 @@
     <meta name="keywords" content="${ARTICLE_ATTRIBUTE.keywords}">
     <meta name="description" content="${ARTICLE_ATTRIBUTE.description}">
     <title>${ARTICLE_ATTRIBUTE.title}</title>
-    <link rel="canonical" href="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}"/>
-    <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/${ARTICLE_ATTRIBUTE.url}">
-    <link rel="alternate" hreflang="en" href="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.url}">
-    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.url}">
+    <c:set var="canonicalUrl" value="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.language.code=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}"/>
+    <link rel="canonical" href="${canonicalUrl}"/>
+    <link rel="alternate" hreflang="x-default" href="${canonicalUrl}">
+    <c:if test="${pageLanguage=='ru'}">
+       <link rel="alternate" hreflang="ru" href="${canonicalUrl}">
+    </c:if>
+    <c:if test="${pageLanguage!='ru'}">
+       <link rel="alternate" hreflang="en" href="${canonicalUrl}">
+    </c:if>
     <meta property="og:title" content="${ARTICLE_ATTRIBUTE.title}"/>
     <meta property="twitter:title" content="${ARTICLE_ATTRIBUTE.title}"/>
     <meta property="og:type" content="article"/>
