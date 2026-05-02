@@ -125,7 +125,7 @@
         </div>
         <div class="card-horizontal-content">
           <h3 class="h3">Verify your knowledge</h3>
-          <p class="text mt-1">Pass a test ans access your level</p>
+          <p class="text mt-1">Pass a test and access your level</p>
           <a href="${pageContext.request.contextPath}/tests" class="btn btn-outline mt-2">Pass test →</a>
         </div>
       </div>
