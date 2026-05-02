@@ -3,6 +3,8 @@ package model;
 
 import model.article.Article;
 
+import org.hibernate.annotations.BatchSize;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -52,10 +54,12 @@ public class Category implements Serializable, Comparable<Category> {
 
     @OneToMany(mappedBy = "parentCategory", fetch = FetchType.EAGER)
     @OrderBy("orderId,id")
+    @BatchSize(size = 50)
     private List<Category> subCategories;
 
     @OneToMany(mappedBy = "categoryId", fetch = FetchType.EAGER)
     @MapKeyColumn(name = "language_id")
+    @BatchSize(size = 50)
     private Map<Integer, OtherLanguage> canonicalUrls;
 
     private boolean hidden = false;
