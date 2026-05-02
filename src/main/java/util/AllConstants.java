@@ -27,7 +27,7 @@ public interface AllConstants {
     String SHOW_ARTICLE_PAGE = "article/show-article";
 
     String ALL_QUESTIONS = "ALL_QUESTIONS";
-    String COOKIE_VALUE = "ID";
+    String COOKIE_VALUE = "EXAMCLOUDS_AUTH_ID";
     String UNKNOWN_USER = "unknown";
     String MARK_QUESTION_HINT = "Mark question as answered and filter questions";
     String ADD_QUESTION_PAGE = "question/add-question";

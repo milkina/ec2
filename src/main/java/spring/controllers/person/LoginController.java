@@ -81,11 +81,13 @@ public class LoginController {
     public String logout(Locale locale) {
         HttpSession session = GeneralUtility.getSession(true);
         session.invalidate();
-        Cookie cookie = new Cookie(COOKIE_VALUE, "");
-        cookie.setMaxAge(0);
-        cookie.setPath("/");
         HttpServletResponse response = GeneralUtility.getResponse();
-        response.addCookie(cookie);
+        // Must match the attributes used when the cookie was set in /login,
+        // otherwise the browser keeps the Partitioned (CHIPS) cookie and the
+        // IndexPageFilter re-creates the person session on the next request.
+        String deleteHeader = COOKIE_VALUE + "=; Max-Age=0; Path=/; "
+                + "SameSite=None; Secure; HttpOnly; Partitioned";
+        response.setHeader("Set-Cookie", deleteHeader);
         String href = getResourceValue(locale, "menu.home", "label");
         return "redirect:" + href;
     }

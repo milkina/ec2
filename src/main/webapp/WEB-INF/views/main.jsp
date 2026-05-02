@@ -54,7 +54,7 @@
         </div>
         <div class="custom-layout">
           <div class="hide-mobile-item">
-            <img src="https://img.examclouds.com/general/index-image.webp" alt="Java Programming Course" width="470" loading="eager" fetchpriority="high">
+            <img src="https://img.examclouds.com/general/index-image.webp" alt="Java Programming Course" width="473" height="250" loading="eager" fetchpriority="high">
           </div>
         </div>
       </div>
@@ -242,10 +242,12 @@
     </div>
   </div>
 <section class="seo-text container mt-5">
-  <h2>Why Learning Java is Essential for Your Career?</h2>
-
+  <h2>Learning Java Core</h2>
+  <h3>Why Learning Java is Essential for Your Career?</h3>
    <p class="index-items-text">Java is one of the most popular programming languages in the world, and for good reason. It's used by millions of developers and companies across various industries to build everything from mobile apps to large-scale enterprise systems. Whether it's Android development, web applications, or cloud computing, Java is everywhere.</p>
-                    <p class="index-items-text">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p>
+    <h3>Find your first Job</h3>
+   <p class="index-items-text">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p>
+    <h3>Why Java is important for career?</h3>
                     <p class="index-items-text">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p>
 
 </section>
