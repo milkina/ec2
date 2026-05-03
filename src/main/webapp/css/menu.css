@@ -88,7 +88,8 @@
   background: none;
   border: none;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -136,8 +137,17 @@
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-  .dropdown {
-    max-width: 100%;
+  .nav {
+    align-items: stretch;
+  }
+
+  .nav > a {
+    text-align: center;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    justify-content: center;
   }
 
   .dropdown-menu {
@@ -147,15 +157,11 @@
     background: transparent;
     padding: 0;
     min-width: 0 !important;
-    max-width: 100%;
-    box-sizing: border-box;
   }
 
   .dropdown-menu a {
     color: white;
     padding: 10px 0;
-    white-space: normal;
-    word-break: break-word;
     text-align: center;
   }
 }

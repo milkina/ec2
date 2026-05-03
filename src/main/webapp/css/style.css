@@ -1269,27 +1269,69 @@ header .nav a {
    ROADMAP
 ======================== */
 .roadmap-step {
-  text-align: center;
-  padding: 15px;
+  position: relative;
+  padding: 16px;
   border-radius: 12px;
   background: #ffffff;
-  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
 }
 
-.roadmap-step span {
-  display: block;
-  margin-top: 5px;
-  font-size: 12px;
+.roadmap-step:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.roadmap-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E5E7EB;
   color: #6B7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
-.roadmap-step.active {
-  border: 2px solid #4DA3FF;
+.roadmap-content {
+  min-height: 60px;
 }
 
-.roadmap-step.done {
+.roadmap-content a {
+  color: #1F2937;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  display: block;
+}
+
+.roadmap-content a:hover {
+  color: #2563EB;
+}
+
+.roadmap-step.active .roadmap-number {
+  background: #ffffff;
+  color: #2563EB;
+  border: 2px solid #2563EB;
+}
+
+.roadmap-step.done .roadmap-number {
   background: #22C55E;
-  color: white;
+  color: #ffffff;
+  border: none;
+}
+
+.roadmap-step.done .roadmap-number::after {
+  content: '✓';
+  font-size: 16px;
+}
+
+.roadmap-step.done .roadmap-number {
+  font-size: 0;
 }
 
 /* ========================

@@ -149,12 +149,13 @@
             <c:if test="${i==7}"></div></c:if>
             <c:if test="${i==7}"><div class="roadmap-hidden grid grid-6 mt-3"></c:if>
             <div class="roadmap-step">
-              ${i}<span>
+              <div class="roadmap-number">${i}</div>
+              <div class="roadmap-content">
                 <a href="${pageContext.request.contextPath}/java/ocpjp8/${category.value.pathName}"
                    id="categoryItem${category.value.pathName}" class="category-href-main">
                   ${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}
                 </a>
-              </span>
+              </div>
             </div>
             <c:set var="i" value="${i + 1}" />
           </c:if>
