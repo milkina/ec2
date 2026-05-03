@@ -59,7 +59,6 @@
       </ol>
     </div>
     <main><article>
-      <div class="course-desc">${TESTS[param.TEST_PATH].article.text}</div>
       <jsp:include page="/WEB-INF/views/category/category-menu-center.jsp"/>
     </article></main>
     <%@ include file="/WEB-INF/socialButtons.jsp"%>
