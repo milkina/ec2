@@ -131,6 +131,8 @@ public class CategoryUtility extends SpringUtility {
         String categoryParentId = request.getParameter(CATEGORY_PARENT);
         String categoryHidden = request.getParameter(CATEGORY_HIDDEN);
         String videoPath = request.getParameter(CATEGORY_VIDEO_PATH);
+        String roadMapName = GeneralUtility.decodeRussianCharacters(
+                request.getParameter(CATEGORY_ROAD_MAP_NAME));
         String title = GeneralUtility.decodeRussianCharacters(request.getParameter(CATEGORY_TITLE));
 
         Category parent = null;
@@ -143,6 +145,7 @@ public class CategoryUtility extends SpringUtility {
         category.setParentCategory(parent);
         category.setHidden("on".equals(categoryHidden));
         category.setVideoPath(videoPath.trim());
+        category.setRoadMapName(roadMapName.trim());
         category.setTitle(title);
     }
 

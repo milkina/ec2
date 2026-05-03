@@ -30,8 +30,9 @@ public class Category implements Serializable, Comparable<Category> {
 
     private String title;
 
-    // @Column(unique = true)
     private String pathName;
+
+    private String roadMapName;
 
     private String videoPath;
 
@@ -101,6 +102,14 @@ public class Category implements Serializable, Comparable<Category> {
 
     public void setPathName(String pathName) {
         this.pathName = pathName;
+    }
+
+    public String getRoadMapName() {
+        return roadMapName;
+    }
+
+    public void setRoadMapName(String roadMapName) {
+        this.roadMapName = roadMapName;
     }
 
     public String getVideoPath() {
@@ -238,6 +247,7 @@ public class Category implements Serializable, Comparable<Category> {
         return hidden == category.hidden &&
                 orderId == category.orderId &&
                 Objects.equals(name, category.name) &&
+                Objects.equals(roadMapName, category.roadMapName) &&
                 Objects.equals(id, category.id) &&
                 Objects.equals(pathName, category.pathName) &&
                 Objects.equals(parentCategory, category.parentCategory);
@@ -245,6 +255,6 @@ public class Category implements Serializable, Comparable<Category> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, pathName, parentCategory, hidden, orderId, questionsCount, testsCount);
+        return Objects.hash(id, name, roadMapName, pathName, parentCategory, hidden, orderId, questionsCount, testsCount);
     }
 }

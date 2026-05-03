@@ -60,6 +60,7 @@ public interface AllConstantsParam {
     String CATEGORY_PARENT = "categoryParent";
     String CATEGORY_HIDDEN = "hidden";
     String CATEGORY_VIDEO_PATH = "categoryVideoPath";
+    String CATEGORY_ROAD_MAP_NAME = "categoryRoadMapName";
     String CATEGORY_TITLE = "categoryTitle";
     String CATEGORY_ORDER_ID = "orderId";
     String ARTICLE_DESCRIPTION = "description";

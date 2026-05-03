@@ -152,7 +152,7 @@
               ${i}<span>
                 <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/${category.value.pathName}"
                    id="categoryItem${category.value.pathName}" class="category-href-main">
-                  ${category.value.name}
+                  ${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}
                 </a>
               </span>
             </div>
