@@ -283,6 +283,13 @@
     <h3>Why Java is important for career?</h3>
                     <p class="index-items-text">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p>
 
+    <h3>What is included in the course?</h3>
+    <p class="index-items-text">
+      The training is built on the principle of “from simple to complex”:
+      from the basics of Java syntax to complex topics such as OOP, collections, Stream API, and multithreading.
+      Each lesson is accompanied by examples, <a href="${pageContext.request.contextPath}/practical-java-tasks">practical tasks</a> and <a href="${pageContext.request.contextPath}/tests">tests</a> to consolidate the material.
+    </p>
+
 </section>
   <%@include file="/WEB-INF/footer.jsp"%>
 </body>
