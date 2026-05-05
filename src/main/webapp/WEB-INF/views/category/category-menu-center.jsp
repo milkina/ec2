@@ -3,6 +3,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <script>
 function toggleDropdown(header) {
   const contentItem = header.closest('.content-item');
@@ -12,7 +13,7 @@ function toggleDropdown(header) {
 
 <div class="two-column-layout">
   <!-- Section 1: Course Content -->
-  <div class="section-left">
+  <div class="section-left card">
     <h3><spring:message code="course.content"/></h3>
    <!-- <div class="course-progress">
       <div class="progress-text">9 out of 29 lessons completed</div>
@@ -28,9 +29,11 @@ function toggleDropdown(header) {
               <li class="content-item">
                 <div class="content-header" onclick="toggleDropdown(this)">
                   <div class="content-title">📘${catStatus}. ${category.value.name}</div>
-                             <c:set var="catStatus" value="${catStatus + 1}" />
-                  <div class="content-status">${fn:length(category.value.subCategories)}</div>
-                  <div class="dropdown-arrow">▼</div>
+                   <c:set var="catStatus" value="${catStatus + 1}" />
+                      <c:if test="${fn:length(category.value.subCategories)>0}">
+                         <div class="content-status">${fn:length(category.value.subCategories)}</div>
+                         <div class="dropdown-arrow">▼</div>
+                      </c:if>
                 </div>
                 <ul class="content-dropdown">
                   <c:forEach var="subCategory" items="${category.value.subCategories}">
@@ -53,10 +56,42 @@ function toggleDropdown(header) {
 
   <!-- Section 2: Existing content -->
   <div class="section-right">
-    <div class="mt-4">
-       <div class="mt-3 grid">
-        <div class="card">
-        ${TESTS[param.TEST_PATH].article.text}</div></div></div>
+       <c:set var="lessonCount" value="0"/>
+       <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
+         <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
+           <c:set var="lessonCount" value="${lessonCount + 1}"/>
+         </c:if>
+       </c:forEach>
+       <c:set var="hoursCount" value="${(lessonCount * 7 + 9) / 10}"/>
+
+       <div class="grid">
+          <div class="card">
+            ${TESTS[param.TEST_PATH].article.text}
+                      <div class="mt-3 grid grid-3 course-stats">
+                         <div class="card card-horizontal stat-card">
+                           <div class="card-icon-circle"><span>🎓</span></div>
+                           <div class="card-horizontal-content">
+                             <div class="stat-value">${lessonCount}&nbsp;<spring:message code="lessons"/></div>
+                             <div class="stat-label"><spring:message code="lessons.subtitle"/></div>
+                           </div>
+                         </div>
+                         <div class="card card-horizontal stat-card">
+                           <div class="card-icon-circle"><span>⏱️</span></div>
+                           <div class="card-horizontal-content">
+                             <div class="stat-value">~<fmt:formatNumber value="${hoursCount}" maxFractionDigits="0"/>&nbsp;<spring:message code="hours"/></div>
+                             <div class="stat-label"><spring:message code="hours.subtitle"/></div>
+                           </div>
+                         </div>
+                         <div class="card card-horizontal stat-card">
+                           <div class="card-icon-circle"><span>🏆</span></div>
+                           <div class="card-horizontal-content">
+                             <div class="stat-value"><spring:message code="free"/></div>
+                             <div class="stat-label"><spring:message code="free.subtitle"/></div>
+                           </div>
+                         </div>
+                      </div>
+         </div>
+       </div>
     <ul id="categories">
       <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
       <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
