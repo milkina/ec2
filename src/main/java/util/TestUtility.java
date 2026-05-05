@@ -1,8 +1,6 @@
 package util;
 
-import model.Category;
-import model.Language;
-import model.Test;
+import model.*;
 import model.article.Article;
 import model.person.Person;
 import util.article.ArticleUtility;
@@ -160,5 +158,19 @@ public class TestUtility extends SpringUtility {
         test.setPathName(decodeRussianCharacters(newTest.getPathName()));
         Language language = LanguageUtility.findLanguageInContext(servletContext, languageCode);
         test.setLanguage(language);
+    }
+
+    public static void setCanonicalUrls(HttpServletRequest request, Test test) {
+        String originalPage = "/" + test.getFullPathName();
+
+        String ruVersion = request.getParameter("ruVersion");
+        String enVersion = request.getParameter("enVersion");
+
+        Map<Integer, OtherLanguage> canonicalUrls = test.getCanonicalUrls();
+        ServletContext servletContext = request.getServletContext();
+        int testId = test.getId();
+
+        CategoryUtility.setCanonicalUrl(canonicalUrls, ruVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.ru.name()), testId, servletContext, originalPage);
+        CategoryUtility.setCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), testId, servletContext, originalPage);
     }
 }

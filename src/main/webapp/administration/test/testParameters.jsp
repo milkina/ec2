@@ -12,6 +12,20 @@
                             </c:forEach>
              </select>
              <BR>
+             <c:forEach items="${TESTS[param.TEST_PATH].canonicalUrls}" var="entry">
+                  <c:if test="${entry.key == 1}">
+                     <c:set var="ruCanonicalUrl" value="${entry.value.url}" />
+                 </c:if>
+                  <c:if test="${entry.key == 2}">
+                         <c:set var="enCanonicalUrl" value="${entry.value.url}" />
+                     </c:if>
+             </c:forEach>
+             <span class="adminLabel">Russian Version:</span>
+             <input type="text" name="ruVersion" maxlength="80" value="${ruCanonicalUrl}" size="80"/>
+             <BR>
+             <span class="adminLabel">English Version:</span>
+             <input type="text" name="enVersion" maxlength="80" value="${enCanonicalUrl}" size="80"/>
+             <BR>
              <strong class="adminLabel"><spring:message	code="tags"/>:<span class="wrongMessage">*</span></strong>
              <form:input path="tags" maxlength="70" required="required"/> <br>
              <span class="adminLabel"><spring:message	code="image.url"/>:</span>

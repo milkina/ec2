@@ -123,6 +123,7 @@ public class CourseController {
         Test test = testMap.get(testPath);
         TestUtility.setTestData(test, newTest, languageCode, request.getServletContext());
         ArticleUtility.setArticleData(test.getArticle(), newTest.getArticle(), request.getServletContext());
+        TestUtility.setCanonicalUrls(request, test);
 
         courseService.update(test);
 

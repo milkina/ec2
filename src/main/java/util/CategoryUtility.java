@@ -165,12 +165,12 @@ public class CategoryUtility extends SpringUtility {
         setCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), categoryId, servletContext, originalPage);
     }
 
-    private static void setCanonicalUrl(Map<Integer, OtherLanguage> canonicalUrls,
-                                        String version,
-                                        Language language,
-                                        int categoryId,
-                                        ServletContext servletContext,
-                                        String originalPage) {
+    static void setCanonicalUrl(Map<Integer, OtherLanguage> canonicalUrls,
+                                String version,
+                                Language language,
+                                int categoryId,
+                                ServletContext servletContext,
+                                String originalPage) {
         OtherLanguage otherLanguage = canonicalUrls.get(language.getId());
         if (otherLanguage == null) {
             if (version != null && !version.isEmpty()) {

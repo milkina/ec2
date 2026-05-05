@@ -2,24 +2,9 @@ package model;
 
 
 import model.article.Article;
+import org.hibernate.annotations.BatchSize;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.MapKey;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
-import javax.persistence.OrderBy;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
@@ -77,6 +62,11 @@ public class Test implements Serializable, Comparable<Test> {
     @ManyToOne
     @JoinColumn(name = "language")
     private Language language;
+
+    @OneToMany(mappedBy = "categoryId", fetch = FetchType.EAGER)
+    @MapKeyColumn(name = "language_id")
+    @BatchSize(size = 50)
+    private Map<Integer, OtherLanguage> canonicalUrls;
 
     public Language getLanguage() {
         return language;
@@ -164,6 +154,14 @@ public class Test implements Serializable, Comparable<Test> {
 
     public void setOrderId(int orderId) {
         this.orderId = orderId;
+    }
+
+    public Map<Integer, OtherLanguage> getCanonicalUrls() {
+        return canonicalUrls;
+    }
+
+    public void setCanonicalUrls(Map<Integer, OtherLanguage> canonicalUrls) {
+        this.canonicalUrls = canonicalUrls;
     }
 
     public String getIconText() {

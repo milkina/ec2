@@ -9,8 +9,25 @@
      <meta name="keywords" content="${TESTS[param.TEST_PATH].article.keywords}">
      <meta name="description" content="${TESTS[param.TEST_PATH].article.description}">
      <title>${TESTS[param.TEST_PATH].article.title}</title>
-     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/${TESTS[param.TEST_PATH].fullPathName}">
-     <link rel="canonical" href="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}">
+     <c:set var="canonicalUrl" value="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}"/>
+     <link rel="canonical" href="${canonicalUrl}">
+     <c:set var="currentLang" value="${TESTS[param.TEST_PATH].language.code}"/>
+        <c:set var="ruHref" value="${currentLang=='ru' ? canonicalUrl : null}"/>
+        <c:set var="enHref" value="${currentLang=='en' ? canonicalUrl : null}"/>
+        <link rel="alternate" hreflang="${currentLang}" href="${canonicalUrl}">
+        <c:forEach var="alt" items="${TESTS[param.TEST_PATH].canonicalUrls}">
+            <c:if test="${alt.value != null && alt.value.url != null}">
+                <c:set var="altPathLanguage" value="${alt.value.language.code=='ru' ? '/ru' : ''}"/>
+                <c:set var="altHref" value="https://www.examclouds.com${altPathLanguage}${alt.value.url}"/>
+                <link rel="alternate" hreflang="${alt.value.language.code}" href="${altHref}">
+                <c:if test="${alt.value.language.code=='ru'}"><c:set var="ruHref" value="${altHref}"/></c:if>
+                <c:if test="${alt.value.language.code=='en'}"><c:set var="enHref" value="${altHref}"/></c:if>
+            </c:if>
+        </c:forEach>
+        <c:set var="xDefaultHref" value="${enHref != null ? enHref : ruHref}"/>
+        <c:if test="${xDefaultHref != null}">
+           <link rel="alternate" hreflang="x-default" href="${xDefaultHref}">
+        </c:if>
      <meta property="og:title" content="${TESTS[param.TEST_PATH].article.title}">
      <meta property="og:type" content="article">
      <meta property="og:description" content="${TESTS[param.TEST_PATH].article.description}">
