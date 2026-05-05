@@ -12,14 +12,7 @@
        </a>
     </li>
     <li>
-       <c:choose>
-              <c:when test="${param.TEST_PATH.equals('java-core-russian')}">
-                  <c:set var="courseUrl" value="${pageContext.request.contextPath}/ru/#start-course"></c:set>
-              </c:when>
-              <c:otherwise>
-                   <c:set var="courseUrl" value="${pageContext.request.contextPath}/${TESTS[param.TEST_PATH].fullPathName}"></c:set>
-              </c:otherwise>
-       </c:choose>
+       <c:set var="courseUrl" value="${pageContext.request.contextPath}/${TESTS[param.TEST_PATH].fullPathName}"></c:set>
        <a href="${courseUrl}">
           <span>${TESTS[param.TEST_PATH].name}</span></a>
     </li>

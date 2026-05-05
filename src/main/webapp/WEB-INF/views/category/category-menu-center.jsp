@@ -27,7 +27,7 @@ function toggleDropdown(header) {
             <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
               <li class="content-item">
                 <div class="content-header" onclick="toggleDropdown(this)">
-                  <div class="content-title">${catStatus}. ${category.value.name}</div>
+                  <div class="content-title">📘${catStatus}. ${category.value.name}</div>
                              <c:set var="catStatus" value="${catStatus + 1}" />
                   <div class="content-status">${fn:length(category.value.subCategories)}</div>
                   <div class="dropdown-arrow">▼</div>
@@ -35,10 +35,10 @@ function toggleDropdown(header) {
                 <ul class="content-dropdown">
                   <c:forEach var="subCategory" items="${category.value.subCategories}">
                     <c:if test="${subCategory.hidden==false}">
-                      <li class="sub-content-item">
+                      <li class="sub-content-item"   onclick="window.location.href='${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${subCategory.pathName}'">
                         <div class="sub-content-title">
-                          <input type="checkbox" checked>
-                          ${subCategory.name}
+
+                                        ${subCategory.name}
                         </div>
                       </li>
                     </c:if>
@@ -53,7 +53,10 @@ function toggleDropdown(header) {
 
   <!-- Section 2: Existing content -->
   <div class="section-right">
-        <div class="course-desc">${TESTS[param.TEST_PATH].article.text}</div>
+    <div class="mt-4">
+       <div class="mt-3 grid">
+        <div class="card">
+        ${TESTS[param.TEST_PATH].article.text}</div></div></div>
     <ul id="categories">
       <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
       <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
