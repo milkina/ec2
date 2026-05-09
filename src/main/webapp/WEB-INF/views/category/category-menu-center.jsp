@@ -28,7 +28,7 @@ function toggleDropdown(header) {
             <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
               <li class="content-item">
                 <div class="content-header" onclick="toggleDropdown(this)">
-                  <div class="content-title">📘${catStatus}. ${category.value.name}</div>
+                  <div class="content-title">📘${catStatus}. ${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}</div>
                    <c:set var="catStatus" value="${catStatus + 1}" />
                       <c:if test="${fn:length(category.value.subCategories)>0}">
                          <div class="content-status">${fn:length(category.value.subCategories)}</div>

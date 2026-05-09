@@ -22,9 +22,9 @@
                                <a href="${pageContext.request.contextPath}/show-edit-category?CATEGORY_PATH=${category.value.pathName}&TEST_PATH=${param.TEST_PATH}"
                                id="edit${category.value.pathName}">
                                 <c:if test="${category.value.parentCategory!=null}">
-                                     ${category.value.parentCategory.name}.
+                                     ${category.value.parentCategory.roadMapName!=null && not empty category.value.parentCategory.roadMapName?category.value.parentCategory.roadMapName:category.value.parentCategory.name}.
                                 </c:if>
-                                ${category.value.name}
+                                ${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}
                                 </a>
                              </td>
                              <td><a href="${pageContext.request.contextPath}/show-questions?CATEGORY_PATH=${category.value.pathName}&TEST_PATH=${param.TEST_PATH}&TYPE=QUESTION"
