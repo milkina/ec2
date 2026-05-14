@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -21,8 +21,8 @@
     <meta property="twitter:card" content="summary">
     <meta property="twitter:description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
     <meta property="twitter:site" content="@ExamClouds">
-    <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
-    <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+    <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+    <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="twitter:image:alt" content="Статьи из IT сферы на ExamClouds">
   </jsp:attribute>
   <jsp:body>

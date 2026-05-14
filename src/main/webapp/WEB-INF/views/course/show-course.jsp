@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -33,9 +33,9 @@
      <meta property="og:description" content="${TESTS[param.TEST_PATH].article.description}">
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}">
-     <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+     <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="og:image:alt" content="${TESTS[param.TEST_PATH].article.title}">
-     <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+     <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image:alt" content="${TESTS[param.TEST_PATH].article.title}">
      <meta property="twitter:title" content="${TESTS[param.TEST_PATH].article.title}">
      <meta property="twitter:card" content="summary">

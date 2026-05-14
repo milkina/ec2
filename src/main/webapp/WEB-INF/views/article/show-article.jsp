@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -33,8 +33,8 @@
               <meta property="twitter:image:alt" content="${ARTICLE_ATTRIBUTE.title}">
         </c:when>
         <c:otherwise>
-              <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
-              <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+              <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+              <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
               <meta property="twitter:image:alt" content="<spring:message code="welcome.on"/> ExamClouds">
         </c:otherwise>
     </c:choose>

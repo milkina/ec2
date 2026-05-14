@@ -1,4 +1,4 @@
-<%@ page trimDirectiveWhitespaces="true" %>
+﻿<%@ page trimDirectiveWhitespaces="true" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -24,8 +24,8 @@
       <meta property="twitter:card" content="summary">
       <meta property="twitter:description" content="Изучайте Java с нашими видео уроками для начинающих! Пошаговые руководства, практические примеры и советы от экспертов помогут вам быстро освоить основы программирования на Java. Начните свой путь к успешной карьере разработчика уже сегодня!">
       <meta property="twitter:site" content="@ExamClouds">
-      <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
-      <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
       <meta property="twitter:image:alt" content="Видео уроки по Java | Видеокурс и обучение программированию">
      </jsp:attribute>
     <jsp:body>

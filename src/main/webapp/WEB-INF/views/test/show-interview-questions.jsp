@@ -1,4 +1,4 @@
-<%@ page trimDirectiveWhitespaces="true"%>
+﻿<%@ page trimDirectiveWhitespaces="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -25,8 +25,8 @@
       <meta property="twitter:card" content="summary">
       <meta property="twitter:description" content="Prepare for your Java interview with our key questions and answers. Master Java Core, technical, and API questions to succeed in your Java developer interview.">
       <meta property="twitter:site" content="@ExamClouds">
-      <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
-      <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
       <meta property="twitter:image:alt" content="Java Interview Preparation: Key Questions and Answers for Success">
      </jsp:attribute>
      <jsp:body>

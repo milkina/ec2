@@ -1,4 +1,4 @@
-<meta property="og:title" content="<c:out value="${titleName}"/>">
+﻿<meta property="og:title" content="<c:out value="${titleName}"/>">
 <meta property="og:type" content = "article">
 <meta property="og:description" content = "${CATEGORY_ATTRIBUTE.article.description}">
 <meta property="og:site_name" content="ExamClouds">
@@ -10,8 +10,8 @@
     <meta property="twitter:image" content="${CATEGORY_ATTRIBUTE.article.image}">
  </c:when>
  <c:otherwise>
-   <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
-   <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+   <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+   <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
  </c:otherwise>
 </c:choose>
 <meta property="twitter:image:alt" content="<c:out value="${titleName}"/>">
