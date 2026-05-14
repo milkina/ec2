@@ -50,7 +50,6 @@
               Start learning free
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a class="btn btn-outline" href="${pageContext.request.contextPath}/tests">Take placement test</a>
           </div>
           <div class="hero-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <b>50,000</b> learners</span>
@@ -87,6 +86,44 @@
         <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><div><p class="v">100+</p><p class="l">Videos</p></div></div>
       </div>
     </section>
+          <!-- ===== REVIEWS PLATFORMS ===== -->
+            <section class="container section">
+              <div class="section-head section-head-center">
+                <h2>Student reviews</h2>
+                <p>Many students are already learning and recommend our course</p>
+              </div>
+              <div class="reviews-grid-en">
+                <article class="review-card">
+                  <div class="review-head">
+                    <span class="review-logo review-logo-trustpilot">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="#00b67a" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <b>Trustpilot</b>
+                    </span>
+                    <div class="review-rating">
+                      <span class="stars stars-trustpilot" aria-hidden="true">
+                        <i></i><i></i><i></i><i></i><i class="half"></i>
+                      </span>
+                      <span class="review-score">4.4 of 5</span>
+                    </div>
+                  </div>
+                  <p class="review-quote">This site contains good and useful information. Besides theory it was interesting tasks to use knowledge in practice. Also there are sollutions of tasks.</p>
+                  <a class="review-link" href="https://www.trustpilot.com/review/examclouds.com" target="_blank" rel="noopener noreferrer">Read all Trustpilot reviews →</a>
+                </article>
+                <article class="review-card">
+                  <div class="review-head">
+                    <span class="review-logo review-logo-youtube">
+                      <svg viewBox="0 0 24 24" width="26" height="20" aria-hidden="true"><path fill="#ff0000" d="M23 6.2a3 3 0 0 0-2.1-2.1C19 3.6 12 3.6 12 3.6s-7 0-8.9.5A3 3 0 0 0 1 6.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 17.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.5 12 31 31 0 0 0 23 6.2z"/><polygon fill="#fff" points="9.75 15.5 15.75 12 9.75 8.5"/></svg>
+                      <b>YouTube</b>
+                    </span>
+                    <div class="review-rating">
+                      <span class="review-subs"><b>4K+</b> subscribers</span>
+                    </div>
+                  </div>
+                  <p class="review-quote">I watch lessons on YouTube and follow along with the course — very convenient! The author explains complex topics in an easy and accessible way.</p>
+                  <a class="review-link" href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="noopener noreferrer">Visit the YouTube channel →</a>
+                </article>
+              </div>
+            </section>
 
     <!-- ===== PATH PICKER ===== -->
     <section class="container section">
@@ -177,51 +214,33 @@
         <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Video</h3><p>Watch our videos.</p></div>
       </div>
     </section>
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="testimonials">
-      <div class="container section">
-        <div class="section-head">
-          <span class="eyebrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="color:var(--accent);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            4.4 average
-          </span>
-          <h2 style="margin-top:1rem;">Loved by learners worldwide</h2>
+ <!-- ===== WHY LEARN JAVA ===== -->
+    <section class="container section">
+      <div class="why-java">
+        <div class="why-java-head">
+          <span class="why-java-eyebrow">☕ Learning Java Core</span>
+          <h2>Why Learning Java is Essential for Your Career</h2>
+          <p class="why-java-lede">Java is one of the most popular programming languages in the world — and for good reason. It powers everything from Android apps to large-scale enterprise systems, web platforms, and cloud infrastructure.</p>
         </div>
-        <div class="cards cards-3">
-          <figure class="testimonial">
-            <div class="stars">
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <blockquote>"This site contains good and useful information. Besides theory it was interesting tasks to use knowledge in practice. Also there are sollutions of tasks."</blockquote>
-            <figcaption><span class="who">Andrew</span></figcaption>
-          </figure>
-          <figure class="testimonial">
-            <div class="stars">
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <blockquote>"Very good and structured course for learning Java.
-                         Thanks authors."</blockquote>
-            <figcaption><span class="who">Tema Bond</span></figcaption>
-          </figure>
-          <figure class="testimonial">
-            <div class="stars">
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <blockquote>"Very clean and understandable topics about java on ExamClouds. Thanks authors!"</blockquote>
-            <figcaption><span class="who">Mac</span></figcaption>
-          </figure>
+
+        <div class="why-java-grid">
+          <article class="why-card">
+            <span class="why-ic" aria-hidden="true">💼</span>
+            <h3>Find your first job</h3>
+            <p>Java opens up a world of opportunities. It's in high demand by employers, and knowing Java significantly increases your chances of landing a well-paying role in software development.</p>
+          </article>
+
+          <article class="why-card">
+            <span class="why-ic" aria-hidden="true">🚀</span>
+            <h3>Why Java matters for your career</h3>
+            <p>Java's object-oriented structure, cross-platform capabilities, and rich ecosystem make it ideal for both beginners and experienced developers. If you're serious about a tech career, mastering Java is a must.</p>
+          </article>
+
+          <article class="why-card">
+            <span class="why-ic" aria-hidden="true">📚</span>
+            <h3>What's included in the course</h3>
+            <p>Built on the principle of "from simple to complex" — from Java syntax basics to OOP, collections, Stream API, and multithreading. Every lesson includes examples, practical tasks, and tests.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -232,12 +251,12 @@
         <div>
           <h2>Frequently asked</h2>
         </div>
-        <div class="faq-list">
-          <details class="faq-item"><summary>Why Learning Java is Essential for Your Career?<span class="plus">+</span></summary><p class="a">Java is one of the most popular programming languages in the world, and for good reason. It's used by millions of developers and companies across various industries to build everything from mobile apps to large-scale enterprise systems. Whether it's Android development, web applications, or cloud computing, Java is everywhere.</p><p class="a">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p></details>
-          <details class="faq-item"><summary>Why Java is important for career?<span class="plus">+</span></summary><p class="a">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p></details>
-          <details class="faq-item"><summary>What is included in the course?<span class="plus">+</span></summary><p class="a">The training is built on the principle of “from simple to complex”: from the basics of Java syntax to complex topics such as OOP, collections, Stream API, and multithreading. Each lesson is accompanied by examples, practical tasks and tests to consolidate the material.</p></details>
-          <details class="faq-item"><summary>Can I learn on mobile?<span class="plus">+</span></summary><p class="a">Lessons and tests work great on mobile. Practical coding tasks are best on desktop.</p></details>
-        </div>
+         <div class="faq-list">
+                  <details class="faq-item"><summary>Is ExamClouds really free?<span class="plus">+</span></summary><p class="a">Yes. All lessons, tasks, and tests are free. We don't lock content behind paywalls.</p></details>
+                  <details class="faq-item"><summary>Do I need any setup?<span class="plus">+</span></summary><p class="a">No. You can read lessons and take tests with no install. For practical tasks, we recommend installing a free JDK and IntelliJ IDEA Community.</p></details>
+                  <details class="faq-item"><summary>How long until I'm job-ready?<span class="plus">+</span></summary><p class="a">Most learners going daily for 3–6 months feel comfortable applying for junior Java roles.</p></details>
+                  <details class="faq-item"><summary>Can I learn on mobile?<span class="plus">+</span></summary><p class="a">Lessons and tests work great on mobile. Practical coding tasks are best on desktop.</p></details>
+                </div>
       </div>
     </section>
 

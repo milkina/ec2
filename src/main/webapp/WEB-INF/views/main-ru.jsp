@@ -8,13 +8,13 @@
 <html lang="ru">
 <head>
     <%@ include file="/WEB-INF/head-new.jsp"%>
-    <title>Бесплатные курсы Java программирования с нуля</title>
+    <title>Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds</title>
     <meta name="description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
     <link rel="canonical" href="https://www.examclouds.com/ru/">
-    <meta property="og:title" content="Бесплатные курсы Java программирования с нуля">
+    <meta property="og:title" content="Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <meta property="og:site_name" content="ExamClouds">
@@ -23,7 +23,7 @@
     <meta property="og:modified_time" content="2026-05-14T12:00:00Z">
     <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="og:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
-    <meta name="twitter:title" content="Бесплатные курсы Java программирования с нуля">
+    <meta name="twitter:title" content="Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <meta name="twitter:site" content="@ExamClouds">
@@ -43,14 +43,14 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 11l-5.8 1.9L12 18l-1.9-5.1L4 11l6.1-2.2z"/></svg>
             Бесплатно
           </span>
-          <h1>Изучи <span class="accent">Java</span> с нуля до разработчика.</h1>
+          <h1>Изучи <span class="accent">Java</span> с нуля — курс для начинающих</h1>
           <p class="lede">200+ коротких уроков, практических заданий и тестов — разработано для новичков, которые хотят действительно закончить курс.</p>
+          <p class="lede">Бесплатный курс Java для начинающих: изучайте Java Core, решайте задачи, проходите тесты и осваивайте навыки Java-разработчика.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">
               Начать обучение
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a class="btn btn-outline" href="${pageContext.request.contextPath}/ru/tests">Пройти тест</a>
           </div>
           <div class="hero-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <b>50,000</b> студентов</span>
@@ -87,6 +87,61 @@
         <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><div><p class="v">200+</p><p class="l">Видео</p></div></div>
       </div>
     </section>
+      <!-- ===== REVIEWS PLATFORMS ===== -->
+        <section class="container section">
+          <div class="section-head section-head-center">
+            <h2>Отзывы студентов</h2>
+            <p>Многие студенты уже учатся у нас и рекомендуют курс</p>
+          </div>
+          <div class="reviews-grid">
+            <article class="review-card">
+              <div class="review-head">
+                <span class="review-logo review-logo-trustpilot">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="#00b67a" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <b>Trustpilot</b>
+                </span>
+                <div class="review-rating">
+                  <span class="stars stars-trustpilot" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i class="half"></i>
+                  </span>
+                  <span class="review-score">4.4 of 5</span>
+                </div>
+              </div>
+              <p class="review-quote">Огромное спасибо авторам за такой вклад, я очень рад что нашел ваш сайт, это просто алмаз среди всего где я сидел. Та же информация, которую дают и на платных курсах, те же задачи, объяснение на высоком уровне, видно автору не пофиг, и он постарался на славу. Огромное спасибо что помогаете так новичкам. Я прошел на работу благодаря этому сайту, и тестам которые там были по Java Core. Огромное вам спасибо!</p>
+              <a class="review-link" href="https://www.trustpilot.com/review/examclouds.com" target="_blank" rel="noopener noreferrer">Читать все отзывы на Trustpilot →</a>
+            </article>
+
+            <article class="review-card">
+              <div class="review-head">
+                <span class="review-logo review-logo-udemy">
+                  <b style="color:#a435f0">Udemy</b>
+                </span>
+                <div class="review-rating">
+                  <span class="stars stars-udemy" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i class="half"></i>
+                  </span>
+                  <span class="review-score">4.82 of 5</span>
+                </div>
+              </div>
+              <p class="review-quote">Очень грамотно все объясняется. Смотрел до этого разные курсы несмотря на это узнаю из данного курса много нового. Особо важно то что после каждого раздела следует блок задач для самостоятельного решения. Большое спасибо автору за её труд.</p>
+              <a class="review-link" href="https://www.udemy.com/course/java-bup/#reviews" target="_blank" rel="noopener noreferrer">Читать все отзывы на Udemy →</a>
+            </article>
+
+            <article class="review-card">
+              <div class="review-head">
+                <span class="review-logo review-logo-youtube">
+                  <svg viewBox="0 0 24 24" width="26" height="20" aria-hidden="true"><path fill="#ff0000" d="M23 6.2a3 3 0 0 0-2.1-2.1C19 3.6 12 3.6 12 3.6s-7 0-8.9.5A3 3 0 0 0 1 6.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 17.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.5 12 31 31 0 0 0 23 6.2z"/><polygon fill="#fff" points="9.75 15.5 15.75 12 9.75 8.5"/></svg>
+                  <b>YouTube</b>
+                </span>
+                <div class="review-rating">
+                  <span class="review-subs"><b>4K+</b> подписчиков</span>
+                </div>
+              </div>
+              <p class="review-quote">Я смотрю уроки на YouTube и параллельно прохожу курс — очень удобно! Автор объясняет сложные темы просто и доступно.</p>
+              <a class="review-link" href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="noopener noreferrer">Перейти к видеоурокам на YouTube →</a>
+            </article>
+          </div>
+        </section>
 
     <!-- ===== PATH PICKER ===== -->
     <section class="container section">
@@ -217,7 +272,7 @@
           <div class="udemy-main">
             <span class="udemy-badge">С наивысшим рейтингом на Udemy · Специальное предложение</span>
             <h3>Java SE для начинающих</h3>
-            <p class="udemy-desc">Полный курс Java на русском языке — от нуля до уверенного Java-разработчика. Пожизненный доступ и сертификат по завершении.</p>
+            <p class="udemy-desc">Полный курс Java на русском языке — от нуля до уверенного Java-разработчика.</p>
             <p class="udemy-meta">
               <span class="udemy-stars" aria-label="Rated 4.8 out of 5">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -246,55 +301,44 @@
         </div>
       </div>
     </section>
+    <!-- ===== WHY LEARN JAVA ===== -->
+        <section class="container section">
+          <div class="why-java">
+            <div class="why-java-head">
+              <span class="why-java-eyebrow">☕ Изучение Java Core</span>
+              <h2>Почему изучение Java важно для карьеры</h2>
+              <p class="why-java-lede">Java — один из самых востребованных языков программирования в мире. Он используется для разработки Android-приложений, крупных корпоративных систем, веб-платформ и облачной инфраструктуры. Знание Java открывает возможности для работы в самых разных сферах — от стартапов до международных IT-компаний.</p>
+            </div>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="testimonials">
-      <div class="container section">
-        <div class="section-head">
-          <span class="eyebrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="color:var(--accent);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            4.8 средний рейтинг
-          </span>
-          <h2 style="margin-top:1rem;">Выбор студентов</h2>
-        </div>
-        <div class="cards cards-3">
-          <figure class="testimonial">
-            <div class="stars">
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="why-java-grid">
+              <article class="why-card">
+                <span class="why-ic" aria-hidden="true">💼</span>
+                <h3>Почему стоит изучать Java?</h3>
+                <p>Изучение Java — один из самых надежных способов начать карьеру в IT.
+                       На платформе ExamClouds вы найдете бесплатные курсы Java программирования,
+                       которые подходят как для начинающих, так и для тех, кто хочет систематизировать знания.</p>
+              </article>
+
+              <article class="why-card">
+                <span class="why-ic" aria-hidden="true">🚀</span>
+                <h3>Что входит в курс?</h3>
+                <p> Обучение построено по принципу «от простого к сложному»:
+                       от основ синтаксиса Java до сложных тем, таких как ООП, коллекции, Stream API и многопоточность.
+                       Каждый урок сопровождается примерами, <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">практическими заданиями</a> и <a href="${pageContext.request.contextPath}/ru/tests">тестами</a> для закрепления материала.
+                        В отличие от многих других платформ, здесь вы получаете не только теорию,
+                           но и реальную практику. Это помогает подготовиться к собеседованиям и работе Java-разработчиком.
+</p>
+              </article>
+
+              <article class="why-card">
+                <span class="why-ic" aria-hidden="true">📚</span>
+                <h3>Кому подойдет обучение?</h3>
+                <p>Более 50 000 студентов уже начали обучение и используют материалы сайта
+                       для подготовки к работе и повышения квалификации.</p>
+              </article>
             </div>
-            <blockquote>"Хороший курс. Советую. Все подробно обьяснено и доступно для любого уровня."</blockquote>
-            <figcaption><span class="who">Aleksei</span></figcaption>
-          </figure>
-          <figure class="testimonial">
-            <div class="stars">
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <blockquote>"Очень грамотно все объясняется. Смотрел до этого разные курсы несмотря на это узнаю из данного курса много нового. Особо важно то что после каждого раздела следует блок задач для самостоятельного решения.
-                         Большое спасибо автору за её труд."</blockquote>
-            <figcaption><span class="who">Henadzi</span></figcaption>
-          </figure>
-          <figure class="testimonial">
-            <div class="stars">
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <blockquote>"Курс очень понравился! Каждый модуль курса хорошо структурирован - кроме видео, есть также множество практических заданий и тестов, что помогает легче усваивать материал. Рекомендую всем, кто изучает Java."</blockquote>
-            <figcaption><span class="who">Alex</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
 
     <!-- ===== FAQ ===== -->
     <section class="container section">
@@ -304,9 +348,9 @@
           <p style="margin-top:0.75rem; color:var(--muted-fg);">Не нашли ответ? <a href="https://t.me/examclouds/" target="_blank" rel="noopener nofollow sponsored" style="color:var(--primary); font-weight:600; text-decoration:underline;">Напишите нам</a>.</p>
         </div>
         <div class="faq-list">
-          <details class="faq-item"><summary>Почему стоит изучать Java?<span class="plus">+</span></summary><p class="a">Изучение Java — один из самых надежных способов начать карьеру в IT.</p></details>
-          <details class="faq-item"><summary>Что предлагает ExamClouds?<span class="plus">+</span></summary><p class="a">На платформе ExamClouds вы найдете бесплатные курсы Java программирования, которые подходят как для начинающих, так и для тех, кто хочет систематизировать знания. В отличие от многих других платформ, здесь вы получаете не только теорию, но и реальную практику. Это помогает подготовиться к собеседованиям и работе Java-разработчиком.</p></details>
-          <details class="faq-item"><summary>Что входит в курс?<span class="plus">+</span></summary><p class="a">Обучение построено по принципу «от простого к сложному»: от основ синтаксиса Java до сложных тем, таких как ООП, коллекции, Stream API и многопоточность. Каждый урок сопровождается примерами, практическими заданиями и тестами для закрепления материала.</p></details>
+          <details class="faq-item"><summary>ExamClouds действительно бесплатный?<span class="plus">+</span></summary><p class="a">Да. Все уроки, задания и тесты доступны бесплатно. Мы не скрываем контент за платным доступом.</p></details>
+          <details class="faq-item"><summary>Нужно что-то устанавливать?<span class="plus">+</span></summary><p class="a">Нет. Вы можете изучать уроки и проходить тесты без установки. Для практических заданий рекомендуем установить бесплатный JDK и IntelliJ IDEA Community.</p></details>
+          <details class="faq-item"><summary>Можно учиться с телефона?<span class="plus">+</span></summary><p class="a">Да. Уроки и тесты отлично работают на мобильных устройствах. Практические задания по программированию удобнее выполнять на компьютере.</p></details>
           <details class="faq-item"><summary>Кому подойдет обучение?<span class="plus">+</span></summary><p class="a">Начинающим и тем, кто хочет закрепить знания.</p></details>
         </div>
       </div>
