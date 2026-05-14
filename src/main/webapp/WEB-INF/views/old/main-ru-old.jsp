@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -22,13 +22,13 @@
     <meta property="og:url" content="https://www.examclouds.com/ru/">
     <meta property="og:published_time" content="2017-10-08T12:00:00Z">
     <meta property="og:modified_time" content="2024-10-08T12:00:00Z">
-    <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+    <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="og:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
     <meta name="twitter:title" content="Бесплатные курсы Java программирования с нуля">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
     <meta name="twitter:site" content="@ExamClouds">
-    <meta name="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+    <meta name="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
      <script type="application/ld+json">
         {

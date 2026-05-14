@@ -4,294 +4,267 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="/WEB-INF/tld/menu-jsp-taglib.tld" prefix="menu"%>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-        <meta charset="UTF-8">
-        <%@ include file="/WEB-INF/head-common-without-bootstrap.jsp"%>
-        <meta name="description" content="Explore free Java Core tutorials. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources.">
-        <title>Free Java Core Courses | Learn Java Programming Online</title>
-        <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
-        <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
-        <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
-        <link rel="canonical" href="https://www.examclouds.com">
-        <meta property="og:title" content="Free Java Core Courses | Learn Java Programming Online">
-        <meta property="og:type" content="article">
-        <meta property="og:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
-        <meta property="og:site_name" content="ExamClouds">
-        <meta property="og:url" content="https://www.examclouds.com">
-        <meta property="og:published_time" content="2017-10-08T12:00:00Z">
-        <meta property="og:modified_time" content="2024-10-08T12:00:00Z">
-        <meta property="twitter:title" content="Free Java Core Courses | Learn Java Programming Online">
-        <meta property="twitter:card" content="summary">
-        <meta property="twitter:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
-        <meta property="twitter:site" content="@ExamClouds">
-        <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
-        <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
-        <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
-        <meta property="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
-        <script src="${pageContext.request.contextPath}/js/main.js?v=3"></script>
-  </head>
-<body itemscope itemtype="https://schema.org/WebPage" class="scroll-style">
-  <div class="container-fluid menu top round-border-bottom">
-    <%@ include file="/menu.jsp"%>
-    <!-- HERO -->
-    <div class="container mt-3">
-      <div class="hero">
-        <div>
-          <h1>Master Java Programming</h1>
-          <p>Free lessons, tasks and tests</p>
-          <p class="hero-sub">
-            100+ lessons • Tasks • Tests • Free
-          </p>
-          <p class="hero-trust">
-            50 000 students
-          </p>
-          <div class="mt-2">
-            <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-primary">🚀 Start learning</a>
-            <a href="${pageContext.request.contextPath}/tests" class="btn btn-secondary">📊 Take a test</a>
-          </div>
-        </div>
-        <div class="custom-layout">
-          <div class="hide-mobile-item">
-            <img src="https://img.examclouds.com/general/index-image.webp" alt="Java Programming Course" width="473" height="250" loading="eager" fetchpriority="high">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<head>
+    <%@ include file="/WEB-INF/head-new.jsp"%>
+    <title>Free Java Core Courses | Learn Java Programming Online</title>
+    <meta name="description" content="Explore free Java Core tutorials. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources.">
+    <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
+    <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
+    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
+    <link rel="canonical" href="https://www.examclouds.com">
+    <meta property="og:title" content="Free Java Core Courses | Learn Java Programming Online">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
+    <meta property="og:site_name" content="ExamClouds">
+    <meta property="og:url" content="https://www.examclouds.com">
+    <meta property="og:published_time" content="2017-10-08T12:00:00Z">
+    <meta property="og:modified_time" content="2024-10-08T12:00:00Z">
+    <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+    <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
+    <meta name="twitter:title" content="Free Java Core Courses | Learn Java Programming Online">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
+    <meta name="twitter:site" content="@ExamClouds">
+    <meta name="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
+    <meta name="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
+</head>
+<body>
+ <%@ include file="/WEB-INF/header.jsp"%>
   <main>
-    <!-- FEATURES -->
-    <div class="container mt-4">
-      <div class="features-grid">
-        <div class="feature-item">
-          <i class="fas fa-gift feature-icon free"></i>
-          <span class="feature-text">Free</span>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 11l-5.8 1.9L12 18l-1.9-5.1L4 11l6.1-2.2z"/></svg>
+            Free
+          </span>
+          <h1>Learn Java the <span class="accent">friendly</span> way.</h1>
+          <p class="lede">100+ bite-sized lessons, practical tasks, and tests — built for beginners who want to actually finish the course.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/exam/ocpjp8">
+              Start learning free
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn-outline" href="${pageContext.request.contextPath}/tests">Take placement test</a>
+          </div>
+          <div class="hero-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <b>50,000</b> learners</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <b>100+</b> lessons</span>
+            <span><svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <b>4.4</b></span>
+          </div>
         </div>
-        <div class="feature-item">
-          <i class="fas fa-route feature-icon learning"></i>
-          <span class="feature-text">Step by step learning</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-tasks feature-icon practice"></i>
-          <span class="feature-text">Tasks and tests</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-user-graduate feature-icon beginner"></i>
-          <span class="feature-text">Suitable for beginners</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-play-circle feature-icon video"></i>
-          <span class="feature-text">Video</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- WHERE TO START -->
-    <div class="container mt-4">
-      <div class="card">
-        <h2 class="h2">Where to start?</h2>
-        <p class="text">
-          Select path depending on your level
-        </p>
-      </div>
-    </div>
+        <div class="hero-art">
+          <div class="backdrop"></div>
+          <div class="frame">
 
-    <!-- START BLOCK -->
-    <div class="container mt-4">
-    <div class="mt-3 grid grid-3">
-      <div class="card card-horizontal">
-        <div class="card-icon-circle">
-          <i class="fas fa-chalkboard-teacher fa-2x"></i>
-        </div>
-        <div class="card-horizontal-content">
-          <h3 class="h3">Beginner in Java?</h3>
-          <p class="text mt-1">Start with Java basics and learn step by step</p>
-          <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-outline mt-2">Start course →</a>
-        </div>
-      </div>
-
-      <div class="card card-horizontal">
-        <div class="card-icon-circle">
-          <i class="fas fa-laptop-code fa-2x"></i>
-        </div>
-        <div class="card-horizontal-content">
-          <h3 class="h3">Do you want practice?</h3>
-          <p class="text mt-1">Solve tasks and improve your skills</p>
-          <a href="${pageContext.request.contextPath}/practical-java-tasks" class="btn btn-outline mt-2">Solve taks →</a>
-        </div>
-      </div>
-
-      <div class="card card-horizontal">
-        <div class="card-icon-circle">
-          <i class="fas fa-tasks fa-2x"></i>
-        </div>
-        <div class="card-horizontal-content">
-          <h3 class="h3">Verify your knowledge</h3>
-          <p class="text mt-1">Pass a test and access your level</p>
-          <a href="${pageContext.request.contextPath}/tests" class="btn btn-outline mt-2">Pass test →</a>
-        </div>
-      </div>
-     </div>
-    </div>
-
-    <!-- ROADMAP -->
-    <div class="container mt-4">
-    <div class="mt-3 grid">
-      <div class="card">
-        <h2 class="h2">Java developer roadmap</h2>
-        <p class="text mt-1">Follow learning steps</p>
-
-        <c:set var="i" value="1" />
-        <c:forEach var="category" items="${TESTS['ocpjp8'].categories}">
-          <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
-            <c:if test="${i==1}"><div class="grid grid-6 mt-3"></c:if>
-            <c:if test="${i==7}"></div></c:if>
-            <c:if test="${i==7}"><div class="roadmap-hidden grid grid-6 mt-3"></c:if>
-            <div class="roadmap-step">
-              <div class="roadmap-number">${i}</div>
-              <div class="roadmap-content">
-                <a href="${pageContext.request.contextPath}/java/ocpjp8/${category.value.pathName}"
-                   id="categoryItem${category.value.pathName}" class="category-href-main">
-                  ${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}
-                </a>
-              </div>
+            <img src="https://img.examclouds.com/general/index-image.png" alt="Start learning Java? Welcome to ExamClouds"
+                 width="750" height="400" title="Start learning Java? Welcome to ExamClouds" fetchpriority="high">
+            <div class="badge tl">
+              <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+              <div><p class="label">Step 3 done</p><p class="title">Java Syntax</p></div>
             </div>
-            <c:set var="i" value="${i + 1}" />
-          </c:if>
-        </c:forEach>
-        </div>
-      </div>
-
-      <div class="text-center mt-3">
-        <c:set var="str" value="Show all course (${i-1} topics)" />
-        <button class="btn btn-outline" onclick="toggleRoadmap('${str}', 'Hide')">
-          ${str}
-        </button>
-      </div>
-    </div>
-    </div>
-
-    <!-- POPULAR -->
-    <div class="container mt-4">
-      <h2 class="h2">Popular topics</h2>
-      <div class="grid grid-3 mt-3">
-        <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="card card-horizontal c1">
-          <div class="card-icon-circle">
-            <i class="fas fa-code fa-2x"></i>
-          </div>
-          <div class="card-horizontal-content">
-            <h3 class="h3">Java Core</h3>
-            <p class="text mt-1">Full Java Course</p>
-          </div>
-        </a>
-        <a href="${pageContext.request.contextPath}/tests" class="card card-horizontal c1">
-          <div class="card-icon-circle">
-            <i class="fas fa-check-circle fa-2x"></i>
-          </div>
-          <div class="card-horizontal-content">
-            <h3 class="h3">Tests</h3>
-            <p class="text mt-1">Test your knowledge</p>
-          </div>
-        </a>
-        <a href="${pageContext.request.contextPath}/practical-java-tasks" class="card card-horizontal c1">
-          <div class="card-icon-circle">
-            <i class="fas fa-laptop-code fa-2x"></i>
-          </div>
-          <div class="card-horizontal-content">
-            <h3 class="h3">Tasks</h3>
-            <p class="text mt-1">Tasks of different levels</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- LESSONS -->
-    <div class="container mt-4">
-      <div class="grid grid-3 mt-3">
-        <a href="https://www.youtube.com/c/tatyanamilkina" rel="nofollow noopener noreferrer" target="_blank" class="card card-horizontal c1">
-          <div class="card-icon-circle">
-            <i class="fab fa-youtube fa-2x"></i>
-          </div>
-          <div class="card-horizontal-content">
-            <h3 class="h3">Video</h3>
-            <p class="text mt-1">Subscribe to our YouTube channel</p>
-          </div>
-        </a>
-        <a href="${pageContext.request.contextPath}/show-all-articles" class="card card-horizontal c1">
-          <div class="card-icon-circle">
-            <i class="fas fa-newspaper fa-2x"></i>
-          </div>
-          <div class="card-horizontal-content">
-            <h3 class="h3">Blog</h3>
-            <p class="text mt-1">IT news</p>
-          </div>
-        </a>
-        <a href="${pageContext.request.contextPath}/questions" class="card card-horizontal c1">
-          <div class="card-icon-circle">
-            <i class="fas fa-question-circle fa-2x"></i>
-          </div>
-          <div class="card-horizontal-content">
-            <h3 class="h3">Quizzes</h3>
-            <p class="text mt-1">Our Quizzes help to revise your knowledge</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- BENEFITS -->
-    <div class="container mt-4">
-        <div class="mt-3 grid">
-      <div class="card">
-        <h2 class="h2">Why ExamClouds?</h2>
-        <div class="grid grid-3 mt-3">
-          <div>
-            <h3 class="h3">Free</h3>
-            <p class="text">All materials are available for free</p>
-          </div>
-          <div>
-            <h3 class="h3">Structure</h3>
-            <p class="text">Step by step learning</p>
-          </div>
-          <div>
-            <h3 class="h3">Tasks</h3>
-            <p class="text">Force your knowledge with tasks</p>
+            <div class="badge br">
+              <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
+              <div><p class="label">Achievement</p><p class="title">First class!</p></div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- CTA -->
-    <div class="container mt-4">
-     <div class="mt-3 grid">
-      <div class="card text-center">
-        <h2 class="h2">Start learning right now</h2>
-        <p class="text mt-2">Make your first step to Java Developer</p>
-        <a href="${pageContext.request.contextPath}/exam/ocpjp8" class="btn btn-outline mt-3">
-          Start learning →
-        </a>
+    <!-- ===== STATS ===== -->
+    <section class="container">
+      <div class="stats">
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><p class="v">50,000+</p><p class="l">Active learners</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><div><p class="v">100+</p><p class="l">Free lessons</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><div><p class="v">200+</p><p class="l">Practical tasks</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><div><p class="v">100+</p><p class="l">Videos</p></div></div>
       </div>
-    </div>
-    </div>
+    </section>
+
+    <!-- ===== PATH PICKER ===== -->
+    <section class="container section">
+      <div class="section-head">
+        <h2>Where do you want to start?</h2>
+        <p>Pick the path that fits you today — you can switch any time.</p>
+      </div>
+      <div class="cards cards-3">
+        <article class="path-card card-lift">
+          <span class="tag tag-success">Beginner</span>
+          <span class="ico-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+          <h3>New to Java?</h3>
+          <p class="desc">Start with the basics. We'll guide you step by step from your first 'Hello World' to writing real classes.</p>
+          <a class="link-arrow" href="${pageContext.request.contextPath}/exam/ocpjp8">Start the course →</a>
+        </article>
+        <article class="path-card card-lift">
+          <span class="tag tag-primary">Practice</span>
+          <span class="ico-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+          <h3>Want to practice?</h3>
+          <p class="desc">200+ practical tasks ordered by difficulty. Write code, get feedback, level up.</p>
+          <a class="link-arrow" href="${pageContext.request.contextPath}/practical-java-tasks">Solve tasks →</a>
+        </article>
+        <article class="path-card card-lift">
+          <span class="tag tag-accent">Test yourself</span>
+          <span class="ico-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
+          <h3>Verify your knowledge</h3>
+          <p class="desc">Take a free test, find your level, and discover what to learn next.</p>
+          <a class="link-arrow" href="${pageContext.request.contextPath}/tests">Take a test →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== ROADMAP ===== -->
+    <section class="band" id="roadmap">
+      <div class="container roadmap-grid">
+        <div class="roadmap-side">
+          <span class="pill">Java Developer Roadmap</span>
+          <h2 style="margin-top:1rem;">Your path to becoming a Java developer</h2>
+          <p style="margin-top:1rem; color:var(--muted-fg);">A clear, ordered learning path. Each step unlocks the next. Free forever.</p>
+          <a class="btn btn-primary btn-sm" style="margin-top:1.5rem;" href="${pageContext.request.contextPath}/exam/ocpjp8">
+            Start step 1
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <div class="callout">
+            <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <div><p class="t">15-min daily streaks</p><p class="s">Most students finish step 1 in one sitting.</p></div>
+          </div>
+        </div>
+        <div>
+          <ol class="roadmap">
+                      <c:set var="i" value="0" />
+                      <c:forEach var="category" items="${TESTS['ocpjp8'].categories}">
+                        <c:if test="${i < 10 && category.value.hidden == false && category.value.parentCategory != null}">
+                          <li class="roadmap-item ${i % 2 == 0 ? 'even' : 'odd'}">
+                            <a href="${pageContext.request.contextPath}/java/ocpjp8/${category.value.pathName}"
+                               id="categoryItem${category.value.pathName}" class="category-href-main">
+                              <span class="step-num">${i + 1}</span>
+                              <div class="step-text">
+                                <p class="step-topic">${category.value.parentCategory.roadMapName != null && not empty category.value.parentCategory.roadMapName ? category.value.parentCategory.roadMapName : category.value.parentCategory.name}</p>
+                                <p class="step-title">${category.value.roadMapName != null && not empty category.value.roadMapName ? category.value.roadMapName : category.value.name}</p>
+                              </div>
+                              <span class="step-aside locked">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                              </span>
+                            </a>
+                          </li>
+                          <c:set var="i" value="${i + 1}" />
+                        </c:if>
+                      </c:forEach>
+                    </ol>
+          <a class="see-all" href="#courses">See all 50+ lessons →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="container section">
+      <div class="section-head">
+        <h2>Built so you actually finish</h2>
+        <p>Most online courses get abandoned. Ours don't.</p>
+      </div>
+      <div class="cards cards-2 cards-3-lg">
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><h3>Free</h3><p>No paywalls, no upsells. Learning should be accessible.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><h3>Bite-sized lessons</h3><p>5–15 min lessons that fit into a busy schedule.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><h3>Hands-on tasks</h3><p>Improve your knowledge with exercises.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><h3>Earn streaks</h3><p>Daily streaks and badges keep you motivated.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><h3>Blog</h3><p>IT news.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Video</h3><p>Watch our videos.</p></div>
+      </div>
+    </section>
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials">
+      <div class="container section">
+        <div class="section-head">
+          <span class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" style="color:var(--accent);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            4.4 average
+          </span>
+          <h2 style="margin-top:1rem;">Loved by learners worldwide</h2>
+        </div>
+        <div class="cards cards-3">
+          <figure class="testimonial">
+            <div class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote>"This site contains good and useful information. Besides theory it was interesting tasks to use knowledge in practice. Also there are sollutions of tasks."</blockquote>
+            <figcaption><span class="who">Andrew</span></figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote>"Very good and structured course for learning Java.
+                         Thanks authors."</blockquote>
+            <figcaption><span class="who">Tema Bond</span></figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="stars">
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote>"Very clean and understandable topics about java on ExamClouds. Thanks authors!"</blockquote>
+            <figcaption><span class="who">Mac</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="container section">
+      <div class="faq-grid">
+        <div>
+          <h2>Frequently asked</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Why Learning Java is Essential for Your Career?<span class="plus">+</span></summary><p class="a">Java is one of the most popular programming languages in the world, and for good reason. It's used by millions of developers and companies across various industries to build everything from mobile apps to large-scale enterprise systems. Whether it's Android development, web applications, or cloud computing, Java is everywhere.</p><p class="a">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p></details>
+          <details class="faq-item"><summary>Why Java is important for career?<span class="plus">+</span></summary><p class="a">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p></details>
+          <details class="faq-item"><summary>What is included in the course?<span class="plus">+</span></summary><p class="a">The training is built on the principle of “from simple to complex”: from the basics of Java syntax to complex topics such as OOP, collections, Stream API, and multithreading. Each lesson is accompanied by examples, practical tasks and tests to consolidate the material.</p></details>
+          <details class="faq-item"><summary>Can I learn on mobile?<span class="plus">+</span></summary><p class="a">Lessons and tests work great on mobile. Practical coding tasks are best on desktop.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="container" style="padding-bottom:5rem;">
+      <div class="final-cta">
+        <span class="blob blob-c"></span>
+        <span class="blob blob-d"></span>
+        <div style="position:relative;">
+          <svg class="trophy" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          <h2>Your Java journey starts today.</h2>
+          <p>Join 50,000 learners. No credit card. No paywalls. Just learning that works.</p>
+          <div class="actions">
+            <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/exam/ocpjp8">
+              Start learning free
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn-ghostOnPrimary" href="${pageContext.request.contextPath}/tests">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Take a 5-min test
+            </a>
+          </div>
+        </div>
+      </div>
+   </section>
   </main>
-<section class="seo-text container mt-5">
-  <h2>Learning Java Core</h2>
-  <h3>Why Learning Java is Essential for Your Career?</h3>
-   <p class="index-items-text">Java is one of the most popular programming languages in the world, and for good reason. It's used by millions of developers and companies across various industries to build everything from mobile apps to large-scale enterprise systems. Whether it's Android development, web applications, or cloud computing, Java is everywhere.</p>
-    <h3>Find your first Job</h3>
-   <p class="index-items-text">Learning Java opens up a world of opportunities. It's not just a powerful and versatile language, but it's also in high demand by employers. Many companies are constantly looking for skilled Java developers, and knowing Java can significantly increase your chances of landing a well-paying job in software development.</p>
-    <h3>Why Java is important for career?</h3>
-                    <p class="index-items-text">Moreover, Java's object-oriented structure, cross-platform capabilities, and extensive libraries make it a great language for both beginners and experienced developers alike. If you're serious about building a successful career in tech, mastering Java is a must.</p>
-
-    <h3>What is included in the course?</h3>
-    <p class="index-items-text">
-      The training is built on the principle of “from simple to complex”:
-      from the basics of Java syntax to complex topics such as OOP, collections, Stream API, and multithreading.
-      Each lesson is accompanied by examples, <a href="${pageContext.request.contextPath}/practical-java-tasks">practical tasks</a> and <a href="${pageContext.request.contextPath}/tests">tests</a> to consolidate the material.
-    </p>
-
-</section>
-  <%@include file="/WEB-INF/footer.jsp"%>
+   <%@ include file="/WEB-INF/footer-new.jsp"%>
+  <script src="${pageContext.request.contextPath}/js/main1.js" defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -26,9 +26,9 @@
         <meta property="twitter:card" content="summary">
         <meta property="twitter:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
         <meta property="twitter:site" content="@ExamClouds">
-        <meta property="og:image" content="https://img.examclouds.com/general/logo.svg">
+        <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
-        <meta property="twitter:image" content="https://img.examclouds.com/general/logo.svg">
+        <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css" media="print" onload="this.media='all'">
         <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/css/english.css"></noscript>
