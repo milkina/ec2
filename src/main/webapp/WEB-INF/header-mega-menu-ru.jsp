@@ -29,7 +29,7 @@
               </h4>
               <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi"><b>Практические задачи</b><span>Разного уровня сложности</span></a>
               <a href="${pageContext.request.contextPath}/ru/tests"><b>Тесты</b><span>Проверь и оцени свои знания</span></a>
-              <a href="${pageContext.request.contextPath}/ru/question"><b>Вопросы</b><span>Закрепи материал</span></a>
+              <a href="${pageContext.request.contextPath}/ru/questions"><b>Вопросы</b><span>Закрепи материал</span></a>
               <a href="${pageContext.request.contextPath}/ru/video-java-uroki"><b>Полный список видео</b><span>Закрепи знания с помощью видео</span></a>
             </div>
             <div class="mega-col">
