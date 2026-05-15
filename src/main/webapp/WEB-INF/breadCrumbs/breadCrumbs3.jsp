@@ -25,7 +25,7 @@
     </li>
     <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null}">
      <li>
-          <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.parentCategory.pathName}">
+          <a href="${pageContext.request.contextPath}/${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.parentCategory.pathName}">
                <span>${CATEGORY_ATTRIBUTE.parentCategory.name}</span>
           </a>
      </li>

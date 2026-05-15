@@ -11,19 +11,19 @@
         Лексика языка
         <span>Переменные, методы, типы данных</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson7">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/oop-v-java">
         ООП в Java
         <span>Классы, объекты, наследование</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson16">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/kollekcii-v-java">
         Коллекции framework
         <span>List, Set, Map и другие</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson17">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/isklyucheniya-v-java-obrabotka-oshibok">
         Исключения
         <span>Обработка ошибок и исключений</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson12">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/stroki-v-java">
         Строки
         <span>Классы String, StringBuilder, StringBuffer</span>
     </a>
@@ -57,19 +57,19 @@
         Stream API
         <span>Функциональное программирование</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson23">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/mnogopotochnost-v-java">
         Многопоточность
         <span>Потоки и параллелизм</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson23">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/jdbc-v-java">
         JDBC и базы данных
         <span>Работа с SQL и JDBC</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson6">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/git-i-github-osnovy-kontrolya-versij">
         Git и GitHub
         <span>Контроль версий VCS, GitHub, git</span>
     </a>
-     <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/lesson20">
+     <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/maven-sborka-i-upravlenie-zavisimostyami">
         Maven
         <span>Сборка проекта, репозитории</span>
     </a>
