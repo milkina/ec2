@@ -15,6 +15,10 @@
             <input type="hidden" name="ARTICLE_ID" value="${ARTICLE_ATTRIBUTE.id}">
             <span class="adminLabel"><spring:message code="url"/>:<span class="wrongMessage">*</span></span>
             <input type="text" name="URL_PARAM" maxlength="70" required value="${ARTICLE_ATTRIBUTE.url}" size="70"><BR>
+            <span class="adminLabel">Tag:</span>
+            <input type="text" name="ARTICLE_TAG" maxlength="50" value="${ARTICLE_ATTRIBUTE.tag}" size="30"><BR>
+            <span class="adminLabel">Min read:</span>
+            <input type="text" name="ARTICLE_MIN_READ" maxlength="10" value="${ARTICLE_ATTRIBUTE.minRead}" size="10"><BR>
             <span class="adminLabel"><spring:message code="title"/>:<span class="wrongMessage">*</span></span>
             <input type="text" name="TITLE" maxlength="70" required value="${ARTICLE_ATTRIBUTE.title}" size="70"><BR>
             <span class="adminLabel"><spring:message code="image.url"/>:</span>

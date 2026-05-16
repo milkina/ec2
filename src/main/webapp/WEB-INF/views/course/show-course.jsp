@@ -1,4 +1,4 @@
-﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -6,7 +6,6 @@
 <t:wrapper>
  <jsp:attribute name="header">
      <meta charset="UTF-8">
-     <meta name="keywords" content="${TESTS[param.TEST_PATH].article.keywords}">
      <meta name="description" content="${TESTS[param.TEST_PATH].article.description}">
      <title>${TESTS[param.TEST_PATH].article.title}</title>
      <c:set var="canonicalUrl" value="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}"/>

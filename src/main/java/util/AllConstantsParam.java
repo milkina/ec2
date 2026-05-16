@@ -67,6 +67,8 @@ public interface AllConstantsParam {
     String CATEGORY_LONG_DESCRIPTION = "categoryLongDescription";
     String ARTICLE_KEYWORDS = "keywords";
     String ARTICLE_IMAGE = "ARTICLE_IMAGE";
+    String ARTICLE_TAG = "ARTICLE_TAG";
+    String ARTICLE_MIN_READ = "ARTICLE_MIN_READ";
     String ARTICLE_INDEX = "index";
     String ARTICLE_URL_PREFIX = "publications/";
 

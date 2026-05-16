@@ -1,4 +1,4 @@
-﻿<%@ page trimDirectiveWhitespaces="true" %>
+<%@ page trimDirectiveWhitespaces="true" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -8,7 +8,6 @@
     <jsp:attribute name="language">lang="ru"</jsp:attribute>
     <jsp:attribute name="header">
         <meta charset="UTF-8">
-        <meta name="keywords" content="Видео уроки по Java,Java видео курсы,Обучение Java по видео,Java программирование видео уроки,Видео обучение Java,Уроки Java для начинающих видео,Видео туториалы по Java,Изучение Java по видео,Основы Java видео уроки,Java видео лекции,Практические уроки Java видео,Java для начинающих видео курсы,Лучшие видео уроки по Java">
         <meta name="description" content="Изучайте Java с нашими видео уроками для начинающих! Пошаговые руководства, практические примеры и советы от экспертов помогут вам быстро освоить основы программирования на Java. Начните свой путь к успешной карьере разработчика уже сегодня!">
         <title>Видео уроки по Java для начинающих | Видеокурс и обучение программированию</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">

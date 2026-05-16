@@ -284,6 +284,5 @@
    </section>
   </main>
    <%@ include file="/WEB-INF/footer-new.jsp"%>
-  <script src="${pageContext.request.contextPath}/js/main1.js" defer></script>
 </body>
 </html>

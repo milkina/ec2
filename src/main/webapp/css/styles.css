@@ -1211,7 +1211,7 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
   font-weight: 700;
 }
 .article-readtime { display: inline-flex; align-items: center; gap: .25rem; }
-.article-title {
+.article-page h1{
   margin-top: 1rem;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.1;
@@ -1255,6 +1255,16 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 }
 .article-next-title { margin-top: .25rem; font-weight: 800; }
 .article-next .btn-primary { border-radius: 9999px; }
+.img-responsive{
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+@media (min-width: 1024px) {
+  .img-responsive{ margin: 0 1.5rem 1rem 1.5rem; }
+}
 /* From old menu */
 .logo img{
   width:122px;

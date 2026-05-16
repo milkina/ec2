@@ -20,7 +20,6 @@
        <c:set var="header1" value="${CATEGORY_ATTRIBUTE.parentCategory.name}. ${CATEGORY_ATTRIBUTE.name}"/>
     </c:if>
     <title><c:out value="${titleName}"/></title>
-    <meta name="keywords" content="${CATEGORY_ATTRIBUTE.article.keywords}">
     <meta name="description" content="${CATEGORY_ATTRIBUTE.article.description}">
     <%@ include file="/edit/categoryOL.jsp"%>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>

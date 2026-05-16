@@ -1,4 +1,4 @@
-﻿<%@ page trimDirectiveWhitespaces="true"%>
+<%@ page trimDirectiveWhitespaces="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -6,7 +6,6 @@
 <t:wrapper>
     <jsp:attribute name="header">
       <meta charset="UTF-8">
-      <meta name="keywords" content="Java вопросы на собеседовании">
       <meta name="description" content="Подготовьтесь к собеседованию по Java с нашими вопросами и ответами. Узнайте ключевые Java Core вопросы, технические вопросы и вопросы по API Java.">
       <title>Вопросы для собеседования по Java | Подготовка и интервью вопросы</title>
       <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">

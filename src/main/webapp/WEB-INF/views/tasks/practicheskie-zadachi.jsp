@@ -1,4 +1,4 @@
-﻿<%@ page trimDirectiveWhitespaces="true"%>
+<%@ page trimDirectiveWhitespaces="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -6,7 +6,6 @@
 <t:wrapper>
     <jsp:attribute name="header">
      <meta charset="UTF-8">
-     <meta name="keywords" content="Практические задачи по Java,Задачи для программирования на Java,Java практические задания,Java задачи с решениями,Задачи для подготовки к собеседованию Java,Java практические упражнения,Java задачи для начинающих,Java задачи и решения,Практика программирования на Java">
      <meta name="description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
      <title>Практические задачи по Java | Учебные задачи и тренировки | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/ru/practicheskie-zadachi">

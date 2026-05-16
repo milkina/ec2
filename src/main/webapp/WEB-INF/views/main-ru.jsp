@@ -55,7 +55,7 @@
           <div class="hero-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <b>50,000</b> студентов</span>
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <b>200+</b> уроков</span>
-            <span><svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <b>4.4</b></span>
+            <span><svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <b>4.8</b></span>
           </div>
         </div>
 
@@ -142,7 +142,6 @@
             </article>
           </div>
         </section>
-
     <!-- ===== PATH PICKER ===== -->
     <section class="container section">
       <div class="section-head">
@@ -205,7 +204,6 @@
         </button>
       </div>
     </section>
-
     <!-- ===== ROADMAP ===== -->
     <section class="band" id="roadmap">
       <div class="container roadmap-grid">
@@ -318,7 +316,6 @@
                        На платформе ExamClouds вы найдете бесплатные курсы Java программирования,
                        которые подходят как для начинающих, так и для тех, кто хочет систематизировать знания.</p>
               </article>
-
               <article class="why-card">
                 <span class="why-ic" aria-hidden="true">🚀</span>
                 <h3>Что входит в курс?</h3>
@@ -329,7 +326,6 @@
                            но и реальную практику. Это помогает подготовиться к собеседованиям и работе Java-разработчиком.
 </p>
               </article>
-
               <article class="why-card">
                 <span class="why-ic" aria-hidden="true">📚</span>
                 <h3>Кому подойдет обучение?</h3>
@@ -339,7 +335,6 @@
             </div>
           </div>
         </section>
-
     <!-- ===== FAQ ===== -->
     <section class="container section">
       <div class="faq-grid">
@@ -355,7 +350,6 @@
         </div>
       </div>
     </section>
-
     <!-- ===== FINAL CTA ===== -->
     <section class="container" style="padding-bottom:5rem;">
       <div class="final-cta">
@@ -379,9 +373,6 @@
       </div>
     </section>
   </main>
-
   <%@ include file="/WEB-INF/footer-new.jsp"%>
-
-  <script src="${pageContext.request.contextPath}/js/main1.js" defer></script>
 </body>
 </html>

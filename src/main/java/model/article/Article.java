@@ -32,6 +32,8 @@ public class Article {
     private String image;
 
     private String keywords;
+    private String tag;
+    private String minRead;
 
     private String description;
 
@@ -93,6 +95,22 @@ public class Article {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getMinRead() {
+        return minRead;
+    }
+
+    public void setMinRead(String minRead) {
+        this.minRead = minRead;
     }
 
     public Date getCreatedDate() {

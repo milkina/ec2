@@ -1,4 +1,4 @@
-﻿<%@ page trimDirectiveWhitespaces="true"%>
+<%@ page trimDirectiveWhitespaces="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -6,8 +6,6 @@
 <t:wrapper>
     <jsp:attribute name="header">
         <meta charset="UTF-8">
-        <meta name="keywords" content="Java interview questions,Interview questions for Java,Java interview preparation,Java technical interview questions,Java Core interview questions,Java API interview questions,Java developer interview questions,Java coding interview questions, Common Java interview questions,
-        Advanced Java interview questions,Java interview questions and answers,Top Java interview questions,Java interview tips,Java interview guide">
         <meta name="description" content="Prepare for your Java interview with our key questions and answers. Master Java Core, technical, and API questions to succeed in your Java developer interview.">
         <title>Java Interview Preparation: Key Questions and Answers for Success</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">

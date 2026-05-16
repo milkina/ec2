@@ -1,4 +1,4 @@
-﻿<%@ page trimDirectiveWhitespaces="true"%>
+<%@ page trimDirectiveWhitespaces="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -6,7 +6,6 @@
 <t:wrapper>
     <jsp:attribute name="header">
      <meta charset="UTF-8">
-     <meta name="keywords" content="Java practice problems, Java programming tasks, Java exercises, Java problems with solutions, Java coding interview questions, Java beginner problems, Java training tasks">
      <meta name="description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
      <title>Java Practice Tasks | Coding Exercises and Training | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/practical-java-tasks">

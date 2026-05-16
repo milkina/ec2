@@ -1,4 +1,4 @@
-﻿<%@ page trimDirectiveWhitespaces="true"%>
+<%@ page trimDirectiveWhitespaces="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -6,7 +6,6 @@
 <t:wrapper>
     <jsp:attribute name="header">
         <meta charset="UTF-8">
-        <meta name="keywords" content="тесты по java">
         <meta name="description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
         <title>Бесплатные тесты по Java: уровень знаний и подготовка к интервью</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">
