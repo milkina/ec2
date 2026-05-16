@@ -6,7 +6,7 @@
     <div>
       <a href="<menu:homeTag/>" class="brand brand-light">
         <div class="logo">
-              <img src="https://img.examclouds.com/general/logo.svg" alt="ExamClouds">
+              <img src="https://img.examclouds.com/general/logo.svg" alt="ExamClouds" width="122" height="49">
             </div>
       </a>
       <h2 class="f-title"><spring:message code="about.us"/></h2>

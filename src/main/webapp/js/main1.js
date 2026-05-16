@@ -96,53 +96,6 @@
     }
   }
 
-  // Roadmap renderer (mirrors RoadmapPath.tsx)
-  const roadmap = [
-    { num: 1,  title: 'Java Introduction',         topic: 'Foundations' },
-    { num: 2,  title: 'Run Your First Java App',   topic: 'Foundations' },
-    { num: 3,  title: 'Java Syntax',               topic: 'Foundations' },
-    { num: 4,  title: 'Java Operations',           topic: 'Foundations' },
-    { num: 5,  title: 'Operators',                 topic: 'Foundations' },
-    { num: 6,  title: 'Arrays',                    topic: 'Data' },
-    { num: 7,  title: 'Sorting Algorithms',        topic: 'Data' },
-    { num: 8,  title: 'Git & GitHub',              topic: 'Tooling' },
-    { num: 9,  title: 'OOP Basics',                topic: 'OOP' },
-    { num: 10, title: 'Overloading vs Overriding', topic: 'OOP' },
-  ];
-  const COMPLETED_THROUGH = 2;
-  const ICON_CHECK = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
-  const ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>';
-  const ICON_LOCK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
-
-  function renderRoadmap() {
-    const host = document.querySelector('[data-roadmap]');
-    if (!host) return;
-    const html = roadmap.map((s, i) => {
-      const done = s.num <= COMPLETED_THROUGH;
-      const current = s.num === COMPLETED_THROUGH + 1;
-      const cls = ['roadmap-item', i % 2 === 0 ? 'even' : 'odd'];
-      if (done) cls.push('is-done');
-      if (current) cls.push('is-current');
-      const numHtml = done ? ICON_CHECK : s.num;
-      const aside = current
-        ? `<span class="step-aside">${ICON_PLAY} Start</span>`
-        : done
-          ? `<span class="step-aside">Done</span>`
-          : `<span class="step-aside locked">${ICON_LOCK}</span>`;
-      return `
-        <li class="${cls.join(' ')}">
-          <a href="#lesson">
-            <span class="step-num">${numHtml}</span>
-            <div class="step-text">
-              <p class="step-topic">${s.topic}</p>
-              <p class="step-title">${s.title}</p>
-            </div>
-            ${aside}
-          </a>
-        </li>`;
-    }).join('');
-    host.innerHTML = html;
-  }
 
   // Course page interactions: collapse/expand modules & lessons
   function wireCourse() {
@@ -181,7 +134,6 @@
   document.addEventListener('DOMContentLoaded', async () => {
     await injectPartials();
     wireHeader();
-    renderRoadmap();
     wireCourse();
     wireLiteYouTube();
   });

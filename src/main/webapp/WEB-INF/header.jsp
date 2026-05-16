@@ -5,7 +5,7 @@
   <div class="container header-row">
     <a href="<menu:homeTag/>" class="brand">
       <div class="logo">
-            <img src="https://img.examclouds.com/general/logo.svg" alt="ExamClouds">
+            <img src="https://img.examclouds.com/general/logo.svg" alt="ExamClouds" width="122" height="49">
           </div>
     </a>
     <nav class="nav" aria-label="Primary">

@@ -7,7 +7,7 @@
   <div class="container header-container">
     <!-- Лого -->
     <div class="logo">
-      <img src="https://img.examclouds.com/general/logo.svg" alt="ExamClouds">
+      <img src="https://img.examclouds.com/general/logo.svg" alt="ExamClouds" width="122" height="49">
     </div>
 
     <!-- Навигация -->

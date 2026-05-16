@@ -20,17 +20,24 @@
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com">
     <meta property="og:published_time" content="2017-10-08T12:00:00Z">
-    <meta property="og:modified_time" content="2024-10-08T12:00:00Z">
+    <meta property="og:modified_time" content="2026-05-05T12:00:00Z">
     <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="og:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
     <meta name="twitter:title" content="Free Java Core Courses | Learn Java Programming Online">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="Explore free Java Core tutorials and courses. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources. Start today!">
     <meta name="twitter:site" content="@ExamClouds">
     <meta name="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta name="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
+    <script type="application/ld+json">{
+              "@context": "https://schema.org",
+              "url": "https://www.examclouds.com",
+              "@type": "Article",
+              "headline": "Free Java Core Courses | Learn Java Programming Online"
+    }
+    </script>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
  <%@ include file="/WEB-INF/header.jsp"%>
   <main>
     <!-- ===== HERO ===== -->
@@ -202,7 +209,7 @@
     <!-- ===== FEATURES ===== -->
     <section class="container section">
       <div class="section-head">
-        <h2>Built so you actually finish</h2>
+        <h2>Built for people who've abandoned courses before.</h2>
         <p>Most online courses get abandoned. Ours don't.</p>
       </div>
       <div class="cards cards-2 cards-3-lg">
@@ -210,8 +217,8 @@
         <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><h3>Bite-sized lessons</h3><p>5–15 min lessons that fit into a busy schedule.</p></div>
         <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><h3>Hands-on tasks</h3><p>Improve your knowledge with exercises.</p></div>
         <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><h3>Earn streaks</h3><p>Daily streaks and badges keep you motivated.</p></div>
-        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><h3>Blog</h3><p>IT news.</p></div>
-        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Video</h3><p>Watch our videos.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><h3>Blog</h3><p>Short reads on Java concepts, career tips, and real interview questions — written for learners, not academics.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Video</h3><p>Every lesson has a matching video on YouTube. Watch, pause, rewind — learn at your own pace without losing your place.</p></div>
       </div>
     </section>
  <!-- ===== WHY LEARN JAVA ===== -->
