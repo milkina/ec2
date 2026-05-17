@@ -92,7 +92,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
          <c:forEach var="test" items="${TESTS}">
-                          <c:if test="${test.value.language.code==pageLanguage}">
+                          <c:if test="${test.value.language.code==pageLanguage && !test.value.pathName.equals('jpa')}">
                               <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>${test.value.fullPathName}" id="${test.value.pathName}">
                                   ${test.value.name}</a>
                           </c:if>

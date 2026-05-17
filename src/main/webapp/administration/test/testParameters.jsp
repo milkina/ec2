@@ -37,7 +37,7 @@
              <span class="adminLabel"><spring:message code="meta.description"/>:<span class="wrongMessage">*</span></span>
              <form:textarea rows="4" cols="40" maxlength="160" path="article.description" required="required" id="description"/><BR>
              <span class="adminLabel"><spring:message code="icon.text"/>:</span>
-             <form:textarea rows="10" cols="80" path="iconText" id="iconText"/>
+             <form:input path="iconText" maxlength="200" size="100" id="iconText"/>
              <span class="adminLabel"><spring:message code="text"/>:</span>
              <form:textarea rows="25" cols="80" path="article.text" id="ARTICLE_TEXT"/>
              <BR>
