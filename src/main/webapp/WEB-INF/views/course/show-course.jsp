@@ -38,7 +38,7 @@
      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image:alt" content="${TESTS[param.TEST_PATH].article.title}">
      <meta property="twitter:title" content="${TESTS[param.TEST_PATH].article.title}">
-     <meta property="twitter:card" content="summary">
+     <meta property="twitter:card" content="summary_large_image">
      <meta property="twitter:description" content="${TESTS[param.TEST_PATH].article.description}">
      <meta property="twitter:site" content="@ExamClouds">
      <script type="application/ld+json">{
