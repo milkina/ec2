@@ -17,6 +17,8 @@ public interface CategoryService {
 
     void updateCategoryCounts(Category category);
 
+    void updateAllCategoryCounts();
+
     void moveCategoryUp(Category category, String stopCategoryPath, String testPath);
 
     void moveCategoryDown(Category category, String stopCategoryPath, String testPath);

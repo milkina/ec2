@@ -1,8 +1,10 @@
 package controller.test;
 
+import spring.services.category.CategoryService;
 import util.OtherLanguageUtility;
 import util.CategoryUtility;
 import util.LanguageUtility;
+import util.SpringUtility;
 import util.TestUtility;
 
 import javax.servlet.ServletContext;
@@ -16,6 +18,7 @@ public class LoadTestServlet implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent event) {
         ServletContext servletContext = event.getServletContext();
+        SpringUtility.getService(servletContext, CategoryService.class).updateAllCategoryCounts();
         TestUtility.loadTestsToServletContext(servletContext);
         CategoryUtility.setDuplicateCategories(servletContext);
         OtherLanguageUtility.loadOtherLanguagesUrls(servletContext);

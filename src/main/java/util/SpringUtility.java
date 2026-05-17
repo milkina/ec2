@@ -23,7 +23,7 @@ public class SpringUtility {
     private static QuestionService questionService;
     private static OtherLanguageService canonicalUrlService;
 
-    public static <T> T getService(ServletContext servletContext, Class service) {
+    public static <T> T getService(ServletContext servletContext, Class<T> service) {
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContext);
         return (T) webApplicationContext.getBean(service);
     }

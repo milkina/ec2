@@ -62,6 +62,14 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.save(category);
     }
 
+    @Override
+    @Transactional
+    public void updateAllCategoryCounts() {
+        for (Category category : categoryRepository.findAll()) {
+            updateCategoryCounts(category);
+        }
+    }
+
     public void moveCategoryUp(Category category, Map<String, Category> categoryMap) {
         Category previousCategory = CategoryUtility.getPreviousCategory(category, categoryMap);
         if (previousCategory != null) {
