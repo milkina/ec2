@@ -73,6 +73,7 @@
             <c:if test="${not empty firstCategoryPath}">
               <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${firstCategoryPath}"><spring:message code="start.course"/></a>
             </c:if>
+            <p class="course-hero-note" style="margin:.6rem 0 0;font-size:.85rem;opacity:.85;"><spring:message code="free"/> · <spring:message code="without.registration"/></p>
           </div>
         </section>
       <div class="container" style="margin-top:1.5rem;">
@@ -98,7 +99,7 @@
                     </div>
 
                     <div class="details-col">
-                      <h2><spring:message code="course.details"/></h2>
+                      <h2><spring:message code="course.details"/></h2><spring:message code="without.registration"/>
                       <ul class="detail-list">
                         <li><span class="ic">👥</span><span>2,100 <spring:message code="enrolled"/></span></li>
                         <li><span class="ic">🌐</span><span>${TESTS[param.TEST_PATH].language.description}</span></li>

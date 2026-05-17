@@ -1,5 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/selectTestCategory.js" async></script>
+<script>var CONTEXT_PATH = '${pageContext.request.contextPath}';</script>
+<script src="${pageContext.request.contextPath}/js/selectTestCategory.js"></script>
 <%@ taglib uri="/WEB-INF/tld/select-test-category-tagjsp-taglib.tld" prefix="select"%>
 <strong class="adminLabel"><spring:message code="course"/>:</strong>
   <select class="selectWidth" name="TEST_PATH" id="TEST_PATH">
