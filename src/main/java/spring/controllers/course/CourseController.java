@@ -55,11 +55,6 @@ public class CourseController {
         return QUESTIONS_PAGE;
     }
 
-    @RequestMapping(value = "ru/questions")
-    public String showRuQuestions() {
-        return QUESTIONS_RU_PAGE;
-    }
-
     @RequestMapping(value = {"/practicheskie-zadachi", "ru/practicheskie-zadachi"})
     public String showTasks() {
         return TASKS_PAGE;

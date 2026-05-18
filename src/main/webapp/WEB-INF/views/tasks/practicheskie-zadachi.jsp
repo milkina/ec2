@@ -85,7 +85,7 @@
                  </ol>
                  <p class="index-items-text">Начните использовать наши практические задачи по Java на ExamClouds уже сегодня и добейтесь новых успехов в программировании!</p>
                  <p class="index-items-text">Полный курс обучения - <a href="${pageContext.request.contextPath}/ru/#start-course">Java программирование</a>.</p>
-                <p class="index-items-text">Также используйте для изучения <a href="${pageContext.request.contextPath}/ru/tests">Тесты</a>, <a href="${pageContext.request.contextPath}/ru/video-java-uroki">Видео уроки</a> и <a href="${pageContext.request.contextPath}/ru/questions">Вопросы собеседований</a>.</p>
+                <p class="index-items-text">Также используйте для изучения <a href="${pageContext.request.contextPath}/ru/tests">Тесты</a>, <a href="${pageContext.request.contextPath}/ru/video-java-uroki">Видео уроки</a>.</p>
                 <ul id="categories">
                     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
                     <c:forEach var="category" items="${TESTS['java-core-russian'].categories}">

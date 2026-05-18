@@ -18,7 +18,9 @@
       <ul class="f-links">
         <li><a href="<menu:tasksTag/>"><spring:message code="menu.tasks.label"/></a></li>
         <li><a href="<menu:testsTag/>"><spring:message code="tests"/></a></li>
-        <li><a href="<menu:questionsTag/>"><spring:message code="questions.interviews"/></a></li>
+        <c:if test="${pageLanguage!='ru'}">
+          <li><a href="<menu:questionsTag/>"><spring:message code="questions.interviews"/></a></li>
+        </c:if>
         <li><a href="<menu:articlesTag/>"><spring:message code="articles"/></a></li>
         <li><a href="${pageContext.request.contextPath}/show-login-page"><spring:message code="log.in"/></a></li>
         <li><a href="${pageContext.request.contextPath}/register"><spring:message code="register"/></a></li>

@@ -60,7 +60,7 @@
                 </ol>
                 <p class="index-items-text">Начните изучение Java уже сегодня с нашими видео уроками и курсами. Улучшайте свои навыки программирования и достигайте новых высот в карьере разработчика!</p>
                 <p class="index-items-text">Изучайте полный Java курс <a href="${pageContext.request.contextPath}/ru/#start-course">Java программирования</a>. А
-                также практикуйте <a href="${pageContext.request.contextPath}/ru/tests">тесты</a>, <a href="${pageContext.request.contextPath}/ru/questions">вопросы собеседований</a>
+                также практикуйте <a href="${pageContext.request.contextPath}/ru/tests">тесты</a>,
                 и <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">решение практических тестовых заданий</a>.</p>
                      <ol>
                                          <LI>Введение в Java

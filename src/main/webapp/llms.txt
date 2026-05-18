@@ -17,7 +17,6 @@ Preferred:
 https://www.examclouds.com/exam/ocpjp8
 https://www.examclouds.com/tests
 https://www.examclouds.com/ru/tests
-https://www.examclouds.com/ru/questions
 https://www.examclouds.com/questions
 https://www.examclouds.com/ru/practicheskie-zadachi
 https://www.examclouds.com/practical-java-tasks

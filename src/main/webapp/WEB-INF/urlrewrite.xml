@@ -183,6 +183,10 @@
         <to type="permanent-redirect">/ru/java/java-core-russian/mnogopotochnost-v-java-zadaniya</to>
     </rule>
     <rule>
+        <from>^/ru/questions$</from>
+        <to type="permanent-redirect">/ru/tests</to>
+    </rule>
+    <rule>
         <from>^/java/(.*)/(.*)$</from>
         <to type="passthrough">/show-category?CATEGORY_PATH=$2&amp;TEST_PATH=$1</to>
     </rule>

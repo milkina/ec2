@@ -19,8 +19,13 @@
         <%@ include file="header-mega-menu.jsp"%>
       </c:if>
       <a href="<menu:testsTag/>" id="tests" data-nav="tests"><spring:message code="tests"/></a>
-      <a href="<menu:questionsTag/>" id="questions" data-nav="interview"><spring:message code="questions.interviews"/></a>
+      <c:if test="${pageLanguage!='ru'}">
+        <a href="<menu:questionsTag/>" id="questions" data-nav="interview"><spring:message code="questions.interviews"/></a>
+      </c:if>
       <a href="<menu:tasksTag/>" id="tasks" data-nav="tasks"><spring:message code="menu.tasks.label"/></a>
+      <c:if test="${pageLanguage=='ru'}">
+           <a href="${pageContext.request.contextPath}/ru/video-java-uroki"><i class="fas fa-play-circle"></i> <spring:message code="video.uroki"/></a>
+      </c:if>
       <a href="<menu:articlesTag/>" data-nav="articles"><spring:message code="articles"/></a>
     </nav>
 
@@ -99,8 +104,13 @@
                       </c:forEach>
       </details>
       <a href="<menu:testsTag/>" id="tests" data-nav="tests"><spring:message code="tests"/></a>
-      <a href="<menu:questionsTag/>" id="questions" data-nav="interview"><spring:message code="questions.interviews"/></a>
+      <c:if test="${pageLanguage!='ru'}">
+          <a href="<menu:questionsTag/>" id="questions" data-nav="interview"><spring:message code="questions.interviews"/></a>
+      </c:if>
       <a href="<menu:tasksTag/>" id="tasks" data-nav="tasks"><spring:message code="menu.tasks.label"/></a>
+      <c:if test="${pageLanguage=='ru'}">
+         <a href="${pageContext.request.contextPath}/ru/video-java-uroki"><i class="fas fa-play-circle"></i> <spring:message code="video.uroki"/></a>
+      </c:if>
       <a href="<menu:articlesTag/>" data-nav="articles"><spring:message code="articles"/></a>
 
       <c:choose>

@@ -66,7 +66,7 @@
                 пропущенные части или ответить на вопрос: 'Откомпилируется ли код?'. Если вы успешно проходите наши тесты, вы готовы к
                 стажировке или работе на позиции Junior. Рекомендуем регулярно проходить тестирование не только перед интервью, но и в
                 процессе обучения.</p>
-                 <p class="index-items-text">Также используйте наши <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">Практические задания</a>, <a href="${pageContext.request.contextPath}/ru/video-java-uroki">Видео уроки</a> и <a href="${pageContext.request.contextPath}/ru/questions">Вопросы собеседований</a>
+                 <p class="index-items-text">Также используйте наши <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">Практические задания</a>, <a href="${pageContext.request.contextPath}/ru/video-java-uroki">Видео уроки</a>
                  для повышения своих навыков.</p>
                 <h2 class="header2">Преимущества наших тестов по Java:</h2>
                 <ul class="index-items-text">

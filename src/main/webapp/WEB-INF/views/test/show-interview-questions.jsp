@@ -11,7 +11,6 @@
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">
         <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet" media="print" onload="this.media='all'">
         <link rel="canonical" href="https://www.examclouds.com/questions">
-        <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/questions">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/questions">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/questions">
       <meta property="og:title" content="Java Interview Preparation: Key Questions and Answers for Success">

@@ -40,10 +40,6 @@
         Тесты
         <span>Проверь и оцени свои знания</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/questions">
-        Вопросы
-        <span>Закрепи материал</span>
-    </a>
      <a href="${pageContext.request.contextPath}/ru/video-java-uroki">
             Полный список видео
             <span>Закрепи знания с помощью видео</span>

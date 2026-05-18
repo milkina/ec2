@@ -44,7 +44,9 @@
           </div>
       </div>
       <a href="<menu:testsTag/>" id="tests"><i class="fas fa-check-square"></i> <spring:message code="tests"/></a>
-      <a href="<menu:questionsTag/>" id="questions"><i class="fas fa-question-circle"></i> <spring:message code="questions.interviews"/></a>
+      <c:if test="${pageLanguage!='ru'}">
+        <a href="<menu:questionsTag/>" id="questions"><i class="fas fa-question-circle"></i> <spring:message code="questions.interviews"/></a>
+      </c:if>
       <a href="<menu:tasksTag/>" id="tasks"><i class="fas fa-code"></i> <spring:message code="menu.tasks.label"/></a>
       <c:if test="${pageLanguage!='en'}">
           <a href="${pageContext.request.contextPath}/ru/video-java-uroki"><i class="fas fa-play-circle"></i> <spring:message code="video.uroki"/></a>
