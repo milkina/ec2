@@ -58,10 +58,10 @@ public class CategoryController {
         model.addAttribute(CATEGORY_ATTRIBUTE, category);
         model.addAttribute(ARTICLE_ATTRIBUTE, article);
         List<Category> list = CategoryUtility.getCategoryListFromServletContext(request);
-        int index = indexOfById(list, category.getId());
+        int index = list.indexOf(category);
 
-        Category nextCategory = getNextCategory(index, list);
-        Category previousCategory = getPreviousCategory(index, list);
+        Category nextCategory = findSibling(index, list, +1);
+        Category previousCategory = findSibling(index, list, -1);
         model.addAttribute(NEXT_CATEGORY, nextCategory);
         model.addAttribute(PREVIOUS_CATEGORY, previousCategory);
         if (category.getHidden()) {
@@ -70,35 +70,17 @@ public class CategoryController {
         return new ModelAndView("category/show-category");
     }
 
-    private int indexOfById(List<Category> list, Integer id) {
-        if (id == null) {
-            return -1;
+    private Category findSibling(int index, List<Category> list, int step) {
+        if (index < 0) {
+            return null;
         }
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = index + step; i >= 0 && i < list.size(); i += step) {
             Category c = list.get(i);
-            if (c != null && id.equals(c.getId())) {
-                return i;
+            if (c != null && !c.getHidden() && c.getSubCategories().isEmpty()) {
+                return c;
             }
         }
-        return -1;
-    }
-
-    private Category getNextCategory(int index, List<Category> list) {
-        Category nextCategory;
-        do {
-            nextCategory = index < list.size() - 1 ? list.get(index + 1) : null;
-            index++;
-        } while (nextCategory != null && nextCategory.getHidden());
-        return nextCategory;
-    }
-
-    private Category getPreviousCategory(int index, List<Category> list) {
-        Category previousCategory;
-        do {
-            previousCategory = index > 0 ? list.get(index - 1) : null;
-            index--;
-        } while (previousCategory != null && previousCategory.getHidden());
-        return previousCategory;
+        return null;
     }
 
     @RequestMapping(value = "/show-create-category")

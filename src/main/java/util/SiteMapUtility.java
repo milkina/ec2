@@ -139,7 +139,7 @@ public class SiteMapUtility {
     }
 
     private boolean isCategoryLinkable(Test test, Category category) {
-        if (category.getHidden() || !category.getArticle().isIndexStatus()) {
+        if (category.getHidden() || !category.getArticle().isIndexStatus() || !category.getSubCategories().isEmpty()) {
             return false;
         }
         return !isDuplicateCategory(
