@@ -115,14 +115,14 @@
                                         </c:if>
                          </div>
                        </section>
-                       <!-- ===== RIGHT: progress & resources (hidden on mobile) ===== -->
+                       <!-- ===== RIGHT: progress & resources ===== -->
                              <aside class="lesson-side">
                                <div class="panel lesson-side-panel">
                                   <!-- <p class="lesson-side-eyebrow">Course Progress</p>
                                  <div class="bar"><span style="width:35%; background: var(--success);"></span></div>
                                  <p class="lesson-side-progress">7 of 26 modules · 35%</p>-->
 
-                                 <p class="lesson-side-eyebrow" style="margin-top:1.5rem;">For this lesson</p>
+                                 <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="for.this.lesson"/></p>
                                  <ul class="lesson-side-list">
                                      <c:if test="${CATEGORY_ATTRIBUTE.questionsCount!=0 or not empty CATEGORY_ATTRIBUTE.subCategories}">
                                          <li><a href="${pageContext.request.contextPath}/see-questions?CATEGORY_PATH=${param.CATEGORY_PATH}&TEST_PATH=${param.TEST_PATH}" id="startQuiz"><span class="ic">?</span><spring:message code="questions"/></a></li>
@@ -135,11 +135,12 @@
                                      </c:if>
                                  </ul>
 
-                                 <p class="lesson-side-eyebrow" style="margin-top:1.5rem;">Share</p>
+                                 <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="share"/></p>
                                  <div class="lesson-share">
-                                   <a href="#" aria-label="Telegram">✈</a>
-                                   <a href="#" aria-label="Twitter">𝕏</a>
-                                   <a href="#" aria-label="Copy link">🔗</a>
+                                   <a href="https://www.facebook.com/sharer/sharer.php?u=${canonicalUrl}" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                                   <a href="https://t.me/share/url?url=${canonicalUrl}&text=${titleName}" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
+                                   <a href="https://x.com/intent/tweet?url=${canonicalUrl}&text=${titleName}" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+                                   <a href="#" aria-label="Copy link" onclick="navigator.clipboard.writeText('${canonicalUrl}');return false;">🔗</a>
                                  </div>
                                </div>
                              </aside>

@@ -1591,9 +1591,9 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 }
 
 /* ---- Right side panel ---- */
-.lesson-side { display: none; min-width: 0; }
+.lesson-side { display: block; min-width: 0; }
 @media (min-width: 1180px) {
-  .lesson-side { display: block; position: sticky; top: 1rem; }
+  .lesson-side { position: sticky; top: 1rem; }
 }
 .lesson-side-panel { padding: 1.1rem; }
 .lesson-side-eyebrow {
