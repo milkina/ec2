@@ -76,7 +76,7 @@
                                      <c:forEach var="subCategory" items="${category.value.subCategories}">
                                                          <c:if test="${subCategory.hidden==false}">
                                                            <c:set var="isActive" value="${subCategory.equals(CATEGORY_ATTRIBUTE)}"/>
-                                                                <li><a class="${isActive ? 'is-active' : ''}" href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${subCategory.pathName}">
+                                                                <li><a class="${isActive ? 'is-active' : ''}" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${subCategory.pathName}">
                                                                 <span class="${isActive ? 'ol-dot active' : 'ol-dot'}"></span>${subCategory.name}</a></li>
                                                          </c:if>
                                                        </c:forEach>
@@ -160,7 +160,7 @@
                    loading="lazy"/>
               <div class="author-info">
                 <span class="author-label"><spring:message code="author"/>:</span>
-                <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}tatyana-milkina"
+                <a href="${pageContext.request.contextPath}/${pathLanguage}tatyana-milkina"
                    class="author-link">Tatyana Milkina</a>
               </div>
             </div>

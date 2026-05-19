@@ -7,11 +7,11 @@
         Java Core
         <span>Полный курс с нуля</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/leksika-java">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java">
         Лексика языка
         <span>Переменные, методы, типы данных</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/oop-v-java">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/metodiki-programmirovanija">
         ООП в Java
         <span>Классы, объекты, наследование</span>
     </a>
@@ -19,11 +19,11 @@
         Коллекции framework
         <span>List, Set, Map и другие</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/isklyucheniya-v-java-obrabotka-oshibok">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/obrabotka-iskluchenij">
         Исключения
         <span>Обработка ошибок и исключений</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/stroki-v-java">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/stroki">
         Строки
         <span>Классы String, StringBuilder, StringBuffer</span>
     </a>
@@ -49,23 +49,23 @@
 <!-- COLUMN 3 -->
 <div class="mega-column">
     <h4><i class="fas fa-graduation-cap icon dark-blue"></i> Продвинутое</h4>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/stream-api">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/chto-takoe-stream-api">
         Stream API
         <span>Функциональное программирование</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/mnogopotochnost-v-java">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/threads-russian">
         Многопоточность
         <span>Потоки и параллелизм</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/jdbc-v-java">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/drivers">
         JDBC и базы данных
         <span>Работа с SQL и JDBC</span>
     </a>
-    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/git-i-github-osnovy-kontrolya-versij">
+    <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/vcs">
         Git и GitHub
         <span>Контроль версий VCS, GitHub, git</span>
     </a>
-     <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/maven-sborka-i-upravlenie-zavisimostyami">
+     <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/maven">
         Maven
         <span>Сборка проекта, репозитории</span>
     </a>

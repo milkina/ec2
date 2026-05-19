@@ -16,9 +16,9 @@
                 Java Basics
               </h4>
               <a href="${pageContext.request.contextPath}/exam/ocpjp8"><b>Java Core</b><span>Full Java Course</span></a>
-              <a href="${pageContext.request.contextPath}/java/ocpjp8/java-lexicon"><b>Java Syntax</b><span>Variables, methods, data types</span></a>
-              <a href="${pageContext.request.contextPath}/java/ocpjp8/learning-object-oriented-programming"><b>OOP in Java</b><span>Classes, objects, inheritance</span></a>
-              <a href="${pageContext.request.contextPath}/java/ocpjp8/what-is-array-in-java"><b>Arrays</b><span>Explore arrays of different dimensions</span></a>
+              <a href="${pageContext.request.contextPath}/java/ocpjp8/language-lexicon"><b>Java Syntax</b><span>Variables, methods, data types</span></a>
+              <a href="${pageContext.request.contextPath}/java/ocpjp8/procedural-vs-object-oriented-programming"><b>OOP in Java</b><span>Classes, objects, inheritance</span></a>
+              <a href="${pageContext.request.contextPath}/java/ocpjp8/array-declaration-initialization"><b>Arrays</b><span>Explore arrays of different dimensions</span></a>
               <a href="${pageContext.request.contextPath}/java/ocpjp8/inner-classes"><b>Inner Classes</b><span>Regular, local, anonymous, static</span></a>
             </div>
             <div class="mega-col">
@@ -35,10 +35,10 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                 Advanced
               </h4>
-              <a href="${pageContext.request.contextPath}/java/ocpjp8/lambda"><b>Lambda in Java</b><span>Lambda expressions, method references</span></a>
-              <a href="${pageContext.request.contextPath}/java/ocpjp8/stream-api-en"><b>Stream API</b><span>Functional programming</span></a>
+              <a href="${pageContext.request.contextPath}/java/ocpjp8/lambda-expression"><b>Lambda in Java</b><span>Lambda expressions, method references</span></a>
+              <a href="${pageContext.request.contextPath}/java/ocpjp8/create-stream-api"><b>Stream API</b><span>Functional programming</span></a>
               <a href="${pageContext.request.contextPath}/web-services"><b>Web Services</b><span>REST, SOAP, XML</span></a>
-              <a href="${pageContext.request.contextPath}/java/ocpjp8/git-version-control-introduction"><b>Git and GitHub</b><span>Version control systems, GitHub, git</span></a>
+              <a href="${pageContext.request.contextPath}/java/ocpjp8/version-control-system"><b>Git and GitHub</b><span>Version control systems, GitHub, git</span></a>
             </div>
             <aside class="mega-promo">
               <div class="mega-promo-icon" aria-hidden="true">

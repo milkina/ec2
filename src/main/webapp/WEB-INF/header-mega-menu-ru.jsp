@@ -16,11 +16,11 @@
                 Основы Java
               </h4>
               <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian"><b>Java Core</b><span>Полный курс с нуля</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/leksika-java"><b>Лексика языка</b><span>Переменные, методы, типы данных</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/oop-v-java"><b>ООП в Java</b><span>Классы, объекты, наследование</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java"><b>Лексика языка</b><span>Переменные, методы, типы данных</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/metodiki-programmirovanija"><b>ООП в Java</b><span>Классы, объекты, наследование</span></a>
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/kollekcii-v-java"><b>Коллекции framework</b><span>List, Set, Map и другие</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/isklyucheniya-v-java-obrabotka-oshibok"><b>Исключения</b><span>Обработка ошибок и исключений</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/stroki-v-java"><b>Строки</b><span>Классы String, StringBuilder, StringBuffer</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/obrabotka-iskluchenij"><b>Исключения</b><span>Обработка ошибок и исключений</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/stroki"><b>Строки</b><span>Классы String, StringBuilder, StringBuffer</span></a>
             </div>
             <div class="mega-col">
               <h4>
@@ -36,11 +36,11 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                 Продвинутое
               </h4>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/stream-api"><b>Stream API</b><span>Функциональное программирование</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/mnogopotochnost-v-java"><b>Многопоточность</b><span>Потоки и параллелизм</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/jdbc-v-java"><b>JDBC и базы данных</b><span>Работа с SQL и JDBC</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/git-i-github-osnovy-kontrolya-versij"><b>Git и GitHub</b><span>Контроль версий VCS, GitHub, git</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/maven-sborka-i-upravlenie-zavisimostyami"><b>Maven</b><span>Сборка проекта, репозитории</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/chto-takoe-stream-api"><b>Stream API</b><span>Функциональное программирование</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/threads-russian"><b>Многопоточность</b><span>Потоки и параллелизм</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/drivers"><b>JDBC и базы данных</b><span>Работа с SQL и JDBC</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/vcs"><b>Git и GitHub</b><span>Контроль версий VCS, GitHub, git</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/maven"><b>Maven</b><span>Сборка проекта, репозитории</span></a>
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/serialization-russian"><b>Сериализация</b><span>Механизмы сериализации и сериализации</span></a>
             </div>
             <aside class="mega-promo">

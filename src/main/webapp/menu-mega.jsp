@@ -7,15 +7,15 @@
         Java Core
         <span>Full Java Course</span>
     </a>
-    <a href="${pageContext.request.contextPath}/java/ocpjp8/java-lexicon">
+    <a href="${pageContext.request.contextPath}/java/ocpjp8/language-lexicon">
         Language lexicon
         <span>Variables, methods, data types</span>
     </a>
-    <a href="${pageContext.request.contextPath}/java/ocpjp8/learning-object-oriented-programming">
+    <a href="${pageContext.request.contextPath}/java/ocpjp8/procedural-vs-object-oriented-programming">
         OOP in Java
         <span>Classes, objects, inheritance</span>
     </a>
-    <a href="${pageContext.request.contextPath}/java/ocpjp8/what-is-array-in-java">
+    <a href="${pageContext.request.contextPath}/java/ocpjp8/array-declaration-initialization">
         Arrays
         <span>Explore arrays of different dimensions</span>
     </a>
@@ -45,11 +45,11 @@
 <!-- COLUMN 3 -->
 <div class="mega-column">
     <h4><i class="fas fa-graduation-cap icon dark-blue"></i> Advanced</h4>
-        <a href="${pageContext.request.contextPath}/java/ocpjp8/lambda">
+        <a href="${pageContext.request.contextPath}/java/ocpjp8/lambda-expression">
             Lambda in Java
             <span>Lambda expressions, method references</span>
         </a>
-    <a href="${pageContext.request.contextPath}/java/ocpjp8/stream-api-en">
+    <a href="${pageContext.request.contextPath}/java/ocpjp8/create-stream-api">
         Stream API
         <span>Functional programming</span>
     </a>
@@ -57,7 +57,7 @@
         Web Services
         <span>REST, SOAP, XML</span>
     </a>
-    <a href="${pageContext.request.contextPath}/java/ocpjp8/git-version-control-introduction">
+    <a href="${pageContext.request.contextPath}/java/ocpjp8/version-control-system">
         Git и GitHub
         <span>Version control systems, GitHub, git</span>
     </a>
