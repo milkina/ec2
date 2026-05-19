@@ -131,10 +131,51 @@
     });
   }
 
+  // Add a copy-to-clipboard button to every <pre> that contains <code>.
+  function wireCopyCode() {
+    document.querySelectorAll('pre > code').forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre || pre.querySelector(':scope > .copy-btn')) return;
+      pre.classList.add('has-copy');
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', 'Copy code');
+      btn.innerHTML = '<span aria-hidden="true">📋</span><span>Copy</span>';
+      btn.addEventListener('click', async () => {
+        const text = code.innerText;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+          btn.classList.add('is-copied');
+          btn.innerHTML = '<span aria-hidden="true">✓</span><span>Copied</span>';
+          setTimeout(() => {
+            btn.classList.remove('is-copied');
+            btn.innerHTML = '<span aria-hidden="true">📋</span><span>Copy</span>';
+          }, 1500);
+        } catch (e) {
+          console.error('Copy failed', e);
+        }
+      });
+      pre.appendChild(btn);
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', async () => {
     await injectPartials();
     wireHeader();
     wireCourse();
     wireLiteYouTube();
+    wireCopyCode();
   });
 })();
