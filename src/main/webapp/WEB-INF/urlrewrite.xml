@@ -183,6 +183,182 @@
         <to type="permanent-redirect">/ru/java/java-core-russian/mnogopotochnost-v-java-zadaniya</to>
     </rule>
     <rule>
+        <from>^/java/web-services/web-services-fundamentals$</from>
+        <to type="permanent-redirect">/java/web-services/basic-concepts</to>
+    </rule>
+    <rule>
+        <from>^/java/web-services/jaxp-module$</from>
+        <to type="permanent-redirect">/java/web-services/jaxp</to>
+    </rule>
+    <rule>
+        <from>^/java/web-services/rest$</from>
+        <to type="permanent-redirect">/java/web-services/restful</to>
+    </rule>
+    <rule>
+        <from>^/java/web-services/advanced-web-services$</from>
+        <to type="permanent-redirect">/java/web-services/soap-handler</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/java-introduction$</from>
+        <to type="permanent-redirect">/java/ocpjp8/features-java-language</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/create-run-java-application$</from>
+        <to type="permanent-redirect">/java/ocpjp8/install-jdk-guide</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/java-lexicon$</from>
+        <to type="permanent-redirect">/java/ocpjp8/language-lexicon</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/operators$</from>
+        <to type="permanent-redirect">/java/ocpjp8/arithmetic-operators-and-compound-assignment</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/operators-in-java$</from>
+        <to type="permanent-redirect">/java/ocpjp8/if-else-statement</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/what-is-array-in-java$</from>
+        <to type="permanent-redirect">/java/ocpjp8/array-declaration-initialization</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/sorting-algorithms-overview$</from>
+        <to type="permanent-redirect">/java/ocpjp8/array-average-example</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/git-version-control-introduction$</from>
+        <to type="permanent-redirect">/java/ocpjp8/version-control-system</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/learning-object-oriented-programming$</from>
+        <to type="permanent-redirect">/java/ocpjp8/procedural-vs-object-oriented-programming</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/lambda$</from>
+        <to type="permanent-redirect">/java/ocpjp8/functional-interface</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/stream-api-en$</from>
+        <to type="permanent-redirect">/java/ocpjp8/create-stream-api</to>
+    </rule>
+    <rule>
+        <from>^/java/ocpjp8/inner-classes-and-exceptions$</from>
+        <to type="permanent-redirect">/java/ocpjp8/inner-classes</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/introduction-to-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/java-main-features</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/sozdanie-zapusk-java-prilogenija$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/ustanovka-jdk</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/leksika-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/osnovnye-operacii-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operazii</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/uslovnye-operatory-i-cikly-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/operator-if</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/massivi$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/odnomernie-massivi</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/sorting-algoritms$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/srednee-arifmeticheskoye</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/git-i-github-osnovy-kontrolya-versij$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/vcs</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/oop-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/metodiki-programmirovanija</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/static-keyword$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/static-fields</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/object-module$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/class-object</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/interfeisi-enum$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/interfaces</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/wrapper-classes-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/obolochki-tipov</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/stroki-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/stroki</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/lokalisaziya-internazionalisaziya$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/internationalisation</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/new-date-time-module$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/new-date-time-api</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/generics-i-vnutrennie-klassy-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/generics-russian</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/lambda-vyrazheniya-v-java-8$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/lambda-russian</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/kollekcii-module$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/kollekcii-v-java</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/stream-api$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/chto-takoe-stream-api</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/isklyucheniya-v-java-obrabotka-oshibok$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/obrabotka-iskluchenij</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/potoki-vvoda-vivoda$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/potoki-dannih</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/reflection-api-java-doc$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/class</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/serializaciya-i-klonirovanie-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/serialization-russian</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/maven-sborka-i-upravlenie-zavisimostyami$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/maven</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/osnovy-sql-dlya-java-razrabotchika$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/subd</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/jdbc-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/drivers</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/java-core-russian/mnogopotochnost-v-java$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/threads-russian</to>
+    </rule>
+    <rule>
         <from>^/ru/questions$</from>
         <to type="permanent-redirect">/ru/tests</to>
     </rule>
