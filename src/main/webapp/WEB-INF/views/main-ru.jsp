@@ -55,7 +55,7 @@
           <p class="lede">200+ коротких уроков, практических заданий и тестов — разработано для новичков, которые хотят действительно закончить курс.</p>
           <p class="lede">Бесплатный курс Java для начинающих: изучайте Java Core, решайте задачи, проходите тесты и осваивайте навыки Java-разработчика.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/ru/java-core-russian">
               Начать обучение
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -162,7 +162,7 @@
           <span class="ico-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
           <h3>Новичок в Java?</h3>
           <p class="desc">Начни с основ языка и изучай пошагово.</p>
-          <a class="link-arrow" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">Начать курс →</a>
+          <a class="link-arrow" href="${pageContext.request.contextPath}/ru/java-core-russian">Начать курс →</a>
         </article>
         <article class="path-card card-lift">
           <span class="tag tag-primary">Практика</span>
@@ -219,7 +219,7 @@
           <span class="pill">Путь Java разработчика</span>
           <h2 style="margin-top:1rem;">Следуй шагам обучения</h2>
           <p style="margin-top:1rem; color:var(--muted-fg);">Четкий и структурированный путь обучения. Каждый шаг открывает следующий.</p>
-          <a class="btn btn-primary btn-sm" style="margin-top:1.5rem;" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">
+          <a class="btn btn-primary btn-sm" style="margin-top:1.5rem;" href="${pageContext.request.contextPath}/ru/java-core-russian">
             Начни первый шаг
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -250,7 +250,7 @@
               </c:if>
             </c:forEach>
           </ol>
-          <a class="see-all" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">Все 210 уроков →</a>
+          <a class="see-all" href="${pageContext.request.contextPath}/ru/java-core-russian">Все 210 уроков →</a>
         </div>
       </div>
     </section>
@@ -368,7 +368,7 @@
           <h2>Начните изучать Java уже сегодня.</h2>
           <p>Присоединяйтесь к 50 000 студентов. Без карты. Без скрытых ограничений. Только обучение с реальным результатом.</p>
           <div class="actions">
-            <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">
+            <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/ru/java-core-russian">
               Начни обучение прямо сейчас
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>

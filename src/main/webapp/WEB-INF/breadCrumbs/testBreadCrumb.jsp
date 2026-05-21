@@ -2,7 +2,7 @@
 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
      <c:choose>
         <c:when test="${param.TEST_PATH.equals('java-core-russian')}">
-            <a itemprop="item" href="https://www.examclouds.com/ru/exam/java-core-russian">
+            <a itemprop="item" href="https://www.examclouds.com/ru/java-core-russian">
         </c:when>
         <c:otherwise>
             <a itemprop="item" href="https://www.examclouds.com/${TESTS[param.TEST_PATH].fullPathName}">

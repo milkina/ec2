@@ -3,7 +3,7 @@
 <!-- COLUMN 1 -->
 <div class="mega-column">
     <h4><i class="fas fa-book-open icon blue"></i> Основы Java</h4>
-    <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian">
+    <a href="${pageContext.request.contextPath}/ru/java-core-russian">
         Java Core
         <span>Полный курс с нуля</span>
     </a>
@@ -82,10 +82,10 @@
     </div>
     <h4>Начни путь разработчика</h4>
     <p>Пошаговое обучение от основ до реальной разработки</p>
-    <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn-cta-primary">
+    <a href="${pageContext.request.contextPath}/ru/java-core-russian" class="btn-cta-primary">
         Начать обучение →
     </a>
-    <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian" class="btn-cta-outline">
+    <a href="${pageContext.request.contextPath}/ru/java-core-russian" class="btn-cta-outline">
         См. полный путь (29 тем)
     </a>
 </div>

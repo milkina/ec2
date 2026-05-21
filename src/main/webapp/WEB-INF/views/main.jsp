@@ -53,7 +53,7 @@
           <h1>Learn Java the <span class="accent">friendly</span> way.</h1>
           <p class="lede">100+ bite-sized lessons, practical tasks, and tests — built for beginners who want to actually finish the course.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/exam/ocpjp8">
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/java-core">
               Start learning free
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -144,7 +144,7 @@
           <span class="ico-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
           <h3>New to Java?</h3>
           <p class="desc">Start with the basics. We'll guide you step by step from your first 'Hello World' to writing real classes.</p>
-          <a class="link-arrow" href="${pageContext.request.contextPath}/exam/ocpjp8">Start the course →</a>
+          <a class="link-arrow" href="${pageContext.request.contextPath}/java-core">Start the course →</a>
         </article>
         <article class="path-card card-lift">
           <span class="tag tag-primary">Practice</span>
@@ -170,7 +170,7 @@
           <span class="pill">Java Developer Roadmap</span>
           <h2 style="margin-top:1rem;">Your path to becoming a Java developer</h2>
           <p style="margin-top:1rem; color:var(--muted-fg);">A clear, ordered learning path. Each step unlocks the next. Free forever.</p>
-          <a class="btn btn-primary btn-sm" style="margin-top:1.5rem;" href="${pageContext.request.contextPath}/exam/ocpjp8">
+          <a class="btn btn-primary btn-sm" style="margin-top:1.5rem;" href="${pageContext.request.contextPath}/java-core">
             Start step 1
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -182,10 +182,10 @@
         <div>
           <ol class="roadmap">
                       <c:set var="i" value="0" />
-                      <c:forEach var="category" items="${TESTS['ocpjp8'].categories}">
+                      <c:forEach var="category" items="${TESTS['java-core'].categories}">
                         <c:if test="${i < 10 && category.value.hidden == false && category.value.parentCategory != null}">
                           <li class="roadmap-item ${i % 2 == 0 ? 'even' : 'odd'}">
-                            <a href="${pageContext.request.contextPath}/java/ocpjp8/${category.value.pathName}"
+                            <a href="${pageContext.request.contextPath}/java/java-core/${category.value.pathName}"
                                id="categoryItem${category.value.pathName}" class="category-href-main">
                               <span class="step-num">${i + 1}</span>
                               <div class="step-text">
@@ -277,7 +277,7 @@
           <h2>Your Java journey starts today.</h2>
           <p>Join 50,000 learners. No credit card. No paywalls. Just learning that works.</p>
           <div class="actions">
-            <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/exam/ocpjp8">
+            <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/java-core">
               Start learning free
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>

@@ -84,15 +84,15 @@
                     <li><strong>Practice regularly:</strong> Consistent practice will reinforce your knowledge and improve your Java programming abilities.</li>
                 </ol>
                 <p class="index-items-text">Start solving Java practice tasks on ExamClouds today and take your coding skills to the next level!</p>
-                <p class="index-items-text">Full learning course - <a href="${pageContext.request.contextPath}/exam/ocpjp8">Java Programming</a>.</p>
+                <p class="index-items-text">Full learning course - <a href="${pageContext.request.contextPath}/java-core">Java Programming</a>.</p>
                 <p class="index-items-text">Also explore our <a href="${pageContext.request.contextPath}/tests">Tests</a> and <a href="${pageContext.request.contextPath}/questions">Interview Questions</a>.</p>
                 <ul id="categories">
                     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-                    <c:forEach var="category" items="${TESTS['ocpjp8'].categories}">
+                    <c:forEach var="category" items="${TESTS['java-core'].categories}">
                         <c:if test="${category.value.hidden==false && category.value.name.equals('Tasks')}">
                             <li class="category-li"
-                                                              onclick="window.location.href='${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'ocpjp8'}/${category.value.pathName}'">
-                                  <span class="lesson-badge">${TESTS['ocpjp8'].name}</span>
+                                                              onclick="window.location.href='${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'java-core'}/${category.value.pathName}'">
+                                  <span class="lesson-badge">${TESTS['java-core'].name}</span>
                                   <div class="category-name">${category.value.parentCategory.name}</div>
                                   <div class="category-desc">${category.value.article.description}</div>
                             </li>

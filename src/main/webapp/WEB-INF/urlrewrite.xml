@@ -36,11 +36,15 @@
 
     <rule>
         <from>^/exam/java-core-russian$</from>
-        <to type="permanent-redirect">/ru/exam/java-core-russian</to>
+        <to type="permanent-redirect">/ru/java-core-russian</to>
+    </rule>
+    <rule>
+        <from>^/java-core-russian$</from>
+        <to type="permanent-redirect">/ru/java-core-russian</to>
     </rule>
     <rule>
         <from>^/java/java-core-russian/sozdanie-zapusk-java-prilogenija</from>
-        <to type="permanent-redirect">/java/ocpjp8/create-run-java-application</to>
+        <to type="permanent-redirect">/java/java-core/create-run-java-application</to>
     </rule>
     <rule>
         <from>^/ru/java/java-core-russian/lesson1$</from>
@@ -199,52 +203,52 @@
         <to type="permanent-redirect">/java/web-services/soap-handler</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/java-introduction$</from>
-        <to type="permanent-redirect">/java/ocpjp8/features-java-language</to>
+        <from>^/java/java-core/java-introduction$</from>
+        <to type="permanent-redirect">/java/java-core/features-java-language</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/create-run-java-application$</from>
-        <to type="permanent-redirect">/java/ocpjp8/install-jdk-guide</to>
+        <from>^/java/java-core/create-run-java-application$</from>
+        <to type="permanent-redirect">/java/java-core/install-jdk-guide</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/java-lexicon$</from>
-        <to type="permanent-redirect">/java/ocpjp8/language-lexicon</to>
+        <from>^/java/java-core/java-lexicon$</from>
+        <to type="permanent-redirect">/java/java-core/language-lexicon</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/operators$</from>
-        <to type="permanent-redirect">/java/ocpjp8/arithmetic-operators-and-compound-assignment</to>
+        <from>^/java/java-core/operators$</from>
+        <to type="permanent-redirect">/java/java-core/arithmetic-operators-and-compound-assignment</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/operators-in-java$</from>
-        <to type="permanent-redirect">/java/ocpjp8/if-else-statement</to>
+        <from>^/java/java-core/operators-in-java$</from>
+        <to type="permanent-redirect">/java/java-core/if-else-statement</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/what-is-array-in-java$</from>
-        <to type="permanent-redirect">/java/ocpjp8/array-declaration-initialization</to>
+        <from>^/java/java-core/what-is-array-in-java$</from>
+        <to type="permanent-redirect">/java/java-core/array-declaration-initialization</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/sorting-algorithms-overview$</from>
-        <to type="permanent-redirect">/java/ocpjp8/array-average-example</to>
+        <from>^/java/java-core/sorting-algorithms-overview$</from>
+        <to type="permanent-redirect">/java/java-core/array-average-example</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/git-version-control-introduction$</from>
-        <to type="permanent-redirect">/java/ocpjp8/version-control-system</to>
+        <from>^/java/java-core/git-version-control-introduction$</from>
+        <to type="permanent-redirect">/java/java-core/version-control-system</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/learning-object-oriented-programming$</from>
-        <to type="permanent-redirect">/java/ocpjp8/procedural-vs-object-oriented-programming</to>
+        <from>^/java/java-core/learning-object-oriented-programming$</from>
+        <to type="permanent-redirect">/java/java-core/procedural-vs-object-oriented-programming</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/lambda$</from>
-        <to type="permanent-redirect">/java/ocpjp8/functional-interface</to>
+        <from>^/java/java-core/lambda$</from>
+        <to type="permanent-redirect">/java/java-core/functional-interface</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/stream-api-en$</from>
-        <to type="permanent-redirect">/java/ocpjp8/create-stream-api</to>
+        <from>^/java/java-core/stream-api-en$</from>
+        <to type="permanent-redirect">/java/java-core/create-stream-api</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8/inner-classes-and-exceptions$</from>
-        <to type="permanent-redirect">/java/ocpjp8/inner-classes</to>
+        <from>^/java/java-core/inner-classes-and-exceptions$</from>
+        <to type="permanent-redirect">/java/java-core/inner-classes</to>
     </rule>
     <rule>
         <from>^/ru/java/java-core-russian/introduction-to-java$</from>
@@ -363,6 +367,14 @@
         <to type="permanent-redirect">/ru/tests</to>
     </rule>
     <rule>
+        <from>^/java/ocpjp8/(.*)$</from>
+        <to type="permanent-redirect">/java/java-core/$1</to>
+    </rule>
+    <rule>
+        <from>^/ru/java/ocpjp8/(.*)$</from>
+        <to type="permanent-redirect">/java/java-core/$1</to>
+    </rule>
+    <rule>
         <from>^/java/(.*)/(.*)$</from>
         <to type="passthrough">/show-category?CATEGORY_PATH=$2&amp;TEST_PATH=$1</to>
     </rule>
@@ -396,16 +408,32 @@
         <to type="passthrough">/show-course?TEST_PATH=web-services</to>
     </rule>
     <rule>
-        <from>^/exam/web-services$</from>
-        <to type="permanent-redirect">/web-services</to>
+        <from>^/java-core$</from>
+        <to type="passthrough">/show-course?TEST_PATH=java-core</to>
+    </rule>
+    <rule>
+        <from>^/ru/java-core$</from>
+        <to type="passthrough">/show-course?TEST_PATH=java-core</to>
+    </rule>
+    <rule>
+        <from>^/ocpjp8$</from>
+        <to type="permanent-redirect">/java-core</to>
+    </rule>
+    <rule>
+        <from>^/ru/ocpjp8$</from>
+        <to type="permanent-redirect">/java-core</to>
+    </rule>
+    <rule>
+        <from>^/ru/java-core-russian$</from>
+        <to type="passthrough">/show-course?TEST_PATH=java-core-russian</to>
     </rule>
     <rule>
         <from>^/exam/(.*)$</from>
-        <to type="passthrough">/show-course?TEST_PATH=$1</to>
+        <to type="permanent-redirect">/$1</to>
     </rule>
     <rule>
         <from>^/ru/exam/(.*)$</from>
-        <to type="passthrough">/show-course?TEST_PATH=$1</to>
+        <to type="permanent-redirect">/ru/$1</to>
     </rule>
 
     <rule>

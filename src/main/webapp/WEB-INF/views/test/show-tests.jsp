@@ -61,7 +61,7 @@
              </ol>
              <p class="index-items-text">After completing the test, you will see your results in percentage and numerical expressions. You will be presented with all
              the questions asked, your answers, and the correct answers. If your results are unsatisfactory, we recommend taking our
-             <a href="${pageContext.request.contextPath}/exam/ocpjp8">training course</a> on our website in full or studying individual lessons on Java Core.</p>
+             <a href="${pageContext.request.contextPath}/java-core">training course</a> on our website in full or studying individual lessons on Java Core.</p>
              <p class="index-items-text">Most tests include practical tasks. In some, you will need to find errors, in others, fill in missing parts, or answer the question: 'Will the code compile?'. If you pass our tests successfully, you are ready for an internship or a Junior position. We recommend regularly taking tests not only before interviews but also during your learning process.</p>
              <p class="index-items-text">Also, utilize our <a href="${pageContext.request.contextPath}/questions">Interview Questions</a> to enhance your skills.</p>
              <h2 class="header2">Advantages of Our Java Tests:</h2>

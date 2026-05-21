@@ -15,7 +15,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                 Основы Java
               </h4>
-              <a href="${pageContext.request.contextPath}/ru/exam/java-core-russian"><b>Java Core</b><span>Полный курс с нуля</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java-core-russian"><b>Java Core</b><span>Полный курс с нуля</span></a>
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/probeli-kommentarii-identifikatori-kluchevie-slova-java"><b>Лексика языка</b><span>Переменные, методы, типы данных</span></a>
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/metodiki-programmirovanija"><b>ООП в Java</b><span>Классы, объекты, наследование</span></a>
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/kollekcii-v-java"><b>Коллекции framework</b><span>List, Set, Map и другие</span></a>
@@ -49,8 +49,8 @@
               </div>
               <h5>Начни путь разработчика</h5>
               <p>Пошаговое обучение от основ до реальной разработки</p>
-              <a class="btn btn-primary btn-sm mega-cta" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">Начать обучение →</a>
-              <a class="btn btn-outline btn-sm mega-cta-outline" href="${pageContext.request.contextPath}/ru/exam/java-core-russian">См. полный путь (29 тем)</a>
+              <a class="btn btn-primary btn-sm mega-cta" href="${pageContext.request.contextPath}/ru/java-core-russian">Начать обучение →</a>
+              <a class="btn btn-outline btn-sm mega-cta-outline" href="${pageContext.request.contextPath}/ru/java-core-russian">См. полный путь (29 тем)</a>
             </aside>
           </div>
           <!-- Feature strip -->

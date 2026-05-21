@@ -14,7 +14,7 @@ https://www.examclouds.com/
 
 # Key articles
 Preferred:
-https://www.examclouds.com/exam/ocpjp8
+https://www.examclouds.com/java-core
 https://www.examclouds.com/tests
 https://www.examclouds.com/ru/tests
 https://www.examclouds.com/questions
