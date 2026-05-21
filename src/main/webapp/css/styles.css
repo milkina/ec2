@@ -1256,7 +1256,6 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 .article-next-title { margin-top: .25rem; font-weight: 800; }
 .article-next .btn-primary { border-radius: 9999px; }
 .img-responsive{
-  float: left;
   margin: 0 1.5rem 1rem 0;
   max-width: 100%;
   height: auto;
@@ -1632,12 +1631,41 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 }
 .lesson-div .language-java {
   background: oklch(0.22 0.04 260); color: oklch(0.97 0.005 95);
-  padding: 1rem 1.1rem; border-radius: 14px; overflow-x: auto;
+  padding: 1.7rem 1rem 1.1rem; border-radius: 14px; overflow-x: auto;
   font-family: var(--font-mono, ui-monospace, monospace);
   font-size: .88rem; line-height: 1.55; margin: 0 0 1rem;
 }
 .lesson-div .lesson-list-bullets { margin: 0 0 1rem 1.25rem; padding: 0; line-height: 1.7; }
 .lesson-div .lesson-list-bullets li { margin-bottom: .35rem; }
+.lesson-div a, .article-body a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+
+    border-bottom: 1px solid transparent;
+}
+
+/* Hover */
+.lesson-div a:hover, .article-body a:hover {
+    color: #1d4ed8;
+    border-bottom-color: currentColor;
+}
+
+/* Active */
+.lesson-div a:active, .article-body a:active {
+    color: #1e40af;
+}
+
+/* Keyboard accessibility */
+.lesson-div a:focus-visible, .article-body a:focus-visible {
+    outline: 2px solid rgba(37, 99, 235, 0.35);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
 
 /* Code block style for <pre class="lesson-code"> */
 pre.lesson-code {
@@ -1660,4 +1688,54 @@ pre.has-copy { position: relative; }
 }
 .copy-btn:hover { background: rgba(255,255,255,.2); }
 .copy-btn.is-copied { background: var(--success, #16a34a); color: #fff; opacity: 1; }
+/* ===== Articles index page ===== */
+.articles-page { padding-block: 3.5rem 5rem; }
+.articles-title { margin-top: 1rem; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; }
+.articles-lede { margin-top: 1rem; font-size: 1.125rem; color: var(--muted-fg); line-height: 1.6; }
+.articles-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .articles-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.article-card {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.article-card-cover {
+  position: relative;
+  height: 10rem;
+  background: linear-gradient(135deg, var(--primary), color-mix(in oklab, var(--primary) 60%, transparent));
+}
+.article-card--c2 .article-card-cover { background: linear-gradient(135deg, var(--success, #16a34a), color-mix(in oklab, var(--success, #16a34a) 60%, transparent)); }
+.article-card--c3 .article-card-cover { background: linear-gradient(135deg, var(--accent, #f59e0b), color-mix(in oklab, var(--accent, #f59e0b) 60%, transparent)); }
+.article-card--c4 .article-card-cover { background: linear-gradient(135deg, #a855f7, color-mix(in oklab, #a855f7 60%, transparent)); }
+.article-card-cat {
+  position: absolute; top: 1rem; left: 1rem;
+  background: color-mix(in oklab, var(--background) 90%, transparent);
+  backdrop-filter: blur(6px);
+  border-radius: 9999px;
+  padding: .25rem .625rem;
+  font-size: .6875rem; font-weight: 700;
+}
+.article-card-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; gap: .5rem; }
+.article-card-body h3 { font-size: 1.125rem; line-height: 1.35; }
+.article-card-body p { color: var(--muted-fg); font-size: .9375rem; flex: 1; }
+.article-card-meta {
+  margin-top: 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: .75rem; color: var(--muted-fg);
+}
+.article-card-read { color: var(--primary); font-weight: 700; }
+
 

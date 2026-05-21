@@ -1,11 +1,11 @@
-﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<t:wrapper>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<t:wrapper2>
   <jsp:attribute name="header">
-    <meta charset="UTF-8">
     <meta name="description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
     <title>Статьи из IT сферы на ExamClouds</title>
     <link rel="canonical" href="https://www.examclouds.com/ru/show-all-articles">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com/ru/show-all-articles">
     <meta property="twitter:title" content="Статьи из IT сферы на ExamClouds">
-    <meta property="twitter:card" content="summary">
+    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
     <meta property="twitter:site" content="@ExamClouds">
     <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
@@ -27,27 +27,42 @@
   </jsp:attribute>
   <jsp:body>
     <main>
-     <%@ include file="/WEB-INF/breadCrumbs/publicationsBreadCrumbs2.jsp"%>
-     <h1 class="article-head">Статьи из IT сферы</h1>
-     <p class="index-items-text">Добро пожаловать на нашу страницу, на которой вы найдёте обширную подборку материалов, охватывающих самые разные
+       <section class="container articles-page">
+     <span class="article-tag"><spring:message code="articles"/></span>
+          <h1 class="articles-title">Статьи из IT сферы</h1>
+     <p class="articles-lede">Добро пожаловать на нашу страницу, на которой вы найдёте обширную подборку материалов, охватывающих самые разные
      аспекты информационных технологий. Наши статьи предлагают глубокие знания и практические советы по <strong>программированию</strong>,
      <strong>сетевым технологиям</strong>, <strong>безопасности</strong>, развитию <strong>веб-приложений</strong> и многим другим
      темам. Независимо от вашего уровня подготовки, вы обязательно найдёте что-то полезное и интересное. Откройте для себя мир IT
      с нами и постоянно улучшайте свои навыки и знания.</p>
-      <ul class="article-list">
-        <c:forEach var="article" items="${ARTICLES}">
+       <div class="articles-grid">
+        <c:forEach var="article" items="${ARTICLES}" varStatus="loop">
         <c:if test="${article.language.code=='ru' && not empty article.text}">
-         <li>
-           <div class="row article-head-date">
-             <h2 class="article-head col-xs-12 col-sm-9"><a href="${pageContext.request.contextPath}/ru/${article.url}" class="article-url">${article.title}</a></h2>
-             <div class="col-xs-12 col-sm-3 article-date">${article.formattedDate}</div>
+         <a href="${pageContext.request.contextPath}/ru/${article.url}" class="article-card article-card--c${(loop.index % 4) + 1}">
+           <div class="article-card-cover"><span class="article-card-cat">IT</span></div>
+           <div class="article-card-body">
+              <h3>${article.title}</h3>
+              <p>${article.description}</p>
+              <div class="article-card-meta">
+                  <span class="article-author">${article.author.login}</span>
+                  <span class="article-date">${article.formattedDate}</span>
+              </div>
+              <c:set var="plainText" value="${fn:replace(fn:replace(fn:replace(article.text, '<', ' <'), '>', '> '), '&nbsp;', ' ')}"/>
+              <c:set var="charCount" value="${fn:length(plainText)}"/>
+              <c:set var="readMin" value="${fn:replace((charCount - (charCount mod 1500)) / 1500 + 1, '.0', '')}"/>
+              <div class="article-card-meta">
+                  <span class="article-readtime">
+                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                              ${readMin}&nbsp;<spring:message code="min.read"/>
+                   </span>
+                   <span class="article-card-read"><spring:message code="show.more"/>  →</span>
+              </div>
            </div>
-           <div class="article-author">${article.author.login}</div>
-           <div class="article-desc">${article.description}</div>
-         </li>
+         </a>
          </c:if>
         </c:forEach>
-      </ul>
+      </div>
+      </section>
     </main>
  </jsp:body>
-</t:wrapper>
+</t:wrapper2>

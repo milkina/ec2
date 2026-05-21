@@ -20,7 +20,7 @@
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/tests">
      <meta property="twitter:title" content="Задачи по java, тесты java, онлайн задачи по программированию java для начинающих, практические тестовые задачи с ответами по Java программированию">
-     <meta property="twitter:card" content="summary">
+     <meta property="twitter:card" content="summary_large_image">
      <meta property="twitter:description" content="Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.">
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">

@@ -202,13 +202,13 @@
         <!-- Lazy YouTube: iframe loads ONLY after click -->
         <button class="lite-yt" type="button"
           data-yt-id="Ir6KjeOhbGk"
-          aria-label="Play: видео обзор Java курса">
+          aria-label="<spring:message code='watch'/>: видео обзор Java курса">
           <img loading="lazy" src="https://i.ytimg.com/vi/Ir6KjeOhbGk/hqdefault.jpg"
             alt="Видео обзор Java курса" />
           <span class="lite-yt-play" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
           </span>
-          <span class="lite-yt-label">Watch · Обзор курса</span>
+          <span class="lite-yt-label"><spring:message code='watch'/> · Обзор курса</span>
         </button>
       </div>
     </section>

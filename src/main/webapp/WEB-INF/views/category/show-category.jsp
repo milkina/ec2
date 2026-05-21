@@ -6,7 +6,6 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-    <meta charset="UTF-8">
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>
@@ -101,6 +100,21 @@
                          <div class="lesson-div">
                            ${CATEGORY_ATTRIBUTE.article.text}
                          </div>
+                         <section>
+                             <h2><spring:message code="video.explanation"/></h2>
+                             <p><spring:message code="video.explanation.subtitle"/></p>
+                             <c:set var="ytId" value="${fn:substringAfter(CATEGORY_ATTRIBUTE.videoPath, 'youtu.be/')}"/>
+                             <button class="lite-yt" type="button"
+                                       data-yt-id="${ytId}"
+                                       aria-label="<spring:message code='watch'/>: ${header1}">
+                                       <img loading="lazy" src="https://i.ytimg.com/vi/${ytId}/hqdefault.jpg"
+                                         alt="${header1}" />
+                                       <span class="lite-yt-play" aria-hidden="true">
+                                         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                                       </span>
+                                       <span class="lite-yt-label"><spring:message code="watch"/> · <spring:message code="video.lesson"/></span>
+                                     </button>
+                         </section>
 
                          <div class="lesson-nav">
                          <c:if test="${PREVIOUS_CATEGORY!=null}">
@@ -145,12 +159,7 @@
                                </div>
                              </aside>
       <!--  <article>
-         <h1 class="show-category-header">${header1}</h1>
          <div class="category-article">
-                     <c:if test="${CATEGORY_ATTRIBUTE.article.image != null &&  not empty CATEGORY_ATTRIBUTE.article.image}">
-                       <img class="categoryImage" src="${CATEGORY_ATTRIBUTE.article.image}" loading="lazy"
-                         width ="280" height="200" alt="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>" title="${CATEGORY_ATTRIBUTE.name}&nbsp;<spring:message code='photo'/>">
-                     </c:if>
             <div class="author-category">
               <img src="https://img.examclouds.com/general/tatyana-milkina-small.jpg"
                    alt="Tatyana Milkina"
@@ -164,70 +173,11 @@
                    class="author-link">Tatyana Milkina</a>
               </div>
             </div>
-            ${CATEGORY_ATTRIBUTE.article.text}
-             <c:if test="${pageLanguage=='ru'}">
-                <a href="https://www.udemy.com/course/java-bup/" rel="noopener nofollow sponsored" target="_blank"><img class="img-responsive" src="https://img.examclouds.com/ad1.png" loading="lazy"
-                                     width ="546" height="475" alt="Курс 'Java для начинающих' на Udemy" title="Курс 'Java для начинающих' на Udemy"></a>
-                <a href="https://www.udemy.com/course/java-bup/" rel="nofollow sponsored noopener" target="_blank">Курс 'Java для начинающих' на Udemy</a>
-            </c:if>
          </div>
-           <c:if test="${not empty CATEGORY_ATTRIBUTE.subCategories}">
-            <ol class="category-list">
-              <c:forEach var="subCategory" items="${CATEGORY_ATTRIBUTE.subCategories}">
-                <c:if test="${subCategory.hidden==false}">
-                  <li><a href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${subCategory.pathName}"
-                       class="category-sub-href" id="categoryItem${subCategory.pathName}">${subCategory.name}
-                       </a>
-                  </li>
-                 </c:if>
-              </c:forEach>
-            </ol>
-           </c:if>
-           <c:if test="${CATEGORY_ATTRIBUTE.questionsCount!=0 or not empty CATEGORY_ATTRIBUTE.subCategories}">
-            <div class="read-questions-div">
-               <a href="${pageContext.request.contextPath}/see-questions?CATEGORY_PATH=${param.CATEGORY_PATH}&TEST_PATH=${param.TEST_PATH}"
-                 id="startQuiz" class="read-questions-href">
-                   <spring:message code="questions"/>
-               </a>
-            </div>
-           </c:if>
-           <c:if test="${CATEGORY_ATTRIBUTE.testsCount!=0 or not empty CATEGORY_ATTRIBUTE.subCategories}">
-             <input type="button" class="styled-button pass-test-btn" value="<spring:message code="start.test"/>" id="startTest"
-              onclick="window.location.href='${pageContext.request.contextPath}/start-test?CATEGORY_PATH=${param.CATEGORY_PATH}&TEST_PATH=${param.TEST_PATH}';">
-           </c:if>
+
          </article>
-         <div class="row">
-           <div class="col-xs-6 previous-exam-button">
-             <c:if test="${PREVIOUS_CATEGORY!=null}">
-               <a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">
-                 <spring:message code="previous"/>
-               </a>
-             </c:if>
-           </div>
-           <div class="col-xs-6 next-exam-button">
-             <c:if test="${NEXT_CATEGORY!=null}">
-               <a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}">
-                 <spring:message code="next"/>
-               </a>
-              </c:if>
-           </div>
-         </div>
-         <c:if test="${not empty CATEGORY_ATTRIBUTE.parentCategory.subCategories}">
-           <div>
-             <spring:message code="read.also"/>:
-              <ul>
-                <c:set var="liCount" value="0" />
-                <c:forEach var="subCategory" items="${CATEGORY_ATTRIBUTE.parentCategory.subCategories}">
-                  <c:if test="${subCategory!=CATEGORY_ATTRIBUTE && liCount < 5}">
-                    <li><a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${subCategory.pathName}">${subCategory.name}
-                        </a>
-                    </li>
-                    <c:set var="liCount" value="${liCount + 1}" />
-                  </c:if>
-                </c:forEach>
-              </ul>
-           </div>
-         </c:if>-->
+
+        -->
          </div>
       </main>
      <!-- <jsp:include page="/WEB-INF/comment/comments.jsp">

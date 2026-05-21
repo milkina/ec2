@@ -18,7 +18,7 @@
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/practical-java-tasks">
      <meta property="twitter:title" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
-     <meta property="twitter:card" content="summary">
+     <meta property="twitter:card" content="summary_large_image">
      <meta property="twitter:description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
