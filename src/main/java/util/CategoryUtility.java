@@ -188,6 +188,10 @@ public class CategoryUtility extends SpringUtility {
                 otherLanguage.setUrl(version);
                 otherLanguage = SpringUtility.getCanonicalUrlService(servletContext).createOtherLanguages(otherLanguage);
                 updateHrefLanguage(version, language, servletContext, originalPage);
+            } else {
+                SpringUtility.getCanonicalUrlService(servletContext).deleteOtherLanguage(otherLanguage);
+                canonicalUrls.remove(language.getId());
+                removeHrefLanguage(language, servletContext, originalPage);
             }
         }
     }
@@ -197,6 +201,14 @@ public class CategoryUtility extends SpringUtility {
         Map<String, String> m = map.get(language.getCode());
         if (m != null) {
             m.put(originalPage, version);
+        }
+    }
+
+    private static void removeHrefLanguage(Language language, ServletContext servletContext, String originalPage) {
+        Map<LanguageCode, Map<String, String>> map = (Map<LanguageCode, Map<String, String>>) servletContext.getAttribute(ALL_OTHER_LANGUAGES_URLS);
+        Map<String, String> m = map.get(language.getCode());
+        if (m != null) {
+            m.remove(originalPage);
         }
     }
 

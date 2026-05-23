@@ -97,10 +97,8 @@
                 <div class="stat-card"><div class="ic">📚</div><div><b>Фундаментальные</b><span>Основные концепции Java</span></div></div>
                 <div class="stat-card"><div class="ic">💼</div><div><b>Подготовка к интервью</b><span>Junior и выше</span></div></div>
                 <div class="stat-card"><div class="ic">📊</div><div><b>Оценка уровня</b><span>Определите области для улучшения</span></div></div>
-                <div class="stat-card"><div class="ic">💻</div><div><b>Практические задания</b><span>Улучшите навыки программирования</span></div></div>
                 <div class="stat-card"><div class="ic">🔄</div><div><b>Актуальные вопросы</b><span>Регулярно обновляемая база</span></div></div>
                 <div class="stat-card"><div class="ic">🎯</div><div><b>Разнообразие тем</b><span>От базовых до продвинутых</span></div></div>
-                <div class="stat-card"><div class="ic">📝</div><div><b>Обратная связь</b><span>Подробный отчёт с объяснениями</span></div></div>
               </div>
             </div>
 

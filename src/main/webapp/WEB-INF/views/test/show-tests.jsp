@@ -94,7 +94,6 @@
                 <div class="stat-card"><div class="ic">📚</div><div><b>Fundamental</b><span>Fundamental Java concepts</span></div></div>
                 <div class="stat-card"><div class="ic">💼</div><div><b>Interview prep</b><span>Junior and higher positions</span></div></div>
                 <div class="stat-card"><div class="ic">📊</div><div><b>Level assessment</b><span>Identify areas for improvement</span></div></div>
-                <div class="stat-card"><div class="ic">💻</div><div><b>Practical tasks</b><span>Enhance programming skills</span></div></div>
               </div>
             </div>
 

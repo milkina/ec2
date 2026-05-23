@@ -8,5 +8,7 @@ import java.util.Map;
 public interface OtherLanguageService {
     OtherLanguage createOtherLanguages(OtherLanguage otherLanguage);
 
+    void deleteOtherLanguage(OtherLanguage otherLanguage);
+
     Map<LanguageCode, Map<String, String>> findAll();
 }

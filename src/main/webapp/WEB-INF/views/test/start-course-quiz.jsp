@@ -1,7 +1,7 @@
 <div id="collapse_q_${test.pathName}" class="panel-collapse collapse in"
       role="tabpanel" aria-labelledby="heading_q_${test.pathName}">
        <div class="panel-body">
-        <form action="${pageContext.request.contextPath}/see-questions?TEST_PATH=${test.pathName}" method="post">
+        <form action="${pageContext.request.contextPath}/see-questions/${test.pathName}" method="post">
          <select name="CATEGORY_PATH" id="CATEGORY_PATH_quiz_${test.pathName}" multiple="multiple" class="2col active" required>
           <c:set var="count" value="${1}"/>
           <c:forEach var="category" items="${test.categories}">

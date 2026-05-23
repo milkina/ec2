@@ -383,6 +383,22 @@
         <to type="passthrough">/show-category?CATEGORY_PATH=$2&amp;TEST_PATH=$1</to>
     </rule>
     <rule>
+        <from>^/see-questions/(.*)/(.*)$</from>
+        <to type="passthrough">/see-questions?TEST_PATH=$1&amp;CATEGORY_PATH=$2</to>
+    </rule>
+    <rule>
+        <from>^/see-questions/(.*)$</from>
+        <to type="passthrough">/see-questions?TEST_PATH=$1</to>
+    </rule>
+    <rule>
+        <from>^/start-test/(.*)/(.*)$</from>
+        <to type="passthrough">/start-test?TEST_PATH=$1&amp;CATEGORY_PATH=$2</to>
+    </rule>
+    <rule>
+        <from>^/start-test/(.*)$</from>
+        <to type="passthrough">/start-test?TEST_PATH=$1</to>
+    </rule>
+    <rule>
         <from>^/publications/(.*)$</from>
         <to type="passthrough">/show-article?URL_PARAM=$1</to>
     </rule>

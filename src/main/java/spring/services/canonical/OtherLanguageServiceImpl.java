@@ -21,6 +21,11 @@ public class OtherLanguageServiceImpl implements OtherLanguageService {
     }
 
     @Override
+    public void deleteOtherLanguage(OtherLanguage otherLanguage) {
+        canonicalUrlRepository.delete(otherLanguage);
+    }
+
+    @Override
     public Map<LanguageCode, Map<String, String>> findAll() {
         Iterable<OtherLanguage> iterable = canonicalUrlRepository.findAll();
         return StreamSupport.stream(iterable.spliterator(), false)

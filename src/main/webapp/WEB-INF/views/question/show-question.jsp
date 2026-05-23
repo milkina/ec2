@@ -41,7 +41,7 @@
     </a>
     <div class="answer collapse" id="answer1">${QUESTION_ENTRY_ATTRIBUTE.answer.text}</div>
   </div>
-  <a href="${pageContext.request.contextPath}/see-questions?CATEGORY_PATH=${QUESTION_ENTRY_ATTRIBUTE.category.pathName}&TEST_PATH=${TEST_PATH}"
+  <a href="${pageContext.request.contextPath}/see-questions/${TEST_PATH}/${QUESTION_ENTRY_ATTRIBUTE.category.pathName}"
      id="seeOtherQuestions">
      <spring:message code="see.other.questions"/>
   </a>

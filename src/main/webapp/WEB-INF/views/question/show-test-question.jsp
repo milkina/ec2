@@ -42,7 +42,7 @@
        </c:forEach>
      </ul>
    </div>
-   <a href="${pageContext.request.contextPath}/start-test?CATEGORY_PATH=${QUESTION_ENTRY_ATTRIBUTE.category.pathName}&TEST_PATH=${TEST_PATH}"
+   <a href="${pageContext.request.contextPath}/start-test/${TEST_PATH}/${QUESTION_ENTRY_ATTRIBUTE.category.pathName}"
     id="seeOtherQuestions">
     <spring:message code="see.other.questions"/>
    </a>
