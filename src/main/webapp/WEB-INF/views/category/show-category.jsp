@@ -100,6 +100,8 @@
                          <div class="lesson-div">
                            ${CATEGORY_ATTRIBUTE.article.text}
                          </div>
+                            <c:set var="isVideo" value="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}"/>
+                        <c:if test="${isVideo}">
                          <section>
                              <h2><spring:message code="video.explanation"/></h2>
                              <p><spring:message code="video.explanation.subtitle"/></p>
@@ -115,7 +117,7 @@
                                        <span class="lite-yt-label"><spring:message code="watch"/> · <spring:message code="video.lesson"/></span>
                                      </button>
                          </section>
-
+                         </c:if>
                          <div class="lesson-nav">
                          <c:if test="${PREVIOUS_CATEGORY!=null}">
                                         <a class="btn btn-secondary" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">
@@ -136,19 +138,22 @@
                                  <div class="bar"><span style="width:35%; background: var(--success);"></span></div>
                                  <p class="lesson-side-progress">7 of 26 modules · 35%</p>-->
 
+                                 <c:set var="isQuestions" value="${CATEGORY_ATTRIBUTE.questionsCount!=0}"/>
+                                 <c:set var="isTests" value="${CATEGORY_ATTRIBUTE.testsCount!=0}"/>
+                          <c:if test="${isVideo || isQuestions || isTests}">
                                  <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="for.this.lesson"/></p>
                                  <ul class="lesson-side-list">
-                                     <c:if test="${CATEGORY_ATTRIBUTE.questionsCount!=0 or not empty CATEGORY_ATTRIBUTE.subCategories}">
+                                     <c:if test="${isQuestions}">
                                          <li><a href="${pageContext.request.contextPath}/see-questions?CATEGORY_PATH=${param.CATEGORY_PATH}&TEST_PATH=${param.TEST_PATH}" id="startQuiz"><span class="ic">?</span><spring:message code="questions"/></a></li>
                                      </c:if>
-                                     <c:if test="${CATEGORY_ATTRIBUTE.testsCount!=0 or not empty CATEGORY_ATTRIBUTE.subCategories}">
+                                     <c:if test="${isTests}">
                                              <li><a href="${pageContext.request.contextPath}/start-test?CATEGORY_PATH=${param.CATEGORY_PATH}&TEST_PATH=${param.TEST_PATH}" id="startTest"><span class="ic">📝</span><spring:message code="tests"/></a></li>
                                      </c:if>
-                                     <c:if test="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}">
-                                            <li><a href="${CATEGORY_ATTRIBUTE.videoPath}" target="_blank"><span class="ic">▶</span><spring:message code="video.lesson"/></a></li>
+                                     <c:if test="${isVideo}">
+                                            <li><a href="${CATEGORY_ATTRIBUTE.videoPath}" target="_blank" rel="noopener noreferrer"><span class="ic">▶</span><spring:message code="video.lesson"/></a></li>
                                      </c:if>
                                  </ul>
-
+                          </c:if>
                                  <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="share"/></p>
                                  <div class="lesson-share">
                                    <a href="https://www.facebook.com/sharer/sharer.php?u=${canonicalUrl}" target="_blank" rel="noopener" aria-label="Facebook">f</a>
