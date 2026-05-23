@@ -7,7 +7,7 @@
           <c:forEach var="category" items="${test.categories}">
             <c:choose>
              <c:when test="${not empty category.value.subCategories}">
-                <optgroup label="<spring:message code="lesson"/>&nbsp;${count} - ${category.value.name}">
+                <optgroup label="<spring:message code="module"/>&nbsp;${count} - ${category.value.name}">
                 <c:forEach var="subCategory" items="${category.value.subCategories}">
                    <option value="${subCategory.pathName}">${subCategory.name}</option>
                 </c:forEach>
@@ -15,7 +15,7 @@
              </c:when>
              <c:otherwise>
                 <option value="${category.value.pathName}">
-                  <spring:message code="lesson"/>&nbsp;${count} - ${category.value.name}
+                  <spring:message code="module"/>&nbsp;${count} - ${category.value.name}
                 </option>
              </c:otherwise>
              </c:choose>

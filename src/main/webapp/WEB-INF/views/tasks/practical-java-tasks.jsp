@@ -47,7 +47,7 @@
 </script>
  <style>
       .category-name:before{
-        content:"<spring:message code="lesson"/> " counter(lesson)" - ";
+        content:"<spring:message code="module"/> " counter(lesson)" - ";
       }
       #categories li:hover::before {
         content: "<spring:message code="open"/> →";
