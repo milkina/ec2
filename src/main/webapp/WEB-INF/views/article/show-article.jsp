@@ -7,6 +7,7 @@
 <%@taglib uri="/WEB-INF/tld/menu-jsp-taglib.tld" prefix="menu"%>
 <t:wrapper2>
   <jsp:attribute name="header">
+   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css?v=2" />
     <meta name="description" content="${ARTICLE_ATTRIBUTE.description}">
     <title>${ARTICLE_ATTRIBUTE.title}</title>
     <c:set var="canonicalUrl" value="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.language.code=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}"/>
@@ -94,5 +95,6 @@
       <jsp:param name="referenceId" value="${ARTICLE_ATTRIBUTE.id}" />
       <jsp:param name="commentType" value="ARTICLE" />
     </jsp:include>-->
+    <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
 </jsp:body>
 </t:wrapper2>

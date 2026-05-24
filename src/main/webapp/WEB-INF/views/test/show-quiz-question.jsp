@@ -4,7 +4,6 @@
 <%@ taglib uri="/WEB-INF/tld/examjsp-taglib.tld" prefix="exam"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="/WEB-INF/tld/canonical-jsp-taglib.tld" prefix="ca"%>
 <%@taglib uri="/WEB-INF/tld/menu-jsp-taglib.tld" prefix="menu"%>
 <t:wrapper>
 <jsp:attribute name="language">lang="${TESTS[param.TEST_PATH].language.code}"</jsp:attribute>
@@ -13,8 +12,8 @@
     <meta name="description" content="${CATEGORY_ATTRIBUTE.article.description}">
     <script async src="${pageContext.request.contextPath}/js/show_questions.js"></script>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
-    <link rel="canonical" href="<ca:examCanonicalTag/>">
     <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
+     <meta name="robots" content="noindex, follow">
 </jsp:attribute>
 <jsp:body>
   <div class="breadCrumbs">
