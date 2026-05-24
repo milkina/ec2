@@ -1,8 +1,6 @@
 package tags.canonical;
 
-import model.AbstractQuestionEntry;
-import model.Category;
-import model.Test;
+import model.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.jsp.JspWriter;
@@ -26,8 +24,11 @@ public class CanonicalTag extends TagSupport {
 
             String categoryPathName = category.getPathName();
             String testPath = pageContext.getRequest().getParameter(TEST_PATH);
+
+            String languagePath = getLanguagePath(testPath);
+
             Category duplicateCategory = duplicateCategories.get(categoryPathName);
-            String result = servletContext.getContextPath() + "/java/" + testPath + "/" + categoryPathName;
+            String result = servletContext.getContextPath() + "/" + languagePath + "java/" + testPath + "/" + categoryPathName;
             if (duplicateCategory != null
                     && !duplicateCategory.getTests().get(0).getPathName().equals(testPath)) {
                 category = duplicateCategory;
@@ -47,6 +48,14 @@ public class CanonicalTag extends TagSupport {
             System.out.println("Error in CanonicalTag: " + exception);
         }
         return SKIP_BODY;
+    }
+
+    private String getLanguagePath( String testPath) {
+        Map<String, Test> testMap =
+                (Map<String, Test>)  pageContext.getRequest().getServletContext()
+                        .getAttribute(TESTS);
+        Test test = testMap.get(testPath);
+        return test.getLanguage().getCode().getPath();
     }
 
     public Category getCategory() {

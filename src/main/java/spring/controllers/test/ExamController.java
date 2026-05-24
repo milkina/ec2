@@ -44,7 +44,7 @@ public class ExamController {
     @Autowired
     private CategoryService categoryService;
 
-    @RequestMapping(value = "/start-test")
+    @RequestMapping(value = {"/start-test", "{langid}/start-test"})
     public String startExam(@RequestParam(TEST_PATH) String testPath, Model model,
                             Locale locale, HttpServletRequest request) {
         HttpSession session = request.getSession();
@@ -69,7 +69,7 @@ public class ExamController {
         }
     }
 
-    @RequestMapping(value = "/show-exam-question")
+    @RequestMapping(value = {"/show-exam-question","{langid}/show-exam-question"})
     public String showExamQuestion(HttpServletRequest request) {
         HttpSession session = GeneralUtility.getSession(true);
         AbstractExam exam = (AbstractExam) session.getAttribute(CURRENT_EXAM_ATTRIBUTE);
@@ -108,7 +108,7 @@ public class ExamController {
         }
     }
 
-    @RequestMapping(value = "/finish-exam")
+    @RequestMapping(value = {"/finish-exam", "{langid}/finish-exam"})
     public String finishExam(HttpServletRequest request) {
         HttpSession session = GeneralUtility.getSession(true);
         TestExam exam = (TestExam) session.getAttribute(CURRENT_EXAM_ATTRIBUTE);
@@ -117,7 +117,7 @@ public class ExamController {
         return SHOW_TEST_RESULT;
     }
 
-    @RequestMapping(value = "/add-person-answer")
+    @RequestMapping(value = {"/add-person-answer", "{langid}/add-person-answer"})
     public String addPersonAnswer(HttpServletRequest request) {
         String testPath = request.getParameter(TEST_PATH);
         HttpSession session = request.getSession();

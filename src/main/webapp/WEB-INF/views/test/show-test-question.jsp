@@ -13,8 +13,10 @@
     <title>${TESTS[param.TEST_PATH].name}&nbsp;<spring:message code="tests"/></title>
     <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     <link rel="canonical" href="<ca:examCanonicalTag/>">
+    <meta name="robots" content="noindex, follow">
 </jsp:attribute>
 <jsp:body>
+    <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
      <div class="breadCrumbs">
        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
            <%@ include file="/WEB-INF/breadCrumbs/homeBreadCrumb.jsp"%>
@@ -39,7 +41,7 @@
           </h2>
           <div class="questionEntryNumber" id="questionEntryNumber"><exam:number/>/<exam:size/></div>
         </div>
-        <form ACTION="${pageContext.request.contextPath}/add-person-answer?TEST_PATH=${param.TEST_PATH}"
+        <form ACTION="${pageContext.request.contextPath}/${pathLanguage}add-person-answer?TEST_PATH=${param.TEST_PATH}"
               method="POST">
          <div class="questionEntryDiv">
            <div class="questionText"><exam:number/>&nbsp;${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.question.text}</div>
@@ -59,7 +61,7 @@
               <input type="submit" value="<spring:message code="answer"/>" name="answerBtn" class="styled-button">
              </div>
              <div class="finish-exam-button col-xs-6">
-               <a href="${pageContext.request.contextPath}/finish-exam" name="finishBtn"><spring:message code="finish"/></a>
+               <a href="${pageContext.request.contextPath}/${pathLanguage}/finish-exam" name="finishBtn"><spring:message code="finish"/></a>
              </div>
            </div>
          </div>
@@ -67,14 +69,14 @@
          <div style="margin-top:50px" class="row">
            <div class="previous-exam-button col-xs-6 col-lg-2">
              <exam:previousButton>
-               <a href="${pageContext.request.contextPath}/show-exam-question?TEST_PATH=${param.TEST_PATH}&QUESTION_NUMBER=<exam:number/>&PREVIOUS=PREVIOUS" class="previousHref">
+               <a href="${pageContext.request.contextPath}/${pathLanguage}show-exam-question?TEST_PATH=${param.TEST_PATH}&QUESTION_NUMBER=<exam:number/>&PREVIOUS=PREVIOUS" class="previousHref">
                  <spring:message code="previous"/>
                </a>
               </exam:previousButton>
             </div>
             <div class="next-exam-button col-xs-6 col-lg-2 col-lg-push-8">
               <exam:nextButton>
-                  <a href="${pageContext.request.contextPath}/show-exam-question?TEST_PATH=${param.TEST_PATH}&QUESTION_NUMBER=<exam:number/>&NEXT=NEXT" class="nextHref">
+                  <a href="${pageContext.request.contextPath}/${pathLanguage}show-exam-question?TEST_PATH=${param.TEST_PATH}&QUESTION_NUMBER=<exam:number/>&NEXT=NEXT" class="nextHref">
                     <spring:message code="next"/>
                   </a>
               </exam:nextButton>
@@ -98,7 +100,7 @@
                 <c:forEach var="number"  begin="${start}" end="${end}">
                 <li
                    <c:if test="${number==CURRENT_EXAM_ATTRIBUTE.currentNumber+1}">class="selected" </c:if>
-                      ><a href="${pageContext.request.contextPath}/show-exam-question?TEST_PATH=${param.TEST_PATH}&QUESTION_NUMBER=${number-1}">
+                      ><a href="${pageContext.request.contextPath}/${pathLanguage}show-exam-question?TEST_PATH=${param.TEST_PATH}&QUESTION_NUMBER=${number-1}">
                           ${number}</a>
                    <c:if test="${CURRENT_EXAM_ATTRIBUTE.questionEntries[number-1].answered}">
                    &#10004;

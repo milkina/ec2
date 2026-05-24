@@ -180,7 +180,7 @@
                                          <li><a href="${pageContext.request.contextPath}/see-questions/${param.TEST_PATH}/${param.CATEGORY_PATH}" id="startQuiz"><span class="ic">?</span><spring:message code="questions"/></a></li>
                                      </c:if>
                                      <c:if test="${isTests}">
-                                             <li><a href="${pageContext.request.contextPath}/start-test/${param.TEST_PATH}/${param.CATEGORY_PATH}" id="startTest"><span class="ic">📝</span><spring:message code="tests"/></a></li>
+                                             <li><a href="${pageContext.request.contextPath}/${pathLanguage}start-test/${param.TEST_PATH}/${param.CATEGORY_PATH}" id="startTest"><span class="ic">📝</span><spring:message code="tests"/></a></li>
                                      </c:if>
                                      <c:if test="${isVideo}">
                                             <li><a href="${CATEGORY_ATTRIBUTE.videoPath}" target="_blank" rel="noopener noreferrer"><span class="ic">▶</span><spring:message code="video.lesson"/></a></li>
