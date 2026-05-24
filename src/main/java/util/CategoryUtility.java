@@ -196,7 +196,7 @@ public class CategoryUtility extends SpringUtility {
         }
     }
 
-    private static void updateHrefLanguage(String version, Language language, ServletContext servletContext, String originalPage) {
+    static void updateHrefLanguage(String version, Language language, ServletContext servletContext, String originalPage) {
         Map<LanguageCode, Map<String, String>> map = (Map<LanguageCode, Map<String, String>>) servletContext.getAttribute(ALL_OTHER_LANGUAGES_URLS);
         Map<String, String> m = map.get(language.getCode());
         if (m != null) {
@@ -204,7 +204,7 @@ public class CategoryUtility extends SpringUtility {
         }
     }
 
-    private static void removeHrefLanguage(Language language, ServletContext servletContext, String originalPage) {
+    static void removeHrefLanguage(Language language, ServletContext servletContext, String originalPage) {
         Map<LanguageCode, Map<String, String>> map = (Map<LanguageCode, Map<String, String>>) servletContext.getAttribute(ALL_OTHER_LANGUAGES_URLS);
         Map<String, String> m = map.get(language.getCode());
         if (m != null) {

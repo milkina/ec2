@@ -170,7 +170,38 @@ public class TestUtility extends SpringUtility {
         ServletContext servletContext = request.getServletContext();
         int testId = test.getId();
 
-        CategoryUtility.setCanonicalUrl(canonicalUrls, ruVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.ru.name()), testId, servletContext, originalPage);
-        CategoryUtility.setCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), testId, servletContext, originalPage);
+        setTestCanonicalUrl(canonicalUrls, ruVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.ru.name()), testId, servletContext, originalPage);
+        setTestCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), testId, servletContext, originalPage);
+    }
+
+    private static void setTestCanonicalUrl(Map<Integer, OtherLanguage> canonicalUrls,
+                                             String version,
+                                             Language language,
+                                             int testId,
+                                             ServletContext servletContext,
+                                             String originalPage) {
+        OtherLanguage otherLanguage = canonicalUrls.get(language.getId());
+        if (otherLanguage == null) {
+            if (version != null && !version.isEmpty()) {
+                otherLanguage = new OtherLanguage();
+                otherLanguage.setLanguage(language);
+                otherLanguage.setTestId(testId);
+                otherLanguage.setOriginal(originalPage);
+                otherLanguage.setUrl(version);
+                otherLanguage = SpringUtility.getCanonicalUrlService(servletContext).createOtherLanguages(otherLanguage);
+                canonicalUrls.put(language.getId(), otherLanguage);
+                CategoryUtility.updateHrefLanguage(version, language, servletContext, originalPage);
+            }
+        } else {
+            if (version != null && !version.isEmpty()) {
+                otherLanguage.setUrl(version);
+                otherLanguage = SpringUtility.getCanonicalUrlService(servletContext).createOtherLanguages(otherLanguage);
+                CategoryUtility.updateHrefLanguage(version, language, servletContext, originalPage);
+            } else {
+                SpringUtility.getCanonicalUrlService(servletContext).deleteOtherLanguage(otherLanguage);
+                canonicalUrls.remove(language.getId());
+                CategoryUtility.removeHrefLanguage(language, servletContext, originalPage);
+            }
+        }
     }
 }

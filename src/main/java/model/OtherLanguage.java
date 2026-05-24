@@ -12,6 +12,8 @@ public class OtherLanguage {
 
     private int categoryId;
 
+    private Integer testId;
+
     @ManyToOne
     @JoinColumn(name = "language_id")
     private Language language;
@@ -34,6 +36,14 @@ public class OtherLanguage {
 
     public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public Integer getTestId() {
+        return testId;
+    }
+
+    public void setTestId(Integer testId) {
+        this.testId = testId;
     }
 
     public Language getLanguage() {
