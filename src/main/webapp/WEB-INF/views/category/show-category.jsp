@@ -3,6 +3,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
@@ -53,6 +54,33 @@
     </script>
     </jsp:attribute>
     <jsp:body>
+      <!-- Mobile sticky context bar -->
+      <c:set var="stickyModuleName" value=""/>
+      <c:set var="stickyLessonNum" value="0"/>
+      <c:set var="stickyLessonTotal" value="0"/>
+      <c:forEach var="cat" items="${TESTS[param.TEST_PATH].categories}">
+        <c:if test="${cat.value.hidden==false && cat.value.parentCategory==null && cat.value.subCategories.contains(CATEGORY_ATTRIBUTE)}">
+          <c:set var="stickyModuleName" value="${cat.value.roadMapName!=null && not empty cat.value.roadMapName ? cat.value.roadMapName : cat.value.name}"/>
+          <c:set var="idx" value="0"/>
+          <c:forEach var="sub" items="${cat.value.subCategories}">
+            <c:if test="${sub.hidden==false}">
+              <c:set var="idx" value="${idx + 1}"/>
+              <c:if test="${sub.equals(CATEGORY_ATTRIBUTE)}"><c:set var="stickyLessonNum" value="${idx}"/></c:if>
+            </c:if>
+          </c:forEach>
+          <c:set var="stickyLessonTotal" value="${idx}"/>
+        </c:if>
+      </c:forEach>
+      <c:set var="stickyPct" value="${stickyLessonTotal > 0 ? (stickyLessonNum * 100 / stickyLessonTotal) : 0}"/>
+      <div class="mobile-sticky-bar">
+        <div class="msb-text">
+          <span class="msb-module">${stickyModuleName}</span>
+          <span class="msb-sep">·</span>
+          <span class="msb-lesson"><spring:message code="lesson"/>&nbsp;${stickyLessonNum}/${stickyLessonTotal}</span>
+        </div>
+        <span class="msb-pct"><fmt:formatNumber value="${stickyPct}" maxFractionDigits="0"/>%</span>
+        <div class="msb-progress"><span style="width:${stickyPct}%"></span></div>
+      </div>
       <main class="lesson-bg">
         <div class="container lesson-grid">
            <!-- ===== LEFT: sticky course outline ===== -->
@@ -85,9 +113,14 @@
                        </c:if>
                      </c:forEach>
                     </div>
+                    <script>document.addEventListener('DOMContentLoaded',function(){var a=document.querySelector('.lesson-outline .is-active-summary');if(a){a.scrollIntoView({block:'center',behavior:'instant'});}});</script>
                  </aside>
                  <!-- ===== CENTER: lesson content ===== -->
                        <section class="lesson-main">
+                         <button class="outline-drawer-toggle" aria-expanded="false" onclick="document.querySelector('.outline-drawer').classList.add('is-open');document.querySelector('.outline-drawer-backdrop').classList.add('is-open');this.setAttribute('aria-expanded','true');">
+                           <span class="odt-icon">☰</span> <spring:message code="course.content"/>
+                           <span class="odt-chev">▾</span>
+                         </button>
                          <jsp:include page="/WEB-INF/breadCrumbs/breadCrumbs3.jsp"/>
 
                          <div class="lesson-meta">
@@ -185,6 +218,52 @@
         -->
          </div>
       </main>
+      <!-- Mobile outline drawer -->
+      <div class="outline-drawer-backdrop" onclick="document.querySelector('.outline-drawer').classList.remove('is-open');this.classList.remove('is-open');document.querySelector('.outline-drawer-toggle').setAttribute('aria-expanded','false');"></div>
+      <div class="outline-drawer">
+        <div class="outline-drawer-handle"></div>
+        <p class="lesson-outline-eyebrow">${TESTS[param.TEST_PATH].name}</p>
+        <c:set var="catStatus2" value="1" />
+        <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
+          <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
+            <c:set var="isOpen2" value="${category.value.subCategories.contains(CATEGORY_ATTRIBUTE)}"/>
+            <details class="ol-module" ${isOpen2 ? 'open' : ''}>
+              <summary class="${isOpen2 ? 'is-active-summary' : ''}">
+                <span class="ol-num">${catStatus2}.</span>
+                <c:set var="catStatus2" value="${catStatus2 + 1}" />
+                <span class="ol-title">${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}</span>
+                <span class="ol-chev">›</span>
+              </summary>
+              <c:if test="${fn:length(category.value.subCategories)>0}">
+                <ul class="ol-lessons">
+                  <c:forEach var="subCategory" items="${category.value.subCategories}">
+                    <c:if test="${subCategory.hidden==false}">
+                      <c:set var="isActive2" value="${subCategory.equals(CATEGORY_ATTRIBUTE)}"/>
+                      <li><a class="${isActive2 ? 'is-active' : ''}" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${subCategory.pathName}">
+                        <span class="${isActive2 ? 'ol-dot active' : 'ol-dot'}"></span>${subCategory.name}</a></li>
+                    </c:if>
+                  </c:forEach>
+                </ul>
+              </c:if>
+            </details>
+          </c:if>
+        </c:forEach>
+      </div>
+      <!-- Mobile fixed bottom nav -->
+      <div class="mobile-bottom-nav">
+        <c:choose>
+          <c:when test="${PREVIOUS_CATEGORY!=null}">
+            <a class="mbn-btn mbn-prev" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">‹ <spring:message code="previous.lesson"/></a>
+          </c:when>
+          <c:otherwise><span class="mbn-btn mbn-prev mbn-disabled"></span></c:otherwise>
+        </c:choose>
+        <c:choose>
+          <c:when test="${NEXT_CATEGORY!=null}">
+            <a class="mbn-btn mbn-next" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}"><spring:message code="next.lesson"/> ›</a>
+          </c:when>
+          <c:otherwise><span class="mbn-btn mbn-next mbn-disabled"></span></c:otherwise>
+        </c:choose>
+      </div>
      <!-- <jsp:include page="/WEB-INF/comment/comments.jsp">
         <jsp:param name="referenceId" value="${CATEGORY_ATTRIBUTE.article.id}"/>
         <jsp:param name="commentType" value="ARTICLE"/>

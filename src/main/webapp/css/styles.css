@@ -1491,8 +1491,121 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 
 /* ---- Sticky left outline ---- */
 .lesson-outline { min-width: 0; }
+@media (max-width: 899px) {
+  .lesson-outline { display: none; }
+}
 @media (min-width: 900px) {
-  .lesson-outline { position: sticky; top: 1rem; align-self: start; max-height: calc(100vh - 2rem); overflow: auto; }
+  .lesson-outline { position: sticky; top: 4.5rem; align-self: start; max-height: calc(100vh - 5rem); overflow: auto; }
+  .outline-drawer-toggle { display: none !important; }
+}
+
+/* ---- Mobile outline drawer ---- */
+.outline-drawer-toggle {
+  display: flex; align-items: center; gap: .5rem;
+  width: 100%; padding: .75rem 1rem;
+  background: var(--card-bg, #fff); border: 1px solid var(--border);
+  border-radius: .75rem; cursor: pointer;
+  font-size: .88rem; font-weight: 700; color: var(--foreground);
+  margin-bottom: 1rem;
+}
+.outline-drawer-toggle .odt-icon { font-size: 1.1rem; }
+.outline-drawer-toggle .odt-chev { margin-left: auto; transition: transform .3s; }
+.outline-drawer-toggle[aria-expanded="true"] .odt-chev { transform: rotate(180deg); }
+
+.outline-drawer-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.45); z-index: 900;
+  animation: odFadeIn .2s;
+}
+.outline-drawer-backdrop.is-open { display: block; }
+
+.outline-drawer {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  max-height: 70vh; overflow-y: auto;
+  background: var(--card-bg, #fff);
+  border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: 0 -4px 24px rgba(0,0,0,.15);
+  z-index: 901;
+  transform: translateY(100%);
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
+  padding: 1.25rem 1rem 2rem;
+}
+.outline-drawer.is-open { transform: translateY(0); }
+.outline-drawer-handle {
+  width: 2.5rem; height: .25rem; border-radius: 9px;
+  background: var(--border); margin: 0 auto 1rem;
+}
+@keyframes odFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (min-width: 900px) {
+  .outline-drawer, .outline-drawer-backdrop { display: none !important; }
+}
+
+/* ---- Mobile sticky context bar ---- */
+.mobile-sticky-bar {
+  display: none; position: sticky; top: 4rem; z-index: 800;
+  background: var(--card-bg, #fff);
+  border-bottom: 1px solid var(--border);
+  padding: .5rem 1rem .45rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.mobile-sticky-bar .msb-text {
+  display: flex; align-items: center; gap: .35rem;
+  font-size: .82rem; font-weight: 700;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  min-width: 0;
+}
+.mobile-sticky-bar .msb-module {
+  overflow: hidden; text-overflow: ellipsis; min-width: 0;
+}
+.mobile-sticky-bar .msb-sep { color: var(--muted-fg); flex-shrink: 0; }
+.mobile-sticky-bar .msb-lesson { color: var(--muted-fg); font-weight: 600; flex-shrink: 0; }
+.mobile-sticky-bar .msb-pct {
+  position: absolute; right: 1rem; top: .5rem;
+  font-size: .82rem; font-weight: 800; color: var(--success, #16a34a);
+}
+.mobile-sticky-bar .msb-progress {
+  margin-top: .35rem; height: 3px; border-radius: 3px;
+  background: var(--muted);
+}
+.mobile-sticky-bar .msb-progress span {
+  display: block; height: 100%; border-radius: 3px;
+  background: var(--primary);
+  transition: width .3s;
+}
+@media (max-width: 899px) {
+  .mobile-sticky-bar { display: block; }
+}
+@media (min-width: 900px) {
+  .mobile-sticky-bar { display: none !important; }
+}
+
+/* ---- Mobile fixed bottom nav ---- */
+.mobile-bottom-nav {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 900;
+  background: var(--card-bg, #fff);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 8px rgba(0,0,0,.08);
+  padding: .55rem 1rem;
+  align-items: center; justify-content: space-between;
+}
+.mbn-btn {
+  display: inline-flex; align-items: center; gap: .25rem;
+  padding: .5rem .9rem; border-radius: .5rem;
+  font-size: .82rem; font-weight: 700; text-decoration: none;
+  transition: background .15s;
+}
+.mbn-prev { color: var(--foreground); background: var(--muted); }
+.mbn-prev:hover { background: var(--secondary); }
+.mbn-next { color: var(--primary-fg); background: var(--primary); }
+.mbn-next:hover { opacity: .9; }
+.mbn-disabled { visibility: hidden; }
+.mbn-pos { font-size: .78rem; font-weight: 700; color: var(--muted-fg); }
+@media (max-width: 899px) {
+  .mobile-bottom-nav { display: flex; }
+  .lesson-nav { display: none !important; }
+}
+@media (min-width: 900px) {
+  .mobile-bottom-nav { display: none !important; }
 }
 .lesson-outline-panel { padding: 1rem; }
 .lesson-outline-eyebrow {
@@ -1535,6 +1648,7 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 /* ---- Main lesson content ---- */
 .lesson-main { min-width: 0; }
 .lesson-main .crumbs { margin-bottom: 1rem; flex-wrap: wrap; }
+@media (max-width: 899px) { .crumb-home, .crumb-parent { display: none; } }
 
 .lesson-meta { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
 .meta-chip {
@@ -1592,7 +1706,7 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 /* ---- Right side panel ---- */
 .lesson-side { display: block; min-width: 0; }
 @media (min-width: 1180px) {
-  .lesson-side { position: sticky; top: 1rem; }
+  .lesson-side { position: sticky; top: 4.5rem; }
 }
 .lesson-side-panel { padding: 1.1rem; }
 .lesson-side-eyebrow {
@@ -1629,7 +1743,7 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
   font-family: var(--font-mono, ui-monospace, monospace);
   background: var(--muted); padding: .1rem .35rem; border-radius: 6px; font-size: .9em;
 }
-.lesson-div .language-java {
+.lesson-div .language-java, .lesson-div .language-markup {
   background: oklch(0.22 0.04 260); color: oklch(0.97 0.005 95);
   padding: 1.7rem 1rem 1.1rem; border-radius: 14px; overflow-x: auto;
   font-family: var(--font-mono, ui-monospace, monospace);
@@ -1668,7 +1782,7 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 }
 
 /* Code block style for <pre class="lesson-code"> */
-pre.lesson-code {
+pre.lesson-code, pre.language-markup {
   background: oklch(0.22 0.04 260); color: oklch(0.97 0.005 95);
   padding: 1rem 1.1rem; border-radius: 14px; overflow-x: auto;
   font-family: var(--font-mono, ui-monospace, monospace);
@@ -1677,6 +1791,7 @@ pre.lesson-code {
 /* Copy-to-clipboard button for code blocks (pre > code) */
 .lesson-div pre,
 pre.lesson-code,
+pre.language-markup,
 pre.has-copy { position: relative; }
 .copy-btn {
   position: absolute; top: .5rem; right: .5rem;

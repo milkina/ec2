@@ -5,8 +5,8 @@
 <%@ taglib uri="/WEB-INF/tld/testjsp-taglib.tld" prefix="test"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fun"%>
 <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
-    <span class="sep">/</span>
+    <a class="crumb-home" href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
+    <span class="sep crumb-home">/</span>
     <c:choose>
         <c:when test="${param.TEST_PATH.equals('java-core-russian')}">
             <c:set var="courseUrl" value="${pageContext.request.contextPath}/ru/java-core-russian"></c:set>
@@ -18,8 +18,8 @@
     <a href="${courseUrl}">${TESTS[param.TEST_PATH].name}</a>
      <c:set var="parentCategoryName" value="${CATEGORY_ATTRIBUTE.parentCategory!=null && CATEGORY_ATTRIBUTE.parentCategory.roadMapName!=null && not empty CATEGORY_ATTRIBUTE.parentCategory.roadMapName ? CATEGORY_ATTRIBUTE.parentCategory.roadMapName : CATEGORY_ATTRIBUTE.parentCategory.name}"></c:set>
     <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null}">
-        <span class="sep">/</span>
-        ${parentCategoryName}
+        <span class="sep crumb-parent">/
+        ${parentCategoryName}</span>
     </c:if>
     <span class="sep">/</span>
     <span class="here">${CATEGORY_ATTRIBUTE.roadMapName!=null && not empty CATEGORY_ATTRIBUTE.roadMapName ? CATEGORY_ATTRIBUTE.roadMapName : CATEGORY_ATTRIBUTE.name}</span>
