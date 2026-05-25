@@ -24,8 +24,9 @@ import static util.AllConstants.SITE_NAME;
  * Created by Tatyana on 07.02.2017.
  */
 public class SiteMapUtility {
-    public static final double NORM_PRIORITY = 0.5;
-    public static final double HIGH_PRIORITY = 0.8;
+    public static final double ARTICLE_PRIORITY = 0.7;
+    public static final double NORM_PRIORITY = 0.8;
+    public static final double HIGH_PRIORITY = 0.9;
     private UrlSet links;
     private Map<String, Category> duplicateCategories;
     private Map<String, Test> testMap;
@@ -65,7 +66,7 @@ public class SiteMapUtility {
     private void setArticleLinks() {
         for (Article article : articles) {
             if (article.isIndexStatus()) {
-                double priority = NORM_PRIORITY;
+                double priority = ARTICLE_PRIORITY;
                 if (article.getUrl().trim().isEmpty()) {
                     priority = 1;
                 }
