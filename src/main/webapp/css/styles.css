@@ -1743,11 +1743,6 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
   font-family: var(--font-mono, ui-monospace, monospace);
   background: var(--muted); padding: .1rem .35rem; border-radius: 6px; font-size: .9em;
 }
-.lesson-div .language-java, .lesson-div .language-markup, .article-body .language-java, .article-body .language-markup{
-  padding: 1.7rem 1rem 1.1rem; border-radius: 14px; overflow-x: auto;
-  font-family: var(--font-mono, ui-monospace, monospace);
-  font-size: .88rem; line-height: 1.55;
-}
 .lesson-div .lesson-list-bullets { margin: 0 0 1rem 1.25rem; padding: 0; line-height: 1.7; }
 .lesson-div .lesson-list-bullets li { margin-bottom: .35rem; }
 .lesson-div a, .article-body a {

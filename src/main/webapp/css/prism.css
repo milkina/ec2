@@ -6,6 +6,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
+ padding: 1.7rem 1rem 1.1rem; border-radius: 14px;
 	color: #ccc;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
