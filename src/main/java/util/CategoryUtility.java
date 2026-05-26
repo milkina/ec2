@@ -10,12 +10,7 @@ import util.article.ArticleUtility;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Predicate;
 
 import static util.AllConstantsAttribute.*;
@@ -58,8 +53,9 @@ public class CategoryUtility extends SpringUtility {
 
     /**
      * Builds an immutable ordered List&lt;Category&gt; per testPath from the cached test map,
-     * so request handlers can read the list without rebuilding it on every call. The order
-     * matches the iteration order of {@link Test#getCategories()} (insertion order from JPA).
+     * so request handlers can read the list without rebuilding it on every call.
+     * Categories are sorted by: 1) parent category (modules before their children),
+     * 2) within the same parent, by orderId, then id.
      */
     public static Map<String, List<Category>> buildCategoryLists(Map<String, Test> testMap) {
         if (testMap == null) {
@@ -72,10 +68,14 @@ public class CategoryUtility extends SpringUtility {
                 continue;
             }
             Map<String, Category> categories = test.getCategories();
-            List<Category> list = categories == null
-                    ? Collections.<Category>emptyList()
-                    : Collections.unmodifiableList(new ArrayList<>(categories.values()));
-            result.put(e.getKey(), list);
+            if (categories == null) {
+                result.put(e.getKey(), Collections.emptyList());
+                continue;
+            }
+            // Use List with explicit sorting for hierarchical sorting
+            List<Category> sortedList = new ArrayList<>(categories.values());
+            sortedList.sort(new CategoryComparator());
+            result.put(e.getKey(), Collections.unmodifiableList(sortedList));
         }
         return Collections.unmodifiableMap(result);
     }
