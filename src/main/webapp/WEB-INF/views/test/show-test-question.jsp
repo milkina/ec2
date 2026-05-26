@@ -59,7 +59,7 @@
               <input type="submit" value="<spring:message code="answer"/>" name="answerBtn" class="styled-button">
              </div>
              <div class="finish-exam-button col-xs-6">
-               <a href="${pageContext.request.contextPath}/${pathLanguage}/finish-exam" name="finishBtn"><spring:message code="finish"/></a>
+               <a href="${pageContext.request.contextPath}/${pathLanguage}finish-exam" name="finishBtn"><spring:message code="finish"/></a>
              </div>
            </div>
          </div>
