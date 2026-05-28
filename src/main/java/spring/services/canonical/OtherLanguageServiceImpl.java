@@ -33,7 +33,8 @@ public class OtherLanguageServiceImpl implements OtherLanguageService {
                         o -> o.getLanguage().getCode(),
                         Collectors.toMap(
                                 OtherLanguage::getOriginal,                                // Ключи для вложенного Map
-                                OtherLanguage::getUrl                          // Значения для вложенного Map
+                                OtherLanguage::getUrl,                                   // Значения для вложенного Map
+                                (existing, replacement) -> existing != null && !existing.isEmpty() ? existing : replacement  // Merge function: keep non-null/non-empty existing value
                         )
                 ));
 
