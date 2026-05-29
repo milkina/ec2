@@ -375,6 +375,10 @@
         <to type="permanent-redirect">/java/java-core/$1</to>
     </rule>
     <rule>
+        <from>^/java/java-core-russian/(.*)$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/$1</to>
+    </rule>
+    <rule>
         <from>^/java/(.*)/(.*)$</from>
         <to type="passthrough">/show-category?CATEGORY_PATH=$2&amp;TEST_PATH=$1</to>
     </rule>
