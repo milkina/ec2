@@ -23,6 +23,10 @@
     <meta name="description" content="${CATEGORY_ATTRIBUTE.article.description}">
     <%@ include file="/edit/categoryOL.jsp"%>
     <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
+    <c:set var="origUri" value="${requestScope['javax.servlet.forward.request_uri'] != null ? requestScope['javax.servlet.forward.request_uri'] : pageContext.request.requestURI}"/>
+    <c:if test="${TESTS[param.TEST_PATH].language.code=='ru' && !fn:contains(origUri, '/ru/')}">
+        <meta name="robots" content="noindex, follow">
+    </c:if>
     <c:set var="canonicalUrl" value="https://www.examclouds.com/${pathLanguage}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}"/>
     <link rel="canonical" href="${canonicalUrl}">
     <c:set var="currentLang" value="${TESTS[param.TEST_PATH].language.code}"/>

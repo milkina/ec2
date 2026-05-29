@@ -38,22 +38,37 @@ public class MenuUtility {
         String contextPath = request.getServletContext().getContextPath();
         String localAddress = createUrl(request, LanguageCode.ru);
 
+        // If no translation exists, fall back to Russian homepage
+        if (localAddress.isEmpty()) {
+            return contextPath + "/ru/";
+        }
         return contextPath + "/ru" + localAddress;
     }
 
     public static String createUrl(HttpServletRequest request, LanguageCode languageCode) {
-        String localAddress = new UrlPathHelper().getOriginatingRequestUri(request);
+        String originalUri = new UrlPathHelper().getOriginatingRequestUri(request);
         String contextPath = request.getServletContext().getContextPath();
 
-        localAddress = localAddress.replaceAll(contextPath, "");
+        String localAddress = originalUri.replaceAll(contextPath, "");
         localAddress = localAddress.replaceAll("/ru", "");
-        return getHrefLangUrl(request, localAddress, languageCode);
+
+        // If no translation exists, return empty string to indicate homepage fallback
+        if (!hasHrefLangUrl(request, localAddress, languageCode)) {
+            return "";
+        }
+
+        String translatedUrl = getHrefLangUrl(request, localAddress, languageCode);
+        return translatedUrl;
     }
 
     public static String createEnUrl(HttpServletRequest request) {
-        String localAddress = createUrl(request, LanguageCode.en);
         String contextPath = request.getServletContext().getContextPath();
+        String localAddress = createUrl(request, LanguageCode.en);
 
+        // If no translation exists, fall back to English homepage
+        if (localAddress.isEmpty()) {
+            return contextPath + "/";
+        }
         return contextPath + localAddress;
     }
 }
