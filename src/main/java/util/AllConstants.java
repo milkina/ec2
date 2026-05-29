@@ -52,5 +52,6 @@ public interface AllConstants {
     String SHOW_TEST_RESULT = "test/show-test-result";
     String ARTICLES = "ARTICLES";
     String CHANGE_PASSWORD_PAGE = "person/change-password";
-    String VIDEO_LIST = "video-java-uroki";
+    String VIDEO_LESSONS_PAGE_RU = "video-java-uroki";
+    String VIDEO_LESSONS_PAGE_EN = "video-lessons";
 }

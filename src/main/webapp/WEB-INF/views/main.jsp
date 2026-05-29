@@ -201,7 +201,7 @@
                         </c:if>
                       </c:forEach>
                     </ol>
-          <a class="see-all" href="#courses">See all 50+ lessons →</a>
+          <a class="see-all" href="${pageContext.request.contextPath}/java-core">See all 50+ lessons →</a>
         </div>
       </div>
     </section>

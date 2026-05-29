@@ -22,6 +22,7 @@ import util.article.ArticleUtility;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
@@ -60,13 +61,44 @@ public class CourseController {
         return TASKS_PAGE;
     }
 
-    @RequestMapping(value = {"/practical-java-tasks","/ru/practical-java-tasks"})
+    @RequestMapping(value = {"/practical-java-tasks", "/ru/practical-java-tasks"})
     public String showTasksEn() {
         return TASKS_PAGE_EN;
     }
+
+    @RequestMapping(value = {"/video-lessons", "ru/video-lessons"})
+    public ModelAndView showVideo(HttpServletRequest request) {
+        return getVideoContent(request, "java-core", VIDEO_LESSONS_PAGE_EN);
+    }
+
     @RequestMapping(value = {"/video-java-uroki", "ru/video-java-uroki"})
-    public String showVideo() {
-        return VIDEO_LIST;
+    public ModelAndView showVideoRu(HttpServletRequest request) {
+        return getVideoContent(request, "java-core-russian", VIDEO_LESSONS_PAGE_RU);
+    }
+
+    private ModelAndView getVideoContent(HttpServletRequest request, String courseName, String page) {
+        Map<String, Test> testMap = (Map<String, Test>)
+                request.getServletContext().getAttribute(TESTS);
+        List<Category> categories = testMap.get(courseName).getCategories().values().stream()
+                .filter(category -> category.getParentCategory() == null)
+                .filter(category -> !category.getHidden())
+                .filter(category -> category.getSubCategories() != null && !category.getSubCategories().isEmpty())
+                .filter(category -> category.getSubCategories().stream()
+                        .anyMatch(subCategory -> !subCategory.getHidden() && subCategory.getVideoPath() != null && !subCategory.getVideoPath().isEmpty()))
+                .toList();
+
+        categories.forEach(category -> {
+            category.getSubCategories().removeIf(subCategory -> subCategory.getHidden() || subCategory.getVideoPath() == null || subCategory.getVideoPath().isEmpty());
+        });
+
+        int subcategoryCounts = categories.stream()
+                .mapToInt(category -> category.getSubCategories().size())
+                .sum();
+
+        ModelAndView modelAndView = new ModelAndView(page);
+        modelAndView.addObject("VIDEO_CATEGORIES", categories);
+        modelAndView.addObject("VIDEO_SUBCATEGORY_COUNTS", subcategoryCounts);
+        return modelAndView;
     }
 
     @RequestMapping(value = "/show-add-course")
