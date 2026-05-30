@@ -87,12 +87,11 @@ public class CourseController {
                         .anyMatch(subCategory -> !subCategory.getHidden() && subCategory.getVideoPath() != null && !subCategory.getVideoPath().isEmpty()))
                 .toList();
 
-        categories.forEach(category -> {
-            category.getSubCategories().removeIf(subCategory -> subCategory.getHidden() || subCategory.getVideoPath() == null || subCategory.getVideoPath().isEmpty());
-        });
-
-        int subcategoryCounts = categories.stream()
-                .mapToInt(category -> category.getSubCategories().size())
+        long subcategoryCounts = categories.stream()
+                .mapToLong(category -> category.getSubCategories()
+                        .stream()
+                        .filter(sub->sub.getVideoPath() != null && !sub.getVideoPath().isEmpty())
+                        .count())
                 .sum();
 
         ModelAndView modelAndView = new ModelAndView(page);

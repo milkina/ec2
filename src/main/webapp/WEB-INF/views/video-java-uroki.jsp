@@ -116,16 +116,23 @@
                     <c:set var="categoryNumber" value="${1}"/>
                         <c:forEach var="category" items="${VIDEO_CATEGORIES}">
                                 <details class="vid-section panel"${categoryNumber==1?"open":""}>
+                                <c:set var="subCategoryCount" value="${0}"/>
+                                                                <c:forEach var="subCategory" items="${category.subCategories}">
+                                                                    <c:if test="${subCategory.videoPath!=null && not empty subCategory.videoPath}">
+                                                                        <c:set var="subCategoryCount" value="${subCategoryCount+1}"/>
+                                                                    </c:if>
+                                                                </c:forEach>
                                     <summary>
                                         <span class="vid-sec-num">${categoryNumber}</span>
                                         <span class="vid-sec-title">${category.roadMapName!=null && not empty category.roadMapName?category.roadMapName:category.name}</span>
-                                        <span class="vid-sec-count">${category.subCategories.size()}&nbsp;<spring:message code="videos"/></span>
+                                        <span class="vid-sec-count">${subCategoryCount}&nbsp;<spring:message code="videos"/></span>
                                         <span class="vid-sec-chev">▾</span>
                                     </summary>
                                     <c:set var="categoryNumber" value="${categoryNumber+1}"/>
                                     <ul class="vid-list">
                                      <c:set var="subCategoryNumber" value="${1}"/>
                                         <c:forEach var="subCategory" items="${category.subCategories}">
+                                        <c:if test="${subCategory.videoPath!=null && not empty subCategory.videoPath}">
                                                 <li>
                                                     <span class="vid-li-thumb"></span>
                                                     <span class="vid-li-num">${subCategoryNumber}</span>
@@ -133,6 +140,7 @@
                                                     <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/${subCategory.pathName}" class="vid-li-title">${subCategory.roadMapName!=null && not empty subCategory.roadMapName?subCategory.roadMapName:subCategory.name}</a>
                                                     <a href="${subCategory.videoPath}" target="_blank" rel="noopener noreferrer" class="vid-li-open" aria-label="Смотреть на Youtube" title="Смотреть на Youtube">↗</a>
                                                 </li>
+                                        </c:if>
                                         </c:forEach>
                                     </ul>
                                 </details>
