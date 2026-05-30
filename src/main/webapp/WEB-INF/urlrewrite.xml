@@ -139,6 +139,10 @@
         <to type="permanent-redirect">/ru/java/java-core-russian/interfejsy-enum-i-oop-v-java-zadaniya</to>
     </rule>
     <rule>
+        <from>^/ru/java/java-core-russian/lesson11-tasks$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/wrappers-autoboxing-zadanija</to>
+    </rule>
+    <rule>
         <from>^/ru/java/java-core-russian/lesson12-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/java-strings-zadachi</to>
     </rule>
