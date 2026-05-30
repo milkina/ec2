@@ -147,7 +147,7 @@
                             <h2 class="side-h"><spring:message code="modules"/></h2>
                             <ul class="topic-list">
                               <c:forEach var="category" items="${VIDEO_CATEGORIES}">
-                                <li><a href="${pageContext.request.contextPath}/java/java-core/${category.pathName}"><span class="t-name">${category.roadMapName!=null && not empty category.roadMapName?category.roadMapName:category.name}</span><span class="t-count">${category.subCategories.size()}</span></a></li>
+                                <li><a href="${pageContext.request.contextPath}/java/java-core/${category.subCategories[0].pathName}"><span class="t-name">${category.roadMapName!=null && not empty category.roadMapName?category.roadMapName:category.name}</span><span class="t-count">${category.subCategories.size()}</span></a></li>
                                </c:forEach>
                             </ul>
                         </div>
