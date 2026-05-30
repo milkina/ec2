@@ -1,6 +1,6 @@
 <div id="collapse_${test.pathName}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_${test.pathName}">
    <div class="panel-body">
-     <form action="${pageContext.request.contextPath}/start-test/${test.pathName}"  method="post">
+     <form action="${pageContext.request.contextPath}/${pageLanguage}/start-test/${test.pathName}"  method="post">
        <select name="CATEGORY_PATH" id="CATEGORY_PATH_test_${test.pathName}" multiple="multiple"
         class="2col active" required>
           <c:set var="count" value="${1}"/>

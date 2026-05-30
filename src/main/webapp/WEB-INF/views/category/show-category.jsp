@@ -7,7 +7,6 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css?v=2" />
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>

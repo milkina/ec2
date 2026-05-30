@@ -1,16 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<t:wrapper>
+<t:wrapper2>
     <jsp:attribute name="language"> lang="<spring:message code="lang"/>"</jsp:attribute>
     <jsp:attribute name="header">
         <title>ExamClouds</title>
-        <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tests">
-        <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tests">
-        <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tests">
     </jsp:attribute>
     <jsp:body>
-        <div>Page is removed or does not exist.</div>
+      <main>
+        <div style="height:200px">Page is removed or does not exist.</div>
+      </main>
     </jsp:body>
-</t:wrapper>
+</t:wrapper2>
 

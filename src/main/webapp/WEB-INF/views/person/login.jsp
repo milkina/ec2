@@ -11,7 +11,7 @@
  </jsp:attribute>
  <jsp:body>
     <h1><spring:message code="log.in"/></h1>
-     <form ACTION="${pageContext.request.contextPath}/login" METHOD="POST" id="LoginForm" class="inlineForm">
+     <form action="${pageContext.request.contextPath}/login" METHOD="POST" id="LoginForm" class="inlineForm">
         <section class="container">
             <div class="login">
                 <p><input type="text" name="login" value="${person.login}" placeholder="Login"></p>
