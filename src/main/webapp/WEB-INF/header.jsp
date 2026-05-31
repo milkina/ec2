@@ -108,6 +108,9 @@
       <c:if test="${pageLanguage=='ru'}">
          <a href="${pageContext.request.contextPath}/ru/video-java-uroki"><i class="fas fa-play-circle"></i> <spring:message code="video.uroki"/></a>
       </c:if>
+      <c:if test="${pageLanguage=='en'}">
+                  <a href="${pageContext.request.contextPath}/video-lessons"><i class="fas fa-play-circle"></i> <spring:message code="video.uroki"/></a>
+             </c:if>
       <a href="<menu:articlesTag/>" data-nav="articles"><spring:message code="articles"/></a>
 
       <c:choose>
