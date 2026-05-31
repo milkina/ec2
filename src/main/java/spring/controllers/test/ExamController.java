@@ -117,6 +117,35 @@ public class ExamController {
         return SHOW_TEST_RESULT;
     }
 
+    @RequestMapping(value = {"/retake-test", "{langid}/retake-test"})
+    public String retakeTest(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        TestExam oldExam = (TestExam) session.getAttribute(CURRENT_EXAM_ATTRIBUTE);
+        Person person = (Person) session.getAttribute(PERSON_ATTRIBUTE);
+        String testPath = request.getParameter(TEST_PATH);
+
+        List<AbstractQuestionEntry> questionEntries = oldExam.getQuestionEntries();
+        for (AbstractQuestionEntry entry : questionEntries) {
+            TestQuestionEntry testEntry = (TestQuestionEntry) entry;
+            testEntry.setAnswered(false);
+            testEntry.setUserAnswers(null);
+            testEntry.setCorrectAnswered(null);
+        }
+
+        TestExam newExam = new TestExam();
+        newExam.setPerson(person);
+        newExam.setQuestionEntries(questionEntries);
+        newExam.setCurrentNumber(0);
+        newExam.setCategories(oldExam.getCategories());
+        newExam.setCurrentQuestionEntry(questionEntries.get(0));
+        newExam.setAmount(questionEntries.size());
+        session.setAttribute(CURRENT_EXAM_ATTRIBUTE, newExam);
+        String urlPattern = "forward:%s?%s=%s&%s=%s";
+        return String.format(urlPattern, SHOW_EXAM_QUESTION,
+                TEST_PATH, testPath,
+                QUESTION_NUMBER, 0);
+    }
+
     @RequestMapping(value = {"/add-person-answer", "{langid}/add-person-answer"})
     public String addPersonAnswer(HttpServletRequest request) {
         String testPath = request.getParameter(TEST_PATH);

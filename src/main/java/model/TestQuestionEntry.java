@@ -55,6 +55,10 @@ public class TestQuestionEntry extends AbstractQuestionEntry implements Serializ
         setAnswers(set);
     }
 
+    public void setCorrectAnswered(Boolean correctAnswered) {
+        this.correctAnswered = correctAnswered;
+    }
+
     public boolean isCorrectAnswered() {
         if (correctAnswered == null) {
             correctAnswered = true;
