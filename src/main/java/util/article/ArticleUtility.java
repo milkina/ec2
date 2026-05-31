@@ -86,7 +86,7 @@ public class ArticleUtility extends SpringUtility {
         String keywords = decodeRussianCharacters(
                 request.getParameter(ARTICLE_KEYWORDS));
         String title = decodeRussianCharacters(request.getParameter(TITLE));
-        String tag = request.getParameter(ARTICLE_TAG);
+        String tag = decodeRussianCharacters(request.getParameter(ARTICLE_TAG));
         String minRead = request.getParameter(ARTICLE_MIN_READ);
         String index = request.getParameter(ARTICLE_INDEX);
         String languageCode = request.getParameter(LANGUAGE);
