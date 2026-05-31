@@ -15,14 +15,6 @@
     <jsp:body>
         <main class="quiz-bg">
             <div class="container quiz-wrap">
-                <!-- Breadcrumb -->
-                <!--  <nav class="quiz-crumbs" aria-label="Breadcrumb">
-                    <a href="course.html">Java Programming</a>
-                    <span class="sep">/</span>
-                    <a href="course.html">Introduction to Java</a>
-                    <span class="sep">/</span>
-                    <span class="current">Results</span>
-                  </nav>-->
                 <!-- Summary card -->
                 <section class="quiz-card results-card">
                     <header class="results-head">
@@ -113,22 +105,22 @@
                 </section>
                 <c:if test="${pageLanguage=='ru' && percent<70}">
                 <!-- Udemy RU promo banner (failed test) -->
-                <section class="udemy-banner" style="margin-top:32px;margin-bottom:32px;border-radius:16px;background:linear-gradient(135deg,#4a1a8a 0%,#8b2fc9 50%,#d94f8c 100%);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;color:#fff;">
+                <section class="udemy-banner udemy-banner--fail">
                     <div>
-                        <p style="margin:0 0 4px;font-size:0.85em;opacity:0.9;">💡 Есть пробелы в знаниях?</p>
-                        <h3 style="margin:0 0 8px;font-size:1.4em;font-weight:700;">Пройдите полный курс</h3>
-                        <p style="margin:0 0 12px;opacity:0.9;">С нуля до уверенного Java-разработчика — на русском языке.</p>
-                        <p style="margin:0;font-size:0.85em;opacity:0.85;">
+                        <p class="udemy-banner__eyebrow">💡 Есть пробелы в знаниях?</p>
+                        <h3 class="udemy-banner__title">Пройдите полный курс</h3>
+                        <p class="udemy-banner__desc">С нуля до уверенного Java-разработчика — на русском языке.</p>
+                        <p class="udemy-banner__features">
                             ⭐ 4.8 рейтинг &nbsp;&nbsp; 🎓 Сертификат &nbsp;&nbsp; ♾️ Пожизненный доступ
                         </p>
                     </div>
-                    <div style="text-align:center;">
-                        <p style="margin:0;font-size:0.8em;opacity:0.8;letter-spacing:1px;">Специальная цена</p>
-                        <p style="margin:4px 0;font-size:2em;font-weight:700;">&euro;12.99 <span style="font-size:0.5em;text-decoration:line-through;opacity:0.7;">&euro;59.99</span></p>
-                        <a href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-block;margin-top:8px;padding:10px 24px;background:#fff;color:#4a1a8a;font-weight:600;border-radius:8px;text-decoration:none;font-size:0.95em;">
+                    <div class="udemy-banner__price-wrap">
+                        <p class="udemy-banner__price-label">Специальная цена</p>
+                        <p class="udemy-banner__price">&euro;12.99 <span class="udemy-banner__price-old">&euro;59.99</span></p>
+                        <a href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="noopener noreferrer sponsored" class="udemy-banner__cta">
                             Начать на Udemy &rarr;
                         </a>
-                        <p style="margin:8px 0 0;font-size:0.75em;opacity:0.7;">30-дневная гарантия возврата</p>
+                        <p class="udemy-banner__guarantee">30-дневная гарантия возврата</p>
                     </div>
                 </section>
                 </c:if>
@@ -170,7 +162,7 @@
                                 </c:if>
                                 <c:if test="${not isCorrect}">
                                     <span class="result-tag tag-wrong">
-                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                                         <spring:message code="wrong.answers"/>
                                     </span>
                                 </c:if>
@@ -273,22 +265,22 @@
 
                 <c:if test="${pageLanguage=='ru' && percent>=70}">
                 <!-- Udemy RU promo banner -->
-                <section class="udemy-banner" style="margin-top:32px;border-radius:16px;background:linear-gradient(135deg,#4a1a8a 0%,#8b2fc9 50%,#d94f8c 100%);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;color:#fff;">
+                <section class="udemy-banner">
                     <div>
-                        <p style="margin:0 0 4px;font-size:0.85em;opacity:0.9;">🎉 Отличный результат!</p>
-                        <h3 style="margin:0 0 8px;font-size:1.4em;font-weight:700;">Готовы идти дальше?</h3>
-                        <p style="margin:0 0 12px;opacity:0.9;">Углубите знания с полным курсом Java SE на русском языке.</p>
-                        <p style="margin:0;font-size:0.85em;opacity:0.85;">
+                        <p class="udemy-banner__eyebrow">🎉 Отличный результат!</p>
+                        <h3 class="udemy-banner__title">Готовы идти дальше?</h3>
+                        <p class="udemy-banner__desc">Углубите знания с полным курсом Java SE на русском языке.</p>
+                        <p class="udemy-banner__features">
                             ⭐ 4.8 рейтинг &nbsp;&nbsp; 🎓 Сертификат &nbsp;&nbsp; ♾️ Пожизненный доступ
                         </p>
                     </div>
-                    <div style="text-align:center;">
-                        <p style="margin:0;font-size:0.8em;opacity:0.8;letter-spacing:1px;">Специальная цена</p>
-                        <p style="margin:4px 0;font-size:2em;font-weight:700;">&euro;12.99 <span style="font-size:0.5em;text-decoration:line-through;opacity:0.7;">&euro;59.99</span></p>
-                        <a href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-block;margin-top:8px;padding:10px 24px;background:#fff;color:#4a1a8a;font-weight:600;border-radius:8px;text-decoration:none;font-size:0.95em;">
+                    <div class="udemy-banner__price-wrap">
+                        <p class="udemy-banner__price-label">Специальная цена</p>
+                        <p class="udemy-banner__price">&euro;12.99 <span class="udemy-banner__price-old">&euro;59.99</span></p>
+                        <a href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="noopener noreferrer sponsored" class="udemy-banner__cta">
                             Начать на Udemy &rarr;
                         </a>
-                        <p style="margin:8px 0 0;font-size:0.75em;opacity:0.7;">30-дневная гарантия возврата</p>
+                        <p class="udemy-banner__guarantee">30-дневная гарантия возврата</p>
                     </div>
                 </section>
                 </c:if>

@@ -251,3 +251,41 @@
   transform: translateY(-1px);
   border-color: var(--accent);
 }
+
+/* ===== Udemy Banner ===== */
+.udemy-banner {
+  margin-top: 32px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #4a1a8a 0%, #8b2fc9 50%, #d94f8c 100%);
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  color: #fff;
+}
+.udemy-banner--fail { margin-bottom: 32px; }
+
+.udemy-banner__eyebrow { margin: 0 0 4px; font-size: 0.85em; opacity: 0.9; }
+.udemy-banner__title { margin: 0 0 8px; font-size: 1.4em; font-weight: 700; }
+.udemy-banner__desc { margin: 0 0 12px; opacity: 0.9; }
+.udemy-banner__features { margin: 0; font-size: 0.85em; opacity: 0.85; }
+
+.udemy-banner__price-wrap { text-align: center; }
+.udemy-banner__price-label { margin: 0; font-size: 0.8em; opacity: 0.8; letter-spacing: 1px; }
+.udemy-banner__price { margin: 4px 0; font-size: 2em; font-weight: 700; }
+.udemy-banner__price-old { font-size: 0.5em; text-decoration: line-through; opacity: 0.7; }
+.udemy-banner__cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 24px;
+  background: #fff;
+  color: #4a1a8a;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+.udemy-banner__cta:hover { opacity: 0.9; }
+.udemy-banner__guarantee { margin: 8px 0 0; font-size: 0.75em; opacity: 0.7; }
