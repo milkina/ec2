@@ -134,10 +134,34 @@ public class ExamUtility extends SpringUtility {
     public static void setUserAnswer(HttpServletRequest request, TestQuestionEntry currentQuestionEntry) {
         int answerNumber = GeneralUtility.getIntegerValue(request, ANSWER_NUMBER);
         List<Answer> userAnswers = currentQuestionEntry.getUserAnswers();
-        for (int i = 0; i < answerNumber; i++) {
-            String checkbox = request.getParameter("checkbox" + i);
-            Answer answer = userAnswers.get(i);
-            answer.setCorrect(checkbox != null);
+        String isMulti = request.getParameter("isMulti");
+        boolean anySelected = false;
+        if ("true".equals(isMulti)) {
+            for (int i = 0; i < answerNumber; i++) {
+                if (request.getParameter("checkbox" + i) != null) {
+                    anySelected = true;
+                    break;
+                }
+            }
+        } else {
+            anySelected = request.getParameter("radioAnswer") != null;
+        }
+        if (!anySelected) {
+            return;
+        }
+        if ("true".equals(isMulti)) {
+            for (int i = 0; i < answerNumber; i++) {
+                String checkbox = request.getParameter("checkbox" + i);
+                Answer answer = userAnswers.get(i);
+                answer.setCorrect(checkbox != null);
+            }
+        } else {
+            String radioAnswer = request.getParameter("radioAnswer");
+            int selectedIndex = Integer.parseInt(radioAnswer);
+            for (int i = 0; i < answerNumber; i++) {
+                Answer answer = userAnswers.get(i);
+                answer.setCorrect(i == selectedIndex);
+            }
         }
         currentQuestionEntry.setAnswered(true);
     }

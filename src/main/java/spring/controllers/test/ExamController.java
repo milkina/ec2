@@ -1,20 +1,14 @@
 package spring.controllers.test;
 
-import model.AbstractExam;
-import model.AbstractQuestionEntry;
-import model.Category;
-import model.TestExam;
-import model.TestQuestionEntry;
+import model.*;
 import model.person.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.view.RedirectView;
 import spring.services.category.CategoryService;
 import spring.services.question.QuestionService;
-import util.CategoryUtility;
 import util.GeneralUtility;
 import util.exam.ExamUtility;
 
@@ -24,13 +18,8 @@ import java.util.List;
 import java.util.Locale;
 
 import static util.AllConstants.*;
-import static util.AllConstantsAttribute.CATEGORIES;
-import static util.AllConstantsAttribute.CURRENT_EXAM_ATTRIBUTE;
-import static util.AllConstantsAttribute.MESSAGE_ATTRIBUTE;
-import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
-import static util.AllConstantsParam.CATEGORY_PATH;
-import static util.AllConstantsParam.QUESTION_NUMBER;
-import static util.AllConstantsParam.TEST_PATH;
+import static util.AllConstantsAttribute.*;
+import static util.AllConstantsParam.*;
 
 /**
  * Created by Tatyana on 29.04.2016.
@@ -154,9 +143,20 @@ public class ExamController {
         TestQuestionEntry currentQuestionEntry = (TestQuestionEntry) exam.getCurrentQuestionEntry();
 
         ExamUtility.setUserAnswer(request, currentQuestionEntry);
+
+        if (request.getParameter("FINISH") != null) {
+            return "forward:/finish-exam";
+        }
+
         String url = String.format("/%s?%s=%s", SHOW_EXAM_QUESTION,
                 TEST_PATH, testPath);
-        if (exam.getCurrentNumber() != exam.getQuestionEntries().size() - 1) {
+        String questionNumber = request.getParameter(QUESTION_NUMBER);
+        if (questionNumber != null) {
+            url = url + "&" + QUESTION_NUMBER + "=" + questionNumber;
+        } else if (request.getParameter("PREVIOUS") != null) {
+            url = url + "&PREVIOUS=PREVIOUS";
+        } else if (request.getParameter("NEXT") != null
+                || exam.getCurrentNumber() != exam.getQuestionEntries().size() - 1) {
             url = url + "&NEXT=NEXT";
         }
         return "forward:" + url;
