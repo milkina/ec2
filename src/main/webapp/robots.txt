@@ -2,12 +2,17 @@ User-agent: *
 Disallow: /administration/
 Disallow: /edit/
 Disallow: /person/
+Disallow: /register
 Disallow: /change-course
 Disallow: /save-comment
 Disallow: /person/login.jsp
 Disallow: /show-login-page
 Disallow: /show-exam-question
 Disallow: /start-quiz
+Disallow: /start-test
+Disallow: /ru/start-test
+Disallow: /see-questions
+Disallow: /ru/see-questions
 Disallow: /finish-exam
 Disallow: /*?lang=
 Disallow: /cdn-cgi/
