@@ -35,11 +35,14 @@
   </div>
   <div class="questionEntryBody">
     <div class="questionText">${QUESTION_ENTRY_ATTRIBUTE.question.text}</div>
-    <a class="read-answer collapsed" role="button" data-toggle="collapse" id="a1"
-       href="#answer1" aria-expanded="false" aria-controls="answer1">
+    <spring:message code="read.answer" var="readAnswerMsg"/>
+    <spring:message code="hide.answer" var="hideAnswerMsg"/>
+    <a class="read-answer collapsed" role="button" id="a1"
+       href="javascript:void(0);" aria-expanded="false" aria-controls="answer1"
+       onclick="showAnswer(1,'${readAnswerMsg}','${hideAnswerMsg}'); this.classList.toggle('collapsed');">
       <spring:message code="read.answer"/>
     </a>
-    <div class="answer collapse" id="answer1">${QUESTION_ENTRY_ATTRIBUTE.answer.text}</div>
+    <div class="answer" id="answer1" style="display:none;">${QUESTION_ENTRY_ATTRIBUTE.answer.text}</div>
   </div>
   <a href="${pageContext.request.contextPath}/see-questions/${TEST_PATH}/${QUESTION_ENTRY_ATTRIBUTE.category.pathName}"
      id="seeOtherQuestions">

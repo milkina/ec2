@@ -40,11 +40,14 @@
        </div>
        <div class="questionEntryBody">
          <div class="questionText"><exam:number/>&nbsp;${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.question.text}</div>
-         <a class="read-answer collapsed" role="button" data-toggle="collapse" id="a1"
-          href="#answer1" aria-expanded="false" aria-controls="answer1">
+         <spring:message code="read.answer" var="readAnswerMsg"/>
+         <spring:message code="hide.answer" var="hideAnswerMsg"/>
+         <a class="read-answer collapsed" role="button" id="a1"
+          href="javascript:void(0);" aria-expanded="false" aria-controls="answer1"
+          onclick="showAnswer(1,'${readAnswerMsg}','${hideAnswerMsg}'); this.classList.toggle('collapsed');">
               <spring:message code="read.answer"/>
           </a>
-          <div class="answer collapse" id="answer1">${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.answer.text}</div>
+          <div class="answer" id="answer1" style="display:none;">${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.answer.text}</div>
        </div>
      </div>
      <div style="display:inline">

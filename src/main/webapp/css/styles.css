@@ -1558,6 +1558,17 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
   width: 2.5rem; height: .25rem; border-radius: 9px;
   background: var(--border); margin: 0 auto 1rem;
 }
+.outline-drawer-close {
+  position: absolute; top: .5rem; right: .5rem;
+  width: 2.25rem; height: 2.25rem; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--card-bg, #fff);
+  font-size: 1.5rem; line-height: 1; color: var(--foreground);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  padding: 0;
+}
+.outline-drawer-close:hover, .outline-drawer-close:focus {
+  background: var(--border); outline: none;
+}
 @keyframes odFadeIn { from { opacity: 0; } to { opacity: 1; } }
 @media (min-width: 900px) {
   .outline-drawer, .outline-drawer-backdrop { display: none !important; }

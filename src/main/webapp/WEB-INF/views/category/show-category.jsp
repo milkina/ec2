@@ -90,32 +90,7 @@
            <!-- ===== LEFT: sticky course outline ===== -->
                  <aside class="lesson-outline">
                    <div class="panel lesson-outline-panel">
-                     <p class="lesson-outline-eyebrow">${TESTS[param.TEST_PATH].name}</p>
-                     <c:set var="catStatus" value="1" />
-                     <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
-                       <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
-                           <c:set var="isOpen" value="${category.value.subCategories.contains(CATEGORY_ATTRIBUTE)}"/>
-                           <details class="ol-module" ${isOpen ? 'open' : ''}>
-                              <summary class="${isOpen ? 'is-active-summary' : ''}">
-                                <span class="ol-num">${catStatus}.</span>
-                                <c:set var="catStatus" value="${catStatus + 1}" />
-                                <span class="ol-title">${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}</span>
-                                <span class="ol-chev">›</span>
-                              </summary>
-                              <c:if test="${fn:length(category.value.subCategories)>0}">
-                                     <ul class="ol-lessons">
-                                     <c:forEach var="subCategory" items="${category.value.subCategories}">
-                                                         <c:if test="${subCategory.hidden==false}">
-                                                           <c:set var="isActive" value="${subCategory.equals(CATEGORY_ATTRIBUTE)}"/>
-                                                                <li><a class="${isActive ? 'is-active' : ''}" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${subCategory.pathName}">
-                                                                <span class="${isActive ? 'ol-dot active' : 'ol-dot'}"></span>${subCategory.name}</a></li>
-                                                         </c:if>
-                                                       </c:forEach>
-                                     </ul>
-                              </c:if>
-                           </details>
-                       </c:if>
-                     </c:forEach>
+                     <jsp:include page="/WEB-INF/views/category/_outline-modules.jsp"/>
                     </div>
                     <script>document.addEventListener('DOMContentLoaded',function(){var a=document.querySelector('.lesson-outline .is-active-summary');if(a){a.scrollIntoView({block:'center',behavior:'instant'});}});</script>
                  </aside>
@@ -158,12 +133,12 @@
                          </c:if>
                          <div class="lesson-nav">
                          <c:if test="${PREVIOUS_CATEGORY!=null}">
-                                        <a class="btn btn-secondary" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">
+                                        <a class="btn btn-secondary" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">
                                           ‹ <spring:message code="previous.lesson"/>
                                         </a>
                                       </c:if>
                            <c:if test="${NEXT_CATEGORY!=null}">
-                                         <a class="btn btn-primary" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}">
+                                         <a class="btn btn-primary" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}">
                                            <spring:message code="next.lesson"/> ›
                                          </a>
                                         </c:if>
@@ -182,10 +157,10 @@
                                  <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="for.this.lesson"/></p>
                                  <ul class="lesson-side-list">
                                      <c:if test="${isQuestions}">
-                                         <li><a href="${pageContext.request.contextPath}/see-questions/${param.TEST_PATH}/${param.CATEGORY_PATH}" id="startQuiz" rel="nofollow"><span class="ic">?</span><spring:message code="questions"/></a></li>
+                                         <li><a href="${pageContext.request.contextPath}/see-questions/${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}" id="startQuiz" rel="nofollow"><span class="ic">?</span><spring:message code="questions"/></a></li>
                                      </c:if>
                                      <c:if test="${isTests}">
-                                             <li><a href="${pageContext.request.contextPath}/${pathLanguage}start-test/${param.TEST_PATH}/${param.CATEGORY_PATH}" id="startTest" rel="nofollow"><span class="ic">📝</span><spring:message code="tests"/></a></li>
+                                             <li><a href="${pageContext.request.contextPath}/${pathLanguage}start-test/${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}" id="startTest" rel="nofollow"><span class="ic">📝</span><spring:message code="tests"/></a></li>
                                      </c:if>
                                      <c:if test="${isVideo}">
                                             <li><a href="${CATEGORY_ATTRIBUTE.videoPath}" target="_blank" rel="noopener noreferrer"><span class="ic">▶</span><spring:message code="video.lesson"/></a></li>
@@ -202,54 +177,41 @@
                                </div>
 
                                <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
-                               <c:if test="${pageLanguage=='ru'}">
+                               <c:if test="${currentLang=='ru'}">
                                      <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
                                </c:if>
                              </aside>
          </div>
       </main>
       <!-- Mobile outline drawer -->
-      <div class="outline-drawer-backdrop" onclick="document.querySelector('.outline-drawer').classList.remove('is-open');this.classList.remove('is-open');document.querySelector('.outline-drawer-toggle').setAttribute('aria-expanded','false');"></div>
-      <div class="outline-drawer">
+      <script>
+        function closeOutlineDrawer(){
+          var d=document.querySelector('.outline-drawer');
+          var b=document.querySelector('.outline-drawer-backdrop');
+          var t=document.querySelector('.outline-drawer-toggle');
+          if(d) d.classList.remove('is-open');
+          if(b) b.classList.remove('is-open');
+          if(t) t.setAttribute('aria-expanded','false');
+        }
+        document.addEventListener('keydown',function(e){if(e.key==='Escape') closeOutlineDrawer();});
+      </script>
+      <div class="outline-drawer-backdrop" onclick="closeOutlineDrawer();"></div>
+      <div class="outline-drawer" role="dialog" aria-modal="true" aria-label="<spring:message code='course.content'/>">
         <div class="outline-drawer-handle"></div>
-        <p class="lesson-outline-eyebrow">${TESTS[param.TEST_PATH].name}</p>
-        <c:set var="catStatus2" value="1" />
-        <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
-          <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
-            <c:set var="isOpen2" value="${category.value.subCategories.contains(CATEGORY_ATTRIBUTE)}"/>
-            <details class="ol-module" ${isOpen2 ? 'open' : ''}>
-              <summary class="${isOpen2 ? 'is-active-summary' : ''}">
-                <span class="ol-num">${catStatus2}.</span>
-                <c:set var="catStatus2" value="${catStatus2 + 1}" />
-                <span class="ol-title">${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}</span>
-                <span class="ol-chev">›</span>
-              </summary>
-              <c:if test="${fn:length(category.value.subCategories)>0}">
-                <ul class="ol-lessons">
-                  <c:forEach var="subCategory" items="${category.value.subCategories}">
-                    <c:if test="${subCategory.hidden==false}">
-                      <c:set var="isActive2" value="${subCategory.equals(CATEGORY_ATTRIBUTE)}"/>
-                      <li><a class="${isActive2 ? 'is-active' : ''}" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${subCategory.pathName}">
-                        <span class="${isActive2 ? 'ol-dot active' : 'ol-dot'}"></span>${subCategory.name}</a></li>
-                    </c:if>
-                  </c:forEach>
-                </ul>
-              </c:if>
-            </details>
-          </c:if>
-        </c:forEach>
+        <button type="button" class="outline-drawer-close" aria-label="<spring:message code='close'/>" onclick="closeOutlineDrawer();">&times;</button>
+        <jsp:include page="/WEB-INF/views/category/_outline-modules.jsp"/>
       </div>
       <!-- Mobile fixed bottom nav -->
       <div class="mobile-bottom-nav">
         <c:choose>
           <c:when test="${PREVIOUS_CATEGORY!=null}">
-            <a class="mbn-btn mbn-prev" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">‹ <spring:message code="previous.lesson"/></a>
+            <a class="mbn-btn mbn-prev" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">‹ <spring:message code="previous.lesson"/></a>
           </c:when>
           <c:otherwise><span class="mbn-btn mbn-prev mbn-disabled"></span></c:otherwise>
         </c:choose>
         <c:choose>
           <c:when test="${NEXT_CATEGORY!=null}">
-            <a class="mbn-btn mbn-next" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}"><spring:message code="next.lesson"/> ›</a>
+            <a class="mbn-btn mbn-next" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}"><spring:message code="next.lesson"/> ›</a>
           </c:when>
           <c:otherwise><span class="mbn-btn mbn-next mbn-disabled"></span></c:otherwise>
         </c:choose>
