@@ -9,10 +9,10 @@
     </div>
     <div class="lac-meta">
       <p class="lac-name"><spring:message code="tatyana.milkina"/></p>
-      <p class="lac-role">Senior Java Developer · ${currentLang=='ru' ? 'Преподаватель' : 'Instructor'}</p>
+      <p class="lac-role">Senior Java Developer &middot; <spring:message code="instructor"/></p>
     </div>
   </div>
-  <p class="lac-bio">${currentLang=='ru' ? '10 лет в корпоративной Java-разработке. Автор ExamClouds. Помогла 20k+ студентам начать карьеру разработчика.' : '10 years of enterprise Java. Founder of ExamClouds. Helped 20k+ students find their first developer job.'}</p>
+  <p class="lac-bio"><spring:message code="about.author"/></p>
   <div class="lac-actions">
     <a class="lac-btn lac-btn-primary" href="${pageContext.request.contextPath}/${pathLanguage}tatyana-milkina">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -20,8 +20,8 @@
     </a>
   </div>
   <div class="lac-stats">
-    <div><strong>20k+</strong><span>${currentLang=='ru' ? 'студентов' : 'students'}</span></div>
+    <div><strong>20k+</strong><span><spring:message code="students"/></span></div>
     <div><strong>200+</strong><span><spring:message code="lessons"/></span></div>
-    <div><strong>10 ${currentLang=='ru' ? 'лет' : 'yrs'}</strong><span>${currentLang=='ru' ? 'опыт Java' : 'in Java'}</span></div>
+    <div><strong>10 <spring:message code="yrs"/></strong><span><spring:message code="experience.java"/></span></div>
   </div>
 </div>

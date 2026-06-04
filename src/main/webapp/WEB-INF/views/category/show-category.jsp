@@ -202,7 +202,9 @@
                                </div>
 
                                <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
-                               <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
+                               <c:if test="${pageLanguage=='ru'}">
+                                     <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
+                               </c:if>
                              </aside>
          </div>
       </main>

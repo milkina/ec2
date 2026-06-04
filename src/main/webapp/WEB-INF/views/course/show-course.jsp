@@ -204,7 +204,9 @@
                     </div>
                     <div class="course-ux-side-rest">
                         <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
-                        <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
+                        <c:if test="${pageLanguage=='ru'}">
+                          <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
+                        </c:if>
                     </div>
                 </aside>
             </div>

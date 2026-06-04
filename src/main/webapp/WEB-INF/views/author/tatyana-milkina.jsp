@@ -13,12 +13,16 @@
      <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tatyana-milkina">
      <link rel="canonical" href="https://www.examclouds.com/tatyana-milkina">
      <meta property="og:title" content="Tatyana Milkina - Java developer and the author | ExamClouds">
-             <meta property="og:type" content="article">
+             <meta property="og:type" content="profile">
+             <meta property="og:locale" content="en_US">
+             <meta property="og:locale:alternate" content="ru_RU">
+             <meta property="profile:first_name" content="Tatyana">
+             <meta property="profile:last_name" content="Milkina">
+             <meta property="profile:username" content="tatyana-milkina">
+             <meta property="profile:gender" content="female">
              <meta property="og:description" content="Tatyana Milkina is a Java developer and the author of ExamClouds. Courses, hands-on practice, and Java training from scratch to a confident developer level.">
              <meta property="og:site_name" content="ExamClouds">
              <meta property="og:url" content="https://www.examclouds.com/tatyana-milkina">
-             <meta property="og:published_time" content="2026-22-04T12:00:00Z">
-             <meta property="og:modified_time" content="2026-22-04T12:00:00Z">
              <meta property="og:image" content="https://img.examclouds.com/general/tatyana-milkina-small.jpg">
              <meta property="og:image:alt" content="Tatyana Milkina - Java developer and the author | ExamClouds">
      <meta name="twitter:title" content="Tatyana Milkina - Java developer and the author | ExamClouds">
@@ -46,6 +50,12 @@
                           "position": 1,
                           "name": "<spring:message code="home"/>",
                           "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+                      },
+                      {
+                          "@type": "ListItem",
+                          "position": 2,
+                          "name": "About the author",
+                          "item": "https://www.examclouds.com/tatyana-milkina"
                       }
                   ]
               }</script>
@@ -111,8 +121,7 @@
 
 
         <!-- About / experience -->
-        <section class="quiz-card author-sectio
-        n">
+        <section class="quiz-card author-section">
           <h2 class="author-h2">A bit more about Tatyana</h2>
           <ul class="author-bullets">
             <li>
