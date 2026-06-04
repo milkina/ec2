@@ -202,6 +202,7 @@
                             </li>
                         </ul>
                     </div>
+                     <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
                 </aside>
             </div>
         </div>

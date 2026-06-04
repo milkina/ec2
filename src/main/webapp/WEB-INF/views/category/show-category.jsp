@@ -128,7 +128,8 @@
                          <jsp:include page="/WEB-INF/breadCrumbs/breadCrumbs3.jsp"/>
 
                          <div class="lesson-meta">
-                           <span class="meta-chip meta-chip-primary">⏱ 10–15 min</span>
+                           <span class="meta-chip meta-chip-primary">⏱ ${CATEGORY_ATTRIBUTE.article.minRead!=null && not empty CATEGORY_ATTRIBUTE.article.minRead?CATEGORY_ATTRIBUTE.article.minRead:"5"}&nbsp;<spring:message code="min.read"/>
+                                </span>
                           <!-- <span class="meta-chip">Beginner</span>
                            <span class="meta-chip meta-chip-success">✓ Lesson 2 of 5</span>-->
                          </div>
@@ -199,27 +200,9 @@
                                    <a href="#" aria-label="Copy link" onclick="navigator.clipboard.writeText('${canonicalUrl}');return false;">🔗</a>
                                  </div>
                                </div>
+
+                               <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
                              </aside>
-      <!--  <article>
-         <div class="category-article">
-            <div class="author-category">
-              <img src="https://img.examclouds.com/general/tatyana-milkina-small.jpg"
-                   alt="Tatyana Milkina"
-                   class="author-img-small"
-                   width="50"
-                   height="50"
-                   loading="lazy"/>
-              <div class="author-info">
-                <span class="author-label"><spring:message code="author"/>:</span>
-                <a href="${pageContext.request.contextPath}/${pathLanguage}tatyana-milkina"
-                   class="author-link">Tatyana Milkina</a>
-              </div>
-            </div>
-         </div>
-
-         </article>
-
-        -->
          </div>
       </main>
       <!-- Mobile outline drawer -->

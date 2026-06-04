@@ -4,7 +4,7 @@
 <t:wrapper2>
     <jsp:attribute name="language"> lang="<spring:message code="lang"/>"</jsp:attribute>
     <jsp:attribute name="header">
-        <title>ExamClouds</title>
+        <title>Not Found Error Page | ExamClouds</title>
     </jsp:attribute>
     <jsp:body>
       <main>

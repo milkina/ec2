@@ -78,7 +78,7 @@
                     </c:if>
                     <span class="article-readtime">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                      ${ARTICLE_ATTRIBUTE.minRead!=null?ARTICLE_ATTRIBUTE.minRead:"5"} <spring:message code="min.read"/>
+                      ${ARTICLE_ATTRIBUTE.minRead!=null && not empty ARTICLE_ATTRIBUTE.minRead?ARTICLE_ATTRIBUTE.minRead:"5"}&nbsp;<spring:message code="min.read"/>
                     </span>
             </div>
        <c:if test="${ARTICLE_ATTRIBUTE.image != null &&  not empty ARTICLE_ATTRIBUTE.image}">

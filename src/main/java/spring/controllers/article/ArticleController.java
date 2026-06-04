@@ -15,6 +15,7 @@ import util.article.ArticleUtility;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Locale;
+import java.util.logging.Logger;
 
 import static util.AllConstants.ARTICLES;
 import static util.AllConstants.EDIT_ARTICLE;
@@ -28,6 +29,8 @@ import static util.AllConstantsParam.URL_PARAM;
 
 @Controller
 public class ArticleController {
+    private static final Logger logger = Logger.getLogger(ArticleController.class.getName());
+    
     @Autowired
     private ArticleService articleService;
     private HtmlCompressor compressor = new HtmlCompressor();
@@ -50,6 +53,10 @@ public class ArticleController {
     public ModelAndView showArticle(@RequestParam(URL_PARAM) String articleUrl) {
         Article article =
                 articleService.getArticleByUrl("publications/" + articleUrl);
+        if (article == null) {
+            logger.warning("Article not found for URL: " + articleUrl);
+            return new ModelAndView("notFoundErrorPage");
+        }
         String text = article.getText();
         String compressedText = compressor.compress(text);
         article.setText(compressedText);

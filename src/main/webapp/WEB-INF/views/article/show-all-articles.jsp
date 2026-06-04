@@ -3,7 +3,6 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <t:wrapper2>
   <jsp:attribute name="header">
     <meta name="description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
@@ -47,13 +46,10 @@
                   <span class="article-author">${article.author.login}</span>
                   <span class="article-date">${article.formattedDate}</span>
               </div>
-              <c:set var="plainText" value="${fn:replace(fn:replace(fn:replace(article.text, '<', ' <'), '>', '> '), '&nbsp;', ' ')}"/>
-              <c:set var="charCount" value="${fn:length(plainText)}"/>
-              <c:set var="readMin" value="${fn:replace((charCount - (charCount mod 1500)) / 1500 + 1, '.0', '')}"/>
               <div class="article-card-meta">
                   <span class="article-readtime">
                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                              ${readMin}&nbsp;<spring:message code="min.read"/>
+                       ${article.minRead!=null && not empty article.minRead?article.minRead:5}&nbsp;<spring:message code="min.read"/>
                    </span>
                    <span class="article-card-read"><spring:message code="show.more"/>  →</span>
               </div>
