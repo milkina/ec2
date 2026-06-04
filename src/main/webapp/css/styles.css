@@ -1389,8 +1389,8 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 @media (min-width: 1024px) {
   .course-ux-grid {
     grid-template-columns: minmax(0,1fr) 300px;
-    grid-template-rows: auto 1fr;
-    align-items: stretch;
+    grid-template-rows: auto auto;
+    align-items: start;
   }
   .course-ux-grid > div:first-child,
   .course-ux-side {
@@ -1398,20 +1398,19 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
     gap: 1.25rem;
     grid-row: 1 / span 2;
     grid-template-rows: subgrid;
-    align-content: start;
-  }
-  .course-ux-grid > div:first-child > *:nth-child(n+2),
-  .course-ux-side > *:nth-child(n+2) {
-    grid-row: 2;
-    align-self: start;
   }
   .course-ux-grid > div:first-child > .panel:first-child,
-  .course-ux-side > .panel:first-child {
+  .course-ux-side > .course-ux-side-first {
     display: flex;
     flex-direction: column;
   }
   .course-ux-grid > div:first-child > .panel:first-child > .course-detail-grid,
-  .course-ux-side > .panel:first-child > .res-list { flex: 1; }
+  .course-ux-side > .course-ux-side-first > .res-list { flex: 1; }
+  .course-ux-side > .course-ux-side-rest {
+    display: grid;
+    gap: 1.25rem;
+    align-self: start;
+  }
 }
 
 .course-detail-grid {
@@ -1806,6 +1805,84 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 .author-snippet {
   font-size: .6rem;
 }
+
+/* ---- Udemy course promo (right sidebar) ---- */
+.udemy-promo {
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  margin-top: 1rem;
+  color: var(--foreground);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.udemy-promo:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.udemy-promo-head {
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
+  color: #fff;
+  padding: 1.1rem 1.1rem 1rem;
+}
+.udemy-promo-badge {
+  display: inline-flex; align-items: center;
+  background: #f59e0b; color: #1f2937;
+  font-size: .7rem; font-weight: 800;
+  padding: .25rem .6rem; border-radius: 999px;
+  margin-bottom: .65rem;
+}
+.udemy-promo-title {
+  margin: 0 0 .3rem;
+  font-size: 1.05rem; font-weight: 800; line-height: 1.25;
+  color: #fff;
+}
+.udemy-promo-sub {
+  margin: 0; font-size: .78rem; line-height: 1.4;
+  color: rgba(255,255,255,0.88);
+}
+.udemy-promo-body { padding: .95rem 1.1rem 1.1rem; }
+.udemy-promo-meta, .udemy-promo-feats {
+  list-style: none; padding: 0; margin: 0 0 .6rem;
+  display: flex; flex-wrap: wrap; gap: .25rem .9rem;
+  font-size: .78rem; color: var(--foreground);
+}
+.udemy-promo-meta li, .udemy-promo-feats li {
+  display: inline-flex; align-items: center; gap: .3rem;
+}
+.udemy-promo-meta svg { color: #f59e0b; }
+.udemy-promo-feats svg { color: var(--muted-fg); }
+.udemy-promo-meta b { font-weight: 800; }
+.udemy-promo-meta span, .udemy-promo-feats span { color: var(--muted-fg); }
+.udemy-promo-price {
+  display: flex; align-items: baseline; gap: .5rem;
+  margin: .75rem 0 .85rem;
+}
+.udemy-promo-price-now {
+  font-size: 1.35rem; font-weight: 800;
+  color: var(--foreground); letter-spacing: -0.01em;
+}
+.udemy-promo-price-old {
+  font-size: .85rem; color: var(--muted-fg);
+  text-decoration: line-through;
+}
+.udemy-promo-discount {
+  background: #fef3c7; color: #92400e;
+  font-size: .7rem; font-weight: 800;
+  padding: .15rem .4rem; border-radius: .35rem;
+}
+.udemy-promo-cta {
+  display: block; text-align: center;
+  background: #6d28d9; color: #fff;
+  padding: .65rem .9rem; border-radius: .55rem;
+  font-size: .82rem; font-weight: 700;
+  transition: background .15s ease;
+}
+.udemy-promo:hover .udemy-promo-cta { background: #5b21b6; }
+.udemy-promo-guarantee {
+  margin: .55rem 0 0; text-align: center;
+  font-size: .7rem; color: var(--muted-fg);
+}
+
 /* Lesson body content */
 .lesson-div h2 { font-size: 1.35rem; font-weight: 800; margin: 1.75rem 0 .6rem; letter-spacing: -0.01em; }
 .lesson-div p { color: var(--foreground); line-height: 1.7; margin: 0 0 .9rem; }

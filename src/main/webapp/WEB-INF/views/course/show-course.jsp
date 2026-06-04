@@ -161,7 +161,7 @@
 
                 <!-- ============ RIGHT PANEL ============ -->
                 <aside class="course-ux-side">
-                    <div class="panel">
+                    <div class="panel course-ux-side-first">
                         <h2><spring:message code="more.resources"/></h2>
                         <ul class="res-list">
                             <li>
@@ -202,7 +202,10 @@
                             </li>
                         </ul>
                     </div>
-                     <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
+                    <div class="course-ux-side-rest">
+                        <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
+                        <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
+                    </div>
                 </aside>
             </div>
         </div>
