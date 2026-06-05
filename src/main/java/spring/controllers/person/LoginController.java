@@ -29,7 +29,7 @@ public class LoginController {
     @Autowired
     private PersonService personService;
 
-    @RequestMapping(value = "/show-login-page")
+    @RequestMapping(value ={ "/show-login-page", "{langid}/show-login-page"})
     public String showLoginPage() {
         return "person/login";
     }

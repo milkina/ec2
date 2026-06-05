@@ -28,7 +28,7 @@ public class RegisterController {
     @Autowired
     private PersonService personService;
 
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    @RequestMapping(value = {"/register", "/ru/register"}, method = RequestMethod.GET)
     public ModelAndView register(Model model) {
         return new ModelAndView(REGISTER_PAGE, "command", new Person());
     }
