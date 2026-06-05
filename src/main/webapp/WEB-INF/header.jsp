@@ -40,7 +40,7 @@
         <c:when test="${param.param != null || person == null}">
           <!-- Logged-OUT block -->
           <div class="auth-out">
-            <a class="login" href="${pageContext.request.contextPath}/show-login-page" id="my-profile">
+            <a class="login" href="${pageContext.request.contextPath}${pageLanguage=='ru'?'/ru':''}/show-login-page" id="my-profile">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               <spring:message code="log.in"/>
             </a>
@@ -117,7 +117,7 @@
         <c:when test="${param.param != null || person == null}">
           <div class="row m-row-top">
             <%@ include file="switch-languages-form.jsp"%>
-            <a class="m-login" href="${pageContext.request.contextPath}/show-login-page" id="my-profile"><spring:message code="log.in"/></a>
+            <a class="m-login" href="${pageContext.request.contextPath}${pageLanguage=='ru'?'/ru':''}/show-login-page" id="my-profile"><spring:message code="log.in"/></a>
           </div>
         </c:when>
         <c:otherwise>

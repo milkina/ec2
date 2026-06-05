@@ -41,6 +41,7 @@
         maxHeight     : null,  // maximum height of option overlay
         showCheckbox  : true,  // display the checkbox to the user
         jqActualOpts  : {},    // options for jquery.actual
+        selectedText  : '# selected', // shown when too many options selected; "#" is replaced with count
 
         // Callbacks
         onLoad        : function( element ) {  // fires at end of list initialization
@@ -460,7 +461,7 @@
 
             // if copy is larger than button width use "# selected"
             if( copyWidth > placeWidth ) {
-                placeholder.text( selOpts.length +' selected' );
+                placeholder.text( instance.options.selectedText.replace( '#', selOpts.length ) );
             }
             // if options selected then use those
             else if( selOpts.length ) {

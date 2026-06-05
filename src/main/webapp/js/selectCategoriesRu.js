@@ -3,5 +3,9 @@ $('select[multiple]').multiselect({
                 placeholder: 'Выбрать категории',
                 selectAll: true,
                 selectGroup:true,
-                search:true
+                search:true,
+                selectedText: 'Выбрано: #'
             });
+$('.ms-selectall').text(function () {
+    return $(this).hasClass('global') ? 'Выбрать все' : 'Выбрать модуль';
+});

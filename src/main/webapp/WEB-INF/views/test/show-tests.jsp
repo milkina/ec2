@@ -7,8 +7,8 @@
     <jsp:attribute name="header">
         <meta name="description" content="Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.">
         <title>Free Java Online Tests and Questions for Learning Java on ExamClouds</title>
-        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet" media="print" onload="this.media='all'">
+        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=1" rel="stylesheet">
         <link rel="canonical" href="https://www.examclouds.com/tests">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tests">
@@ -27,8 +27,6 @@
      <meta property="twitter:image:alt" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
     </jsp:attribute>
      <jsp:body>
-        <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
-        <cache:cacheTag/>
         <main>
           <!-- Hero -->
           <section class="container articles-page">
@@ -40,7 +38,7 @@
             <div class="how-grid">
               <div class="how-step">
                 <div class="ic">1</div>
-                <div><b>Select a category</b><p>Select a general category, then topics and subtopics.</p></div>
+                <div><b>Select a category</b><p>Select one or several categories.</p></div>
               </div>
               <div class="how-step">
                 <div class="ic">2</div>
@@ -55,9 +53,9 @@
             <!-- Test card -->
             <c:forEach var="test" items="${TESTS_WITH_TESTS}">
               <c:if test="${test.language.code==pageLanguage}">
-                <div class="article-card article-card--c1" style="margin-top:2.5rem">
+                <div id="test-card" class="article-card article-card--c1" style="margin-top:2.5rem">
                   <div class="article-card-cover">
-                    <span class="article-card-cat">${test.categories.size()} topics</span>
+                    <span class="article-card-cat">${test.categories.size()} modules</span>
                   </div>
                   <div class="article-card-body">
                     <h2>${test.name}</h2>
@@ -66,10 +64,9 @@
                       <span>⏱ 10–30 min</span>
                     </div>
                   </div>
-                  <details class="article-card-body" style="padding-top:0">
-                    <summary class="styled-button" style="cursor:pointer;list-style:none"><spring:message code="start.test"/> →</summary>
-                    <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
-                  </details>
+                 <div class="article-card-body test-form-body" style="padding-top:0">
+                   <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
+                  </div>
                 </div>
               </c:if>
             </c:forEach>
@@ -89,7 +86,7 @@
             <!-- Benefits -->
             <div style="margin-top:2.5rem">
               <h2 class="articles-title" style="font-size:1.5rem">Advantages</h2>
-              <div class="stat-grid" style="margin-top:1.25rem">
+              <div class="stat-grid stat-grid--bench" style="margin-top:1.25rem">
                 <div class="stat-card"><div class="ic">🌐</div><div><b>Online</b><span>Take tests anytime, anywhere</span></div></div>
                 <div class="stat-card"><div class="ic">📚</div><div><b>Fundamental</b><span>Fundamental Java concepts</span></div></div>
                 <div class="stat-card"><div class="ic">💼</div><div><b>Interview prep</b><span>Junior and higher positions</span></div></div>
@@ -97,11 +94,15 @@
               </div>
             </div>
 
-            <p class="articles-lede" style="margin-top:2rem;font-weight:700">Take our free Java programming tests on ExamClouds and improve your skills today!</p>
+            <div class="test-cta">
+              <p class="test-cta-text">Take our free Java programming tests on ExamClouds and improve your skills today!</p>
+              <a href="#test-card" class="test-cta-btn">Start test <span class="test-cta-btn-arrow">&#8594;</span></a>
+            </div>
           </section>
          </main>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
          <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
          <script src="${pageContext.request.contextPath}/js/selectCategories.js"></script>
+         <script src="${pageContext.request.contextPath}/js/general.js"></script>
  </jsp:body>
 </t:wrapper2>

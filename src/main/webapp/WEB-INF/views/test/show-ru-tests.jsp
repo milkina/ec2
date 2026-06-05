@@ -7,8 +7,8 @@
     <jsp:attribute name="header">
         <meta name="description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
         <title>Бесплатные тесты по Java: уровень знаний и подготовка к интервью</title>
-        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="${pageContext.request.contextPath}/css/russisch.css" rel="stylesheet" media="print" onload="this.media='all'">
+        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=1" rel="stylesheet">
         <link rel="canonical" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tests">
@@ -27,8 +27,6 @@
      <meta property="twitter:image:alt" content="Бесплатные тесты по Java: уровень знаний и подготовка к интервью">
     </jsp:attribute>
     <jsp:body>
-        <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
-        <cache:cacheTag/>
         <main>
           <!-- Hero -->
           <section class="container articles-page">
@@ -40,7 +38,7 @@
             <div class="how-grid">
               <div class="how-step">
                 <div class="ic">1</div>
-                <div><b>Выберите категорию</b><p>Выберите общую категорию, затем темы и подтемы.</p></div>
+                <div><b>Выберите категорию</b><p>Выберите одну или несколько категорий.</p></div>
               </div>
               <div class="how-step">
                 <div class="ic">2</div>
@@ -55,9 +53,9 @@
             <!-- Test card -->
             <c:forEach var="test" items="${TESTS_WITH_TESTS}">
               <c:if test="${test.language.code==pageLanguage}">
-                <div class="article-card article-card--c1" style="margin-top:2.5rem">
+                <div id="test-card" class="article-card article-card--c1" style="margin-top:2.5rem">
                   <div class="article-card-cover">
-                    <span class="article-card-cat">${test.categories.size()} тем</span>
+                    <span class="article-card-cat">${test.categories.size()} модуля</span>
                   </div>
                   <div class="article-card-body">
                     <h2>${test.name}</h2>
@@ -66,10 +64,9 @@
                       <span>⏱ 10–30 мин</span>
                     </div>
                   </div>
-                  <details class="article-card-body" style="padding-top:0">
-                    <summary class="styled-button" style="cursor:pointer;list-style:none"><spring:message code="start.test"/> →</summary>
+                  <div class="article-card-body test-form-body" style="padding-top:0">
                     <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
-                  </details>
+                  </div>
                 </div>
               </c:if>
             </c:forEach>
@@ -85,14 +82,12 @@
               <p class="articles-lede">Большинство тестов включают практические задания. В некоторых из них вам нужно будет найти ошибку, в других — подставить
               пропущенные части или ответить на вопрос: «Откомпилируется ли код?». Если вы успешно проходите наши тесты, вы готовы к
               стажировке или работе на позиции Junior.</p>
-              <p class="articles-lede">Также используйте наши <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">Практические задания</a> и <a href="${pageContext.request.contextPath}/ru/video-java-uroki">Видео уроки</a>
-              для повышения своих навыков.</p>
             </div>
 
             <!-- Benefits -->
             <div style="margin-top:2.5rem">
               <h2 class="articles-title" style="font-size:1.5rem">Преимущества</h2>
-              <div class="stat-grid" style="margin-top:1.25rem">
+              <div class="stat-grid stat-grid--bench" style="margin-top:1.25rem">
                 <div class="stat-card"><div class="ic">🌐</div><div><b>Онлайн</b><span>В любое время и в любом месте</span></div></div>
                 <div class="stat-card"><div class="ic">📚</div><div><b>Фундаментальные</b><span>Основные концепции Java</span></div></div>
                 <div class="stat-card"><div class="ic">💼</div><div><b>Подготовка к интервью</b><span>Junior и выше</span></div></div>
@@ -102,11 +97,15 @@
               </div>
             </div>
 
-            <p class="articles-lede" style="margin-top:2rem;font-weight:700">Пройдите тесты прямо сейчас и проверьте, насколько хорошо вы знаете язык Java!</p>
+            <div class="test-cta">
+              <p class="test-cta-text">Пройдите тесты прямо сейчас и проверьте, насколько хорошо вы знаете Java!</p>
+              <a href="#test-card" class="test-cta-btn">Начать тест <span class="test-cta-btn-arrow">&#8594;</span></a>
+            </div>
           </section>
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
         <script src="${pageContext.request.contextPath}/js/selectCategoriesRu.js"></script>
+        <script src="${pageContext.request.contextPath}/js/general.js"></script>
     </jsp:body>
 </t:wrapper2>

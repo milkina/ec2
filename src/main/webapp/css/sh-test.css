@@ -1,0 +1,48 @@
+/* ============================================
+   Test card form (show-ru-tests)
+   ============================================ */
+.test-form-body { background: color-mix(in oklab, var(--muted, #f5f5f4) 60%, transparent); border-top: 1px solid var(--border); }
+.test-form { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
+.test-form-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) { .test-form-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; } }
+.test-field { display: flex; flex-direction: column; gap: .5rem; min-width: 0; }
+.test-field-label { font-size: .6875rem; font-weight: 700; letter-spacing: .04em; color: var(--muted-fg); text-transform: uppercase; }
+.test-qty { display: flex; align-items: center; gap: .5rem; background: var(--card, #fff); border: 1px solid var(--border); border-radius: 10px; padding: .375rem; }
+.test-form .ms-options-wrap > button,
+.test-form .ms-options-wrap > button:focus { background: var(--card, #fff); border: 1px solid var(--border); border-radius: 10px; padding: .625rem .75rem; font: inherit; font-size: .9375rem; color: inherit; height: auto; min-height: calc(2rem + .75rem + 2px); outline: 0; }
+.test-form .ms-options-wrap > button:after { right: .75rem; border-top-color: var(--muted-fg); }
+.test-form .ms-options-wrap > .ms-options .ms-selectall,
+.test-form .ms-options-wrap > .ms-options .ms-selectall:link,
+.test-form .ms-options-wrap > .ms-options .ms-selectall:visited { color: var(--primary); font-weight: 600; }
+.test-form .ms-options-wrap > .ms-options .ms-selectall:hover { color: var(--primary); text-decoration: underline; }
+.test-qty-btn { width: 2rem; height: 2rem; border: 1px solid var(--border); background: var(--card, #fff); border-radius: 8px; font-size: 1.125rem; font-weight: 700; cursor: pointer; line-height: 1; display: inline-flex; align-items: center; justify-content: center; color: inherit; padding: 0; }
+.test-qty-btn:hover { background: var(--muted, #f5f5f4); }
+.test-qty-input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent; text-align: center; font-size: 1.125rem; font-weight: 700; -moz-appearance: textfield; }
+.test-qty-input::-webkit-outer-spin-button, .test-qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.test-qty-hint { font-size: .75rem; color: var(--muted-fg); text-align: center; }
+.test-submit { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .875rem 1rem; border: 1px solid var(--border); background: var(--card, #fff); border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; color: inherit; transition: background .15s ease, border-color .15s ease, color .15s ease; }
+.test-submit:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+.test-submit-ic { font-size: .9em; }
+.test-submit-arrow { font-size: .9em; opacity: .8; }
+
+/* Benefits grid variant — softer, larger, multi-color icons */
+.stat-grid--bench { grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) { .stat-grid--bench { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .stat-grid--bench { grid-template-columns: repeat(3, 1fr); } }
+.stat-grid--bench .stat-card { background: var(--card, #fff); border: 1px solid var(--border); border-radius: .9rem; padding: 1rem 1.1rem; gap: .9rem; align-items: flex-start; }
+.stat-grid--bench .stat-card .ic { width: 2.5rem; height: 2.5rem; border-radius: .65rem; box-shadow: none; font-size: 1.15rem; flex: 0 0 auto; }
+.stat-grid--bench .stat-card b { color: inherit; font-size: .9rem; font-weight: 700; }
+.stat-grid--bench .stat-card span { font-size: .8rem; line-height: 1.35; margin-top: 3px; }
+.stat-grid--bench .stat-card:nth-child(1) .ic { background: color-mix(in oklab, oklch(0.7 0.18 250) 18%, #fff); color: oklch(0.5 0.18 250); }
+.stat-grid--bench .stat-card:nth-child(2) .ic { background: color-mix(in oklab, oklch(0.7 0.18 295) 18%, #fff); color: oklch(0.5 0.2 295); }
+.stat-grid--bench .stat-card:nth-child(3) .ic { background: color-mix(in oklab, oklch(0.78 0.16 80) 22%, #fff); color: oklch(0.55 0.15 70); }
+.stat-grid--bench .stat-card:nth-child(4) .ic { background: color-mix(in oklab, oklch(0.75 0.17 150) 18%, #fff); color: oklch(0.5 0.16 150); }
+.stat-grid--bench .stat-card:nth-child(5) .ic { background: color-mix(in oklab, oklch(0.72 0.18 25) 18%, #fff); color: oklch(0.55 0.18 25); }
+.stat-grid--bench .stat-card:nth-child(6) .ic { background: color-mix(in oklab, oklch(0.72 0.14 180) 20%, #fff); color: oklch(0.5 0.13 185); }
+
+/* CTA banner at the bottom of the test page */
+.test-cta { margin-top: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem 1.4rem; background: var(--primary); color: #fff; border-radius: 14px; flex-wrap: wrap; }
+.test-cta-text { font-weight: 700; font-size: 1rem; line-height: 1.4; flex: 1 1 auto; min-width: 0; color: inherit; margin: 0; }
+.test-cta-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1.1rem; background: #fff; color: var(--primary); border-radius: 10px; font-weight: 700; font-size: .9375rem; text-decoration: none; white-space: nowrap; transition: transform .15s ease, box-shadow .15s ease; }
+.test-cta-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.18); color: var(--primary); text-decoration: none; }
+.test-cta-btn-arrow { font-size: .95em; }

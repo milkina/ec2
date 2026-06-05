@@ -3,5 +3,9 @@ $('select[multiple]').multiselect({
                placeholder: 'Select categories',
                selectAll : true,
                selectGroup:true,
-               search:true
+               search:true,
+               selectedText: '# selected'
             });
+$('.ms-selectall').text(function () {
+    return $(this).hasClass('global') ? 'Select all' : 'Select module';
+});
