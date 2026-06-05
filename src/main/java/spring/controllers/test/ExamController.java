@@ -62,6 +62,9 @@ public class ExamController {
     public String showExamQuestion(HttpServletRequest request) {
         HttpSession session = GeneralUtility.getSession(true);
         AbstractExam exam = (AbstractExam) session.getAttribute(CURRENT_EXAM_ATTRIBUTE);
+        if (exam == null) {
+            return "forward:/start-test";
+        }
         int currentNumber = exam.getCurrentNumber();
         if (request.getParameter("PREVIOUS") != null) {
             currentNumber--;

@@ -54,7 +54,7 @@ public class ArticleController {
         Article article =
                 articleService.getArticleByUrl("publications/" + articleUrl);
         if (article == null) {
-            logger.warning("Article not found for URL: " + articleUrl);
+            logger.info("Article not found for URL: " + articleUrl);
             return new ModelAndView("notFoundErrorPage");
         }
         String text = article.getText();
