@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import spring.controllers.article.ArticleController;
 import spring.services.category.CategoryService;
 import spring.services.course.CourseService;
 import util.CategoryUtility;
@@ -21,6 +22,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import static util.AllConstants.SPRING_MESSAGE_PAGE;
 import static util.AllConstantsAttribute.ARTICLE_ATTRIBUTE;
@@ -40,6 +42,7 @@ import static util.GeneralUtility.getResourceValue;
  */
 @Controller
 public class CategoryController {
+    private static final Logger logger = Logger.getLogger(CategoryController.class.getName());
     @Autowired
     private CourseService courseService;
 
@@ -53,6 +56,10 @@ public class CategoryController {
                 CategoryUtility.getCategoriesFromServletContext(request);
 
         Category category = categoryMap.get(categoryPath);
+        if (category == null) {
+            logger.info("Category " + categoryPath + " not found");
+            return new ModelAndView("notFoundErrorPage");
+        }
         Article article = category.getArticle();
 
         model.addAttribute(CATEGORY_ATTRIBUTE, category);

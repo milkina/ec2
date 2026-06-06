@@ -2436,3 +2436,23 @@ pre.has-copy { position: relative; }
   .vid-li-thumb { display: none; }
 }
 
+/* Test form layout: select (2/3) and qty (1/3) */
+.test-form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.test-field select,
+.test-field .test-qty {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive: stack fields on small screens */
+@media (max-width: 640px) {
+  .test-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

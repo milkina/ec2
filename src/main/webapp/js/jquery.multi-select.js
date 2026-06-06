@@ -42,6 +42,7 @@
         showCheckbox  : true,  // display the checkbox to the user
         jqActualOpts  : {},    // options for jquery.actual
         selectedText  : '# selected', // shown when too many options selected; "#" is replaced with count
+        enableFormValidation : false, // enable form validation for required select
 
         // Callbacks
         onLoad        : function( element ) {  // fires at end of list initialization
@@ -336,6 +337,11 @@
             else {
                 $(instance.element).hide();
             }
+
+            // enable form validation if option is set
+            if( instance.options.enableFormValidation ) {
+                instance._enableFormValidation();
+            }
         },
 
         /* LOAD SELECT OPTIONS */
@@ -507,6 +513,83 @@
         _ieVersion: function() {
             var myNav = navigator.userAgent.toLowerCase();
             return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+        },
+
+        // enable form validation for required select
+        _enableFormValidation: function() {
+            var instance = this;
+            var select = instance.element;
+            var form = $(select).closest('form')[0];
+            if (!form) return;
+
+            var errorId = select.id + '_error';
+            var error = document.getElementById(errorId);
+            var submit = form.querySelector('button[type="submit"]');
+
+            function showError() {
+                select.setAttribute('aria-invalid', 'true');
+                if (error) {
+                    error.removeAttribute('hidden');
+                    error.style.display = '';
+                }
+                if (submit) {
+                    submit.classList.add('disabled-by-validation');
+                }
+                // add visual invalid state to the ms wrapper and containing field for styling
+                try {
+                    var msWrap = $(select).next('.ms-options-wrap')[0];
+                    if (msWrap) msWrap.classList.add('field-invalid');
+                    var field = $(select).closest('.test-field')[0];
+                    if (field) field.classList.add('field-invalid');
+                } catch (e) {}
+                try {
+                    select.focus();
+                } catch (e) {}
+                try {
+                    error && error.scrollIntoView({behavior: 'smooth', block: 'center'});
+                } catch (e) {}
+            }
+
+            function hideError() {
+                select.setAttribute('aria-invalid', 'false');
+                if (error) {
+                    error.setAttribute('hidden', '');
+                    error.style.display = 'none';
+                }
+                if (submit) {
+                    submit.classList.remove('disabled-by-validation');
+                }
+                // remove visual invalid state
+                try {
+                    var msWrap = $(select).next('.ms-options-wrap')[0];
+                    if (msWrap) msWrap.classList.remove('field-invalid');
+                    var field = $(select).closest('.test-field')[0];
+                    if (field) field.classList.remove('field-invalid');
+                } catch (e) {}
+            }
+
+            form.addEventListener('submit', function(e) {
+                var selectedCount = (select.selectedOptions && select.selectedOptions.length) || 0;
+                if (selectedCount === 0) {
+                    e.preventDefault();
+                    showError();
+                }
+            }, false);
+
+            // standard change event
+            select.addEventListener('change', function() {
+                var selectedCount = (select.selectedOptions && select.selectedOptions.length) || 0;
+                if (selectedCount > 0) hideError();
+            }, false);
+
+            // observe the multi-select container for click events
+            var container = $(select).next('.ms-options-wrap')[0];
+            if (container) {
+                container.addEventListener('click', function() {
+                    var selectedCount = (select.selectedOptions && select.selectedOptions.length) || 0;
+                    if (selectedCount > 0) hideError();
+                }, false);
+            }
         }
     };
 

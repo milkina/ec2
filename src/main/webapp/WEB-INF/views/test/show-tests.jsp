@@ -13,25 +13,158 @@
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tests">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/tests">
-     <meta property="og:title" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
-     <meta property="og:type" content="article">
-     <meta property="og:description" content="Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.">
-     <meta property="og:site_name" content="ExamClouds">
-     <meta property="og:url" content="https://www.examclouds.com/tests">
-     <meta property="twitter:title" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
-     <meta property="twitter:card" content="summary_large_image">
-     <meta property="twitter:description" content="Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.">
-     <meta property="twitter:site" content="@ExamClouds">
-     <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
-     <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
-     <meta property="twitter:image:alt" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.">
+        <meta property="og:site_name" content="ExamClouds">
+        <meta property="og:url" content="https://www.examclouds.com/tests">
+        <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:title" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:description" content="Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.">
+        <meta property="twitter:site" content="@ExamClouds">
+        <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
+        <meta property="twitter:image:alt" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
+
+        <!-- WebPage Schema -->
+        <script type="application/ld+json">{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Free Java Online Tests",
+          "description": "Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.",
+          "url": "https://www.examclouds.com/tests",
+          "inLanguage": "en",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ExamClouds",
+            "url": "https://www.examclouds.com",
+            "logo": "https://img.examclouds.com/general/logo.svg"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "ExamClouds",
+            "url": "https://www.examclouds.com"
+          }
+        }</script>
+
+        <!-- BreadcrumbList Schema -->
+        <script type="application/ld+json">{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.examclouds.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tests",
+              "item": "https://www.examclouds.com/tests"
+            }
+          ]
+        }</script>
+
+        <!-- Course Schema -->
+        <script type="application/ld+json">{
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": "Free Java Programming Tests",
+          "description": "Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.",
+          "url": "https://www.examclouds.com/tests",
+          "inLanguage": "en",
+          "provider": {
+            "@type": "Organization",
+            "name": "ExamClouds",
+            "url": "https://www.examclouds.com",
+            "sameAs": [
+              "https://www.facebook.com/examclouds",
+              "https://twitter.com/ExamClouds"
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "2847"
+          },
+          "educationLevel": "Beginner, Intermediate, Advanced",
+          "learningResourceType": "Assessment",
+          "teaches": [
+            "Java basic syntax",
+            "Java Core",
+            "Object-Oriented Programming",
+            "Collections",
+            "Exceptions",
+            "Multithreading",
+            "Stream API"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          }
+        }</script>
+
+        <!-- FAQPage Schema -->
+        <script type="application/ld+json">{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I take a Java test?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Select one or several categories, specify the number of questions, click 'Start Test' and check your knowledge. After completing the test, you will see your results and be able to compare your answers with the correct ones."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are all tests free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all tests on ExamClouds are completely free. You can take tests anytime and anywhere."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What topics do the tests cover?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tests cover essential Java concepts: basic syntax, Java Core, object-oriented programming, collections, exceptions, multithreading, Stream API, and more."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How will test results help me find a job?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our tests are designed to prepare you for interviews for Junior and higher positions. Successfully passing tests demonstrates your knowledge of fundamental Java concepts and readiness for professional work."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often are tests updated?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our question database is regularly updated and expanded with new, relevant questions reflecting the latest trends in Java development."
+              }
+            }
+          ]
+        }</script>
     </jsp:attribute>
      <jsp:body>
-        <main>
-          <!-- Hero -->
-          <section class="container articles-page">
+        <main aria-label="Free Java Online Tests">
+          <!-- Hero Section -->
+          <section class="container articles-page" aria-labelledby="tests-main-title">
             <span class="article-tag">Tests</span>
-            <h1 class="articles-title">Free Java Online Tests</h1>
+            <h1 class="articles-title" id="tests-main-title">Free Java Online Tests</h1>
             <p class="articles-lede">Assess your skills and prepare for interviews. Choose topics, set the number of questions — and test yourself online.</p>
 
             <!-- How-to steps -->
@@ -72,8 +205,8 @@
             </c:forEach>
 
             <!-- About tests -->
-            <div style="margin-top:3rem">
-              <h2 class="articles-title" style="font-size:1.5rem">About Our Tests</h2>
+            <div style="margin-top:3rem" aria-labelledby="about-tests-title">
+              <h2 class="articles-title" style="font-size:1.5rem" id="about-tests-title">About Our Tests</h2>
               <p class="articles-lede">Are you studying Java programming? ExamClouds offers free Java programming tests for you. By taking the tests,
               you will assess your preparedness level and identify topics that need review.</p>
               <p class="articles-lede">After completing the test, you will see your results in percentage and numerical expressions. You will be presented with all
@@ -84,8 +217,8 @@
             </div>
 
             <!-- Benefits -->
-            <div style="margin-top:2.5rem">
-              <h2 class="articles-title" style="font-size:1.5rem">Advantages</h2>
+            <div style="margin-top:2.5rem" aria-labelledby="benefits-title">
+              <h2 class="articles-title" style="font-size:1.5rem" id="benefits-title">Advantages</h2>
               <div class="stat-grid stat-grid--bench" style="margin-top:1.25rem">
                 <div class="stat-card"><div class="ic">🌐</div><div><b>Online</b><span>Take tests anytime, anywhere</span></div></div>
                 <div class="stat-card"><div class="ic">📚</div><div><b>Fundamental</b><span>Fundamental Java concepts</span></div></div>

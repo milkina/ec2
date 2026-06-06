@@ -4,7 +4,8 @@ $('select[multiple]').multiselect({
                selectAll : true,
                selectGroup:true,
                search:true,
-               selectedText: '# selected'
+               selectedText: '# selected',
+               enableFormValidation: true
             });
 $('.ms-selectall').text(function () {
     return $(this).hasClass('global') ? 'Select all' : 'Select module';
