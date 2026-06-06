@@ -182,40 +182,21 @@
             <div><b>Пройдите тест</b><p>Нажмите «Пройти тест» и проверьте свои знания.</p></div>
           </div>
         </div>
-
         <!-- Test Card Section -->
-        <c:forEach var="test" items="${TESTS_WITH_TESTS}">
-          <c:if test="${test.language.code==pageLanguage}">
-            <div id="test-card" class="article-card article-card--c1" style="margin-top:2.5rem">
-              <div class="article-card-cover">
-                <span class="article-card-cat">${test.categories.size()} модуля</span>
-              </div>
-              <div class="article-card-body">
-                <h2>${test.name}</h2>
-                <p>${test.article.description}</p>
-                <div class="article-card-meta">
-                  <span>⏱ 10–30 мин</span>
-                </div>
-              </div>
-              <div class="article-card-body test-form-body" style="padding-top:0">
-                <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
-              </div>
-            </div>
-          </c:if>
-        </c:forEach>
+        <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
 
         <!-- About Tests Section -->
-        <div style="margin-top:3rem" aria-labelledby="about-tests-title">
-          <h2 class="articles-title" style="font-size:1.5rem" id="about-tests-title">О наших тестах</h2>
+        <div class="test-about-div" aria-labelledby="about-tests-title">
+          <h2 class="articles-title test-title" id="about-tests-title">О наших тестах</h2>
           <p class="articles-lede">Изучаете Java программирование? ExamClouds подготовил для вас <strong>бесплатные тесты по Java программированию</strong>. Пройдя тестирование, вы узнаете свой уровень подготовки и выявите темы, которые необходимо повторить.</p>
           <p class="articles-lede">После завершения теста вы увидите свой результат в процентном и количественном выражении. Вам будут представлены все заданные вопросы, ваши и правильные ответы. При неудовлетворительном результате рекомендуем пройти бесплатный <a href="${pageContext.request.contextPath}/ru/java-core-russian">курс обучения</a> на нашем сайте полностью или изучить отдельные уроки по Java Core.</p>
           <p class="articles-lede">Большинство тестов включают практические задания. В некоторых из них вам нужно будет найти ошибку, в других — подставить пропущенные части или ответить на вопрос: «Откомпилируется ли код?». Если вы успешно проходите наши тесты, вы готовы к стажировке или работе на позиции Junior.</p>
         </div>
 
         <!-- Benefits Section -->
-        <div style="margin-top:2.5rem" aria-labelledby="benefits-title">
-          <h2 class="articles-title" style="font-size:1.5rem" id="benefits-title">Преимущества</h2>
-          <div class="stat-grid stat-grid--bench" style="margin-top:1.25rem">
+        <div class="stat-grid-div" aria-labelledby="benefits-title">
+          <h2 class="articles-title test-title" id="benefits-title">Преимущества</h2>
+          <div class="stat-grid stat-grid--bench stat-grid-test">
             <div class="stat-card"><div class="ic">🌐</div><div><b>Онлайн</b><span>В любое время и в любом месте</span></div></div>
             <div class="stat-card"><div class="ic">📚</div><div><b>Фундаментальные</b><span>Основные концепции Java</span></div></div>
             <div class="stat-card"><div class="ic">💼</div><div><b>Подготовка к интервью</b><span>Junior и выше</span></div></div>

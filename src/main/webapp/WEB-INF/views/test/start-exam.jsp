@@ -1,3 +1,19 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<c:forEach var="test" items="${TESTS_WITH_TESTS}">
+              <c:if test="${test.language.code==pageLanguage}">
+                <div id="test-card" class="article-card article-card--c1 start-exam-card">
+                  <div class="article-card-cover">
+                    <span class="article-card-cat">${test.categories.size()}&nbsp;<spring:message code="modules"/></span>
+                  </div>
+                  <div class="article-card-body">
+                    <h2>${test.name}</h2>
+                    <p>${test.article.description}</p>
+                    <div class="article-card-meta">
+                      <span>⏱ 10–30 <spring:message code="min"/></span>
+                    </div>
+                  </div>
+                  <div class="article-card-body test-form-body">
+
 <div id="collapse_${test.pathName}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_${test.pathName}">
   <form action="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}start-test/${test.pathName}" method="post" class="test-form" aria-label="Start test form">
       <div class="test-form-grid">
@@ -46,3 +62,8 @@
       </button>
   </form>
 </div>
+
+ </div>
+                </div>
+              </c:if>
+            </c:forEach>

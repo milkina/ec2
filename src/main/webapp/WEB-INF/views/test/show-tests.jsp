@@ -184,29 +184,10 @@
             </div>
 
             <!-- Test card -->
-            <c:forEach var="test" items="${TESTS_WITH_TESTS}">
-              <c:if test="${test.language.code==pageLanguage}">
-                <div id="test-card" class="article-card article-card--c1" style="margin-top:2.5rem">
-                  <div class="article-card-cover">
-                    <span class="article-card-cat">${test.categories.size()} modules</span>
-                  </div>
-                  <div class="article-card-body">
-                    <h2>${test.name}</h2>
-                    <p>${test.article.description}</p>
-                    <div class="article-card-meta">
-                      <span>⏱ 10–30 min</span>
-                    </div>
-                  </div>
-                 <div class="article-card-body test-form-body" style="padding-top:0">
-                   <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
-                  </div>
-                </div>
-              </c:if>
-            </c:forEach>
-
+            <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
             <!-- About tests -->
-            <div style="margin-top:3rem" aria-labelledby="about-tests-title">
-              <h2 class="articles-title" style="font-size:1.5rem" id="about-tests-title">About Our Tests</h2>
+            <div class="test-about-div" aria-labelledby="about-tests-title">
+              <h2 class="articles-title test-title" id="about-tests-title">About Our Tests</h2>
               <p class="articles-lede">Are you studying Java programming? ExamClouds offers free Java programming tests for you. By taking the tests,
               you will assess your preparedness level and identify topics that need review.</p>
               <p class="articles-lede">After completing the test, you will see your results in percentage and numerical expressions. You will be presented with all
@@ -217,9 +198,9 @@
             </div>
 
             <!-- Benefits -->
-            <div style="margin-top:2.5rem" aria-labelledby="benefits-title">
-              <h2 class="articles-title" style="font-size:1.5rem" id="benefits-title">Advantages</h2>
-              <div class="stat-grid stat-grid--bench" style="margin-top:1.25rem">
+            <div class="stat-grid-div" aria-labelledby="benefits-title">
+              <h2 class="articles-title test-title" id="benefits-title">Advantages</h2>
+              <div class="stat-grid stat-grid--bench stat-grid-test">
                 <div class="stat-card"><div class="ic">🌐</div><div><b>Online</b><span>Take tests anytime, anywhere</span></div></div>
                 <div class="stat-card"><div class="ic">📚</div><div><b>Fundamental</b><span>Fundamental Java concepts</span></div></div>
                 <div class="stat-card"><div class="ic">💼</div><div><b>Interview prep</b><span>Junior and higher positions</span></div></div>

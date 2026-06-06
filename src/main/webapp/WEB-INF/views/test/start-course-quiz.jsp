@@ -1,3 +1,17 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<c:forEach var="test" items="${COURSES_WITH_QUESTIONS}">
+              <c:if test="${test.language.code==pageLanguage}">
+                <div class="article-card article-card--c1 start-exam-card">
+                  <div class="article-card-cover">
+                    <span class="article-card-cat">${test.categories.size()} modules</span>
+                  </div>
+                  <div class="article-card-body">
+                    <h2>${test.name}</h2>
+                    <div class="article-card-meta">
+                      <span>⏱ 10–30 min</span>
+                    </div>
+                  </div>
+                  <div class="article-card-body test-form-body">
 <div id="collapse_q_${test.pathName}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_q_${test.pathName}">
   <form action="${pageContext.request.contextPath}/see-questions/${test.pathName}" method="post" class="test-form" aria-label="Start quiz form">
     <div class="test-form-grid">
@@ -46,3 +60,7 @@
     </button>
   </form>
 </div>
+      </div>
+                </div>
+              </c:if>
+            </c:forEach>

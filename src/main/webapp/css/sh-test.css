@@ -97,3 +97,21 @@
   border-bottom: 1px solid var(--border) !important;
   box-shadow: none !important;
 }
+.start-exam-card{
+  margin-top:2.5rem
+}
+.test-title{
+font-size:1.5rem
+}
+.stat-grid-test{
+  margin-top:1.25rem
+}
+.stat-grid-div{
+ margin-top:2.5rem
+}
+.test-about-div{
+ margin-top:3rem
+}
+.interview-lede{
+margin-top:2rem;font-weight:700
+}

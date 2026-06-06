@@ -128,8 +128,6 @@
         }</script>
     </jsp:attribute>
      <jsp:body>
-        <%@ taglib uri="/WEB-INF/tld/cache-tagjsp-taglib.tld" prefix="cache"%>
-        <cache:cacheTag/>
         <main aria-label="Java Interview Questions">
           <!-- Hero -->
           <section class="container articles-page" aria-labelledby="interview-questions-main-title">
@@ -141,7 +139,7 @@
             <div class="how-grid">
               <div class="how-step">
                 <div class="ic">1</div>
-                <div><b>Select a category</b><p>Choose a topic area like Java Core, Collections, or Multithreading.</p></div>
+                <div><b>Select a category</b><p>Select one or several categories.</p></div>
               </div>
               <div class="how-step">
                 <div class="ic">2</div>
@@ -154,28 +152,10 @@
             </div>
 
             <!-- Test card -->
-            <c:forEach var="test" items="${COURSES_WITH_QUESTIONS}">
-              <c:if test="${test.language.code==pageLanguage}">
-                <div class="article-card article-card--c1" style="margin-top:2.5rem">
-                  <div class="article-card-cover">
-                    <span class="article-card-cat">${test.categories.size()} modules</span>
-                  </div>
-                  <div class="article-card-body">
-                    <h2>${test.name}</h2>
-                    <div class="article-card-meta">
-                      <span>⏱ 10–30 min</span>
-                    </div>
-                  </div>
-                  <div class="article-card-body test-form-body" style="padding-top:0">
-                    <%@include file="/WEB-INF/views/test/start-course-quiz.jsp"%>
-                  </div>
-                </div>
-              </c:if>
-            </c:forEach>
-
+            <%@include file="/WEB-INF/views/test/start-course-quiz.jsp"%>
             <!-- About interview questions -->
-            <div style="margin-top:3rem" aria-labelledby="about-interview-questions-title">
-              <h2 class="articles-title" style="font-size:1.5rem" id="about-interview-questions-title">About Our Interview Questions</h2>
+            <div class="test-about-div" aria-labelledby="about-interview-questions-title">
+              <h2 class="articles-title test-title" id="about-interview-questions-title">About Our Interview Questions</h2>
               <p class="articles-lede">Here you will find an extensive list of questions and answers to help you successfully pass your Java developer interview. Our materials cover all major aspects, including Java Core, technical questions, and Java API questions.</p>
               <p class="articles-lede"><b>Java Core Questions:</b> Get acquainted with key Java language concepts such as object-oriented programming, exceptions, collections, and multithreading. These questions will help you solidify your fundamental knowledge of Java.</p>
               <p class="articles-lede"><b>Java API Questions:</b> Dive into the study of standard Java libraries, including working with collections, streams, I/O, and other important API components.</p>
@@ -184,9 +164,9 @@
             </div>
 
             <!-- Benefits -->
-            <div style="margin-top:2.5rem" aria-labelledby="benefits-interview-title">
-              <h2 class="articles-title" style="font-size:1.5rem" id="benefits-interview-title">Advantages</h2>
-              <div class="stat-grid" style="margin-top:1.25rem">
+            <div class="stat-grid-div" aria-labelledby="benefits-interview-title">
+              <h2 class="articles-title test-title" id="benefits-interview-title">Advantages</h2>
+              <div class="stat-grid stat-grid-test">
                 <div class="stat-card"><div class="ic">🌐</div><div><b>Online</b><span>Practice anytime, anywhere</span></div></div>
                 <div class="stat-card"><div class="ic">📚</div><div><b>Comprehensive</b><span>Covers all major Java topics</span></div></div>
                 <div class="stat-card"><div class="ic">💼</div><div><b>Interview prep</b><span>Junior to senior positions</span></div></div>
@@ -194,7 +174,7 @@
               </div>
             </div>
 
-            <p class="articles-lede" style="margin-top:2rem;font-weight:700">Utilize our extensive question bank to prepare for your Java interview and achieve success in your career!</p>
+            <p class="articles-lede interview-lede">Utilize our extensive question bank to prepare for your Java interview and achieve success in your career!</p>
           </section>
          </main>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
