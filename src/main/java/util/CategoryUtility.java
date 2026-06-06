@@ -4,6 +4,7 @@ import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
 import model.*;
 import model.article.Article;
 import model.person.Person;
+import spring.controllers.category.CategoryController;
 import spring.services.category.CategoryService;
 import util.article.ArticleUtility;
 
@@ -12,6 +13,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.logging.Logger;
 
 import static util.AllConstantsAttribute.*;
 import static util.AllConstantsParam.*;
@@ -24,6 +26,7 @@ import static util.AllConstantsParam.*;
  * To change this template use File | Settings | File Templates.
  */
 public class CategoryUtility extends SpringUtility {
+    private static final Logger logger = Logger.getLogger(CategoryUtility.class.getName());
 
     private static final HtmlCompressor HTML_COMPRESSOR = new HtmlCompressor();
 
@@ -246,6 +249,10 @@ public class CategoryUtility extends SpringUtility {
                 request.getServletContext().getAttribute(TESTS);
         String testPath = request.getParameter(TEST_PATH);
         Test test = testMap.get(testPath);
+        if (test == null) {
+            logger.info("Test " + testPath + " not found");
+            return Collections.emptyMap();
+        }
         return test.getCategories();
     }
 

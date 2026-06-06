@@ -191,6 +191,10 @@
         <to type="permanent-redirect">/ru/java/java-core-russian/mnogopotochnost-v-java-zadaniya</to>
     </rule>
     <rule>
+        <from>^/ru/java/java-core-russian/lesson24-tasks$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/maven-prakticheskie-zadaniya</to>
+    </rule>
+    <rule>
         <from>^/java/web-services/web-services-fundamentals$</from>
         <to type="permanent-redirect">/java/web-services/basic-concepts</to>
     </rule>

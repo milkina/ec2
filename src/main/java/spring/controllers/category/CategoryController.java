@@ -57,7 +57,9 @@ public class CategoryController {
 
         Category category = categoryMap.get(categoryPath);
         if (category == null) {
-            logger.info("Category " + categoryPath + " not found");
+            String testPath = request.getParameter(TEST_PATH);
+            logger.info("Category " + categoryPath + " not found for test "
+                    + testPath);
             return new ModelAndView("notFoundErrorPage");
         }
         Article article = category.getArticle();
