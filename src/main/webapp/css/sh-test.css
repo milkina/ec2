@@ -1,4 +1,55 @@
 /* ============================================
+   Exam banner (top of start-exam test card)
+   ============================================ */
+.exam-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem 1.5rem 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #1e2a78 0%, #2740b8 55%, #3b5bdb 100%);
+}
+.exam-banner-title {
+  margin: 0 0 .35rem;
+  font-size: clamp(1.35rem, 1.05rem + 1.2vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+}
+.exam-banner-sub {
+  margin: 0 0 1rem;
+  font-size: .95rem;
+  color: rgba(255,255,255,.78);
+  max-width: 60ch;
+}
+.exam-banner-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.exam-banner-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .4rem .7rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.15);
+  font-size: .85rem;
+  color: rgba(255,255,255,.92);
+  backdrop-filter: blur(2px);
+}
+.exam-banner-stat b { font-weight: 700; color: #fff; }
+.exam-banner-spark {
+  position: absolute;
+  color: rgba(255,255,255,.22);
+  font-size: 1.5rem;
+  pointer-events: none;
+  user-select: none;
+}
+.exam-banner-spark--1 { top: .6rem; right: 1.2rem; font-size: 1.8rem; }
+.exam-banner-spark--2 { top: 2.4rem; right: 3rem; font-size: 1rem; }
+
+/* ============================================
    Test card form (show-ru-tests)
    ============================================ */
 .test-form-body { background: color-mix(in oklab, var(--muted, #f5f5f4) 60%, transparent); border-top: 1px solid var(--border); }
@@ -21,8 +72,8 @@
 .test-qty-input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent; text-align: center; font-size: 1.125rem; font-weight: 700; -moz-appearance: textfield; }
 .test-qty-input::-webkit-outer-spin-button, .test-qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .test-qty-hint { font-size: .75rem; color: var(--muted-fg); text-align: center; }
-.test-submit { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .875rem 1rem; border: 1px solid var(--border); background: var(--card, #fff); border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; color: inherit; transition: background .15s ease, border-color .15s ease, color .15s ease; }
-.test-submit:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+.test-submit { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .875rem 1rem; border: 1px solid #3b5bdb; background: #3b5bdb; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; color: #fff; transition: background .15s ease, border-color .15s ease, color .15s ease; }
+.test-submit:hover { background: #2f4bbf; border-color: #2f4bbf; color: #fff; }
 .test-submit-ic { font-size: .9em; }
 .test-submit-arrow { font-size: .9em; opacity: .8; }
 

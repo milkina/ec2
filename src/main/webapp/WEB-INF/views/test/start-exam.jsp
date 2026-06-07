@@ -2,14 +2,14 @@
 <c:forEach var="test" items="${TESTS_WITH_TESTS}">
               <c:if test="${test.language.code==pageLanguage}">
                 <div id="test-card" class="article-card article-card--c1 start-exam-card">
-                  <div class="article-card-cover">
-                    <span class="article-card-cat">${test.categories.size()}&nbsp;<spring:message code="modules"/></span>
-                  </div>
-                  <div class="article-card-body">
-                    <h2>${test.name}</h2>
-                    <p>${test.article.description}</p>
-                    <div class="article-card-meta">
-                      <span>⏱ 10–30 <spring:message code="min"/></span>
+                  <div class="exam-banner">
+                    <span class="exam-banner-spark exam-banner-spark--1" aria-hidden="true">&#10022;</span>
+                    <span class="exam-banner-spark exam-banner-spark--2" aria-hidden="true">&#10022;</span>
+                    <h2 class="exam-banner-title">${test.name}</h2>
+                    <p class="exam-banner-sub">${test.article.description}</p>
+                    <div class="exam-banner-stats">
+                      <span class="exam-banner-stat"><b>${test.categories.size()}</b>&nbsp;<spring:message code="modules"/></span>
+                      <span class="exam-banner-stat"><b>⏱ 10&ndash;30</b>&nbsp;<spring:message code="min"/></span>
                     </div>
                   </div>
                   <div class="article-card-body test-form-body">
@@ -22,7 +22,7 @@
           <!-- Removed native `required` because many JS multi-select plugins hide the native <select>,
                which triggers "not focusable" browser validation errors. Rely on aria-required and
                the custom client-side validation below plus server-side validation. -->
-          <select name="CATEGORY_PATH" id="CATEGORY_PATH_test_${test.pathName}" multiple="multiple" class="2col active" aria-required="true" aria-describedby="CATEGORY_PATH_test_${test.pathName}_error" aria-invalid="false">
+          <select name="CATEGORY_PATH" id="CATEGORY_PATH_test_${test.pathName}" multiple="multiple" class="2col active" aria-required="true" aria-label="<spring:message code='category.label'/>" aria-describedby="CATEGORY_PATH_test_${test.pathName}_error" aria-invalid="false">
             <c:set var="count" value="${1}"/>
             <c:forEach var="category" items="${test.categories}">
               <c:choose>

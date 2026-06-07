@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>Бесплатные тесты по Java: уровень знаний и подготовка к интервью</title>
     <link href="${pageContext.request.contextPath}/css/tom-select.min.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/sh-test.css?v=5" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/sh-test.css?v=6" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/js/tom-select.complete.min.js" defer></script>
     <script src="${pageContext.request.contextPath}/js/selectCategoriesTS.js?v=4" defer></script>
     <link rel="canonical" href="https://www.examclouds.com/ru/tests">

@@ -10,7 +10,7 @@
         <title>Java Interview Preparation: Key Questions and Answers for Success</title>
         <link href="${pageContext.request.contextPath}/css/tom-select.min.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
-        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=5" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=6" rel="stylesheet">
         <script src="${pageContext.request.contextPath}/js/tom-select.complete.min.js" defer></script>
         <script src="${pageContext.request.contextPath}/js/selectCategoriesTS.js?v=4" defer></script>
         <link rel="canonical" href="https://www.examclouds.com/questions">
