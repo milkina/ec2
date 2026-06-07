@@ -5,6 +5,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
+     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=1" rel="stylesheet">
      <meta name="description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
      <title>Java Practice Tasks | Coding Exercises and Training | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/practical-java-tasks">
@@ -91,10 +92,10 @@
                  </section>
 
                        <!-- 2-column grid -->
-                       <div class="course-ux-grid" style="margin-top:1.25rem;">
+                       <div class="tasks-ux-grid">
                          <!-- ============ MAIN ============ -->
-                         <div style="display:grid;gap:1rem;min-width:0;">
- <c:forEach var="category" items="${TESTS['java-core'].categories}">
+                         <div>
+                        <c:forEach var="category" items="${TESTS['java-core'].categories}">
                         <c:if test="${category.value.hidden==false && category.value.name.equals('Tasks')}">
 
                            <article class="task-card panel">
@@ -119,8 +120,8 @@
                          </div>
 
                          <!-- ============ RIGHT PANEL ============ -->
-                         <aside class="course-ux-side">
-                           <div class="panel">
+                         <aside>
+                           <div class="panel task-ux-side">
                              <h2 class="side-h">Overview</h2>
                              <div class="overview-grid">
                               <!-- <div class="ov-cell"><b>6</b><span>task sets</span></div>
@@ -130,7 +131,7 @@
                              </div>
                            </div>
 
-                           <div class="panel">
+                           <div class="panel task-ux-side">
                              <h2 class="side-h"><spring:message code='modules'/></h2>
                              <ul class="topic-list">
                               <c:forEach var="category" items="${TESTS['java-core'].categories}">

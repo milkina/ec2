@@ -7,6 +7,7 @@
 <t:wrapper2>
     <jsp:attribute name="language">lang="en"</jsp:attribute>
     <jsp:attribute name="header">
+        <link href="${pageContext.request.contextPath}/css/video.css?v=1" rel="stylesheet">
         <meta name="description" content="Learn Java with free video lessons for beginners! Step-by-step tutorials covering Java Core from your first program to Collections, Lambda, and Stream API. Start your path to becoming a Java developer today.">
         <title>Java Video Lessons for Beginners | Free Java Core Video Course</title>
         <link rel="canonical" href="https://www.examclouds.com/video-lessons">
@@ -112,9 +113,9 @@
                 </div>
 
                 <!-- Two column: sections list + sidebar -->
-                <div class="course-ux-grid" style="margin-top:1.5rem;">
+                <div class="tasks-ux-grid">
                     <!-- ============ MAIN: section accordions ============ -->
-                    <div style="display:grid;gap:1rem;min-width:0;">
+                    <div>
                     <c:set var="categoryNumber" value="${1}"/>
                         <c:forEach var="category" items="${VIDEO_CATEGORIES}">
                                 <c:set var="subCategoryCount" value="${0}"/>
@@ -150,8 +151,8 @@
                       </div>
 
                     <!-- ============ RIGHT PANEL ============ -->
-                    <aside class="course-ux-side">
-                        <div class="panel">
+                    <aside>
+                        <div class="panel task-ux-side">
                             <h2 class="side-h"><spring:message code="modules"/></h2>
                             <ul class="topic-list">
                               <c:forEach var="category" items="${VIDEO_CATEGORIES}">
