@@ -10,6 +10,7 @@
     <%@ include file="/WEB-INF/head-new.jsp"%>
     <title>Free Java Core Courses | Learn Java Programming Online</title>
     <meta name="description" content="Explore free Java Core tutorials. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">

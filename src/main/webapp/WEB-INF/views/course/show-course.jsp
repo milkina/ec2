@@ -8,6 +8,7 @@
 <t:wrapper2>
     <jsp:attribute name="header">
         <meta name="description" content="${TESTS[param.TEST_PATH].article.description}">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <title>${TESTS[param.TEST_PATH].article.title}</title>
         <c:set var="canonicalUrl" value="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}"/>
         <link rel="canonical" href="${canonicalUrl}">

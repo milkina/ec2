@@ -6,6 +6,7 @@
 <t:wrapper2>
   <jsp:attribute name="header">
     <meta name="description" content="Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>Блог из IT сферы на ExamClouds</title>
     <link rel="canonical" href="https://www.examclouds.com/ru/show-all-articles">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/show-all-articles">

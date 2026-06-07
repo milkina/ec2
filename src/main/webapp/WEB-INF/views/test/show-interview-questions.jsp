@@ -6,6 +6,7 @@
 <t:wrapper2>
     <jsp:attribute name="header">
         <meta name="description" content="Prepare for your Java interview with our key questions and answers. Master Java Core, technical, and API questions to succeed in your Java developer interview.">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <title>Java Interview Preparation: Key Questions and Answers for Success</title>
         <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">

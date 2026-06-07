@@ -7,6 +7,7 @@
     <jsp:attribute name="header">
      <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=1" rel="stylesheet">
      <meta name="description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
      <title>Java Practice Tasks | Coding Exercises and Training | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/practical-java-tasks">
      <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/practicheskie-zadachi">

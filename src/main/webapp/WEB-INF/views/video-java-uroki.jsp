@@ -9,6 +9,7 @@
     <jsp:attribute name="header">
         <link href="${pageContext.request.contextPath}/css/video.css?v=1" rel="stylesheet">
         <meta name="description" content="Изучайте Java с нашими видео уроками для начинающих! Пошаговые руководства, практические примеры и советы от экспертов помогут вам быстро освоить основы программирования на Java. Начните свой путь к успешной карьере разработчика уже сегодня!">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <title>Видео уроки по Java для начинающих | Видеокурс и обучение программированию</title>
         <link rel="canonical" href="https://www.examclouds.com/ru/video-java-uroki">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/video-java-uroki">

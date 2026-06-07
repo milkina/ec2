@@ -6,6 +6,7 @@
 <t:wrapper2>
   <jsp:attribute name="header">
     <meta name="description" content="Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>IT Blog on ExamClouds: Comprehensive Resource for Technology Insights</title>
     <link rel="canonical" href="https://www.examclouds.com/show-all-articles">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/show-all-articles">

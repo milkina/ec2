@@ -9,6 +9,7 @@
 <t:wrapper2>
   <jsp:attribute name="header">
     <meta name="description" content="${ARTICLE_ATTRIBUTE.description}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>${ARTICLE_ATTRIBUTE.title}</title>
     <c:set var="canonicalUrl" value="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.language.code=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}"/>
     <link rel="canonical" href="${canonicalUrl}"/>

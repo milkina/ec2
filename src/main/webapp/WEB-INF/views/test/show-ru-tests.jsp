@@ -6,6 +6,7 @@
 <t:wrapper2>
   <jsp:attribute name="header">
     <meta name="description" content="Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>Бесплатные тесты по Java: уровень знаний и подготовка к интервью</title>
     <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/sh-test.css?v=1" rel="stylesheet">

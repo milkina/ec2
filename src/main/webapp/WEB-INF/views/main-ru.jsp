@@ -10,6 +10,7 @@
     <%@ include file="/WEB-INF/head-new.jsp"%>
     <title>Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds</title>
     <meta name="description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">

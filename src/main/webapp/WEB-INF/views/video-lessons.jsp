@@ -9,6 +9,7 @@
     <jsp:attribute name="header">
         <link href="${pageContext.request.contextPath}/css/video.css?v=1" rel="stylesheet">
         <meta name="description" content="Learn Java with free video lessons for beginners! Step-by-step tutorials covering Java Core from your first program to Collections, Lambda, and Stream API. Start your path to becoming a Java developer today.">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <title>Java Video Lessons for Beginners | Free Java Core Video Course</title>
         <link rel="canonical" href="https://www.examclouds.com/video-lessons">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/video-java-uroki">
