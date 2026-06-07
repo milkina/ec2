@@ -47,151 +47,151 @@
         <to type="permanent-redirect">/java/java-core/create-run-java-application</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson1$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson1$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/introduction-to-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson4$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson4$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/osnovnye-operacii-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson5$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson5$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/uslovnye-operatory-i-cikly-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson6$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson6$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/git-i-github-osnovy-kontrolya-versij</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson7$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson7$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/oop-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson10$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson10$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/interfeisi-enum</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson11$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson11$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/wrapper-classes-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson12$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson12$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/stroki-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson14$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson14$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/generics-i-vnutrennie-klassy-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson15$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson15$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/lambda-vyrazheniya-v-java-8</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson16$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson16$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/kollekcii-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson17$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson17$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/isklyucheniya-v-java-obrabotka-oshibok</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson19$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson19$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/serializaciya-i-klonirovanie-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson20$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson20$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/maven-sborka-i-upravlenie-zavisimostyami</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson21$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson21$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/osnovy-sql-dlya-java-razrabotchika</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson22$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson22$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/jdbc-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson23$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson23$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/mnogopotochnost-v-java</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson1-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson1-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/pervoe-java-prilozhenie-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson2-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson2-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/sintaksis-java-osnovy-i-struktura-koda-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson4-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson4-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/arifmeticheskie-i-logicheskie-operacii-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesso5-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesso5-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/uslovnye-operatory-i-cikly-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson7-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson7-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/oop-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson10-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson10-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/interfejsy-enum-i-oop-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson11-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson11-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/wrappers-autoboxing-zadanija</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson12-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson12-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/java-strings-zadachi</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson13-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson13-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/lokalizaciya-i-internacionalizaciya-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson14-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson14-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/generics-i-inner-classes-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson15-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson15-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/lambda-vyrazheniya-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson16-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson16-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/kollekcii-v-java-zadachi</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson17-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson17-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/obrabotka-isklyuchenij-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson18-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson18-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/java-io-streams-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson19-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson19-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/serializaciya-i-klonirovanie-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson20-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson20-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/maven-prakticheskie-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson21-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson21-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/sql-dlya-java-razrabotchika-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson22-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson22-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/jdbc-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson23-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson23-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/mnogopotochnost-v-java-zadaniya</to>
     </rule>
     <rule>
-        <from>^/ru/java/java-core-russian/lesson24-tasks$</from>
+        <from>^(?:/ru)?/java/java-core-russian/lesson24-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/maven-prakticheskie-zadaniya</to>
     </rule>
     <rule>
