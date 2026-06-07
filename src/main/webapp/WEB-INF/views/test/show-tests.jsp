@@ -8,8 +8,10 @@
         <meta name="description" content="Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.">
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <title>Free Java Online Tests and Questions for Learning Java on ExamClouds</title>
-        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
-        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=1" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/tom-select.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=5" rel="stylesheet">
+        <script src="${pageContext.request.contextPath}/js/tom-select.complete.min.js" defer></script>
+        <script src="${pageContext.request.contextPath}/js/selectCategoriesTS.js?v=4" defer></script>
         <link rel="canonical" href="https://www.examclouds.com/tests">
         <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/tests">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/tests">
@@ -215,9 +217,5 @@
             </div>
           </section>
          </main>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-         <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
-         <script src="${pageContext.request.contextPath}/js/selectCategories.js"></script>
-         <script src="${pageContext.request.contextPath}/js/general.js"></script>
  </jsp:body>
 </t:wrapper2>

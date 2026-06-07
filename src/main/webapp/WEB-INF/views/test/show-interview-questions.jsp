@@ -8,9 +8,11 @@
         <meta name="description" content="Prepare for your Java interview with our key questions and answers. Master Java Core, technical, and API questions to succeed in your Java developer interview.">
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <title>Java Interview Preparation: Key Questions and Answers for Success</title>
-        <link href="${pageContext.request.contextPath}/css/multi-select.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/tom-select.min.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/english.css" rel="stylesheet">
-        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=1" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/sh-test.css?v=5" rel="stylesheet">
+        <script src="${pageContext.request.contextPath}/js/tom-select.complete.min.js" defer></script>
+        <script src="${pageContext.request.contextPath}/js/selectCategoriesTS.js?v=4" defer></script>
         <link rel="canonical" href="https://www.examclouds.com/questions">
         <link rel="alternate" hreflang="en" href="https://www.examclouds.com/questions">
         <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/questions">
@@ -178,9 +180,5 @@
             <p class="articles-lede interview-lede">Utilize our extensive question bank to prepare for your Java interview and achieve success in your career!</p>
           </section>
          </main>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-         <script src="${pageContext.request.contextPath}/js/jquery.multi-select.js"></script>
-         <script src="${pageContext.request.contextPath}/js/selectCategories.js"></script>
-         <script src="${pageContext.request.contextPath}/js/general.js"></script>
  </jsp:body>
 </t:wrapper2>

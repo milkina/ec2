@@ -115,3 +115,73 @@ font-size:1.5rem
 .interview-lede{
 margin-top:2rem;font-weight:700
 }
+/* Tom Select: taller dropdown for category lists */
+.ts-dropdown .ts-dropdown-content { max-height: 420px; }
+@media (max-height: 700px) {
+  .ts-dropdown .ts-dropdown-content { max-height: 60vh; }
+}
+/* Tom Select control: match the .test-qty stepper shape */
+.test-form .ts-wrapper.multi .ts-control,
+.test-form .ts-wrapper.single .ts-control {
+  background: var(--card, #fff);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .625rem .75rem;
+  min-height: calc(2rem + .75rem + 2px);
+  font: inherit;
+  font-size: .9375rem;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+.test-form .ts-wrapper.focus .ts-control {
+  border-color: var(--primary, #2563eb);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary, #2563eb) 18%, transparent);
+}
+.test-form .ts-wrapper .ts-control > input { font-size: .9375rem; }
+.test-form .ts-wrapper.multi .ts-control > .item {
+  background: var(--muted, #f5f5f4);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .15rem .5rem;
+  font-size: .85rem;
+  font-weight: 600;
+}
+/* Dropdown panel: same radius/border family */
+.ts-dropdown {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px -14px rgba(0,0,0,.18);
+  margin-top: 4px;
+}
+/* Invalid state for Tom Select */
+.test-field.field-invalid .ts-wrapper .ts-control {
+  border: 1px solid #dc2626 !important;
+  border-left-width: 4px !important;
+}
+/* "Select all" / "Select module" links inside dropdown */
+.ts-dropdown .ts-dropdown-header {
+  padding: .5rem .75rem;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--muted, #f5f5f4) 60%, transparent);
+}
+.ts-dropdown .ts-select-all,
+.ts-dropdown .ts-select-group {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--primary, #2563eb);
+  text-decoration: none;
+  cursor: pointer;
+}
+.ts-dropdown .ts-select-all:hover,
+.ts-dropdown .ts-select-group:hover { text-decoration: underline; }
+.ts-dropdown .optgroup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .5rem .75rem;
+  font-weight: 700;
+  font-size: .9rem;
+  background: color-mix(in oklab, var(--muted, #f5f5f4) 40%, transparent);
+}
+.ts-dropdown .optgroup-label { flex: 1; min-width: 0; }
