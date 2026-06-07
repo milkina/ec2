@@ -63,7 +63,7 @@ public class Test implements Serializable, Comparable<Test> {
     @JoinColumn(name = "language")
     private Language language;
 
-    @OneToMany(mappedBy = "testId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "test", fetch = FetchType.EAGER)
     @MapKeyColumn(name = "language_id")
     @BatchSize(size = 50)
     private Map<Integer, OtherLanguage> canonicalUrls;

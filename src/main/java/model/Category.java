@@ -58,7 +58,7 @@ public class Category implements Serializable, Comparable<Category> {
     @BatchSize(size = 50)
     private List<Category> subCategories;
 
-    @OneToMany(mappedBy = "categoryId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
     @MapKeyColumn(name = "language_id")
     @BatchSize(size = 50)
     private Map<Integer, OtherLanguage> canonicalUrls;

@@ -44,7 +44,7 @@ public class Article {
     private boolean indexStatus = true;
 
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "reference_id")
+    @JoinColumn(name = "reference_id", foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
     private List<Comment> comments;
 
     @OneToOne

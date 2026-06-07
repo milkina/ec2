@@ -168,16 +168,15 @@ public class TestUtility extends SpringUtility {
 
         Map<Integer, OtherLanguage> canonicalUrls = test.getCanonicalUrls();
         ServletContext servletContext = request.getServletContext();
-        int testId = test.getId();
 
-        setTestCanonicalUrl(canonicalUrls, ruVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.ru.name()), testId, servletContext, originalPage);
-        setTestCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), testId, servletContext, originalPage);
+        setTestCanonicalUrl(canonicalUrls, ruVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.ru.name()), test, servletContext, originalPage);
+        setTestCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), test, servletContext, originalPage);
     }
 
     private static void setTestCanonicalUrl(Map<Integer, OtherLanguage> canonicalUrls,
                                              String version,
                                              Language language,
-                                             int testId,
+                                             Test test,
                                              ServletContext servletContext,
                                              String originalPage) {
         OtherLanguage otherLanguage = canonicalUrls.get(language.getId());
@@ -185,7 +184,7 @@ public class TestUtility extends SpringUtility {
             if (version != null && !version.isEmpty()) {
                 otherLanguage = new OtherLanguage();
                 otherLanguage.setLanguage(language);
-                otherLanguage.setTestId(testId);
+                otherLanguage.setTest(test);
                 otherLanguage.setOriginal(originalPage);
                 otherLanguage.setUrl(version);
                 otherLanguage = SpringUtility.getCanonicalUrlService(servletContext).createOtherLanguages(otherLanguage);

@@ -10,9 +10,13 @@ public class OtherLanguage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private int categoryId;
+    @ManyToOne
+    @JoinColumn(name = "categoryId")
+    private Category category;
 
-    private Integer testId;
+    @ManyToOne
+    @JoinColumn(name = "testId")
+    private Test test;
 
     @ManyToOne
     @JoinColumn(name = "language_id")
@@ -30,20 +34,20 @@ public class OtherLanguage {
         this.id = id;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
-    public Integer getTestId() {
-        return testId;
+    public Test getTest() {
+        return test;
     }
 
-    public void setTestId(Integer testId) {
-        this.testId = testId;
+    public void setTest(Test test) {
+        this.test = test;
     }
 
     public Language getLanguage() {

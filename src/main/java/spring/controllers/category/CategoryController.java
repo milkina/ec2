@@ -60,6 +60,11 @@ public class CategoryController {
             String testPath = request.getParameter(TEST_PATH);
             logger.info("Category " + categoryPath + " not found for test "
                     + testPath);
+            String fullUrl = request.getRequestURL().toString();
+            if (request.getQueryString() != null) {
+                fullUrl += "?" + request.getQueryString();
+            }
+            logger.info("Full URL: " + fullUrl);
             return new ModelAndView("notFoundErrorPage");
         }
         Article article = category.getArticle();
