@@ -10,14 +10,14 @@
   </jsp:attribute>
   <jsp:body>
         <div class="mainArea">
-        <form action="${pageContext.request.contextPath}/save-question" method="POST" id="addQuestionForm" >
+        <form action="${pageContext.request.contextPath}/save-question" method="post" id="addQuestionForm" >
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            <BR><BR>
+            <br><br>
             <input type="hidden" value="1" id="answerNumber" name="answerNumber">
             <%@ include file="/edit/select-test-category-new.jsp" %>
             <strong><spring:message code="question"/>:</strong>
             <textarea name="QUESTION_TEXT_PARAM" id="QUESTION_TEXT_PARAM" rows="20" cols="80">
-            </textarea> <BR> <BR>
+            </textarea> <br> <br>
             <strong><spring:message code="answers"/>:</strong>
             <div id="answersDiv" class="answerBlockDiv">
               <div id="answerblock1">
@@ -29,7 +29,7 @@
                   id="deleteAnswer1">
               </div>
             </div>
-            <BR>
+            <br>
             <input type="button" value="<spring:message code="save.button"/>" name="ok" id="ok" onclick="saveQuestion('${pageContext.request.contextPath}')">
             <input type="button" value="<spring:message code="add.next.answer"/>"
             onclick="addNextAnswer('<spring:message code="delete"/>');" name="addAnswer">

@@ -10,7 +10,7 @@
 </jsp:attribute>
  <jsp:body>
    <div class="mainArea">
-        <form:form id="addTestForm" action="${pageContext.request.contextPath}/add-course" method="POST" >
+        <form:form id="addTestForm" action="${pageContext.request.contextPath}/add-course" method="post" >
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <br>
             <%@ include file="/administration/test/testParameters.jsp" %>

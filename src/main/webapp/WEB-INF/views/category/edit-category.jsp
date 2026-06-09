@@ -13,12 +13,12 @@
  <jsp:body>
        <div class="mainArea">
        <h1><spring:message code="edit.category"/></h1>
-        <form action="${pageContext.request.contextPath}/edit-category" method="POST" id="editCategoryForm" >
+        <form action="${pageContext.request.contextPath}/edit-category" method="post" id="editCategoryForm" >
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <span class="adminLabel"><spring:message code="category.id"/>:</span><span id="categoryId">${CATEGORY_ATTRIBUTE.id}</span>
             <input type="hidden" name="CATEGORY_PATH" value="${param.CATEGORY_PATH}">
             <input type="hidden" name="TEST_PATH" value="${param.TEST_PATH}">
-            <BR>
+            <br>
             <span class="adminLabel"><spring:message code="courses"/>:</span>
              <c:choose>
                  <c:when test="${DUPLICATE_CATEGORIES[param.CATEGORY_PATH]!=null}">
@@ -30,7 +30,7 @@
                      ${param.TEST_PATH}
                  </c:otherwise>
              </c:choose>
-             <BR>
+             <br>
             <%@ include file="/edit/categoryParameters.jsp" %>
             <input type="submit" value="<spring:message code="save.button"/>" name="Save"
              id="save">

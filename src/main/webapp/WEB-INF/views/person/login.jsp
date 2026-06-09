@@ -31,7 +31,7 @@
 
         <div class="auth-divider">or</div>
 -->
-        <form class="auth-form" action="${pageContext.request.contextPath}${pageLanguage=='ru'?'/ru':''}/login" method="POST" id="LoginForm">
+        <form class="auth-form" action="${pageContext.request.contextPath}${pageLanguage=='ru'?'/ru':''}/login" method="post" id="LoginForm">
           <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
           <div class="auth-field">
             <label for="email"><spring:message code="login"/></label>

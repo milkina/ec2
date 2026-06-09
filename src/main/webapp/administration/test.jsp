@@ -24,7 +24,7 @@
              </td>
           </tr>
          </c:forEach>
-      </table><BR>
+      </table><br>
       <script src="${pageContext.request.contextPath}/js/moveTestUp.js" async></script>
       <a href="${pageContext.request.contextPath}/show-add-course" id="addTest"><spring:message	code="add.course"/></a>
       </div>

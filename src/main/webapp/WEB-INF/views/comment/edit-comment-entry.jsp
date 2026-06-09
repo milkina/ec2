@@ -13,7 +13,7 @@
                    <comment:type/>
               </jsp:attribute>
              </selectTag:select>
-           </div><BR>
+           </div><br>
            <div><span class="adminLabel"><spring:message code="comment"/></span>
             <textarea rows="5" cols="50" maxlength="350" name="COMMENT_BODY" required><comment:body/>
             </textarea>

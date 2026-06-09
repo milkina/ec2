@@ -10,7 +10,7 @@
  <jsp:body>
    <main style="height:200px">
       <h1>ExamClouds</h1>
-      <BR><BR>
+      <br><br>
       <span id="message">${message} ${param.message}</span>
    </main>
  </jsp:body>

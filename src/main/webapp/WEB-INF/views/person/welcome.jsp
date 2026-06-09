@@ -6,7 +6,7 @@
     <title><spring:message code="welcome.on"/> ExamClouds</title>
     <meta name="robots" content="noindex">
  </jsp:attribute>
- <jsp:body> <BR><BR>
+ <jsp:body> <br><br>
      <span id="welcomeText">${USER_NAME}, <spring:message code="thanks.for.register"/></span>
  </jsp:body>
 </t:wrapper>

@@ -11,19 +11,19 @@
  </jsp:attribute>
  <jsp:body>
        <div class="mainArea">
-        <form action="${pageContext.request.contextPath}/save-article" method="POST" >
+        <form action="${pageContext.request.contextPath}/save-article" method="post" >
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <input type="hidden" name="ARTICLE_ID" value="${ARTICLE_ATTRIBUTE.id}">
             <span class="adminLabel"><spring:message code="url"/>:<span class="wrongMessage">*</span></span>
-            <input type="text" name="URL_PARAM" maxlength="70" required value="${ARTICLE_ATTRIBUTE.url}" size="70"><BR>
+            <input type="text" name="URL_PARAM" maxlength="70" required value="${ARTICLE_ATTRIBUTE.url}" size="70"><br>
             <span class="adminLabel">Tag:</span>
-            <input type="text" name="ARTICLE_TAG" maxlength="50" value="${ARTICLE_ATTRIBUTE.tag}" size="30"><BR>
+            <input type="text" name="ARTICLE_TAG" maxlength="50" value="${ARTICLE_ATTRIBUTE.tag}" size="30"><br>
             <span class="adminLabel">Min read:</span>
-            <input type="text" name="ARTICLE_MIN_READ" maxlength="10" value="${ARTICLE_ATTRIBUTE.minRead}" size="10"><BR>
+            <input type="text" name="ARTICLE_MIN_READ" maxlength="10" value="${ARTICLE_ATTRIBUTE.minRead}" size="10"><br>
             <span class="adminLabel"><spring:message code="title"/>:<span class="wrongMessage">*</span></span>
-            <input type="text" name="TITLE" maxlength="70" required value="${ARTICLE_ATTRIBUTE.title}" size="70"><BR>
+            <input type="text" name="TITLE" maxlength="70" required value="${ARTICLE_ATTRIBUTE.title}" size="70"><br>
             <span class="adminLabel"><spring:message code="image.url"/>:</span>
-            <input type="text" name="ARTICLE_IMAGE" maxlength="70" value="${ARTICLE_ATTRIBUTE.image}"><BR>
+            <input type="text" name="ARTICLE_IMAGE" maxlength="70" value="${ARTICLE_ATTRIBUTE.image}"><br>
                        <strong class="adminLabel"><spring:message	code="language"/>:</strong>
                         <select name="LANGUAGE">
                            <c:forEach var="language" items="${LANGUAGES}">
@@ -32,17 +32,17 @@
                                   >${language.value.description}
                               </option>
                            </c:forEach>
-                        </select><BR>
+                        </select><br>
             <span class="adminLabel"><spring:message code="index"/>?</span>
             <input type="checkbox" name="index"
               <c:if test="${ARTICLE_ATTRIBUTE==null || ARTICLE_ATTRIBUTE.indexStatus}">checked</c:if>>
-            <BR>
+            <br>
              <span class="adminLabel"><spring:message code="keywords"/>:<span class="wrongMessage">*</span></span>
-            <textarea rows="7" cols="40" maxlength="160" name="keywords" required id="keywords">${ARTICLE_ATTRIBUTE.keywords}</textarea>  <BR>
+            <textarea rows="7" cols="40" maxlength="160" name="keywords" required id="keywords">${ARTICLE_ATTRIBUTE.keywords}</textarea>  <br>
             <span class="adminLabel"><spring:message code="meta.description"/>:<span class="wrongMessage">*</span></span>
-            <textarea rows="7" cols="40" maxlength="160" name="description" required id="description">${ARTICLE_ATTRIBUTE.description}</textarea>  <BR>
+            <textarea rows="7" cols="40" maxlength="160" name="description" required id="description">${ARTICLE_ATTRIBUTE.description}</textarea>  <br>
             <span class="adminLabel"><spring:message code="text"/>:<span class="wrongMessage">*</span></span>
-            <textarea rows="25" cols="80" name="article.text" id="ARTICLE_TEXT">${ARTICLE_ATTRIBUTE.text}</textarea> <BR>
+            <textarea rows="25" cols="80" name="article.text" id="ARTICLE_TEXT">${ARTICLE_ATTRIBUTE.text}</textarea> <br>
             <input type="submit" value="<spring:message code="save.button"/>" name="Save" id="save"><br>
         </form>
       </div>

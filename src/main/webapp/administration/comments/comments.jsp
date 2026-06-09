@@ -2,7 +2,7 @@
 <%@ taglib uri="/WEB-INF/tld/commentjsp-taglib.tld" prefix="comment"%>
 <h3 class="header3"><spring:message	code="comments"/></h3>
 <form action="${pageContext.request.contextPath}/delete-comment"
-    method="POST">
+    method="post">
 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 <div>
 <input type="submit" value="<spring:message	code="delete.comments"/>" name="DeleteCommentButton">

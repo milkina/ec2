@@ -14,4 +14,4 @@
          <option value="<select:categoryPathName/>" <select:categorySelected/>><select:categoryName/></option>
       </select:category>
     </select>
-<BR><BR>
+<br><br>

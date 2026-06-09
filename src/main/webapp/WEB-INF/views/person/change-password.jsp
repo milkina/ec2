@@ -4,7 +4,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <t:wrapper>
   <jsp:attribute name="header">
-     <TITLE><spring:message code="change.password.button"/></TITLE>
+     <title><spring:message code="change.password.button"/></title>
         <%@ include file="/WEB-INF/head_common.jsp" %>
         <meta name="robots" content="noindex">
  </jsp:attribute>
@@ -12,9 +12,9 @@
     <div class="mainArea">
       <h3 class="header3"><spring:message code="change.password.button"/></h3>
       <form:form action="${pageContext.request.contextPath}/save-user-password" id="ChangePasswordForm"
-       name="ChangePasswordForm" method="POST">
+       name="ChangePasswordForm" method="post">
        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-       <span class="wrongMessage">${message}</span><BR>
+       <span class="wrongMessage">${message}</span><br>
       <table>
         <tr>
             <td><spring:message code="login"/></td>
@@ -28,7 +28,7 @@
             <td><input type="password" required maxlength="50" id="confirmPassword" name="confirmPassword"></td>
         </tr>
       </table>
-      <BR>
+      <br>
       <input type="submit" value="<spring:message code="save.button"/>" id="confirm">
       </form:form>
     </div>

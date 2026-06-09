@@ -14,10 +14,10 @@
         <h2 class="header2">${SOME_USER.login} <spring:message code="history.label"/></h2>
         <table style="width:100%">
         <tr>
-                        <td style="width:10%"><B><spring:message code="date.label"/></B></td>
-                        <td style="width:10%"><B><spring:message code="percent.label"/></B></td>
-                        <td style="width:10%"><B><spring:message code="number.questions.label"/></B></td>
-                        <td style="width:70%"><B><spring:message code="category.label"/></B></td>
+                        <td style="width:10%"><b><spring:message code="date.label"/></b></td>
+                        <td style="width:10%"><b><spring:message code="percent.label"/></b></td>
+                        <td style="width:10%"><b><spring:message code="number.questions.label"/></b></td>
+                        <td style="width:70%"><b><spring:message code="category.label"/></b></td>
         </tr>
         <c:forEach var="exam" items="${USER_TEST_EXAMS}">
            <tr>
@@ -36,7 +36,7 @@
         </c:forEach>
         </table>
     </div>
-    <BR>
+    <br>
  </jsp:body>
  </t:wrapper>
 

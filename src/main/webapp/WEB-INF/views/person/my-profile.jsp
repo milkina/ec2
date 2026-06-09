@@ -13,17 +13,17 @@
  <jsp:body>
     <div class="mainArea">
         <h2 class="header2"><spring:message code="personal.data.label"/></h2>
-        <form:form action="${pageContext.request.contextPath}/change-user-settings" id="ProfileForm" method="POST">
+        <form:form action="${pageContext.request.contextPath}/change-user-settings" id="ProfileForm" method="post">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            <span class="wrongMessage">${message}</span><BR>
+            <span class="wrongMessage">${message}</span><br>
             <table>
                 <tr>
-                    <td><B><spring:message code="login"/>:</B><span class="wrongMessage">*</span></td>
-                    <td><form:input class="selectWidth" path="login" required="required"/><BR></td>
+                    <td><b><spring:message code="login"/>:</b><span class="wrongMessage">*</span></td>
+                    <td><form:input class="selectWidth" path="login" required="required"/><br></td>
                 </tr>
                 <tr>
-                    <td><B>E-mail:</B><span class="wrongMessage">*</span></td>
-                    <td><form:input class="selectWidth" path="email" required="required"/><BR></td>
+                    <td><b>E-mail:</b><span class="wrongMessage">*</span></td>
+                    <td><form:input class="selectWidth" path="email" required="required"/><br></td>
                 </tr>
             </table>
             <br>
@@ -31,7 +31,7 @@
             <input type="button" value="<spring:message code="change.password.button"/>" name="ChangePassword"
                    id="ChangePassword" onclick="openChangePasswordWindow('${pageContext.request.contextPath}')">
         </form:form>
-        <form:form action="${pageContext.request.contextPath}/delete-person" id="DeleteForm" method="POST">
+        <form:form action="${pageContext.request.contextPath}/delete-person" id="DeleteForm" method="post">
              <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
              <input type="hidden" value="${person.id}" name="USER_ID" id="USER_ID">
              <input type="submit" value="<spring:message code="delete.account.button"/>" name="Delete" id="Delete">
@@ -39,10 +39,10 @@
         <h2 class="header2"><spring:message code="history.label"/></h2>
         <table style="width:100%">
         <tr>
-                        <td style="width:8%"><B><spring:message code="date.label"/></B></td>
-                        <td style="width:8%"><B><spring:message code="percent.label"/></B></td>
-                        <td style="width:8%"><B><spring:message code="number.questions.label"/></B></td>
-                        <td style="width:76%"><B><spring:message code="category.label"/></B></td>
+                        <td style="width:8%"><b><spring:message code="date.label"/></b></td>
+                        <td style="width:8%"><b><spring:message code="percent.label"/></b></td>
+                        <td style="width:8%"><b><spring:message code="number.questions.label"/></b></td>
+                        <td style="width:76%"><b><spring:message code="category.label"/></b></td>
         </tr>
         <c:forEach var="exam" items="${USER_TEST_EXAMS}">
            <tr>
@@ -62,7 +62,7 @@
         </table>
         <a href="${pageContext.request.contextPath}/add-question" id="addQuestion">
            <spring:message code="add.question.button"/></a>
-        <BR><a href="${pageContext.request.contextPath}/show-questions?TYPE=MY_QUESTIONS" id="myQuestions">
+        <br><a href="${pageContext.request.contextPath}/show-questions?TYPE=MY_QUESTIONS" id="myQuestions">
            <spring:message code="my.questions.button"/></a>
         <h2 class="header2"><spring:message code="my.articles"/></h2>
         <ol class="commentList">
@@ -86,7 +86,7 @@
         </c:forEach>
         </ol>
     </div>
-    <BR>
+    <br>
  </jsp:body>
  </t:wrapper>
 

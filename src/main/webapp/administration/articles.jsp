@@ -31,4 +31,4 @@
 </div>
 <a href="${pageContext.request.contextPath}/add-article" id="addArticle">
    <spring:message code="add.article"/>
-</a><BR>
+</a><br>
