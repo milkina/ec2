@@ -91,7 +91,6 @@ public class LoginController {
         String deleteHeader = COOKIE_VALUE + "=; Max-Age=0; Path=/; "
                 + "SameSite=None; Secure; HttpOnly; Partitioned";
         response.setHeader("Set-Cookie", deleteHeader);
-        String href = getResourceValue(locale, "menu.home", "label");
         String home = request.getRequestURI().contains("/ru/") ? "ru/" : "";
         return "redirect:/" + home;
     }

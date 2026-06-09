@@ -79,7 +79,8 @@ public class CategoryController {
         model.addAttribute(NEXT_CATEGORY, nextCategory);
         model.addAttribute(PREVIOUS_CATEGORY, previousCategory);
         if (category.getHidden()) {
-            return new ModelAndView("forward:" + getResourceValue(locale, "menu.home", "label"));
+            String home = request.getRequestURI().contains("/ru/") ? "/ru/" : "/";
+            return new ModelAndView("forward:" + home);
         }
         return new ModelAndView("category/show-category");
     }

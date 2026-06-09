@@ -57,7 +57,7 @@
       <a href="<menu:articlesTag/>"><i class="fas fa-newspaper"></i> <spring:message code="articles"/></a>
       <c:choose>
                 <c:when test="${param.param != null || person == null}">
-      		       <a href="${pageContext.request.contextPath}/show-login-page" id='my-profile'>
+      		       <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}show-login-page" id='my-profile'>
       		         <spring:message code="log.in"/>
       		       </a>
       		  </c:when>
@@ -72,7 +72,7 @@
                                                                     <a href="<%=request.getContextPath()%>/show-administration">
                                                                                <spring:message code="administration.panel"/></a>
                                                                 </c:if>
-                                      <a href="${pageContext.request.contextPath}/show-user-profile">
+                                      <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}show-user-profile">
                                                                       <spring:message code="my.profile.label"/>
                                                                    </a>
                                       <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}logout" id="isLogin"><spring:message code="logout"/></a>

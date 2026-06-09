@@ -177,7 +177,7 @@ public class PersonController {
         personService.save(person);
     }
 
-    @RequestMapping(value = "/show-user-profile", method = RequestMethod.GET)
+    @RequestMapping(value = {"/show-user-profile", "/ru/show-user-profile"}, method = RequestMethod.GET)
     public ModelAndView showUserProfile(Model model) {
         HttpSession session = GeneralUtility.getSession(true);
         Person person = (Person) session.getAttribute(PERSON_ATTRIBUTE);
