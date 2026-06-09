@@ -17,21 +17,14 @@
                         <td style="width:10%"><b><spring:message code="date.label"/></b></td>
                         <td style="width:10%"><b><spring:message code="percent.label"/></b></td>
                         <td style="width:10%"><b><spring:message code="number.questions.label"/></b></td>
-                        <td style="width:70%"><b><spring:message code="category.label"/></b></td>
+                        <td style="width:70%"><b><spring:message code="course"/></b></td>
         </tr>
         <c:forEach var="exam" items="${USER_TEST_EXAMS}">
            <tr>
                 <td style="width:10%">${exam.formattedDate}</td>
                 <td style="width:10%">${exam.percent}%</td>
                 <td style="width:10%">${exam.amount}</td>
-                <td style="width:70%">(${fn:length(exam.categories)})
-                   <c:forEach var="category" items="${exam.categories}">
-                      <c:if test="${category!=null && category.parentCategory!=null}">
-                         ${category.parentCategory.name}.
-                      </c:if>
-                      ${category.name}&nbsp;&nbsp;&nbsp;
-                   </c:forEach>
-                </td>
+                <td style="width:70%">${exam.test.name}</td>
            </tr>
         </c:forEach>
         </table>

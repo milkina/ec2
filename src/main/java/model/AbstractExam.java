@@ -69,6 +69,10 @@ public class AbstractExam<T extends AbstractQuestionEntry> {
             inverseJoinColumns = {@JoinColumn(name = "category_id")})
     private List<Category> categories;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "test_id")
+    private Test test;
+
     @Transient
     private T currentQuestionEntry;
 
@@ -118,6 +122,14 @@ public class AbstractExam<T extends AbstractQuestionEntry> {
 
     public void setCategories(List<Category> categories) {
         this.categories = categories;
+    }
+
+    public Test getTest() {
+        return test;
+    }
+
+    public void setTest(Test test) {
+        this.test = test;
     }
 
     public void setCategory(Category category) {

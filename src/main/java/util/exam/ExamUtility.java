@@ -5,6 +5,7 @@ import model.AbstractQuestionEntry;
 import model.Answer;
 import model.Category;
 import model.QuestionExam;
+import model.Test;
 import model.TestExam;
 import model.TestQuestionEntry;
 import model.person.Person;
@@ -17,11 +18,13 @@ import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 
 import static util.AllConstants.SHOW_QUIZ_QUESTION_PAGE;
 import static util.AllConstants.SHOW_TEST_QUESTION_PAGE;
 import static util.AllConstantsAttribute.CURRENT_EXAM_ATTRIBUTE;
+import static util.AllConstantsAttribute.TESTS;
 import static util.AllConstantsParam.ANSWER_NUMBER;
 import static util.AllConstantsParam.NUMBER_OF_QUESTIONS;
 
@@ -89,17 +92,28 @@ public class ExamUtility extends SpringUtility {
     }
 
     public static TestExam setTestExam(HttpSession session, Person person,
-                                       List<AbstractQuestionEntry> questionEntries, String[] categoryPaths, int count) {
+                                       List<AbstractQuestionEntry> questionEntries, String testPath,
+                                       String[] categoryPaths, int count) {
         List<Category> categories = getCategories(categoryPaths, session.getServletContext());
         TestExam exam = new TestExam();
         exam.setPerson(person);
         exam.setQuestionEntries(questionEntries);
         exam.setCurrentNumber(0);
         exam.setCategories(categories);
+        exam.setTest(getTest(testPath, session.getServletContext()));
         exam.setCurrentQuestionEntry(questionEntries.get(0));
         exam.setAmount(count);
         session.setAttribute(CURRENT_EXAM_ATTRIBUTE, exam);
         return exam;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static Test getTest(String testPath, ServletContext servletContext) {
+        if (testPath == null) {
+            return null;
+        }
+        Map<String, Test> testMap = (Map<String, Test>) servletContext.getAttribute(TESTS);
+        return testMap == null ? null : testMap.get(testPath);
     }
 
     public static String updateCurrentQuestionEntry(int currentNumber, AbstractExam exam) {
@@ -118,13 +132,14 @@ public class ExamUtility extends SpringUtility {
 
     public static QuestionExam setQuestionExam(HttpSession session, Person person,
                                                List<AbstractQuestionEntry> questionEntries,
-                                               String[] categoryPaths, int count) {
+                                               String testPath, String[] categoryPaths, int count) {
         List<Category> categories = getCategories(categoryPaths, session.getServletContext());
         QuestionExam exam = new QuestionExam();
         exam.setPerson(person);
         exam.setQuestionEntries(questionEntries);
         exam.setCurrentNumber(0);
         exam.setCategories(categories);
+        exam.setTest(getTest(testPath, session.getServletContext()));
         exam.setCurrentQuestionEntry(questionEntries.get(0));
         exam.setAmount(count);
         session.setAttribute(CURRENT_EXAM_ATTRIBUTE, exam);
