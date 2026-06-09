@@ -2,6 +2,7 @@
 <%@page trimDirectiveWhitespaces="true"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
 <p class="lesson-outline-eyebrow">${TESTS[param.TEST_PATH].name}</p>
 <c:set var="catStatus" value="1" />
 <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
