@@ -34,12 +34,20 @@ function deleteCourse(contextPath, test, message){
      return xmlreq;
  }
  var req = newXMLHttpRequest();
+ function setCsrfHeader(xhr) {
+     var token = document.querySelector('meta[name="_csrf"]');
+     var header = document.querySelector('meta[name="_csrf_header"]');
+     if (token && header && token.content && header.content) {
+         xhr.setRequestHeader(header.content, token.content);
+     }
+ }
  function moveCategoryUp(category, previousCategory, contextPath, testPath) {
      var url = contextPath + "/move-category";
 
      req.open("POST", url, true);
      req.setRequestHeader("Content-Type",
              "application/x-www-form-urlencoded");
+     setCsrfHeader(req);
 
      req.send("CATEGORY_PATH=" + category
               + "&PREVIOUS_CATEGORY_PATH=" + previousCategory
@@ -52,6 +60,7 @@ function deleteCourse(contextPath, test, message){
      req.open("POST", url, true);
      req.setRequestHeader("Content-Type",
              "application/x-www-form-urlencoded");
+     setCsrfHeader(req);
 
      req.send("PREVIOUS_TEST_PATH=" + previousTest
               + "&TEST_PATH=" + testPath);

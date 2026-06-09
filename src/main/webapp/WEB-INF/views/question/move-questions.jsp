@@ -14,6 +14,7 @@
            <c:if test="${person.sysadmin}">
               <h1 class="header1"><spring:message code="move.questions"/></h1>
               <form action="${pageContext.request.contextPath}/move-batch" method="POST" id="addQuestionForm">
+                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                  <input type="hidden" name="OLD_TEST_PATH" value="${param.OLD_TEST_PATH}">
                  <input type="hidden" name="OLD_CATEGORY_PATH" value="${param.OLD_CATEGORY_PATH}">
                  <span class="adminLabel"><spring:message code="from.uppercase"/></span><br>

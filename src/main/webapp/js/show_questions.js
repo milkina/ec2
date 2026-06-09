@@ -24,6 +24,7 @@ function markAnswered(contextPath, id) {
     req.open("POST", url, true);
     req.setRequestHeader("Content-Type",
             "application/x-www-form-urlencoded");
+    setCsrfHeader(req);
     req.send(param);
 }
 
@@ -87,6 +88,13 @@ function approveQuestion(contextPath, questionId) {
         'QUESTION_ENTRY_ID_PARAM=' + questionId;
     }
 }
+ function setCsrfHeader(xhr) {
+     var token = document.querySelector('meta[name="_csrf"]');
+     var header = document.querySelector('meta[name="_csrf_header"]');
+     if (token && header && token.content && header.content) {
+         xhr.setRequestHeader(header.content, token.content);
+     }
+ }
  function newXMLHttpRequest() {
      var xmlreq = false;
      if (window.XMLHttpRequest) {
@@ -112,6 +120,7 @@ function approveQuestion(contextPath, questionId) {
      req.onreadystatechange = reply;
      req.setRequestHeader("Content-Type",
              "application/x-www-form-urlencoded");
+     setCsrfHeader(req);
 
      req.send("examName=" + name + "&examCount=" + number);
  }

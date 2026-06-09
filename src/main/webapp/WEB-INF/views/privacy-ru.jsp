@@ -1,7 +1,7 @@
 ﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<t:wrapper>
+<t:wrapper2>
     <jsp:attribute name="language">lang="ru"</jsp:attribute>
     <jsp:attribute name="header">
     <title>Политика конфиденциальности - ExamClouds</title>
@@ -24,6 +24,8 @@
     <meta property="twitter:image:alt" content="Политика конфиденциальности - ExamClouds">
  </jsp:attribute>
     <jsp:body>
+    <main>
+      <section class="container articles-page">
         <h1>Политика в отношении обработки персональных данных</h1>
             <div>
                 <div>
@@ -198,5 +200,7 @@
                     </div>
                 </div>
             </div>
+        </section>
+     </main>
     </jsp:body>
-</t:wrapper>
+</t:wrapper2>

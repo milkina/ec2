@@ -13,6 +13,7 @@
       <h3 class="header3"><spring:message code="change.password.button"/></h3>
       <form:form action="${pageContext.request.contextPath}/save-user-password" id="ChangePasswordForm"
        name="ChangePasswordForm" method="POST">
+       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
        <span class="wrongMessage">${message}</span><BR>
       <table>
         <tr>

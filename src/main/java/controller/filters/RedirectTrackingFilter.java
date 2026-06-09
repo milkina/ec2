@@ -12,8 +12,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Locale;
 
+import static util.AllConstantsAttribute.PAGE_LANGUAGE;
+
 public class RedirectTrackingFilter implements Filter {
-    private LocaleResolver localeResolver;
+        private LocaleResolver localeResolver;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -28,7 +30,7 @@ public class RedirectTrackingFilter implements Filter {
             HttpServletRequest httpRequest = (HttpServletRequest) request;
             HttpSession session = httpRequest.getSession();
             String language = httpRequest.getRequestURI().contains("/ru/") ? "ru" : "en";
-            session.setAttribute("pageLanguage", language);
+            session.setAttribute(PAGE_LANGUAGE, language);
 
             Locale newLocale = new Locale(language);
             localeResolver.setLocale(httpRequest, (HttpServletResponse) response, newLocale);

@@ -13,6 +13,7 @@
     <%@ taglib uri="/WEB-INF/tld/commentjsp-taglib.tld" prefix="comment"%>
     <%@ taglib uri="/WEB-INF/tld/select-tagjsp-taglib.tld" prefix="selectTag"%>
     <form method="post" action="${pageContext.request.contextPath}/modify-comment">
+          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
           <input type="hidden" name="COMMENT_ID" value="${param.COMMENT_ID}">
           <input type="hidden" name="EDIT_MODE_PARAM" value="EDIT">
        <%@ include file="edit-comment-entry.jsp" %>

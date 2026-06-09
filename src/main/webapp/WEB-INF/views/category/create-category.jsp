@@ -12,6 +12,7 @@
  <jsp:body>
   <div class="mainArea">
         <form id="addCategoryForm" action="${pageContext.request.contextPath}/create-category" method="post">
+             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
              <br>
             <strong class="adminLabel"><spring:message code="course"/>:</strong>
             <strong class="adminLabel">${TESTS[param.TEST_PATH].name}</strong>

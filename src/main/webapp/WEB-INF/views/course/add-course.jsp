@@ -11,6 +11,7 @@
  <jsp:body>
    <div class="mainArea">
         <form:form id="addTestForm" action="${pageContext.request.contextPath}/add-course" method="POST" >
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <br>
             <%@ include file="/administration/test/testParameters.jsp" %>
             <input type="submit" value="<spring:message	code="save.button"/>" id="Save" name="Save">

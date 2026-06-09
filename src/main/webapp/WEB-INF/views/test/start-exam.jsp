@@ -16,6 +16,7 @@
 
 <div id="collapse_${test.pathName}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_${test.pathName}">
   <form action="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}start-test/${test.pathName}" method="post" class="test-form" aria-label="Start test form">
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
       <div class="test-form-grid">
         <div class="test-field test-field--wide">
           <label class="test-field-label" for="CATEGORY_PATH_test_${test.pathName}"><spring:message code="category.label"/></label>

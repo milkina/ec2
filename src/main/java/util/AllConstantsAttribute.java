@@ -8,6 +8,7 @@ package util;
  * To change this template use File | Settings | File Templates.
  */
 public interface AllConstantsAttribute {
+    String PAGE_LANGUAGE = "pageLanguage";
     String PERSON_ATTRIBUTE = "person";
     String PERSON_ANSWERED_QUESTIONS = "PERSON_ANSWERED_QUESTIONS";
     String WRONG_LOGIN_MESSAGE_ATTRIBUTE = "wrongLoginMessage";

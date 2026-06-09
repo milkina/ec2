@@ -19,9 +19,7 @@ import java.util.Locale;
 
 import static util.AllConstants.REGISTER_PAGE;
 import static util.AllConstants.WELCOME_REGISTER_PAGE;
-import static util.AllConstantsAttribute.MESSAGE_ATTRIBUTE;
-import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
-import static util.AllConstantsAttribute.USER_NAME;
+import static util.AllConstantsAttribute.*;
 
 @Controller
 public class RegisterController {
@@ -33,17 +31,17 @@ public class RegisterController {
         return new ModelAndView(REGISTER_PAGE, "command", new Person());
     }
 
-    @RequestMapping(value = "/addPerson", method = RequestMethod.POST)
+    @RequestMapping(value = {"/addPerson", "/ru/addPerson"}, method = RequestMethod.POST)
     public ModelAndView addPerson(@ModelAttribute("SpringWeb") Person person,
                                   @RequestParam("confPassword") String confPassword,
                                   ModelMap model, Locale locale) {
+        HttpSession session = GeneralUtility.getSession(true);
         String url = REGISTER_PAGE;
         PersonUtility.decodeRussianCharacters(person);
         confPassword = GeneralUtility.decodeRussianCharacters(confPassword.trim());
         if (isValidData(model, person, confPassword, locale)) {
             person = personService.addPerson(person);
 
-            HttpSession session = GeneralUtility.getSession(true);
             session.setAttribute(PERSON_ATTRIBUTE, person);
             model.addAttribute(USER_NAME,
                     PersonUtility.getPersonName(person));

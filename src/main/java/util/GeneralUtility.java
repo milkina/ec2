@@ -171,6 +171,6 @@ public class GeneralUtility {
 
     public static String getResourceValue(Locale locale, String key, String basename) {
         ResourceBundle resourceBundle = ResourceBundle.getBundle(basename, locale);
-        return GeneralUtility.decodeRussianCharacters(resourceBundle.getString(key));
+        return resourceBundle.getString(key);
     }
 }

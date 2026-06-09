@@ -68,7 +68,7 @@
                   <spring:message code="my.profile.label"/>
                 </a>
                 <hr/>
-                <a href="${pageContext.request.contextPath}/logout" data-signout role="menuitem" id="isLogin">
+                <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}logout" data-signout role="menuitem" id="isLogin">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
                   <spring:message code="logout"/>
                 </a>
@@ -136,7 +136,7 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             <spring:message code="my.profile.label"/>
           </a>
-          <a href="${pageContext.request.contextPath}/logout" class="m-item m-signout" data-signout role="menuitem" id="isLogin">
+          <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}logout" class="m-item m-signout" data-signout role="menuitem" id="isLogin">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
             <spring:message code="logout"/>
           </a>

@@ -34,11 +34,12 @@ public class LoginController {
         return "person/login";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = {"/ru/login", "/login"}, method = RequestMethod.POST)
     public String login(@RequestParam(LOGIN_PARAMETER) String login,
                         @RequestParam(PASSWORD_PARAMETER) String password,
                         @RequestParam(value = REMEMBER_PARAMETER, required = false) String remember,
-                        Model model, Locale locale) {
+                        Model model, Locale locale,
+                        javax.servlet.http.HttpServletRequest request) {
         login = GeneralUtility.decodeRussianCharacters(login);
         password = ServletUtilities.getMD5(
                 GeneralUtility.decodeRussianCharacters(password));
@@ -69,7 +70,8 @@ public class LoginController {
             HttpSession session = GeneralUtility.getSession(true);
 
             session.setAttribute(PERSON_ATTRIBUTE, person);
-            return "redirect:" + getResourceValue(locale, "menu.home", "label");
+            String home = request.getRequestURI().contains("/ru/") ? "ru/" : "";
+            return "redirect:/" + home;
         } else {
             model.addAttribute(WRONG_LOGIN_MESSAGE_ATTRIBUTE,
                     GeneralUtility.getResourceValue(locale, "wrong.login.password", "messages"));
@@ -77,8 +79,9 @@ public class LoginController {
         }
     }
 
-    @RequestMapping(value = "/logout")
-    public String logout(Locale locale) {
+    @RequestMapping(value = {"/ru/logout", "/logout"})
+    public String logout(Locale locale,
+                         javax.servlet.http.HttpServletRequest request) {
         HttpSession session = GeneralUtility.getSession(true);
         session.invalidate();
         HttpServletResponse response = GeneralUtility.getResponse();
@@ -89,6 +92,7 @@ public class LoginController {
                 + "SameSite=None; Secure; HttpOnly; Partitioned";
         response.setHeader("Set-Cookie", deleteHeader);
         String href = getResourceValue(locale, "menu.home", "label");
-        return "redirect:" + href;
+        String home = request.getRequestURI().contains("/ru/") ? "ru/" : "";
+        return "redirect:/" + home;
     }
 }

@@ -15,6 +15,7 @@
    </comment:commentList>
    </div>
    <form action="<%=request.getContextPath()%>/save-comment" name="addCommentForm" id="addCommentForm">
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
       <input type="hidden" name="COMMENT_TYPE" value="${param.commentType}">
       <input type="hidden" name="REFERENCE_ID" value="${param.referenceId}">
       <div class="div-comment-text-area">

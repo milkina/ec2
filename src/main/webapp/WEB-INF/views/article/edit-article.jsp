@@ -12,6 +12,7 @@
  <jsp:body>
        <div class="mainArea">
         <form action="${pageContext.request.contextPath}/save-article" method="POST" >
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <input type="hidden" name="ARTICLE_ID" value="${ARTICLE_ATTRIBUTE.id}">
             <span class="adminLabel"><spring:message code="url"/>:<span class="wrongMessage">*</span></span>
             <input type="text" name="URL_PARAM" maxlength="70" required value="${ARTICLE_ATTRIBUTE.url}" size="70"><BR>

@@ -75,7 +75,7 @@
                                       <a href="${pageContext.request.contextPath}/show-user-profile">
                                                                       <spring:message code="my.profile.label"/>
                                                                    </a>
-                                      <a href="${pageContext.request.contextPath}/logout" id="isLogin"><spring:message code="logout"/></a>
+                                      <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}logout" id="isLogin"><spring:message code="logout"/></a>
 
                               </div>
                     </div>
@@ -86,11 +86,13 @@
     <!-- Языки -->
     <div class="lang">
       <form method="post" action="${ruUrl}">
+                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                          <input type="hidden" name="lang" value="ru">
                          <input type="hidden" name="pageLanguage" value="ru">
                          <button type="submit"><spring:message code="language.ru"/></button>
                        </form>
       <form method="post" action="${enUrl}">
+                          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                           <input type="hidden" name="lang" value="en">
                           <input type="hidden" name="pageLanguage" value="en">
                           <button type="submit"><spring:message code="language.en"/></button>

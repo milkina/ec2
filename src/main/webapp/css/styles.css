@@ -2076,4 +2076,7 @@ pre.has-copy { position: relative; }
     grid-template-columns: 1fr;
   }
 }
+.wrongMessage{
+   color:#FF0000;
+}
 

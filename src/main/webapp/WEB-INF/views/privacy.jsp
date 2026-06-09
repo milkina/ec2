@@ -1,7 +1,7 @@
 ﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<t:wrapper>
+<t:wrapper2>
     <jsp:attribute name="language">lang="en"</jsp:attribute>
     <jsp:attribute name="header">
     <title>Privacy Policy Regarding Personal Data Processing for ExamClouds</title>
@@ -24,7 +24,9 @@
     <meta property="twitter:image:alt" content="Privacy Policy for ExamClouds">
  </jsp:attribute>
     <jsp:body>
-        <h1>Privacy Policy Regarding Personal Data Processing</h1>
+    <main>
+     <section class="container articles-page">
+          <h1>Privacy Policy Regarding Personal Data Processing</h1>
         <div>
             <div>
                 <h2>1. General Provisions</h2>
@@ -152,7 +154,9 @@
         <div>
             <div>14.1. The User can obtain any explanations on issues of interest related to the processing of their personal data by contacting the Operator via email at <span data-scroll-to="#privacyEmail" class="link mark">tatyana.milkina@gmail.com</span>.</div>
             <div>14.2. Any changes to the policy for processing personal data by the Operator will be reflected in this document. The Policy is valid indefinitely until replaced by a new version.</div>
-            <div>14.3. The current version of the Policy is freely available on the Internet at <strong>httpsː//www.examclouds.com/ru/privacy/</strong>.</div>
+            <div>14.3. The current version of the Policy is freely available on the Internet at <strong>httpsː//www.examclouds.com/privacy/</strong>.</div>
         </div>
+        </section>
+        </main>
     </jsp:body>
-</t:wrapper>
+</t:wrapper2>

@@ -14,6 +14,7 @@
        <div class="mainArea">
        <h1><spring:message code="edit.category"/></h1>
         <form action="${pageContext.request.contextPath}/edit-category" method="POST" id="editCategoryForm" >
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <span class="adminLabel"><spring:message code="category.id"/>:</span><span id="categoryId">${CATEGORY_ATTRIBUTE.id}</span>
             <input type="hidden" name="CATEGORY_PATH" value="${param.CATEGORY_PATH}">
             <input type="hidden" name="TEST_PATH" value="${param.TEST_PATH}">

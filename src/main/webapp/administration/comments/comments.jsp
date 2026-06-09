@@ -3,6 +3,7 @@
 <h3 class="header3"><spring:message	code="comments"/></h3>
 <form action="${pageContext.request.contextPath}/delete-comment"
     method="POST">
+<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 <div>
 <input type="submit" value="<spring:message	code="delete.comments"/>" name="DeleteCommentButton">
 <div style="padding-left:20px;padding-right:20px;margin-left:10px;margin-right:10px">
