@@ -11,13 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -62,12 +59,6 @@ public class AbstractExam<T extends AbstractQuestionEntry> {
 
     @Transient
     private Integer currentNumber;
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "exam_category",
-            joinColumns = {@JoinColumn(name = "exam_id")},
-            inverseJoinColumns = {@JoinColumn(name = "category_id")})
-    private List<Category> categories;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "test_id")
@@ -116,25 +107,12 @@ public class AbstractExam<T extends AbstractQuestionEntry> {
         this.currentNumber = currentNumber;
     }
 
-    public List<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
-    }
-
     public Test getTest() {
         return test;
     }
 
     public void setTest(Test test) {
         this.test = test;
-    }
-
-    public void setCategory(Category category) {
-        this.categories = new ArrayList<>();
-        this.categories.add(category);
     }
 
     public T getCurrentQuestionEntry() {
@@ -164,13 +142,12 @@ public class AbstractExam<T extends AbstractQuestionEntry> {
                 Objects.equals(person, that.person) &&
                 Objects.equals(questionEntries, that.questionEntries) &&
                 Objects.equals(currentNumber, that.currentNumber) &&
-                Objects.equals(categories, that.categories) &&
                 Objects.equals(currentQuestionEntry, that.currentQuestionEntry);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, person, percent, questionEntries, currentNumber, categories, currentQuestionEntry);
+        return Objects.hash(id, date, person, percent, questionEntries, currentNumber, currentQuestionEntry);
     }
 }
 

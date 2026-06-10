@@ -49,7 +49,7 @@ public class ExamController {
                     GeneralUtility.getResourceValue(locale, "exam.empty", "messages"));
             return SPRING_MESSAGE_PAGE;
         } else {
-            ExamUtility.setTestExam(session, person, questionEntries, testPath, categoryPaths, count);
+            ExamUtility.setTestExam(session, person, questionEntries, testPath, count);
             String urlPattern = "forward:%s?%s=%s&%s=%s";
             String url = String.format(urlPattern, SHOW_EXAM_QUESTION,
                     TEST_PATH, testPath,
@@ -92,7 +92,7 @@ public class ExamController {
                     GeneralUtility.getResourceValue(locale, "exam.empty", "messages"));
             return SPRING_MESSAGE_PAGE;
         } else {
-            ExamUtility.setQuestionExam(session, person, questionEntries, testPath, categoryPaths, count);
+            ExamUtility.setQuestionExam(session, person, questionEntries, testPath, count);
             String urlPattern = "forward:%s?%s=%s&%s=%s";
             return String.format(urlPattern, SHOW_EXAM_QUESTION,
                     TEST_PATH, testPath,
@@ -128,7 +128,6 @@ public class ExamController {
         newExam.setPerson(person);
         newExam.setQuestionEntries(questionEntries);
         newExam.setCurrentNumber(0);
-        newExam.setCategories(oldExam.getCategories());
         newExam.setTest(oldExam.getTest());
         newExam.setCurrentQuestionEntry(questionEntries.get(0));
         newExam.setAmount(questionEntries.size());
