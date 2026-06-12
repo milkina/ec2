@@ -269,7 +269,7 @@
                     <div>
                         <p class="udemy-banner__eyebrow">🎉 Отличный результат!</p>
                         <h3 class="udemy-banner__title">Готовы идти дальше?</h3>
-                        <p class="udemy-banner__desc">Углубите знания с полным курсом Java SE на русском языке.</p>
+                        <p class="udemy-banner__desc">Прокачайте знания с полным курсом Java SE на русском языке.</p>
                         <p class="udemy-banner__features">
                             ⭐ 4.8 рейтинг &nbsp;&nbsp; 🎓 Сертификат &nbsp;&nbsp; ♾️ Пожизненный доступ
                         </p>
