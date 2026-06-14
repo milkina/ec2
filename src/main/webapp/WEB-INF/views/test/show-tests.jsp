@@ -113,54 +113,6 @@
             "priceCurrency": "EUR"
           }
         }</script>
-
-        <!-- FAQPage Schema -->
-        <script type="application/ld+json">{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How do I take a Java test?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Select one or several categories, specify the number of questions, click 'Start Test' and check your knowledge. After completing the test, you will see your results and be able to compare your answers with the correct ones."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are all tests free?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, all tests on ExamClouds are completely free. You can take tests anytime and anywhere."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What topics do the tests cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tests cover essential Java concepts: basic syntax, Java Core, object-oriented programming, collections, exceptions, multithreading, Stream API, and more."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How will test results help me find a job?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our tests are designed to prepare you for interviews for Junior and higher positions. Successfully passing tests demonstrates your knowledge of fundamental Java concepts and readiness for professional work."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How often are tests updated?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our question database is regularly updated and expanded with new, relevant questions reflecting the latest trends in Java development."
-              }
-            }
-          ]
-        }</script>
     </jsp:attribute>
      <jsp:body>
         <main aria-label="Free Java Online Tests">

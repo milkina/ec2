@@ -97,38 +97,6 @@
             "priceCurrency": "EUR"
           }
         }</script>
-
-        <!-- FAQPage Schema -->
-        <script type="application/ld+json">{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Are the interview questions free to use?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, all interview questions on ExamClouds are free. You can practice anytime without charge."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How should I use these questions for interview prep?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Use the question bank to practice answering aloud, review explanations, and focus on weak areas. Combine with practical coding exercises and tests."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I filter questions by topic?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes — select specific categories such as Java Core, Collections, Multithreading, and more to focus your practice."
-              }
-            }
-          ]
-        }</script>
     </jsp:attribute>
      <jsp:body>
         <main aria-label="Java Interview Questions">
