@@ -89,7 +89,14 @@
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
                               <spring:message code="retake.test"/>
                             </a>
-                            <a href="${pageContext.request.contextPath}/${pageLanguage=='en'?'java-core':'ru/java-core-russian'}" class="btn btn-outline btn-sm"><spring:message code="go.to.course"/> &rarr;</a>
+                            <c:choose>
+                              <c:when test="${not empty sessionScope.SOURCE_CATEGORY_PATH}">
+                                <a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${sessionScope.SOURCE_TEST_PATH}/${sessionScope.SOURCE_CATEGORY_PATH}" class="btn btn-outline btn-sm"><spring:message code="return.to.lesson"/> &rarr;</a>
+                              </c:when>
+                              <c:otherwise>
+                                <a href="${pageContext.request.contextPath}/${pageLanguage=='en'?'java-core':'ru/java-core-russian'}" class="btn btn-outline btn-sm"><spring:message code="go.to.course"/> &rarr;</a>
+                              </c:otherwise>
+                            </c:choose>
                             <c:if test="${percent>=70}">
                             <a href="https://www.trustpilot.com/evaluate/examclouds.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background-color:#00b67a;color:#fff;border:none;">
                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>

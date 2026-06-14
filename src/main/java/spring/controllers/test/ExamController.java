@@ -50,6 +50,14 @@ public class ExamController {
             return SPRING_MESSAGE_PAGE;
         } else {
             ExamUtility.setTestExam(session, person, questionEntries, testPath, count);
+            if (categoryPaths != null && categoryPaths.length == 1
+                    && "GET".equalsIgnoreCase(request.getMethod())) {
+                session.setAttribute("SOURCE_CATEGORY_PATH", categoryPaths[0]);
+                session.setAttribute("SOURCE_TEST_PATH", testPath);
+            } else {
+                session.removeAttribute("SOURCE_CATEGORY_PATH");
+                session.removeAttribute("SOURCE_TEST_PATH");
+            }
             String urlPattern = "forward:%s?%s=%s&%s=%s";
             String url = String.format(urlPattern, SHOW_EXAM_QUESTION,
                     TEST_PATH, testPath,
