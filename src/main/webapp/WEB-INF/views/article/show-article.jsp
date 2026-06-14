@@ -100,10 +100,13 @@
  <jsp:body>
     <main>
        <article class="container article-page">
-            <a href="<menu:articlesTag/>" class="article-back" aria-label="<spring:message code="back.to.articles"/>">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-              <spring:message code="articles"/>
-            </a>
+            <nav class="crumbs" aria-label="Breadcrumb">
+              <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
+              <span class="sep">›</span>
+              <a href="<menu:articlesTag/>"><spring:message code="articles"/></a>
+              <span class="sep">›</span>
+              <span class="here">${ARTICLE_ATTRIBUTE.title}</span>
+            </nav>
             <div class="article-meta-top">
                     <span class="article-tag">${ARTICLE_ATTRIBUTE.tag!=null && not empty ARTICLE_ATTRIBUTE.tag?ARTICLE_ATTRIBUTE.tag:"IT"}</span>
                     <c:if test="${ARTICLE_ATTRIBUTE.createdDate != null}">

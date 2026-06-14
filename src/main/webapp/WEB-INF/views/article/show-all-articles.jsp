@@ -28,7 +28,29 @@
   <jsp:body>
     <main>
        <section class="container articles-page">
-     <span class="article-tag"><spring:message code="articles"/></span>
+         <nav class="crumbs" aria-label="Breadcrumb">
+           <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
+           <span class="sep">›</span>
+           <span class="here"><spring:message code="articles"/></span>
+           <script type="application/ld+json">{
+             "@context": "https://schema.org",
+             "@type": "BreadcrumbList",
+             "itemListElement": [
+               {
+                 "@type": "ListItem",
+                 "position": 1,
+                 "name": "<spring:message code="home"/>",
+                 "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+               },
+               {
+                 "@type": "ListItem",
+                 "position": 2,
+                 "name": "<spring:message code="articles"/>",
+                 "item": "https://www.examclouds.com/ru/show-all-articles"
+               }
+             ]
+           }</script>
+         </nav>
           <h1 class="articles-title">Блог из IT сферы</h1>
      <p class="articles-lede">Добро пожаловать на нашу страницу, на которой вы найдёте обширную подборку материалов, охватывающих самые разные
      аспекты информационных технологий. Наши статьи предлагают глубокие знания и практические советы по <strong>программированию</strong>,

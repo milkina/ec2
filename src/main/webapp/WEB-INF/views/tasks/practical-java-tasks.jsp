@@ -77,6 +77,12 @@
                  "position": 1,
                  "name": "<spring:message code="home"/>",
                  "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+               },
+               {
+                 "@type": "ListItem",
+                 "position": 2,
+                 "name": "<spring:message code="menu.tasks.label"/>",
+                 "item": "https://www.examclouds.com/practical-java-tasks"
                }
              ]
            }</script>

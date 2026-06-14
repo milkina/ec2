@@ -166,7 +166,11 @@
     <main aria-label="Бесплатные тесты по Java программированию">
       <!-- Hero Section -->
       <section class="container articles-page" aria-labelledby="tests-main-title">
-        <span class="article-tag">Тесты</span>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
+          <span class="sep">›</span>
+          <span class="here">Тесты</span>
+        </nav>
         <h1 class="articles-title" id="tests-main-title">Бесплатные тесты по Java</h1>
         <p class="articles-lede">Оцените свои знания и подготовьтесь к интервью. Выбирайте темы, задавайте количество вопросов — и проверьте себя онлайн.</p>
 

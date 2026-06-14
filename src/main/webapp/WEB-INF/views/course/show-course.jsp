@@ -67,6 +67,24 @@
                     </a>
                     <span class="sep">›</span>
                     <span class="here">${TESTS[param.TEST_PATH].name}</span>
+                    <script type="application/ld+json">{
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "<spring:message code="home"/>",
+                                "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "${TESTS[param.TEST_PATH].name}",
+                                "item": "${canonicalUrl}"
+                            }
+                        ]
+                    }</script>
                 </nav>
                 <h1 class="course-hero-title">${TESTS[param.TEST_PATH].article.title}</h1>
                 <p class="course-hero-lede">

@@ -1,4 +1,4 @@
-﻿<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -28,7 +28,29 @@
   <jsp:body>
     <main>
            <section class="container articles-page">
-         <span class="article-tag"><spring:message code="articles"/></span>
+             <nav class="crumbs" aria-label="Breadcrumb">
+               <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
+               <span class="sep">›</span>
+               <span class="here"><spring:message code="articles"/></span>
+               <script type="application/ld+json">{
+                 "@context": "https://schema.org",
+                 "@type": "BreadcrumbList",
+                 "itemListElement": [
+                   {
+                     "@type": "ListItem",
+                     "position": 1,
+                     "name": "<spring:message code="home"/>",
+                     "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+                   },
+                   {
+                     "@type": "ListItem",
+                     "position": 2,
+                     "name": "<spring:message code="articles"/>",
+                     "item": "https://www.examclouds.com/show-all-articles"
+                   }
+                 ]
+               }</script>
+             </nav>
               <h1 class="articles-title">IT Blog on ExamClouds</h1>
          <p class="articles-lede">Welcome to our page, where you'll find a comprehensive collection of materials covering various
                                        aspects of <strong>information technology</strong>. Our articles offer in-depth knowledge and practical advice on <strong>programming</strong>,

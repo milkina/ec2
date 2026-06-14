@@ -134,7 +134,11 @@
         <main aria-label="Java Interview Questions">
           <!-- Hero -->
           <section class="container articles-page" aria-labelledby="interview-questions-main-title">
-            <span class="article-tag">Interview Questions</span>
+            <nav class="crumbs" aria-label="Breadcrumb">
+              <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
+              <span class="sep">›</span>
+              <span class="here">Interview Questions</span>
+            </nav>
             <h1 class="articles-title" id="interview-questions-main-title">Java Interview Questions</h1>
             <p class="articles-lede">Prepare for your Java developer interview with our comprehensive question bank covering Java Core, APIs, and technical topics.</p>
 
