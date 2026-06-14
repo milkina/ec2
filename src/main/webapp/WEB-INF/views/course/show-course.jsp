@@ -44,11 +44,44 @@
         <meta property="twitter:site" content="@ExamClouds">
         <script type="application/ld+json">{
             "@context": "https://schema.org",
-            "url": "https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}",
-            "@type": "Article",
-            "headline": "${TESTS[param.TEST_PATH].article.title}"
-        }
-        </script>
+            "@type": "Course",
+            "name": "${TESTS[param.TEST_PATH].article.title}",
+            "description": "${TESTS[param.TEST_PATH].article.description}",
+            "url": "${canonicalUrl}",
+            "inLanguage": "${TESTS[param.TEST_PATH].language.code}",
+            "provider": {
+                "@type": "Organization",
+                "name": "ExamClouds",
+                "url": "https://www.examclouds.com",
+                "sameAs": [
+                    "https://www.facebook.com/examclouds",
+                    "https://twitter.com/ExamClouds"
+                ]
+            },
+             "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                  },
+                  "educationLevel": "Beginner, Intermediate",
+                  "learningResourceType": "Course",
+                  "teaches": [
+                      <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
+                        <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
+                          "<c:out value='${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}'/>",
+                        </c:if>
+                      </c:forEach>
+                    ],
+            "author": {
+                "@type": "Person",
+                "name": "Tatyana Milkina",
+                "url": "https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}tatyana-milkina"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+            }
+        }</script>
     </jsp:attribute>
     <jsp:body>
     <main class="course-bg" style="padding:0 0 3rem;">

@@ -32,28 +32,6 @@
         <meta property="twitter:site" content="@ExamClouds">
         <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="twitter:image:alt" content="Free Java Online Test and Quiz for Learning Java on ExamClouds">
-
-        <!-- WebPage Schema -->
-        <script type="application/ld+json">{
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "Free Java Online Tests",
-          "description": "Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.",
-          "url": "https://www.examclouds.com/tests",
-          "inLanguage": "en",
-          "publisher": {
-            "@type": "Organization",
-            "name": "ExamClouds",
-            "url": "https://www.examclouds.com",
-            "logo": "https://img.examclouds.com/general/logo.svg"
-          },
-          "isPartOf": {
-            "@type": "WebSite",
-            "name": "ExamClouds",
-            "url": "https://www.examclouds.com"
-          }
-        }</script>
-
         <!-- BreadcrumbList Schema -->
         <script type="application/ld+json">{
           "@context": "https://schema.org",
@@ -74,43 +52,24 @@
           ]
         }</script>
 
-        <!-- Course Schema -->
+        <!-- LearningResource Schema -->
         <script type="application/ld+json">{
           "@context": "https://schema.org",
-          "@type": "Course",
-          "name": "Free Java Programming Tests",
+          "@type": "LearningResource",
+          "learningResourceType": "Assessment",
+          "name": "Free Java Online Tests",
           "description": "Take free Java tests on ExamClouds to assess your programming skills and prepare for interviews effectively.",
           "url": "https://www.examclouds.com/tests",
           "inLanguage": "en",
+          "author": {
+            "@type": "Person",
+            "name": "Tatyana Milkina",
+            "url": "https://www.examclouds.com/tatyana-milkina"
+          },
           "provider": {
             "@type": "Organization",
             "name": "ExamClouds",
-            "url": "https://www.examclouds.com",
-            "sameAs": [
-              "https://www.facebook.com/examclouds",
-              "https://twitter.com/ExamClouds"
-            ]
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "2847"
-          },
-          "educationLevel": "Beginner, Intermediate, Advanced",
-          "learningResourceType": "Assessment",
-          "teaches": [
-            "Java basic syntax",
-            "Java Core",
-            "Object-Oriented Programming",
-            "Collections",
-            "Exceptions",
-            "Multithreading",
-            "Stream API"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
+            "url": "https://www.examclouds.com"
           }
         }</script>
     </jsp:attribute>

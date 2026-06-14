@@ -31,12 +31,27 @@
     <meta name="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta name="twitter:image:alt" content="Free Java Core Courses | Learn Java Programming Online">
     <script type="application/ld+json">{
-              "@context": "https://schema.org",
-              "url": "https://www.examclouds.com",
-              "@type": "Article",
-              "headline": "Free Java Core Courses | Learn Java Programming Online"
-    }
-    </script>
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ExamClouds",
+      "url": "https://www.examclouds.com",
+      "description": "Explore free Java Core tutorials. Learn Java programming from basics to advanced topics with online lessons, practice exercises, and study resources.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Tatyana Milkina",
+        "url": "https://www.examclouds.com/tatyana-milkina"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ExamClouds",
+        "url": "https://www.examclouds.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://img.examclouds.com/general/logo.svg"
+        }
+      }
+    }</script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
  <%@ include file="/WEB-INF/header.jsp"%>

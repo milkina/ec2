@@ -25,27 +25,25 @@
      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image:alt" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Java Practice Tasks",
+  "@type": "LearningResource",
+  "learningResourceType": "Assignment",
+  "name": "Java Practice Tasks",
   "description": "Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.",
+  "url": "https://www.examclouds.com/practical-java-tasks",
+  "inLanguage": "en",
   "author": {
-    "@type": "Organization",
-    "name": "ExamClouds"
+    "@type": "Person",
+    "name": "Tatyana Milkina",
+    "url": "https://www.examclouds.com/tatyana-milkina"
   },
-  "publisher": {
+  "provider": {
     "@type": "Organization",
     "name": "ExamClouds",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://img.examclouds.com/general/logo.svg"
-    }
-  },
-  "mainEntityOfPage": "https://www.examclouds.com/practical-java-tasks"
-}
-</script>
+    "url": "https://www.examclouds.com"
+  }
+}</script>
  <style>
       .category-name:before{
         content:"<spring:message code="module"/> " counter(lesson)" - ";

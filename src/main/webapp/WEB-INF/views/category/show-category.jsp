@@ -51,12 +51,29 @@
           <meta name="robots" content="noindex">
     </c:if>
     <script type="application/ld+json">{
-         "@context": "https://schema.org",
-         "url": "${canonicalUrl}",
-         "@type": "Article",
-         "headline": "<c:out value="${titleName}"/>"
-    }
-    </script>
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "learningResourceType": "Lecture",
+        "name": "<c:out value="${titleName}"/>",
+        "description": "${CATEGORY_ATTRIBUTE.article.description}",
+        "url": "${canonicalUrl}",
+        "inLanguage": "${TESTS[param.TEST_PATH].language.code}",
+        "isPartOf": {
+            "@type": "Course",
+            "name": "${TESTS[param.TEST_PATH].name}",
+            "url": "https://www.examclouds.com/${pathLanguage}${TESTS[param.TEST_PATH].fullPathName}"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Tatyana Milkina",
+            "url": "https://www.examclouds.com/${pathLanguage}tatyana-milkina"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "ExamClouds",
+            "url": "https://www.examclouds.com"
+        }
+    }</script>
     </jsp:attribute>
     <jsp:body>
       <!-- Mobile sticky context bar -->

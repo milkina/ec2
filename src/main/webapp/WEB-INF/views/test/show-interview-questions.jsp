@@ -32,28 +32,6 @@
         <meta property="twitter:site" content="@ExamClouds">
         <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="twitter:image:alt" content="Java Interview Preparation: Key Questions and Answers for Success">
-
-        <!-- WebPage Schema -->
-        <script type="application/ld+json">{
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "Java Interview Questions",
-          "description": "Prepare for your Java interview with our key questions and answers. Master Java Core, technical, and API questions to succeed in your Java developer interview.",
-          "url": "https://www.examclouds.com/questions",
-          "inLanguage": "en",
-          "publisher": {
-            "@type": "Organization",
-            "name": "ExamClouds",
-            "url": "https://www.examclouds.com",
-            "logo": "https://img.examclouds.com/general/logo.svg"
-          },
-          "isPartOf": {
-            "@type": "WebSite",
-            "name": "ExamClouds",
-            "url": "https://www.examclouds.com"
-          }
-        }</script>
-
         <!-- BreadcrumbList Schema -->
         <script type="application/ld+json">{
           "@context": "https://schema.org",
@@ -74,27 +52,24 @@
           ]
         }</script>
 
-        <!-- Course Schema (describes the learning resource / question bank) -->
+        <!-- LearningResource Schema -->
         <script type="application/ld+json">{
           "@context": "https://schema.org",
-          "@type": "Course",
+          "@type": "LearningResource",
+          "learningResourceType": "Quiz",
           "name": "Java Interview Questions and Practice",
-          "description": "Extensive Java interview question bank and practice materials to help you prepare for developer interviews.",
+          "description": "Prepare for your Java interview with our key questions and answers. Master Java Core, technical, and API questions to succeed in your Java developer interview.",
           "url": "https://www.examclouds.com/questions",
           "inLanguage": "en",
+          "author": {
+            "@type": "Person",
+            "name": "Tatyana Milkina",
+            "url": "https://www.examclouds.com/tatyana-milkina"
+          },
           "provider": {
             "@type": "Organization",
             "name": "ExamClouds",
-            "url": "https://www.examclouds.com",
-            "sameAs": [
-              "https://www.facebook.com/examclouds",
-              "https://twitter.com/ExamClouds"
-            ]
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
+            "url": "https://www.examclouds.com"
           }
         }</script>
     </jsp:attribute>

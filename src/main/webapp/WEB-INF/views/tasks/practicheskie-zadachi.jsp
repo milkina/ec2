@@ -25,27 +25,25 @@
      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image:alt" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Практические задачи по Java",
+  "@type": "LearningResource",
+  "learningResourceType": "Assignment",
+  "name": "Практические задачи по Java",
   "description": "Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.",
+  "url": "https://www.examclouds.com/ru/practicheskie-zadachi",
+  "inLanguage": "ru",
   "author": {
-    "@type": "Organization",
-    "name": "ExamClouds"
+    "@type": "Person",
+    "name": "Tatyana Milkina",
+    "url": "https://www.examclouds.com/ru/tatyana-milkina"
   },
-  "publisher": {
+  "provider": {
     "@type": "Organization",
     "name": "ExamClouds",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://img.examclouds.com/general/logo.svg"
-    }
-  },
-  "mainEntityOfPage": "https://www.examclouds.com/ru/practicheskie-zadachi"
-}
-</script>
+    "url": "https://www.examclouds.com"
+  }
+}</script>
  <style>
       .category-name:before{
         content:"<spring:message code="module"/> " counter(lesson)" - ";

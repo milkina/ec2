@@ -32,28 +32,6 @@
     <meta property="twitter:site" content="@ExamClouds">
     <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="twitter:image:alt" content="Бесплатные тесты по Java: уровень знаний и подготовка к интервью">
-
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">{
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Бесплатные тесты по Java",
-      "description": "Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.",
-      "url": "https://www.examclouds.com/ru/tests",
-      "inLanguage": "ru",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ExamClouds",
-        "url": "https://www.examclouds.com",
-        "logo": "https://img.examclouds.com/general/logo.svg"
-      },
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "ExamClouds",
-        "url": "https://www.examclouds.com"
-      }
-    }</script>
-
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">{
       "@context": "https://schema.org",
@@ -74,43 +52,24 @@
       ]
     }</script>
 
-    <!-- Course Schema -->
+    <!-- LearningResource Schema -->
     <script type="application/ld+json">{
       "@context": "https://schema.org",
-      "@type": "Course",
+      "@type": "LearningResource",
+      "learningResourceType": "Assessment",
       "name": "Бесплатные тесты по Java программированию",
       "description": "Пройдите бесплатные тесты по Java программированию на ExamClouds. Узнайте свой уровень знаний, подготовьтесь к интервью и улучшите навыки программирования.",
       "url": "https://www.examclouds.com/ru/tests",
       "inLanguage": "ru",
+      "author": {
+        "@type": "Person",
+        "name": "Tatyana Milkina",
+        "url": "https://www.examclouds.com/ru/tatyana-milkina"
+      },
       "provider": {
         "@type": "Organization",
         "name": "ExamClouds",
-        "url": "https://www.examclouds.com",
-        "sameAs": [
-          "https://www.facebook.com/examclouds",
-          "https://twitter.com/ExamClouds"
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "2847"
-      },
-      "educationLevel": "Beginner, Intermediate, Advanced",
-      "learningResourceType": "Assessment",
-      "teaches": [
-        "Java базовый синтаксис",
-        "Java Core",
-        "ООП",
-        "Коллекции",
-        "Исключения",
-        "Много потоков",
-        "Stream API"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
+        "url": "https://www.examclouds.com"
       }
     }</script>
   </jsp:attribute>

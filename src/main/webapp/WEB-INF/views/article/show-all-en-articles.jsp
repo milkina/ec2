@@ -24,6 +24,24 @@
     <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="twitter:image:alt" content="IT Blog on ExamClouds: Comprehensive Resource for Technology Insights">
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "IT Blog on ExamClouds",
+      "description": "Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them.",
+      "url": "https://www.examclouds.com/show-all-articles",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Tatyana Milkina",
+        "url": "https://www.examclouds.com/tatyana-milkina"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ExamClouds",
+        "url": "https://www.examclouds.com"
+      }
+    }</script>
   </jsp:attribute>
   <jsp:body>
     <main>

@@ -24,6 +24,24 @@
     <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta property="twitter:image:alt" content="Блог из IT сферы на ExamClouds">
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Блог из IT сферы на ExamClouds",
+      "description": "Вам нравится язык программирования Java? На сайте ExamClouds вы найдете интересные и полезные статьями по Java программировании и из сферы IT.",
+      "url": "https://www.examclouds.com/ru/show-all-articles",
+      "inLanguage": "ru",
+      "author": {
+        "@type": "Person",
+        "name": "Tatyana Milkina",
+        "url": "https://www.examclouds.com/ru/tatyana-milkina"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ExamClouds",
+        "url": "https://www.examclouds.com"
+      }
+    }</script>
   </jsp:attribute>
   <jsp:body>
     <main>

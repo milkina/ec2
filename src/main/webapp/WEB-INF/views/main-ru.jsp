@@ -30,14 +30,28 @@
     <meta name="twitter:site" content="@ExamClouds">
     <meta name="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
-     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "url": "https://www.examclouds.com/ru/",
-          "@type": "Article",
-          "headline": "Бесплатные курсы Java программирования с нуля"
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ExamClouds",
+      "url": "https://www.examclouds.com/ru/",
+      "description": "Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн.",
+      "inLanguage": "ru",
+      "author": {
+        "@type": "Person",
+        "name": "Tatyana Milkina",
+        "url": "https://www.examclouds.com/ru/tatyana-milkina"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ExamClouds",
+        "url": "https://www.examclouds.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://img.examclouds.com/general/logo.svg"
         }
-     </script>
+      }
+    }</script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
  <%@ include file="/WEB-INF/header.jsp"%>

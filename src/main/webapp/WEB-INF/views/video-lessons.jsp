@@ -27,6 +27,25 @@
         <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="twitter:image:alt" content="Java Video Lessons | Free Java Core Video Course">
+        <script type="application/ld+json">{
+          "@context": "https://schema.org",
+          "@type": "LearningResource",
+          "learningResourceType": "Video",
+          "name": "Java Video Lessons for Beginners",
+          "description": "Learn Java with free video lessons for beginners! Step-by-step tutorials covering Java Core from your first program to Collections, Lambda, and Stream API.",
+          "url": "https://www.examclouds.com/video-lessons",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Person",
+            "name": "Tatyana Milkina",
+            "url": "https://www.examclouds.com/tatyana-milkina"
+          },
+          "provider": {
+            "@type": "Organization",
+            "name": "ExamClouds",
+            "url": "https://www.examclouds.com"
+          }
+        }</script>
     </jsp:attribute>
     <jsp:body>
         <main style="padding: 1.5rem 0 3rem;">

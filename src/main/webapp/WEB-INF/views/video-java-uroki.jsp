@@ -27,6 +27,25 @@
         <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
         <meta property="twitter:image:alt" content="Видео уроки по Java | Видеокурс и обучение программированию">
+        <script type="application/ld+json">{
+          "@context": "https://schema.org",
+          "@type": "LearningResource",
+          "learningResourceType": "Video",
+          "name": "Видео уроки по Java для начинающих",
+          "description": "Изучайте Java с нашими видео уроками для начинающих! Пошаговые руководства, практические примеры и советы от экспертов помогут вам быстро освоить основы программирования на Java.",
+          "url": "https://www.examclouds.com/ru/video-java-uroki",
+          "inLanguage": "ru",
+          "author": {
+            "@type": "Person",
+            "name": "Tatyana Milkina",
+            "url": "https://www.examclouds.com/ru/tatyana-milkina"
+          },
+          "provider": {
+            "@type": "Organization",
+            "name": "ExamClouds",
+            "url": "https://www.examclouds.com"
+          }
+        }</script>
     </jsp:attribute>
     <jsp:body>
         <main style="padding: 1.5rem 0 3rem;">
