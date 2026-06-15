@@ -124,11 +124,11 @@
        ${ARTICLE_ATTRIBUTE.text}
        </div>
       </article>
-    </main>
-   <!-- <jsp:include page="/WEB-INF/comment/comments.jsp">
+    <jsp:include page="/WEB-INF/comment/comments.jsp">
       <jsp:param name="referenceId" value="${ARTICLE_ATTRIBUTE.id}" />
       <jsp:param name="commentType" value="ARTICLE" />
-    </jsp:include>-->
+    </jsp:include>
+   </main>
     <c:if test="${fn:contains(ARTICLE_ATTRIBUTE.text, '<pre') || fn:contains(ARTICLE_ATTRIBUTE.text, '<code')}">
        <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     </c:if>

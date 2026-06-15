@@ -200,6 +200,10 @@
                                </c:if>
                              </aside>
          </div>
+         <jsp:include page="/WEB-INF/comment/comments.jsp">
+            <jsp:param name="referenceId" value="${CATEGORY_ATTRIBUTE.article.id}"/>
+            <jsp:param name="commentType" value="ARTICLE"/>
+         </jsp:include>
       </main>
       <!-- Mobile outline drawer -->
       <script>
@@ -234,10 +238,6 @@
           <c:otherwise><span class="mbn-btn mbn-next mbn-disabled"></span></c:otherwise>
         </c:choose>
       </div>
-     <!-- <jsp:include page="/WEB-INF/comment/comments.jsp">
-        <jsp:param name="referenceId" value="${CATEGORY_ATTRIBUTE.article.id}"/>
-        <jsp:param name="commentType" value="ARTICLE"/>
-      </jsp:include>-->
       <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
     </jsp:body>
 </t:wrapper2>

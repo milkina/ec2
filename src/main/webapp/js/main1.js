@@ -171,11 +171,36 @@
     });
   }
 
+  function wireComments() {
+    var btn = document.querySelector('[data-comment-submit]');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var isLoggedIn = document.getElementById('isLogin');
+      if (!isLoggedIn) {
+        var dlg = document.getElementById('commentModal');
+        if (dlg && dlg.showModal) dlg.showModal();
+        return;
+      }
+      var form = document.getElementById('addCommentForm');
+      form.action = btn.getAttribute('data-ctx') + '/save-comment';
+      form.method = 'POST';
+      form.submit();
+    });
+    var closeBtn = document.querySelector('[data-comment-dialog-close]');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        var dlg = document.getElementById('commentModal');
+        if (dlg && dlg.close) dlg.close();
+      });
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', async () => {
     await injectPartials();
     wireHeader();
     wireCourse();
     wireLiteYouTube();
     wireCopyCode();
+    wireComments();
   });
 })();

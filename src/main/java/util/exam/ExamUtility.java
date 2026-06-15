@@ -75,7 +75,7 @@ public class ExamUtility extends SpringUtility {
         String countString = request.getParameter(NUMBER_OF_QUESTIONS);
         if (countString != null && !countString.isEmpty()) {
             count = Integer.parseInt(countString);
-        } else if (categoryPaths.length == 1) {
+        } else if (categoryPaths != null && categoryPaths.length == 1) {
             Category category = getCategoryService(request.getServletContext()).getCategory(categoryPaths[0]);
             count = category != null && function.apply(category) != 0 ? function.apply(category) : 20;
         }

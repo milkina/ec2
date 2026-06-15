@@ -263,10 +263,10 @@
                 </aside>
             </div>
         </div>
+          <jsp:include page="/WEB-INF/comment/comments.jsp">
+              <jsp:param name="referenceId" value="${TESTS[param.TEST_PATH].id}"/>
+              <jsp:param name="commentType" value="TEST"/>
+          </jsp:include>
     </main>
-    <!-- <jsp:include page="/WEB-INF/comment/comments.jsp">
-        <jsp:param name="referenceId" value="${TESTS[param.TEST_PATH].id}"/>
-        <jsp:param name="commentType" value="TEST"/>
-    </jsp:include>-->
     </jsp:body>
 </t:wrapper2>
