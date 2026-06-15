@@ -22,7 +22,6 @@
            <spring:message code="repeat.password" var="repeatPasswordPlaceholder"/>
            <form:form action="${pageContext.request.contextPath}/${pageLanguage!=null && pageLanguage=='ru'?'ru/':''}addPerson"
                              method="post" id="confirmRegistration" name="confirmRegistration">
-               <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                <span class="wrongMessage" id="registerWrongMessage">${requestScope.message}</span>
             <div class="auth-field">
               <label for="login"><spring:message code="login"/></label>

@@ -11,7 +11,6 @@
   <jsp:body>
         <div class="mainArea">
         <form action="${pageContext.request.contextPath}/save-question" method="post" id="addQuestionForm" >
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <br><br>
             <input type="hidden" value="1" id="answerNumber" name="answerNumber">
             <%@ include file="/edit/select-test-category-new.jsp" %>

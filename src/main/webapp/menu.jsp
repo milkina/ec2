@@ -86,13 +86,11 @@
     <!-- Языки -->
     <div class="lang">
       <form method="post" action="${ruUrl}">
-                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                          <input type="hidden" name="lang" value="ru">
                          <input type="hidden" name="pageLanguage" value="ru">
                          <button type="submit"><spring:message code="language.ru"/></button>
                        </form>
       <form method="post" action="${enUrl}">
-                          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                           <input type="hidden" name="lang" value="en">
                           <input type="hidden" name="pageLanguage" value="en">
                           <button type="submit"><spring:message code="language.en"/></button>

@@ -276,16 +276,6 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>5.2.4.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>5.2.4.RELEASE</version>
-        </dependency>
-        <dependency>
             <groupId>fr.xebia.web.extras</groupId>
             <artifactId>xebia-servlet-extras</artifactId>
             <version>1.0.5</version>

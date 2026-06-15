@@ -53,7 +53,6 @@
      <div style="display:inline">
        <form action="${pageContext.request.contextPath}/show-exam-question?CATEGORY_PATH=${param.CATEGORY_PATH}&TEST_PATH=${param.TEST_PATH}"
           method="post">
-          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
           <div style="margin-top:50px" class="row">
              <div class="previous-exam-button col-xs-6">
                 <exam:previousButton>

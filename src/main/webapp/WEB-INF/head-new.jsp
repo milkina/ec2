@@ -6,8 +6,6 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css?v=2" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-<meta name="_csrf" content="${_csrf.token}"/>
-<meta name="_csrf_header" content="${_csrf.headerName}"/>
 <link rel="shortcut icon" href="https://img.examclouds.com/general/fav.ico" type="image/x-icon">
 <!-- GA4 + AdSense — delayed to avoid forced reflow -->
 <script>

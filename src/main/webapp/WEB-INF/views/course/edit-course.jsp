@@ -11,7 +11,6 @@
  <jsp:body>
    <div class="mainArea">
         <form:form id="addTestForm" action="${pageContext.request.contextPath}/edit-course" method="post" >
-             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
              <input name="OLD_TEST_PATH" type="hidden" value="${param.TEST_PATH}">
              <br>
              <%@ include file="/administration/test/testParameters.jsp" %>

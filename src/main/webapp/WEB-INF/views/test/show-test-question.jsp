@@ -107,7 +107,6 @@
 
                 <!-- Question -->
                 <form id="questionForm" action="${pageContext.request.contextPath}/${pathLanguage}add-person-answer?TEST_PATH=${param.TEST_PATH}" method="post">
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <div class="quiz-q">
                         <p class="quiz-q-eyebrow"><spring:message code="question"/>&nbsp;<exam:number/>&nbsp;<spring:message code="of"/>&nbsp;<exam:size/></p>
                         <h2 class="quiz-q-title">${CURRENT_EXAM_ATTRIBUTE.currentQuestionEntry.question.text}</h2>

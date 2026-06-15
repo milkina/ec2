@@ -23,7 +23,6 @@
                 <c:if test="${param.TYPE.equals('NOT_APPROVED')}"><spring:message code="not.approved"/></c:if>
           </h1>
           <form action="${pageContext.request.contextPath}/clear-history">
-          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
           <input type="hidden" name="CATEGORY_PATH" value="<category:pathName/>">
           <input type="hidden" name="TEST_PATH" value="${param.TEST_PATH}">
           <c:if test="${person!=null && (param.TYPE.equals('QUESTION') || param.TYPE.equals('TEST'))}">

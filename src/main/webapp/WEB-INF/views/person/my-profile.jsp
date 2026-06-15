@@ -14,7 +14,6 @@
     <div class="mainArea">
         <h2 class="header2"><spring:message code="personal.data.label"/></h2>
         <form:form action="${pageContext.request.contextPath}/change-user-settings" id="ProfileForm" method="post">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <span class="wrongMessage">${message}</span><br>
             <table>
                 <tr>
@@ -32,7 +31,6 @@
                    id="ChangePassword" onclick="openChangePasswordWindow('${pageContext.request.contextPath}')">
         </form:form>
         <form:form action="${pageContext.request.contextPath}/delete-person" id="DeleteForm" method="post">
-             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
              <input type="hidden" value="${person.id}" name="USER_ID" id="USER_ID">
              <input type="submit" value="<spring:message code="delete.account.button"/>" name="Delete" id="Delete">
         </form:form>
