@@ -387,11 +387,11 @@
         <to type="permanent-redirect">/ru/java/java-core-russian/for-cycle</to>
     </rule>
     <rule>
-        <from>^/ru/java/ocpjp8-update-from-java7/(.*)$</from>
-        <to type="permanent-redirect">/ru/java/java-core-russian/$1</to>
+        <from>^(?:/ru)?/java/java-core-russian/do-while-cycle$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/for-cycle</to>
     </rule>
     <rule>
-        <from>^/java/ocpjp8-update-from-java7/(.*)$</from>
+        <from>^(?:/ru)?/java/ocpjp8-update-from-java7/(.*)$</from>
         <to type="permanent-redirect">/java/java-core/$1</to>
     </rule>
     <rule>
