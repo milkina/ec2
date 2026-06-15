@@ -313,7 +313,7 @@
             <p class="udemy-eyebrow">Специальная цена</p>
             <p class="udemy-price"><span>€12.99</span></p>
             <p class="udemy-price-old">€59.99</p>
-            <a class="udemy-btn" href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="noopener noreferrer sponsored">
+            <a class="udemy-btn" href="https://www.udemy.com/course/java-bup/?couponCode=https://www.udemy.com/course/java-bup/?couponCode=JAVA-CORE" target="_blank" rel="noopener noreferrer sponsored">
               Начать обучение на Udemy
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>

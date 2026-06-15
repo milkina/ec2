@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- Udemy course promo -->
-<a class="udemy-promo" href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="nofollow sponsored noopener">
+<a class="udemy-promo" href="https://www.udemy.com/course/java-bup/?couponCode=JAVA-CORE" target="_blank" rel="nofollow sponsored noopener">
   <div class="udemy-promo-head">
     <span class="udemy-promo-badge">С наивысшим рейтингом</span>
     <h3 class="udemy-promo-title">Java SE для начинающих</h3>
