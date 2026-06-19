@@ -13,12 +13,14 @@ function markAnswered(contextPath, id) {
     if (changeElement.checked) {
         param = param + "Checked=" + id;
         if(liElementId){
-          liElementId.className = "answeredQuestion";
+          liElementId.classList.remove('notAnsweredQuestion');
+          liElementId.classList.add('answeredQuestion', 'is-done');
         }
     } else {
         param = param + "Unchecked=" + id;
          if(liElementId){
-           liElementId.className = "notAnsweredQuestion";
+           liElementId.classList.remove('answeredQuestion', 'is-done');
+           liElementId.classList.add('notAnsweredQuestion');
          }
     }
     req.open("POST", url, true);
@@ -115,6 +117,92 @@ function approveQuestion(contextPath, questionId) {
 
      req.send("examName=" + name + "&examCount=" + number);
  }
+
+var currentPage = 1;
+var itemsPerPage = 10;
+var allItems = [];
+var filteredItems = [];
+
+function initPagination() {
+    allItems = Array.from(document.querySelectorAll('.iq-item'));
+    filteredItems = allItems.slice();
+    updatePagination();
+    
+    var prevBtn = document.getElementById('iq-prev');
+    var nextBtn = document.getElementById('iq-next');
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+            }
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            var totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePagination();
+            }
+        });
+    }
+}
+
+function updatePagination() {
+    var totalPages = Math.ceil(filteredItems.length / itemsPerPage) || 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+    
+    var startIndex = (currentPage - 1) * itemsPerPage;
+    var endIndex = startIndex + itemsPerPage;
+    
+    allItems.forEach(function(el) {
+        el.style.display = 'none';
+    });
+    
+    for (var i = startIndex; i < endIndex && i < filteredItems.length; i++) {
+        filteredItems[i].style.display = '';
+    }
+    
+    var pageInfo = document.getElementById('iq-page-info');
+    if (pageInfo) {
+        var pageText = pageInfo.getAttribute('data-page-text') || 'Page';
+        var ofText = pageInfo.getAttribute('data-of-text') || 'of';
+        pageInfo.textContent = pageText + ' ' + currentPage + ' ' + ofText + ' ' + totalPages;
+    }
+    
+    var prevBtn = document.getElementById('iq-prev');
+    var nextBtn = document.getElementById('iq-next');
+    if (prevBtn) prevBtn.disabled = currentPage === 1;
+    if (nextBtn) nextBtn.disabled = currentPage === totalPages;
+}
+
+function initSearch() {
+    var searchEl = document.getElementById("iq-search");
+    if (searchEl) {
+        searchEl.addEventListener("input", function(e) {
+            var q = e.target.value.trim().toLowerCase();
+            filteredItems = allItems.filter(function(el) {
+                var text = el.querySelector('.iq-q').textContent.toLowerCase();
+                return text.includes(q);
+            });
+            currentPage = 1;
+            updatePagination();
+        });
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        initPagination();
+        initSearch();
+    });
+} else {
+    initPagination();
+    initSearch();
+}
 
 
 

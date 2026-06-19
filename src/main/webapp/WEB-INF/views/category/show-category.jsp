@@ -7,7 +7,6 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>
@@ -24,9 +23,14 @@
     <%@ include file="/edit/categoryOL.jsp"%>
     <c:set var="pathLanguage" value="${TESTS[param.TEST_PATH].language.code=='ru'?'ru/':''}"/>
     <c:set var="origUri" value="${requestScope['javax.servlet.forward.request_uri'] != null ? requestScope['javax.servlet.forward.request_uri'] : pageContext.request.requestURI}"/>
-    <c:if test="${TESTS[param.TEST_PATH].language.code=='ru' && !fn:contains(origUri, '/ru/')}">
-        <meta name="robots" content="noindex, follow">
-    </c:if>
+    <c:choose>
+        <c:when test="${TESTS[param.TEST_PATH].language.code=='ru' && !fn:contains(origUri, '/ru/')}">
+            <meta name="robots" content="noindex, follow">
+        </c:when>
+        <c:otherwise>
+            <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        </c:otherwise>
+    </c:choose>
     <c:set var="canonicalUrl" value="https://www.examclouds.com/${pathLanguage}java/${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}"/>
     <link rel="canonical" href="${canonicalUrl}">
     <c:set var="currentLang" value="${TESTS[param.TEST_PATH].language.code}"/>
@@ -175,7 +179,7 @@
                                  <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="for.this.lesson"/></p>
                                  <ul class="lesson-side-list">
                                      <c:if test="${isQuestions}">
-                                         <li><a href="${pageContext.request.contextPath}/see-questions/${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}" id="startQuiz" rel="nofollow"><span class="ic">?</span><spring:message code="questions"/></a></li>
+                                         <li><a href="${pageContext.request.contextPath}/${pathLanguage}${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}/quiz" id="startQuiz" rel="nofollow"><span class="ic">?</span><spring:message code="questions"/></a></li>
                                      </c:if>
                                      <c:if test="${isTests}">
                                              <li><a href="${pageContext.request.contextPath}/${pathLanguage}start-test/${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}" id="startTest" rel="nofollow"><span class="ic">📝</span><spring:message code="tests"/></a></li>

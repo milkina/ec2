@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import spring.services.category.CategoryService;
 import spring.services.question.QuestionService;
+import util.CategoryUtility;
 import util.GeneralUtility;
 import util.exam.ExamUtility;
 
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import static util.AllConstants.*;
 import static util.AllConstantsAttribute.*;
@@ -82,6 +84,17 @@ public class ExamController {
             currentNumber = GeneralUtility.getIntegerValue(request, QUESTION_NUMBER);
         }
         return ExamUtility.updateCurrentQuestionEntry(currentNumber, exam);
+    }
+
+    @RequestMapping(value = {"/show-quiz", "{langid}/show-quiz"})
+    public String showQuiz(@RequestParam(CATEGORY_PATH) String categoryPath,
+                           Model model, Locale locale,
+                                  HttpServletRequest request) {
+        request.setAttribute(LOCALE, locale);
+        Map<String, Category> categoryMap = CategoryUtility.getCategoriesFromServletContext(request);
+        Category category = categoryMap.get(categoryPath);
+        request.setAttribute(CATEGORY_ATTRIBUTE, category);
+        return "question/show-quiz";
     }
 
     @RequestMapping(value = "/see-questions")

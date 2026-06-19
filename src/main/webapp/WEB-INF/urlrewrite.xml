@@ -431,6 +431,10 @@
         <to type="passthrough">/see-questions?TEST_PATH=$1&amp;CATEGORY_PATH=$2</to>
     </rule>
     <rule>
+        <from>^(?:/ru)?/(.*)/(.*)/quiz$</from>
+        <to type="passthrough">/show-quiz?TEST_PATH=$1&amp;CATEGORY_PATH=$2&amp;TYPE=QUESTION</to>
+    </rule>
+    <rule>
         <from>^/see-questions/(.*)$</from>
         <to type="passthrough">/see-questions?TEST_PATH=$1</to>
     </rule>

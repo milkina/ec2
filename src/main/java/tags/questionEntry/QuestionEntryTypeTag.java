@@ -21,7 +21,7 @@ public class QuestionEntryTypeTag extends BaseQuestionEntryTypeTag {
             List<AbstractQuestionEntry> answeredQuestion = getAnsweredQuestions();
 
             String liClass = isAnswered(questionEntry, answeredQuestion)
-                    ? "answeredQuestion" : "notAnsweredQuestion";
+                    ? "answeredQuestion is-done" : "notAnsweredQuestion";
             out.print(liClass);
         } catch (IOException ioe) {
             System.out.println("Error in QuestionEntryTypeTag: " + ioe);

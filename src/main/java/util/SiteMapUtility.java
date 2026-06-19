@@ -25,6 +25,7 @@ import static util.AllConstants.SITE_NAME;
  */
 public class SiteMapUtility {
     public static final double ARTICLE_PRIORITY = 0.7;
+    public static final double QUIZ_PRIORITY = 0.7;
     public static final double NORM_PRIORITY = 0.8;
     public static final double HIGH_PRIORITY = 0.9;
     private UrlSet links;
@@ -126,16 +127,21 @@ public class SiteMapUtility {
     private void setCategoryLink(Test test, Category category, HttpServletRequest request) {
         if (isCategoryLinkable(test, category)) {
             String localAddress = "java/" + test.getPathName() + "/" + category.getPathName();
-            if (test.getLanguage().getCode().equals(LanguageCode.ru)) {
-                setCategoryLink(localAddress, LanguageCode.ru.getPath());
-            } else if (test.getLanguage().getCode().equals(LanguageCode.en)) {
-                setCategoryLink(localAddress, LanguageCode.en.getPath());
+            String path = test.getLanguage().getCode().equals(LanguageCode.ru) ? LanguageCode.ru.getPath() : LanguageCode.en.getPath();
+            setCategoryLink(localAddress, path);
+            if (category.getQuestionsCount() > 0) {
+                setQuizLink(localAddress + "/quiz", path);
             }
         }
     }
 
     private void setCategoryLink(String path, String language) {
         UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + path, NORM_PRIORITY, "weekly");
+        links.addUrlEntity(urlEntity);
+    }
+
+    private void setQuizLink(String path, String language) {
+        UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + path, QUIZ_PRIORITY, "weekly");
         links.addUrlEntity(urlEntity);
     }
 

@@ -17,7 +17,7 @@
         </c:otherwise>
     </c:choose>
     <a href="${courseUrl}">${TESTS[param.TEST_PATH].name}</a>
-     <c:set var="parentCategoryName" value="${CATEGORY_ATTRIBUTE.parentCategory!=null && CATEGORY_ATTRIBUTE.parentCategory.roadMapName!=null && not empty CATEGORY_ATTRIBUTE.parentCategory.roadMapName ? CATEGORY_ATTRIBUTE.parentCategory.roadMapName : CATEGORY_ATTRIBUTE.parentCategory.name}"></c:set>
+    <c:set var="parentCategoryName" value="${CATEGORY_ATTRIBUTE.parentCategory!=null && CATEGORY_ATTRIBUTE.parentCategory.roadMapName!=null && not empty CATEGORY_ATTRIBUTE.parentCategory.roadMapName ? CATEGORY_ATTRIBUTE.parentCategory.roadMapName : CATEGORY_ATTRIBUTE.parentCategory.name}"></c:set>
     <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null}">
         <span class="sep crumb-parent">›
         ${parentCategoryName}</span>
