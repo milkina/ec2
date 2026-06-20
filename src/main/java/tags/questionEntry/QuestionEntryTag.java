@@ -25,6 +25,10 @@ public class QuestionEntryTag extends BodyTagSupport {
         return number;
     }
 
+    public boolean hasNext() {
+        return iterator != null && iterator.hasNext();
+    }
+
     public int doStartTag() {
         setIterator();
         if (iterator.hasNext()) {

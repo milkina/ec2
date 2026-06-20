@@ -65,6 +65,24 @@
         <info>Answer text.</info>
     </tag>
     <tag>
+        <name>questionplain</name>
+        <tagclass>tags.questionEntry.QuestionPlainTextTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Question text without HTML tags, JSON-escaped.</info>
+    </tag>
+    <tag>
+        <name>comma</name>
+        <tagclass>tags.questionEntry.CommaTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Comma if more items exist in the list.</info>
+    </tag>
+    <tag>
+        <name>answertextplain</name>
+        <tagclass>tags.questionEntry.AnswerPlainTextTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <info>Answer text without HTML tags.</info>
+    </tag>
+    <tag>
         <name>answercheckbox</name>
         <tagclass>tags.questionEntry.AnswerCheckboxTag</tagclass>
         <bodycontent>empty</bodycontent>

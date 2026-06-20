@@ -169,6 +169,27 @@ public class GeneralUtility {
         return attr.getResponse();
     }
 
+    public static String toPlainJsonText(String text) {
+        if (text == null) {
+            return null;
+        }
+        text = text.replaceAll("<[^>]*>", "");
+        text = text.replaceAll("&amp;", "&");
+        text = text.replaceAll("&lt;", "<");
+        text = text.replaceAll("&gt;", ">");
+        text = text.replaceAll("&quot;", "\"");
+        text = text.replaceAll("&nbsp;", " ");
+        text = text.replaceAll("&#39;", "'");
+        text = text.replaceAll("\\s+", " ");
+        text = text.trim();
+        text = text.replace("\\", "\\\\");
+        text = text.replace("\"", "\\\"");
+        text = text.replace("\n", "\\n");
+        text = text.replace("\r", "");
+        text = text.replace("\t", " ");
+        return text;
+    }
+
     public static String getResourceValue(Locale locale, String key, String basename) {
         ResourceBundle resourceBundle = ResourceBundle.getBundle(basename, locale);
         return resourceBundle.getString(key);
