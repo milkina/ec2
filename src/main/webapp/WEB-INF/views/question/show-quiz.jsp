@@ -146,7 +146,7 @@
             }</script>
           </nav>
           <h1 class="iq-title">
-                ${TESTS[param.TEST_PATH].name} ${categoryName} - <spring:message code="quiz"/>
+                ${categoryName} - <spring:message code="quiz"/>
           </h1>
           <p class="iq-sub"><spring:message code="total"/>: ${CATEGORY_ATTRIBUTE.questionsCount} <spring:message code="total.questions"/></p>
           <div class="iq-toolbar">

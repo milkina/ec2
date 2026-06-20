@@ -74,6 +74,7 @@ public interface AllConstantsParam {
 
     String ARTICLE_ID = "ARTICLE_ID";
     String ARTICLE_TEXT = "article.text";
+    String FAQ_PAGE_SCHEMA = "article.faqPageSchema";
     String TITLE = "TITLE";
     String QUESTION_NUMBER = "QUESTION_NUMBER";
     String MODE = "MODE";

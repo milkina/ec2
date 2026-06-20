@@ -106,12 +106,21 @@ public class SiteMapUtility {
 
     private UrlEntity createUrlEntity(String testPathName,
                                       double priority, String freq) {
+        Date today = Calendar.getInstance().getTime();
+        return createUrlEntity(testPathName,
+                priority, freq, today);
+    }
+
+    private UrlEntity createUrlEntity(String testPathName,
+                                      double priority, String freq, Date date) {
         UrlEntity urlEntity = new UrlEntity();
         urlEntity.setLoc(testPathName);
         urlEntity.setChangefreq(freq);
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        Date today = Calendar.getInstance().getTime();
-        String reportDate = df.format(today);
+        if (date == null) {
+            date = Calendar.getInstance().getTime();
+        }
+        String reportDate = df.format(date);
 
         urlEntity.setLastmod(reportDate);
         urlEntity.setPriority(priority);
@@ -128,15 +137,16 @@ public class SiteMapUtility {
         if (isCategoryLinkable(test, category)) {
             String localAddress = "java/" + test.getPathName() + "/" + category.getPathName();
             String path = test.getLanguage().getCode().equals(LanguageCode.ru) ? LanguageCode.ru.getPath() : LanguageCode.en.getPath();
-            setCategoryLink(localAddress, path);
+            setCategoryLink(localAddress, path, category.getArticle().getModifiedDate());
             if (category.getQuestionsCount() > 0) {
                 setQuizLink(localAddress + "/quiz", path);
             }
         }
     }
 
-    private void setCategoryLink(String path, String language) {
-        UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + path, NORM_PRIORITY, "weekly");
+    private void setCategoryLink(String path, String language, Date date) {
+
+        UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + path, NORM_PRIORITY, "weekly", date);
         links.addUrlEntity(urlEntity);
     }
 

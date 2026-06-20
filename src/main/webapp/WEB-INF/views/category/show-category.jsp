@@ -62,10 +62,21 @@
         "description": "${CATEGORY_ATTRIBUTE.article.description}",
         "url": "${canonicalUrl}",
         "inLanguage": "${TESTS[param.TEST_PATH].language.code}",
+        <c:if test="${CATEGORY_ATTRIBUTE.article.createdDate != null}">
+        "datePublished": "<fmt:formatDate value="${CATEGORY_ATTRIBUTE.article.createdDate}" pattern="yyyy-MM-dd"/>",
+        </c:if>
+        <c:if test="${CATEGORY_ATTRIBUTE.article.modifiedDate != null}">
+        "dateModified": "<fmt:formatDate value="${CATEGORY_ATTRIBUTE.article.modifiedDate}" pattern="yyyy-MM-dd"/>",
+        </c:if>
         "isPartOf": {
             "@type": "Course",
             "name": "${TESTS[param.TEST_PATH].name}",
-            "url": "https://www.examclouds.com/${pathLanguage}${TESTS[param.TEST_PATH].fullPathName}"
+            "description": "${TESTS[param.TEST_PATH].article.description}",
+            "provider": {
+                "@type": "Organization",
+                "name": "ExamClouds",
+                "url": "https://www.examclouds.com"
+            }
         },
         "author": {
             "@type": "Person",
@@ -78,6 +89,13 @@
             "url": "https://www.examclouds.com"
         }
     }</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [${CATEGORY_ATTRIBUTE.article.faqPageSchema}]
+    }
+    </script>
     </jsp:attribute>
     <jsp:body>
       <!-- Mobile sticky context bar -->
@@ -127,6 +145,9 @@
                          <div class="lesson-meta">
                            <span class="meta-chip meta-chip-primary">⏱ ${CATEGORY_ATTRIBUTE.article.minRead!=null && not empty CATEGORY_ATTRIBUTE.article.minRead?CATEGORY_ATTRIBUTE.article.minRead:"5"}&nbsp;<spring:message code="min.read"/>
                                 </span>
+                          <c:if test="${CATEGORY_ATTRIBUTE.article.modifiedDate != null && not empty CATEGORY_ATTRIBUTE.article.modifiedDate}">
+                            <span class="meta-chip"><spring:message code="modified"/>: <fmt:formatDate value="${CATEGORY_ATTRIBUTE.article.modifiedDate}" pattern="yyyy-MM-dd"/></span>
+                          </c:if>
                           <!-- <span class="meta-chip">Beginner</span>
                            <span class="meta-chip meta-chip-success">✓ Lesson 2 of 5</span>-->
                          </div>

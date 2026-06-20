@@ -87,16 +87,19 @@ public class ArticleUtility extends SpringUtility {
                 request.getParameter(ARTICLE_KEYWORDS));
         String title = decodeRussianCharacters(request.getParameter(TITLE));
         String tag = decodeRussianCharacters(request.getParameter(ARTICLE_TAG));
+        String faqPageSchema = decodeRussianCharacters(request.getParameter(FAQ_PAGE_SCHEMA));
         String minRead = request.getParameter(ARTICLE_MIN_READ);
         String index = request.getParameter(ARTICLE_INDEX);
         String languageCode = request.getParameter(LANGUAGE);
 
+        article.setModifiedDate(new Date());
         article.setText(text);
         article.setImage(image);
         article.setDescription(description);
         article.setKeywords(keywords);
         article.setTitle(title);
         article.setTag(tag);
+        article.setFaqPageSchema(faqPageSchema);
         article.setMinRead(minRead);
         article.setIndexStatus("on".equals(index));
         if (languageCode != null) {

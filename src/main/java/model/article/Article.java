@@ -29,6 +29,8 @@ public class Article {
 
     private Date createdDate;
 
+    private Date modifiedDate;
+
     private String image;
 
     private String keywords;
@@ -42,6 +44,9 @@ public class Article {
     private boolean hidden = false;
 
     private boolean indexStatus = true;
+
+    @Lob
+    private String faqPageSchema;
 
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
     @JoinColumn(name = "reference_id", foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
@@ -192,6 +197,22 @@ public class Article {
         this.indexStatus = indexStatus;
     }
 
+    public String getFaqPageSchema() {
+        return faqPageSchema;
+    }
+
+    public void setFaqPageSchema(String faqPageSchema) {
+        this.faqPageSchema = faqPageSchema;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -207,11 +228,13 @@ public class Article {
                 Objects.equals(description, article.description) &&
                 Objects.equals(title, article.title) &&
                 Objects.equals(author, article.author) &&
-                Objects.equals(category, article.category);
+                Objects.equals(category, article.category) &&
+                Objects.equals(modifiedDate, article.modifiedDate) &&
+                Objects.equals(faqPageSchema, article.faqPageSchema);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, url, text, createdDate, image, keywords, description, title, hidden, indexStatus, comments, author, category);
+        return Objects.hash(id, url, text, createdDate, image, keywords, description, title, hidden, indexStatus, comments, author, category, faqPageSchema, modifiedDate);
     }
 }

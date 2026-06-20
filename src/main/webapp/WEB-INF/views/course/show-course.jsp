@@ -63,12 +63,19 @@
                     "ratingValue": "4.8",
                     "ratingCount": "75"
                   },
-                  "educationLevel": "Beginner, Intermediate",
                   "learningResourceType": "Course",
                   "teaches": [
+                      <c:set var="visibleCount" value="0"/>
                       <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
                         <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
-                          "<c:out value='${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}'/>",
+                          <c:set var="visibleCount" value="${visibleCount + 1}"/>
+                        </c:if>
+                      </c:forEach>
+                      <c:set var="currentIndex" value="0"/>
+                      <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
+                        <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
+                          <c:set var="currentIndex" value="${currentIndex + 1}"/>
+                          "<c:out value='${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}'/>"<c:if test="${currentIndex < visibleCount}">,</c:if>
                         </c:if>
                       </c:forEach>
                     ],

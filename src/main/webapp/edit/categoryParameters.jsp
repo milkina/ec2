@@ -56,4 +56,6 @@
 <textarea rows="4" cols="40" maxlength="160" name="description" required id="description">${CATEGORY_ATTRIBUTE.article.description}</textarea>  <br>
 <span class="adminLabel"><spring:message code="text"/>:</span>
 <textarea rows="25" cols="80" name="article.text" id="ARTICLE_TEXT">${CATEGORY_ATTRIBUTE.article.text}</textarea> <br>
+<span class="adminLabel">FAQ Page Schema (optional):</span>
+<textarea rows="10" cols="80" name="article.faqPageSchema" id="FAQ_PAGE_SCHEMA">${CATEGORY_ATTRIBUTE.article.faqPageSchema}</textarea> <br>
 
