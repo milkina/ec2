@@ -42,6 +42,17 @@
             <link rel="alternate" hreflang="x-default" href="${xDefaultHref}">
         </c:if>
         <meta property="og:url" content="${canonicalUrl}">
+        <meta property="og:title" content="${categoryName} - ${TESTS[param.TEST_PATH].name} <spring:message code="quiz"/> - ${CATEGORY_ATTRIBUTE.questionsCount}&nbsp; <spring:message code="total.questions"/> | ExamClouds">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content = "<spring:message code="quiz.meta.description" arguments="${CATEGORY_ATTRIBUTE.name},${TESTS[param.TEST_PATH].name},${CATEGORY_ATTRIBUTE.questionsCount}" argumentSeparator=","/>">
+        <meta property="og:site_name" content="ExamClouds">
+        <meta property="twitter:title" content="${categoryName} - ${TESTS[param.TEST_PATH].name} <spring:message code="quiz"/> - ${CATEGORY_ATTRIBUTE.questionsCount}&nbsp; <spring:message code="total.questions"/> | ExamClouds">
+        <meta property="twitter:card" content="summary">
+        <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
+        <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
+        <meta property="twitter:image:alt" content="${categoryName} - ${TESTS[param.TEST_PATH].name} <spring:message code="quiz"/> - ${CATEGORY_ATTRIBUTE.questionsCount}&nbsp; <spring:message code="total.questions"/> | ExamClouds">
+        <meta property="twitter:description" content="<spring:message code="quiz.meta.description" arguments="${CATEGORY_ATTRIBUTE.name},${TESTS[param.TEST_PATH].name},${CATEGORY_ATTRIBUTE.questionsCount}" argumentSeparator=","/>">
+        <meta property="twitter:site" content="@ExamClouds">
         <script async src="${pageContext.request.contextPath}/js/show_questions.js?v=2"></script>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/quiz.css?v=2">
         <!-- LearningResource Schema -->

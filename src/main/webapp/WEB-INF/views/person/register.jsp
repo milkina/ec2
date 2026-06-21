@@ -5,6 +5,7 @@
 <t:wrapper2>
   <jsp:attribute name="header">
       <meta name="robots" content="noindex">
+      <meta name="description" content="<spring:message code="create.account.description"/>">
       <title><spring:message code="create.account"/> | ExamClouds</title>
       <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/register.css?v=1">
   </jsp:attribute>

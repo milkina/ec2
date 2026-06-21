@@ -1,7 +1,3 @@
-/* ExamClouds Redesign — Friendly & Educational
-   Pure CSS port of the React/Tailwind prototype.
-   All colors in oklch. */
-
 :root {
   /* Surfaces */
   --background: oklch(0.985 0.005 95);
@@ -1955,6 +1951,32 @@ pre.has-copy { position: relative; }
 }
 .copy-btn:hover { background: rgba(255,255,255,.2); }
 .copy-btn.is-copied { background: var(--success, #16a34a); color: #fff; opacity: 1; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.feature-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+.feature-card .icon {
+  color: #2563eb;        /* цвет иконки — меняйте на тему сайта */
+  margin-bottom: 12px;
+}
+.feature-card h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+.feature-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
 /* ===== Articles index page ===== */
 .articles-page { padding-block: 3.5rem 5rem; }
 .articles-title { margin-top: 1rem; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; }
@@ -2055,8 +2077,6 @@ pre.has-copy { position: relative; }
   color: var(--muted-fg);
   margin-bottom: .85rem;
 }
-
-
 /* Test form layout: select (2/3) and qty (1/3) */
 .test-form-grid {
   display: grid;
@@ -2200,4 +2220,5 @@ pre.has-copy { position: relative; }
 .comment-dialog-body .btn {
   justify-self: center;
 }
+
 

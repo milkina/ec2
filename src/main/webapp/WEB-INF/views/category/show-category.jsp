@@ -200,7 +200,7 @@
                                  <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="for.this.lesson"/></p>
                                  <ul class="lesson-side-list">
                                      <c:if test="${isQuestions}">
-                                         <li><a href="${pageContext.request.contextPath}/${pathLanguage}${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}/quiz" id="startQuiz" rel="nofollow"><span class="ic">?</span><spring:message code="questions"/></a></li>
+                                         <li><a href="${pageContext.request.contextPath}/${pathLanguage}${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}/quiz" id="startQuiz"><span class="ic">?</span><spring:message code="questions"/></a></li>
                                      </c:if>
                                      <c:if test="${isTests}">
                                              <li><a href="${pageContext.request.contextPath}/${pathLanguage}start-test/${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}" id="startTest" rel="nofollow"><span class="ic">📝</span><spring:message code="tests"/></a></li>
