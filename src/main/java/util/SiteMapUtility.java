@@ -139,7 +139,7 @@ public class SiteMapUtility {
             String path = test.getLanguage().getCode().equals(LanguageCode.ru) ? LanguageCode.ru.getPath() : LanguageCode.en.getPath();
             setCategoryLink(localAddress, path, category.getArticle().getModifiedDate());
             if (category.getQuestionsCount() > 0) {
-                setQuizLink(localAddress + "/quiz", path);
+                setQuizLink(test.getPathName() + "/" + category.getPathName() + "/quiz", path);
             }
         }
     }
