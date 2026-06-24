@@ -1953,29 +1953,9 @@ pre.has-copy { position: relative; }
 .copy-btn.is-copied { background: var(--success, #16a34a); color: #fff; opacity: 1; }
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 16px;
   margin: 24px 0;
-}
-.feature-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 20px;
-  background: #fff;
-}
-.feature-card .icon {
-  color: #2563eb;        /* цвет иконки — меняйте на тему сайта */
-  margin-bottom: 12px;
-}
-.feature-card h3 {
-  margin: 0 0 6px;
-  font-size: 17px;
-}
-.feature-card p {
-  margin: 0;
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
 }
 /* ===== Articles index page ===== */
 .articles-page { padding-block: 3.5rem 5rem; }
@@ -2219,6 +2199,40 @@ pre.has-copy { position: relative; }
 }
 .comment-dialog-body .btn {
   justify-self: center;
+}
+.lesson-tip {
+  margin-top: 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.lesson-tip-ico {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: var(--accent-fg);
+  margin-top: 0.15rem;
+}
+.lesson-tip-body {
+  display: grid;
+  gap: 0.35rem;
+}
+.lesson-tip-title {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--accent-fg);
+  margin: 0;
+}
+.lesson-tip-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--accent-fg);
+  margin: 0;
+  opacity: 0.92;
 }
 
 

@@ -24,23 +24,6 @@
             </c:choose>
         <c:set var="canonicalUrl" value="https://www.examclouds.com/${pathLanguage}${param.TEST_PATH}/${CATEGORY_ATTRIBUTE.pathName}/quiz"/>
         <link rel="canonical" href="${canonicalUrl}">
-        <c:set var="currentLang" value="${TESTS[param.TEST_PATH].language.code}"/>
-        <c:set var="ruHref" value="${currentLang=='ru' ? canonicalUrl : null}"/>
-        <c:set var="enHref" value="${currentLang=='en' ? canonicalUrl : null}"/>
-        <link rel="alternate" hreflang="${currentLang}" href="${canonicalUrl}">
-        <c:forEach var="alt" items="${CATEGORY_ATTRIBUTE.canonicalUrls}">
-            <c:if test="${alt.value != null && alt.value.url != null}">
-                <c:set var="altPathLanguage" value="${alt.value.language.code=='ru' ? '/ru' : ''}"/>
-                <c:set var="altHref" value="https://www.examclouds.com${altPathLanguage}${alt.value.url}/quiz"/>
-                <link rel="alternate" hreflang="${alt.value.language.code}" href="${altHref}">
-                <c:if test="${alt.value.language.code=='ru'}"><c:set var="ruHref" value="${altHref}"/></c:if>
-                <c:if test="${alt.value.language.code=='en'}"><c:set var="enHref" value="${altHref}"/></c:if>
-            </c:if>
-        </c:forEach>
-        <c:set var="xDefaultHref" value="${enHref != null ? enHref : ruHref}"/>
-        <c:if test="${xDefaultHref != null}">
-            <link rel="alternate" hreflang="x-default" href="${xDefaultHref}">
-        </c:if>
         <meta property="og:url" content="${canonicalUrl}">
         <meta property="og:title" content="${categoryName} - ${TESTS[param.TEST_PATH].name} <spring:message code="quiz"/> - ${CATEGORY_ATTRIBUTE.questionsCount}&nbsp; <spring:message code="total.questions"/> | ExamClouds">
         <meta property="og:type" content="website">
