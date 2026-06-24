@@ -2234,5 +2234,87 @@ pre.has-copy { position: relative; }
   margin: 0;
   opacity: 0.92;
 }
+/* ===== Таблицы ExamClouds — фирменный синий ===== */
+.ec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 24px 0;
+  border: 1px solid #d8e0ef;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ec-table thead th {
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;              /* фирменный синий */
+  padding: 12px 16px;
+  border-bottom: none;
+  white-space: nowrap;
+}
+
+.ec-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9edf5;
+  vertical-align: top;
+  color: #2c3240;
+}
+
+.ec-table tbody tr:nth-child(even) { background: #f4f7fc; }
+.ec-table tbody tr:last-child td { border-bottom: none; }
+
+.ec-table td:first-child {
+  color: #5a6172;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ec-table code {
+  background: rgba(37,99,235,.08);
+  border: 1px solid #d3def6;
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-size: .9em;
+  color: #1d4ed8;
+}
+
+/* Подсветка строк (LTS / важное) */
+.ec-table tr.is-highlight,
+.ec-table tr.is-highlight:nth-child(even) { background: #e3edfd; }
+
+/* Бейджи статусов */
+.ec-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 1px 8px;
+  border-radius: 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+  background: #2563eb;
+  color: #fff;
+}
+.ec-badge--muted { background: #6b7280; }
+.ec-badge--ok    { background: #1d9e75; }
+
+/* Адаптив: горизонтальный скролл на узких экранах */
+.ec-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px 0; }
+.ec-table-wrap .ec-table { margin: 0; min-width: 520px; }
+
+/* Тёмная тема */
+@media (prefers-color-scheme: dark) {
+  .ec-table { border-color: #2a2f3a; }
+  .ec-table thead th { background: #1d4ed8; color: #fff; }
+  .ec-table td { color: #d4d8e0; border-bottom-color: #262b35; }
+  .ec-table tbody tr:nth-child(even) { background: #1d212a; }
+  .ec-table td:first-child { color: #9aa1b1; }
+  .ec-table tr.is-highlight,
+  .ec-table tr.is-highlight:nth-child(even) { background: #1e2b45; }
+  .ec-table code { background: rgba(96,140,240,.15); border-color: #33415e; color: #93b4f5; }
+}
 
 
