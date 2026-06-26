@@ -14,7 +14,8 @@
                   </div>
                   <div class="article-card-body test-form-body">
 <div id="collapse_q_${test.pathName}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_q_${test.pathName}">
-  <form action="${pageContext.request.contextPath}/see-questions/${test.pathName}" method="post" class="test-form" aria-label="Start quiz form">
+  <form action="${pageContext.request.contextPath}/quiz/${test.pathName}" method="post" class="test-form" aria-label="Start quiz form">
+    <input type="hidden" name="TYPE" value="QUESTION">
     <div class="test-form-grid">
       <div class="test-field test-field--wide">
         <label class="test-field-label" for="CATEGORY_PATH_quiz_${test.pathName}"><spring:message code="category.label"/></label>

@@ -56,6 +56,7 @@
        "description": "${jsonDescription}",
        "image": "${ARTICLE_ATTRIBUTE.image != null && not empty ARTICLE_ATTRIBUTE.image ? ARTICLE_ATTRIBUTE.image : 'https://img.examclouds.com/general/logo-f.png'}",
        <c:if test="${ARTICLE_ATTRIBUTE.createdDate != null}">"datePublished": "<fmt:formatDate value="${ARTICLE_ATTRIBUTE.createdDate}" pattern="yyyy-MM-dd'T'HH:mm:ssXXX"/>",</c:if>
+       <c:if test="${ARTICLE_ATTRIBUTE.modifiedDate != null}">"dateModified": "<fmt:formatDate value="${ARTICLE_ATTRIBUTE.modifiedDate}" pattern="yyyy-MM-dd'T'HH:mm:ssXXX"/>",</c:if>
        <c:if test="${ARTICLE_ATTRIBUTE.tag != null && not empty ARTICLE_ATTRIBUTE.tag}">"articleSection": "${ARTICLE_ATTRIBUTE.tag}",</c:if>
        "inLanguage": "${ARTICLE_ATTRIBUTE.language.code=='ru'?'ru':'en'}",
        "author": {

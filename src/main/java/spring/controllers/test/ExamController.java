@@ -97,6 +97,26 @@ public class ExamController {
         return "question/show-quiz";
     }
 
+    @RequestMapping(value = "/show-quiz-general")
+    public String showQuizGeneral(@RequestParam(TEST_PATH) String testPath,
+                                  Model model, Locale locale,
+                                  HttpServletRequest request) {
+        request.setAttribute(LOCALE, locale);
+        String[] categoryPaths = request.getParameterValues(CATEGORY_PATH);
+        Map<String, Category> categoryMap = CategoryUtility.getCategoriesFromServletContext(request);
+        Category category = categoryMap.get(categoryPaths[0]);
+        request.setAttribute(CATEGORY_ATTRIBUTE, category);
+        int totalQuestionsCount = 0;
+        for (String path : categoryPaths) {
+            Category c = categoryMap.get(path);
+            if (c != null) {
+                totalQuestionsCount += c.getQuestionsCount();
+            }
+        }
+        request.setAttribute("TOTAL_QUESTIONS_COUNT", totalQuestionsCount);
+        return "question/show-quiz-general";
+    }
+
     @RequestMapping(value = "/see-questions")
     public String seeQuestions(@RequestParam(TEST_PATH) String testPath,
                                Model model, Locale locale,

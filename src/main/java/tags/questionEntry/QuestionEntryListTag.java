@@ -11,6 +11,7 @@ import util.SpringUtility;
 
 import javax.servlet.ServletContext;
 import javax.servlet.jsp.tagext.BodyTagSupport;
+import java.util.ArrayList;
 import java.util.List;
 
 import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
@@ -44,20 +45,47 @@ public class QuestionEntryListTag extends BodyTagSupport {
     }
 
     public int doStartTag() {
-        Category category = getCategory();
         String type = pageContext.getRequest().getParameter(TYPE);
         questionService = getQuestionService(pageContext.getServletContext());
-        if (QuestionType.QUESTION.toString().equals(type)) {
-            questionEntries = questionService.getAllQuestions(category);
-        } else if (QuestionType.TEST.toString().equals(type)) {
-            questionEntries = questionService.getAllTestQuestions(category);
-        } else if (QuestionType.NOT_APPROVED.toString().equals(type)) {
-            questionEntries = questionService.getNotApprovedQuestions();
-        } else if (QuestionType.MY_QUESTIONS.toString().equals(type)) {
+
+        String[] categoryPaths = pageContext.getRequest().getParameterValues(CATEGORY_PATH);
+        if (categoryPaths != null && categoryPaths.length > 1) {
+            List<Category> categories = getCategories(categoryPaths);
             Person person = (Person) pageContext.getSession().getAttribute(PERSON_ATTRIBUTE);
-            questionEntries = questionService.getPersonQuestions(person.getId());
+            if (QuestionType.QUESTION.toString().equals(type) || type == null) {
+                questionEntries = questionService.getQuestions(categories, person, type);
+            } else if (QuestionType.TEST.toString().equals(type)) {
+                questionEntries = questionService.getAllTestQuestions(categories.get(0));
+            }
+        } else {
+            Category category = getCategory();
+            if (QuestionType.QUESTION.toString().equals(type)) {
+                questionEntries = questionService.getAllQuestions(category);
+            } else if (QuestionType.TEST.toString().equals(type)) {
+                questionEntries = questionService.getAllTestQuestions(category);
+            } else if (QuestionType.NOT_APPROVED.toString().equals(type)) {
+                questionEntries = questionService.getNotApprovedQuestions();
+            } else if (QuestionType.MY_QUESTIONS.toString().equals(type)) {
+                Person person = (Person) pageContext.getSession().getAttribute(PERSON_ATTRIBUTE);
+                questionEntries = questionService.getPersonQuestions(person.getId());
+            }
         }
         return EVAL_BODY_INCLUDE;
+    }
+
+    private List<Category> getCategories(String[] categoryPaths) {
+        CategoryService catService = getCategoryService(pageContext.getServletContext());
+        List<Category> categories = new ArrayList<>();
+        for (String path : categoryPaths) {
+            Category category = catService.getCategory(path);
+            if (category != null) {
+                categories.add(category);
+                if (category.getSubCategories() != null && !category.getSubCategories().isEmpty()) {
+                    categories.addAll(category.getSubCategories());
+                }
+            }
+        }
+        return categories;
     }
 
     private Category getCategory() {
