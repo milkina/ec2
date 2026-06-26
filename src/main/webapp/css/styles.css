@@ -1257,9 +1257,6 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
   height: auto;
   border-radius: 1rem;
 }
-@media (min-width: 1024px) {
-  .img-responsive{ margin: 0 1.5rem 1rem 1.5rem; }
-}
 /* From old menu */
 .logo img{
   width:122px;
@@ -1591,7 +1588,7 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
 .mobile-sticky-bar .msb-lesson { color: var(--muted-fg); font-weight: 600; flex-shrink: 0; }
 .mobile-sticky-bar .msb-pct {
   position: absolute; right: 1rem; top: .5rem;
-  font-size: .82rem; font-weight: 800; color: var(--success, #16a34a);
+  font-size: .82rem; font-weight: 800; color: oklch(0.45 0.16 152);
 }
 .mobile-sticky-bar .msb-progress {
   margin-top: .35rem; height: 3px; border-radius: 3px;
@@ -1822,6 +1819,7 @@ body.is-admin .m-auth-in .m-admin { display: flex; }
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
   margin-top: 1rem;
+  margin-bottom: 1rem;
   color: var(--foreground);
   transition: transform .2s ease, box-shadow .2s ease;
 }
@@ -2315,6 +2313,110 @@ pre.has-copy { position: relative; }
   .ec-table tr.is-highlight,
   .ec-table tr.is-highlight:nth-child(even) { background: #1e2b45; }
   .ec-table code { background: rgba(96,140,240,.15); border-color: #33415e; color: #93b4f5; }
+}
+/* ===== FAQ ExamClouds ===== */
+.faq {
+  margin: 28px 0;
+}
+
+.faq-item {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e9edf5;
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* синий кружок с "?" */
+.faq-item::before {
+  content: "?";
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: #2563eb;        /* фирменный синий, как у таблиц */
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.faq-q {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2430;
+}
+.faq-a {
+  margin: 0;
+  color: #3a4250;
+  line-height: 1.6;
+}
+.faq-a code {
+  background: rgba(37,99,235,.08);
+  border: 1px solid #d3def6;
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-size: .9em;
+  color: #1d4ed8;
+}
+
+/* тёмная тема (если есть) */
+@media (prefers-color-scheme: dark) {
+  .faq-item { border-bottom-color: #262b35; }
+  .faq-q { color: #e8ebf2; }
+  .faq-a { color: #c4cad6; }
+  .faq-a code { background: rgba(96,140,240,.15); border-color: #33415e; color: #93b4f5; }
+}
+.toc {
+  background: #f4f7fc;
+  border: 1px solid #d8e0ef;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+.toc-title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #2563eb;
+}
+.toc-list {
+  margin: 0;
+  padding-left: 20px;
+  columns: 2;            /* в два столбца — компактнее для 11 пунктов */
+  column-gap: 28px;
+}
+.toc-list li {
+  margin: 4px 0;
+  break-inside: avoid;
+}
+.toc-list a {
+  color: #2c3240;
+  text-decoration: none;
+  font-size: 15px;
+}
+.toc-list a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* плавная прокрутка + отступ под «липкую» шапку, если она есть */
+html { scroll-behavior: smooth; }
+:target { scroll-margin-top: 80px; }
+
+@media (max-width: 600px) {
+  .toc-list { columns: 1; }   /* на мобильном — один столбец */
 }
 
 

@@ -89,6 +89,7 @@
             "url": "https://www.examclouds.com"
         }
     }</script>
+    <c:if test="${CATEGORY_ATTRIBUTE.article.faqPageSchema!=null &&not empty CATEGORY_ATTRIBUTE.article.faqPageSchema}">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -96,6 +97,7 @@
       "mainEntity": [${CATEGORY_ATTRIBUTE.article.faqPageSchema}]
     }
     </script>
+    </c:if>
     </jsp:attribute>
     <jsp:body>
       <!-- Mobile sticky context bar -->
@@ -218,11 +220,10 @@
                                    <a href="#" aria-label="Copy link" onclick="navigator.clipboard.writeText('${canonicalUrl}');return false;">🔗</a>
                                  </div>
                                </div>
-
-                               <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
                                <c:if test="${currentLang=='ru'}">
                                      <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
                                </c:if>
+                               <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
                              </aside>
          </div>
          <jsp:include page="/WEB-INF/comment/comments.jsp">
