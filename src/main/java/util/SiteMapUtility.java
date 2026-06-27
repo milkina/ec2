@@ -71,13 +71,10 @@ public class SiteMapUtility {
                 if (article.getUrl().trim().isEmpty()) {
                     priority = 1;
                 }
-                if (article.getLanguage().getCode().equals(LanguageCode.ru)) {
-                    UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.ru.getPath() + article.getUrl(), priority, "monthly");
-                    links.addUrlEntity(urlEntity);
-                } else {
-                    UrlEntity urlEntity = createUrlEntity(SITE_NAME + LanguageCode.en.getPath() + article.getUrl(), priority, "monthly");
-                    links.addUrlEntity(urlEntity);
-                }
+                String languagePath = article.getLanguage().getCode().equals(LanguageCode.ru) ? LanguageCode.ru.getPath() : LanguageCode.en.getPath();
+                Date date = article.getModifiedDate() != null ? article.getModifiedDate() :Calendar.getInstance().getTime();
+                UrlEntity urlEntity = createUrlEntity(SITE_NAME + languagePath + article.getUrl(), priority, "monthly", date);
+                links.addUrlEntity(urlEntity);
             }
         }
     }
