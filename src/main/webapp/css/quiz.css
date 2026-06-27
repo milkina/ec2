@@ -58,6 +58,7 @@
     .iq-check svg { width: 14px; height: 14px; opacity: 0; }
     .iq-check[aria-pressed="true"] svg { opacity: 1; }
     .iq-q { flex: 1; font-weight: 700; padding-right: .5rem; }
+    .iq-q p { display: inline; margin: 0; }
     .iq-item.is-done .iq-q { text-decoration: line-through; color: var(--muted-fg); }
     .iq-plus {
       color: var(--primary); font-size: 1.3rem; line-height: 1;
