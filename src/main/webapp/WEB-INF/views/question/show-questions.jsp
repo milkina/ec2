@@ -49,7 +49,7 @@
                 </summary>
                 <div class="iq-a">
                   <qe:answers>
-                    <div><qe:answer><qe:answertext/></qe:answer></div>
+                    <div><qe:answer><qe:answertext/> <input type="checkbox" disabled <qe:answercheckbox/> class="iq-right-mark"></qe:answer></div>
                   </qe:answers>
                   <div class="iq-actions">
                     <c:if test="${param.TYPE.equals('TEST') || param.TYPE.equals('QUESTION')}">
