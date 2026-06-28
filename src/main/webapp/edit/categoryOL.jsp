@@ -1,4 +1,4 @@
-﻿<meta property="og:title" content="<c:out value="${titleName}"/>">
+<meta property="og:title" content="<c:out value="${titleName}"/>">
 <meta property="og:type" content = "article">
 <meta property="og:description" content = "${CATEGORY_ATTRIBUTE.article.description}">
 <meta property="og:site_name" content="ExamClouds">
@@ -16,4 +16,10 @@
 </c:choose>
 <meta property="twitter:image:alt" content="<c:out value="${titleName}"/>">
 <meta property="twitter:description" content="${CATEGORY_ATTRIBUTE.article.description}">
+<c:if test="${CATEGORY_ATTRIBUTE.article.createdDate != null}">
+  <meta property="og:published_time" content="<fmt:formatDate value="${CATEGORY_ATTRIBUTE.article.createdDate}" pattern="yyyy-MM-dd'T'HH:mm:ssXXX"/>">
+</c:if>
+<c:if test="${CATEGORY_ATTRIBUTE.article.modifiedDate != null}">
+  <meta property="og:modified_time" content="<fmt:formatDate value="${CATEGORY_ATTRIBUTE.article.modifiedDate}" pattern="yyyy-MM-dd'T'HH:mm:ssXXX"/>">
+</c:if>
 <meta property="twitter:site" content="@ExamClouds">
