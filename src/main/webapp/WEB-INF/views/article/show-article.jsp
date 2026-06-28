@@ -36,6 +36,12 @@
     <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}">
     <meta property="og:site_name" content="ExamClouds">
     <c:if test="${ARTICLE_ATTRIBUTE.createdDate != null}">
+      <meta property="og:published_time" content="<fmt:formatDate value="${ARTICLE_ATTRIBUTE.createdDate}" pattern="yyyy-MM-dd'T'HH:mm:ssXXX"/>">
+    </c:if>
+    <c:if test="${ARTICLE_ATTRIBUTE.modifiedDate != null}">
+      <meta property="og:modified_time" content="<fmt:formatDate value="${ARTICLE_ATTRIBUTE.modifiedDate}" pattern="yyyy-MM-dd'T'HH:mm:ssXXX"/>">
+    </c:if>
+    <c:if test="${ARTICLE_ATTRIBUTE.createdDate != null}">
       <meta property="article:published_time" content="<fmt:formatDate value="${ARTICLE_ATTRIBUTE.createdDate}" pattern="yyyy-MM-dd'T'HH:mm:ssXXX"/>">
     </c:if>
     <meta property="article:section" content="${ARTICLE_ATTRIBUTE.tag != null && not empty ARTICLE_ATTRIBUTE.tag?ARTICLE_ATTRIBUTE.tag:"IT"}">
