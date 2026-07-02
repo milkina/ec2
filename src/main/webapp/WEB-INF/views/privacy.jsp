@@ -47,7 +47,7 @@
                   <p>2.7. Operator – a state body, municipal body, legal or natural person, independently or jointly with other persons organizing and (or) carrying out the processing of personal data, as well as determining the purposes of personal data processing, the composition of personal data to be processed, actions (operations) performed with personal data.</p>
                   <p>2.8. Personal data – any information relating directly or indirectly to a specific or identifiable User of the website <span data-scroll-to="#prefixURL" class="link mark">https://www.examclouds.com</span>.</p>
                   <p>2.9. Personal data allowed by the subject of personal data for dissemination – personal data to which access is provided to an unlimited number of persons by the subject of personal data by giving consent to the processing of personal data allowed by the subject of personal data for dissemination in the manner prescribed by the Personal Data Law (hereinafter - personal data allowed for dissemination).</p>
-                  <p>2.10. User – any visitor to the website <strong>https://www.examclouds.com</strong>.</p>
+                  <p>2.10. User – any visitor to the website <span data-scroll-to="#prefixURL" class="link mark">https://www.examclouds.com</span>.</p>
                   <p>2.11. Provision of personal data – actions aimed at disclosing personal data to a specific person or a specific group of persons.</p>
                   <p>2.12. Dissemination of personal data – any actions aimed at disclosing personal data to an indefinite group of persons (transfer of personal data) or at familiarizing an unlimited group of persons with personal data, including publication of personal data in the media, placement in information and telecommunication networks, or providing access to personal data in any other way.</p>
                   <p>2.13. Cross-border transfer of personal data – transfer of personal data to the territory of a foreign state to a foreign government body, a foreign natural or foreign legal person.</p>
@@ -81,9 +81,8 @@
           <div class="container">
               <div class="card">
                   <h2>5. The Operator may process the following User's personal data</h2>
-                  <p>5.1. <mark>Email address;</mark></p>
-                  <p>5.2. Also, the site collects and processes anonymized data about visitors (including "cookie" files) using internet statistics services (Google Analytics and others).</p>
-                  <p>5.3. The above data are further in the text of the Policy combined under the general concept of Personal data.</p>
+                  <p>5.1. <mark>Email address; username (login) upon registration;</mark></p>
+                  <p>5.2. The site also automatically collects anonymized data about visitors (including IP address, cookie files, browser and device data, pages visited, and actions on the site) using internet statistics and advertising services (Google Analytics, Google AdSense). See Section 14 for details.</p>   <p>5.3. The above data are further in the text of the Policy combined under the general concept of Personal data.</p>
                   <p>5.4. The Operator does not process special categories of personal data relating to racial or ethnic origin, political opinions, religious or philosophical beliefs, intimate life.</p>
                   <p>5.5. User's consent to the processing of personal data allowed for dissemination is executed separately from other consents to the processing of their personal data.</p>
                   <p>5.5.1. The User provides the Operator with consent to process personal data allowed for dissemination directly.</p>
@@ -166,10 +165,43 @@
           </div>
           <div class="container">
               <div class="card">
-                  <h2>14. Final Provisions</h2>
-                  <p>14.1. The User can obtain any explanations on issues of interest related to the processing of their personal data by contacting the Operator via email at <span data-scroll-to="#privacyEmail" class="link mark">tatyana.milkina@gmail.com</span>.</p>
-                  <p>14.2. Any changes to the policy for processing personal data by the Operator will be reflected in this document. The Policy is valid indefinitely until replaced by a new version.</p>
-                  <p>14.3. The current version of the Policy is freely available on the Internet at <strong>https://www.examclouds.com/privacy/</strong>.</p>
+                  <h2>14. Cookies and Third-Party Services</h2>
+
+                  <p>14.1. The website uses cookies — small text files stored in the User's browser. Some cookies are strictly necessary for the site to function (for example, keeping the session and the selected language), while others are used for analytics and advertising.</p>
+
+                  <p>14.2. On the first visit, the User is shown a cookie consent banner where the User can accept or decline analytics and advertising cookies. The User can change or withdraw their consent at any time through the cookie settings on the site or their browser settings.</p>
+
+                  <p>14.3. To operate the website, analyze traffic, and display advertising, the Operator uses the following third-party services:</p>
+                  <ul>
+                    <li><strong>Google Analytics</strong> — collection of anonymized statistics about visits (pages, traffic sources, devices). Data processing is governed by the <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">Google Privacy Policy</a>.</li>
+                    <li><strong>Google AdSense</strong> — display of advertising. Google and its partners may use cookies to serve ads based on the User's prior visits to this and other websites. You can manage personalized advertising at <a href="https://myadcenter.google.com" rel="nofollow noopener" target="_blank">Google Ad Settings</a>.</li>
+                  </ul>
+
+                  <p>14.4. The Operator does not control cookies set by third-party services and is not responsible for their use. The data processing carried out by these services is governed by their own privacy policies.</p>
+
+                  <h2>15. Rights of Users in the European Union (GDPR)</h2>
+
+                  <p>15.1. If the User is located in the European Union, the processing of their personal data is subject to the General Data Protection Regulation (GDPR).</p>
+
+                  <p>15.2. Under the GDPR, the User has the right to: access their personal data; request its rectification or erasure; restrict or object to its processing; receive their data in a structured format (data portability); and withdraw previously given consent at any time.</p>
+
+                  <p>15.3. The legal bases for processing are the User's consent (for example, for analytics and advertising cookies) and the Operator's legitimate interests in operating and improving the website.</p>
+
+                  <p>15.4. To exercise any of these rights, the User may contact the Operator at the email address specified in the "Final Provisions" section. The User also has the right to lodge a complaint with the data protection supervisory authority in their country.</p>
+
+                  <p>15.5. The Operator (data controller within the meaning of the GDPR) is ExamClouds. For any questions related to the processing of personal data, the User may contact the Operator at the email address specified in Section 17.</p>
+
+                  <h2>16. International Data Transfers</h2>
+
+                  <p>16.1. When using Google services (Analytics, AdSense), the User's personal data may be transferred to and processed on servers located outside the User's country of residence, including in the United States. Such transfers are carried out in accordance with the privacy policies of the respective services and applicable data protection mechanisms.</p>
+              </div>
+          </div>
+          <div class="container">
+              <div class="card">
+                  <h2>17. Final Provisions</h2>
+                  <p>17.1. The User can obtain any explanations on issues of interest related to the processing of their personal data by contacting the Operator via email at <span data-scroll-to="#privacyEmail" class="link mark">tatyana.milkina@gmail.com</span>.</p>
+                  <p>17.2. Any changes to the policy for processing personal data by the Operator will be reflected in this document. The Policy is valid indefinitely until replaced by a new version.</p>
+                  <p>17.3. The current version of the Policy is freely available on the Internet at <span data-scroll-to="#prefixURL" class="link mark">https://www.examclouds.com</span>.</p>
               </div>
           </div>
         </section>
