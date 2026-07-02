@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spring.repositories.OtherLanguageRepository;
 
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -38,5 +39,10 @@ public class OtherLanguageServiceImpl implements OtherLanguageService {
                         )
                 ));
 
+    }
+
+    @Override
+    public List<OtherLanguage> findByUrlEndingWith(String suffix) {
+        return canonicalUrlRepository.findByUrlEndingWith(suffix);
     }
 }
