@@ -1,4 +1,4 @@
-<p class="iq-sub"><spring:message code="total"/>: ${not empty TOTAL_QUESTIONS_COUNT ? TOTAL_QUESTIONS_COUNT : CATEGORY_ATTRIBUTE.questionsCount} <spring:message code="total.questions"/></p>
+<p class="iq-sub"><spring:message code="total"/>: ${not empty TOTAL_QUESTIONS_COUNT ? TOTAL_QUESTIONS_COUNT : (param.TYPE == 'TEST' ? CATEGORY_ATTRIBUTE.testsCount : CATEGORY_ATTRIBUTE.questionsCount)} <spring:message code="total.questions"/></p>
 <div class="iq-toolbar">
             <form action="${pageContext.request.contextPath}/clear-history" class="iq-toolbar-form">
               <input type="hidden" name="CATEGORY_PATH" value="${CATEGORY_ATTRIBUTE.pathName}">

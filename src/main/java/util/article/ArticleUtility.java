@@ -54,7 +54,6 @@ public class ArticleUtility extends SpringUtility {
         article.setUrl(decodeRussianCharacters(article.getUrl()));
         article.setImage(decodeRussianCharacters(article.getImage()));
         article.setDescription(decodeRussianCharacters(article.getDescription()));
-        article.setKeywords(decodeRussianCharacters(article.getKeywords()));
         article.setTitle(decodeRussianCharacters(article.getTitle()));
         article.setAuthor(author);
         article.setCreatedDate(new Date());
@@ -67,7 +66,6 @@ public class ArticleUtility extends SpringUtility {
         article.setUrl(decodeRussianCharacters(newArticle.getUrl()));
         article.setImage(decodeRussianCharacters(newArticle.getImage()));
         article.setDescription(decodeRussianCharacters(newArticle.getDescription()));
-        article.setKeywords(decodeRussianCharacters(newArticle.getKeywords()));
         article.setTitle(decodeRussianCharacters(newArticle.getTitle()));
 
         getArticleService(servletContexts).update(article);
@@ -83,8 +81,6 @@ public class ArticleUtility extends SpringUtility {
         String description = decodeRussianCharacters(
                 request.getParameter(ARTICLE_DESCRIPTION));
 
-        String keywords = decodeRussianCharacters(
-                request.getParameter(ARTICLE_KEYWORDS));
         String title = decodeRussianCharacters(request.getParameter(TITLE));
         String tag = decodeRussianCharacters(request.getParameter(ARTICLE_TAG));
         String faqPageSchema = decodeRussianCharacters(request.getParameter(FAQ_PAGE_SCHEMA));
@@ -96,7 +92,6 @@ public class ArticleUtility extends SpringUtility {
         article.setText(text);
         article.setImage(image);
         article.setDescription(description);
-        article.setKeywords(keywords);
         article.setTitle(title);
         article.setTag(tag);
         article.setFaqPageSchema(faqPageSchema);

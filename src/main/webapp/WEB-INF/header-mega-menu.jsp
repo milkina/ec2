@@ -26,7 +26,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                 Tasks
               </h4>
-              <a href="${pageContext.request.contextPath}/practical-java-tasks""><b>Practical tasks</b><span>Tasks of different levels</span></a>
+              <a href="${pageContext.request.contextPath}/practical-java-tasks"><b>Practical tasks</b><span>Tasks of different levels</span></a>
               <a href="${pageContext.request.contextPath}/tests"><b>Tests</b><span>Test your knowledge</span></a>
               <a href="${pageContext.request.contextPath}/questions"><b>Quizzes</b><span>Revise your knowledge</span></a>
             </div>

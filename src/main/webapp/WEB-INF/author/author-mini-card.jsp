@@ -1,4 +1,6 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<c:set var="pathLanguage" value="${pageLanguage=='ru'?'ru/':''}"/>
 <!-- Author mini-card -->
 <div class="panel lac-card">
   <p class="lesson-side-eyebrow author-snippet"><spring:message code="about.the.author"/></p>

@@ -11,7 +11,7 @@
                    <h2><spring:message code="quick.links"/></h2>
                    <ul>
                        <li><a href="<menu:articlesTag/>"><spring:message code="articles"/></a></li>
-                       <li><a href="<menu:privacyTag/>"><spring:message code="privacy"/></a></li>
+                       <li><a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}privacy"><spring:message code="privacy"/></a></li>
                    </ul>
                </div>
                <div class="footer-section social">

@@ -22,9 +22,9 @@
           <li><a href="<menu:questionsTag/>"><spring:message code="questions.interviews"/></a></li>
         </c:if>
         <li><a href="<menu:articlesTag/>"><spring:message code="articles"/></a></li>
-        <li><a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':'/'}show-login-page" rel="nofollow"><spring:message code="log.in"/></a></li>
-        <li><a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':'/'}register" rel="nofollow"><spring:message code="register"/></a></li>
-        <li><a href="<menu:privacyTag/>"><spring:message code="privacy"/></a></li>
+        <li><a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}show-login-page" rel="nofollow"><spring:message code="log.in"/></a></li>
+        <li><a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}register" rel="nofollow"><spring:message code="register"/></a></li>
+        <li><a href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}privacy"><spring:message code="privacy"/></a></li>
       </ul>
     </nav>
     <div class="f-follow">

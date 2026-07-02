@@ -33,7 +33,6 @@ public class Article {
 
     private String image;
 
-    private String keywords;
     private String tag;
     private String minRead;
 
@@ -141,14 +140,6 @@ public class Article {
         this.image = image;
     }
 
-    public String getKeywords() {
-        return keywords;
-    }
-
-    public void setKeywords(String keywords) {
-        this.keywords = keywords;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -224,7 +215,6 @@ public class Article {
                 Objects.equals(url, article.url) &&
                 Objects.equals(text, article.text) &&
                 Objects.equals(image, article.image) &&
-                Objects.equals(keywords, article.keywords) &&
                 Objects.equals(description, article.description) &&
                 Objects.equals(title, article.title) &&
                 Objects.equals(author, article.author) &&
@@ -235,6 +225,6 @@ public class Article {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, url, text, createdDate, image, keywords, description, title, hidden, indexStatus, comments, author, category, faqPageSchema, modifiedDate);
+        return Objects.hash(id, url, text, createdDate, image, description, title, hidden, indexStatus, comments, author, category, faqPageSchema, modifiedDate);
     }
 }

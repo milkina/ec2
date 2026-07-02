@@ -20,7 +20,7 @@
             <span class="adminLabel">Min read:</span>
             <input type="text" name="ARTICLE_MIN_READ" maxlength="10" value="${ARTICLE_ATTRIBUTE.minRead}" size="10"><br>
             <span class="adminLabel"><spring:message code="title"/>:<span class="wrongMessage">*</span></span>
-            <input type="text" name="TITLE" maxlength="70" required value="${ARTICLE_ATTRIBUTE.title}" size="70"><br>
+            <input type="text" name="TITLE" maxlength="90" required value="${ARTICLE_ATTRIBUTE.title}" size="90"><br>
             <span class="adminLabel"><spring:message code="image.url"/>:</span>
             <input type="text" name="ARTICLE_IMAGE" maxlength="70" value="${ARTICLE_ATTRIBUTE.image}"><br>
                        <strong class="adminLabel"><spring:message	code="language"/>:</strong>
@@ -36,10 +36,8 @@
             <input type="checkbox" name="index"
               <c:if test="${ARTICLE_ATTRIBUTE==null || ARTICLE_ATTRIBUTE.indexStatus}">checked</c:if>>
             <br>
-             <span class="adminLabel"><spring:message code="keywords"/>:<span class="wrongMessage">*</span></span>
-            <textarea rows="7" cols="40" maxlength="160" name="keywords" required id="keywords">${ARTICLE_ATTRIBUTE.keywords}</textarea>  <br>
             <span class="adminLabel"><spring:message code="meta.description"/>:<span class="wrongMessage">*</span></span>
-            <textarea rows="7" cols="40" maxlength="160" name="description" required id="description">${ARTICLE_ATTRIBUTE.description}</textarea>  <br>
+            <textarea rows="7" cols="40" maxlength="180" name="description" required id="description">${ARTICLE_ATTRIBUTE.description}</textarea>  <br>
             <span class="adminLabel"><spring:message code="text"/>:<span class="wrongMessage">*</span></span>
             <textarea rows="25" cols="80" name="article.text" id="ARTICLE_TEXT">${ARTICLE_ATTRIBUTE.text}</textarea> <br>
             <input type="submit" value="<spring:message code="save.button"/>" name="Save" id="save"><br>

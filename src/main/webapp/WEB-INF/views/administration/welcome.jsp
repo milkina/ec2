@@ -21,6 +21,9 @@
           <%@ include file="/administration/articles.jsp" %>
           <a href="${pageContext.request.contextPath}/add-question" id="addQuestion">
              <spring:message code="add.question.button"/></a>
+          <br><br>
+          <a href="${pageContext.request.contextPath}/update-category-counts" class="btn btn-outline btn-sm"
+             onclick="return confirm('Recalculate all category counts?');">Recalculate Category Counts</a>
      </c:if>
     </div>
  </jsp:body>

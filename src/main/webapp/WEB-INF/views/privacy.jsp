@@ -108,7 +108,7 @@
                   <h2>7. Purposes of Personal Data Processing</h2>
                   <p>7.1. The purpose of processing the User's personal data:</p>
                   <p>– <mark>informing the User by sending emails</mark>;</p>
-                  <p>– <mark>providing the User with access to services, information, and/or materials available on the website httpsː//www.examclouds.com;</mark></p>
+                  <p>– <mark>providing the User with access to services, information, and/or materials available on the website https://www.examclouds.com;</mark></p>
                   <p>7.2. Additionally, the Operator has the right to send notifications to the User about new products and services, special offers, and various events. The User can always opt out of receiving informational messages by sending a letter to the Operator at the email address <span data-scroll-to="#privacyEmail" class="link mark">tatyana.milkina@gmail.com</span> with the note "Opt-out of notifications about new products and services and special offers."</p>
                   <p>7.3. Anonymous data of Users collected using internet statistics services are used to collect information about Users' actions on the site, improve the quality and content of the site.</p>
               </div>
@@ -116,7 +116,7 @@
           <div class="container">
               <div class="card">
                   <h2>8. Legal Grounds for Personal Data Processing</h2>
-                  <p>8.1. The Operator processes the User's personal data only if they are filled in and/or sent by the User independently through special forms located on the website <span data-scroll-to="#prefixURL" class="link mark">httpsː//www.examclouds.com</span> or sent to the Operator by email. By filling out the relevant forms and/or sending their personal data to the Operator, the User expresses their consent to this Policy.</p>
+                  <p>8.1. The Operator processes the User's personal data only if they are filled in and/or sent by the User independently through special forms located on the website <span data-scroll-to="#prefixURL" class="link mark">https://www.examclouds.com</span> or sent to the Operator by email. By filling out the relevant forms and/or sending their personal data to the Operator, the User expresses their consent to this Policy.</p>
                   <p>8.2. The Operator processes anonymized data about the User if it is allowed in the User's browser settings (cookie files are enabled and JavaScript technology is used).</p>
                   <p>8.3. The personal data subject independently decides to provide their personal data and gives consent freely, voluntarily, and in their own interest.</p>
               </div>
@@ -169,7 +169,7 @@
                   <h2>14. Final Provisions</h2>
                   <p>14.1. The User can obtain any explanations on issues of interest related to the processing of their personal data by contacting the Operator via email at <span data-scroll-to="#privacyEmail" class="link mark">tatyana.milkina@gmail.com</span>.</p>
                   <p>14.2. Any changes to the policy for processing personal data by the Operator will be reflected in this document. The Policy is valid indefinitely until replaced by a new version.</p>
-                  <p>14.3. The current version of the Policy is freely available on the Internet at <strong>httpsː//www.examclouds.com/privacy/</strong>.</p>
+                  <p>14.3. The current version of the Policy is freely available on the Internet at <strong>https://www.examclouds.com/privacy/</strong>.</p>
               </div>
           </div>
         </section>
