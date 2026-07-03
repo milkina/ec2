@@ -7,8 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import spring.services.article.ArticleService;
+import spring.services.category.CategoryService;
 import spring.services.person.PersonService;
+import util.TestUtility;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 import static util.AllConstants.ARTICLES;
@@ -21,6 +24,10 @@ public class AdministrationController {
     private PersonService personService;
     @Autowired
     private ArticleService articleService;
+    @Autowired
+    private CategoryService categoryService;
+    @Autowired
+    private ServletContext servletContext;
 
     @RequestMapping(value = "/show-administration")
     public String showAdministration(Model model) {
@@ -33,6 +40,13 @@ public class AdministrationController {
         long size = personService.count();
         model.addAttribute(SIZE, size);
         return "administration/welcome";
+    }
+
+    @RequestMapping(value = "/update-category-counts")
+    public String updateCategoryCounts() {
+        categoryService.updateAllCategoryCounts();
+        TestUtility.loadTestsToServletContext(servletContext);
+        return "redirect:/show-administration";
     }
 
     @RequestMapping(value = "/")

@@ -72,7 +72,7 @@
 
   <div class="footer-bot dark">
     <div class="container">
-      <p>&copy; <span data-year>2026</span> ExamClouds. <spring:message code="free.java.learning"/>. All Rights Reserved.</p>
+      <p>&copy; <span data-year>2026</span> ExamClouds. <spring:message code="free.java.learning"/>. <spring:message code="all.rights.reserved"/>.</p>
     </div>
   </div>
 </footer>

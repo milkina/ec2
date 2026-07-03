@@ -9,15 +9,14 @@
 <t:wrapper2>
   <jsp:attribute name="header">
     <meta name="description" content="${ARTICLE_ATTRIBUTE.description}">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <title>${ARTICLE_ATTRIBUTE.title}</title>
+     <title>${ARTICLE_ATTRIBUTE.title}</title>
     <c:set var="canonicalUrl" value="https://www.examclouds.com/${ARTICLE_ATTRIBUTE.language.code=='ru'?'ru/':''}${ARTICLE_ATTRIBUTE.url}"/>
     <link rel="canonical" href="${canonicalUrl}"/>
     <meta property="og:title" content="${ARTICLE_ATTRIBUTE.title}"/>
     <meta name="twitter:title" content="${ARTICLE_ATTRIBUTE.title}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:locale" content="${ARTICLE_ATTRIBUTE.language.code=='ru'?'ru_RU':'en_US'}"/>
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@ExamClouds">
     <c:choose>
        <c:when test="${ARTICLE_ATTRIBUTE.image != null &&  not empty ARTICLE_ATTRIBUTE.image}">
@@ -48,6 +47,9 @@
     <meta property="article:author" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}tatyana-milkina">
     <c:if test="${!ARTICLE_ATTRIBUTE.indexStatus}">
         <meta name="robots" content="noindex">
+    </c:if>
+    <c:if test="${ARTICLE_ATTRIBUTE.indexStatus}">
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     </c:if>
     <c:set var="jsonTitle" value="${ARTICLE_ATTRIBUTE.title}"/>
     <c:set var="jsonDescription" value="${ARTICLE_ATTRIBUTE.description}"/>
