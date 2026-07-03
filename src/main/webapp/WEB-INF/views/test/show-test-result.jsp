@@ -124,7 +124,7 @@
                     <div class="udemy-banner__price-wrap">
                         <p class="udemy-banner__price-label">Специальная цена</p>
                         <p class="udemy-banner__price">&euro;12.99 <span class="udemy-banner__price-old">&euro;59.99</span></p>
-                        <a href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="noopener noreferrer sponsored" class="udemy-banner__cta">
+                        <a href="https://www.udemy.com/course/java-bup/?couponCode=JAVA_CORE" target="_blank" rel="noopener noreferrer sponsored" class="udemy-banner__cta">
                             Начать на Udemy &rarr;
                         </a>
                         <p class="udemy-banner__guarantee">30-дневная гарантия возврата</p>
@@ -284,7 +284,7 @@
                     <div class="udemy-banner__price-wrap">
                         <p class="udemy-banner__price-label">Специальная цена</p>
                         <p class="udemy-banner__price">&euro;12.99 <span class="udemy-banner__price-old">&euro;59.99</span></p>
-                        <a href="https://www.udemy.com/course/java-bup/?couponCode=ADF90A412F85133F9778" target="_blank" rel="noopener noreferrer sponsored" class="udemy-banner__cta">
+                        <a href="https://www.udemy.com/course/java-bup/?couponCode=JAVA_CORE" target="_blank" rel="noopener noreferrer sponsored" class="udemy-banner__cta">
                             Начать на Udemy &rarr;
                         </a>
                         <p class="udemy-banner__guarantee">30-дневная гарантия возврата</p>

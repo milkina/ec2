@@ -9,7 +9,7 @@
 <head>
     <%@ include file="/WEB-INF/head-new.jsp"%>
     <title>Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds</title>
-    <meta name="description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+    <meta name="description" content="Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://www.examclouds.com/ru/">
     <meta property="og:title" content="Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+    <meta property="og:description" content="Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.">
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com/ru/">
     <meta property="og:published_time" content="2017-10-08T12:00:00Z">
@@ -26,7 +26,7 @@
     <meta property="og:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
     <meta name="twitter:title" content="Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн. Начните сегодня!">
+    <meta name="twitter:description" content="Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.">
     <meta name="twitter:site" content="@ExamClouds">
     <meta name="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
     <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
@@ -35,7 +35,7 @@
       "@type": "WebSite",
       "name": "ExamClouds",
       "url": "https://www.examclouds.com/ru/",
-      "description": "Ищете курсы программирования Java? Основы Java, Java Core, видеоуроки, тесты и практические задания. Курсы Java для начинающих онлайн.",
+      "description": "Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.",
       "inLanguage": "ru",
       "author": {
         "@type": "Person",
@@ -52,6 +52,46 @@
         }
       }
     }</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ExamClouds действительно бесплатный?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Все уроки, задания и тесты доступны бесплатно. Мы не скрываем контент за платным доступом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно что-то устанавливать?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Вы можете изучать уроки и проходить тесты без установки. Для практических заданий рекомендуем установить бесплатный JDK и IntelliJ IDEA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно учиться с телефона?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Уроки и тесты отлично работают на мобильных устройствах. Практические задания по программированию удобнее выполнять на компьютере."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Кому подойдет обучение?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Начинающим и тем, кто хочет закрепить знания."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
  <%@ include file="/WEB-INF/header.jsp"%>
@@ -67,8 +107,8 @@
             Бесплатно
           </span>
           <h1>Изучи <span class="accent">Java</span> с нуля — курс для начинающих</h1>
-          <p class="lede">200+ коротких уроков, практических заданий и тестов — разработано для новичков, которые хотят действительно закончить курс.</p>
-          <p class="lede">Бесплатный курс Java для начинающих: изучайте Java Core, решайте задачи, проходите тесты и осваивайте навыки Java-разработчика.</p>
+         <p class="lede">Бесплатный онлайн-курс Java с нуля для начинающих: 240+ коротких уроков, практических заданий и тестов — разработано для новичков, которые действительно доходят до конца.</p>
+         <p class="lede">Изучайте Java Core онлайн, решайте практические задачи и проходите тесты — всё бесплатно и без регистрации.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="${pageContext.request.contextPath}/ru/java-core-russian">
               Начать обучение
@@ -105,7 +145,7 @@
     <section class="container">
       <div class="stats">
         <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><p class="v">50,000+</p><p class="l">студентов</p></div></div>
-        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><div><p class="v">100+</p><p class="l">бесплатных уроков</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><div><p class="v">240+</p><p class="l">бесплатных уроков</p></div></div>
         <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><div><p class="v">100+</p><p class="l">Практических заданий</p></div></div>
         <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><div><p class="v">200+</p><p class="l">Видео</p></div></div>
       </div>
@@ -265,7 +305,7 @@
               </c:if>
             </c:forEach>
           </ol>
-          <a class="see-all" href="${pageContext.request.contextPath}/ru/java-core-russian">Все 210 уроков →</a>
+          <a class="see-all" href="${pageContext.request.contextPath}/ru/java-core-russian">Все 240 уроков →</a>
         </div>
       </div>
     </section>
@@ -313,7 +353,7 @@
             <p class="udemy-eyebrow">Специальная цена</p>
             <p class="udemy-price"><span>€12.99</span></p>
             <p class="udemy-price-old">€59.99</p>
-            <a class="udemy-btn" href="https://www.udemy.com/course/java-bup/?couponCode=https://www.udemy.com/course/java-bup/?couponCode=JAVA-CORE" target="_blank" rel="noopener noreferrer sponsored">
+            <a class="udemy-btn" href="https://www.udemy.com/course/java-bup/?couponCode=JAVA-CORE" target="_blank" rel="noopener noreferrer sponsored">
               Начать обучение на Udemy
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -367,7 +407,7 @@
         </div>
         <div class="faq-list">
           <details class="faq-item"><summary>ExamClouds действительно бесплатный?<span class="plus">+</span></summary><p class="a">Да. Все уроки, задания и тесты доступны бесплатно. Мы не скрываем контент за платным доступом.</p></details>
-          <details class="faq-item"><summary>Нужно что-то устанавливать?<span class="plus">+</span></summary><p class="a">Нет. Вы можете изучать уроки и проходить тесты без установки. Для практических заданий рекомендуем установить бесплатный JDK и IntelliJ IDEA Community.</p></details>
+          <details class="faq-item"><summary>Нужно что-то устанавливать?<span class="plus">+</span></summary><p class="a">Нет. Вы можете изучать уроки и проходить тесты без установки. Для практических заданий рекомендуем установить бесплатный JDK и IntelliJ IDEA.</p></details>
           <details class="faq-item"><summary>Можно учиться с телефона?<span class="plus">+</span></summary><p class="a">Да. Уроки и тесты отлично работают на мобильных устройствах. Практические задания по программированию удобнее выполнять на компьютере.</p></details>
           <details class="faq-item"><summary>Кому подойдет обучение?<span class="plus">+</span></summary><p class="a">Начинающим и тем, кто хочет закрепить знания.</p></details>
         </div>
