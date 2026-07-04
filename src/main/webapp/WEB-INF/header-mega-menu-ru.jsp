@@ -41,7 +41,7 @@
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/drivers"><b>JDBC и базы данных</b><span>Работа с SQL и JDBC</span></a>
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/vcs"><b>Git и GitHub</b><span>Контроль версий VCS, GitHub, git</span></a>
               <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/maven"><b>Maven</b><span>Сборка проекта, репозитории</span></a>
-              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/serialization-russian"><b>Сериализация</b><span>Механизмы сериализации и сериализации</span></a>
+              <a href="${pageContext.request.contextPath}/ru/java/java-core-russian/serialization-russian"><b>Сериализация</b><span>Механизмы сериализации и десериализации</span></a>
             </div>
             <aside class="mega-promo">
               <div class="mega-promo-icon" aria-hidden="true">
@@ -50,7 +50,7 @@
               <h5>Начни путь разработчика</h5>
               <p>Пошаговое обучение от основ до реальной разработки</p>
               <a class="btn btn-primary btn-sm mega-cta" href="${pageContext.request.contextPath}/ru/java-core-russian">Начать обучение →</a>
-              <a class="btn btn-outline btn-sm mega-cta-outline" href="${pageContext.request.contextPath}/ru/java-core-russian">См. полный путь (29 тем)</a>
+              <a class="btn btn-outline btn-sm mega-cta-outline" href="${pageContext.request.contextPath}/ru/java-core-russian">См. полный путь (28 модулей)</a>
             </aside>
           </div>
           <!-- Feature strip -->
