@@ -79,9 +79,13 @@ var LearnedProgress = (function() {
             }
             var totalModules = modules.length;
             var completedModules = 0;
+            var currentModuleProgress = null;
             modules.forEach(function(m) {
                 var mp = moduleProgress(m.ids, learnedSet);
                 if (mp.complete) completedModules++;
+                if (m.ids.includes(CATEGORY_ID)) {
+                    currentModuleProgress = mp;
+                }
                 var summary = m.el.querySelector('summary');
               //  if (summary) summary.classList.toggle('is-completed', mp.complete);
                 /* Module counter (e.g. 2/5) — hidden when 0 learned */
@@ -121,6 +125,19 @@ var LearnedProgress = (function() {
                 var dot = a.querySelector('.ol-dot');
                 if (dot) dot.classList.toggle('is-learned', learnedSet.has(cid));
             });
+            /* Update mobile sticky bar with current module progress */
+            if (currentModuleProgress) {
+                var msbPct = document.getElementById('msbPct');
+                var msbProgress = document.getElementById('msbProgress');
+                var msbLearned = document.getElementById('msbLearned');
+                if (msbPct) msbPct.textContent = currentModuleProgress.pct + '%';
+                if (msbProgress) msbProgress.querySelector('span').style.width = currentModuleProgress.pct + '%';
+                if (msbLearned && currentModuleProgress.learned > 0) {
+                    msbLearned.textContent = currentModuleProgress.learned + '/' + currentModuleProgress.total;
+                } else if (msbLearned) {
+                    msbLearned.textContent = '';
+                }
+            }
         }
 
         function toggleLearned() {

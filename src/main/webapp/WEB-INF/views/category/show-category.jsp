@@ -103,30 +103,20 @@
     <jsp:body>
       <!-- Mobile sticky context bar -->
       <c:set var="stickyModuleName" value=""/>
-      <c:set var="stickyLessonNum" value="0"/>
-      <c:set var="stickyLessonTotal" value="0"/>
       <c:forEach var="cat" items="${TESTS[param.TEST_PATH].categories}">
         <c:if test="${cat.value.hidden==false && cat.value.parentCategory==null && cat.value.subCategories.contains(CATEGORY_ATTRIBUTE)}">
           <c:set var="stickyModuleName" value="${cat.value.roadMapName!=null && not empty cat.value.roadMapName ? cat.value.roadMapName : cat.value.name}"/>
-          <c:set var="idx" value="0"/>
-          <c:forEach var="sub" items="${cat.value.subCategories}">
-            <c:if test="${sub.hidden==false}">
-              <c:set var="idx" value="${idx + 1}"/>
-              <c:if test="${sub.equals(CATEGORY_ATTRIBUTE)}"><c:set var="stickyLessonNum" value="${idx}"/></c:if>
-            </c:if>
-          </c:forEach>
-          <c:set var="stickyLessonTotal" value="${idx}"/>
         </c:if>
       </c:forEach>
-      <c:set var="stickyPct" value="${stickyLessonTotal > 0 ? (stickyLessonNum * 100 / stickyLessonTotal) : 0}"/>
       <div class="mobile-sticky-bar">
         <div class="msb-text">
           <span class="msb-module">${stickyModuleName}</span>
           <span class="msb-sep">·</span>
-          <span class="msb-lesson"><spring:message code="lesson"/>&nbsp;${stickyLessonNum}/${stickyLessonTotal}</span>
+          <span class="msb-lesson"></span>
+          <span class="msb-learned" id="msbLearned"></span>
         </div>
-        <span class="msb-pct"><fmt:formatNumber value="${stickyPct}" maxFractionDigits="0"/>%</span>
-        <div class="msb-progress"><span style="width:${stickyPct}%"></span></div>
+        <span class="msb-pct" id="msbPct"></span>
+        <div class="msb-progress" id="msbProgress"><span></span></div>
       </div>
       <main class="lesson-bg">
         <div class="container lesson-grid">
