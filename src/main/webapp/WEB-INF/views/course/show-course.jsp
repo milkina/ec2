@@ -150,13 +150,16 @@
                                 <p class="course-desc-text">
                                     ${TESTS[param.TEST_PATH].article.text}
                                 </p>
-                                <!-- <div class="overall-progress">
+                                <c:if test="${sessionScope.person != null}">
+                                <div class="overall-progress" id="course-overall-progress" style="display:none;">
                                     <div class="progress-row" style="margin-top:0;">
-                                        <span style="color:var(--muted-fg);">Overall Progress</span>
-                                        <span class="pct">58%</span>
+                                        <span style="color:var(--muted-fg);"><spring:message code="overall.progress"/></span>
+                                        <span class="pct" id="overall-pct">0%</span>
                                     </div>
-                                    <div class="bar"><span style="width:58%"></span></div>
-                                </div>-->
+                                    <div class="bar"><span id="overall-bar" style="width:0%"></span></div>
+                                    <p class="lesson-side-progress" id="overall-stats"></p>
+                                </div>
+                                </c:if>
                             </div>
 
                             <div class="details-col">
@@ -197,9 +200,18 @@
                                                     <p class="module-meta">${fn:length(category.value.subCategories)}&nbsp;<spring:message code="lessons"/></p>
                                                 </c:if>
                                             </div>
-                                            <!--<div class="progress-ring" style="--p:100;--c:oklch(0.55 0.18 255);">
-                                                <span>100%</span>
-                                            </div>-->
+                                            <c:set var="subIds" value=""/>
+                                            <c:set var="visibleSubCount" value="0"/>
+                                            <c:forEach var="subCategory" items="${category.value.subCategories}">
+                                                <c:if test="${subCategory.hidden==false}">
+                                                    <c:set var="subIds" value="${empty subIds ? '' : subIds.concat(',')}"/>
+                                                    <c:set var="subIds" value="${subIds}${subCategory.id}"/>
+                                                    <c:set var="visibleSubCount" value="${visibleSubCount + 1}"/>
+                                                </c:if>
+                                            </c:forEach>
+                                            <div class="progress-ring module-progress-ring" data-sub-ids="${subIds}" data-sub-total="${visibleSubCount}" style="--p:0;--c:oklch(0.55 0.18 255);display:none;">
+                                                <span>0%</span>
+                                            </div>
                                         </div>
                                         <ul class="module-topics">
                                             <c:set var="k" value="0" />
@@ -276,5 +288,16 @@
               <jsp:param name="commentType" value="TEST"/>
           </jsp:include>
     </main>
+    <c:if test="${sessionScope.person != null}">
+    <script src="${pageContext.request.contextPath}/js/learned-progress.js"></script>
+    <script>
+    LearnedProgress.initCoursePage({
+        ctx: '${pageContext.request.contextPath}',
+        testPath: '${param.TEST_PATH}',
+        labelOf: '<spring:message code="learned.of.total"/>',
+        labelLearnedWord: '<spring:message code="learned.word"/>'
+    });
+    </script>
+    </c:if>
     </jsp:body>
 </t:wrapper2>

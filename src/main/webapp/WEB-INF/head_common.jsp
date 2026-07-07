@@ -6,6 +6,21 @@
 <script src="${pageContext.request.contextPath}/js/general.js" async></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="https://img.examclouds.com/general/fav.ico" type="image/x-icon">
+<!-- Google Consent Mode v2 — must run before any Google tag -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'wait_for_update': 500
+});
+</script>
+<!-- Google Funding Choices CMP -->
+<script async src="https://fundingchoicesmessages.google.com/i/pub-7148099013705432?ers=1"></script>
+<script>(function(){function s(){if(!window.frames['googlefcPresent']){if(document.body){var i=document.createElement('iframe');i.style='width:0;height:0;border:none;z-index:-1000;left:-1000px;top:-1000px;';i.style.display='none';i.name='googlefcPresent';document.body.appendChild(i);}else{setTimeout(s,0);}}};s();})();</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7148099013705432"
         crossorigin="anonymous"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -5,6 +5,7 @@ import model.*;
 import model.article.Article;
 import model.person.Person;
 import spring.controllers.category.CategoryController;
+import spring.services.canonical.OtherLanguageService;
 import spring.services.category.CategoryService;
 import util.article.ArticleUtility;
 
@@ -152,7 +153,7 @@ public class CategoryUtility extends SpringUtility {
         category.setTitle(title);
     }
 
-    private static void setCanonicalUrls(HttpServletRequest request, Category category) {
+    private static void setCanonicalUrls(HttpServletRequest request, Category category, String oldPathName) {
         String categoryPathName = category.getPathName();
         String testPath = request.getParameter(TEST_PATH);
         String originalPage = "/java/" + testPath + "/" + categoryPathName;
@@ -162,6 +163,15 @@ public class CategoryUtility extends SpringUtility {
 
         Map<Integer, OtherLanguage> canonicalUrls = category.getCanonicalUrls();
         ServletContext servletContext = request.getServletContext();
+
+        if (oldPathName != null && !oldPathName.equals(categoryPathName)) {
+            String oldOriginalPage = "/java/" + testPath + "/" + oldPathName;
+            for (OtherLanguage ol : canonicalUrls.values()) {
+                ol.setOriginal(originalPage);
+                removeHrefLanguage(ol.getLanguage(), servletContext, oldOriginalPage);
+            }
+            updateReferencingUrls("/" + oldPathName, "/" + categoryPathName, servletContext);
+        }
 
         setCanonicalUrl(canonicalUrls, ruVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.ru.name()), category, servletContext, originalPage);
         setCanonicalUrl(canonicalUrls, enVersion, LanguageUtility.findLanguageInContext(servletContext, LanguageCode.en.name()), category, servletContext, originalPage);
@@ -214,6 +224,25 @@ public class CategoryUtility extends SpringUtility {
         }
     }
 
+    private static void updateReferencingUrls(String oldSuffix, String newSuffix, ServletContext servletContext) {
+        OtherLanguageService service = SpringUtility.getCanonicalUrlService(servletContext);
+        List<OtherLanguage> referencing = service.findByUrlEndingWith(oldSuffix);
+        Map<LanguageCode, Map<String, String>> allUrls = (Map<LanguageCode, Map<String, String>>) servletContext.getAttribute(ALL_OTHER_LANGUAGES_URLS);
+        for (OtherLanguage ol : referencing) {
+            String oldUrl = ol.getUrl();
+            String newUrl = oldUrl.substring(0, oldUrl.length() - oldSuffix.length()) + newSuffix;
+            ol.setUrl(newUrl);
+            service.createOtherLanguages(ol);
+            Map<String, String> m = allUrls.get(ol.getLanguage().getCode());
+            if (m != null) {
+                String value = m.get(ol.getOriginal());
+                if (value != null) {
+                    m.put(ol.getOriginal(), newUrl);
+                }
+            }
+        }
+    }
+
     public static Category getCategoryByPath(HttpServletRequest request) {
         CategoryService categoryService = getCategoryService(request.getServletContext());
         return categoryService.getCategory(request.getParameter(CATEGORY_PATH));
@@ -227,9 +256,10 @@ public class CategoryUtility extends SpringUtility {
 
     public static void updateCategory(HttpServletRequest request,
                                       Category category) {
+        String oldPathName = category.getPathName();
         setCategoryData(request, category);
         setCategoryArticle(request, category);
-        setCanonicalUrls(request, category);
+        setCanonicalUrls(request, category, oldPathName);
         updateCategory(category, request.getServletContext());
         TestUtility.loadTestsToServletContext(request.getServletContext());
     }

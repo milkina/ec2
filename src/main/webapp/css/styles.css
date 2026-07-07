@@ -1462,42 +1462,6 @@ body.is-auth .auth-out { display: none; }
 @media (min-width: 900px) {
   .mobile-bottom-nav { display: none !important; }
 }
-.lesson-outline-panel { padding: 1rem; }
-.lesson-outline-eyebrow {
-  font-size: .7rem; font-weight: 800; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--muted-fg);
-  margin-bottom: .75rem;
-}
-.ol-module { border-top: 1px solid var(--border); }
-.ol-module:first-of-type { border-top: 0; }
-.ol-module > summary {
-  list-style: none; cursor: pointer;
-  display: flex; align-items: center; gap: .5rem;
-  padding: .65rem .25rem;
-  font-size: .9rem; font-weight: 700;
-  border-radius: .5rem;
-}
-.ol-module > summary::-webkit-details-marker { display: none; }
-.ol-module > summary:hover { color: var(--primary); }
-.ol-module > summary.is-active-summary { color: var(--primary); background: var(--primary-soft); padding-inline: .5rem; }
-.ol-num { color: var(--muted-fg); font-weight: 700; }
-.ol-title { flex: 1; }
-.ol-chev { color: var(--muted-fg); transition: transform .2s; }
-.ol-module[open] > summary .ol-chev { transform: rotate(90deg); }
-.ol-lessons {
-  list-style: none; padding: 0 0 .5rem 1.5rem; margin: 0;
-  display: grid; gap: .15rem;
-}
-.ol-lessons a {
-  display: flex; align-items: center; gap: .55rem;
-  padding: .45rem .55rem; border-radius: .45rem;
-  font-size: .85rem; color: var(--foreground);
-}
-.ol-lessons a:hover { background: var(--muted); }
-.ol-lessons a.is-active { background: var(--primary-soft); color: var(--primary); font-weight: 700; }
-.ol-dot { width: .55rem; height: .55rem; border-radius: 50%; border: 1.5px solid var(--border); flex-shrink: 0; }
-.ol-dot.done { background: var(--success); border-color: var(--success); }
-.ol-dot.active { background: var(--primary); border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
 
 /* ---- Main lesson content ---- */
 .lesson-main { min-width: 0; }

@@ -3,26 +3,32 @@ package spring.controllers.category;
 import model.Category;
 import model.Test;
 import model.article.Article;
+import model.person.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import spring.controllers.article.ArticleController;
 import spring.services.category.CategoryService;
 import spring.services.course.CourseService;
+import spring.services.learned.LearnedCategoryService;
 import util.CategoryUtility;
 import util.TestUtility;
 import util.article.ArticleUtility;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.logging.Logger;
+
+import static util.AllConstantsAttribute.PERSON_ATTRIBUTE;
 
 import static util.AllConstants.SPRING_MESSAGE_PAGE;
 import static util.AllConstantsAttribute.ARTICLE_ATTRIBUTE;
@@ -48,6 +54,9 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private LearnedCategoryService learnedCategoryService;
 
     @RequestMapping(value = {"/show-category", "{langid}/show-category"})
     public ModelAndView showCategory(@RequestParam(CATEGORY_PATH) String categoryPath,
@@ -82,6 +91,18 @@ public class CategoryController {
             String home = request.getRequestURI().contains("/ru/") ? "/ru/" : "/";
             return new ModelAndView("forward:" + home);
         }
+
+        Person person = (Person) request.getSession().getAttribute(PERSON_ATTRIBUTE);
+        String testPath = request.getParameter(TEST_PATH);
+        if (person != null && testPath != null) {
+            List<Integer> learnedIds = learnedCategoryService.getLearnedCategoryIds(person.getId(), testPath);
+            model.addAttribute("LEARNED_IDS", learnedIds);
+            model.addAttribute("IS_LEARNED", learnedIds.contains(category.getId()));
+        } else {
+            model.addAttribute("LEARNED_IDS", Collections.emptyList());
+            model.addAttribute("IS_LEARNED", false);
+        }
+
         return new ModelAndView("category/show-category");
     }
 
@@ -243,5 +264,52 @@ public class CategoryController {
             }
             TestUtility.loadTestsToServletContext(request.getServletContext());
         }
+    }
+
+    @RequestMapping(value = "/mark-learned", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> markLearned(@RequestParam("categoryId") int categoryId,
+                                           HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<>();
+        Person person = (Person) request.getSession().getAttribute(PERSON_ATTRIBUTE);
+        if (person == null) {
+            result.put("status", "guest");
+            return result;
+        }
+        learnedCategoryService.markAsLearned(person.getId(), categoryId);
+        result.put("status", "ok");
+        return result;
+    }
+
+    @RequestMapping(value = "/unmark-learned", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> unmarkLearned(@RequestParam("categoryId") int categoryId,
+                                             HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<>();
+        Person person = (Person) request.getSession().getAttribute(PERSON_ATTRIBUTE);
+        if (person == null) {
+            result.put("status", "guest");
+            return result;
+        }
+        learnedCategoryService.unmarkAsLearned(person.getId(), categoryId);
+        result.put("status", "ok");
+        return result;
+    }
+
+    @RequestMapping(value = "/learned-categories", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> learnedCategories(@RequestParam(TEST_PATH) String testPath,
+                                                  HttpServletRequest request) {
+        Map<String, Object> result = new HashMap<>();
+        Person person = (Person) request.getSession().getAttribute(PERSON_ATTRIBUTE);
+        if (person == null) {
+            result.put("status", "guest");
+            result.put("ids", Collections.emptyList());
+            return result;
+        }
+        List<Integer> ids = learnedCategoryService.getLearnedCategoryIds(person.getId(), testPath);
+        result.put("status", "ok");
+        result.put("ids", ids);
+        return result;
     }
 }

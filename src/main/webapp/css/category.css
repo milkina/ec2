@@ -1,0 +1,105 @@
+.lesson-outline-panel { padding: 1rem; }
+.lesson-outline-eyebrow {
+  font-size: .7rem; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted-fg);
+  margin-bottom: .75rem;
+}
+.ol-module { border-top: 1px solid var(--border); }
+.ol-module:first-of-type { border-top: 0; }
+.ol-module > summary {
+  list-style: none; cursor: pointer;
+  align-items: center; gap: .5rem;
+  padding: .65rem .25rem;
+  font-size: .9rem; font-weight: 700;
+  border-radius: .5rem;
+}
+.ol-module > summary::-webkit-details-marker { display: none; }
+.ol-module > summary:hover { color: var(--primary); }
+.ol-module > summary.is-active-summary { color: var(--primary); background: var(--primary-soft); padding-inline: .5rem; }
+.ol-num { color: var(--muted-fg); font-weight: 700; }
+.ol-title { flex: 1; }
+.ol-chev { color: var(--muted-fg); transition: transform .2s; float: right; }
+.ol-module[open] > summary .ol-chev { transform: rotate(90deg); }
+.ol-lessons {
+  list-style: none; padding: 0 0 .5rem 1.5rem; margin: 0;
+  display: grid; gap: .15rem;
+}
+.ol-lessons a {
+  display: flex; align-items: center; gap: .55rem;
+  padding: .45rem .55rem; border-radius: .45rem;
+  font-size: .85rem; color: var(--foreground);
+}
+.ol-lessons a:hover { background: var(--muted); }
+.ol-lessons a.is-active { background: var(--primary-soft); color: var(--primary); font-weight: 700; }
+.ol-dot { width: .55rem; height: .55rem; border-radius: 50%; border: 1.5px solid var(--border); flex-shrink: 0; }
+.ol-dot.done { background: var(--success); border-color: var(--success); }
+.ol-dot.active { background: var(--primary); border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+
+/* ---- Mark as learned button ---- */
+.btn-learned {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-width: 8.5rem; padding: .7rem 1.25rem; border-radius: 9999px;
+  font-size: .88rem; font-weight: 700;
+  border: 2px solid var(--border); background: var(--card);
+  color: var(--foreground); cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.btn-learned:hover { border-color: var(--success); color: var(--success); }
+.btn-learned.is-learned {
+  background: var(--success-soft); border-color: var(--success);
+  color: oklch(0.35 0.12 152);
+}
+.btn-learned .btn-learned-check {
+  width: 1.1rem; height: 1.1rem; border-radius: 50%;
+  border: 2px solid var(--border); display: inline-grid; place-items: center;
+  transition: background .2s, border-color .2s;
+  font-size: .65rem; line-height: 1;
+}
+.btn-learned.is-learned .btn-learned-check {
+  background: var(--success); border-color: var(--success); color: var(--success-fg);
+}
+
+/* ---- Progress bar in sidebar ---- */
+.learned-progress-bar {
+  height: .45rem; border-radius: .25rem;
+  background: var(--muted); overflow: hidden;
+}
+.learned-progress-bar span {
+  display: block; height: 100%; border-radius: .25rem;
+  background: var(--success); transition: width .4s ease;
+}
+
+/* ---- Learned dot in outline ---- */
+.ol-dot.is-learned { background: var(--success); border-color: var(--success); }
+
+/* ---- Completed module indicator ---- */
+.ol-module > summary.is-completed .ol-num {
+  color: var(--success);
+}
+.ol-module > summary.is-completed  {
+  content: ' \2713'; font-size: .75em;
+}
+
+/* ---- Module progress counter (e.g. 2/5) ---- */
+.ol-counter {
+  font-size: .75rem; font-weight: 700; color: var(--muted-fg);
+  white-space: nowrap; flex-shrink: 0; float: right; margin-right:10px;
+}
+
+/* ---- Thin progress bar under module title ---- */
+.ol-module-bar {
+  height: 3px; border-radius: 2px;
+  background: var(--muted); margin: .25rem 0 0;
+  overflow: hidden; width: 100%; flex-basis: 100%;
+}
+.ol-module-bar span {
+  display: block; height: 100%; border-radius: 2px;
+  background: var(--success); transition: width .4s ease;
+  width: 0%;
+}
+
+/* ---- Summary text at bottom of expanded module ---- */
+.ol-module-summary {
+  font-size: .78rem; color: var(--muted-fg);
+  padding: .25rem 0 .5rem 1.5rem; margin: 0;
+}

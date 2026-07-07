@@ -7,6 +7,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css?v=2">
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>
@@ -182,6 +183,11 @@
                                           ‹ <spring:message code="previous.lesson"/>
                                         </a>
                                       </c:if>
+                           <button type="button" class="btn-learned" id="btnLearned"
+                                   data-category-id="${CATEGORY_ATTRIBUTE.id}">
+                             <span class="btn-learned-check"></span>
+                             <span class="btn-learned-label"><spring:message code="mark.as.learned"/></span>
+                           </button>
                            <c:if test="${NEXT_CATEGORY!=null}">
                                          <a class="btn btn-primary" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}">
                                            <spring:message code="next.lesson"/> ›
@@ -192,9 +198,9 @@
                        <!-- ===== RIGHT: progress & resources ===== -->
                              <aside class="lesson-side">
                                <div class="panel lesson-side-panel">
-                                  <!-- <p class="lesson-side-eyebrow">Course Progress</p>
-                                 <div class="bar"><span style="width:35%; background: var(--success);"></span></div>
-                                 <p class="lesson-side-progress">7 of 26 modules · 35%</p>-->
+                                 <p class="lesson-side-eyebrow"><spring:message code="course.progress"/></p>
+                                 <div class="learned-progress-bar" id="learnedBar"><span id="learnedBarFill" style="width:0%"></span></div>
+                                 <p class="lesson-side-progress" id="learnedStats"></p>
 
                                  <c:set var="isQuestions" value="${CATEGORY_ATTRIBUTE.questionsCount!=0}"/>
                                  <c:set var="isTests" value="${CATEGORY_ATTRIBUTE.testsCount!=0}"/>
@@ -265,5 +271,19 @@
         </c:choose>
       </div>
       <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
+      <script src="${pageContext.request.contextPath}/js/learned-progress.js"></script>
+      <script>
+      LearnedProgress.initCategoryPage({
+          ctx: '${pageContext.request.contextPath}',
+          categoryId: ${CATEGORY_ATTRIBUTE.id},
+          testPath: '${param.TEST_PATH}',
+          isLoggedIn: ${sessionScope.person != null},
+          serverLearned: ${IS_LEARNED},
+          labelMark: '<spring:message code="mark.as.learned"/>',
+          labelOf: '<spring:message code="learned.of.total"/>',
+          labelLearnedWord: '<spring:message code="learned.word"/>',
+          labelLessonsLearned: '<spring:message code="lessons.learned"/>'
+      });
+      </script>
     </jsp:body>
 </t:wrapper2>
