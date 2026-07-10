@@ -1996,6 +1996,10 @@ pre.has-copy { position: relative; }
 /* Адаптив: горизонтальный скролл на узких экранах */
 .ec-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px 0; }
 .ec-table-wrap .ec-table { margin: 0; min-width: 520px; }
+@media (max-width: 599px) {
+  .ec-table-wrap .ec-table { min-width: 100%; font-size: .9rem; }
+  .ec-table th, .ec-table td { padding: .5rem .4rem; }
+}
 
 /* Тёмная тема */
 @media (prefers-color-scheme: dark) {

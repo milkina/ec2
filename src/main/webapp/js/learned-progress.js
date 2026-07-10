@@ -56,27 +56,36 @@ var LearnedProgress = (function() {
         var LABEL_LESSONS_LEARNED = cfg.labelLessonsLearned || '';
 
         var modules = [];
-        var outlineRoot = document.querySelector('.lesson-outline') || document;
-        outlineRoot.querySelectorAll('.ol-module').forEach(function(mod) {
+        var moduleMap = new Map();
+        var allModules = document.querySelectorAll('.ol-module');
+        allModules.forEach(function(mod) {
             var idsStr = mod.getAttribute('data-sub-ids');
             var total = parseInt(mod.getAttribute('data-sub-total'), 10) || 0;
             if (!idsStr || total === 0) return;
             var ids = idsStr.split(',').map(function(id) { return parseInt(id, 10); });
-            modules.push({ el: mod, ids: ids, total: total });
+            if (!moduleMap.has(idsStr)) {
+                moduleMap.set(idsStr, { els: [mod], ids: ids, total: total });
+            } else {
+                moduleMap.get(idsStr).els.push(mod);
+            }
         });
+        modules = Array.from(moduleMap.values());
 
         var learnedSet = new Set();
 
         function updateUI() {
             var btn = document.getElementById('btnLearned');
+            var btnMobile = document.getElementById('btnLearnedMobile');
             var isLearned = learnedSet.has(CATEGORY_ID);
-            if (btn) {
-                btn.classList.toggle('is-learned', isLearned);
-                var label = btn.querySelector('.btn-learned-label');
-                if (label) label.textContent = LABEL_MARK;
-                var check = btn.querySelector('.btn-learned-check');
-                if (check) check.textContent = isLearned ? '\u2713' : '';
-            }
+            [btn, btnMobile].forEach(function(b) {
+                if (b) {
+                    b.classList.toggle('is-learned', isLearned);
+                    var label = b.querySelector('.btn-learned-label');
+                    if (label) label.textContent = LABEL_MARK;
+                    var check = b.querySelector('.btn-learned-check');
+                    if (check) check.textContent = isLearned ? '\u2713' : '';
+                }
+            });
             var totalModules = modules.length;
             var completedModules = 0;
             var currentModuleProgress = null;
@@ -86,56 +95,52 @@ var LearnedProgress = (function() {
                 if (m.ids.includes(CATEGORY_ID)) {
                     currentModuleProgress = mp;
                 }
-                var summary = m.el.querySelector('summary');
-              //  if (summary) summary.classList.toggle('is-completed', mp.complete);
-                /* Module counter (e.g. 2/5) — hidden when 0 learned */
-                var counter = m.el.querySelector('.ol-counter');
-                if (counter) {
-                    if (mp.learned > 0) {
-                        counter.textContent = mp.learned + '/' + mp.total;
-                        counter.style.display = '';
-                    } else {
-                        counter.style.display = 'none';
+                m.els.forEach(function(mod) {
+                    var summary = mod.querySelector('summary');
+                  //  if (summary) summary.classList.toggle('is-completed', mp.complete);
+                    /* Module counter (e.g. 2/5) — hidden when 0 learned */
+                    var counter = mod.querySelector('.ol-counter');
+                    if (counter) {
+                        if (mp.learned > 0) {
+                            counter.textContent = mp.learned + '/' + mp.total;
+                            counter.style.display = '';
+                        } else {
+                            counter.style.display = 'none';
+                        }
                     }
-                }
-                /* Thin progress bar under module title */
-                var bar = m.el.querySelector('.ol-module-bar');
-                if (bar) {
-                    bar.querySelector('span').style.width = mp.pct + '%';
-                    bar.style.display = '';
-                }
-                /* Summary text at bottom of expanded module */
-                var summaryText = m.el.querySelector('.ol-module-summary');
-                if (summaryText) {
-                    if (mp.learned > 0) {
-                        summaryText.textContent = mp.learned + ' ' + LABEL_OF + ' ' + mp.total + ' ' + LABEL_LESSONS_LEARNED;
-                        summaryText.style.display = '';
-                    } else {
-                        summaryText.style.display = 'none';
+                    /* Thin progress bar under module title */
+                    var bar = mod.querySelector('.ol-module-bar');
+                    if (bar) {
+                        bar.querySelector('span').style.width = mp.pct + '%';
+                        bar.style.display = '';
                     }
-                }
+                    /* Summary text at bottom of expanded module */
+                    var summaryText = mod.querySelector('.ol-module-summary');
+                    if (summaryText) {
+                        if (mp.learned > 0) {
+                            summaryText.textContent = mp.learned + ' ' + LABEL_OF + ' ' + mp.total + ' ' + LABEL_LESSONS_LEARNED;
+                            summaryText.style.display = '';
+                        } else {
+                            summaryText.style.display = 'none';
+                        }
+                    }
+                });
             });
             var pct = totalModules > 0 ? Math.round(completedModules * 100 / totalModules) : 0;
             var fill = document.getElementById('learnedBarFill');
             if (fill) fill.style.width = pct + '%';
             var stats = document.getElementById('learnedStats');
             if (stats) stats.textContent = completedModules + ' ' + LABEL_OF + ' ' + totalModules + ' ' + LABEL_LEARNED_WORD + ' \u00b7 ' + pct + '%';
-            outlineRoot.querySelectorAll('.ol-lessons a[data-cat-id]').forEach(function(a) {
+            document.querySelectorAll('.ol-lessons a[data-cat-id]').forEach(function(a) {
                 var cid = parseInt(a.getAttribute('data-cat-id'), 10);
                 var dot = a.querySelector('.ol-dot');
                 if (dot) dot.classList.toggle('is-learned', learnedSet.has(cid));
             });
             /* Update mobile sticky bar with current module progress */
             if (currentModuleProgress) {
-                var msbPct = document.getElementById('msbPct');
-                var msbProgress = document.getElementById('msbProgress');
                 var msbLearned = document.getElementById('msbLearned');
-                if (msbPct) msbPct.textContent = currentModuleProgress.pct + '%';
-                if (msbProgress) msbProgress.querySelector('span').style.width = currentModuleProgress.pct + '%';
-                if (msbLearned && currentModuleProgress.learned > 0) {
+                if (msbLearned) {
                     msbLearned.textContent = currentModuleProgress.learned + '/' + currentModuleProgress.total;
-                } else if (msbLearned) {
-                    msbLearned.textContent = '';
                 }
             }
         }
@@ -168,7 +173,9 @@ var LearnedProgress = (function() {
 
         document.addEventListener('DOMContentLoaded', function() {
             var btn = document.getElementById('btnLearned');
+            var btnMobile = document.getElementById('btnLearnedMobile');
             if (btn) btn.addEventListener('click', toggleLearned);
+            if (btnMobile) btnMobile.addEventListener('click', toggleLearned);
 
             getLearnedSet(CTX, TEST_PATH, IS_LOGGED_IN).then(function(set) {
                 learnedSet = set;

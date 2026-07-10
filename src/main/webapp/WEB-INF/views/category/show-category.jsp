@@ -7,7 +7,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css?v=2">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css?v=3">
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>
@@ -115,8 +115,20 @@
           <span class="msb-lesson"></span>
           <span class="msb-learned" id="msbLearned"></span>
         </div>
-        <span class="msb-pct" id="msbPct"></span>
-        <div class="msb-progress" id="msbProgress"><span></span></div>
+        <div class="msb-nav">
+          <c:choose>
+            <c:when test="${PREVIOUS_CATEGORY!=null}">
+              <a class="mbn-btn mbn-prev" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">‹ <spring:message code="previous"/></a>
+            </c:when>
+            <c:otherwise><span class="mbn-btn mbn-prev mbn-disabled"></span></c:otherwise>
+          </c:choose>
+          <c:choose>
+            <c:when test="${NEXT_CATEGORY!=null}">
+              <a class="mbn-btn mbn-next" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}"><spring:message code="next"/> ›</a>
+            </c:when>
+            <c:otherwise><span class="mbn-btn mbn-next mbn-disabled"></span></c:otherwise>
+          </c:choose>
+        </div>
       </div>
       <main class="lesson-bg">
         <div class="container lesson-grid">
@@ -173,11 +185,6 @@
                                           ‹ <spring:message code="previous.lesson"/>
                                         </a>
                                       </c:if>
-                           <button type="button" class="btn-learned" id="btnLearned"
-                                   data-category-id="${CATEGORY_ATTRIBUTE.id}">
-                             <span class="btn-learned-check"></span>
-                             <span class="btn-learned-label"><spring:message code="mark.as.learned"/></span>
-                           </button>
                            <c:if test="${NEXT_CATEGORY!=null}">
                                          <a class="btn btn-primary" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}">
                                            <spring:message code="next.lesson"/> ›
@@ -191,7 +198,12 @@
                                  <p class="lesson-side-eyebrow"><spring:message code="course.progress"/></p>
                                  <div class="learned-progress-bar" id="learnedBar"><span id="learnedBarFill" style="width:0%"></span></div>
                                  <p class="lesson-side-progress" id="learnedStats"></p>
-
+                                 <hr>
+                           <button type="button" class="btn-learned" id="btnLearned"
+                                   data-category-id="${CATEGORY_ATTRIBUTE.id}">
+                             <span class="btn-learned-check"></span>
+                             <span class="btn-learned-label"><spring:message code="mark.as.learned"/></span>
+                           </button>
                                  <c:set var="isQuestions" value="${CATEGORY_ATTRIBUTE.questionsCount!=0}"/>
                                  <c:set var="isTests" value="${CATEGORY_ATTRIBUTE.testsCount!=0}"/>
                           <c:if test="${isVideo || isQuestions || isTests}">
@@ -245,23 +257,16 @@
         <button type="button" class="outline-drawer-close" aria-label="<spring:message code='close'/>" onclick="closeOutlineDrawer();">&times;</button>
         <jsp:include page="/WEB-INF/views/category/_outline-modules.jsp"/>
       </div>
-      <!-- Mobile fixed bottom nav -->
-      <div class="mobile-bottom-nav">
-        <c:choose>
-          <c:when test="${PREVIOUS_CATEGORY!=null}">
-            <a class="mbn-btn mbn-prev" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${PREVIOUS_CATEGORY.pathName}">‹ <spring:message code="previous.lesson"/></a>
-          </c:when>
-          <c:otherwise><span class="mbn-btn mbn-prev mbn-disabled"></span></c:otherwise>
-        </c:choose>
-        <c:choose>
-          <c:when test="${NEXT_CATEGORY!=null}">
-            <a class="mbn-btn mbn-next" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${NEXT_CATEGORY.pathName}"><spring:message code="next.lesson"/> ›</a>
-          </c:when>
-          <c:otherwise><span class="mbn-btn mbn-next mbn-disabled"></span></c:otherwise>
-        </c:choose>
+      <!-- Mobile fixed bottom bar with learned button -->
+      <div class="mobile-bottom-bar">
+        <button type="button" class="btn-learned" id="btnLearnedMobile"
+                data-category-id="${CATEGORY_ATTRIBUTE.id}">
+          <span class="btn-learned-check"></span>
+          <span class="btn-learned-label"><spring:message code="mark.as.learned"/></span>
+        </button>
       </div>
       <script async src="${pageContext.request.contextPath}/js/prism.min.js?ver=1"></script>
-      <script src="${pageContext.request.contextPath}/js/learned-progress.js"></script>
+      <script src="${pageContext.request.contextPath}/js/learned-progress.js?v=1"></script>
       <script>
       LearnedProgress.initCategoryPage({
           ctx: '${pageContext.request.contextPath}',
