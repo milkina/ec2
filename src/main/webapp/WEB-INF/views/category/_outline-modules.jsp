@@ -38,7 +38,6 @@
                     </c:forEach>
                 </ul>
             </c:if>
-            <p class="ol-module-summary" style="display:none;"></p>
         </details>
     </c:if>
 </c:forEach>

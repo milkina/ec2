@@ -17,7 +17,8 @@
     </c:if>
     <c:set var="header1" value="${CATEGORY_ATTRIBUTE.name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.parentCategory!=null && (CATEGORY_ATTRIBUTE.name.equals('Задания') || CATEGORY_ATTRIBUTE.name.equals('Tasks'))}">
-       <c:set var="header1" value="${CATEGORY_ATTRIBUTE.parentCategory.name}. ${CATEGORY_ATTRIBUTE.name}"/>
+       <spring:message code="menu.tasks.label" var="tasksLabel"/>
+       <c:set var="header1" value="${CATEGORY_ATTRIBUTE.parentCategory.name}. ${tasksLabel}"/>
     </c:if>
     <title><c:out value="${titleName}"/></title>
     <meta name="description" content="${CATEGORY_ATTRIBUTE.article.description}">

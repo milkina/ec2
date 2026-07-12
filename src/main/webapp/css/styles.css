@@ -1609,6 +1609,16 @@ body.is-auth .auth-out { display: none; }
     border-bottom-color: currentColor;
 }
 
+/* Button-style links (e.g. "Solution on Patreon") keep their own border on
+   all sides — the generic underline-via-border-bottom rule above is more
+   specific than .btn-outline and was clipping just the bottom edge. */
+.lesson-div a.btn-outline, .article-body a.btn-outline {
+    border-bottom-color: var(--border);
+}
+.lesson-div a.btn-outline:hover, .article-body a.btn-outline:hover {
+    border-bottom-color: var(--primary);
+}
+
 /* Active */
 .lesson-div a:active, .article-body a:active {
     color: #1e40af;

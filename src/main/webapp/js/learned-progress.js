@@ -114,16 +114,6 @@ var LearnedProgress = (function() {
                         bar.querySelector('span').style.width = mp.pct + '%';
                         bar.style.display = '';
                     }
-                    /* Summary text at bottom of expanded module */
-                    var summaryText = mod.querySelector('.ol-module-summary');
-                    if (summaryText) {
-                        if (mp.learned > 0) {
-                            summaryText.textContent = mp.learned + ' ' + LABEL_OF + ' ' + mp.total + ' ' + LABEL_LESSONS_LEARNED;
-                            summaryText.style.display = '';
-                        } else {
-                            summaryText.style.display = 'none';
-                        }
-                    }
                 });
             });
             var pct = totalModules > 0 ? Math.round(completedModules * 100 / totalModules) : 0;
