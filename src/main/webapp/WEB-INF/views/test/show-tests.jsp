@@ -84,23 +84,6 @@
             </nav>
             <h1 class="articles-title" id="tests-main-title">Free Java Online Tests</h1>
             <p class="articles-lede">Assess your skills and prepare for interviews. Choose topics, set the number of questions — and test yourself online.</p>
-
-            <!-- How-to steps -->
-            <div class="how-grid">
-              <div class="how-step">
-                <div class="ic">1</div>
-                <div><b>Select a category</b><p>Select one or several categories.</p></div>
-              </div>
-              <div class="how-step">
-                <div class="ic">2</div>
-                <div><b>Specify number</b><p>Specify the number of questions for the test.</p></div>
-              </div>
-              <div class="how-step">
-                <div class="ic">3</div>
-                <div><b>Start the test</b><p>Click 'Start Test' and check your knowledge.</p></div>
-              </div>
-            </div>
-
             <!-- Test card -->
             <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
             <!-- About tests -->

@@ -84,22 +84,6 @@
         </nav>
         <h1 class="articles-title" id="tests-main-title">Бесплатные тесты по Java</h1>
         <p class="articles-lede">Оцените свои знания и подготовьтесь к интервью. Выбирайте темы, задавайте количество вопросов — и проверьте себя онлайн.</p>
-
-        <!-- How-to Steps Section -->
-        <div class="how-grid">
-          <div class="how-step">
-            <div class="ic">1</div>
-            <div><b>Выберите категорию</b><p>Выберите одну или несколько категорий.</p></div>
-          </div>
-          <div class="how-step">
-            <div class="ic">2</div>
-            <div><b>Задайте количество</b><p>Укажите количество вопросов для теста.</p></div>
-          </div>
-          <div class="how-step">
-            <div class="ic">3</div>
-            <div><b>Пройдите тест</b><p>Нажмите «Пройти тест» и проверьте свои знания.</p></div>
-          </div>
-        </div>
         <!-- Test Card Section -->
         <%@include file="/WEB-INF/views/test/start-exam.jsp"%>
 

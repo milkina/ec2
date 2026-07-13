@@ -84,23 +84,6 @@
             </nav>
             <h1 class="articles-title" id="interview-questions-main-title">Java Interview Questions</h1>
             <p class="articles-lede">Prepare for your Java developer interview with our comprehensive question bank covering Java Core, APIs, and technical topics.</p>
-
-            <!-- How-to steps -->
-            <div class="how-grid">
-              <div class="how-step">
-                <div class="ic">1</div>
-                <div><b>Select a category</b><p>Select one or several categories.</p></div>
-              </div>
-              <div class="how-step">
-                <div class="ic">2</div>
-                <div><b>Specify number</b><p>Set how many questions you want to practice.</p></div>
-              </div>
-              <div class="how-step">
-                <div class="ic">3</div>
-                <div><b>Start practicing</b><p>Review questions and answers to strengthen your knowledge.</p></div>
-              </div>
-            </div>
-
             <!-- Test card -->
             <%@include file="/WEB-INF/views/test/start-course-quiz.jsp"%>
             <!-- About interview questions -->

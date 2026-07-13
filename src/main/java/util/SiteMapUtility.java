@@ -72,8 +72,7 @@ public class SiteMapUtility {
                     priority = 1;
                 }
                 String languagePath = article.getLanguage().getCode().equals(LanguageCode.ru) ? LanguageCode.ru.getPath() : LanguageCode.en.getPath();
-                Date date = article.getModifiedDate() != null ? article.getModifiedDate() :Calendar.getInstance().getTime();
-                UrlEntity urlEntity = createUrlEntity(SITE_NAME + languagePath + article.getUrl(), priority, "monthly", date);
+                UrlEntity urlEntity = createUrlEntity(SITE_NAME + languagePath + article.getUrl(), priority, "monthly", article.getModifiedDate());
                 links.addUrlEntity(urlEntity);
             }
         }
@@ -103,23 +102,20 @@ public class SiteMapUtility {
 
     private UrlEntity createUrlEntity(String testPathName,
                                       double priority, String freq) {
-        Date today = Calendar.getInstance().getTime();
         return createUrlEntity(testPathName,
-                priority, freq, today);
+                priority, freq, null);
     }
 
     private UrlEntity createUrlEntity(String testPathName,
                                       double priority, String freq, Date date) {
         UrlEntity urlEntity = new UrlEntity();
         urlEntity.setLoc(testPathName);
-        urlEntity.setChangefreq(freq);
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        if (date == null) {
-            date = Calendar.getInstance().getTime();
+        //urlEntity.setChangefreq(freq);
+        if (date != null) {
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String reportDate = df.format(date);
+            urlEntity.setLastmod(reportDate);
         }
-        String reportDate = df.format(date);
-
-        urlEntity.setLastmod(reportDate);
         urlEntity.setPriority(priority);
         return urlEntity;
     }
@@ -148,7 +144,7 @@ public class SiteMapUtility {
     }
 
     private void setQuizLink(String path, String language) {
-        UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + path, QUIZ_PRIORITY, "weekly");
+        UrlEntity urlEntity = createUrlEntity(SITE_NAME + language + path, QUIZ_PRIORITY, "weekly", null);
         links.addUrlEntity(urlEntity);
     }
 
