@@ -51,6 +51,7 @@ var LearnedProgress = (function() {
         var IS_LOGGED_IN = cfg.isLoggedIn;
         var SERVER_LEARNED = cfg.serverLearned;
         var LABEL_MARK = cfg.labelMark;
+        var LABEL_LEARNED = cfg.labelLearned || cfg.labelMark;
         var LABEL_OF = cfg.labelOf;
         var LABEL_LEARNED_WORD = cfg.labelLearnedWord;
         var LABEL_LESSONS_LEARNED = cfg.labelLessonsLearned || '';
@@ -81,7 +82,7 @@ var LearnedProgress = (function() {
                 if (b) {
                     b.classList.toggle('is-learned', isLearned);
                     var label = b.querySelector('.btn-learned-label');
-                    if (label) label.textContent = LABEL_MARK;
+                    if (label) label.textContent = isLearned ? LABEL_LEARNED : LABEL_MARK;
                     var check = b.querySelector('.btn-learned-check');
                     if (check) check.textContent = isLearned ? '\u2713' : '';
                 }

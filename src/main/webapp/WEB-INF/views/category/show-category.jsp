@@ -276,6 +276,7 @@
           isLoggedIn: ${sessionScope.person != null},
           serverLearned: ${IS_LEARNED},
           labelMark: '<spring:message code="mark.as.learned"/>',
+          labelLearned: '<spring:message code="learned.status"/>',
           labelOf: '<spring:message code="learned.of.total"/>',
           labelLearnedWord: '<spring:message code="learned.word"/>',
           labelLessonsLearned: '<spring:message code="lessons.learned"/>'

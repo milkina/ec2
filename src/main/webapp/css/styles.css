@@ -1613,7 +1613,7 @@ body.is-auth .auth-out { display: none; }
    all sides — the generic underline-via-border-bottom rule above is more
    specific than .btn-outline and was clipping just the bottom edge. */
 .lesson-div a.btn-outline, .article-body a.btn-outline {
-    border-bottom-color: var(--border);
+    border-bottom: 2px solid var(--border);
 }
 .lesson-div a.btn-outline:hover, .article-body a.btn-outline:hover {
     border-bottom-color: var(--primary);
