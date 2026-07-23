@@ -1,0 +1,6 @@
+Redirect #start-course to java-core-russian
+exam/ocpjp8 to /ocpjp8
+ru/exam/java-core-russian to /ru/java-core-russian
+
+-Create english version of Создание локального репозитория git
+- Add tag for articles: It, Soft, etc

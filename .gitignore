@@ -11,4 +11,6 @@ Thumbs.db
 
 # Project-specific
 dumps/
+audits/
+gsc/
 .windsurf/
