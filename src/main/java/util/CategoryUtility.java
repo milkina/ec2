@@ -31,6 +31,12 @@ public class CategoryUtility extends SpringUtility {
 
     private static final HtmlCompressor HTML_COMPRESSOR = new HtmlCompressor();
 
+    static {
+        // compressor removes HTML comments; keep the marker where the template inserts tasks
+        HTML_COMPRESSOR.setPreservePatterns(Collections.singletonList(
+                java.util.regex.Pattern.compile(java.util.regex.Pattern.quote(TaskUtility.TASKS_MARKER))));
+    }
+
     /**
      * Compresses the HTML text of every cached category's article exactly once at
      * cache-load time, so request handlers don't pay the compression cost per request.

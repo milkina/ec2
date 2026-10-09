@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import spring.services.course.CourseService;
 import util.CategoryUtility;
 import util.LanguageUtility;
+import util.TaskUtility;
 import util.TestUtility;
 import util.article.ArticleUtility;
 
@@ -57,13 +58,22 @@ public class CourseController {
     }
 
     @RequestMapping(value = {"/practicheskie-zadachi", "ru/practicheskie-zadachi"})
-    public String showTasks() {
+    public String showTasks(Model model, HttpServletRequest request) {
+        addProjects(model, request, "java-core-russian");
         return TASKS_PAGE;
     }
 
     @RequestMapping(value = {"/practical-java-tasks", "/ru/practical-java-tasks"})
-    public String showTasksEn() {
+    public String showTasksEn(Model model, HttpServletRequest request) {
+        addProjects(model, request, "java-core");
         return TASKS_PAGE_EN;
+    }
+
+    private void addProjects(Model model, HttpServletRequest request, String coursePath) {
+        Map<String, Test> courses = (Map<String, Test>) request.getServletContext().getAttribute(TESTS);
+        Test course = courses == null ? null : courses.get(coursePath);
+        TaskUtility.addProjectsToModel(model, request.getServletContext(), course);
+        TaskUtility.addPageStatsToModel(model, request.getServletContext(), course);
     }
 
     @RequestMapping(value = {"/video-lessons", "ru/video-lessons"})

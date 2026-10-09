@@ -10,6 +10,7 @@ import spring.services.exam.ExamService;
 import spring.services.language.LanguageService;
 import spring.services.person.PersonService;
 import spring.services.question.QuestionService;
+import spring.services.task.TaskService;
 
 import javax.servlet.ServletContext;
 
@@ -22,6 +23,7 @@ public class SpringUtility {
     private static ExamService examService;
     private static QuestionService questionService;
     private static OtherLanguageService canonicalUrlService;
+    private static TaskService taskService;
 
     public static <T> T getService(ServletContext servletContext, Class<T> service) {
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContext);
@@ -82,5 +84,12 @@ public class SpringUtility {
             questionService = SpringUtility.getService(servletContext, QuestionService.class);
         }
         return questionService;
+    }
+
+    protected static TaskService getTaskService(ServletContext servletContext) {
+        if (taskService == null) {
+            taskService = SpringUtility.getService(servletContext, TaskService.class);
+        }
+        return taskService;
     }
 }

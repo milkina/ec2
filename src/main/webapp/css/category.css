@@ -171,3 +171,30 @@
 @media (min-width: 900px) {
   .mobile-bottom-bar { display: none !important; }
 }
+/* ===== «Практика по теме» на странице урока ===== */
+.practice-block {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--card);
+}
+.practice-block h2 { margin: 0 0 .25rem; }
+.practice-sub { margin: 0 0 1rem; color: var(--muted-fg); }
+.practice-list { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: .5rem; }
+.practice-item {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem 1rem;
+  padding: .75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  text-decoration: none;
+  transition: border-color .15s, background .15s;
+}
+.practice-item:hover { border-color: var(--primary); background: var(--primary-soft); }
+.practice-name { font-weight: 600; min-width: 0; }
+.practice-meta { display: flex; flex-wrap: wrap; gap: .4rem .75rem; font-size: .8125rem; color: var(--muted-fg); }
+.practice-level { padding: .1rem .5rem; border-radius: var(--radius-sm); font-weight: 600; }
+.practice-level-beginner { background: var(--success-soft); color: oklch(0.32 0.09 152); }
+.practice-level-intermediate { background: var(--accent-soft); color: var(--accent-fg); }
+.practice-level-advanced { background: oklch(0.94 0.05 25); color: oklch(0.45 0.17 25); }

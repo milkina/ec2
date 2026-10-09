@@ -2,11 +2,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=1" rel="stylesheet">
-     <meta name="description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
+     <c:set var="hubDescription"><spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> to practice Java across <spring:message code="hub.topics.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> of Java Core: from your first program to OOP, lambdas and the Stream API. Hints and video walkthroughs included.</c:set>
+     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=3" rel="stylesheet">
+     <meta name="description" content="${fn:escapeXml(hubDescription)}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
      <title>Java Practice Tasks | Coding Exercises and Training | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/practical-java-tasks">
@@ -15,12 +17,12 @@
      <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/practical-java-tasks">
      <meta property="og:title" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
      <meta property="og:type" content="article">
-     <meta property="og:description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
+     <meta property="og:description" content="${fn:escapeXml(hubDescription)}">
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/practical-java-tasks">
      <meta property="twitter:title" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
      <meta property="twitter:card" content="summary_large_image">
-     <meta property="twitter:description" content="Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.">
+     <meta property="twitter:description" content="${fn:escapeXml(hubDescription)}">
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
@@ -30,7 +32,7 @@
   "@type": "LearningResource",
   "learningResourceType": "Assignment",
   "name": "Java Practice Tasks",
-  "description": "Practice Java programming with real tasks. Improve your skills through training exercises and interview-style problems.",
+  "description": "<spring:escapeBody javaScriptEscape="true">${hubDescription}</spring:escapeBody>",
   "url": "https://www.examclouds.com/practical-java-tasks",
   "inLanguage": "en",
   "author": {
@@ -89,10 +91,14 @@
                    <div class="tasks-hero-icon" aria-hidden="true">&lt;/&gt;</div>
                    <div>
                      <h1 style="font-size:clamp(1.5rem,2.4vw,2rem);margin:0 0 .5rem;">Java practice tasks</h1>
-                     <p style="color:var(--muted-fg);margin:0;max-width:60ch;">
-                       Coding exercises and interview-style problems. Work through real tasks
-                       from basics to collections and algorithms — sorted by topic and level.
+                     <p style="color:var(--muted-fg);margin:0;">
+                       ExamClouds has <spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> for Java Core practice, split into <spring:message code="hub.modules.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> that follow the course: syntax, operators, control flow, arrays, OOP, the static keyword, Object methods, interfaces and enums, lambdas, the Stream API and algorithms. Many tasks come with a hint, and some with a solution and a video walkthrough. Tasks go from simple to more advanced and work for self-study, lab assignments and interview preparation.
                      </p>
+                     <c:set var="shop" value="${PROJECTS['online-shop']}"/>
+                     <c:if test="${shop != null && fn:length(shop.parts) >= 3}">
+                       <p class="project-teaser"><a href="#project"><spring:message code="project.teaser" arguments="${fn:length(shop.parts)}"/> &darr;</a></p>
+                     </c:if>
+                     <jsp:include page="/WEB-INF/views/tasks/_hub-levels-nav.jsp"/>
                    </div>
                  </section>
 
@@ -100,26 +106,7 @@
                        <div class="tasks-ux-grid">
                          <!-- ============ MAIN ============ -->
                          <div>
-                        <c:forEach var="category" items="${TESTS['java-core'].categories}">
-                        <c:if test="${category.value.hidden==false && category.value.name.equals('Tasks')}">
-
-                           <article class="task-card panel">
-                             <div class="task-card-head">
-                               <h3>${category.value.parentCategory.name}</h3>
-                               <div class="task-tags">
-                                 <span class="tag tag-beginner">Beginner</span>
-                                 <span class="tag tag-topic">${TESTS['java-core'].name}</span>
-                               </div>
-                             </div>
-                             <p class="task-desc">${category.value.article.description}</p>
-                             <div class="task-foot">
-                               <span class="task-meta">⏱ ~20 min</span>
-                               <!--<span class="task-meta">☰ 5 tasks</span>-->
-                               <a class="task-open" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'java-core'}/${category.value.pathName}">Open →</a>
-                             </div>
-                           </article>
-  </c:if>
-                    </c:forEach>
+                        <jsp:include page="/WEB-INF/views/tasks/_hub-groups.jsp"/>
 
 
                          </div>
@@ -129,24 +116,11 @@
                            <div class="panel task-ux-side">
                              <h2 class="side-h">Overview</h2>
                              <div class="overview-grid">
-                              <!-- <div class="ov-cell"><b>6</b><span>task sets</span></div>
-                               <div class="ov-cell"><b>42</b><span>exercises</span></div>-->
-                               <div class="ov-cell"><b>6</b><span><spring:message code='modules'/></span></div>
+                               <div class="ov-cell"><b>${MODULES_TOTAL}</b><span><spring:message code='modules'/></span></div>
                                <div class="ov-cell"><b>Free</b><span>all access</span></div>
                              </div>
                            </div>
-
-                           <div class="panel task-ux-side">
-                             <h2 class="side-h"><spring:message code='modules'/></h2>
-                             <ul class="topic-list">
-                              <c:forEach var="category" items="${TESTS['java-core'].categories}">
-                                                     <c:if test="${category.value.hidden==false && category.value.name.equals('Tasks')}">
-
-                               <li><a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'java-core'}/${category.value.pathName}"><span class="t-ic">⌘</span><span class="t-name">${category.value.parentCategory.name}</span><!--<span class="t-count">5</span>--></a></li>
-                               </c:if>
-                             </c:forEach>
-                             </ul>
-                           </div>
+                          <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
 <!--
                            <div class="panel">
                              <h2 class="side-h">Your progress</h2>

@@ -123,6 +123,7 @@
   gap: .65rem;
   background: oklch(0.96 0.05 152);
   border-color: oklch(0.85 0.08 152);
+  margin-top: 1.1rem;
 }
 .tip-panel p { margin: 0; font-size: .85rem; line-height: 1.5; }
 .tip-panel a { color: oklch(0.4 0.15 152); font-weight: 800; text-decoration: underline; }
@@ -150,3 +151,52 @@
 .task-ux-side{
   margin-bottom:1.25rem
 }
+/* ===== Сквозной проект «Интернет-магазин» ===== */
+.project-teaser { margin: .6rem 0 0; font-weight: 700; }
+.project-teaser a { color: oklch(0.5 0.18 255); }
+.project-block { padding: 1.25rem 1.4rem; margin-bottom: 1rem; border: 1.5px solid oklch(0.85 0.08 255); }
+.project-tags { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .5rem; }
+.project-block h2 { font-size: 1.25rem; font-weight: 800; margin: 0 0 .35rem; }
+.project-lead { color: var(--muted-fg); font-size: .92rem; line-height: 1.55; margin: 0 0 .9rem; }
+.project-parts { list-style: none; margin: 0; padding: 0; }
+.project-parts li { border-top: 1px solid var(--border); }
+.project-parts a {
+  display: grid; grid-template-columns: 1.75rem minmax(0, 1fr) auto; gap: .75rem; align-items: center;
+  padding: .55rem .25rem; color: inherit; text-decoration: none; font-size: .92rem;
+}
+.project-parts a:hover { background: var(--muted); }
+.project-num {
+  width: 1.6rem; height: 1.6rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  background: oklch(0.93 0.05 255); color: oklch(0.45 0.18 255); font-size: .78rem; font-weight: 800;
+}
+.project-module { font-size: .8rem; color: var(--muted-fg); text-align: right; }
+.project-foot {
+  display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap;
+  border-top: 1px solid var(--border); padding-top: .9rem; margin-top: .1rem;
+}
+.project-labs { font-size: .85rem; color: var(--muted-fg); }
+.project-mini { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.project-mini h3 { font-size: 1rem; font-weight: 800; margin: 0 0 .25rem; }
+.project-mini .project-lead { margin: 0; }
+@media (max-width: 600px) {
+  .project-parts a { grid-template-columns: 1.75rem minmax(0, 1fr); }
+  .project-module { grid-column: 2; text-align: left; margin-top: -.35rem; }
+}
+
+/* ===== Группы карточек по уровню ===== */
+.hub-levels { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .75rem; }
+.hub-level {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .3rem .7rem; border-radius: 999px; font-size: .85rem; font-weight: 700; text-decoration: none;
+  border: 1px solid var(--border); color: var(--foreground); background: var(--card);
+}
+.hub-level span { font-weight: 600; color: var(--muted-fg); }
+.hub-level:hover { border-color: oklch(0.6 0.15 255); }
+.hub-level-beginner { box-shadow: inset 3px 0 0 oklch(0.6 0.15 255); }
+.hub-level-intermediate { box-shadow: inset 3px 0 0 oklch(0.7 0.14 70); }
+.hub-level-advanced { box-shadow: inset 3px 0 0 oklch(0.6 0.18 25); }
+.hub-group { display: grid; gap: 1rem; margin-bottom: 1.75rem; scroll-margin-top: 5rem; }
+.hub-group-head { margin-top: .5rem; }
+.hub-group-head h2 { font-size: 1.3rem; font-weight: 800; margin: 0 0 .2rem; }
+.hub-group-sub { margin: 0; font-size: .88rem; color: var(--muted-fg); }
+.project-block, .project-mini { scroll-margin-top: 5rem; }

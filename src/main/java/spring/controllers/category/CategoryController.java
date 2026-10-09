@@ -16,6 +16,7 @@ import spring.services.category.CategoryService;
 import spring.services.course.CourseService;
 import spring.services.learned.LearnedCategoryService;
 import util.CategoryUtility;
+import util.TaskUtility;
 import util.TestUtility;
 import util.article.ArticleUtility;
 
@@ -80,6 +81,10 @@ public class CategoryController {
 
         model.addAttribute(CATEGORY_ATTRIBUTE, category);
         model.addAttribute(ARTICLE_ATTRIBUTE, article);
+        TaskUtility.addTasksToModel(model, request.getServletContext(), category);
+        Map<String, Test> courses = (Map<String, Test>) request.getServletContext().getAttribute(TESTS);
+        TaskUtility.addLessonTasksToModel(model, request.getServletContext(), category,
+                courses == null ? null : courses.get(request.getParameter(TEST_PATH)));
         List<Category> list = CategoryUtility.getCategoryListFromServletContext(request);
         int index = list.indexOf(category);
 

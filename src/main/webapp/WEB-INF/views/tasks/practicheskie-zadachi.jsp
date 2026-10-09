@@ -2,35 +2,37 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=1" rel="stylesheet">
-     <meta name="description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
+     <c:set var="hubDescription"><spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> по <spring:message code="hub.topics.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> Java Core: от первой программы до коллекций, Stream API и многопоточности. Подсказки, видеоразборы, подходят для лабораторных работ.</c:set>
+     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=3" rel="stylesheet">
+     <meta name="description" content="${fn:escapeXml(hubDescription)}">
      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-     <title>Практические задачи по Java | Учебные задачи и тренировки | ExamClouds</title>
+     <title>Задачи по Java для начинающих с решениями | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/ru/practicheskie-zadachi">
      <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/practicheskie-zadachi">
      <link rel="alternate" hreflang="en" href="https://www.examclouds.com/practical-java-tasks">
      <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/practical-java-tasks">
-     <meta property="og:title" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
+     <meta property="og:title" content="Задачи по Java для начинающих с решениями | ExamClouds">
      <meta property="og:type" content="article">
-     <meta property="og:description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
+     <meta property="og:description" content="${fn:escapeXml(hubDescription)}">
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/ru/practicheskie-zadachi">
-     <meta property="twitter:title" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
+     <meta property="twitter:title" content="Задачи по Java для начинающих с решениями | ExamClouds">
      <meta property="twitter:card" content="summary_large_image">
-     <meta property="twitter:description" content="Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.">
+     <meta property="twitter:description" content="${fn:escapeXml(hubDescription)}">
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
-     <meta property="twitter:image:alt" content="Практические задачи по Java | Учебные задачи и тренировки | ExamClouds">
+     <meta property="twitter:image:alt" content="Задачи по Java для начинающих с решениями | ExamClouds">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "LearningResource",
   "learningResourceType": "Assignment",
   "name": "Практические задачи по Java",
-  "description": "Изучайте и решайте практические задачи по Java для улучшения навыков программирования. Полезные материалы для эффективного обучения и тренировки.",
+  "description": "<spring:escapeBody javaScriptEscape="true">${hubDescription}</spring:escapeBody>",
   "url": "https://www.examclouds.com/ru/practicheskie-zadachi",
   "inLanguage": "ru",
   "author": {
@@ -88,11 +90,15 @@
                  <section class="panel tasks-hero">
                    <div class="tasks-hero-icon" aria-hidden="true">&lt;/&gt;</div>
                    <div>
-                     <h1 style="font-size:clamp(1.5rem,2.4vw,2rem);margin:0 0 .5rem;">Практические задачи по Java</h1>
-                     <p style="color:var(--muted-fg);margin:0;max-width:60ch;">
-                       Учебные задачи и тренировки для улучшения навыков программирования. Решайте реальные задачи
-                       от основ до коллекций и алгоритмов — отсортированы по темам и уровню сложности.
+                     <h1 style="font-size:clamp(1.5rem,2.4vw,2rem);margin:0 0 .5rem;">Практические задачи по Java с решениями</h1>
+                     <p style="color:var(--muted-fg);margin:0;">
+                       На ExamClouds собрано <spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> по Java Core, разбитых на <spring:message code="hub.modules.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> по темам курса: синтаксис, ООП, строки, коллекции, Stream API, исключения, ввод-вывод, JDBC и многопоточность. К части задач есть решение и видеоразбор. Задачи идут от простых к сложным и подходят для самостоятельной практики, лабораторных работ и подготовки к собеседованию.
                      </p>
+                     <c:set var="shop" value="${PROJECTS['online-shop']}"/>
+                     <c:if test="${shop != null && fn:length(shop.parts) >= 3}">
+                       <p class="project-teaser"><a href="#project"><spring:message code="project.teaser" arguments="${fn:length(shop.parts)}"/> &darr;</a></p>
+                     </c:if>
+                     <jsp:include page="/WEB-INF/views/tasks/_hub-levels-nav.jsp"/>
                    </div>
                  </section>
 
@@ -100,25 +106,7 @@
                        <div class="tasks-ux-grid">
                          <!-- ============ MAIN ============ -->
                          <div>
-<c:forEach var="category" items="${TESTS['java-core-russian'].categories}">
-                        <c:if test="${category.value.hidden==false && category.value.name.equals('Задания')}">
-
-                           <article class="task-card panel">
-                             <div class="task-card-head">
-                               <h3>${category.value.parentCategory.name}</h3>
-                               <div class="task-tags">
-                                 <span class="tag tag-beginner">Начинающий</span>
-                                 <span class="tag tag-topic">${TESTS['java-core-russian'].name}</span>
-                               </div>
-                             </div>
-                             <p class="task-desc">${category.value.article.description}</p>
-                             <div class="task-foot">
-                               <span class="task-meta">⏱ ~20 мин</span>
-                               <a class="task-open" href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'java-core-russian'}/${category.value.pathName}">Открыть →</a>
-                             </div>
-                           </article>
- </c:if>
-                    </c:forEach>
+<jsp:include page="/WEB-INF/views/tasks/_hub-groups.jsp"/>
 
 
                          </div>
@@ -128,23 +116,12 @@
                            <div class="panel task-ux-side">
                              <h2 class="side-h">Обзор</h2>
                              <div class="overview-grid">
-                               <div class="ov-cell"><b>15</b><span><spring:message code='modules'/></span></div>
+                               <div class="ov-cell"><b>${MODULES_TOTAL}</b><span><spring:message code='modules'/></span></div>
                                <div class="ov-cell"><b>Free</b><span>весь доступ</span></div>
                              </div>
                            </div>
-
-                           <div class="panel task-ux-side">
-                             <h2 class="side-h"><spring:message code='modules'/></h2>
-                             <ul class="topic-list">
-                              <c:forEach var="category" items="${TESTS['java-core-russian'].categories}">
-                                                     <c:if test="${category.value.hidden==false && category.value.name.equals('Задания')}">
-
-                               <li><a href="${pageContext.request.contextPath}/<spring:message code='menu.home'/>java/${'java-core-russian'}/${category.value.pathName}"><span class="t-ic">⌘</span><span class="t-name">${category.value.parentCategory.name}</span></a></li>
-                               </c:if>
-                             </c:forEach>
-                             </ul>
-                           </div>
-
+                           <jsp:include page="/WEB-INF/promo/udemy-promo.jsp"/>
+                           <jsp:include page="/WEB-INF/author/author-mini-card.jsp"/>
                            <div class="panel tip-panel">
                              <span class="tip-ic">💡</span>
                              <p>Новичок в Java? Начните с полного <a href="${pageContext.request.contextPath}/ru/java-core-russian">курса Java Core</a> — задачи станут понятнее.</p>

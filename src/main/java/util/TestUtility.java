@@ -111,6 +111,7 @@ public class TestUtility extends SpringUtility {
         CategoryUtility.compressArticleTexts(testMap);
         servletContext.setAttribute(TESTS, testMap);
         servletContext.setAttribute(CATEGORY_LISTS, CategoryUtility.buildCategoryLists(testMap));
+        TaskUtility.loadTasksToServletContext(servletContext);
     }
 
     public static Test getTestFromServletContext(HttpServletRequest request) {

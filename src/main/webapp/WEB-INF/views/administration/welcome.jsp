@@ -13,6 +13,7 @@
  <jsp:body>
     <div class="mainArea">
     <c:if test="${person.sysadmin}">
+          <p><a href="${pageContext.request.contextPath}/admin-tasks" class="btn btn-primary btn-sm">Практические задачи</a></p>
           <%@ include file="/administration/test.jsp" %>
           <a href="${pageContext.request.contextPath}/show-questions?TYPE=NOT_APPROVED" id="viewNotApprovedQuestions">
           <spring:message	code="view.not.approved.questions"/></a>

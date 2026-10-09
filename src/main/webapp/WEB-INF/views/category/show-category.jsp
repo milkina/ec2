@@ -7,7 +7,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css?v=3">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css?v=4">
     <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.name} - ${TESTS[param.TEST_PATH].name}"/>
     <c:if test="${CATEGORY_ATTRIBUTE.title!=null && !CATEGORY_ATTRIBUTE.title.equals('')}">
       <c:set var="titleName" value="${CATEGORY_ATTRIBUTE.title}"/>
@@ -160,8 +160,41 @@
 
                          <h1 class="lesson-title">${header1}</h1>
                          <div class="lesson-div">
-                           ${CATEGORY_ATTRIBUTE.article.text}
+                           <c:choose>
+                             <c:when test="${TASKS != null}">
+                               ${ARTICLE_HEAD}
+                               <jsp:include page="/WEB-INF/views/category/_tasks.jsp"/>
+                               ${ARTICLE_TAIL}
+                             </c:when>
+                             <c:otherwise>
+                               ${CATEGORY_ATTRIBUTE.article.text}
+                             </c:otherwise>
+                           </c:choose>
                          </div>
+                         <c:if test="${not empty LESSON_TASKS}">
+                         <section class="practice-block" id="practice" aria-labelledby="practice-title">
+                           <h2 id="practice-title"><spring:message code="practice.title"/></h2>
+                           <p class="practice-sub"><spring:message code="practice.subtitle"/></p>
+                           <ul class="practice-list">
+                             <c:forEach var="practiceTask" items="${LESSON_TASKS}">
+                               <li>
+                                 <a class="practice-item" href="${pageContext.request.contextPath}/${pathLanguage}${practiceTask.href}">
+                                   <span class="practice-name">${practiceTask.displayTitle}</span>
+                                   <span class="practice-meta">
+                                     <span class="practice-level practice-level-${fn:toLowerCase(practiceTask.task.difficulty)}"><spring:message code="difficulty.${practiceTask.task.difficulty}"/></span>
+                                     <c:if test="${practiceTask.task.estimatedMinutes != null}"><span>⏱ ${practiceTask.task.estimatedMinutes}&nbsp;<spring:message code="practice.min"/></span></c:if>
+                                     <c:if test="${not empty practiceTask.task.solutionUrl}"><span>✓ <spring:message code="practice.solution"/></span></c:if>
+                                     <c:if test="${not empty practiceTask.task.videoUrl}"><span>▶ <spring:message code="practice.video"/></span></c:if>
+                                   </span>
+                                 </a>
+                               </li>
+                             </c:forEach>
+                           </ul>
+                           <a class="btn btn-outline btn-sm" href="${pageContext.request.contextPath}/${pathLanguage}java/${param.TEST_PATH}/${LESSON_TASKS_PAGE.pathName}">
+                             <spring:message code="practice.all"/><c:if test="${LESSON_TASKS_TOTAL > fn:length(LESSON_TASKS)}"> (${LESSON_TASKS_TOTAL})</c:if> &rarr;
+                           </a>
+                         </section>
+                         </c:if>
                             <c:set var="isVideo" value="${CATEGORY_ATTRIBUTE.videoPath!=null && not empty CATEGORY_ATTRIBUTE.videoPath}"/>
                         <c:if test="${isVideo}">
                          <section>
@@ -207,7 +240,8 @@
                            </button>
                                  <c:set var="isQuestions" value="${CATEGORY_ATTRIBUTE.questionsCount!=0}"/>
                                  <c:set var="isTests" value="${CATEGORY_ATTRIBUTE.testsCount!=0}"/>
-                          <c:if test="${isVideo || isQuestions || isTests}">
+                                 <c:set var="isPractice" value="${not empty LESSON_TASKS}"/>
+                          <c:if test="${isVideo || isQuestions || isTests || isPractice}">
                                  <p class="lesson-side-eyebrow" style="margin-top:1.5rem;"><spring:message code="for.this.lesson"/></p>
                                  <ul class="lesson-side-list">
                                      <c:if test="${isQuestions}">
@@ -215,6 +249,9 @@
                                      </c:if>
                                      <c:if test="${isTests}">
                                              <li><a href="${pageContext.request.contextPath}/${pathLanguage}start-test/${TESTS[param.TEST_PATH].pathName}/${CATEGORY_ATTRIBUTE.pathName}" id="startTest" rel="nofollow"><span class="ic">📝</span><spring:message code="tests"/> (${CATEGORY_ATTRIBUTE.testsCount})</a></li>
+                                     </c:if>
+                                     <c:if test="${isPractice}">
+                                            <li><a href="#practice"><span class="ic">✎</span><spring:message code="practice.sidebar"/> (${LESSON_TASKS_TOTAL})</a></li>
                                      </c:if>
                                      <c:if test="${isVideo}">
                                             <li><a href="${CATEGORY_ATTRIBUTE.videoPath}" target="_blank" rel="noopener noreferrer"><span class="ic">▶</span><spring:message code="video.lesson"/></a></li>
