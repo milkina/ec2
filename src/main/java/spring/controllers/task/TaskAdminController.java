@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import spring.services.task.TaskService;
+import util.GeneralUtility;
 import util.TaskUtility;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -105,7 +105,6 @@ public class TaskAdminController {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
             return null;
         }
-        setUtf8(request);
         List<String> errors = new ArrayList<>();
 
         Integer pageId = parseInt(request.getParameter("page"), "Страница", errors, true);
@@ -116,16 +115,16 @@ public class TaskAdminController {
 
         Task data = new Task();
         data.setId(parseInt(request.getParameter("id"), "id", errors, false));
-        data.setUid(trimToNull(request.getParameter("uid")));
-        data.setSlug(trimToNull(request.getParameter("slug")));
-        data.setTitle(trimToNull(request.getParameter("title")));
-        data.setBodyHtml(trimToNull(request.getParameter("bodyHtml")));
-        data.setHintTitle(trimToNull(request.getParameter("hintTitle")));
-        data.setHintHtml(trimToNull(request.getParameter("hintHtml")));
-        data.setSolutionUrl(trimToNull(request.getParameter("solutionUrl")));
-        data.setVideoUrl(trimToNull(request.getParameter("videoUrl")));
+        data.setUid(trimToNull(text(request, "uid")));
+        data.setSlug(trimToNull(text(request, "slug")));
+        data.setTitle(trimToNull(text(request, "title")));
+        data.setBodyHtml(trimToNull(text(request, "bodyHtml")));
+        data.setHintTitle(trimToNull(text(request, "hintTitle")));
+        data.setHintHtml(trimToNull(text(request, "hintHtml")));
+        data.setSolutionUrl(trimToNull(text(request, "solutionUrl")));
+        data.setVideoUrl(trimToNull(text(request, "videoUrl")));
         data.setEstimatedMinutes(parseInt(request.getParameter("estimatedMinutes"), "Время", errors, false));
-        data.setProjectCode(trimToNull(request.getParameter("projectCode")));
+        data.setProjectCode(trimToNull(text(request, "projectCode")));
         data.setProjectPart(parseInt(request.getParameter("projectPart"), "Часть проекта", errors, false));
         Integer orderId = parseInt(request.getParameter("orderId"), "Порядок", errors, true);
         data.setOrderId(orderId == null ? 0 : orderId);
@@ -347,14 +346,12 @@ public class TaskAdminController {
         return person != null && Boolean.TRUE.equals(person.isSysadmin());
     }
 
-    private static void setUtf8(HttpServletRequest request) {
-        try {
-            if (request.getCharacterEncoding() == null) {
-                request.setCharacterEncoding("UTF-8");
-            }
-        } catch (UnsupportedEncodingException ignored) {
-            // UTF-8 поддерживается всегда
-        }
+    /**
+     * Текстовый параметр формы. Контейнер разбирает тело POST как ISO-8859-1 (до контроллера параметры уже читает
+     * LocaleChangeInterceptor), поэтому кириллицу перекодируем, как во всём проекте, — GeneralUtility.decodeRussianCharacters.
+     */
+    private static String text(HttpServletRequest request, String name) {
+        return GeneralUtility.decodeRussianCharacters(request.getParameter(name));
     }
 
     private static String trimToNull(String s) {

@@ -85,8 +85,8 @@
               <option value="${d}" ${TASK.difficulty == d ? 'selected' : ''}>${d}</option>
             </c:forEach>
           </select>
-          <input type="number" name="estimatedMinutes" min="1" max="600" step="5" value="${TASK.estimatedMinutes}" placeholder="мин"> мин
-          &nbsp; Порядок <input type="number" name="orderId" step="10" required value="${TASK.orderId}">
+          <input type="number" name="estimatedMinutes" min="1" max="600" step="1" value="${TASK.estimatedMinutes}" placeholder="мин"> мин
+          &nbsp; Порядок <input type="number" name="orderId" step="1" required value="${TASK.orderId}">
         </div>
 
         <label>Сквозной проект</label>
