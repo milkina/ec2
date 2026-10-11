@@ -83,8 +83,9 @@ public class CategoryController {
         model.addAttribute(ARTICLE_ATTRIBUTE, article);
         TaskUtility.addTasksToModel(model, request.getServletContext(), category);
         Map<String, Test> courses = (Map<String, Test>) request.getServletContext().getAttribute(TESTS);
-        TaskUtility.addLessonTasksToModel(model, request.getServletContext(), category,
-                courses == null ? null : courses.get(request.getParameter(TEST_PATH)));
+        Test course = courses == null ? null : courses.get(request.getParameter(TEST_PATH));
+        TaskUtility.addLessonTasksToModel(model, request.getServletContext(), category, course);
+        TaskUtility.addSeriesNavToModel(model, request.getServletContext(), category, course);
         List<Category> list = CategoryUtility.getCategoryListFromServletContext(request);
         int index = list.indexOf(category);
 

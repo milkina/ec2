@@ -3,12 +3,13 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%-- Карточки модулей хаба задач, сгруппированные по уровню. Данные — HUB_GROUPS, PAGE_STATS, PROJECT_BADGES, PROJECTS (TaskUtility). --%>
+<%-- Карточки модулей хаба задач, сгруппированные по уровню. Данные — HUB_GROUPS, PAGE_STATS, PROJECT_BADGES, PROJECTS, PROJECT_ANCHORS (TaskUtility). --%>
 <spring:message code="menu.home" var="homePath"/>
-<c:set var="shop" value="${PROJECTS['online-shop']}"/>
-<c:set var="showShop" value="${shop != null && fn:length(shop.parts) >= 3}"/>
+
+
 <c:forEach var="group" items="${HUB_GROUPS}">
-  <c:if test="${showShop && group.pages[0].id == shop.first.page.id}">
+  <c:set var="BLOCK_PROJECTS" value="${PROJECT_ANCHORS[group.pages[0].id]}" scope="request"/>
+  <c:if test="${not empty BLOCK_PROJECTS}">
     <jsp:include page="/WEB-INF/views/tasks/_project-block.jsp"/>
   </c:if>
   <section class="hub-group" id="level-${group.key}" aria-labelledby="level-${group.key}-title">
@@ -25,7 +26,8 @@
       </p>
     </div>
     <c:forEach var="modulePage" items="${group.pages}" varStatus="pageStatus">
-      <c:if test="${showShop && !pageStatus.first && modulePage.id == shop.first.page.id}">
+      <c:set var="BLOCK_PROJECTS" value="${pageStatus.first ? null : PROJECT_ANCHORS[modulePage.id]}" scope="request"/>
+      <c:if test="${not empty BLOCK_PROJECTS}">
         <jsp:include page="/WEB-INF/views/tasks/_project-block.jsp"/>
       </c:if>
       <c:set var="stats" value="${PAGE_STATS[modulePage.id]}"/>
@@ -34,7 +36,7 @@
           <h3>${modulePage.parentCategory.name}</h3>
           <div class="task-tags">
             <c:if test="${stats != null}"><span class="tag tag-${fn:toLowerCase(stats.difficulty)}"><spring:message code="difficulty.${stats.difficulty}"/></span></c:if>
-            <c:forEach var="badge" items="${PROJECT_BADGES[modulePage.id]}"><span class="tag tag-accent"><spring:message code="project.${badge.task.projectCode}.name" text="${badge.task.projectCode}"/> · <spring:message code="project.part" arguments="${badge.task.projectPart}"/></span></c:forEach>
+            <c:forEach var="badge" items="${PROJECT_BADGES[modulePage.id]}"><span class="tag tag-accent" title="${fn:escapeXml(badge.displayTitle)}"><c:out value="${PROJECTS[badge.task.projectCode].name}"/> · <spring:message code="project.part" arguments="${badge.task.projectPart}"/></span></c:forEach>
           </div>
         </div>
         <p class="task-desc">${modulePage.article.description}</p>

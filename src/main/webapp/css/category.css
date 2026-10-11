@@ -198,3 +198,7 @@
 .practice-level-beginner { background: var(--success-soft); color: oklch(0.32 0.09 152); }
 .practice-level-intermediate { background: var(--accent-soft); color: var(--accent-fg); }
 .practice-level-advanced { background: oklch(0.94 0.05 25); color: oklch(0.45 0.17 25); }
+
+/* ===== Строка сквозного проекта под заголовком задачи ===== */
+.task-series { margin: -.35rem 0 .9rem; font-size: .875rem; color: var(--muted-fg); }
+.task-series a { font-weight: 600; }

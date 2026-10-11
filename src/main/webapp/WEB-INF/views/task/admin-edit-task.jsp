@@ -89,10 +89,18 @@
           &nbsp; Порядок <input type="number" name="orderId" step="1" required value="${TASK.orderId}">
         </div>
 
-        <label>Сквозной проект</label>
+        <label>Серия (сквозной проект)</label>
         <div class="row-inline">
-          <input type="text" name="projectCode" maxlength="40" list="projectCodes" value="${fn:escapeXml(TASK.projectCode)}" placeholder="online-shop">
-          <datalist id="projectCodes"><option value="online-shop"><option value="employee-report"></datalist>
+          <select name="projectCode">
+            <option value="">— не входит в серию —</option>
+            <c:set var="codeKnown" value="false"/>
+            <c:forEach var="sr" items="${SERIES}">
+              <c:if test="${sr.code == TASK.projectCode}"><c:set var="codeKnown" value="true"/></c:if>
+              <option value="${sr.code}" ${sr.code == TASK.projectCode ? 'selected' : ''}><c:out value="${sr.name}"/> (${sr.code})</option>
+            </c:forEach>
+            <c:if test="${not empty TASK.projectCode && !codeKnown}"><option value="${fn:escapeXml(TASK.projectCode)}" selected>${fn:escapeXml(TASK.projectCode)} — серии нет!</option></c:if>
+          </select>
+          
           часть <input type="number" name="projectPart" min="1" value="${TASK.projectPart}">
         </div>
 

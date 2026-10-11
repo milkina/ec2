@@ -7,7 +7,7 @@
 <t:wrapper2>
     <jsp:attribute name="header">
      <c:set var="hubDescription"><spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> по <spring:message code="hub.topics.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> Java Core: от первой программы до коллекций, Stream API и многопоточности. Подсказки, видеоразборы, подходят для лабораторных работ.</c:set>
-     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=3" rel="stylesheet">
+     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=5" rel="stylesheet">
      <meta name="description" content="${fn:escapeXml(hubDescription)}">
      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
      <title>Задачи по Java для начинающих с решениями | ExamClouds</title>
@@ -94,9 +94,8 @@
                      <p style="color:var(--muted-fg);margin:0;">
                        На ExamClouds собрано <spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> по Java Core, разбитых на <spring:message code="hub.modules.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> по темам курса: синтаксис, ООП, строки, коллекции, Stream API, исключения, ввод-вывод, JDBC и многопоточность. К части задач есть решение и видеоразбор. Задачи идут от простых к сложным и подходят для самостоятельной практики, лабораторных работ и подготовки к собеседованию.
                      </p>
-                     <c:set var="shop" value="${PROJECTS['online-shop']}"/>
-                     <c:if test="${shop != null && fn:length(shop.parts) >= 3}">
-                       <p class="project-teaser"><a href="#project"><spring:message code="project.teaser" arguments="${fn:length(shop.parts)}"/> &darr;</a></p>
+                     <c:if test="${FEATURED_PROJECT != null}">
+                       <p class="project-teaser"><a href="#project-${FEATURED_PROJECT.code}"><c:out value="${FEATURED_PROJECT.title}"/> &darr;</a></p>
                      </c:if>
                      <jsp:include page="/WEB-INF/views/tasks/_hub-levels-nav.jsp"/>
                    </div>
@@ -107,6 +106,7 @@
                          <!-- ============ MAIN ============ -->
                          <div>
 <jsp:include page="/WEB-INF/views/tasks/_hub-groups.jsp"/>
+<jsp:include page="/WEB-INF/views/tasks/_hub-faq-ru.jsp"/>
 
 
                          </div>
@@ -114,7 +114,7 @@
                          <!-- ============ RIGHT PANEL ============ -->
                          <aside>
                            <div class="panel task-ux-side">
-                             <h2 class="side-h">Обзор</h2>
+                             <p class="side-h">Обзор</p>
                              <div class="overview-grid">
                                <div class="ov-cell"><b>${MODULES_TOTAL}</b><span><spring:message code='modules'/></span></div>
                                <div class="ov-cell"><b>Free</b><span>весь доступ</span></div>

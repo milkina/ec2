@@ -32,4 +32,18 @@ public interface TaskService {
     Task save(Task data, int pageCategoryId, List<Integer> lessonIds);
 
     void delete(int taskId);
+
+    // ---------- серии (task_project) ----------
+
+    /** Все серии, по курсу, order_id, id. */
+    List<model.task.TaskProject> getProjects();
+
+    model.task.TaskProject getProject(int projectId);
+
+    boolean isProjectCodeTaken(String code, String course, Integer exceptProjectId);
+
+    /** Создаёт (data.id == null) или обновляет серию, копируя редактируемые поля из data. */
+    model.task.TaskProject saveProject(model.task.TaskProject data);
+
+    void deleteProject(int projectId);
 }

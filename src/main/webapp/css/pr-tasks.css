@@ -175,9 +175,9 @@
   border-top: 1px solid var(--border); padding-top: .9rem; margin-top: .1rem;
 }
 .project-labs { font-size: .85rem; color: var(--muted-fg); }
-.project-mini { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; margin-bottom: 1rem; }
-.project-mini h3 { font-size: 1rem; font-weight: 800; margin: 0 0 .25rem; }
-.project-mini .project-lead { margin: 0; }
+.project-mini { padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.project-mini-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: .5rem; }
+.project-mini h3 { font-size: 1rem; font-weight: 800; margin: 0; }
 @media (max-width: 600px) {
   .project-parts a { grid-template-columns: 1.75rem minmax(0, 1fr); }
   .project-module { grid-column: 2; text-align: left; margin-top: -.35rem; }
@@ -200,3 +200,6 @@
 .hub-group-head h2 { font-size: 1.3rem; font-weight: 800; margin: 0 0 .2rem; }
 .hub-group-sub { margin: 0; font-size: .88rem; color: var(--muted-fg); }
 .project-block, .project-mini { scroll-margin-top: 5rem; }
+
+/* ===== FAQ на хабе задач ===== */
+.hub-faq { margin-top: 1.5rem; scroll-margin-top: 5rem; }

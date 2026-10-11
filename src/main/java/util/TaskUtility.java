@@ -5,6 +5,7 @@ import model.Category;
 import model.Test;
 import model.article.Article;
 import model.task.Task;
+import model.task.TaskProject;
 import org.springframework.ui.Model;
 
 import javax.servlet.ServletContext;
@@ -138,14 +139,23 @@ public class TaskUtility extends SpringUtility {
 
     public static final String PROJECTS_ATTRIBUTE = "PROJECTS";
     public static final String PROJECT_BADGES_ATTRIBUTE = "PROJECT_BADGES";
+    public static final String PROJECT_ANCHORS_ATTRIBUTE = "PROJECT_ANCHORS";
+    public static final String FEATURED_PROJECT_ATTRIBUTE = "FEATURED_PROJECT";
+    /** Кэш серий: Map&lt;курс (TESTS.pathName), Map&lt;code, TaskProject&gt;&gt;. */
+    public static final String TASK_PROJECTS_ATTRIBUTE = "TASK_PROJECTS";
 
-    /** Сквозной проект (task.project_code): части по порядку project_part. */
+    /**
+     * Сквозной проект (серия): задачи с task.project_code, части по project_part, тексты — из task_project.
+     * Если строки в task_project нет, вместо названия и заголовка выводится код.
+     */
     public static class Project {
         private final String code;
+        private final TaskProject meta;
         private final List<LessonTask> parts = new ArrayList<>();
 
-        Project(String code) {
+        Project(String code, TaskProject meta) {
             this.code = code;
+            this.meta = meta;
         }
 
         public String getCode() {
@@ -159,15 +169,156 @@ public class TaskUtility extends SpringUtility {
         public LessonTask getFirst() {
             return parts.get(0);
         }
+
+        public String getName() {
+            return meta == null ? code : meta.getName();
+        }
+
+        public String getTitle() {
+            return meta == null ? code : meta.getTitle();
+        }
+
+        public String getDescription() {
+            return meta == null ? null : meta.getDescription();
+        }
+
+        public String getNote() {
+            return meta == null ? null : meta.getNote();
+        }
+
+        /** Большой блок на хабе: серия отмечена featured и в ней не меньше 3 частей. */
+        public boolean isBig() {
+            return meta != null && meta.isFeatured() && parts.size() >= 3;
+        }
+
+        /** Серию выводим на хабе, если в ней хотя бы 2 части. */
+        public boolean isShown() {
+            return parts.size() >= 2;
+        }
+
+        int getOrderId() {
+            return meta == null ? Integer.MAX_VALUE : meta.getOrderId();
+        }
     }
 
     /**
-     * Для хаба практических задач: PROJECTS — Map&lt;project_code, Project&gt; по задачам курса,
-     * PROJECT_BADGES — Map&lt;id страницы «Задания», List&lt;LessonTask&gt;&gt; (части проектов на этой странице).
+     * Для хаба практических задач: PROJECTS — Map&lt;project_code, Project&gt; (по order_id серии),
+     * PROJECT_BADGES — Map&lt;id страницы «Задания», List&lt;LessonTask&gt;&gt;,
+     * PROJECT_ANCHORS — Map&lt;id страницы, List&lt;Project&gt;&gt;: блок каждой показываемой серии выводится
+     * перед карточкой модуля, где начинается эта серия (несколько серий с одной стартовой страницей — по order_id),
+     * FEATURED_PROJECT — серия для тизера в шапке хаба (первая с большим блоком) или null.
      */
     public static void addProjectsToModel(Model model, ServletContext servletContext, Test course) {
-        Map<String, Project> projects = new java.util.LinkedHashMap<>();
         Map<Integer, List<LessonTask>> badges = new HashMap<>();
+        Map<String, Project> projects = buildProjects(servletContext, course, badges);
+        Map<Integer, List<Project>> anchors = new HashMap<>();
+        Project featured = null;
+        for (Project project : projects.values()) {
+            if (project.isShown()) {
+                anchors.computeIfAbsent(project.getFirst().getPage().getId(), k -> new ArrayList<>()).add(project);
+            }
+            if (featured == null && project.isBig()) {
+                featured = project;
+            }
+        }
+        model.addAttribute(PROJECTS_ATTRIBUTE, projects);
+        model.addAttribute(PROJECT_BADGES_ATTRIBUTE, badges);
+        model.addAttribute(PROJECT_ANCHORS_ATTRIBUTE, anchors);
+        model.addAttribute(FEATURED_PROJECT_ATTRIBUTE, featured);
+    }
+
+    public static final String TASK_SERIES_ATTRIBUTE = "TASK_SERIES";
+
+    /** Положение задачи в сквозном проекте: «часть 3 из 11», соседние части. */
+    public static class SeriesNav {
+        private final Project project;
+        private final int part;
+        private final LessonTask prev;
+        private final LessonTask next;
+
+        SeriesNav(Project project, int part, LessonTask prev, LessonTask next) {
+            this.project = project;
+            this.part = part;
+            this.prev = prev;
+            this.next = next;
+        }
+
+        public String getCode() {
+            return project.getCode();
+        }
+
+        public String getName() {
+            return project.getName();
+        }
+
+        public int getPart() {
+            return part;
+        }
+
+        public int getTotal() {
+            return project.getParts().size();
+        }
+
+        public LessonTask getPrev() {
+            return prev;
+        }
+
+        public LessonTask getNext() {
+            return next;
+        }
+    }
+
+    /**
+     * Для страницы «Задания»: TASK_SERIES — Map&lt;id задачи, SeriesNav&gt; для задач этой страницы,
+     * входящих в сквозной проект (серия считается по всем страницам курса; скрытые серии пропускаются).
+     */
+    public static void addSeriesNavToModel(Model model, ServletContext servletContext, Category page, Test course) {
+        List<Task> pageTasks = getTasksByPage(servletContext, page.getId());
+        boolean hasSeries = false;
+        for (Task task : pageTasks) {
+            if (task.getProjectCode() != null && task.getProjectPart() != null) {
+                hasSeries = true;
+                break;
+            }
+        }
+        if (!hasSeries) {
+            return;
+        }
+        Map<String, Project> projects = buildProjects(servletContext, course, null);
+        Map<Integer, SeriesNav> navs = new HashMap<>();
+        for (Task task : pageTasks) {
+            Project project = task.getProjectCode() == null ? null : projects.get(task.getProjectCode());
+            if (project == null) {
+                continue;
+            }
+            List<LessonTask> parts = project.getParts();
+            for (int i = 0; i < parts.size(); i++) {
+                if (parts.get(i).getTask().getId().equals(task.getId())) {
+                    navs.put(task.getId(), new SeriesNav(project, task.getProjectPart(),
+                            i > 0 ? parts.get(i - 1) : null, i + 1 < parts.size() ? parts.get(i + 1) : null));
+                    break;
+                }
+            }
+        }
+        model.addAttribute(TASK_SERIES_ATTRIBUTE, navs);
+    }
+
+    /** Серия курса по коду из кэша task_project или null. */
+    @SuppressWarnings("unchecked")
+    public static TaskProject getTaskProject(ServletContext servletContext, String course, String code) {
+        Map<String, Map<String, TaskProject>> cache =
+                (Map<String, Map<String, TaskProject>>) servletContext.getAttribute(TASK_PROJECTS_ATTRIBUTE);
+        Map<String, TaskProject> byCode = cache == null ? null : cache.get(course);
+        return byCode == null ? null : byCode.get(code);
+    }
+
+    /**
+     * Сквозные проекты курса по project_code (части по project_part), упорядоченные по order_id серии;
+     * badges (если не null) — части по страницам.
+     */
+    private static Map<String, Project> buildProjects(ServletContext servletContext, Test course,
+                                                      Map<Integer, List<LessonTask>> badges) {
+        Map<String, Project> found = new HashMap<>();
         if (course != null && course.getCategories() != null) {
             for (Category page : course.getCategories().values()) {
                 if (page.getHidden()) {
@@ -177,17 +328,25 @@ public class TaskUtility extends SpringUtility {
                     if (task.getProjectCode() == null || task.getProjectPart() == null) {
                         continue;
                     }
+                    TaskProject meta = getTaskProject(servletContext, course.getPathName(), task.getProjectCode());
                     LessonTask part = new LessonTask(task, page, course.getPathName());
-                    projects.computeIfAbsent(task.getProjectCode(), Project::new).parts.add(part);
-                    badges.computeIfAbsent(page.getId(), k -> new ArrayList<>()).add(part);
+                    found.computeIfAbsent(task.getProjectCode(), code -> new Project(code, meta)).parts.add(part);
+                    if (badges != null) {
+                        badges.computeIfAbsent(page.getId(), k -> new ArrayList<>()).add(part);
+                    }
                 }
             }
         }
-        for (Project project : projects.values()) {
+        List<Project> ordered = new ArrayList<>(found.values());
+        for (Project project : ordered) {
             project.parts.sort(java.util.Comparator.comparing(p -> p.getTask().getProjectPart()));
         }
-        model.addAttribute(PROJECTS_ATTRIBUTE, projects);
-        model.addAttribute(PROJECT_BADGES_ATTRIBUTE, badges);
+        ordered.sort(java.util.Comparator.comparingInt(Project::getOrderId).thenComparing(Project::getCode));
+        Map<String, Project> projects = new java.util.LinkedHashMap<>();
+        for (Project project : ordered) {
+            projects.put(project.getCode(), project);
+        }
+        return projects;
     }
 
     public static final String PAGE_STATS_ATTRIBUTE = "PAGE_STATS";
@@ -321,6 +480,8 @@ public class TaskUtility extends SpringUtility {
     }
 
     public static final String TASKS_TOTAL_ATTRIBUTE = "TASKS_TOTAL";
+    /** Сумма estimated_minutes видимых задач курса, в часах (округление); 0 — оценок нет. */
+    public static final String TASKS_TOTAL_HOURS_ATTRIBUTE = "TASKS_TOTAL_HOURS";
     public static final String TASKS_TOTAL_FORM_ATTRIBUTE = "TASKS_TOTAL_FORM";
     public static final String MODULES_TOTAL_ATTRIBUTE = "MODULES_TOTAL";
     public static final String MODULES_TOTAL_FORM_ATTRIBUTE = "MODULES_TOTAL_FORM";
@@ -348,6 +509,7 @@ public class TaskUtility extends SpringUtility {
     public static void addPageStatsToModel(Model model, ServletContext servletContext, Test course) {
         Map<Integer, PageStats> stats = new HashMap<>();
         int total = 0;
+        int totalMinutes = 0;
         if (course != null && course.getCategories() != null) {
             for (Category page : course.getCategories().values()) {
                 if (page.getHidden()) {
@@ -356,9 +518,13 @@ public class TaskUtility extends SpringUtility {
                 for (Task task : getTasksByPage(servletContext, page.getId())) {
                     stats.computeIfAbsent(page.getId(), k -> new PageStats()).add(task);
                     total++;
+                    if (task.getEstimatedMinutes() != null) {
+                        totalMinutes += task.getEstimatedMinutes();
+                    }
                 }
             }
         }
+        model.addAttribute(TASKS_TOTAL_HOURS_ATTRIBUTE, Math.round(totalMinutes / 60f));
         model.addAttribute(PAGE_STATS_ATTRIBUTE, stats);
         model.addAttribute(HUB_GROUPS_ATTRIBUTE, buildHubGroups(course, stats));
         model.addAttribute(HUB_COURSE_ATTRIBUTE, course == null ? null : course.getPathName());
@@ -374,6 +540,7 @@ public class TaskUtility extends SpringUtility {
     }
 
     public static void loadTasksToServletContext(ServletContext servletContext) {
+        loadTaskProjectsToServletContext(servletContext);
         List<Task> tasks;
         try {
             tasks = getTaskService(servletContext).getVisibleTasks();
@@ -398,6 +565,27 @@ public class TaskUtility extends SpringUtility {
         }
         servletContext.setAttribute(TASKS_BY_PAGE, freeze(byPage));
         servletContext.setAttribute(TASKS_BY_LESSON, freeze(byLesson));
+    }
+
+    /** Кэш серий TASK_PROJECTS: Map&lt;курс, Map&lt;code, TaskProject&gt;&gt;. При ошибке оставляем прежний (или пустой). */
+    private static void loadTaskProjectsToServletContext(ServletContext servletContext) {
+        List<TaskProject> projects;
+        try {
+            projects = getTaskService(servletContext).getProjects();
+        } catch (RuntimeException e) {
+            logger.log(Level.SEVERE, "Failed to load task projects, keeping previous cache", e);
+            if (servletContext.getAttribute(TASK_PROJECTS_ATTRIBUTE) == null) {
+                servletContext.setAttribute(TASK_PROJECTS_ATTRIBUTE, Collections.emptyMap());
+            }
+            return;
+        }
+        Map<String, Map<String, TaskProject>> byCourse = new HashMap<>();
+        for (TaskProject project : projects) {
+            byCourse.computeIfAbsent(project.getCourse(), k -> new HashMap<>()).put(project.getCode(), project);
+        }
+        Map<String, Map<String, TaskProject>> frozen = new HashMap<>();
+        byCourse.forEach((course, byCode) -> frozen.put(course, Collections.unmodifiableMap(byCode)));
+        servletContext.setAttribute(TASK_PROJECTS_ATTRIBUTE, Collections.unmodifiableMap(frozen));
     }
 
     @SuppressWarnings("unchecked")

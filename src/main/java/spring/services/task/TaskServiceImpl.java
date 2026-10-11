@@ -2,10 +2,12 @@ package spring.services.task;
 
 import model.Category;
 import model.task.Task;
+import model.task.TaskProject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import spring.repositories.CategoryRepository;
+import spring.repositories.TaskProjectRepository;
 import spring.repositories.TaskRepository;
 
 import java.util.ArrayList;
@@ -25,6 +27,9 @@ public class TaskServiceImpl implements TaskService {
 
     @Autowired
     private CategoryRepository categoryRepository;
+
+    @Autowired
+    private TaskProjectRepository taskProjectRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -129,5 +134,52 @@ public class TaskServiceImpl implements TaskService {
     @Transactional
     public void delete(int taskId) {
         taskRepository.delete(taskId);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<TaskProject> getProjects() {
+        return taskProjectRepository.findAllOrdered();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public TaskProject getProject(int projectId) {
+        return taskProjectRepository.findOne(projectId);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public boolean isProjectCodeTaken(String code, String course, Integer exceptProjectId) {
+        for (TaskProject project : taskProjectRepository.findByCodeAndCourse(code, course)) {
+            if (!project.getId().equals(exceptProjectId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    @Transactional
+    public TaskProject saveProject(TaskProject data) {
+        TaskProject project = data.getId() == null ? new TaskProject() : taskProjectRepository.findOne(data.getId());
+        if (project == null) {
+            throw new IllegalArgumentException("Task project " + data.getId() + " not found");
+        }
+        project.setCode(data.getCode());
+        project.setCourse(data.getCourse());
+        project.setName(data.getName());
+        project.setTitle(data.getTitle());
+        project.setDescription(data.getDescription());
+        project.setNote(data.getNote());
+        project.setFeatured(data.isFeatured());
+        project.setOrderId(data.getOrderId());
+        return taskProjectRepository.save(project);
+    }
+
+    @Override
+    @Transactional
+    public void deleteProject(int projectId) {
+        taskProjectRepository.delete(projectId);
     }
 }

@@ -6,32 +6,32 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <t:wrapper2>
     <jsp:attribute name="header">
-     <c:set var="hubDescription"><spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> to practice Java across <spring:message code="hub.topics.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> of Java Core: from your first program to OOP, lambdas and the Stream API. Hints and video walkthroughs included.</c:set>
-     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=3" rel="stylesheet">
+     <c:set var="hubDescription">${TASKS_TOTAL} Java practice exercises across <spring:message code="hub.topics.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> of Java Core: from your first program to OOP, lambdas and the Stream API. Hints and video walkthroughs included.</c:set>
+     <link href="${pageContext.request.contextPath}/css/pr-tasks.css?v=5" rel="stylesheet">
      <meta name="description" content="${fn:escapeXml(hubDescription)}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-     <title>Java Practice Tasks | Coding Exercises and Training | ExamClouds</title>
+     <title>Java Practice Exercises and Assignments for Beginners | ExamClouds</title>
      <link rel="canonical" href="https://www.examclouds.com/practical-java-tasks">
      <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/practicheskie-zadachi">
      <link rel="alternate" hreflang="en" href="https://www.examclouds.com/practical-java-tasks">
      <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/practical-java-tasks">
-     <meta property="og:title" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
+     <meta property="og:title" content="Java Practice Exercises and Assignments for Beginners | ExamClouds">
      <meta property="og:type" content="article">
      <meta property="og:description" content="${fn:escapeXml(hubDescription)}">
      <meta property="og:site_name" content="ExamClouds">
      <meta property="og:url" content="https://www.examclouds.com/practical-java-tasks">
-     <meta property="twitter:title" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
+     <meta property="twitter:title" content="Java Practice Exercises and Assignments for Beginners | ExamClouds">
      <meta property="twitter:card" content="summary_large_image">
      <meta property="twitter:description" content="${fn:escapeXml(hubDescription)}">
      <meta property="twitter:site" content="@ExamClouds">
      <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
      <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
-     <meta property="twitter:image:alt" content="Java Practice Tasks | Coding Exercises and Training | ExamClouds">
+     <meta property="twitter:image:alt" content="Java Practice Exercises and Assignments for Beginners | ExamClouds">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "LearningResource",
   "learningResourceType": "Assignment",
-  "name": "Java Practice Tasks",
+  "name": "Java Practice Exercises and Assignments",
   "description": "<spring:escapeBody javaScriptEscape="true">${hubDescription}</spring:escapeBody>",
   "url": "https://www.examclouds.com/practical-java-tasks",
   "inLanguage": "en",
@@ -90,13 +90,12 @@
                  <section class="panel tasks-hero">
                    <div class="tasks-hero-icon" aria-hidden="true">&lt;/&gt;</div>
                    <div>
-                     <h1 style="font-size:clamp(1.5rem,2.4vw,2rem);margin:0 0 .5rem;">Java practice tasks</h1>
+                     <h1 style="font-size:clamp(1.5rem,2.4vw,2rem);margin:0 0 .5rem;">Java Practice Exercises and Coding Tasks</h1>
                      <p style="color:var(--muted-fg);margin:0;">
                        ExamClouds has <spring:message code="hub.tasks.${TASKS_TOTAL_FORM}" arguments="${TASKS_TOTAL}"/> for Java Core practice, split into <spring:message code="hub.modules.${MODULES_TOTAL_FORM}" arguments="${MODULES_TOTAL}"/> that follow the course: syntax, operators, control flow, arrays, OOP, the static keyword, Object methods, interfaces and enums, lambdas, the Stream API and algorithms. Many tasks come with a hint, and some with a solution and a video walkthrough. Tasks go from simple to more advanced and work for self-study, lab assignments and interview preparation.
                      </p>
-                     <c:set var="shop" value="${PROJECTS['online-shop']}"/>
-                     <c:if test="${shop != null && fn:length(shop.parts) >= 3}">
-                       <p class="project-teaser"><a href="#project"><spring:message code="project.teaser" arguments="${fn:length(shop.parts)}"/> &darr;</a></p>
+                     <c:if test="${FEATURED_PROJECT != null}">
+                       <p class="project-teaser"><a href="#project-${FEATURED_PROJECT.code}"><c:out value="${FEATURED_PROJECT.title}"/> &darr;</a></p>
                      </c:if>
                      <jsp:include page="/WEB-INF/views/tasks/_hub-levels-nav.jsp"/>
                    </div>
@@ -107,6 +106,7 @@
                          <!-- ============ MAIN ============ -->
                          <div>
                         <jsp:include page="/WEB-INF/views/tasks/_hub-groups.jsp"/>
+                        <jsp:include page="/WEB-INF/views/tasks/_hub-faq-en.jsp"/>
 
 
                          </div>
@@ -114,7 +114,7 @@
                          <!-- ============ RIGHT PANEL ============ -->
                          <aside>
                            <div class="panel task-ux-side">
-                             <h2 class="side-h">Overview</h2>
+                             <p class="side-h">Overview</p>
                              <div class="overview-grid">
                                <div class="ov-cell"><b>${MODULES_TOTAL}</b><span><spring:message code='modules'/></span></div>
                                <div class="ov-cell"><b>Free</b><span>all access</span></div>

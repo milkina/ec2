@@ -6,6 +6,7 @@ import model.Test;
 import model.person.Person;
 import model.task.Task;
 import model.task.TaskDifficulty;
+import model.task.TaskProject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -147,6 +148,11 @@ public class TaskAdminController {
         }
 
         validate(data, pageId, errors);
+        if (page != null && data.getProjectCode() != null
+                && TaskUtility.getTaskProject(servletContext, courseOf(page), data.getProjectCode()) == null) {
+            errors.add("Серии с кодом «" + data.getProjectCode() + "» для курса " + courseOf(page)
+                    + " нет — выберите серию из списка или создайте её в разделе «Серии задач».");
+        }
 
         if (!errors.isEmpty()) {
             fillFormModel(model, data, pageId, lessonIds, errors);
@@ -172,6 +178,128 @@ public class TaskAdminController {
         taskService.delete(taskId);
         TaskUtility.loadTasksToServletContext(servletContext);
         return "redirect:/admin-tasks?page=" + pageId + "&deleted=1";
+    }
+
+    // ---------- серии (task_project) ----------
+
+    @RequestMapping(value = "/admin-task-projects")
+    public String showTaskProjects(Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if (!isAdmin(request)) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return null;
+        }
+        List<TaskProject> projects = taskService.getProjects();
+        // сколько видимых задач у каждой серии: курс → код → число частей
+        Map<String, Map<String, Integer>> usage = new java.util.HashMap<>();
+        for (String course : new String[]{RU_COURSE, EN_COURSE}) {
+            Map<String, Integer> byCode = new java.util.TreeMap<>();
+            for (Category page : getTaskPages(course)) {
+                for (Task task : TaskUtility.getTasksByPage(servletContext, page.getId())) {
+                    if (task.getProjectCode() != null) {
+                        byCode.merge(task.getProjectCode(), 1, Integer::sum);
+                    }
+                }
+            }
+            usage.put(course, byCode);
+        }
+        // коды в задачах, для которых нет строки серии (опечатка или забыли создать серию)
+        List<String> orphans = new ArrayList<>();
+        for (Map.Entry<String, Map<String, Integer>> e : usage.entrySet()) {
+            for (String code : e.getValue().keySet()) {
+                if (TaskUtility.getTaskProject(servletContext, e.getKey(), code) == null) {
+                    orphans.add(e.getKey() + " / " + code + " (" + e.getValue().get(code) + ")");
+                }
+            }
+        }
+        model.addAttribute("SERIES_LIST", projects);
+        model.addAttribute("SERIES_USAGE", usage);
+        model.addAttribute("ORPHAN_CODES", orphans);
+        return "task/admin-task-projects";
+    }
+
+    @RequestMapping(value = "/admin-edit-task-project")
+    public String showEditTaskProject(@RequestParam(value = "id", required = false) Integer projectId,
+                                      @RequestParam(value = "course", required = false) String course,
+                                      @RequestParam(value = "code", required = false) String code,
+                                      Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if (!isAdmin(request)) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return null;
+        }
+        TaskProject series;
+        if (projectId != null) {
+            series = taskService.getProject(projectId);
+            if (series == null) {
+                response.sendError(HttpServletResponse.SC_NOT_FOUND);
+                return null;
+            }
+        } else {
+            series = new TaskProject();
+            series.setCourse(EN_COURSE.equals(course) ? EN_COURSE : RU_COURSE);
+            series.setCode(code);
+            series.setOrderId(10);
+        }
+        model.addAttribute("SERIES", series);
+        model.addAttribute("ERRORS", Collections.emptyList());
+        return "task/admin-edit-task-project";
+    }
+
+    @RequestMapping(value = "/admin-save-task-project", method = RequestMethod.POST)
+    public String saveTaskProject(Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if (!isAdmin(request)) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return null;
+        }
+        List<String> errors = new ArrayList<>();
+        TaskProject data = new TaskProject();
+        data.setId(parseInt(request.getParameter("id"), "id", errors, false));
+        data.setCode(trimToNull(text(request, "code")));
+        data.setCourse(trimToNull(text(request, "course")));
+        data.setName(trimToNull(text(request, "name")));
+        data.setTitle(trimToNull(text(request, "title")));
+        data.setDescription(trimToNull(text(request, "description")));
+        data.setNote(trimToNull(text(request, "note")));
+        data.setFeatured(request.getParameter("featured") != null);
+        Integer orderId = parseInt(request.getParameter("orderId"), "Порядок", errors, true);
+        data.setOrderId(orderId == null ? 0 : orderId);
+
+        if (data.getCode() == null || !PROJECT_CODE.matcher(data.getCode()).matches()) {
+            errors.add("Код: латиница в нижнем регистре, цифры и дефис, до 40 символов (например, online-shop).");
+        }
+        if (!RU_COURSE.equals(data.getCourse()) && !EN_COURSE.equals(data.getCourse())) {
+            errors.add("Курс: " + RU_COURSE + " или " + EN_COURSE + ".");
+        } else if (data.getCode() != null && taskService.isProjectCodeTaken(data.getCode(), data.getCourse(), data.getId())) {
+            errors.add("Серия «" + data.getCode() + "» для курса " + data.getCourse() + " уже есть.");
+        }
+        if (data.getName() == null || data.getName().length() > 100) {
+            errors.add("Название обязательно, до 100 символов.");
+        }
+        if (data.getTitle() == null || data.getTitle().length() > 255) {
+            errors.add("Заголовок блока обязателен, до 255 символов.");
+        }
+        if (data.getNote() != null && data.getNote().length() > 255) {
+            errors.add("Примечание длиннее 255 символов.");
+        }
+        if (!errors.isEmpty()) {
+            model.addAttribute("SERIES", data);
+            model.addAttribute("ERRORS", errors);
+            return "task/admin-edit-task-project";
+        }
+        taskService.saveProject(data);
+        TaskUtility.loadTasksToServletContext(servletContext);
+        return "redirect:/admin-task-projects?saved=1";
+    }
+
+    @RequestMapping(value = "/admin-delete-task-project", method = RequestMethod.POST)
+    public String deleteTaskProject(@RequestParam("id") int projectId,
+                                    HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if (!isAdmin(request)) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return null;
+        }
+        taskService.deleteProject(projectId);
+        TaskUtility.loadTasksToServletContext(servletContext);
+        return "redirect:/admin-task-projects?deleted=1";
     }
 
     // ---------- форма ----------
@@ -221,6 +349,13 @@ public class TaskAdminController {
         model.addAttribute("SELECTED_LESSONS", lessonIds);
         model.addAttribute("LESSONS", getLessons(course));
         model.addAttribute("DIFFICULTIES", TaskDifficulty.values());
+        List<TaskProject> courseSeries = new ArrayList<>();
+        for (TaskProject series : taskService.getProjects()) {
+            if (series.getCourse().equals(course)) {
+                courseSeries.add(series);
+            }
+        }
+        model.addAttribute("SERIES", courseSeries);
         model.addAttribute("ERRORS", errors);
         model.addAttribute("HAS_MARKER", page != null && hasMarker(page));
         // для EN-страницы — задачи RU-пары, чтобы взять их uid

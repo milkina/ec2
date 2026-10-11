@@ -27,7 +27,7 @@
  <jsp:body>
   <div class="mainArea">
     <h1>Практические задачи</h1>
-    <p><a href="${pageContext.request.contextPath}/show-administration">← Администрирование</a></p>
+    <p><a href="${pageContext.request.contextPath}/show-administration">← Администрирование</a> &nbsp;·&nbsp; <a href="${pageContext.request.contextPath}/admin-task-projects">Серии задач</a></p>
     <div class="ta-wrap">
       <nav class="ta-pages">
         <h3>RU — Задания</h3>
