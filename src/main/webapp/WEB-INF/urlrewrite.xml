@@ -402,9 +402,14 @@
         <from>^/java/ocpjp8-update-from-java6/(.*)$</from>
         <to type="permanent-redirect">/java/java-core/$1</to>
     </rule>
+    <!-- /questions объединена с /tests: вопросы для собеседования — раздел #interview-questions на странице тестов -->
+    <rule>
+        <from>^/questions$</from>
+        <to type="permanent-redirect">/tests#interview-questions</to>
+    </rule>
     <rule>
         <from>^/ru/questions$</from>
-        <to type="permanent-redirect">/ru/tests</to>
+        <to type="permanent-redirect">/ru/tests#interview-questions</to>
     </rule>
     <rule>
         <from>^/java/ocpjp8/(.*)$</from>

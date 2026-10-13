@@ -16,9 +16,8 @@ Guidance for LLMs:
 ## Key articles
 
 - [Java Core](https://www.examclouds.com/java-core): Core Java concepts and theory.
-- [Tests (English)](https://www.examclouds.com/tests): Java tests in English.
-- [Tests (Russian)](https://www.examclouds.com/ru/tests): Java tests in Russian.
-- [Questions](https://www.examclouds.com/questions): Interview questions and answers.
+- [Java Online Test and Interview Questions](https://www.examclouds.com/tests): Free Core Java online test (choose topics, 5 to 100 multiple-choice questions, score with a review of correct answers) and Java interview questions with answers by topic. No registration.
+- [Тест по Java и вопросы для собеседования](https://www.examclouds.com/ru/tests): The same free Java Core test and interview questions in Russian.
 - [Practical Java Tasks](https://www.examclouds.com/practical-java-tasks): Hands-on Java exercises.
 - [Практические задачи](https://www.examclouds.com/ru/practicheskie-zadachi): Practical Java tasks in Russian.
 

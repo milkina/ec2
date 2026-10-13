@@ -45,7 +45,7 @@
                         "@type": "ListItem",
                         "position": 2,
                         "name": "<spring:message code="questions.interviews"/>",
-                        "item": "https://www.examclouds.com/questions"
+                        "item": "https://www.examclouds.com/<spring:message code="menu.tests"/>#interview-questions"
                     },
                     {
                         "@type": "ListItem",

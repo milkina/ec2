@@ -236,3 +236,26 @@ margin-top:2rem;font-weight:700
   background: color-mix(in oklab, var(--muted, #f5f5f4) 40%, transparent);
 }
 .ts-dropdown .optgroup-label { flex: 1; min-width: 0; }
+/* ===== Объединённая страница: тест + вопросы для собеседования ===== */
+.th-modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .75rem; margin: 1rem 0 1.5rem; }
+.th-mode {
+  display: grid; gap: .2rem; padding: .9rem 1.1rem; border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--card); color: var(--foreground); text-decoration: none;
+}
+.th-mode b { font-size: 1.02rem; }
+.th-mode span { font-size: .85rem; color: var(--muted-fg); }
+.th-mode:hover { border-color: var(--primary); background: var(--primary-soft); }
+.th-section { margin: 2rem 0; scroll-margin-top: 5rem; }
+.th-list { margin: .5rem 0 0; padding-left: 1.2rem; display: grid; gap: .45rem; line-height: 1.55; }
+.th-covers { display: grid; gap: .5rem; margin-top: .75rem; }
+.th-module { border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--card); }
+.th-module summary {
+  display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap;
+  padding: .7rem 1rem; cursor: pointer; font-weight: 600;
+}
+.th-module-meta, .th-lesson-meta { font-size: .8rem; font-weight: 500; color: var(--muted-fg); white-space: nowrap; }
+.th-module ul { list-style: none; margin: 0; padding: 0 1rem .8rem; display: grid; gap: .35rem; }
+.th-module li { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; border-top: 1px solid var(--border); padding-top: .35rem; }
+.th-note { margin: 2rem 0; padding: 1rem 1.25rem; border-radius: var(--radius-md); background: var(--muted); }
+.th-note p { margin: 0; }
+.th-faq { margin-top: 2rem; scroll-margin-top: 5rem; }

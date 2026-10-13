@@ -18,6 +18,7 @@ import spring.services.course.CourseService;
 import util.CategoryUtility;
 import util.LanguageUtility;
 import util.TaskUtility;
+import util.TestHubUtility;
 import util.TestUtility;
 import util.article.ArticleUtility;
 
@@ -43,18 +44,21 @@ public class CourseController {
     private CourseService courseService;
 
     @RequestMapping(value = "/tests")
-    public String showTests() {
+    public String showTests(Model model, HttpServletRequest request) {
+        TestHubUtility.addTestHubToModel(model, request.getServletContext(), "java-core");
         return TESTS_PAGE;
     }
 
     @RequestMapping(value = "ru/tests")
-    public String showRuTests() {
+    public String showRuTests(Model model, HttpServletRequest request) {
+        TestHubUtility.addTestHubToModel(model, request.getServletContext(), "java-core-russian");
         return TESTS_RU_PAGE;
     }
 
+    /** Страница вопросов объединена с /tests; основной путь — 301 из urlrewrite.xml, это запасной вариант. */
     @RequestMapping(value = "/questions")
     public String showQuestions() {
-        return QUESTIONS_PAGE;
+        return "redirect:/tests#questions";
     }
 
     @RequestMapping(value = {"/practicheskie-zadachi", "ru/practicheskie-zadachi"})

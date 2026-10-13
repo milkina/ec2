@@ -28,7 +28,7 @@
               </h4>
               <a href="${pageContext.request.contextPath}/practical-java-tasks"><b>Practical tasks</b><span>Tasks of different levels</span></a>
               <a href="${pageContext.request.contextPath}/tests"><b>Tests</b><span>Test your knowledge</span></a>
-              <a href="${pageContext.request.contextPath}/questions"><b>Quizzes</b><span>Revise your knowledge</span></a>
+              <a href="${pageContext.request.contextPath}/tests#interview-questions"><b>Quizzes</b><span>Revise your knowledge</span></a>
             </div>
             <div class="mega-col">
               <h4>

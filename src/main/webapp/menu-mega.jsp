@@ -36,7 +36,7 @@
         Tests
         <span>Test your knowledge</span>
     </a>
-    <a href="${pageContext.request.contextPath}/questions">
+    <a href="${pageContext.request.contextPath}/tests#interview-questions">
         Quizzes
         <span>Revise your knowledge</span>
     </a>
