@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU79TR_V.woff2" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css?v=28" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css?v=30" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/prism.css?v=2" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
@@ -60,11 +60,11 @@ window.addEventListener('load', function () {
       "@type": "EducationalOrganization",
       "name": "ExamClouds",
       "url": "https://www.examclouds.com",
-       "logo": "https://img.examclouds.com/general/logo.svg",
+       "logo": "https://img.examclouds.com/general/logo.png",
       "sameAs": [
         "https://www.facebook.com/examclouds",
-        "https://www.twitter.com/examclouds",
-        "https://www.patreon.com/bePatron?u=71601793",
+        "https://x.com/examclouds",
+        "https://www.patreon.com/tatyana_milkina_examclouds",
         "https://www.youtube.com/c/tatyanamilkina",
         "https://www.linkedin.com/groups/13093432/",
         "https://t.me/examclouds/"
@@ -85,13 +85,6 @@ window.addEventListener('load', function () {
                 "alternateName": "en"
               }
             ]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": {
-           "@type": "Country",
-           "name": "UA"
-         }
       }
     }
 </script>

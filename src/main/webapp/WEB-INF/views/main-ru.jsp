@@ -4,38 +4,63 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="/WEB-INF/tld/menu-jsp-taglib.tld" prefix="menu"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%-- Числа (уроки, видео, задачи, тестовые вопросы, модули, часы) — HomeUtility.addHomeToModel (курс java-core-russian). --%>
+<spring:message code="home.lessons.${HOME_LESSONS_FORM}" arguments="${HOME_LESSONS}" var="lessonsText"/>
+<spring:message code="home.tasks.${HOME_TASKS_FORM}" arguments="${HOME_TASKS}" var="tasksText"/>
+<spring:message code="home.tests.${TEST_QUESTIONS_FORM}" arguments="${TEST_QUESTIONS_TOTAL}" var="testsText"/>
+<spring:message code="home.videos.${HOME_VIDEOS_FORM}" arguments="${HOME_VIDEOS}" var="videosText"/>
+<spring:message code="hub.modules.${HOME_MODULES_FORM}" arguments="${fn:length(HOME_MODULES)}" var="modulesText"/>
+<c:set var="pageTitle" value="Бесплатный онлайн-курс Java с нуля для начинающих | ExamClouds"/>
+<c:set var="pageDescription" value="Бесплатный онлайн-курс Java с нуля: ${lessonsText}, ${tasksText} и ${testsText}. Java Core для начинающих, без регистрации."/>
 <!doctype html>
 <html lang="ru">
 <head>
     <%@ include file="/WEB-INF/head-new.jsp"%>
-    <title>Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds</title>
-    <meta name="description" content="Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.">
+    <title>${pageTitle}</title>
+    <meta name="description" content="${fn:escapeXml(pageDescription)}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/">
-    <link rel="alternate" hreflang="en" href="https://www.examclouds.com">
-    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com">
+    <link rel="alternate" hreflang="en" href="https://www.examclouds.com/">
+    <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/">
     <link rel="canonical" href="https://www.examclouds.com/ru/">
-    <meta property="og:title" content="Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds">
+    <meta property="og:title" content="${pageTitle}">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.">
+    <meta property="og:description" content="${fn:escapeXml(pageDescription)}">
     <meta property="og:site_name" content="ExamClouds">
     <meta property="og:url" content="https://www.examclouds.com/ru/">
-    <meta property="og:published_time" content="2017-10-08T12:00:00Z">
-    <meta property="og:modified_time" content="2026-05-14T12:00:00Z">
-    <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
-    <meta property="og:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
-    <meta name="twitter:title" content="Бесплатный курс Java с нуля — уроки, задачи, тесты | ExamClouds">
+    <meta property="og:image" content="https://img.examclouds.com/general/og-home-ru.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Бесплатный онлайн-курс Java с нуля для начинающих — ExamClouds">
+    <meta name="twitter:title" content="${pageTitle}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.">
+    <meta name="twitter:description" content="${fn:escapeXml(pageDescription)}">
     <meta name="twitter:site" content="@ExamClouds">
-    <meta name="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
-    <meta name="twitter:image:alt" content="Бесплатные курсы Java для начинающих | Изучение Java онлайн с нуля">
+    <meta name="twitter:image" content="https://img.examclouds.com/general/og-home-ru.png">
+    <meta name="twitter:image:alt" content="Бесплатный онлайн-курс Java с нуля для начинающих — ExamClouds">
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "@id": "https://www.examclouds.com/ru/java-core-russian#course",
+      "name": "Java программирование — бесплатный курс Java с нуля",
+      "description": "<spring:escapeBody javaScriptEscape="true">${pageDescription}</spring:escapeBody>",
+      "url": "https://www.examclouds.com/ru/java-core-russian",
+      "inLanguage": "ru",
+      "isAccessibleForFree": true,
+      "educationalLevel": "Начальный",
+      "teaches": "Java Core: синтаксис, ООП, строки, коллекции, Stream API, исключения, ввод-вывод, JDBC, многопоточность",
+      "provider": {"@type": "Organization", "name": "ExamClouds", "url": "https://www.examclouds.com"},
+      "author": {"@type": "Person", "name": "Tatyana Milkina", "jobTitle": "Senior Java Developer", "url": "https://www.examclouds.com/ru/tatyana-milkina", "sameAs": ["https://www.youtube.com/c/tatyanamilkina"]},
+      "offers": {"@type": "Offer", "category": "Free", "price": 0, "priceCurrency": "EUR"},
+      "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT${HOME_STUDY_HOURS}H"}
+    }</script>
     <script type="application/ld+json">{
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "ExamClouds",
       "url": "https://www.examclouds.com/ru/",
-      "description": "Бесплатные курсы Java с нуля для начинающих: 240+ уроков онлайн, практические задания, тесты и видео. Изучайте Java Core бесплатно, без регистрации — начните сегодня.",
+      "description": "<spring:escapeBody javaScriptEscape="true">${pageDescription}</spring:escapeBody>",
       "inLanguage": "ru",
       "author": {
         "@type": "Person",
@@ -48,50 +73,10 @@
         "url": "https://www.examclouds.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://img.examclouds.com/general/logo.svg"
+          "url": "https://img.examclouds.com/general/logo.png"
         }
       }
     }</script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "ExamClouds действительно бесплатный?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Да. Все уроки, задания и тесты доступны бесплатно. Мы не скрываем контент за платным доступом."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Нужно что-то устанавливать?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Нет. Вы можете изучать уроки и проходить тесты без установки. Для практических заданий рекомендуем установить бесплатный JDK и IntelliJ IDEA."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Можно учиться с телефона?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Да. Уроки и тесты отлично работают на мобильных устройствах. Практические задания по программированию удобнее выполнять на компьютере."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Кому подойдет обучение?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Начинающим и тем, кто хочет закрепить знания."
-          }
-        }
-      ]
-    }
-    </script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
  <%@ include file="/WEB-INF/header.jsp"%>
@@ -106,9 +91,9 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 11l-5.8 1.9L12 18l-1.9-5.1L4 11l6.1-2.2z"/></svg>
             Бесплатно
           </span>
-          <h1>Изучи <span class="accent">Java</span> с нуля — курс для начинающих</h1>
-         <p class="lede">Бесплатный онлайн-курс Java с нуля для начинающих: 240+ коротких уроков, практических заданий и тестов — разработано для новичков, которые действительно доходят до конца.</p>
-         <p class="lede">Изучайте Java Core онлайн, решайте практические задачи и проходите тесты — всё бесплатно и без регистрации.</p>
+          <h1>Изучи <span class="accent">Java</span> с нуля онлайн — бесплатный курс для начинающих</h1>
+         <p class="lede">Бесплатный онлайн-курс Java Core с нуля: ${lessonsText} по 5–15 минут, ${tasksText} и ${testsText} — для новичков, которые хотят дойти до конца.</p>
+         <p class="lede">Изучайте Java (джава) онлайн в своём темпе, решайте задачи и проверяйте себя тестами — всё бесплатно и без регистрации.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="${pageContext.request.contextPath}/ru/java-core-russian">
               Начать обучение
@@ -116,9 +101,9 @@
             </a>
           </div>
           <div class="hero-meta">
-            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <b>50,000</b> студентов</span>
-            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <b>200+</b> уроков</span>
-            <span><svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <b>4.8</b></span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <b>20&nbsp;000</b> студентов</span>
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <b>${HOME_LESSONS}</b> ${fn:substringAfter(lessonsText, ' ')}</span>
+            <span><svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <b>4,8</b> на Udemy</span>
           </div>
         </div>
 
@@ -128,14 +113,6 @@
 
             <img src="https://img.examclouds.com/general/index-image.png" alt="Курсы программирования Java на ExamClouds"
                  width="750" height="400" title="Курсы программирования Java на ExamClouds" fetchpriority="high">
-            <div class="badge tl">
-              <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-              <div><p class="label">Step 3 done</p><p class="title">Java Syntax</p></div>
-            </div>
-            <div class="badge br">
-              <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
-              <div><p class="label">Achievement</p><p class="title">First class!</p></div>
-            </div>
           </div>
         </div>
       </div>
@@ -144,10 +121,10 @@
     <!-- ===== STATS ===== -->
     <section class="container">
       <div class="stats">
-        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><p class="v">50,000+</p><p class="l">студентов</p></div></div>
-        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><div><p class="v">240+</p><p class="l">бесплатных уроков</p></div></div>
-        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><div><p class="v">100+</p><p class="l">Практических заданий</p></div></div>
-        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><div><p class="v">200+</p><p class="l">Видео</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><p class="v">20&nbsp;000+</p><p class="l">студентов</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><div><p class="v">${HOME_LESSONS}</p><p class="l">бесплатных ${fn:substringAfter(lessonsText, ' ')}</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><div><p class="v">${HOME_TASKS}</p><p class="l">${fn:substringAfter(tasksText, ' ')}</p></div></div>
+        <div class="stat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><div><p class="v">${HOME_VIDEOS}</p><p class="l">${fn:substringAfter(videosText, ' ')}</p></div></div>
       </div>
     </section>
       <!-- ===== REVIEWS PLATFORMS ===== -->
@@ -305,10 +282,32 @@
               </c:if>
             </c:forEach>
           </ol>
-          <a class="see-all" href="${pageContext.request.contextPath}/ru/java-core-russian">Все 240 уроков →</a>
+          <a class="see-all" href="${pageContext.request.contextPath}/ru/java-core-russian">Все ${lessonsText} →</a>
         </div>
       </div>
     </section>
+
+    <!-- ===== ПРОГРАММА КУРСА (данные — HomeUtility) ===== -->
+    <c:if test="${not empty HOME_MODULES}">
+    <section class="container section" id="program" aria-labelledby="program-title">
+      <div class="section-head">
+        <h2 id="program-title">Что вы изучите: ${modulesText} Java Core</h2>
+        <p>От первой программы и синтаксиса до ООП, коллекций, Stream API, JDBC и многопоточности: ${lessonsText}, ${tasksText} и ${testsText}. Каждый модуль — уроки, задачи и тесты.</p>
+      </div>
+      <ol class="program-list">
+        <c:forEach var="pm" items="${HOME_MODULES}">
+          <li>
+            <a class="program-item" href="${pageContext.request.contextPath}/ru/java/java-core-russian/${pm.firstLesson.pathName}">
+              <span class="program-num">${pm.number}</span>
+              <span class="program-name">${pm.module.name}</span>
+              <span class="program-meta"><spring:message code="home.lessons.${pm.lessonsForm}" arguments="${pm.lessons}"/><c:if test="${pm.tasks > 0}"> · <spring:message code="hub.tasks.${pm.tasksForm}" arguments="${pm.tasks}"/></c:if></span>
+            </a>
+          </li>
+        </c:forEach>
+      </ol>
+      <a class="see-all" href="${pageContext.request.contextPath}/ru/java-core-russian#modules">Полная программа курса со всеми уроками →</a>
+    </section>
+    </c:if>
 
     <!-- ===== FEATURES ===== -->
     <section class="container section">
@@ -320,10 +319,11 @@
         <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><h3>Бесплатно</h3><p>Материалы доступны бесплатно.</p></div>
         <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><h3>Короткие уроки</h3><p>Уроки по 5–15 минут, которые легко вписать в плотный график.</p></div>
         <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><h3>Практические задания</h3><p>Закрепляйте знания задачами.</p></div>
-        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><h3>Поддерживайте серию занятий</h3><p>Ежедневные серии и награды помогают не терять мотивацию.</p></div>
-        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><h3>Сертификат</h3><p>Если Вам нужен сертификат, пройдите наш курс на Udemy.</p></div>
-        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Видео</h3><p>Закрепляйте знания с помощью видео.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><h3>Отслеживайте прогресс</h3><p>Отмечайте пройденные уроки — прогресс курса сохраняется.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Видео</h3><p>Видеоразбор на YouTube — у ${HOME_VIDEOS} уроков курса.</p></div>
+        <div class="feature-card"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><h3>Блог</h3><p>Короткие статьи о Java, карьере разработчика и вопросах с собеседований.</p><a class="link-arrow" href="${pageContext.request.contextPath}/ru/show-all-articles">Читать блог →</a></div>
       </div>
+      <p class="home-author">Автор курса — <a href="${pageContext.request.contextPath}/ru/tatyana-milkina">Татьяна Милькина</a>, Senior Java Developer: 10 лет в корпоративной Java-разработке. Все уроки, задачи и тесты написаны вручную и регулярно обновляются.</p>
     </section>
 
     <!-- ===== UDEMY PROMO ===== -->
@@ -353,7 +353,7 @@
             <p class="udemy-eyebrow">Специальная цена</p>
             <p class="udemy-price"><span>€12.99</span></p>
             <p class="udemy-price-old">€59.99</p>
-            <a class="udemy-btn" href="https://www.udemy.com/course/java-bup/?couponCode=JAVA-CORE" target="_blank" rel="noopener noreferrer sponsored">
+            <a class="udemy-btn" href="https://www.udemy.com/course/java-bup/?couponCode=BFE58013FE11659ED770" target="_blank" rel="noopener noreferrer sponsored">
               Начать обучение на Udemy
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -362,42 +362,6 @@
         </div>
       </div>
     </section>
-    <!-- ===== WHY LEARN JAVA ===== -->
-        <section class="container section">
-          <div class="why-java">
-            <div class="why-java-head">
-              <span class="why-java-eyebrow">☕ Изучение Java Core</span>
-              <h2>Почему изучение Java важно для карьеры</h2>
-              <p class="why-java-lede">Java — один из самых востребованных языков программирования в мире. Он используется для разработки Android-приложений, крупных корпоративных систем, веб-платформ и облачной инфраструктуры. Знание Java открывает возможности для работы в самых разных сферах — от стартапов до международных IT-компаний.</p>
-            </div>
-
-            <div class="why-java-grid">
-              <article class="why-card">
-                <span class="why-ic" aria-hidden="true">💼</span>
-                <h3>Почему стоит изучать Java?</h3>
-                <p>Изучение Java — один из самых надежных способов начать карьеру в IT.
-                       На платформе ExamClouds вы найдете бесплатные курсы Java программирования,
-                       которые подходят как для начинающих, так и для тех, кто хочет систематизировать знания.</p>
-              </article>
-              <article class="why-card">
-                <span class="why-ic" aria-hidden="true">🚀</span>
-                <h3>Что входит в курс?</h3>
-                <p> Обучение построено по принципу «от простого к сложному»:
-                       от основ синтаксиса Java до сложных тем, таких как ООП, коллекции, Stream API и многопоточность.
-                       Каждый урок сопровождается примерами, <a href="${pageContext.request.contextPath}/ru/practicheskie-zadachi">практическими заданиями</a> и <a href="${pageContext.request.contextPath}/ru/tests">тестами</a> для закрепления материала.
-                        В отличие от многих других платформ, здесь вы получаете не только теорию,
-                           но и реальную практику. Это помогает подготовиться к собеседованиям и работе Java-разработчиком.
-</p>
-              </article>
-              <article class="why-card">
-                <span class="why-ic" aria-hidden="true">📚</span>
-                <h3>Кому подойдет обучение?</h3>
-                <p>Более 50 000 студентов уже начали обучение и используют материалы сайта
-                       для подготовки к работе и повышения квалификации.</p>
-              </article>
-            </div>
-          </div>
-        </section>
     <!-- ===== FAQ ===== -->
     <section class="container section">
       <div class="faq-grid">
@@ -405,13 +369,35 @@
           <h2>Часто задаваемые вопросы</h2>
           <p style="margin-top:0.75rem; color:var(--muted-fg);">Не нашли ответ? <a href="https://t.me/examclouds/" target="_blank" rel="noopener nofollow sponsored" style="color:var(--primary); font-weight:600; text-decoration:underline;">Напишите нам</a>.</p>
         </div>
+        <%-- Вопросы и ответы — один набор строк для видимого блока и FAQPage JSON-LD. Без апострофов: javaScriptEscape делает из них \' (недопустимо в JSON). --%>
+        <c:set var="q1" value="Курс Java действительно бесплатный?"/>
+        <c:set var="a1" value="Да. Все ${lessonsText}, ${tasksText} и ${testsText} доступны бесплатно и без регистрации. Мы не скрываем материалы за платным доступом."/>
+        <c:set var="q2" value="Подойдёт ли курс, если я никогда не программировал?"/>
+        <c:set var="a2" value="Да, курс рассчитан на изучение Java с нуля. Он начинается с того, что такое Java и как установить JDK, и идёт от простого к сложному: синтаксис, операции, условия и циклы, массивы, затем ООП и стандартная библиотека. Каждый урок короткий, по 5–15 минут, и сопровождается задачами и тестами."/>
+        <c:set var="q3" value="Сколько времени нужно, чтобы выучить Java с нуля?"/>
+        <c:set var="a3" value="Уроки курса в сумме с практическими задачами занимают примерно ${HOME_STUDY_HOURS} часов. При занятиях около часа в день это примерно ${HOME_STUDY_MONTHS} мес. Можно идти быстрее или медленнее: прогресс по урокам сохраняется."/>
+        <c:set var="q4" value="Хватит ли курса, чтобы стать Java-разработчиком?"/>
+        <c:set var="a4" value="Курс даёт базу Java Core, которую проверяют на собеседованиях на позицию junior: ООП, строки, коллекции, исключения, Stream API, многопоточность, а также основы SQL, JDBC, Maven и Git. Для работы обычно нужны ещё фреймворки, например Spring, но без уверенного Java Core их не освоить."/>
+        <c:set var="q5" value="Есть ли сертификат?"/>
+        <c:set var="a5" value="На сайте сертификата нет — все материалы бесплатны. Если сертификат нужен, пройдите курс Java SE для начинающих на Udemy: после завершения выдаётся сертификат."/>
+        <c:set var="q6" value="Нужно ли что-то устанавливать?"/>
+        <c:set var="a6" value="Для уроков и тестов — нет, они работают в браузере. Для практических задач установите бесплатные JDK и IntelliJ IDEA Community — как это сделать, разобрано в первых уроках курса."/>
+        <c:set var="q7" value="Можно учиться с телефона?"/>
+        <c:set var="a7" value="Да. Уроки и тесты удобно проходить на телефоне. Практические задачи по программированию лучше решать на компьютере."/>
         <div class="faq-list">
-          <details class="faq-item"><summary>ExamClouds действительно бесплатный?<span class="plus">+</span></summary><p class="a">Да. Все уроки, задания и тесты доступны бесплатно. Мы не скрываем контент за платным доступом.</p></details>
-          <details class="faq-item"><summary>Нужно что-то устанавливать?<span class="plus">+</span></summary><p class="a">Нет. Вы можете изучать уроки и проходить тесты без установки. Для практических заданий рекомендуем установить бесплатный JDK и IntelliJ IDEA.</p></details>
-          <details class="faq-item"><summary>Можно учиться с телефона?<span class="plus">+</span></summary><p class="a">Да. Уроки и тесты отлично работают на мобильных устройствах. Практические задания по программированию удобнее выполнять на компьютере.</p></details>
-          <details class="faq-item"><summary>Кому подойдет обучение?<span class="plus">+</span></summary><p class="a">Начинающим и тем, кто хочет закрепить знания.</p></details>
+          <c:forEach var="i" begin="1" end="7">
+            <c:set var="qKey" value="q${i}"/><c:set var="aKey" value="a${i}"/>
+            <details class="faq-item"><summary><c:out value="${pageScope[qKey]}"/><span class="plus">+</span></summary><p class="a"><c:out value="${pageScope[aKey]}"/></p></details>
+          </c:forEach>
         </div>
       </div>
+      <script type="application/ld+json">{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [<c:forEach var="i" begin="1" end="7" varStatus="st"><c:set var="qKey" value="q${i}"/><c:set var="aKey" value="a${i}"/>
+          {"@type": "Question", "name": "<spring:escapeBody javaScriptEscape="true">${pageScope[qKey]}</spring:escapeBody>", "acceptedAnswer": {"@type": "Answer", "text": "<spring:escapeBody javaScriptEscape="true">${pageScope[aKey]}</spring:escapeBody>"}}${st.last ? '' : ','}</c:forEach>
+        ]
+      }</script>
     </section>
     <!-- ===== FINAL CTA ===== -->
     <section class="container" style="padding-bottom:5rem;">
@@ -421,7 +407,7 @@
         <div style="position:relative;">
           <svg class="trophy" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
           <h2>Начните изучать Java уже сегодня.</h2>
-          <p>Присоединяйтесь к 50 000 студентов. Без карты. Без скрытых ограничений. Только обучение с реальным результатом.</p>
+          <p>Присоединяйтесь к 20 000 студентов. Без карты. Без скрытых ограничений. Только обучение с реальным результатом.</p>
           <div class="actions">
             <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/ru/java-core-russian">
               Начни обучение прямо сейчас

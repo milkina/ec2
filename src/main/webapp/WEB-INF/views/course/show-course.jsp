@@ -45,6 +45,7 @@
         <script type="application/ld+json">{
             "@context": "https://schema.org",
             "@type": "Course",
+            "@id": "${canonicalUrl}#course",
             "name": "${TESTS[param.TEST_PATH].article.title}",
             "description": "${TESTS[param.TEST_PATH].article.description}",
             "url": "${canonicalUrl}",

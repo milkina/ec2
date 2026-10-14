@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import spring.services.article.ArticleService;
 import spring.services.category.CategoryService;
 import spring.services.person.PersonService;
+import util.HomeUtility;
 import util.TestUtility;
 
 import javax.servlet.ServletContext;
@@ -50,12 +51,14 @@ public class AdministrationController {
     }
 
     @RequestMapping(value = "/")
-    public String showMain() {
+    public String showMain(Model model) {
+        HomeUtility.addHomeToModel(model, servletContext, "java-core");
         return "main";
     }
 
     @RequestMapping(value = "/ru/")
-    public String showMainRu() {
+    public String showMainRu(Model model) {
+        HomeUtility.addHomeToModel(model, servletContext, "java-core-russian");
         return "main-ru";
     }
     @RequestMapping(value = "/privacy")

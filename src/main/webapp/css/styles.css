@@ -198,22 +198,6 @@ section { position: relative; }
   padding: 1.5rem; box-shadow: var(--shadow-lift);
 }
 @media (min-width: 640px) { .hero-art .frame { padding: 2rem; } }
-.hero-art .badge {
-  position: absolute; display: none; align-items: center; gap: 0.5rem;
-  background: var(--card); border: 1px solid var(--border); border-radius: 1rem;
-  padding: 0.5rem 0.75rem; box-shadow: var(--shadow-soft);
-}
-.hero-art .badge .icon {
-  width: 2rem; height: 2rem; border-radius: 0.75rem;
-  display: grid; place-items: center;
-}
-.hero-art .badge .label { font-size: 0.6875rem; color: var(--muted-fg); line-height: 1; }
-.hero-art .badge .title { font-size: 0.75rem; font-weight: 700; line-height: 1.2; margin-top: 2px; }
-.hero-art .badge.tl { top: 2.5rem; left: -1rem; }
-.hero-art .badge.br { bottom: 2.5rem; right: -1rem; }
-.hero-art .badge.tl .icon { background: var(--success); color: var(--success-fg); }
-.hero-art .badge.br .icon { background: var(--accent); color: var(--accent-fg); }
-@media (min-width: 640px) { .hero-art .badge { display: inline-flex; } }
 
 /* ----- Stats strip ----- */
 .stats {
@@ -364,87 +348,6 @@ section { position: relative; }
 
 
 /* ----- FAQ ----- */
-/* ===== Why learn Java ===== */
-.why-java {
-  position: relative;
-  border-radius: var(--radius-2xl);
-  padding: clamp(2rem, 4vw, 3.5rem);
-  background:
-    radial-gradient(900px 320px at 0% 0%, color-mix(in oklab, var(--primary) 14%, transparent), transparent 60%),
-    radial-gradient(700px 280px at 100% 100%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%),
-    var(--card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-  overflow: hidden;
-}
-.why-java-head { max-width: 56rem; }
-.why-java-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  padding: .35rem .75rem;
-  border-radius: 9999px;
-  background: var(--primary-soft);
-  color: var(--primary);
-  font-weight: 700;
-  font-size: .8rem;
-  letter-spacing: .02em;
-}
-.why-java h2 {
-  margin: 1rem 0 .75rem;
-  font-size: clamp(1.6rem, 3vw, 2.25rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
-.why-java-lede {
-  margin: 0;
-  color: var(--muted-fg);
-  font-size: 1.05rem;
-  line-height: 1.65;
-  max-width: 50rem;
-}
-.why-java-grid {
-  margin-top: 2rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-}
-@media (min-width: 768px) { .why-java-grid { grid-template-columns: repeat(3, 1fr); } }
-.why-card {
-  position: relative;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  padding: 1.5rem;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.why-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lift);
-  border-color: color-mix(in oklab, var(--primary) 30%, var(--border));
-}
-.why-ic {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem; height: 3rem;
-  border-radius: .9rem;
-  background: linear-gradient(135deg, var(--primary-soft), var(--accent-soft));
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.why-card h3 {
-  margin: 0 0 .5rem;
-  font-size: 1.1rem;
-  letter-spacing: -0.01em;
-}
-.why-card p {
-  margin: 0;
-  color: var(--muted-fg);
-  font-size: .95rem;
-  line-height: 1.6;
-}
-
 .faq-grid { display: grid; gap: 3rem; }
 @media (min-width: 1024px) { .faq-grid { grid-template-columns: 1fr 1.5fr; } }
 .faq-list { display: grid; gap: 0.75rem; }
@@ -593,7 +496,6 @@ main { background: var(--background); }
   box-shadow: none;
   padding: 0;
 }
-.hero-art .badge { display: none !important; }
 
 /* ============================================================
    Accessibility: WCAG AA contrast pass
@@ -2127,3 +2029,20 @@ html { scroll-behavior: smooth; }
   .toc-list { columns: 1; }   /* на мобильном — один столбец */
 }
 
+
+/* ===== Главная: программа курса и автор ===== */
+.program-list { list-style: none; margin: 1.25rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .6rem; }
+.program-item {
+  display: grid; grid-template-columns: 2rem minmax(0, 1fr); grid-template-rows: auto auto; column-gap: .75rem;
+  padding: .8rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--card);
+  color: var(--foreground); text-decoration: none; height: 100%; box-sizing: border-box;
+}
+.program-item:hover { border-color: var(--primary); background: var(--primary-soft); }
+.program-num {
+  grid-row: 1 / span 2; width: 2rem; height: 2rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--primary-soft); color: var(--primary); font-weight: 800; font-size: .85rem;
+}
+.program-name { font-weight: 700; line-height: 1.3; }
+.program-meta { font-size: .8rem; color: var(--muted-fg); margin-top: .2rem; }
+.home-author { margin: 1.5rem 0 0; color: var(--muted-fg); }
+.home-author a { color: var(--primary); font-weight: 600; }

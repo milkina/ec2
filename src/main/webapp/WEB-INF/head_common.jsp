@@ -32,11 +32,11 @@ gtag('consent', 'default', {
       "@type": "EducationalOrganization",
       "name": "ExamClouds",
       "url": "https://www.examclouds.com",
-       "logo": "https://img.examclouds.com/general/logo.svg",
+       "logo": "https://img.examclouds.com/general/logo.png",
       "sameAs": [
         "https://www.facebook.com/examclouds",
-        "https://www.twitter.com/examclouds",
-        "https://www.patreon.com/bePatron?u=71601793",
+        "https://x.com/examclouds",
+        "https://www.patreon.com/tatyana_milkina_examclouds",
         "https://www.youtube.com/c/tatyanamilkina",
         "https://www.linkedin.com/groups/13093432/",
         "https://t.me/examclouds/"
@@ -57,13 +57,6 @@ gtag('consent', 'default', {
                 "alternateName": "en"
               }
             ]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": {
-           "@type": "Country",
-           "name": "UA"
-         }
       }
     }
 </script>
