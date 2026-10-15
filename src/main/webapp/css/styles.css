@@ -1216,6 +1216,16 @@ body.is-auth .auth-out { display: none; }
   font-size: .8rem; font-weight: 800; color: var(--primary);
 }
 .module-more:hover { text-decoration: underline; }
+.module-topics a { color: var(--foreground); text-decoration: none; }
+.module-topics a:hover { color: var(--primary); text-decoration: underline; }
+.module-all { margin-top: .55rem; }
+.module-all summary { cursor: pointer; font-size: .8rem; font-weight: 700; color: var(--primary); }
+.module-all summary:hover { text-decoration: underline; }
+.module-all .module-topics { border-top: 0; margin-top: 0; padding-top: .55rem; }
+.course-desc-text p { margin: 0 0 .75rem; }
+.course-desc-text ul, .course-desc-text ol { margin: 0 0 .75rem; padding-left: 1.25rem; }
+.course-desc-text li { margin-bottom: .3rem; }
+.course-desc-text a { color: var(--primary); font-weight: 600; }
 
 /* Pagination */
 .pager {

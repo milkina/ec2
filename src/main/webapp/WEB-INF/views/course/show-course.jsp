@@ -5,11 +5,28 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%-- Числа (модули, уроки, задачи, тестовые вопросы, видео, часы) и программа по модулям — HomeUtility.addHomeToModel (CourseController.showCourse).
+     В текстах курса из БД (description, iconText, article.text) можно писать {modules}, {lessons}, {tasks}, {tests}, {videos}, {hours} — подставляются числа с правильной формой слова. --%>
+<spring:message code="home.lessons.${HOME_LESSONS_FORM}" arguments="${HOME_LESSONS}" var="lessonsText"/>
+<spring:message code="home.tasks.${HOME_TASKS_FORM}" arguments="${HOME_TASKS}" var="tasksText"/>
+<spring:message code="home.tests.${TEST_QUESTIONS_FORM}" arguments="${TEST_QUESTIONS_TOTAL}" var="testsText"/>
+<spring:message code="home.videos.${HOME_VIDEOS_FORM}" arguments="${HOME_VIDEOS}" var="videosText"/>
+<spring:message code="hub.modules.${HOME_MODULES_FORM}" arguments="${fn:length(HOME_MODULES)}" var="modulesText"/>
+<spring:message code="course.hours.${HOME_STUDY_HOURS_FORM}" arguments="${HOME_STUDY_HOURS}" var="hoursText"/>
+<c:set var="courseArticle" value="${TESTS[param.TEST_PATH].article}"/>
+<c:set var="courseDescription" value="${fn:replace(fn:replace(fn:replace(fn:replace(fn:replace(fn:replace(courseArticle.description, '{lessons}', lessonsText), '{tasks}', tasksText), '{tests}', testsText), '{videos}', videosText), '{modules}', modulesText), '{hours}', hoursText)}"/>
+<c:set var="courseLede" value="${fn:replace(fn:replace(fn:replace(fn:replace(fn:replace(fn:replace(TESTS[param.TEST_PATH].iconText, '{lessons}', lessonsText), '{tasks}', tasksText), '{tests}', testsText), '{videos}', videosText), '{modules}', modulesText), '{hours}', hoursText)}"/>
+<c:set var="courseText" value="${fn:replace(fn:replace(fn:replace(fn:replace(fn:replace(fn:replace(courseArticle.text, '{lessons}', lessonsText), '{tasks}', tasksText), '{tests}', testsText), '{videos}', videosText), '{modules}', modulesText), '{hours}', hoursText)}"/>
+<c:choose>
+    <c:when test="${param.TEST_PATH=='java-core-russian'}"><c:set var="ogImage" value="https://img.examclouds.com/general/og-home-ru.png"/></c:when>
+    <c:when test="${param.TEST_PATH=='java-core'}"><c:set var="ogImage" value="https://img.examclouds.com/general/og-home-en.png"/></c:when>
+    <c:otherwise><c:set var="ogImage" value="https://img.examclouds.com/general/logo-f.png"/></c:otherwise>
+</c:choose>
 <t:wrapper2>
     <jsp:attribute name="header">
-        <meta name="description" content="${TESTS[param.TEST_PATH].article.description}">
+        <meta name="description" content="${fn:escapeXml(courseDescription)}">
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-        <title>${TESTS[param.TEST_PATH].article.title}</title>
+        <title>${courseArticle.title}</title>
         <c:set var="canonicalUrl" value="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}"/>
         <link rel="canonical" href="${canonicalUrl}">
         <c:set var="currentLang" value="${TESTS[param.TEST_PATH].language.code}"/>
@@ -29,41 +46,37 @@
         <c:if test="${xDefaultHref != null}">
             <link rel="alternate" hreflang="x-default" href="${xDefaultHref}">
         </c:if>
-        <meta property="og:title" content="${TESTS[param.TEST_PATH].article.title}">
-        <meta property="og:type" content="article">
-        <meta property="og:description" content="${TESTS[param.TEST_PATH].article.description}">
+        <meta property="og:title" content="${courseArticle.title}">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="${fn:escapeXml(courseDescription)}">
         <meta property="og:site_name" content="ExamClouds">
-        <meta property="og:url" content="https://www.examclouds.com/${pageLanguage=='ru'?'ru/':''}${TESTS[param.TEST_PATH].fullPathName}">
-        <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
-        <meta property="og:image:alt" content="${TESTS[param.TEST_PATH].article.title}">
-        <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
-        <meta property="twitter:image:alt" content="${TESTS[param.TEST_PATH].article.title}">
-        <meta property="twitter:title" content="${TESTS[param.TEST_PATH].article.title}">
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:description" content="${TESTS[param.TEST_PATH].article.description}">
-        <meta property="twitter:site" content="@ExamClouds">
+        <meta property="og:url" content="${canonicalUrl}">
+        <meta property="og:image" content="${ogImage}">
+        <meta property="og:image:alt" content="${courseArticle.title}">
+        <meta name="twitter:image" content="${ogImage}">
+        <meta name="twitter:image:alt" content="${courseArticle.title}">
+        <meta name="twitter:title" content="${courseArticle.title}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:description" content="${fn:escapeXml(courseDescription)}">
+        <meta name="twitter:site" content="@ExamClouds">
         <script type="application/ld+json">{
             "@context": "https://schema.org",
             "@type": "Course",
             "@id": "${canonicalUrl}#course",
-            "name": "${TESTS[param.TEST_PATH].article.title}",
-            "description": "${TESTS[param.TEST_PATH].article.description}",
+            "name": "${courseArticle.title}",
+            "description": "${courseDescription}",
             "url": "${canonicalUrl}",
             "inLanguage": "${TESTS[param.TEST_PATH].language.code}",
+            "isAccessibleForFree": true,
+            "educationalLevel": "Beginner",
             "provider": {
                 "@type": "Organization",
                 "name": "ExamClouds",
-                "url": "https://www.examclouds.com",
-                "sameAs": [
-                    "https://www.facebook.com/examclouds",
-                    "https://twitter.com/ExamClouds"
-                ]
+                "url": "https://www.examclouds.com"
             },
-             "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "ratingCount": "75"
-                  },
+            <c:if test="${HOME_STUDY_HOURS > 0}">
+            "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT${HOME_STUDY_HOURS}H"},
+            </c:if>
                   "learningResourceType": "Course",
                   "teaches": [
                       <c:set var="visibleCount" value="0"/>
@@ -88,18 +101,14 @@
             "offers": {
                 "@type": "Offer",
                 "price": "0",
-                "priceCurrency": "EUR"
+                "priceCurrency": "EUR",
+                "category": "Free"
             }
         }</script>
     </jsp:attribute>
     <jsp:body>
     <main class="course-bg" style="padding:0 0 3rem;">
-        <c:set var="firstCategoryPath" value=""/>
-        <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
-            <c:if test="${empty firstCategoryPath && category.value.hidden==false && category.value.parentCategory==null}">
-                <c:set var="firstCategoryPath" value="${category.value.subCategories[0].pathName}"/>
-            </c:if>
-        </c:forEach>
+        <c:set var="firstCategoryPath" value="${not empty HOME_MODULES ? HOME_MODULES[0].firstLesson.pathName : ''}"/>
         <!-- ===== Blue hero ===== -->
         <section class="course-hero">
             <div class="container">
@@ -128,9 +137,9 @@
                         ]
                     }</script>
                 </nav>
-                <h1 class="course-hero-title">${TESTS[param.TEST_PATH].article.title}</h1>
+                <h1 class="course-hero-title">${courseArticle.title}</h1>
                 <p class="course-hero-lede">
-                    ${TESTS[param.TEST_PATH].iconText}
+                    ${courseLede}
                 </p>
                 <c:if test="${not empty firstCategoryPath}">
                     <a class="btn btn-onPrimary" href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${firstCategoryPath}"><spring:message code="start.course"/></a>
@@ -138,6 +147,7 @@
                 <p class="course-hero-note" style="margin:.6rem 0 0;font-size:.85rem;opacity:.85;"><spring:message code="free"/> · <spring:message code="without.registration"/></p>
             </div>
         </section>
+        <c:set var="lessonBase" value="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/"/>
         <div class="container" style="margin-top:1.5rem;">
             <div class="course-ux-grid">
                 <!-- ============ MAIN ============ -->
@@ -148,9 +158,9 @@
                         <div class="course-detail-grid">
                             <div>
                                 <h2><spring:message code="course.description"/></h2>
-                                <p class="course-desc-text">
-                                    ${TESTS[param.TEST_PATH].article.text}
-                                </p>
+                                <div class="course-desc-text">
+                                    ${courseText}
+                                </div>
                                 <c:if test="${sessionScope.person != null}">
                                 <div class="overall-progress" id="course-overall-progress" style="display:none;">
                                     <div class="progress-row" style="margin-top:0;">
@@ -164,69 +174,91 @@
                             </div>
 
                             <div class="details-col">
-                                <h2><spring:message code="course.details"/></h2><spring:message code="without.registration"/>
+                                <h2><spring:message code="course.details"/></h2>
                                 <ul class="detail-list">
-                                    <li><span class="ic">👥</span><span>2,100 <spring:message code="enrolled"/></span></li>
+                                    <li><span class="ic">👥</span><span><spring:message code="course.students"/></span></li>
                                     <li><span class="ic">🌐</span><span>${TESTS[param.TEST_PATH].language.description}</span></li>
-                                    <c:set var="lessonsCount" value="${fn:length(TESTS[param.TEST_PATH].categories)}"/>
-                                    <c:set var="hoursCount" value="${(lessonsCount * 7 + 9) / 30}"/>
-                                    <li><span class="ic">⏱</span><span>~<fmt:formatNumber value="${hoursCount}" maxFractionDigits="0"/>&nbsp;<spring:message code="hours"/></span></li>
-                                    <li><span class="ic">📚</span><span>${lessonsCount}&nbsp;<spring:message code="lessons"/></span></li>
-                                    <li><span class="ic">🧠</span><span><spring:message code="questions"/></span></li>
-                                    <c:if test="${TESTS[param.TEST_PATH].pathName!='jpa' && TESTS[param.TEST_PATH].pathName!='web-services'}">
-                                        <li><span class="ic">📝</span><span><spring:message code="tests"/></span></li>
-                                        <li><span class="ic">🎥</span><span><spring:message code="category.video"/></span></li>
-                                        <li><span class="ic">✅</span><span><spring:message code="menu.tasks.label"/></span></li>
+                                    <c:if test="${not empty HOME_MODULES}">
+                                        <li><span class="ic">🗂</span><span>${modulesText}</span></li>
+                                    </c:if>
+                                    <c:if test="${HOME_LESSONS > 0}">
+                                        <li><span class="ic">📚</span><span>${lessonsText}</span></li>
+                                    </c:if>
+                                    <c:if test="${HOME_TASKS > 0}">
+                                        <li><span class="ic">✅</span><span>${tasksText}</span></li>
+                                    </c:if>
+                                    <c:if test="${TEST_QUESTIONS_TOTAL > 0}">
+                                        <li><span class="ic">📝</span><span>${testsText}</span></li>
+                                    </c:if>
+                                    <c:if test="${HOME_VIDEOS > 0}">
+                                        <li><span class="ic">🎥</span><span>${videosText}</span></li>
+                                    </c:if>
+                                    <c:if test="${HOME_STUDY_HOURS > 0}">
+                                        <li><span class="ic">⏱</span><span>${hoursText}</span></li>
                                     </c:if>
                                 </ul>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Modules -->
-                    <section id="modules" class="panel">
-                        <h2 style="margin-bottom:1.25rem;"><spring:message code="modules"/></h2>
+                    <!-- Modules: все уроки ссылками (данные — HomeUtility.ProgramModule) -->
+                    <section id="modules" class="panel" aria-labelledby="modules-title">
+                        <h2 id="modules-title" style="margin-bottom:1.25rem;"><spring:message code="course.program.title"/></h2>
                         <div class="modules-grid">
-                            <!-- card template -->
-                            <c:set var="catStatus" value="1" />
-                            <c:forEach var="category" items="${TESTS[param.TEST_PATH].categories}">
-                                <c:if test="${category.value.hidden==false && category.value.parentCategory==null}">
-                                    <article class="module-card">
-                                        <div class="module-card-head">
-                                            <div>
-                                                <h3>${catStatus}. ${category.value.roadMapName!=null && not empty category.value.roadMapName?category.value.roadMapName:category.value.name}</h3>
-                                                <c:set var="catStatus" value="${catStatus + 1}" />
-                                                <c:set var="subCategoriesCount" value="${fn:length(category.value.subCategories)}"/>
-                                                <c:if test="${subCategoriesCount>0}">
-                                                    <p class="module-meta">${fn:length(category.value.subCategories)}&nbsp;<spring:message code="lessons"/></p>
-                                                </c:if>
-                                            </div>
-                                            <c:set var="subIds" value=""/>
-                                            <c:set var="visibleSubCount" value="0"/>
-                                            <c:forEach var="subCategory" items="${category.value.subCategories}">
-                                                <c:if test="${subCategory.hidden==false}">
-                                                    <c:set var="subIds" value="${empty subIds ? '' : subIds.concat(',')}"/>
-                                                    <c:set var="subIds" value="${subIds}${subCategory.id}"/>
-                                                    <c:set var="visibleSubCount" value="${visibleSubCount + 1}"/>
-                                                </c:if>
-                                            </c:forEach>
-                                            <div class="progress-ring module-progress-ring" data-sub-ids="${subIds}" data-sub-total="${visibleSubCount}" style="--p:0;--c:oklch(0.55 0.18 255);display:none;">
-                                                <span>0%</span>
-                                            </div>
+                            <c:forEach var="pm" items="${HOME_MODULES}">
+                                <c:set var="moduleCat" value="${pm.module}"/>
+                                <article class="module-card" id="module-${pm.number}">
+                                    <div class="module-card-head">
+                                        <div>
+                                            <h3>${pm.number}. ${not empty moduleCat.roadMapName ? moduleCat.roadMapName : moduleCat.name}</h3>
+                                            <spring:message code="home.lessons.${pm.lessonsForm}" arguments="${pm.lessons}" var="moduleLessonsText"/>
+                                            <p class="module-meta">${moduleLessonsText}<c:if test="${pm.tasks > 0}"><spring:message code="home.tasks.${pm.tasksForm}" arguments="${pm.tasks}" var="moduleTasksText"/> · ${moduleTasksText}</c:if></p>
                                         </div>
-                                        <ul class="module-topics">
-                                            <c:set var="k" value="0" />
-                                            <c:set var="firstSubCategory" value="${category.value.subCategories[0]}" />
-                                            <c:forEach var="subCategory" items="${category.value.subCategories}">
-                                                <c:if test="${subCategory.hidden==false && k<3}">
-                                                    <li><span>${subCategory.name}</span>›</li>
-                                                    <c:set var="k" value="${k + 1}" />
+                                        <c:set var="subIds" value=""/>
+                                        <c:set var="visibleSubCount" value="0"/>
+                                        <c:forEach var="subCategory" items="${moduleCat.subCategories}">
+                                            <c:if test="${subCategory.hidden==false}">
+                                                <c:set var="subIds" value="${empty subIds ? '' : subIds.concat(',')}"/>
+                                                <c:set var="subIds" value="${subIds}${subCategory.id}"/>
+                                                <c:set var="visibleSubCount" value="${visibleSubCount + 1}"/>
+                                            </c:if>
+                                        </c:forEach>
+                                        <div class="progress-ring module-progress-ring" data-sub-ids="${subIds}" data-sub-total="${visibleSubCount}" style="--p:0;--c:oklch(0.55 0.18 255);display:none;">
+                                            <span>0%</span>
+                                        </div>
+                                    </div>
+                                    <%-- Первые 4 урока видны сразу, остальные — в раскрывающемся списке (ссылки в <details> индексируются). --%>
+                                    <ol class="module-topics">
+                                        <c:set var="k" value="0"/>
+                                        <c:forEach var="subCategory" items="${moduleCat.subCategories}">
+                                            <c:if test="${subCategory.hidden==false && subCategory.id != pm.tasksPage.id && empty subCategory.subCategories}">
+                                                <c:if test="${k < 4}">
+                                                    <li><a href="${lessonBase}${subCategory.pathName}">${subCategory.name}</a><span class="arrow">›</span></li>
                                                 </c:if>
-                                            </c:forEach>
-                                        </ul>
-                                        <a class="module-more" href="${pageContext.request.contextPath}/${pageLanguage=='ru'?'ru/':''}java/${param.TEST_PATH}/${firstSubCategory.pathName}"><spring:message code="show.more"/> ›</a>
-                                    </article>
-                                </c:if>
+                                                <c:set var="k" value="${k + 1}"/>
+                                            </c:if>
+                                        </c:forEach>
+                                    </ol>
+                                    <c:if test="${pm.lessons > 4}">
+                                        <details class="module-all">
+                                            <summary><spring:message code="course.all.lessons" arguments="${pm.lessons}"/></summary>
+                                            <ol class="module-topics" start="5">
+                                                <c:set var="k" value="0"/>
+                                                <c:forEach var="subCategory" items="${moduleCat.subCategories}">
+                                                    <c:if test="${subCategory.hidden==false && subCategory.id != pm.tasksPage.id && empty subCategory.subCategories}">
+                                                        <c:if test="${k >= 4}">
+                                                            <li><a href="${lessonBase}${subCategory.pathName}">${subCategory.name}</a><span class="arrow">›</span></li>
+                                                        </c:if>
+                                                        <c:set var="k" value="${k + 1}"/>
+                                                    </c:if>
+                                                </c:forEach>
+                                            </ol>
+                                        </details>
+                                    </c:if>
+                                    <c:if test="${pm.tasksPage != null && pm.tasks > 0}">
+                                        <a class="module-more" href="${lessonBase}${pm.tasksPage.pathName}"><spring:message code="course.module.tasks"/> ›</a>
+                                    </c:if>
+                                </article>
                             </c:forEach>
                         </div>
                     </section>

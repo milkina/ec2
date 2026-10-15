@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import spring.services.course.CourseService;
 import util.CategoryUtility;
+import util.HomeUtility;
 import util.LanguageUtility;
 import util.TaskUtility;
 import util.TestHubUtility;
@@ -196,7 +197,12 @@ public class CourseController {
     }
 
     @RequestMapping(value = {"/show-course", "{langid}/show-course"})
-    public String showCourse() {
+    public String showCourse(@RequestParam(value = TEST_PATH, required = false) String testPath,
+                             Model model, HttpServletRequest request) {
+        // реальные числа (уроки, задачи, тестовые вопросы, часы) и программа по модулям — как на главной
+        if (testPath != null) {
+            HomeUtility.addHomeToModel(model, request.getServletContext(), testPath);
+        }
         return "course/show-course";
     }
 

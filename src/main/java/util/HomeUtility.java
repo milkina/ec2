@@ -141,6 +141,7 @@ public class HomeUtility {
         model.addAttribute("HOME_VIDEOS_FORM", TaskUtility.pluralForm(videos));
         model.addAttribute("HOME_TASKS_FORM", TaskUtility.pluralForm(tasks));
         model.addAttribute("HOME_MODULES_FORM", TaskUtility.pluralForm(modules.size()));
+        model.addAttribute("HOME_STUDY_HOURS_FORM", TaskUtility.pluralForm(studyHours));
         // при занятиях около часа в день, ~30 дней в месяце
         model.addAttribute(HOME_STUDY_MONTHS_ATTRIBUTE, Math.max(1, Math.round(studyHours / 30f)));
         TestHubUtility.addTestHubToModel(model, servletContext, coursePath);
