@@ -190,7 +190,7 @@
                                     <c:if test="${TEST_QUESTIONS_TOTAL > 0}">
                                         <li><span class="ic">📝</span><span>${testsText}</span></li>
                                     </c:if>
-                                    <c:if test="${HOME_VIDEOS > 0}">
+                                    <c:if test="${HOME_VIDEOS >= 20}"><%-- меньше 20 видео на курс — строку не показываем --%>
                                         <li><span class="ic">🎥</span><span>${videosText}</span></li>
                                     </c:if>
                                     <c:if test="${HOME_STUDY_HOURS > 0}">

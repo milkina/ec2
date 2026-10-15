@@ -30,8 +30,6 @@
              <form:input path="tags" maxlength="70" required="required"/> <br>
              <span class="adminLabel"><spring:message	code="image.url"/>:</span>
              <form:input path="article.image" maxlength="150" size="70"/> <br>
-             <span class="adminLabel"><spring:message code="keywords"/>:<span class="wrongMessage">*</span></span>
-             <form:textarea rows="4" cols="40" maxlength="160" path="article.keywords" required="required" id="keywords"/>  <br>
              <span class="adminLabel"><spring:message code="title"/>:<span class="wrongMessage">*</span></span>
              <form:textarea rows="4" cols="40" maxlength="160" path="article.title" required="required" id="TITLE"/>  <br>
              <span class="adminLabel"><spring:message code="meta.description"/>:<span class="wrongMessage">*</span></span>
