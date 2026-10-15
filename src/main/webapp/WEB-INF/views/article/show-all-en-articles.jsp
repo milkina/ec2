@@ -3,102 +3,109 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%-- Blog sections by article.tag: «Java» / «Oracle Certification» / «Web Service» — own Java articles, everything else — «Other articles». --%>
+<c:set var="pageTitle" value="Java Blog: Articles for Beginner Developers | ExamClouds"/>
+<c:set var="pageDescription" value="Articles for Java developers: which Oracle Java certification to take in 2026, a code style checklist before you submit code, plus other IT topics."/>
+<c:set var="blogUrl" value="https://www.examclouds.com/show-all-articles"/>
 <t:wrapper2>
   <jsp:attribute name="header">
-    <meta name="description" content="Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them.">
+    <meta name="description" content="${pageDescription}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <title>IT Blog on ExamClouds: Comprehensive Resource for Technology Insights</title>
-    <link rel="canonical" href="https://www.examclouds.com/show-all-articles">
+    <title>${pageTitle}</title>
+    <link rel="canonical" href="${blogUrl}">
     <link rel="alternate" hreflang="ru" href="https://www.examclouds.com/ru/show-all-articles">
     <link rel="alternate" hreflang="en" href="https://www.examclouds.com/show-all-articles">
     <link rel="alternate" hreflang="x-default" href="https://www.examclouds.com/show-all-articles">
-    <meta property="og:title" content="IT Blog on ExamClouds: Comprehensive Resource for Technology Insights">
-    <meta property="og:type" content="article">
-    <meta property="og:description" content="Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them.">
+    <meta property="og:title" content="${pageTitle}">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="${pageDescription}">
     <meta property="og:site_name" content="ExamClouds">
-    <meta property="og:url" content="https://www.examclouds.com/show-all-articles">
-    <meta property="twitter:title" content="IT Blog on ExamClouds: Comprehensive Resource for Technology Insights">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:description" content="Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them.">
-    <meta property="twitter:site" content="@ExamClouds">
-    <meta property="og:image" content="https://img.examclouds.com/general/logo-f.png">
-    <meta property="twitter:image" content="https://img.examclouds.com/general/logo-f.png">
-    <meta property="twitter:image:alt" content="IT Blog on ExamClouds: Comprehensive Resource for Technology Insights">
+    <meta property="og:url" content="${blogUrl}">
+    <meta property="og:image" content="https://img.examclouds.com/general/og-home-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:title" content="${pageTitle}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="${pageDescription}">
+    <meta name="twitter:site" content="@ExamClouds">
+    <meta name="twitter:image" content="https://img.examclouds.com/general/og-home-en.png">
+    <meta name="twitter:image:alt" content="${pageTitle}">
     <script type="application/ld+json">{
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "IT Blog on ExamClouds",
-      "description": "Are you keen on the Java language? Welcome to the ExamClouds, where you can find articles for Java Engineers and those who wants to become them.",
-      "url": "https://www.examclouds.com/show-all-articles",
+      "name": "Java Blog",
+      "description": "${pageDescription}",
+      "url": "${blogUrl}",
       "inLanguage": "en",
-      "author": {
-        "@type": "Person",
-        "name": "Tatyana Milkina",
-        "url": "https://www.examclouds.com/tatyana-milkina"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "ExamClouds",
-        "url": "https://www.examclouds.com"
+      "isPartOf": {"@type": "WebSite", "name": "ExamClouds", "url": "https://www.examclouds.com/"},
+      "publisher": {"@type": "Organization", "name": "ExamClouds", "url": "https://www.examclouds.com"},
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          <c:set var="pos" value="0"/>
+          <c:forEach var="article" items="${ARTICLES}">
+            <c:if test="${article.language.code=='en' && not empty article.text}">
+              <c:set var="pos" value="${pos + 1}"/>
+              <c:if test="${pos > 1}">,</c:if>{"@type": "ListItem", "position": ${pos}, "url": "https://www.examclouds.com/${article.url}", "name": "${fn:replace(article.title, '"', '')}"}
+            </c:if>
+          </c:forEach>
+        ]
       }
     }</script>
   </jsp:attribute>
   <jsp:body>
     <main>
-           <section class="container articles-page">
-             <nav class="crumbs" aria-label="Breadcrumb">
-               <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
-               <span class="sep">›</span>
-               <span class="here"><spring:message code="articles"/></span>
-               <script type="application/ld+json">{
-                 "@context": "https://schema.org",
-                 "@type": "BreadcrumbList",
-                 "itemListElement": [
-                   {
-                     "@type": "ListItem",
-                     "position": 1,
-                     "name": "<spring:message code="home"/>",
-                     "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
-                   },
-                   {
-                     "@type": "ListItem",
-                     "position": 2,
-                     "name": "<spring:message code="articles"/>",
-                     "item": "https://www.examclouds.com/show-all-articles"
-                   }
-                 ]
-               }</script>
-             </nav>
-              <h1 class="articles-title">IT Blog on ExamClouds</h1>
-         <p class="articles-lede">Welcome to our page, where you'll find a comprehensive collection of materials covering various
-                                       aspects of <strong>information technology</strong>. Our articles offer in-depth knowledge and practical advice on <strong>programming</strong>,
-                                       <strong>network technologies</strong>, <strong>security</strong>, <strong>web application development</strong>, and many
-                                       other topics. Regardless of your skill level, you are sure to find something useful and interesting. Discover the world of IT with us and continuously improve your skills and knowledge.</p>
-           <div class="articles-grid">
-            <c:forEach var="article" items="${ARTICLES}" varStatus="loop">
-            <c:if test="${article.language.code=='en' && not empty article.text}">
-             <a href="${pageContext.request.contextPath}/${article.url}" class="article-card article-card--c${(loop.index % 4) + 1}">
-               <div class="article-card-cover"><span class="article-card-cat">${article.tag!= null && not empty article.tag?article.tag:"IT"}</span></div>
-               <div class="article-card-body">
-                  <h2>${article.title}</h2>
-                  <p>${article.description}</p>
-                  <div class="article-card-meta">
-                      <span class="article-author">${article.author.login}</span>
-                      <span class="article-date">${article.formattedDate}</span>
-                  </div>
-                  <div class="article-card-meta">
-                      <span class="article-readtime">
-                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                  ${article.minRead!=null && not empty article.minRead?article.minRead:5}&nbsp;<spring:message code="min.read"/>
-                       </span>
-                       <span class="article-card-read"><spring:message code="show.more"/>  →</span>
-                  </div>
-               </div>
-             </a>
+       <section class="container articles-page">
+         <nav class="crumbs" aria-label="Breadcrumb">
+           <a href="${pageContext.request.contextPath}/<spring:message code="menu.home"/>"><spring:message code="home"/></a>
+           <span class="sep">›</span>
+           <span class="here"><spring:message code="articles"/></span>
+           <script type="application/ld+json">{
+             "@context": "https://schema.org",
+             "@type": "BreadcrumbList",
+             "itemListElement": [
+               {
+                 "@type": "ListItem",
+                 "position": 1,
+                 "name": "<spring:message code="home"/>",
+                 "item": "https://www.examclouds.com/<spring:message code="menu.home"/>"
+               },
+               {
+                 "@type": "ListItem",
+                 "position": 2,
+                 "name": "<spring:message code="articles"/>",
+                 "item": "${blogUrl}"
+               }
+             ]
+           }</script>
+         </nav>
+         <h1 class="articles-title">Java Blog</h1>
+         <p class="articles-lede">Articles that go alongside the <a href="${pageContext.request.contextPath}/java-core">Java Core lessons</a>: which Oracle Java certification exam to take in 2026 and a code style checklist to run before you submit code. To learn Java step by step, start with the <a href="${pageContext.request.contextPath}/">free Java course</a>, practice with <a href="${pageContext.request.contextPath}/practical-java-tasks">practical tasks</a> and check yourself with <a href="${pageContext.request.contextPath}/tests">tests</a>.</p>
+
+         <%-- Java and Oracle certification --%>
+         <h2 class="articles-section-title" id="java">Java and Oracle certification</h2>
+         <div class="articles-grid">
+           <c:set var="cardIndex" value="0"/>
+           <c:forEach var="article" items="${ARTICLES}">
+             <c:if test="${article.language.code=='en' && not empty article.text && (article.tag=='Java' || article.tag=='Oracle Certification' || article.tag=='Web Service')}">
+               <t:article-card article="${article}" href="${pageContext.request.contextPath}/${article.url}" index="${cardIndex}" authorName="Tatyana Milkina" datePattern="yyyy-MM-dd"/>
+               <c:set var="cardIndex" value="${cardIndex + 1}"/>
              </c:if>
-            </c:forEach>
-          </div>
-          </section>
+           </c:forEach>
+         </div>
+
+         <%-- Other articles --%>
+         <h2 class="articles-section-title" id="other">Other articles</h2>
+         <div class="articles-grid">
+           <c:forEach var="article" items="${ARTICLES}">
+             <c:if test="${article.language.code=='en' && not empty article.text && article.tag!='Java' && article.tag!='Oracle Certification' && article.tag!='Web Service'}">
+               <t:article-card article="${article}" href="${pageContext.request.contextPath}/${article.url}" index="${cardIndex}" datePattern="yyyy-MM-dd"/>
+               <c:set var="cardIndex" value="${cardIndex + 1}"/>
+             </c:if>
+           </c:forEach>
+         </div>
+       </section>
     </main>
  </jsp:body>
 </t:wrapper2>

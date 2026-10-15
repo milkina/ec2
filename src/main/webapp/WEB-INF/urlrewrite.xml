@@ -463,6 +463,29 @@
         <from>^/ru/start-test/(.*)$</from>
         <to type="passthrough">/start-test?TEST_PATH=$1</to>
     </rule>
+    <!-- Устаревшие статьи об экзаменах Java 6–8 объединены в обзор актуальных сертификаций (article 95).
+         Должно стоять до правила passthrough для /publications/. /ru/ — те же EN-статьи под RU-путём (дубли). -->
+    <rule>
+        <from>^(?:/ru)?/publications/(?:ocpjp8|ocajp8|ocjp|ocpjp8-update-from-java7|ocpjp8-update-from-java6)/?$</from>
+        <to type="permanent-redirect">/publications/ocjp-ocpjp</to>
+    </rule>
+    <rule>
+        <from>^/ru/publications/ocjp-ocpjp/?$</from>
+        <to type="permanent-redirect">/publications/ocjp-ocpjp</to>
+    </rule>
+    <!-- Статьи 2016 года о SOAP на JBoss AS 7 (сервер снят с поддержки) удалены — 301 на ближайшие уроки курса Web Services. -->
+    <rule>
+        <from>^(?:/ru)?/publications/create-soap-rpc-web-service-in-servlet-container\.jsp$</from>
+        <to type="permanent-redirect">/java/web-services/wsimport-wsgen</to>
+    </rule>
+    <rule>
+        <from>^(?:/ru)?/publications/basic-authentication-in-soap-web-service\.jsp$</from>
+        <to type="permanent-redirect">/java/web-services/soap-handler</to>
+    </rule>
+    <rule>
+        <from>^(?:/ru)?/publications/ssl-in-soap-web-service\.jsp$</from>
+        <to type="permanent-redirect">/web-services</to>
+    </rule>
     <rule>
         <from>^/publications/(.*)$</from>
         <to type="passthrough">/show-article?URL_PARAM=$1</to>

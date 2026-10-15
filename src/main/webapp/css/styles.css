@@ -1575,6 +1575,9 @@ pre.has-copy { position: relative; }
 .articles-page { padding-block: 3.5rem 5rem; }
 .articles-title { margin-top: 1rem; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; }
 .articles-lede { margin-top: 1rem; font-size: 1.125rem; color: var(--muted-fg); line-height: 1.6; }
+.articles-lede a { color: var(--primary); font-weight: 600; }
+.articles-section-title { margin-top: 2.5rem; font-size: 1.5rem; line-height: 1.25; }
+.articles-section-title + .articles-grid { margin-top: 1rem; }
 .articles-grid {
   margin-top: 2.5rem;
   display: grid;
@@ -1615,7 +1618,7 @@ pre.has-copy { position: relative; }
   font-size: .6875rem; font-weight: 700;
 }
 .article-card-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; gap: .5rem; }
-.article-card-body h2 { font-size: 1.125rem; line-height: 1.35; }
+.article-card-body h2, .article-card-body h3 { font-size: 1.125rem; line-height: 1.35; }
 .article-card-body p { color: var(--muted-fg); font-size: .9375rem; flex: 1; }
 .article-card-meta {
   margin-top: 1rem;

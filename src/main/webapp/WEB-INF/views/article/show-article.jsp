@@ -105,6 +105,14 @@
          }
        ]
      }</script>
+    <%-- FAQ статьи: article.faqPageSchema — объекты Question через запятую (как у страниц уроков). --%>
+    <c:if test="${not empty ARTICLE_ATTRIBUTE.faqPageSchema}">
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [${ARTICLE_ATTRIBUTE.faqPageSchema}]
+    }</script>
+    </c:if>
  </jsp:attribute>
  <jsp:body>
     <main>
