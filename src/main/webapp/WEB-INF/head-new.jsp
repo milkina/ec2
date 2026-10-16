@@ -15,7 +15,7 @@
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
+    'analytics_storage': 'granted',
     'wait_for_update': 500
   });
 </script>
@@ -33,10 +33,9 @@ window.addEventListener('load', function () {
     if (tcData.eventStatus !== 'useractioncomplete' && tcData.eventStatus !== 'tcloaded') return;
     if (tcData.eventStatus === 'tcloaded' && (!tcData.tcString || tcData.tcString.length < 20)) return;
     var c = (tcData.purpose && tcData.purpose.consents) || {};
-    var analyticsOk = !!c[1];
     var adsOk = !!(c[1] && c[3] && c[4]);
     gtag('consent', 'update', {
-      'analytics_storage': analyticsOk ? 'granted' : 'denied',
+      'analytics_storage': 'granted',
       'ad_storage':        adsOk ? 'granted' : 'denied',
       'ad_user_data':      adsOk ? 'granted' : 'denied',
       'ad_personalization':adsOk ? 'granted' : 'denied'
