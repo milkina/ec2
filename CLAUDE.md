@@ -3,7 +3,7 @@
 ## Пайплайн обработки материала
 1. Получи RU_CATEGORY_ID и EN_CATEGORY_ID урока.
 2. Вызови lesson-processor для RU_CATEGORY_ID.
-3. После окончания предыдущего шага — вызови lesson-processor для EN_CATEGORY_ID и RU_FILE — файл с результатами для русской версии.
+3. После окончания предыдущего шага — вызови lesson-processor для EN_CATEGORY_ID и RU_FILE — файл с результатами для русской версии; передай и RU_CATEGORY_ID (по нему lesson-processor выгружает уроки RU-модуля, чтобы EN не дублировал их темы).
 4. После окончания lesson-processor для RU_CATEGORY_ID, запусти test-quiz-loader для RU_CATEGORY_ID.
 5. После окончания lesson-processor для EN_CATEGORY_ID запусти test-quiz-loader для EN_CATEGORY_ID.
 6. Запусти test-quiz-generator **одним вызовом**, передав ему сразу оба RU_CATEGORY_ID и EN_CATEGORY_ID — **после окончания test-quiz-loader** для RU_CATEGORY_ID и EN_CATEGORY_ID. test-quiz-generator добавляет недостающие тесты/quiz **и** сверяет RU/EN между собой (см. правило ниже) — только так у него есть видимость содержимого обоих языков одновременно. Никогда не вызывай test-quiz-generator дважды раздельно по одному CATEGORY_ID — тогда кросс-языковая сверка невозможна физически.
