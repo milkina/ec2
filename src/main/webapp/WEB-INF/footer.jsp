@@ -22,7 +22,7 @@
                            <li><a href="https://www.youtube.com/c/tatyanamilkina" target="_blank" rel="noopener nofollow"><i class="fab fa-youtube"></i> YouTube</a></li>
                            <li><a href="https://www.facebook.com/Examclouds" target="_blank" rel="noopener nofollow"><i class="fab fa-facebook"></i> Facebook</a></li>
                    </ul><ul class="social-icons">
-                           <li><a href="https://twitter.com/ExamClouds" target="_blank" rel="nofollow noopener"><i class="fab fa-twitter"></i> Twitter</a></li>
+                           <li><a href="https://x.com/ExamClouds" target="_blank" rel="nofollow noopener"><i class="fab fa-x-twitter"></i> X</a></li>
                            <li><a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                            <li><a href="https://t.me/examclouds/" target="_blank" rel="nofollow noopener"><i class="fab fa-telegram"></i> Telegram</a></li>
                            <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored noopener"><i class="fas fa-graduation-cap"></i> Udemy</a></li>
