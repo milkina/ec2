@@ -45,7 +45,7 @@
         "itemListElement": [
           <c:set var="pos" value="0"/>
           <c:forEach var="article" items="${ARTICLES}">
-            <c:if test="${article.language.code=='ru' && not empty article.text}">
+            <c:if test="${article.language.code=='ru' && not empty article.text && article.indexStatus}">
               <c:set var="pos" value="${pos + 1}"/>
               <c:if test="${pos > 1}">,</c:if>{"@type": "ListItem", "position": ${pos}, "url": "https://www.examclouds.com/ru/${article.url}", "name": "${fn:replace(article.title, '"', '')}"}
             </c:if>
