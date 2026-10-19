@@ -66,7 +66,7 @@ window.addEventListener('load', function () {
         "https://www.patreon.com/tatyana_milkina_examclouds",
         "https://www.youtube.com/c/tatyanamilkina",
         "https://www.linkedin.com/groups/13093432/",
-        "https://t.me/examclouds/"
+        "https://t.me/java_examclouds/"
       ],
       "contactPoint": {
         "@type": "ContactPoint",

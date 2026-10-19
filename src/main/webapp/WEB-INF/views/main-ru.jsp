@@ -367,7 +367,7 @@
       <div class="faq-grid">
         <div>
           <h2>Часто задаваемые вопросы</h2>
-          <p style="margin-top:0.75rem; color:var(--muted-fg);">Не нашли ответ? <a href="https://t.me/examclouds/" target="_blank" rel="noopener nofollow sponsored" style="color:var(--primary); font-weight:600; text-decoration:underline;">Напишите нам</a>.</p>
+          <p style="margin-top:0.75rem; color:var(--muted-fg);">Не нашли ответ? <a href="https://t.me/java_examclouds/" target="_blank" rel="noopener nofollow sponsored" style="color:var(--primary); font-weight:600; text-decoration:underline;">Напишите нам</a>.</p>
         </div>
         <%-- Вопросы и ответы — один набор строк для видимого блока и FAQPage JSON-LD. Без апострофов: javaScriptEscape делает из них \' (недопустимо в JSON). --%>
         <c:set var="q1" value="Курс Java действительно бесплатный?"/>

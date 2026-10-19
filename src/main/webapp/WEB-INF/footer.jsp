@@ -24,7 +24,7 @@
                    </ul><ul class="social-icons">
                            <li><a href="https://x.com/ExamClouds" target="_blank" rel="nofollow noopener"><i class="fab fa-x-twitter"></i> X</a></li>
                            <li><a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                           <li><a href="https://t.me/examclouds/" target="_blank" rel="nofollow noopener"><i class="fab fa-telegram"></i> Telegram</a></li>
+                           <li><a href="https://t.me/java_examclouds/" target="_blank" rel="nofollow noopener"><i class="fab fa-telegram"></i> Telegram</a></li>
                            <li><a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored noopener"><i class="fas fa-graduation-cap"></i> Udemy</a></li>
                     </ul>
                     <div class="contactUsEmail footerItem">

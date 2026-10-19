@@ -297,7 +297,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://t.me/examclouds/" target="_blank" rel="nofollow noopener">
+                                <a href="https://t.me/java_examclouds/" target="_blank" rel="nofollow noopener">
                                     <span class="ic" style="background:oklch(0.65 0.15 235)">✈</span>
                                     <div>
                                         <b><spring:message code="telegram.community"/></b>

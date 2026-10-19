@@ -54,7 +54,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           <em>LinkedIn</em>
         </a></li>
-        <li><a href="https://t.me/examclouds/" target="_blank" rel="noopener nofollow sponsored" aria-label="Telegram" title="Telegram">
+        <li><a href="https://t.me/java_examclouds/" target="_blank" rel="noopener nofollow sponsored" aria-label="Telegram" title="Telegram">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           <em>Telegram</em>
         </a></li>

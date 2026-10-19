@@ -40,6 +40,8 @@
             <textarea rows="7" cols="40" maxlength="180" name="description" required id="description">${ARTICLE_ATTRIBUTE.description}</textarea>  <br>
             <span class="adminLabel"><spring:message code="text"/>:<span class="wrongMessage">*</span></span>
             <textarea rows="25" cols="80" name="article.text" id="ARTICLE_TEXT">${ARTICLE_ATTRIBUTE.text}</textarea> <br>
+            <span class="adminLabel">FAQ Page Schema (optional):</span>
+            <textarea rows="10" cols="80" name="article.faqPageSchema" id="FAQ_PAGE_SCHEMA">${ARTICLE_ATTRIBUTE.faqPageSchema}</textarea> <br>
             <input type="submit" value="<spring:message code="save.button"/>" name="Save" id="save"><br>
         </form>
       </div>
