@@ -114,6 +114,11 @@
         <from>^(?:/ru)?/java/java-core-russian/lesson23$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/mnogopotochnost-v-java</to>
     </rule>
+    <!-- Урок «Класс Period» (категория 542) объединён с «Класс Duration» (541) в один урок klass-duration. -->
+    <rule>
+        <from>^(?:/ru)?/java/java-core-russian/klass-period/?$</from>
+        <to type="permanent-redirect">/ru/java/java-core-russian/klass-duration</to>
+    </rule>
     <rule>
         <from>^(?:/ru)?/java/java-core-russian/lesson1-tasks$</from>
         <to type="permanent-redirect">/ru/java/java-core-russian/pervoe-java-prilozhenie-zadaniya</to>
