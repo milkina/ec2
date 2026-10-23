@@ -278,33 +278,66 @@
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored noopener">
-                                    <span class="ic" style="background:oklch(0.55 0.18 285)">🎓</span>
-                                    <div>
-                                        <b><spring:message code="udemy.course"/></b>
-                                        <span><spring:message code="udemy.course.subtitle"/></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="noopener nofollow sponsored">
-                                    <span class="ic" style="background:oklch(0.6 0.2 25)">♥</span>
-                                    <div>
-                                        <b><spring:message code="patreon.support"/></b>
-                                        <span><spring:message code="patreon.support.subtitle"/></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://t.me/java_examclouds/" target="_blank" rel="nofollow noopener">
-                                    <span class="ic" style="background:oklch(0.65 0.15 235)">✈</span>
-                                    <div>
-                                        <b><spring:message code="telegram.community"/></b>
-                                        <span><spring:message code="telegram.community.subtitle"/></span>
-                                    </div>
-                                </a>
-                            </li>
+                            <c:choose>
+                                <c:when test="${pageLanguage=='ru'}">
+                                    <li>
+                                        <a href="https://www.udemy.com/course/java-bup/" target="_blank" rel="nofollow sponsored noopener">
+                                            <span class="ic" style="background:oklch(0.55 0.18 285)">🎓</span>
+                                            <div>
+                                                <b><spring:message code="udemy.course"/></b>
+                                                <span><spring:message code="udemy.course.subtitle"/></span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.patreon.com/bePatron?u=71601793" target="_blank" rel="noopener nofollow sponsored">
+                                            <span class="ic" style="background:oklch(0.6 0.2 25)">♥</span>
+                                            <div>
+                                                <b><spring:message code="patreon.support"/></b>
+                                                <span><spring:message code="patreon.support.subtitle"/></span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/java_examclouds/" target="_blank" rel="nofollow noopener">
+                                            <span class="ic" style="background:oklch(0.65 0.15 235)">✈</span>
+                                            <div>
+                                                <b><spring:message code="telegram.community"/></b>
+                                                <span><spring:message code="telegram.community.subtitle"/></span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </c:when>
+                                <c:otherwise>
+                                    <li>
+                                        <a href="https://ko-fi.com/examclouds" target="_blank" rel="noopener nofollow sponsored">
+                                            <span class="ic" style="background:oklch(0.6 0.2 25)">☕</span>
+                                            <div>
+                                                <b>Support on Ko-fi</b>
+                                                <span>Buy me a coffee</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/groups/13093432/" target="_blank" rel="nofollow noopener">
+                                            <span class="ic" style="background:oklch(0.55 0.18 255)">in</span>
+                                            <div>
+                                                <b>LinkedIn Group</b>
+                                                <span>Join our Java community</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/examclouds" target="_blank" rel="nofollow noopener">
+                                            <span class="ic" style="background:oklch(0.6 0.22 350)">f</span>
+                                            <div>
+                                                <b>Facebook</b>
+                                                <span>Follow us on Facebook</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
                         </ul>
                     </div>
                     <div class="course-ux-side-rest">
